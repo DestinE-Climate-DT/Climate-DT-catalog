@@ -18,7 +18,7 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      data_start_date: auto
+      data_start_date: 20200101T0000
       data_end_date: auto
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
@@ -61,6 +61,7 @@ sources:
     description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       request:
         <<: *request-default
         resolution: standard
@@ -75,6 +76,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       chunks: 6h
       request:
         <<: *request-default
@@ -97,6 +99,7 @@ sources:
     description: hourly 2D atmospheric data on healpix grid (zoom=10, h1024).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       request:
         <<: *request-default
         resolution: high
@@ -104,6 +107,8 @@ sources:
       <<: *metadata-default
       fdb_home: /users/lrb_465000454_fdb
       fdb_path: /users/lrb_465000454_fdb/etc/fdb/config.yaml
+      fdb_home_bridge: /users/lrb_465000454_fdb/databridge
+      fdb_path_bridge: /users/lrb_465000454_fdb/databridge/etc/fdb/config.yaml
       source_grid_name: hpz10-nested
 
   hourly-hpz10-atm3d:
@@ -111,6 +116,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=10, h1024).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       chunks:
         time: 6h
         vertical: 10
@@ -125,6 +131,8 @@ sources:
       <<: *metadata-default
       fdb_home: /users/lrb_465000454_fdb
       fdb_path: /users/lrb_465000454_fdb/etc/fdb/config.yaml
+      fdb_home_bridge: /users/lrb_465000454_fdb/databridge
+      fdb_path_bridge: /users/lrb_465000454_fdb/databridge/etc/fdb/config.yaml
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -296,6 +304,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       chunks: MS
       savefreq: D
       request:
@@ -316,6 +325,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=10, h1024).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       chunks: MS
       savefreq: D
       request:
@@ -327,6 +337,8 @@ sources:
       <<: *metadata-default
       fdb_home: /users/lrb_465000454_fdb
       fdb_path: /users/lrb_465000454_fdb/etc/fdb/config.yaml
+      fdb_home_bridge: /users/lrb_465000454_fdb/databridge
+      fdb_path_bridge: /users/lrb_465000454_fdb/databridge/etc/fdb/config.yaml
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested
@@ -336,6 +348,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       chunks: D
       savefreq: D
       request:
@@ -378,6 +391,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=10, h1024).
     args:
       <<: *args-default
+      bridge_end_date: /scratch/project_465000454/lrb_465000454_asub/a13j/last_wiped.txt
       chunks:
         time: D
         vertical: 5
@@ -396,6 +410,8 @@ sources:
       <<: *metadata-default
       fdb_home: /users/lrb_465000454_fdb
       fdb_path: /users/lrb_465000454_fdb/etc/fdb/config.yaml
+      fdb_home_bridge: /users/lrb_465000454_fdb/databridge
+      fdb_path_bridge: /users/lrb_465000454_fdb/databridge/etc/fdb/config.yaml
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
