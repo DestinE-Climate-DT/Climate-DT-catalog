@@ -10,6 +10,6 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/ICON/healpix0/healpix_0.nc
+      - '{{ TEST_PATH }}/ICON/healpix0/healpix_0.nc'
     description: Healpix coarser resolution
     driver: netcdf

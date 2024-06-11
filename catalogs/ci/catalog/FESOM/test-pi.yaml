@@ -18,12 +18,12 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/FESOM/short/a_ice.fesom.1985.nc
-      - ./AQUA_tests/models/FESOM/short/a_ice.fesom.1986.nc
-      - ./AQUA_tests/models/FESOM/short/MLD2.fesom.1985.nc
-      - ./AQUA_tests/models/FESOM/short/MLD2.fesom.1986.nc
-      - ./AQUA_tests/models/FESOM/short/sst.fesom.1985.nc
-      - ./AQUA_tests/models/FESOM/short/sst.fesom.1986.nc
+      - '{{ TEST_PATH }}/FESOM/short/a_ice.fesom.1985.nc'
+      - '{{ TEST_PATH }}/FESOM/short/a_ice.fesom.1986.nc'
+      - '{{ TEST_PATH }}/FESOM/short/MLD2.fesom.1985.nc'
+      - '{{ TEST_PATH }}/FESOM/short/MLD2.fesom.1986.nc'
+      - '{{ TEST_PATH }}/FESOM/short/sst.fesom.1985.nc'
+      - '{{ TEST_PATH }}/FESOM/short/sst.fesom.1986.nc'
     description: original 2d output
     driver: netcdf
   original_2d_fix:
@@ -34,8 +34,8 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/FESOM/short/a_ice.fesom.1985.nc
-      - ./AQUA_tests/models/FESOM/short/MLD2.fesom.1985.nc
+      - '{{ TEST_PATH }}/FESOM/short/a_ice.fesom.1985.nc'
+      - '{{ TEST_PATH }}/FESOM/short/MLD2.fesom.1985.nc'
     description: original 2d output
     driver: netcdf
   original_3d:
@@ -48,10 +48,10 @@ sources:
         nz1: 1
         time: 1
       urlpath:
-      - ./AQUA_tests/models/FESOM/short/temp.fesom.1985.nc
-      - ./AQUA_tests/models/FESOM/short/temp.fesom.1986.nc
-      - ./AQUA_tests/models/FESOM/short/w.fesom.1985.nc
-      - ./AQUA_tests/models/FESOM/short/w.fesom.1986.nc
+      - '{{ TEST_PATH }}/FESOM/short/temp.fesom.1985.nc'
+      - '{{ TEST_PATH }}/FESOM/short/temp.fesom.1986.nc'
+      - '{{ TEST_PATH }}/FESOM/short/w.fesom.1985.nc'
+      - '{{ TEST_PATH }}/FESOM/short/w.fesom.1986.nc'
     description: original 3d output
     driver: netcdf
   
@@ -63,7 +63,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - './AQUA_tests/models/FESOM/short/{{ variable }}.fesom.{{ year }}.nc'
+      - '{{ TEST_PATH }}/FESOM/short/{{ variable }}.fesom.{{ year }}.nc'
     description: original 2d output
     driver: netcdf
     parameters:

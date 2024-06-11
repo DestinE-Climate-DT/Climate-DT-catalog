@@ -1,8 +1,3 @@
-paths:
-  grids: /work/bb1153/b382075/aqua/grids
-  weights: /work/bb1153/b382075/aqua/weights
-  areas: /work/bb1153/b382075/aqua/areas
-
 metadata:
   parameters:
     LRA_LUMI:
