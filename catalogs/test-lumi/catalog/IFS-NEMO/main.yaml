@@ -1,0 +1,6 @@
+sources:
+  test:
+    description: FDB IFS/NEMO control run (ensemble) with double precision
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/test.yaml'
