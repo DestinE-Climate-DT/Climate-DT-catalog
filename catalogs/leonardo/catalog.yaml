@@ -1,8 +1,3 @@
-paths:
-  grids: /leonardo_work/DestE_330_24/AQUA/grids
-  weights: /leonardo_work/DestE_330_24/AQUA/weights
-  areas: /leonardo_work/DestE_330_24/AQUA/areas
-
 metadata:
   parameters:
     DATA_PATH:

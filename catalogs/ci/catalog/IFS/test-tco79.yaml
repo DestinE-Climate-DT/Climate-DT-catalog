@@ -10,7 +10,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/IFS/short/IFS2d.tco79.nc
+      - '{{ TEST_PATH }}/IFS/short/IFS2d.tco79.nc'
     description: original 2d output
     driver: netcdf
   short_override:  # source to test override functionality
@@ -26,7 +26,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/IFS/short/IFS2d.tco79.nc
+      - '{{ TEST_PATH }}/IFS/short/IFS2d.tco79.nc'
     description: original 2d output
     driver: netcdf
   short_masked-coord-test:
@@ -37,7 +37,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/IFS/short/IFS2d.tco79.nc
+      - '{{ TEST_PATH }}/IFS/short/IFS2d.tco79.nc'
     description: original 2d output
     driver: netcdf
   short_nn:
@@ -48,7 +48,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/IFS/short/IFS2d.tco79.nc
+      - '{{ TEST_PATH }}/IFS/short/IFS2d.tco79.nc'
     description: original 2d output
     driver: netcdf
   short_disable_fix:
@@ -59,7 +59,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/IFS/short/IFS2d.tco79.nc
+      - '{{ TEST_PATH }}/IFS/short/IFS2d.tco79.nc'
     description: original 2d output
     driver: netcdf
   long:
@@ -68,7 +68,7 @@ sources:
       source_grid_name: lon-lat
     args:
       urlpath:
-      - ./AQUA_tests/models/IFS/long/regridded_r18x9.nc
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
     driver: netcdf
   long-mindate:
@@ -77,7 +77,7 @@ sources:
       source_grid_name: lon-lat
     args:
       urlpath:
-      - ./AQUA_tests/models/IFS/long/regridded_r18x9.nc
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y with mindate fixer
     driver: netcdf
   long_default_fix:
@@ -85,14 +85,14 @@ sources:
       source_grid_name: lon-lat
     args:
       urlpath:
-      - ./AQUA_tests/models/IFS/long/regridded_r18x9.nc
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
     driver: netcdf
   intake-esm-test:
     driver: intake_esm.esm_datastore
     description: Test Intake-ESM Catalog
     args:
-      obj: ./config/machines/ci/catalog/IFS/test-esm.json
+      obj: ./config/catalogs/ci/catalog/IFS/test-esm.json
     metadata:
       source_grid_name: lon-lat
       query:
@@ -106,7 +106,7 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/IFS/teleconnections/nao_test.nc
-      - ./AQUA_tests/models/IFS/teleconnections/enso_test.nc
+      - '{{ TEST_PATH }}/IFS/teleconnections/nao_test.nc'
+      - '{{ TEST_PATH }}/IFS/teleconnections/enso_test.nc'
     description: teleconnections catalogue
     driver: netcdf

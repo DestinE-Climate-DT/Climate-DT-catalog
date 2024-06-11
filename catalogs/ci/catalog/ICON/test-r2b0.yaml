@@ -9,6 +9,6 @@ sources:
       chunks:
         time: 1
       urlpath:
-      - ./AQUA_tests/models/ICON/test-lowres/r2b0.nc
+      - '{{ TEST_PATH }}/ICON/test-lowres/r2b0.nc'
     description: ICON r2b0 resolution
     driver: netcdf
