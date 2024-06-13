@@ -1,0 +1,21 @@
+lumi:
+  paths:
+    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
+    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
+    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+  intake:
+    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/datasets
+levante:
+  paths: 
+    grids: /work/bb1153/b382075/aqua/grids
+    weights: /work/bb1153/b382075/aqua/weights
+    areas: /work/bb1153/b382075/aqua/areas
+  intake:
+    LRA_PATH: /work/bb1153/b382076/LRA-lumi
+MN5:
+  paths:
+    grids: null
+    weights: null
+    areas: null
+  intake:
+    LRA_PATH: null
