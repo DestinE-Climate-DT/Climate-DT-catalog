@@ -198,7 +198,7 @@ sources:
       <<: *metadata-default
       fdb_home: /work/bm1235/b382776/cycle4_hist/fdb/native
       fdb_path: /work/bm1235/b382776/cycle4_hist/fdb/native/etc/fdb/config.yaml
-      variables: [193, 202, 204]
+      variables: [228, 8, 9]
       source_grid_name: tco1279
     
   daily-native-oce2d:
