@@ -103,6 +103,7 @@ sources:
         param: 263004
         levtype: o2d
     metadata:
+      <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-hpz7-nested
 
@@ -147,6 +148,7 @@ sources:
         param: 263000
         levtype: o2d
     metadata:
+      <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-hpz9-nested
 
