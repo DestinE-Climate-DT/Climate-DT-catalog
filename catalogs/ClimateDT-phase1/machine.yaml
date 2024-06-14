@@ -14,8 +14,8 @@ levante:
     LRA_PATH: /work/bb1153/b382076/LRA-lumi
 MN5:
   paths:
-    grids: null
-    weights: null
-    areas: null
+    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
+    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
+    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
-    LRA_PATH: null
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA
