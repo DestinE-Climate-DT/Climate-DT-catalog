@@ -141,7 +141,7 @@ sources:
       <<: *args-default
       aggregation: MS
       savefreq: D
-      # data_start_date: 20180101T0000
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         resolution: high
