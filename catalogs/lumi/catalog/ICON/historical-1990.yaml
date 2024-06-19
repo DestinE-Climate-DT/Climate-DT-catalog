@@ -27,8 +27,8 @@ sources:
     #description: hourly data on native grid Tco2559 (about 5km).
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /users/lrb_465000454_fdb
-      fdb_path: /users/lrb_465000454_fdb/etc/fdb/config.yaml
+      fdb_home: /appl/local/climatedt
+      fdb_path: /appl/local/climatedt/etc/fdb/config.yaml
       eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
       variables: [78, 79, 134, 137, 228164, 235, 260048, 146, 147, 169, 175, 176,
         177, 178, 179, 140101, 140102, 130, 151, 165, 166, 167, 168]
