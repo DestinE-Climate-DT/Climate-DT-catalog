@@ -30,7 +30,7 @@ sources:
     metadata: &metadata-default
       fdb_home: '{{ FDB_PATH }}'
       fdb_path: '{{ FDB_PATH }}/etc/fdb/config.yaml'
-      eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
         180, 181, 182, 212, 228]

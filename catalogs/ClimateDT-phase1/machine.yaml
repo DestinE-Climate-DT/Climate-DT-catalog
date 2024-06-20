@@ -4,8 +4,11 @@ lumi:
     weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
     areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
   intake:
+    # where LRA data is stored (available in all the machines listed)
     LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    # where the FDB schema is stored (available only on lumi)
     FDB_PATH: /appl/local/climatedt
+    # where the different eccodes definitions are stored (necessary for FDB)
     ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
 levante:
   paths: 
