@@ -1,0 +1,21 @@
+leonardo:
+  paths:
+    grids: /leonardo_work/DestE_330_24/AQUA/grids
+    weights: /leonardo_work/DestE_330_24/AQUA/weights
+    areas: /leonardo_work/DestE_330_24/AQUA/areas
+  intake:
+    DATA_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
+lumi:
+  paths:
+    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
+    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
+    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+  intake:
+    DATA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/datasets
+MN5:
+  paths:
+    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
+    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
+    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+  intake:
+    DATA_PATH: /gpfs/scratch/ehpc01/data/AQUA/datasets
