@@ -1,7 +1,5 @@
 sources:
-
 # Native sources
-
   hourly-native-atm2d: &base-default
     args: &args-default
       request: &request-default
@@ -31,8 +29,8 @@ sources:
     description: hourly 2D atmospheric data on native grid (about 5km).
     driver: gsv
     metadata: &metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/native/etc/fdb/config.yaml
-      eccodes_path: /work/bb1153/b382075/aqua/eccodes/eccodes-2.32.6/definitions
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/native/etc/fdb/config.yaml'
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.6/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
         180, 181, 182, 212, 228]
@@ -116,7 +114,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
 
   hourly-hpz7-atm3d:
@@ -134,7 +132,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -155,7 +153,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz7-nested
       fixer_name: fesom-destine-v1
@@ -179,7 +177,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -202,7 +200,7 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
 
   hourly-hpz9-atm3d:
@@ -220,7 +218,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -241,7 +239,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz9-nested
       fixer_name: fesom-destine-v1
@@ -265,7 +263,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -289,7 +287,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/latlon/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/latlon/etc/fdb/config.yaml'
       source_grid_name: era5-r025
 
   hourly-r025-atm3d:
@@ -307,7 +305,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb/latlon/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb/latlon/etc/fdb/config.yaml'
       source_grid_name: era5-r025
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -328,7 +326,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
 
   hourly-hpz7-atm3d-fdb2:
@@ -347,7 +345,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -368,7 +366,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz7-nested
       fixer_name: fesom-destine-v1
@@ -392,7 +390,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -416,7 +414,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
 
   hourly-hpz7-atm3d-fdb3:
@@ -435,7 +433,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -456,7 +454,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz7-nested
       fixer_name: fesom-destine-v1
@@ -480,7 +478,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -504,7 +502,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
 
   hourly-hpz7-atm3d-fdb4:
@@ -523,7 +521,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz7-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -544,7 +542,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz7-nested
       fixer_name: fesom-destine-v1
@@ -568,7 +566,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -594,7 +592,7 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
 
   hourly-hpz9-atm3d-fdb2:
@@ -613,7 +611,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -634,7 +632,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz9-nested
       fixer_name: fesom-destine-v1
@@ -658,7 +656,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb2/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb2/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -682,7 +680,7 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
 
   hourly-hpz9-atm3d-fdb3:
@@ -701,7 +699,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -722,7 +720,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz9-nested
       fixer_name: fesom-destine-v1
@@ -746,7 +744,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb3/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb3/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -770,7 +768,7 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
 
   hourly-hpz9-atm3d-fdb4:
@@ -789,7 +787,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       source_grid_name: hpz9-nested
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -810,7 +808,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-nextgems4-hpz9-nested
       fixer_name: fesom-destine-v1
@@ -834,7 +832,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
     metadata:
       <<: *metadata-default
-      fdb_path: /work/bm1235/b382776/cycle4/fdb4/healpix/etc/fdb/config.yaml
+      fdb_path: '{{ FDB_PATH }}/cycle4/fdb4/healpix/etc/fdb/config.yaml'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
         165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
@@ -850,7 +848,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /work/bb1153/b382075/aqua/lra/IFS-FESOM/ssp370-ng4/r100/monthly/*ssp370-ng4_r100_monthly_*.nc
+        '{{ LRA_NEXTGEMS }}/IFS-FESOM/ssp370-ng4/r100/monthly/*ssp370-ng4_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true

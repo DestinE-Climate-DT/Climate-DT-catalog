@@ -1,0 +1,11 @@
+sources:
+  historical-1990:
+    description: FDB IFS-FESOM tco1279-ng5 nextGEMS cycle4 historical 1990
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/historical-1990.yaml'
+  ssp370:
+    description: FDB IFS-FESOM tco1279-ng5 nextGEMS cycle4 SSP3-7.0
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ssp370.yaml'
