@@ -5,6 +5,8 @@ lumi:
     areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
   intake:
     LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/datasets
+    FDB_PATH: /appl/local/climatedt
+    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
 levante:
   paths: 
     grids: /work/bb1153/b382075/aqua/grids
@@ -12,6 +14,8 @@ levante:
     areas: /work/bb1153/b382075/aqua/areas
   intake:
     LRA_PATH: /work/bb1153/b382076/LRA-lumi
+    FDB_PATH: null
+    ECCODES_PATH: null
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids
@@ -19,3 +23,5 @@ MN5:
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA
+    FDB_PATH: null
+    ECCODES_PATH: null

@@ -28,8 +28,8 @@ sources:
     #description: hourly data on native grid Tco2559 (about 5km).
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /appl/local/climatedt
-      fdb_path: /appl/local/climatedt/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}'
+      fdb_path: '{{ FDB_PATH }}/etc/fdb/config.yaml'
       eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
@@ -192,8 +192,8 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_home: /appl/local/climatedt/native
-      fdb_path: /appl/local/climatedt/native/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_path: '{{ FDB_PATH }}/native/etc/fdb/config.yaml'
       source_grid_name: tco1279
 
   hourly-native-atm3d:
@@ -212,8 +212,8 @@ sources:
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [129, 130, 131, 132, 133, 135, 157, 246]
-      fdb_home: /appl/local/climatedt/native
-      fdb_path: /appl/local/climatedt/native/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_path: '{{ FDB_PATH }}/native/etc/fdb/config.yaml'
       source_grid_name: tco1279
 
   # OCEANIC NATIVE IS NOT READ BY THE GSV RETRIEVER
@@ -229,7 +229,7 @@ sources:
   #       resolution: high
   #   metadata:
   #     <<: *metadata-default
-  #     fdb_path: /appl/local/climatedt/native/etc/fdb/config.yaml
+  #     fdb_path: '{{ FDB_PATH }}/native/etc/fdb/config.yaml'
   #     variables: [263000, 263001, 263002, 263003, 263004,
   #        263100, 263101, 263124]
   #     #variables: [263124]
