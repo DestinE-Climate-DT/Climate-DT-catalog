@@ -1,3 +1,10 @@
+leonardo:
+  paths:
+    grids: /leonardo_work/DestE_330_24/AQUA/grids
+    weights: /leonardo_work/DestE_330_24/AQUA/weights
+    areas: /leonardo_work/DestE_330_24/AQUA/areas
+  intake:
+    DATA_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
 lumi:
   paths:
     grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
