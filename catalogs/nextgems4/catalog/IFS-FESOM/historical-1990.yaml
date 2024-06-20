@@ -27,9 +27,9 @@ sources:
     description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /work/bm1235/b382776/cycle4_hist/fdb/healpix
-      fdb_path: /work/bm1235/b382776/cycle4_hist/fdb/healpix/etc/fdb/config.yaml
-      eccodes_path: /work/bb1153/b382075/aqua/eccodes/eccodes-2.32.6/definitions
+      fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/healpix'
+      fdb_path: '{{ FDB_PATH }}/cycle4_hist/fdb/healpix/etc/fdb/config.yaml'
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.6/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186, 187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179, 180, 181, 182, 212, 228]
       source_grid_name: hpz7-nested
       fixer_name: ifs-fesom-destine-v1-nan
@@ -161,8 +161,8 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_home: /work/bm1235/b382776/cycle4_hist/fdb/latlon
-      fdb_path: /work/bm1235/b382776/cycle4_hist/fdb/latlon/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
+      fdb_path: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon/etc/fdb/config.yaml'
       source_grid_name: era5-r025
   
   hourly-r025-atm3d:
@@ -179,8 +179,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_home: /work/bm1235/b382776/cycle4_hist/fdb/latlon
-      fdb_path: /work/bm1235/b382776/cycle4_hist/fdb/latlon/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
+      fdb_path: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon/etc/fdb/config.yaml'
       source_grid_name: era5-r025
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -195,8 +195,8 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_home: /work/bm1235/b382776/cycle4_hist/fdb/native
-      fdb_path: /work/bm1235/b382776/cycle4_hist/fdb/native/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/native'
+      fdb_path: '{{ FDB_PATH }}/cycle4_hist/fdb/native/etc/fdb/config.yaml'
       variables: [228, 8, 9]
       source_grid_name: tco1279
     

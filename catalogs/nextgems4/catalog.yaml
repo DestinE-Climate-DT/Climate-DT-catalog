@@ -1,0 +1,21 @@
+metadata:
+  parameters:
+    LRA_NEXTGEMS:
+      type: str
+      description: the path of the nextGEMS LRA data
+      default: /work/bb1153/b382075/aqua/lra
+    FDB_PATH:
+      type: str
+      description: the path of the FDB data
+      default: /work/bm1235/b382776
+    ECCODES_PATH:
+      type: str
+      description: the path of the eccodes folder
+      default: /work/bb1153/b382075/aqua/eccodes
+
+sources:
+  IFS-FESOM:
+    description: IFS-FESOM coupled model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml"

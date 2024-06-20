@@ -1,6 +1,0 @@
-sources:
-  tco1279-ng5-cycle4_historical:
-    description: FDB IFS/FESOM 9km 
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/tco1279-ng5-cycle4_historical.yaml'
