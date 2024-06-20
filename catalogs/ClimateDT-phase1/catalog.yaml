@@ -8,6 +8,10 @@ metadata:
       type: str
       description: the path to the FDB
       default: /appl/local/climatedt
+    ECCODES_PATH:
+      type: str
+      description: the path to the eccodes definitions
+      default: /projappl/project_465000454/jvonhar/aqua/eccodes
   
 sources:
   IFS-NEMO:
@@ -20,8 +24,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml"
-  ICON:
-    description: IFS atmospheric model
-    driver: yaml_file_cat
-    args:
-        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
+  # ICON:
+  #   description: IFS atmospheric model
+  #   driver: yaml_file_cat
+  #   args:
+  #       path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
