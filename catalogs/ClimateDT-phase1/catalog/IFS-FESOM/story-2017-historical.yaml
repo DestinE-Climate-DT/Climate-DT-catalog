@@ -26,12 +26,12 @@ sources:
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
       timestyle: date  # variable date or variable step
-    #description: hourly data on native grid Tco2559 (about 5km).
+    description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /appl/local/climatedt
-      fdb_path: /appl/local/climatedt/etc/fdb/config.yaml
-      eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
+      fdb_home: '{{ FDB_PATH }}'
+      fdb_path: '{{ FDB_PATH }}/etc/fdb/config.yaml'
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
         180, 181, 182, 212, 228]
@@ -94,7 +94,7 @@ sources:
       source_grid_name: hpz9-nested
 
 
-  hourly-hpz7-oce2d:
+  daily-hpz7-oce2d:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
@@ -106,10 +106,11 @@ sources:
         resolution: standard
         levtype: o2d
     metadata:
+      <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-hpz7-nested
 
-  hourly-hpz7-oce3d:
+  daily-hpz7-oce3d:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
@@ -135,7 +136,7 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: fesom-hpz7-nested-3d
 
-  hourly-hpz9-oce2d:
+  daily-hpz9-oce2d:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=9, h1024).
     args:
@@ -148,10 +149,11 @@ sources:
         resolution: high
         levtype: o2d
     metadata:
+      <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-hpz9-nested
 
-  hourly-hpz9-oce3d:
+  daily-hpz9-oce3d:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=9, h1024).
     args:
@@ -190,8 +192,8 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_home: /appl/local/climatedt/native
-      fdb_path: /appl/local/climatedt/native/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_path: '{{ FDB_PATH }}/native/etc/fdb/config.yaml'
       source_grid_name: tco1279
 
   hourly-native-atm3d:
@@ -211,8 +213,8 @@ sources:
         850, 925, 1000]
       variables: [129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: tco1279
-      fdb_home: /appl/local/climatedt/native
-      fdb_path: /appl/local/climatedt/native/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_path: '{{ FDB_PATH }}/native/etc/fdb/config.yaml'
 
 # OCEANIC NATIVE IS NOT READ BY THE GSV RETRIEVER
 #   hourly-native-oce2d:
@@ -228,7 +230,7 @@ sources:
 #         resolution: high
 #     metadata:
 #       <<: *metadata-default
-#       fdb_path: /appl/local/climatedt/native/etc/fdb/config.yaml
+#       fdb_path: '{{ FDB_PATH }}/native/etc/fdb/config.yaml'
 #       variables: [263000, 263001, 263002, 263003, 263004,
 #         263100, 263101, 263124]
 #       source_grid_name: ng5-nodes-2d
@@ -263,7 +265,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/IFS-FESOM/story-2017-historical/r100/monthly/*story-2017-historical_r100_monthly_*.nc
+        '{{ LRA_PATH }}/IFS-FESOM/story-2017-historical/r100/monthly/*story-2017-historical_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true

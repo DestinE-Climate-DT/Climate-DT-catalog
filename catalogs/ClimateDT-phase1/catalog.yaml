@@ -1,0 +1,31 @@
+metadata:
+  parameters:
+    LRA_PATH:
+      type: str
+      description: the path to the LRA
+      default: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    FDB_PATH:
+      type: str
+      description: the path to the FDB
+      default: /appl/local/climatedt
+    ECCODES_PATH:
+      type: str
+      description: the path to the eccodes definitions
+      default: /projappl/project_465000454/jvonhar/aqua/eccodes
+  
+sources:
+  IFS-NEMO:
+    description: IFS-NEMO coupled model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml"
+  IFS-FESOM:
+    description: IFS-FESOM coupled model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml"
+  ICON:
+    description: IFS atmospheric model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"

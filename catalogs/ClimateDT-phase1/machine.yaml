@@ -1,0 +1,30 @@
+lumi:
+  paths:
+    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
+    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
+    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+  intake:
+    # where LRA data is stored (available in all the machines listed)
+    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    # where the FDB schema is stored (available only on lumi)
+    FDB_PATH: /appl/local/climatedt
+    # where the different eccodes definitions are stored (necessary for FDB)
+    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
+levante:
+  paths: 
+    grids: /work/bb1153/b382075/aqua/grids
+    weights: /work/bb1153/b382075/aqua/weights
+    areas: /work/bb1153/b382075/aqua/areas
+  intake:
+    LRA_PATH: /work/bb1153/b382076/LRA-lumi
+    FDB_PATH: null
+    ECCODES_PATH: null
+MN5:
+  paths:
+    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
+    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
+    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+  intake:
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA
+    FDB_PATH: null
+    ECCODES_PATH: null
