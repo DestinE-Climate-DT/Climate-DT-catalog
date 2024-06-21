@@ -13,4 +13,4 @@ sources:
       compat: override
       combine: nested
       urlpath: 
-      - 'reference::{{DATA_PATH}}}/AVISO/json/AVISO.json'
+      - 'reference::{{DATA_PATH}}/AVISO/json/AVISO.json'
