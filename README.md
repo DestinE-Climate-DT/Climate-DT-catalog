@@ -8,7 +8,8 @@ This is the AQUA catalog for Climate DT. Includes catalogs for levante, lumi, MN
 2. leonardo: Catalog for the Leonardo HPC.
 3. levante: Catalog for the Levante HPC.
 4. lumi: Catalog for the LUMI HPC.
-5. nextgems4: Catalog with the nextGEMS cycle4 experiments.
-6. obs: Catalog with the observational datasets.
+5. nextgems3: Catalog with the nextGEMS cycle3 experiments. (Levante)
+6. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
+7. obs: Catalog with the observational datasets. (multi machine)
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
