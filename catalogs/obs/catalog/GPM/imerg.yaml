@@ -1,0 +1,16 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  hourly:
+    description: IMERG precipitatio 0.1deg hourly 2020-2021
+    driver: netcdf
+    args:
+      urlpath: '{{DATA_PATH}}/GPM_IMERG/GPM_IMERG_hourly_202*_*.nc'
+      chunks:
+        time: 24
+      xarray_kwargs:
+        decode_times: True
+    metadata:
+      source_grid_name: lon-lat

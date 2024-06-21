@@ -31,6 +31,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"
+  GPM:
+    description: Global Precipitation Measurement
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/GPM/main.yaml"
   MSWEP:
     description: MSWEP_V280 precipitation data
     driver: yaml_file_cat
