@@ -1,0 +1,6 @@
+sources:
+  tco1279-orca025:
+    description: 9km Cycle 3 experiment, coupled with NEMO 25km
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/tco1279-orca025.yaml"

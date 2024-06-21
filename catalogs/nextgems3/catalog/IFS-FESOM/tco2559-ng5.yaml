@@ -1,8 +1,9 @@
 plugins:
   source:
   - module: intake_xarray
+  - module: gribscan
 sources:
-  2D_1h_native:
+  hourly-native-oce2d:
     args:
       chunks:
         nod2: -1
@@ -312,7 +313,8 @@ sources:
     metadata:
       source: 2D_1h_native
       source_grid_name: ng5-nodes-2d
-  2D_daily_native:
+
+  daily-native-oce2d:
     args:
       chunks:
         nod2: -1
@@ -1102,7 +1104,8 @@ sources:
     metadata:
       source: 2D_daily_native
       source_grid_name: ng5-nodes-2d
-  2D_monthly_native:
+
+  monthly-native-oce2d:
     args:
       chunks:
         nod2: -1
@@ -1172,7 +1175,8 @@ sources:
     metadata:
       source: 2D_monthly_native
       source_grid_name: ng5-nodes-2d
-  2D_monthly_native_elem:
+
+  monthly-native-oce2d-elem:
     args:
       chunks:
         elem: -1
@@ -1302,7 +1306,8 @@ sources:
     metadata:
       source: 2D_monthly_native_elem
       source_grid_name: ng5-elems-2d
-  3D_daily_native:
+
+  daily-native-oce3d:
     args:
       chunks:
         nod2: -1
@@ -1554,7 +1559,8 @@ sources:
     metadata:
       source: 3D_daily_native
       source_grid_name: ng5-nodes-3d
-  3D_daily_native_elem:
+
+  daily-native-oce3d-elem:
     args:
       chunks:
         elem: -1
@@ -1685,7 +1691,8 @@ sources:
     metadata:
       source: 3D_daily_native_elem
       source_grid_name: ng5-elems-3d
-  3D_daily_native_zarr:
+
+  daily-native-oce3d-zarr:
     args:
       consolidated: true
       urlpath:
@@ -1712,15 +1719,94 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: ng5-nodes-3d
-  lra-r100-monthly:
-    driver: netcdf
-    description: LRA data monthly at r100
+
+  hourly-native-atm2d:
+    driver: zarr
+    metadata:
+      source_grid_name: tco2559
+      fixer_name: IFS-default
     args:
-      urlpath: /work/bb1153/b382076/LRAv3/FESOM/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
+      consolidated: false
+      urlpath:
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm2d.json
+
+  hourly-native-atm3d:
+    driver: zarr
+    metadata:
+      source_grid_name: tco2559
+    args:
+      consolidated: false
+      urlpath:
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm3d.json
+  
+  monthly-0.25deg-atm2d:
+    driver: zarr
+    metadata:
+      source_grid_name: multio-r025
+      fixer_name: ifs-cycle3
+    args:
+      consolidated: false
+      urlpath:
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg/json.dir/atm2d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg_p2/json.dir.job/atm2d.json
+  
+  monthly-0.25deg-atm3d:
+    driver: zarr
+    metadata:
+      source_grid_name: multio-r025
+    args:
+      consolidated: false
+      urlpath:
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg/json.dir/atm3d.json
+      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg_p2/json.dir.job/atm3d.json
+
+  lra-r100-monthly-atm:
+    driver: netcdf
+    description: LRA data monthly at r100 for IFS
+    args:
+      urlpath:
+        - /work/bb1153/b382076/LRA-cycle3/IFS/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
     metadata:
       source_grid_name: lon-lat
       fixer_name: lra-cycle3
+
+  lra-r100-monthly-oce:
+    driver: netcdf
+    description: LRA data monthly at r100 for FESOM
+    args:
+      urlpath:
+        - /work/bb1153/b382076/LRAv3/FESOM/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: ng5-nodes-3d
+      fixer_name: lra-cycle3
+  
+  # LEGACY
+  # 2D_monthly_1deg:
+  #   driver: zarr
+  #   args:
+  #     consolidated: false
+  #     urlpath:
+  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm2d.json
+  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg_p2/json.dir/atm2d.json
+  # 3D_monthly_1deg:
+  #   driver: zarr
+  #   args:
+  #     consolidated: false
+  #     urlpath:
+  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm3d.json
+  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg_p2/json.dir/atm3d.json
+  # WAM_1h_native:
+  #   driver: zarr
+  #   args:
+  #     consolidated: false
+  #     urlpath: 
+  #       reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h_wam/json.dir/atm2d.json
 

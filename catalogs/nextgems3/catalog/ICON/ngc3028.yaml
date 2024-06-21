@@ -27,6 +27,7 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+
   PT3H:
     args:
       metadata:
@@ -55,6 +56,7 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+
   P1D:
     args:
       metadata:
@@ -83,6 +85,7 @@ sources:
         default: 0
         description: zoom resolution of the dataset
         type: int
+
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
