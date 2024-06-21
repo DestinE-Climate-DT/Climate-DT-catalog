@@ -3,7 +3,7 @@ plugins:
   - module: intake_xarray
   - module: gribscan
 sources:
-  2D_1h_native:
+  hourly-native-atm2d:
     driver: zarr
     args:
       consolidated: false
@@ -12,7 +12,8 @@ sources:
     metadata:
       source_grid_name: tco1279
       fixer_name: IFS-default
-  3D_1h_native:
+
+  hourly-native-atm3d:
     driver: zarr
     args:
       consolidated: false
@@ -20,7 +21,8 @@ sources:
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir/atm3d.json
     metadata:
       source_grid_name: tco1279
-  2D_monthly_native:
+
+  monthly-native-atm2d:
     driver: zarr
     args:
       consolidated: false
@@ -29,7 +31,8 @@ sources:
     metadata:
       source_grid_name: tco1279
       fixer_name: ifs-multio-cycle3
-  3D_monthly_native:
+
+  monthly-native-atm3d:
     driver: zarr
     args:
       consolidated: false
@@ -37,7 +40,8 @@ sources:
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir/atm3d.json
     metadata:
       source_grid_name: tco1279
-  2D_1h_0.25deg:
+
+  hourly-0.25deg-atm2d:
     driver: zarr
     args:
       consolidated: false
@@ -46,7 +50,8 @@ sources:
     metadata:
       source_grid_name: multio-r025
       fixer_name: ifs-multio-cycle3
-  3D_1h_0.25deg:
+
+  hourly-0.25deg-atm3d:
     driver: zarr
     args:
       consolidated: false
@@ -54,7 +59,8 @@ sources:
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir/atm3d.json
     metadata:
       source_grid_name: multio-r025
-  2D_monthly_0.25deg:
+
+  monthly-0.25deg-atm2d:
     driver: zarr
     args:
       consolidated: false
@@ -63,7 +69,8 @@ sources:
     metadata:
       source_grid_name: multio-r025
       fixer_name: ifs-multio-cycle3
-  3D_monthly_0.25deg:
+
+  monthly-0.25deg-atm3d:
     driver: zarr
     args:
       consolidated: false
