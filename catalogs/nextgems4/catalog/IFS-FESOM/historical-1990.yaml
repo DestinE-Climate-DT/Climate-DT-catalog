@@ -18,7 +18,7 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      data_start_date: 19910101
+      data_start_date: 19900101
       data_end_date: auto
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved

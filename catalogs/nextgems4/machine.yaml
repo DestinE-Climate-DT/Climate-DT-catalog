@@ -7,3 +7,12 @@ levante:
     LRA_NEXTGEMS: /work/bb1153/b382075/aqua/lra
     FDB_PATH: /work/bm1235/b382776
     ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
+lumi:
+  paths:
+    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
+    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
+    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+  intake:
+    LRA_NEXTGEMS: /projappl/project_465000454/data/AQUA/LRA-nextgems4
+    FDB_PATH: null
+    ECCODES_PATH: null
