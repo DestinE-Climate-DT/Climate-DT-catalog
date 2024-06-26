@@ -1,6 +1,6 @@
 sources:
   a0fe:
-    description: FDB IFS/NEMO development tco79-eORCA1 historical 1990-2020 run - not use
+    description: FDB IFS/NEMO development tco79-eORCA1 historical 1990-2020 run - deleted - not use
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a0fe.yaml'
