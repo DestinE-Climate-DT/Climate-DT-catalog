@@ -1,0 +1,26 @@
+sources:
+  a1bm:
+    description: FDB IFS/NEMO control run (ensemble) with single precision
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1bm.yaml'
+  a1ca:
+    description: FDB IFS/NEMO control run (ensemble) with double precision
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1ca.yaml'
+  a14c:
+    description: FDB IFS-NEMO tco1279-eORCA12 1990 control run
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a14c.yaml'
+  hs3l-control-1990:
+    description: FDB IFS-NEMO tco399-eORCA025 1990 control run from ATOS. This contains the control tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 CTRL)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/hs3l-control-1990.yaml'
+  hs3l-historical-1990:
+    description: FDB IFS-NEMO tco399-eORCA025 1990 historical run from ATOS. This contains the historical tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 HIST)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/hs3l-historical-1990.yaml'
