@@ -9,3 +9,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
+  control-1990:
+    description: FDB IFS-NEMO tco1279-eORCA12 control 1990 run (produced with EERIE resources). Access is limited to who has access to project_465000542
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/control-1990.yaml'

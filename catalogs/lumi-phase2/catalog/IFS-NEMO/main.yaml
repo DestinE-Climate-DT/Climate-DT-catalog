@@ -9,11 +9,6 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ca.yaml'
-  a14c:
-    description: FDB IFS-NEMO tco1279-eORCA12 1990 control run
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/a14c.yaml'
   hs3l-control-1990:
     description: FDB IFS-NEMO tco399-eORCA025 1990 control run from ATOS. This contains the control tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 CTRL)
     driver: yaml_file_cat
