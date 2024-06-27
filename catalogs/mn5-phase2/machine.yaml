@@ -1,0 +1,5 @@
+mn5:
+  paths:
+    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids  #CHANGE TO MN5 PATH!
+    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights  #CHANGE TO MN5 PATH!
+    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas  #CHANGE TO MN5 PATH!

@@ -1,0 +1,6 @@
+sources:
+  t01o:
+    description: IFS/NEMO test run for workflow integration
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t01o.yaml'
