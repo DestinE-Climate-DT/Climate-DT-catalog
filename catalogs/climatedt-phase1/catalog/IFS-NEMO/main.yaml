@@ -9,3 +9,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
+  control-1990:
+    description: FDB IFS-NEMO tco1279-eORCA12 control 1990 run
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/control-1990.yaml'
