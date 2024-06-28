@@ -126,7 +126,7 @@ sources:
         4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
         5902.0576171875]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: nemo-eORCA12-hpz10-nested
+      source_grid_name:  nemo-eORCA12-hpz10-nested-3d
 
   lra-r100-monthly:
     driver: netcdf
