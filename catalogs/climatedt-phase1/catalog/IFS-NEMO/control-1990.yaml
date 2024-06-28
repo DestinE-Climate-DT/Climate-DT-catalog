@@ -30,7 +30,7 @@ sources:
       fdb_home: /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids
       fdb_path: 
         /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids/etc/fdb/config.yaml
-      eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
         180, 181, 182, 212, 228]
@@ -126,14 +126,14 @@ sources:
         4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
         5902.0576171875]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: nemo-eORCA12-hpz10-nested
+      source_grid_name:  nemo-eORCA12-hpz10-nested-3d
 
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/IFS-NEMO/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc
+        '{{ LRA_PATH }}/IFS-NEMO/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
