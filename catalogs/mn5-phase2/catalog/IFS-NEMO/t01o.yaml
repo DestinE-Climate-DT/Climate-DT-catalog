@@ -1,38 +1,38 @@
 sources:
   hourly-native:
     args: &args-default
-        request: &request-default
-          class: d1
-          dataset: climate-dt
-          activity: HighResMIP
-          experiment: cont
-          generation: 1
-          model: ifs-nemo
-          realization: 1
-          resolution: standard
-          expver: t01o
-          type: fc
-          stream: clte
-          date: 19900201/to/19900228
-          time: 000/to/2300/by/0100
-          levelist:
-            - 100
-          param: 
-            - 228246  
-          levtype: hl
-          step: 0
-        data_start_date: 19900201T0000
-        data_end_date: 19900228T2300
-        chunks: D  # Default time chunk size
-        savefreq: h  # at what frequency are data saved
-        timestep: h  # base timestep for step timestyle
-        timestyle: date  # variable date or variable step
-      description: hourly data on native grid.
-      driver: gsv
-      metadata: &metadata-default
-        fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
-        fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
-        eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/ 
-        variables: [228246, 228247]  #100u, 100v
-        source_grid_name: tco79
-        fixer_name: ifs-destine-v1
+      request: &request-default
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP
+        experiment: cont
+        generation: 1
+        model: ifs-nemo
+        realization: 1
+        resolution: standard
+        expver: t01o
+        type: fc
+        stream: clte
+        date: 19900201/to/19900228
+        time: 000/to/2300/by/0100
+        levelist:
+          - 100
+        param: 
+          - 228246  
+        levtype: hl
+        step: 0
+      data_start_date: 19900201T0000
+      data_end_date: 19900228T2300
+      chunks: D  # Default time chunk size
+      savefreq: h  # at what frequency are data saved
+      timestep: h  # base timestep for step timestyle
+      timestyle: date  # variable date or variable step
+    description: hourly data on native grid.
+    driver: gsv
+    metadata: &metadata-default
+      fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
+      fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/ 
+      variables: [228246, 228247]  #100u, 100v
+      source_grid_name: tco79
+      fixer_name: ifs-destine-v1
