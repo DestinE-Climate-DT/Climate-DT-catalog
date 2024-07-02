@@ -34,5 +34,5 @@ sources:
       fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
       eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/ 
       variables: [228246, 228247]  #100u, 100v
-      source_grid_name: tco79
+      source_grid_name: hpz5-nested
       fixer_name: ifs-destine-v1
