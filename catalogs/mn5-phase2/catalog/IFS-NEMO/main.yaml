@@ -1,0 +1,6 @@
+sources:
+  a1g5:
+    description: IFS/NEMO - SSP3-7.0 projection - Tco399/eORCA025
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1g5.yaml'

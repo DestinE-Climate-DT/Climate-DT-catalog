@@ -1,0 +1,91 @@
+sources:
+  monthly-r100-atm2d: &base-default
+    args: &args-default
+      request: &request-default
+        class: d1
+        dataset: climate-dt
+        activity: CMIP6 
+        experiment: hist
+        generation: 1
+        model: IFS-NEMO
+        resolution: standard
+        realization: 1 #'{{ realization }}'
+        expver: 'a1g5'
+        type: fc
+        stream: clmn
+        year: 1990
+        month: 1
+        param: 228
+        levtype: sfc
+      data_start_date: 19920101T0000
+      data_end_date: 19961231T0000
+      chunks: MS  # Default time chunk size
+      savefreq: MS  # at what frequency are data saved
+      timestep: h  # base timestep for step timestyle
+      timestyle: yearmonth  # variable date or variable step
+    parameters: &parameters-default
+      realization:
+          allowed: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          description: realization member
+          type: int
+          default: 1
+    description: monthly 2d atmospheric data on regural r025 grid.
+    driver: gsv
+    metadata: &metadata-default
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1g5/fdb/REGULARLL_grids/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1g5/fdb/REGULARLL_grids/etc/fdb/config.yaml
+      eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
+      variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
+      source_grid_name: lon-lat
+      fixer_name: ifs-nemo-destine-v1-monthly
+  
+  monthly-r100-atm3d:
+    <<: *base-default
+    description: monthly 3d atmospheric data on regural r025 grid.
+    args:
+      <<: *args-default
+      request:
+        <<: *request-default
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
+    parameters:
+      <<: *parameters-default
+    metadata:
+      <<: *metadata-default
+      variables: [130, 131, 132, 133]
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
+  
+  monthly-r100-oce2d:
+    <<: *base-default
+    description: monthly 2d oceanic data on regural r025 grid.
+    args:
+      <<: *args-default
+      request:
+        <<: *request-default
+        param: 263000
+        levtype: o2d
+    parameters:
+      <<: *parameters-default
+    metadata:
+      <<: *metadata-default
+      variables: [263001,263121,263000,263008,263100,263101,263122]
+      source_grid_name: nemo-multiIO-r025
+  
+  monthly-r100-oce3d:
+    <<: *base-default
+    description: monthly 2d oceanic data on regural r025 grid.
+    args:
+      <<: *args-default
+      request:
+        <<: *request-default
+        param: 263000
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]
+    parameters:
+      <<: *parameters-default
+    metadata:
+      <<: *metadata-default
+      variables: [263500,263501]
+      levels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]
+      source_grid_name: nemo-multiIO-r025
+
