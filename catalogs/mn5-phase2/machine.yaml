@@ -1,5 +1,5 @@
 MN5:
-￼  paths:
-￼    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
-￼    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
-￼    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+  paths:
+    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
+    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
+    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
