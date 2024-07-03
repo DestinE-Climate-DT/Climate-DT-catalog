@@ -1,5 +1,5 @@
 sources:
-  hourly-native:
+  hourly-native-atm2d:
     args: &args-default
       request: &request-default
         class: d1
