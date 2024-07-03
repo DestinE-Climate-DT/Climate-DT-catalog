@@ -17,7 +17,7 @@ sources:
         stream: clte
         time: 0000/to/2300/by/0100
         type: fc
-        model: ifs-nemoHL
+        model: ifs-nemo
       data_start_date: 19900101T0000
       data_end_date: 19900228T2300
       chunks: D
