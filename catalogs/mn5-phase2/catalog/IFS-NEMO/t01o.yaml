@@ -13,15 +13,13 @@ sources:
         expver: t01o
         type: fc
         stream: clte
-        date: 19900201/to/19900228
+        date: 19900101/to/19900228
         time: 000/to/2300/by/0100
-        levelist:
-          - 100
         param: 
-          - 228246  
-        levtype: hl
+          - 167  
+        levtype: sfc
         step: 0
-      data_start_date: 19900201T0000
+      data_start_date: 19900101T0000
       data_end_date: 19900228T2300
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
@@ -33,6 +31,7 @@ sources:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
       fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
       eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions 
-      variables: [228246, 228247]  #100u, 100v
+      variables: [167, 176, 177, 178, 179]  #2t, ssr, str, tsr, ttr
       source_grid_name: hpz5-nested
       fixer_name: ifs-destine-v1
+
