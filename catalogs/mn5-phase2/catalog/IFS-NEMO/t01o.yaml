@@ -1,5 +1,5 @@
 sources:
-  hourly-native-hl:
+  hourly-native-sfc:
     args: &args-default
       request: &request-default
         activity: highresmip
@@ -9,16 +9,15 @@ sources:
         experiment: cont
         expver: t01o
         generation: 1
-        levelist: [100]
-        levtype: hl
-        model: ifs-nemo
-        param: 228246
+        levtype: sfc
+        param: 8
         realization: '1'
         resolution: standard
         step: 0
         stream: clte
         time: 0000/to/2300/by/0100
         type: fc
+        model: ifs-nemo
       data_start_date: 19900101T0000
       data_end_date: 19900228T2300
       chunks: D
@@ -32,6 +31,17 @@ sources:
       fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
       fixer_name: ifs-destine-v1
       source_grid_name: hpz5-nested
+      variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
+        165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
+        188, 212, 228, 235, 260048]
+  hourly-native-hl:
+    args: &args-default
+      request: &request-default
+        levelist: [100]
+        levtype: hl
+        param: 228246
+    driver: gsv
+    metadata: &metadata-default
       variables: [228246, 228247]
   hourly-native-o2d:
     args: &args-default
@@ -55,19 +65,9 @@ sources:
     driver: gsv
     metadata: &metadata-default
       variables: [263500, 263501, 263505, 263506, 263507]
-  hourly-native-sfc:
-    args: &args-default
-      request: &request-default
-        levtype: sfc
-        param: 8
-    driver: gsv
-    metadata: &metadata-default
-      variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
-        165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
-        188, 212, 228, 235, 260048]
+
   hourly-native-sol:
-    args:
-      '&args-default'
+    args: &args-default
       request: &request-defaults
         levelist: [1, 2, 3, 4, 5]
         levtype: sol
