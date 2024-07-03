@@ -1,37 +1,168 @@
 sources:
-  hourly-native-atm2d:
-    args: &args-default
-      request: &request-default
+  hourly-native-hl:
+    args:
+      '&args-default'
+      request:
+        '&request-default'
+        activity: highresmip
         class: d1
         dataset: climate-dt
-        activity: HighResMIP
-        experiment: cont
-        generation: 1
-        model: ifs-nemo
-        realization: 1
-        resolution: standard
-        expver: t01o
-        type: fc
-        stream: clte
         date: 19900101/to/19900228
-        time: 000/to/2300/by/0100
-        param: 
-          - 167  
-        levtype: sfc
+        experiment: cont
+        expver: t01o
+        generation: 1
+        levelist: [100]
+        levtype: hl
+        model: ifs-nemo
+        param: 228246
+        realization: '1'
+        resolution: standard
         step: 0
+        stream: clte
+        time: 0000/to/2300/by/0100
+        type: fc
       data_start_date: 19900101T0000
       data_end_date: 19900228T2300
-      chunks: D  # Default time chunk size
-      savefreq: h  # at what frequency are data saved
-      timestep: h  # base timestep for step timestyle
-      timestyle: date  # variable date or variable step
-    description: hourly data on native grid.
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
     driver: gsv
-    metadata: &metadata-default
+    metadata:
+      '&metadata-default'
+      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
       fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
       fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
-      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions 
-      variables: [167, 176, 177, 178, 179]  #2t, ssr, str, tsr, ttr
-      source_grid_name: hpz5-nested
       fixer_name: ifs-destine-v1
+      source_grid_name: hpz5-nested
+      variables: [228246, 228247]
+  hourly-native-o2d:
+    args:
+      '&args-default'
+      request:
+        '&request-default'
+        activity: highresmip, class: d1, dataset: climate-dt, date: 19900101/to/19900228,
+        experiment: cont, expver: t01o, generation: 1, levtype: o2d, model: ifs-nemo,
+        param: 263000, realization: '1', resolution: standard, step: 0, stream: clte,
+        time: '0000', type: fc
+      data_start_date: 19900101T0000
+      data_end_date: 19900228T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    driver: gsv
+    metadata:
+      '&metadata-default'
+      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
+      fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
+      fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fixer_name: ifs-destine-v1
+      source_grid_name: hpz5-nested
+      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
+        263100, 263101, 263121, 263122, 263124]
+  hourly-native-o3d:
+    args:
+      '&args-default'
+      request:
+        '&request-default'
+        activity: highresmip
+        class: d1
+        dataset: climate-dt
+        date: 19900101/to/19900228
+        experiment: cont
+        expver: t01o
+        generation: 1
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
+          73, 74, 75]
+        levtype: o3d
+        model: ifs-nemo
+        param: 263500
+        realization: '1'
+        resolution: standard
+        step: 0
+        stream: clte
+        time: '0000'
+        type: fc
+      data_start_date: 19900101T0000
+      data_end_date: 19900228T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    driver: gsv
+    metadata:
+      '&metadata-default'
+      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
+      fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
+      fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fixer_name: ifs-destine-v1
+      source_grid_name: hpz5-nested
+      variables: [263500, 263501, 263505, 263506, 263507]
+  hourly-native-sfc:
+    args:
+      '&args-default'
+      request:
+        '&request-default'
+        activity: highresmip, class: d1, dataset: climate-dt, date: 19900101/to/19900228,
+        experiment: cont, expver: t01o, generation: 1, levtype: sfc, model: ifs-nemo,
+        param: 8, realization: '1', resolution: standard, step: 0, stream: clte, time: 0000/to/2300/by/0100,
+        type: fc
+      data_start_date: 19900101T0000
+      data_end_date: 19900228T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    driver: gsv
+    metadata:
+      '&metadata-default'
+      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
+      fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
+      fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fixer_name: ifs-destine-v1
+      source_grid_name: hpz5-nested
+      variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
+        165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
+        188, 212, 228, 235, 260048]
+  hourly-native-sol:
+    args:
+      '&args-default'
+      request:
+        '&request-default'
+        activity: highresmip
+        class: d1
+        dataset: climate-dt
+        date: 19900101/to/19900228
+        experiment: cont
+        expver: t01o
+        generation: 1
+        levelist: [1, 2, 3, 4, 5]
+        levtype: sol
+        model: ifs-nemo
+        param: 228141
+        realization: '1'
+        resolution: standard
+        step: 0
+        stream: clte
+        time: 0000/to/2300/by/0100
+        type: fc
+      data_start_date: 19900101T0000
+      data_end_date: 19900228T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    driver: gsv
+    metadata:
+      '&metadata-default'
+      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
+      fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
+      fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fixer_name: ifs-destine-v1
+      source_grid_name: hpz5-nested
+      variables: [228141]
 
