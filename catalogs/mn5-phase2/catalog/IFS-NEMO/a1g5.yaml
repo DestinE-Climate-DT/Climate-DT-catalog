@@ -57,7 +57,7 @@ sources:
   
   monthly-r100-oce2d:
     <<: *base-default
-    description: monthly 2d oceanic data on regural r025 grid.
+    description: monthly 2d oceanic data on regural r100 grid.
     args:
       <<: *args-default
       request:
@@ -69,11 +69,11 @@ sources:
     metadata:
       <<: *metadata-default
       variables: [263001,263121,263000,263008,263100,263101,263122]
-      source_grid_name: nemo-multiIO-r025
+      source_grid_name: nemo-multiIO-r100
   
   monthly-r100-oce3d:
     <<: *base-default
-    description: monthly 2d oceanic data on regural r025 grid.
+    description: monthly 3d oceanic data on regural r100 grid.
     args:
       <<: *args-default
       request:
@@ -87,5 +87,5 @@ sources:
       <<: *metadata-default
       variables: [263500,263501]
       levels: [5.057600e-01, 1.555855e+00, 2.667682e+00, 3.856280e+00, 5.140361e+00,6.543034e+00, 8.092519e+00, 9.822750e+00, 1.177368e+01, 1.399104e+01,1.652532e+01, 1.942980e+01, 2.275762e+01, 2.655830e+01, 3.087456e+01,3.574020e+01, 4.118002e+01, 4.721189e+01, 5.385064e+01, 6.111284e+01,6.902168e+01, 7.761116e+01, 8.692943e+01, 9.704131e+01, 1.080303e+02,1.200000e+02, 1.330758e+02, 1.474062e+02, 1.631645e+02, 1.805499e+02,1.997900e+02, 2.211412e+02, 2.448906e+02, 2.713564e+02, 3.008875e+02,3.338628e+02, 3.706885e+02, 4.117939e+02, 4.576256e+02, 5.086399e+02,5.652923e+02, 6.280260e+02, 6.972587e+02, 7.733683e+02, 8.566790e+02,9.474479e+02, 1.045854e+03, 1.151991e+03, 1.265861e+03, 1.387377e+03,1.516364e+03, 1.652568e+03, 1.795671e+03, 1.945296e+03, 2.101027e+03,2.262422e+03, 2.429025e+03, 2.600380e+03, 2.776039e+03, 2.955570e+03,3.138565e+03, 3.324641e+03, 3.513446e+03, 3.704657e+03, 3.897982e+03,4.093159e+03, 4.289953e+03, 4.488155e+03, 4.687581e+03, 4.888070e+03,5.089479e+03, 5.291683e+03, 5.494575e+03, 5.698061e+03, 5.902058e+03]
-      source_grid_name: nemo-multiIO-r025-3d
+      source_grid_name: nemo-multiIO-r100-3d
 
