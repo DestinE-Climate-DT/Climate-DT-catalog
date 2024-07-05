@@ -1,5 +1,5 @@
 sources:
-  hourly-native-sfc: &base-default
+  hourly-hpz5-atm2d: &base-default
     args: &args-default
       request: &request-default
         activity: highresmip
@@ -26,7 +26,7 @@ sources:
       timestyle: date
     driver: gsv
     metadata: &metadata-default
-      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
+#      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
       fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
       fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
       fixer_name: ifs-destine-v1
@@ -34,7 +34,7 @@ sources:
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
         188, 212, 228, 235, 260048]
-  hourly-native-hl:
+  hourly-hpz5-hl:
     <<: *base-default
     args:
       <<: *args-default
@@ -46,7 +46,7 @@ sources:
     metadata: 
       <<: *metadata-default
       variables: [228246, 228247]
-  daily-native-o2d:
+  daily-hpz5-oce2d:
     <<: *base-default
     args: 
       <<: *args-default
@@ -60,8 +60,8 @@ sources:
       <<: *metadata-default
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
-      source_grid_name: eORCA1-2d
-  daily-native-o3d:
+      source_grid_name: nemo-eORCA1-hpz5-nested
+  daily-hpz5-oce3d:
     <<: *base-default
     args:
       <<: *args-default
@@ -97,8 +97,8 @@ sources:
         3897.98193359375, 4093.15869140625, 4289.95263671875, 4488.15478515625, 4687.5810546875,
         4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
         5902.0576171875]
-      source_grid_name: eORCA1-3d-level
-  hourly-native-sol:
+      source_grid_name: nemo-eORCA1-hpz5-nested-3d
+  hourly-hpz5-sol:
     <<: *base-default
     args: 
       <<: *args-default
@@ -110,4 +110,16 @@ sources:
     metadata: 
       <<: *metadata-default
       variables: [228141]
+  hourly-hpz5-atm3d:
+    <<: *base-default
+    args: 
+      <<: *args-default
+      request: 
+        <<: *request-default
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
+        levtype: pl
+        param: 60
+    metadata: 
+      <<: *metadata-default
+      variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
