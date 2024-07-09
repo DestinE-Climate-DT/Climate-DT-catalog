@@ -13,12 +13,12 @@ sources:
         expver: a14c
         type: fc
         stream: clte
-        date: 19910401
+        date: 19900101
         time: '0000'
         param: 167
         levtype: sfc
         step: 0
-      data_start_date: 19910401T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
@@ -126,14 +126,14 @@ sources:
         4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
         5902.0576171875]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name:  nemo-eORCA12-hpz10-nested-3d
+      source_grid_name: nemo-eORCA12-hpz10-nested-3d
 
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
       urlpath: 
-        '{{ LRA_PATH }}/IFS-NEMO/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc'
+        /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/IFS-NEMO/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
