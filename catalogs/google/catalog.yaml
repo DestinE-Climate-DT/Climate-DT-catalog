@@ -1,0 +1,6 @@
+sources:
+  ERA5:
+    description: ERA5 reanalysis data from google cloud
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"

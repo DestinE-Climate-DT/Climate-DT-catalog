@@ -1,0 +1,6 @@
+sources:
+  era5:
+    description: ERA5 from google cloud
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/era5.yaml"
