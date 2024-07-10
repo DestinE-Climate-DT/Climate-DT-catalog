@@ -27,9 +27,7 @@ sources:
     description: hourly 2D atmospheric data on healpix grid (zoom=10, h1024).
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids
-      fdb_path: 
-        /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH_EERIE }}/fdb/HEALPIX_grids'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
@@ -54,9 +52,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_home: /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids
-      fdb_path: 
-        /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH_EERIE }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -76,9 +72,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_home: /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids
-      fdb_path: 
-        /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH_EERIE }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested
@@ -104,9 +98,7 @@ sources:
           73, 74, 75]
     metadata:
       <<: *metadata-default
-      fdb_home: /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids
-      fdb_path: 
-        /scratch/project_465000542/experiments/a14c/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fdb_home: '{{ FDB_PATH_EERIE }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,

@@ -32,9 +32,8 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /scratch/project_465000454/experiments/a1ca/fdb/REGULARLL_grids/etc
-      fdb_path: /scratch/project_465000454/experiments/a1ca/fdb/REGULARLL_grids/etc/fdb/config.yaml
-      eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
+      fdb_home: /scratch/project_465000454/experiments/a1ca/fdb/REGULARLL_grids/
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [228, 151, 228004]
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-destine-v1-monthly
