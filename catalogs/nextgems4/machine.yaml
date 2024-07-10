@@ -4,7 +4,7 @@ levante:
     weights: /work/bb1153/b382075/aqua/weights
     areas: /work/bb1153/b382075/aqua/areas
   intake:
-    LRA_NEXTGEMS: /work/bb1153/b382075/aqua/lra
+    LRA_NEXTGEMS: /work/bb1153/b382076/LRA_NG4
     FDB_PATH: /work/bm1235/b382776
     ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
 lumi:
