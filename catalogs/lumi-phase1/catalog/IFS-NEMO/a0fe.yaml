@@ -3,8 +3,7 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: 
-        /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/IFS-NEMO/a0fe/r100/monthly/*a0fe_r100_monthly_*.nc
+      urlpath: '{{ LRA_PATH }}/IFS-NEMO/a0fe/r100/monthly/*a0fe_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
