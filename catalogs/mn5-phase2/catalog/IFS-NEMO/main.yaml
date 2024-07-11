@@ -4,8 +4,23 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1g5.yaml'
-  t01o:
-    description: IFS/NEMO test run for AQUA workflow integration
+
+  a1g3:
+    description: IFS/NEMO - control 1990 (a1g3) - Tco399/eORCA025
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/t01o.yaml'
+      path: '{{CATALOG_DIR}}/a1g3.yaml'
+
+  a1hq:
+    description: IFS/NEMO - hist 1990 (a1hq) - Tco399/eORCA025
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1hq.yaml'
+
+  a1hx:
+    description: IFS/NEMO - control 1990 (a1hx) - Tco399/eORCA025
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1hx.yaml'
+
+   
