@@ -3,3 +3,7 @@ lumi:
     grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
     weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
     areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+  intake:
+    # Same path as for the phase 1 test
+    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
