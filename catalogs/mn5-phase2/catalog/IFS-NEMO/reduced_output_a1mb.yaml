@@ -35,12 +35,14 @@ sources:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1mb/fdb/REGULARLL_grids/etc
       fdb_path: /gpfs/scratch/ehpc01/experiments/a1mb/fdb/REGULARLL_grids/etc/fdb/config.yaml
       # eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
-      eccodes_path: /gpfs/scratch/bsc32/bsc032519/Bundle_EERIE/ifs-bundle/source/eccodes/definitions
+      eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
       variables: [
-                  235036,235037,235033,235034,235035,235049,
-                  235041,235042,235050,235051,235052,235053,
-                  228004,235038,235039,235040,
-                  # 172228,235166, 172144,228006,172182,235165,235151 #not recognized
+                  # 172144, #err
+                  # 235033,235034, 
+                  235151,228006, #err
+Capítol de Vietnam - Restaurant                  #  235165,
+                  #  236166,
+                  #  228004, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 172182,  235049, 235050, 235051, 235052, 235053, 172228
                   ]
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-destine-v1-monthly
