@@ -15,4 +15,4 @@ lumi:
   intake:
     LRA_NEXTGEMS: /projappl/project_465000454/data/AQUA/LRA-nextgems4
     FDB_PATH: null
-    ECCODES_PATH: null
+    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes

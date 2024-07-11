@@ -392,9 +392,9 @@ sources:
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: fesom-nextgems4-hpz7-nested-3d
-      fixer_name: fesom-destine-v1
-    
-   lra-r100-monthly:
+      fixer_name: fesom-destine-v1 
+
+  lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
