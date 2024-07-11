@@ -28,7 +28,6 @@ sources:
     driver: gsv
     metadata: &metadata-default
       fdb_home: '{{ FDB_PATH }}'
-      fdb_path: '{{ FDB_PATH }}/etc/fdb/config.yaml'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 228164, 235, 260048, 146, 147, 169, 175, 176,
         177, 178, 179, 140101, 140102, 130, 151, 165, 166, 167, 168]

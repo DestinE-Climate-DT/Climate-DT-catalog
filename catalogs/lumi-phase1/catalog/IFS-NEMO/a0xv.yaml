@@ -32,9 +32,8 @@ sources:
         type: str
         default: '1'
     metadata: &metadata-default
-      fdb_path: 
-        /scratch/project_465000454/experiments/a0xv/fdb/REGULARLL_grids/etc/fdb/config.yaml
-      eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.32.5/definitions
+      fdb_home: /scratch/project_465000454/experiments/a0xv/fdb/REGULARLL_grids
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [228, 228004, 151]
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-destine-v1-monthly
@@ -107,5 +106,5 @@ sources:
   #       3897.98193359375, 4093.15869140625, 4289.95263671875, 4488.15478515625, 4687.5810546875,
   #       4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
   #       5902.0576171875]
-      fdb_path: /projappl/project_465000454/experiments/a0hy/fdb/HEALPIX_grids/etc/fdb/config.yaml
+      fdb_home: /projappl/project_465000454/experiments/a0hy/fdb/HEALPIX_grids
 

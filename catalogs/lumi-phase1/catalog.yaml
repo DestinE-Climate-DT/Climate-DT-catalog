@@ -1,3 +1,22 @@
+metadata:
+  parameters:
+    LRA_PATH:
+      type: str
+      description: the path to the LRA
+      default: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    LRA_DEV:
+      type: str
+      description: the path to the LRA development data
+      default: /pfs/lustrep3/projappl/project_465000454/padavini/LRA-dev
+    FDB_PATH:
+      type: str
+      description: the path to the FDB
+      default: /appl/local/climatedt
+    ECCODES_PATH:
+      type: str
+      description: the path to the eccodes definitions
+      default: /projappl/project_465000454/jvonhar/aqua/eccodes
+
 sources:
   FESOM:
     description: FESOM oceanic model
