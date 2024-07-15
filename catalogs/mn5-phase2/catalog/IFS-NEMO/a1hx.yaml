@@ -5,7 +5,7 @@ sources:
         class: d1
         dataset: climate-dt
         activity: HighResMIP
-        experiment: control
+        experiment: cont
         generation: 1
         model: IFS-NEMO
         resolution: standard

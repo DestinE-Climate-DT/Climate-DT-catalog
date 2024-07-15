@@ -34,3 +34,8 @@ sources:
       path: '{{CATALOG_DIR}}/a1m5.yaml'
     description: IFS/NEMO - 1990 hist - IC 10y spin-up (a1g3) - Tco399/eORCA025
     driver: yaml_file_cat
+  a1ml:
+    args:
+      path: '{{CATALOG_DIR}}/a1ml.yaml'
+    description: IFS/NEMO - 1990 control - sicoupl=2 nn_flxdist=2 - Tco399/eORCA025
+    driver: yaml_file_cat
