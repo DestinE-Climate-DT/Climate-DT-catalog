@@ -19,3 +19,13 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hs3l-historical-1990.yaml'
+  if8s:
+    description: FDB IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ecmwf-reccommended ocean settings 
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/if8s.yaml'
+  ifca:
+    description: FDB IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ecmwf-reccommended ocean settings and E-P term removed in qemp
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ifca.yaml'
