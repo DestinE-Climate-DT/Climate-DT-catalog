@@ -35,7 +35,6 @@ sources:
     metadata: &metadata-default
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1mb/fdb/REGULARLL_grids/etc
       fdb_path: /gpfs/scratch/ehpc01/experiments/a1mb/fdb/REGULARLL_grids/etc/fdb/config.yaml
-      # eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
       eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
       variables: [
         172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 172182,  235049, 235050, 235051, 235052, 235053, 172228
