@@ -28,7 +28,6 @@ sources:
     metadata: &metadata-default
 #      eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions
       fdb_home: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids
-      fdb_path: /gpfs/scratch/ehpc01/experiments/t01o/fdb/HEALPIX_grids/etc/fdb/config.yaml
       fixer_name: ifs-destine-v1
       source_grid_name: hpz5-nested
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
