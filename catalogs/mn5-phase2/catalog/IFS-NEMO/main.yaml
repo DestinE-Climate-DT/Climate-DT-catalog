@@ -4,8 +4,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/t01o.yaml'
-  reduced_output_a1mb:
+  a1mb:
     description: IFS/NEMO test run for AQUA workflow integration
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/reduced_output_a1mb.yaml'
+      path: '{{CATALOG_DIR}}/a1mb.yaml'
