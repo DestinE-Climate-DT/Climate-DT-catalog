@@ -4,21 +4,21 @@ sources:
       request: &request-default
         class: d1
         dataset: climate-dt
-        activity: CMIP6
-        experiment: hist
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
         generation: 1
         model: IFS-NEMO
         resolution: standard
         realization: 1 #'{{ realization }}'
-        expver: 'a1m5'
+        expver: 'a1n1'
         type: fc
         stream: clmn
         year: 1990
         month: 1
         param: 228
         levtype: sfc
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T0000
+      data_start_date: 20200101T0000
+      data_end_date: 20251231T0000
       chunks: MS  # Default time chunk size
       savefreq: MS  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -32,8 +32,8 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a1m5/fdb/REGULARLL_grids/etc
-      fdb_path: /gpfs/scratch/ehpc01/experiments/a1m5/fdb/REGULARLL_grids/etc/fdb/config.yaml
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1n1/fdb/REGULARLL_grids/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1n1/fdb/REGULARLL_grids/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
       variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
       source_grid_name: lon-lat

@@ -39,3 +39,8 @@ sources:
       path: '{{CATALOG_DIR}}/a1ml.yaml'
     description: IFS/NEMO - 1990 control - sicoupl=2 nn_flxdist=2 - Tco399/eORCA025
     driver: yaml_file_cat
+  a1n1:
+    args:
+      path: '{{CATALOG_DIR}}/a1n1.yaml'
+    description: IFS/NEMO - SSP3-7.0 - Tco399/eORCA025
+    driver: yaml_file_cat
