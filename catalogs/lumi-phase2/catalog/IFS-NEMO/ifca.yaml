@@ -33,24 +33,25 @@ sources:
         235188, 228090, 235079, 208, 209, 210, 228029, 147, 169, 8, 9, 235166,
         235084, 235083, 235087, 235088, 142, 144, 146, 235165, 228006, 235134, 235151, 235137]
       source_grid_name: hpz7-nested
-      fixer_name: ifs-nemo-destine-v2-monthly
+      fixer_name: ifs-ecmwf_reduced-v1
 
-  monthly-hpz7-atm3d:
-    <<: *base-default
-    description: monthly 2D atmospheric data on healpix grid (zoom=7, h128).
-    args:
-      <<: *args-default
-      request:
-        <<: *request-default
-        param: 131
-        levtype: pl
-        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
-          700, 850, 925, 1000]
-    metadata:
-      <<: *metadata-default
-      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
-        850, 925, 1000]
-      variables: [247, 135, 60, 248, 129, 76, 157, 75, 131, 246, 133, 132, 130]
+  # monthly-hpz7-atm3d:
+  #   <<: *base-default
+  #   description: monthly 2D atmospheric data on healpix grid (zoom=7, h128).
+  #   args:
+  #     <<: *args-default
+  #     request:
+  #       <<: *request-default
+  #       param: 131
+  #       levtype: pl
+  #       levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
+  #         700, 850, 925, 1000]
+  #   metadata:
+  #     <<: *metadata-default
+  #     levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
+  #       850, 925, 1000]
+  #     variables: [247, 135, 60, 248, 129, 76, 157, 75, 131, 246, 133, 132, 130]
+
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
