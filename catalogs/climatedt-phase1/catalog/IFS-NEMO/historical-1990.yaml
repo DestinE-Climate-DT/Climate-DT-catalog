@@ -27,7 +27,7 @@ sources:
     description: hourly data on native grid TCo1279 (about 10km).
     driver: gsv
     metadata: &metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/NATIVE_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/NATIVE_grids'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.2/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
@@ -63,7 +63,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       source_grid_name: hpz7-nested
 
   hourly-hpz7-atm3d:
@@ -81,7 +81,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -97,7 +97,7 @@ sources:
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       source_grid_name: hpz10-nested
 
   hourly-hpz10-atm3d:
@@ -117,7 +117,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -133,7 +133,7 @@ sources:
         resolution: standard
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/REGULARLL_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/REGULARLL_grids'
       source_grid_name: era5-r025
 
   hourly-r025-atm3d:
@@ -151,7 +151,7 @@ sources:
           700, 850, 925, 1000]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/REGULARLL_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/REGULARLL_grids'
       source_grid_name: era5-r025
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -171,7 +171,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/NATIVE_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/NATIVE_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: eORCA12-2d
@@ -195,7 +195,7 @@ sources:
           73, 74, 75]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/NATIVE_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/NATIVE_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -232,7 +232,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/REGULARLL_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/REGULARLL_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-multiIO-r025
@@ -256,7 +256,7 @@ sources:
           73, 74, 75]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/REGULARLL_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/REGULARLL_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -292,7 +292,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested
@@ -311,7 +311,7 @@ sources:
         levtype: o2d
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested
@@ -335,7 +335,7 @@ sources:
           73, 74, 75]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -378,7 +378,7 @@ sources:
           73, 74, 75]
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH_HISTORICAL }/fdb/HEALPIX_grids'
+      fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
