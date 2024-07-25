@@ -64,3 +64,14 @@ sources:
     metadata:
       source_grid_name: lon-lat
 
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 reference on zarr
+    args:
+      consolidated: false
+      combine: by_coords
+      urlpath:
+      - reference::{{ LRA_PATH }}/IFS-NEMO/hs3l-historical-1990/r100/monthly/zarr/lra-yearly-files.json
+    metadata:
+      source_grid_name: lon-lat
+    fixer_name: false
