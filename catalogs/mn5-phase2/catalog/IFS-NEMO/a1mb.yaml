@@ -33,8 +33,8 @@ sources:
         172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 172182,  235049, 235050, 235051, 235052, 235053, 172228
       ]
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-reduced-output-monthly
-  
+      fixer_name: ifs-nemo-reduced-output-monthly-v1
+
   monthly-r100-atm3d:
     <<: *base-default
     description: monthly 3d atmospheric data on regural r025 grid.
@@ -62,7 +62,7 @@ sources:
       <<: *metadata-default
       variables: [263001, 263100, 263101, 263008]
       source_grid_name: nemo-multiIO-r025
-      fixer_name: ifs-nemo-reduced-output-monthly
+      fixer_name: ifs-nemo-reduced-output-monthly-v1
 
   monthly-r100-oce3d:
     <<: *base-default
