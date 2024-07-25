@@ -1,5 +1,3 @@
-#IFS-FESOM storyline (2K runs) from 2017
-
 sources:
   hourly-hpz7-atm2d: &base-default
     args: &args-default
@@ -264,11 +262,21 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: 
-        '{{ LRA_PATH }}/IFS-FESOM/story-2017-T2K/r100/monthly/*story-2017-T2K_r100_monthly_*.nc'
+      urlpath: '{{ LRA_PATH }}/IFS-FESOM/story-2017-T2K/r100/monthly/*story-2017-T2K_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 reference on zarr
+    args:
+      consolidated: false
+      combine: by_coords
+      urlpath:
+      - reference::{{ LRA_PATH }}/IFS-FESOM/story-2017-T2K/r100/monthly/zarr/lra-yearly-files.json
+    metadata:
+      source_grid_name: lon-lat
+    fixer_name: false

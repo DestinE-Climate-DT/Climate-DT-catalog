@@ -140,8 +140,7 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: 
-        '{{ LRA_PATH }}/ICON/ssp370/r100/monthly/*ssp370_r100_monthly_*.nc'
+      urlpath: '{{ LRA_PATH }}/ICON/ssp370/r100/monthly/*ssp370_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
