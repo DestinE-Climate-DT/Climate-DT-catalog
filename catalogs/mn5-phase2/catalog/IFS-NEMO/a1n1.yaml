@@ -37,7 +37,7 @@ sources:
       eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
       variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 172182,  235049, 235050, 235051, 235052, 235053, 172228] 
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-reduced-output-monthly-v1
+      fixer_name: ifs-nemo-destine-v2-monthly
   
   monthly-r100-atm3d:
     <<: *base-default
