@@ -31,8 +31,8 @@ sources:
         query:
           frequency: monthly
           short_name: ['siconc', 'z', 'sp', 'tcw', 'sd', 'msl', 
-         'u10', 'v10', 't2m', 'd2m', 
-         'lsm', 'lcc', 'mcc', 'hcc', 'skt']
+                       'u10', 'v10', 't2m', 'd2m', 
+                       'lsm', 'lcc', 'mcc', 'hcc', 'skt']
         cdf_kwargs:
           chunks:
             time: 1
@@ -66,10 +66,9 @@ sources:
         query_var: short_name
         query:
           frequency: monthly
-          short_name: [ 
-         'lsp', 'cp', 'sf', 'sshf', 'slhf', 'ssrd',
-         'strd', 'ssr', 'str', 'tsr', 'ttr', 'ewss', 'nsss', 'e',
-         'tsrc', 'ttrc', 'ssrc', 'strc', 'tisr', 'tp']
+          short_name: ['lsp', 'cp', 'sf', 'sshf', 'slhf', 'ssrd',
+                       'strd', 'ssr', 'str', 'tsr', 'ttr', 'ewss', 'nsss', 'e',
+                       'tsrc', 'ttrc', 'ssrc', 'strc', 'tisr', 'tp']
         cdf_kwargs:
           chunks:
             time: 1

@@ -28,7 +28,6 @@ sources:
     driver: gsv
     metadata: &metadata-default
       fdb_home: '{{ FDB_PATH }}'
-      fdb_path: '{{ FDB_PATH }}/etc/fdb/config.yaml'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 228164, 235, 260048, 146, 147, 169, 175, 176,
         177, 178, 179, 140101, 140102, 130, 151, 165, 166, 167, 168]
@@ -141,8 +140,7 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: 
-        '{{ LRA_PATH }}/ICON/ssp370/r100/monthly/*ssp370_r100_monthly_*.nc'
+      urlpath: '{{ LRA_PATH }}/ICON/ssp370/r100/monthly/*ssp370_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true

@@ -8,6 +8,10 @@ lumi:
     LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
     # where the FDB schema is stored (available only on lumi)
     FDB_PATH: /appl/local/climatedt
+    # where the historical FDB data is stored (available only on lumi)
+    FDB_PATH_HISTORICAL: /project/project_465000454/experiments/a0h3
+    # EERIE path for control 1990 (available only on lumi)
+    FDB_PATH_EERIE: /scratch/project_465000542/experiments/a14c
     # where the different eccodes definitions are stored (necessary for FDB)
     ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
 levante:
@@ -18,6 +22,8 @@ levante:
   intake:
     LRA_PATH: /work/bb1153/b382076/LRA-lumi
     FDB_PATH: null
+    FDB_PATH_HISTORICAL: null
+    FDB_PATH_EERIE: null
     ECCODES_PATH: null
 MN5:
   paths:
@@ -27,4 +33,6 @@ MN5:
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA
     FDB_PATH: null
+    FDB_PATH_HISTORICAL: null
+    FDB_PATH_EERIE: null
     ECCODES_PATH: null

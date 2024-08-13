@@ -28,7 +28,7 @@
       driver: gsv
       metadata: 
         fdb_path: /scratch/project_465000454/bjimenez/gsv_interface/config.yaml
-        eccodes_path: /projappl/project_465000454/jvonhar/aqua/eccodes/eccodes-2.28.0/definitions
+        eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.28.0/definitions'
         levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
                  5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
                  11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
