@@ -32,10 +32,10 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a1n1/fdb/REGULARLL_grids/etc
+      # fdb_home: /gpfs/scratch/ehpc01/experiments/a1n1/fdb/REGULARLL_grids/etc
       fdb_path: /gpfs/scratch/ehpc01/experiments/a1n1/fdb/REGULARLL_grids/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
-      variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
+      variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 172182,  235049, 235050, 235051, 235052, 235053, 172228] 
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-destine-v1-monthly
   
@@ -52,7 +52,7 @@ sources:
       <<: *parameters-default
     metadata:
       <<: *metadata-default
-      variables: [130, 131, 132, 133]
+      variables: [235130, 235131, 235132, 235133]
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
   
   monthly-r100-oce2d:
