@@ -34,10 +34,20 @@ sources:
       path: '{{CATALOG_DIR}}/a1m5.yaml'
     description: IFS/NEMO - 1990 hist - IC 10y spin-up (a1g3) - Tco399/eORCA025
     driver: yaml_file_cat
+  a1md:
+    args:
+      path: '{{CATALOG_DIR}}/a1md.yaml'
+    description: IFS/NEMO - 1950 historical - Tco399/eORCA025
+    driver: yaml_file_cat
   a1ml:
     args:
       path: '{{CATALOG_DIR}}/a1ml.yaml'
     description: IFS/NEMO - 1990 control - sicoupl=2 nn_flxdist=2 - Tco399/eORCA025
+    driver: yaml_file_cat
+  a1mm:
+    args:
+      path: '{{CATALOG_DIR}}/a1mm.yaml'
+    description: IFS/NEMO - 1950 control - Tco399/eORCA025
     driver: yaml_file_cat
   a1n1:
     args:
@@ -54,3 +64,14 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/t01o.yaml'
+  a1nk:
+    args:
+      path: '{{CATALOG_DIR}}/a1nk.yaml'
+    description: IFS/NEMO - 1990 control ecmwf revised namelist (but keeping TEOS10)
+      - Tco399/eORCA025
+    driver: yaml_file_cat
+  a1oc:
+    args:
+      path: '{{CATALOG_DIR}}/a1oc.yaml'
+    description: IFS/NEMO - 1990 control - Tco399/eORCA025
+    driver: yaml_file_cat

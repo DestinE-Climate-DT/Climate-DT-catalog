@@ -34,7 +34,8 @@ sources:
     metadata: &metadata-default
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1g3/fdb/REGULARLL_grids/etc
       fdb_path: /gpfs/scratch/ehpc01/experiments/a1g3/fdb/REGULARLL_grids/etc/fdb/config.yaml
-      eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
+      # eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
+      eccodes_path: /gpfs/scratch/bsc32/bsc032655/opt/eccodes-2.32.6/definitions/
       variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-destine-v2-monthly

@@ -4,13 +4,13 @@ sources:
       request: &request-default
         class: d1
         dataset: climate-dt
-        activity: CMIP6
-        experiment: hist
+        activity: HighResMIP
+        experiment: cont
         generation: 1
         model: IFS-NEMO
         resolution: standard
         realization: 1 #'{{ realization }}'
-        expver: 'a1hq'
+        expver: 'a1nk'
         type: fc
         stream: clmn
         year: 1990
@@ -32,12 +32,12 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a1hq/fdb/REGULARLL_grids/etc
-      fdb_path: /gpfs/scratch/ehpc01/experiments/a1hq/fdb/REGULARLL_grids/etc/fdb/config.yaml
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1nk/fdb/REGULARLL_grids/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1nk/fdb/REGULARLL_grids/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/bsc32/bsc032655/opt/eccodes-2.32.6/definitions/
       variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-destine-v2-monthly
+      fixer_name: ifs-nemo-destine-v1-monthly
   
   monthly-r100-atm3d:
     <<: *base-default

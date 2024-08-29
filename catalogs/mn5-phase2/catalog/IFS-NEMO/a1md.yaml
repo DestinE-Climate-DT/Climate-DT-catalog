@@ -10,15 +10,15 @@ sources:
         model: IFS-NEMO
         resolution: standard
         realization: 1 #'{{ realization }}'
-        expver: 'a1hq'
+        expver: 'a1md'
         type: fc
         stream: clmn
         year: 1990
         month: 1
         param: 228
         levtype: sfc
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T0000
+      data_start_date: 19500101T0000
+      data_end_date: 19571231T0000
       chunks: MS  # Default time chunk size
       savefreq: MS  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -32,12 +32,12 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a1hq/fdb/REGULARLL_grids/etc
-      fdb_path: /gpfs/scratch/ehpc01/experiments/a1hq/fdb/REGULARLL_grids/etc/fdb/config.yaml
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1md/fdb/REGULARLL_grids/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1md/fdb/REGULARLL_grids/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/bsc32/bsc032655/opt/eccodes-2.32.6/definitions/
       variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-destine-v2-monthly
+      fixer_name: ifs-nemo-destine-v1-monthly
   
   monthly-r100-atm3d:
     <<: *base-default

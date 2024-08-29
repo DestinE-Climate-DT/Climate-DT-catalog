@@ -18,7 +18,7 @@ sources:
         param: 228
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20101231T0000
+      data_end_date: 20191231T0000
       chunks: MS  # Default time chunk size
       savefreq: MS  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -34,7 +34,7 @@ sources:
     metadata: &metadata-default
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1ml/fdb/REGULARLL_grids/etc
       fdb_path: /gpfs/scratch/ehpc01/experiments/a1ml/fdb/REGULARLL_grids/etc/fdb/config.yaml
-      eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
+      eccodes_path: /gpfs/scratch/bsc32/bsc032655/opt/eccodes-2.32.6/definitions/
       variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] 
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-destine-v1-monthly
