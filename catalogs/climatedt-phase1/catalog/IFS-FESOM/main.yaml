@@ -21,3 +21,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'
+  ssp3-7.0-2020:
+    description: Scenario IFS-FESOM control 2020
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ssp3-7.0-2020.yaml'
