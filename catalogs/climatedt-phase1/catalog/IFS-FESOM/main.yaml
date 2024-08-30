@@ -17,7 +17,12 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/story-2017-T2K.yaml'
   control-1990:
-    description: Production IFS-FESOM control 1990 run tco1279
+    description: Production IFS-FESOM control 1990 run tco1279-NG5
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'
+  ssp370:
+    description: Scenario IFS-FESOM scenario ssp370 run tco2559-NG5
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ssp370.yaml'
