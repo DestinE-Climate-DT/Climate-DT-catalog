@@ -105,7 +105,7 @@ sources:
     metadata:
       <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-      source_grid_name: fesom-hpz7-nested
+      source_grid_name: fesom-NG5-hpz7-nested-v2
 
   daily-hpz7-oce3d:
     <<: *base-default
@@ -132,7 +132,7 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: fesom-hpz7-nested-3d
+      source_grid_name: fesom-NG5-hpz7-nested-3d-v2
 
   daily-hpz9-oce2d:
     <<: *base-default
@@ -150,7 +150,7 @@ sources:
     metadata:
       <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-      source_grid_name: fesom-hpz9-nested
+      source_grid_name: fesom-NG5-hpz9-nested-v2
 
   daily-hpz9-oce3d:
     <<: *base-default
@@ -178,7 +178,7 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: fesom-hpz9-nested-3d
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
 
   hourly-native-atm2d:
     <<: *base-default
