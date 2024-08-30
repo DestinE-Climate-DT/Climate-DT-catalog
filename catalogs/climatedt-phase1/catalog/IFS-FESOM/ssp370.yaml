@@ -32,7 +32,7 @@ sources:
         # eccodes_path: "/gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions"
         eccodes_path:  /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164, 165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187, 188, 212, 228, 235, 260048]
-        source_grid_name: hpz9-nested
+        source_grid_name: hpz10-nested
         fixer_name: ifs-destine-v1
 
         
@@ -175,7 +175,7 @@ sources:
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
         variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
-        source_grid_name: hpz9-nested
+        source_grid_name: hpz10-nested
         fixer_name: ifs-destine-v1
 
         
@@ -217,7 +217,7 @@ sources:
         fixer_name: ifs-destine-v1
 
         
-  daily-hpz9-oce2d:
+  daily-hpz9-oce2d: #doesn't work
     args:
       request:
         class: d1
@@ -287,7 +287,7 @@ sources:
         fixer_name: ifs-destine-v1
 
         
-  daily-hpz9-oce3d:
+  daily-hpz9-oce3d:  #doesn't work
     args:
       request:
         class: d1
