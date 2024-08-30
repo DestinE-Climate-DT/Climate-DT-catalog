@@ -174,7 +174,7 @@ sources:
         fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-        source_grid_name: fesom-hpz10-nested
+        source_grid_name: fesom-NG5-hpz10-nested-v2
         fixer_name: ifs-destine-v1
 
         
@@ -209,7 +209,7 @@ sources:
         fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-        source_grid_name: fesom-hpz7-nested
+        source_grid_name: fesom-NG5-hpz7-nested-v2
         fixer_name: ifs-destine-v1
 
         
@@ -253,7 +253,7 @@ sources:
                  950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775,
                  4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825, 6175]
         variables: [263500, 263501, 263505, 263506]
-        source_grid_name: fesom-hpz10-nested-3d
+        source_grid_name: fesom-NG5-hpz10-nested-3d-v2
         fixer_name: ifs-destine-v1
 
         
@@ -297,7 +297,7 @@ sources:
                  1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775,
                  5025, 5275, 5525, 5825, 6175]
         variables: [263500, 263501, 263505, 263506]
-        source_grid_name: fesom-hpz7-nested-3d
+        source_grid_name: fesom-NG5-hpz7-nested-3d-v2
         fixer_name: ifs-destine-v1
 
   # hourly-hpz10-hl:
