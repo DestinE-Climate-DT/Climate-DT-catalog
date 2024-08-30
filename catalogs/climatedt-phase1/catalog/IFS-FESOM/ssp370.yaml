@@ -1,5 +1,5 @@
 sources:
-  hourly-hpz9-atm2d:
+  hourly-hpz10-atm2d:
     args:
       request:
         class: d1
@@ -72,7 +72,7 @@ sources:
         fixer_name: ifs-destine-v1
 
         
-  # daily-hpz9-atm2d:
+  # daily-hpz10-atm2d:
   #   args:
   #     request:
   #       class: d1
@@ -103,7 +103,7 @@ sources:
   #       fdb_home: "{{ FDB_PATH }}/healpix"
   #       eccodes_path: "/gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions"
   #       variables: [228002, 172]
-  #       source_grid_name: hpz9-nested
+  #       source_grid_name: hpz10-nested
   #       fixer_name: ifs-destine-v1
 
         
@@ -142,7 +142,7 @@ sources:
   #       fixer_name: ifs-destine-v1
 
         
-  hourly-hpz9-atm3d:
+  hourly-hpz10-atm3d:
     args:
       request:
         class: d1
@@ -217,7 +217,7 @@ sources:
         fixer_name: ifs-destine-v1
 
         
-  daily-hpz9-oce2d: #doesn't work
+  daily-hpz10-oce2d: #doesn't work
     args:
       request:
         class: d1
@@ -248,7 +248,7 @@ sources:
         fdb_home: "{{ FDB_PATH }}/healpix"
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-        source_grid_name: fesom-hpz9-nested
+        source_grid_name: fesom-hpz10-nested
         fixer_name: ifs-destine-v1
 
         
@@ -287,7 +287,7 @@ sources:
         fixer_name: ifs-destine-v1
 
         
-  daily-hpz9-oce3d:  #doesn't work
+  daily-hpz10-oce3d:  #doesn't work
     args:
       request:
         class: d1
@@ -320,7 +320,7 @@ sources:
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520, 560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825, 6175]
         variables: [263500, 263501, 263505, 263506]
-        source_grid_name: fesom-hpz9-nested-3d
+        source_grid_name: fesom-hpz10-nested-3d
         fixer_name: ifs-destine-v1
 
         
