@@ -4,16 +4,16 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: high
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: "0000/to/2300/by/0100"
         param: 8
         levtype: sfc
@@ -29,7 +29,6 @@ sources:
     driver: gsv
     metadata:
         fdb_home:  /gpfs/projects/ehpc01/dte/fdb/healpix
-        # eccodes_path: "/gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions"
         eccodes_path:  /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164, 165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187, 188, 212, 228, 235, 260048]
         source_grid_name: hpz10-nested
@@ -41,16 +40,16 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: standard
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: "0000/to/2300/by/0100"
         param: 8
         levtype: sfc
@@ -67,96 +66,24 @@ sources:
         fdb_home:  /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path:  /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164, 165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187, 188, 212, 228, 235, 260048]
-        # variables: [78]
         source_grid_name: hpz7-nested
         fixer_name: ifs-destine-v1
-
-        
-  # daily-hpz10-atm2d:
-  #   args:
-  #     request:
-  #       class: d1
-  #       dataset: climate-dt
-  #       activity: ScenarioMIP  # To be overwritten by workflow/config file
-  #       experiment: SSP3-7.0   # To be overwritten by workflow/config file
-  #       generation: 1  # To be overwritten by workflow/config file
-  #       model: IFS-FESOM
-  #       realization: 1  # To be overwritten by workflow/config file
-  #       resolution: high
-  #       expver: "0001"  # To be overwritten by workflow/config file
-  #       type: fc
-  #       stream: clte
-  #       date: 20200101  # To be overwritten by workflow/config file
-  #       time: 0000
-  #       param: 129
-  #       levtype: sfc
-  #       step: 0
-  #     data_start_date: 20200101T0000
-  #     data_end_date: auto
-  #     chunks: D
-  #     savefreq: D
-  #     timestep: 
-  #     timestyle: date
-  #   description: Production IFS-FESOM SSP3-7.0rol 1990 run tco1279
-  #   driver: gsv
-  #   metadata:
-  #       fdb_home: "{{ FDB_PATH }}/healpix"
-  #       eccodes_path: "/gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions"
-  #       variables: [228002, 172]
-  #       source_grid_name: hpz10-nested
-  #       fixer_name: ifs-destine-v1
-
-        
-  # daily-hpz7-atm2d:
-  #   args:
-  #     request:
-  #       class: d1
-  #       dataset: climate-dt
-  #       activity: ScenarioMIP  # To be overwritten by workflow/config file
-  #       experiment: SSP3-7.0  # To be overwritten by workflow/config file
-  #       generation: 1  # To be overwritten by workflow/config file
-  #       model: IFS-FESOM
-  #       realization: 1  # To be overwritten by workflow/config file
-  #       resolution: standard
-  #       expver: 1  # To be overwritten by workflow/config file
-  #       type: fc
-  #       stream: clte
-  #       date: 20200101  # To be overwritten by workflow/config file
-  #       time: 0000
-  #       param: 129
-  #       levtype: sfc
-  #       step: 0
-  #     data_start_date: 20200101T0000
-  #     data_end_date: auto
-  #     chunks: D
-  #     savefreq: D
-  #     timestep: h
-  #     timestyle: date
-  #   description: Production IFS-FESOM SSP3-7.0rol 1990 run tco1279
-  #   driver: gsv
-  #   metadata:
-  #       fdb_home: "{{ FDB_PATH }}/healpix"
-  #       eccodes_path: "/gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions"
-  #       variables: [129, 172]
-  #       source_grid_name: hpz7-nested
-  #       fixer_name: ifs-destine-v1
-
         
   hourly-hpz10-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1 
         resolution: high
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: "0000/to/2300/by/0100"
         param: 60
         levtype: pl
@@ -171,7 +98,7 @@ sources:
     description: Production IFS-FESOM SSP3-7.0rol 1990 run tco1279
     driver: gsv
     metadata:
-        fdb_home: "{{ FDB_PATH }}/healpix"
+        fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
         variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -184,16 +111,16 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: standard
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 19950102  # To be overwritten by workflow/config file
+        date: 19950102
         time: "0000/to/2300/by/0100"
         param: 133
         levtype: pl
@@ -208,8 +135,7 @@ sources:
     description: Production IFS-FESOM SSP3-7.0rol 1990 run tco1279
     driver: gsv
     metadata:
-        fdb_home: "{{ FDB_PATH }}/healpix"
-        # eccodes_path: "/gpfs/projects/ehpc01/models/ifs-nemo/DE_CY48R1.0_climateDT_20240523/make/marenostrum5-intel/source/eccodes/definitions"
+        fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
         variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -222,16 +148,16 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: high
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: 0000
         param: 263000
         levtype: o2d
@@ -245,7 +171,7 @@ sources:
     description: Production IFS-FESOM SSP3-7.0rol 1990 run tco1279
     driver: gsv
     metadata:
-        fdb_home: "{{ FDB_PATH }}/healpix"
+        fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
         source_grid_name: fesom-hpz10-nested
@@ -257,16 +183,16 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: standard
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: 0000
         param: 263000
         levtype: o2d
@@ -280,7 +206,7 @@ sources:
     description: Production IFS-FESOM SSP3-7.0rol 1990 run tco1279
     driver: gsv
     metadata:
-        fdb_home: "{{ FDB_PATH }}/healpix"
+        fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
         variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
         source_grid_name: fesom-hpz7-nested
@@ -292,20 +218,23 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: high
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: 0000
         param: 263500
         levtype: o3d
-        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+                   23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
+                   43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62,
+                   63, 64, 65, 66, 67, 68, 69]
         step: 0
       data_start_date: 20200101T0000
       data_end_date: auto
@@ -318,7 +247,11 @@ sources:
     metadata:
         fdb_home: "{{ FDB_PATH }}/healpix"
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
-        levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520, 560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825, 6175]
+        levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5, 62.5, 67.5,
+                 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155, 165, 175, 185,
+                 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520, 560, 600, 640, 710, 810,
+                 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775,
+                 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825, 6175]
         variables: [263500, 263501, 263505, 263506]
         source_grid_name: fesom-hpz10-nested-3d
         fixer_name: ifs-destine-v1
@@ -329,20 +262,23 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 1  # To be overwritten by workflow/config file
+        activity: ScenarioMIP
+        experiment: SSP3-7.0
+        generation: 1
         model: IFS-FESOM
-        realization: 1  # To be overwritten by workflow/config file
+        realization: 1
         resolution: standard
-        expver: "0001"  # To be overwritten by workflow/config file
+        expver: "0001"
         type: fc
         stream: clte
-        date: 20200101  # To be overwritten by workflow/config file
+        date: 20200101
         time: 0000
         param: 263500
         levtype: o3d
-        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                   24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,
+                   45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
+                   66, 67, 68, 69]
         step: 0
       data_start_date: 20200101T0000
       data_end_date: auto
@@ -355,12 +291,15 @@ sources:
     metadata:
         fdb_home: "{{ FDB_PATH }}/healpix"
         eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
-        levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520, 560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825, 6175]
+        levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5, 62.5, 67.5, 72.5,
+                 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155, 165, 175, 185, 195, 210, 230,
+                 250, 270, 290, 320, 360, 400, 440, 480, 520, 560, 600, 640, 710, 810, 950, 1110, 1255,
+                 1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775,
+                 5025, 5275, 5525, 5825, 6175]
         variables: [263500, 263501, 263505, 263506]
         source_grid_name: fesom-hpz7-nested-3d
         fixer_name: ifs-destine-v1
 
-        
   # hourly-hpz10-hl:
   #   args:
   #     request:
@@ -433,7 +372,6 @@ sources:
   #       variables: [228246, 228247]
   #       source_grid_name: hpz7
   #       fixer_name: ifs-destine-v1
-
         
   # hourly-hpz10-sol:
   #   args:
@@ -470,7 +408,6 @@ sources:
   #       variables: [228141]
   #       source_grid_name: hpz10
   #       fixer_name: ifs-destine-v1
-
         
   # hourly-hpz7-sol:
   #   args:
@@ -507,5 +444,3 @@ sources:
   #       variables: [228141]
   #       source_grid_name: hpz7
   #       fixer_name: ifs-destine-v1
-
-        
