@@ -75,3 +75,8 @@ sources:
       path: '{{CATALOG_DIR}}/a1oc.yaml'
     description: IFS/NEMO - 1990 control - Tco399/eORCA025
     driver: yaml_file_cat
+  a1ob:
+    args:
+      path: '{{CATALOG_DIR}}/a1oc.yaml'
+    description: IFS/NEMO - 1990 historical baseline - Tco399/eORCA025
+    driver: yaml_file_cat
