@@ -80,3 +80,8 @@ sources:
       path: '{{CATALOG_DIR}}/a1ob.yaml'
     description: IFS/NEMO - 1990 historical baseline - Tco399/eORCA025
     driver: yaml_file_cat
+  a1bc:
+    args:
+      path: '{{CATALOG_DIR}}/a1bc.yaml'
+    description: IFS-NEMO 1950 coupled spinup for EERIE - tco1279/eORCA12
+    driver: yaml_file_cat
