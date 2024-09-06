@@ -32,7 +32,7 @@ MN5:
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA
-    FDB_PATH: null
+    FDB_PATH: /gpfs/projects/ehpc01/dte/fdb
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
     ECCODES_PATH: null
