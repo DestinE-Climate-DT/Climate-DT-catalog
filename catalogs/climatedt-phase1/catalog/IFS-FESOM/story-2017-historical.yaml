@@ -23,7 +23,7 @@ sources:
       data_start_date: 20170101T0000
       data_end_date: 20231231T2300
       bridge_end_date: complete
-      aggregation: D  # Default aggregation / chunk size
+      chunks: D  # Default chunks size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
       timestyle: date  # variable date or variable step
@@ -44,7 +44,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 129
@@ -63,7 +63,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 129
@@ -78,7 +78,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 129
@@ -99,7 +99,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -115,7 +115,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -141,7 +141,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=9, h1024).
     args:
       <<: *args-default
-      aggregation: MS
+      chunks: MS
       savefreq: D
       data_start_date: 20180701T0000
       request:
@@ -158,7 +158,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=9, h1024).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       data_start_date: 20180701T0000
       request:
@@ -186,7 +186,7 @@ sources:
     description: hourly 2D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: high
@@ -200,7 +200,7 @@ sources:
     description: hourly 3D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      aggregation: H
+      chunks: H
       request:
         <<: *request-default
         levtype: pl
@@ -220,7 +220,7 @@ sources:
 #     description: hourly 2D ocean data on native grid ng5 (about 10km).
 #     args:
 #       <<: *args-default
-#       aggregation: 6H
+#       chunks: 6H
 #       request:
 #         <<: *request-default
 # #        param: 131
@@ -238,7 +238,7 @@ sources:
 #     description: hourly 3D oceanic data on native grid ng5 (about 10km).
 #     args:
 #       <<: *args-default
-#       aggregation: 6H
+#       chunks: 6H
 #       request:
 #         <<: *request-default
 # #        param: 131

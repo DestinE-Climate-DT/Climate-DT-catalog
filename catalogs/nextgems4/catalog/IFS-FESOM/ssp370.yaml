@@ -22,7 +22,7 @@ sources:
         step: 0
       data_start_date: auto
       data_end_date: auto
-      aggregation: D  # Default aggregation / chunk size
+      chunks: D  # Default chunks size
       savefreq: H  # at what frequency are data saved
       timestep: H  # base timestep for step timestyle
       timestyle: date  # variable date or variable step
@@ -42,7 +42,7 @@ sources:
     description: hourly 3D atmospheric data on native grid (about 5km).
     args:
       <<: *args-default
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         param: 131
@@ -60,7 +60,7 @@ sources:
     description: daily 2D oceanic data on native grid NG5.
     args:
       <<: *args-default
-      aggregation: M
+      chunks: M
       savefreq: D
       request:
         <<: *request-default
@@ -79,7 +79,7 @@ sources:
     description: daily 3D oceanic data on native grid NG5.
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -122,7 +122,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: standard
@@ -143,7 +143,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: MS
+      chunks: MS
       savefreq: D
       data_start_date: 20220501T0000  # OCE data not available before 20210901 and with wrong mask until 20220501 excluded
       request:
@@ -163,7 +163,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       data_start_date: 20220501T0000  # OCE data not available before 20210901 and with wrong mask until 20220501 excluded
       request:
@@ -208,7 +208,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: high
@@ -229,7 +229,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      aggregation: MS
+      chunks: MS
       savefreq: D
       data_start_date: 20220501T0000  # OCE data not available before 20210901 and with wrong mask until 20220501 excluded
       request:
@@ -249,7 +249,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       data_start_date: 20220501T0000  # OCE data not available before 20210901 and with wrong mask until 20220501 excluded
       request:
@@ -295,7 +295,7 @@ sources:
     description: hourly 3D atmospheric data on regular r025 grid (1440x721).
     args:
       <<: *args-default
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: standard
@@ -335,7 +335,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20300101T0000
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: standard
@@ -357,7 +357,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20300101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -377,7 +377,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20300101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -423,7 +423,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20350101T0000
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: standard
@@ -445,7 +445,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20350101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -464,7 +464,7 @@ sources:
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       data_start_date: 20350101T0000
       request:
@@ -511,7 +511,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20400101T0000
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: standard
@@ -533,7 +533,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20400101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -553,7 +553,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20400101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -601,7 +601,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20300101T0000
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: high
@@ -623,7 +623,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20300101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -643,7 +643,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20300101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -689,7 +689,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20350101T0000
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: high
@@ -711,7 +711,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20350101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -731,7 +731,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20350101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -777,7 +777,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20400101T0000
-      aggregation: 6H
+      chunks: 6H
       request:
         <<: *request-default
         resolution: high
@@ -799,7 +799,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20400101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -819,7 +819,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20400101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
