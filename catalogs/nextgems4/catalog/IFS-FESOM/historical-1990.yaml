@@ -242,7 +242,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20000101T0000
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 131
@@ -263,7 +263,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20000101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -283,7 +283,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20000101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -328,7 +328,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20100101T0000
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 131
@@ -349,7 +349,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20100101T0000
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -369,7 +369,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20100101T0000
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
