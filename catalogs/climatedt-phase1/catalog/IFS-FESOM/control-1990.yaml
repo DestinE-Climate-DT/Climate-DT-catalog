@@ -1,5 +1,5 @@
 sources:
-  hourly-hpz9-atm2d:
+  hourly-hpz10-atm2d:
     args:
       request:
         class: d1
@@ -33,7 +33,7 @@ sources:
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
         188, 212, 228, 235, 260048]
-      source_grid_name: hpz9-nested
+      source_grid_name: hpz10-nested
       fixer_name: ifs-destine-v1
 
   hourly-hpz7-atm2d:
@@ -72,7 +72,7 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: ifs-destine-v1
 
-  hourly-hpz9-atm3d:
+  hourly-hpz10-atm3d:
     args:
       request:
         class: d1
@@ -86,14 +86,14 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19950913
+        date: 19900101
         time: 0000/to/2300/by/0100
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
         step: 0
-      data_start_date: 19950913T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -107,7 +107,7 @@ sources:
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
-      source_grid_name: hpz9-nested
+      source_grid_name: hpz10-nested
       fixer_name: ifs-destine-v1
 
   hourly-hpz7-atm3d:
@@ -124,14 +124,14 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19950102
+        date: 19900101
         time: 0000/to/2300/by/0100
         param: 133
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
         step: 0
-      data_start_date: 19950913T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -149,7 +149,7 @@ sources:
       fixer_name: ifs-destine-v1
 
 
-  daily-hpz9-oce2d:
+  daily-hpz10-oce2d:
     args:
       request:
         class: d1
@@ -163,12 +163,12 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19950913
+        date: 19900101
         time: 0000
         param: 263000
         levtype: o2d
         step: 0
-      data_start_date: 19950913T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -180,7 +180,7 @@ sources:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb/healpix
       eccodes_path: /gpfs/projects/ehpc01/eccodes/eccodes2.35.1/eccodes/definitions
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-      source_grid_name: fesom-NG5-hpz9-nested-v2
+      source_grid_name: fesom-NG5-hpz10-nested-v2
       fixer_name: fesom-destine-v1
 
 
@@ -198,12 +198,12 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19950913
+        date: 19900101
         time: 0000
         param: 263000
         levtype: o2d
         step: 0
-      data_start_date: 19950913T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -219,7 +219,7 @@ sources:
       fixer_name: fesom-destine-v1
 
 
-  daily-hpz9-oce3d:
+  daily-hpz10-oce3d:
     args:
       request:
         class: d1
@@ -233,7 +233,7 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19950913
+        date: 19900101
         time: 0000
         param: 263500
         levtype: o3d
@@ -242,7 +242,7 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
         step: 0
-      data_start_date: 19950913T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -260,7 +260,7 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506]
-      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
+      source_grid_name: fesom-NG5-hpz10-nested-3d-v2
       fixer_name: fesom-destine-v1
 
 
@@ -278,7 +278,7 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19950913
+        date: 19900101
         time: 0000
         param: 263500
         levtype: o3d
@@ -287,7 +287,7 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
         step: 0
-      data_start_date: 19950913T0000
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
