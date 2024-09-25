@@ -30,7 +30,7 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/ifca.yaml'
   igsg:
-    description: FDB IFS-NEMO 1988 control run from ATOS
+    description: FDB IFS-NEMO tco1279 1988 control run from ATOS
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/igsg.yaml'
