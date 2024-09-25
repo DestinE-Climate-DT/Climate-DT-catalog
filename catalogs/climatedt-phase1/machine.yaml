@@ -35,4 +35,4 @@ MN5:
     FDB_PATH: /gpfs/projects/ehpc01/dte/fdb
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
-    ECCODES_PATH: null
+    ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
