@@ -30,7 +30,18 @@ sources:
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.35.1/definitions'
       variables: [175, 176, 235168, 228004, 228129, 228050, 228235, 235055, 177, 178,
         179, 211, 212, 228, 235186, 228089, 180, 181, 182, 235187, 195, 196, 228021,
-        235188, 228090, 235079, 208, 209, 210, 228029, 147, 169, 8, 9, 235166,
-        235084, 235083, 235087, 235088, 142, 144, 146, 235165, 228006, 235134, 235151, 235137]
+        235188, 228090, 235079, 208, 209, 210, 228029, 147, 169, 8, 9, 235166, 235084,
+        235083, 235087, 235088, 142, 144, 146, 235165, 228006, 235134, 235151, 235137]
       source_grid_name: hpz7-nested
       fixer_name: ifs-ecmwf_reduced-v1
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: '{{ LRA_PATH }}/lumi-phase2/IFS-NEMO/igsg/r100/monthly/*igsg_r100_monthly_*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
