@@ -1,0 +1,18 @@
+sources:
+  aqua-timeseries-ERA5: 
+    description: 1D diagnosis ref data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/aqua-timeseries-ERA5.yaml'
+  aqua-timeseries-IFS-FESOM:
+    description: 1D diagnosis IFS-FESOM data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/aqua-timeseries-IFS-FESOM.yaml'
+  aqua-timeseries-IFS-NEMO:
+    description: 1D diagnosis IFS-NEMO data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/aqua-timeseries-IFS-NEMO.yaml'
+
+

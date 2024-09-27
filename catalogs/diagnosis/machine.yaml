@@ -1,0 +1,8 @@
+lumi:
+  paths:
+    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
+    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
+    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+  #intake:
+    # where aqua-analysis data is stored on lumi
+    #DATA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output

@@ -1,0 +1,20 @@
+#plugins:
+#source:
+#    - module: intake_xarray
+
+
+sources:
+  1D-t2m-ann:
+    driver: netcdf
+    description: t2m annual timeseries from ERA5
+    args:
+      urlpath:
+        - /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc
+  1D-t2m-mon:
+    driver: netcdf
+    description: t2m monthly timeseries from ERA5
+    args:
+      urlpath:
+        - /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc
+#        '{{DATA_PATH}}/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc'
+

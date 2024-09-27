@@ -1,0 +1,17 @@
+metadata:
+  parameters:
+    ECCODES_PATH:
+      type: str
+      description: the path to the eccodes definitions
+      default: /projappl/project_465000454/jvonhar/aqua/eccodes
+
+sources:
+  aqua-timeseries:
+    description: 1D timeseries from aqua-analysis
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/aqua-timeseries/main.yaml'
+
+
+
+
