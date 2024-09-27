@@ -1,68 +1,67 @@
 sources:
-  monthly-r100-atm2d: &base-default
+  monthly-lon-lat-atm2d: &base-default
     args: &args-default
       request: &request-default
         class: d1
         dataset: climate-dt
-        activity: HighResMIP
-        experiment: cont
-        generation: 1
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
+        realization: 3  # To be overwritten by workflow/config file
         resolution: standard
-        realization: 1 #'{{ realization }}'
-        expver: a1hx
+        expver: a1pr  # To be overwritten by workflow/config file
         type: fc
         stream: clmn
-        year: 1990
-        month: 1
-        param: 228
+        # date: 19900101  # To be overwritten by workflow/config file
+        param: 172144
         levtype: sfc
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        # step: 0
       data_start_date: 19900101T0000
-      data_end_date: 20391231T0000
-      chunks: MS  # Default time chunk size
-      savefreq: MS  # at what frequency are data saved
-      timestep: h  # base timestep for step timestyle
-      timestyle: yearmonth  # variable date or variable step
+      data_end_date: 20181231T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: FDB IFS/NEMO historical run
+    driver: gsv
     parameters: &parameters-default
       realization:
         allowed: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         description: realization member
         type: int
         default: 1
-    description: monthly 2d atmospheric data on regural r025 grid.
-    driver: gsv
     metadata: &metadata-default
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a1hx/fdb/REGULARLL_grids/etc
-      fdb_path: /gpfs/scratch/ehpc01/experiments/a1hx/fdb/REGULARLL_grids/etc/fdb/config.yaml
-      # eccodes_path: /gpfs/scratch/bsc32/bsc032655/models/DestinE/IFS/sources/ifs-bundle-DE_CY48R1.0_climateDT_20240523-05-06-2024_13-02-41/source/eccodes/definitions/ #/apps/GPP/ECCODES/2.34.1/INTEL/IMPI/share/eccodes/definitions
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1pr/fdb/latlon/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1pr/fdb/latlon/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/bsc32/bsc032655/opt/eccodes-2.32.6/definitions/
       variables: [169, 175, 176, 177, 178, 179, 180, 181, 182, 212, 228, 228004, 164,
         165, 166, 144, 146, 147, 151]
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-reduced-output-monthly-v2
 
-  monthly-r100-atm3d:
+
+  monthly-lon-lat-atm3d:
     <<: *base-default
     description: monthly 3d atmospheric data on regural r025 grid.
     args:
       <<: *args-default
-      chunks:
-        time: MS
-        vertical: 10
       request:
         <<: *request-default
         levtype: pl
-        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
-          700, 850, 925, 1000]
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
     parameters:
       <<: *parameters-default
     metadata:
       <<: *metadata-default
       variables: [130, 131, 132, 133]
-      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
-        850, 925, 1000]
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
+  
 
-  monthly-r100-oce2d:
+
+  monthly-lon-lat-oce2d:
     <<: *base-default
     description: monthly 2d oceanic data on regural r100 grid.
     args:
@@ -78,14 +77,15 @@ sources:
       variables: [263001, 263121, 263000, 263008, 263100, 263101, 263122]
       source_grid_name: nemo-multiIO-r100
 
-  monthly-r100-oce3d:
+
+  monthly-lon-lat-oce3d:
     <<: *base-default
     description: monthly 3d oceanic data on regural r100 grid.
     args:
       <<: *args-default
-      # chunks:
-      #   time: MS
-      #   vertical: 10
+      chunks:
+        time: MS
+        vertical: 10
       request:
         <<: *request-default
         param: 263000
@@ -120,7 +120,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/data/AQUA/LRA/IFS-NEMO/a1hx/r100/monthly/*a1hx_r100_monthly_*.nc
+        /gpfs/scratch/ehpc01/data/AQUA/LRA/IFS-NEMO/a1pr/r100/monthly/*a1pr_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -128,4 +128,5 @@ sources:
     metadata:
       # fixer_name: ifs-nemo-reduced-output-monthly-v1
       source_grid_name: lon-lat
+
 

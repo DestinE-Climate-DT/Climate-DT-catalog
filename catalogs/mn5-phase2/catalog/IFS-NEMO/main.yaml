@@ -1,4 +1,9 @@
 sources:
+  a1bc:
+    args:
+      path: '{{CATALOG_DIR}}/a1bc.yaml'
+    description: IFS-NEMO 1950 coupled spinup for EERIE - tco1279/eORCA12
+    driver: yaml_file_cat
   a1g3:
     args:
       path: '{{CATALOG_DIR}}/a1g3.yaml'
@@ -34,6 +39,11 @@ sources:
       path: '{{CATALOG_DIR}}/a1m5.yaml'
     description: IFS/NEMO - 1990 hist - IC 10y spin-up (a1g3) - Tco399/eORCA025
     driver: yaml_file_cat
+  a1mb:
+    args:
+      path: '{{CATALOG_DIR}}/a1mb.yaml'
+    description: IFS/NEMO reduced output test source
+    driver: yaml_file_cat
   a1md:
     args:
       path: '{{CATALOG_DIR}}/a1md.yaml'
@@ -54,34 +64,34 @@ sources:
       path: '{{CATALOG_DIR}}/a1n1.yaml'
     description: IFS/NEMO - SSP3-7.0 - Tco399/eORCA025
     driver: yaml_file_cat
-  a1mb:
-    description: IFS/NEMO reduced output test source
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/a1mb.yaml'
-  t01o:
-    description: IFS/NEMO test run for AQUA workflow integration
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/t01o.yaml'
   a1nk:
     args:
       path: '{{CATALOG_DIR}}/a1nk.yaml'
     description: IFS/NEMO - 1990 control ecmwf revised namelist (but keeping TEOS10)
       - Tco399/eORCA025
     driver: yaml_file_cat
-  a1oc:
-    args:
-      path: '{{CATALOG_DIR}}/a1oc.yaml'
-    description: IFS/NEMO - 1990 control - Tco399/eORCA025
-    driver: yaml_file_cat
   a1ob:
     args:
       path: '{{CATALOG_DIR}}/a1ob.yaml'
     description: IFS/NEMO - 1990 historical baseline - Tco399/eORCA025
     driver: yaml_file_cat
-  a1bc:
+  a1oc:
     args:
-      path: '{{CATALOG_DIR}}/a1bc.yaml'
-    description: IFS-NEMO 1950 coupled spinup for EERIE - tco1279/eORCA12
+      path: '{{CATALOG_DIR}}/a1oc.yaml'
+    description: IFS/NEMO - 1990 control - Tco399/eORCA025
+    driver: yaml_file_cat
+  a1pc:
+    args:
+      path: '{{CATALOG_DIR}}/a1pc.yaml'
+    description: IFS/NEMO - 2020 SSP3-7.0 - Tco399/eORCA025
+    driver: yaml_file_cat
+  a1pr:
+    args:
+      path: '{{CATALOG_DIR}}/a1pr.yaml'
+    description: FDB IFS/NEMO historical run
+    driver: yaml_file_cat
+  t01o:
+    args:
+      path: '{{CATALOG_DIR}}/t01o.yaml'
+    description: IFS/NEMO test run for AQUA workflow integration
     driver: yaml_file_cat
