@@ -11,5 +11,4 @@ sources:
     args:
       urlpath:
         - /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/nextgems4/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_IFS-FESOM_historical-1990_mon.nc
-        #'{{DIAG_PATH}}/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc'
-
+    source_grid_name: Null
