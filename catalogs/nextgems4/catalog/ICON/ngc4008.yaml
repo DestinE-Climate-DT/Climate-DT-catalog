@@ -3,7 +3,7 @@ sources:
     driver: zarr
     metadata:
       grid: HealPIX
-      source_grid_name: icon-healpix
+      source_grid_name: icon-R02B08-hp-nested
       fixer_name: ICON-cycle3
     args:
       consolidated: true
@@ -30,7 +30,7 @@ sources:
     driver: zarr
     metadata:
       grid: HealPIX
-      source_grid_name: icon-healpix
+      source_grid_name: icon-R02B08-hp-nested
       fixer_name: ICON-cycle3
     args:
       consolidated: true
@@ -57,7 +57,7 @@ sources:
     driver: zarr
     metadata:
       grid: HealPIX
-      source_grid_name: icon-healpix
+      source_grid_name: icon-R02B08-hp-nested
       fixer_name: ICON-cycle3
     args:
       consolidated: true
