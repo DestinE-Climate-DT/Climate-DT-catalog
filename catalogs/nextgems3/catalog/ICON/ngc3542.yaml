@@ -1,12 +1,166 @@
 # Original source is here: https://github.com/nextGEMS/catalog/blob/main/ICON/ngc3542.yaml
-# It requires an additional package called fastparquet to read the parquet files
+# It requires an additional package called fastparquet to read the parquet files, but it works out of the box
 
 sources:
   hourly-native-atm2d-inst:
+  # There are 2 levels, 2m and 10m, corresponding to the 2D level stored in the file
     driver: zarr
     args:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/atm_2d_1h_inst/combined.parq
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat # TODO: grid is http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
       fixer_name: ICON-cycle3
+
+  hourly-native-atm2d-mean:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/atm_2d_1h_mean/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO: grid is http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      fixer_name: ICON-cycle3
+  
+  hourly-native-lnd2d-inst:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/lnd_2d_1h_inst/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO: grid is http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      fixer_name: ICON-cycle3
+  
+  hourly-native-lnd2d-mean:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/lnd_2d_1h_mean/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO: grid is http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      fixer_name: ICON-cycle3
+  
+  3hourlt-native-lnd3d-inst:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/lnd_tl_3h_inst/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO: grid is http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0015/icon_grid_0015_R02B09_G.nc
+      fixer_name: ICON-cycle3
+
+  ngc_72lev_HAM_prod_atm_mon:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/ngc_72lev_HAM_prod_atm_mon/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO: This is a global mean source, what can we put as a placeholder?
+      fixer_name: ICON-cycle3
+  
+  ngc_72lev_HAM_prod_oce_mon:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/ngc_72lev_HAM_prod_oce_mon/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO: This is a global mean source, what can we put as a placeholder?
+      fixer_name: ICON-cycle3
+  
+  obgc_2d_P1DM:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_2d_P1DM/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  obgc_3d_EU_P1DM:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath:
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_remin/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_no3/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_hi/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_det/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_talk/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_dissic/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_delcar/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_phydiaz/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_phyp/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_dissoc/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_delsil/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_o2/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_wpoc/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_po4/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_aou/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_NPP/combined.parq 
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  obgc_3d_EU_diag_P15DM:
+    driver: zarr
+    agrs:
+      consolidated: false
+      urlpath:
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_o2/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_dissoc/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_dissic/combined.parq
+      - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_det/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+
+  obgc_3d_P15DM_o2:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_P15DM_o2/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  obgc_monitor:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_monitor/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  oce_2d_1d_mean:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_2d_1d_mean/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  oce_3d_EU_P15DM_diag:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_3d_EU_P15DM_diag/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  oce_ml_1d_mean:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_ml_1d_mean/combined.parq
+    metadata:
+      source_grid_name: lon-lat # TODO
+      fixer_name: ICON-cycle3
+  
+  oce_moc_1d_mean:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_moc_1d_mean/combined.parq
+    
