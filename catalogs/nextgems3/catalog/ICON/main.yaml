@@ -9,3 +9,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/ngc3028.yaml"
+  hamocc:
+    description: 10km ICON/HAMOCC interpolated to HEALPix grid
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/hamocc.yaml"
