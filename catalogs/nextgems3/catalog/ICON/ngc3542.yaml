@@ -1,0 +1,12 @@
+# Original source is here: https://github.com/nextGEMS/catalog/blob/main/ICON/ngc3542.yaml
+# It requires an additional package called fastparquet to read the parquet files
+
+sources:
+  hourly-native-atm2d-inst:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/atm_2d_1h_inst/combined.parq
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name: ICON-cycle3
