@@ -1,0 +1,81 @@
+sources:
+  P1D:
+    driver: zarr
+    metadata:
+      grid: HealPIX
+      source_grid_name: icon-healpix
+      fixer_name: ICON-cycle3
+    args:
+      consolidated: true
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_P1D_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+  
+  PT3H:
+    driver: zarr
+    metadata:
+      grid: HealPIX
+      source_grid_name: icon-healpix
+      fixer_name: ICON-cycle3
+    args:
+      consolidated: true
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_PT3H_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+  
+  PT15M:
+    driver: zarr
+    metadata:
+      grid: HealPIX
+      source_grid_name: icon-healpix
+      fixer_name: ICON-cycle3
+    args:
+      consolidated: true
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_PT15M_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
