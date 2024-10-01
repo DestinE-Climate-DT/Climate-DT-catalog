@@ -1719,6 +1719,24 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: ng5-nodes-3d
+  
+  monthly-native-atm2d:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_native/json.dir.9999/atm2d.json
+    metadata:
+      source_grid_name: tco2559
+      fixer_name: IFS-default
+  
+  monthly-native-atm3d:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_native/json.dir.9999/atm3d.json
+    metadata:
+      source_grid_name: tco2559
+      fixer_name: IFS-default
 
   hourly-native-atm2d:
     driver: zarr
