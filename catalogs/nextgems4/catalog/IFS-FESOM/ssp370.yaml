@@ -48,7 +48,190 @@ sources:
         remote_protocol: file
     metadata:
       source_grid_name: hpz7-nested
-      fixer_name: ifs-destine-v1 
+      fixer_name: ifs-destine-v1
+  # NextGEMS4 json 2D atmospheric source for mutiIO025
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2020-2029/sfc.dir/atm2d.json   
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2030-2034/sfc.dir/atm2d.json 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2035-2039/sfc.dir/atm2d.json 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/sfc.dir/atm2d.json                   
+      drop_variables: ['sst', 'ci', '10si']
+    metadata:
+      source_grid_name: era5-r025
+      fixer_name: ifs-destine-v1
+  # NextGEMS4 json 3D atmospheric source for mutiIO025                
+  3D_monthly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2020-2029/pl.dir/atm3d.json   
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2030-2034/pl.dir/atm3d.json 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2035-2039/pl.dir/atm3d.json 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_monthly_0.25deg/jsons.2040-2049/pl.dir/atm3d.json
+    metadata:
+      source_grid_name: era5-r025
+      fixer_name: ifs-destine-v1
+  # NextGEMS4 json 2D oceanic source for hpz9
+  2D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2020/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2021/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2022/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2023/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2024/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2025/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2026/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2027/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2028/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2029/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2030/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2031/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2032/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2033/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2034/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2035/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2036/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2037/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2038/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2039/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2040/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2041/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2042/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2043/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2044/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2045/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2046/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2047/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2048/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/o2d.dir/atm2d.json
+    metadata:
+      source_grid_name: fesom-NG5-hpz9-nested-v2
+      fixer_name: fesom-destine-v1
+  # NextGEMS4 json 3D oceanic source for hpz9         
+  3D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2020/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2021/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2022/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2023/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2024/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2025/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2026/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2027/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2028/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2029/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2030/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2031/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2032/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2033/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2034/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2035/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2036/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2037/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2038/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2039/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2040/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2041/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2042/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2043/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2044/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2045/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2046/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2047/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2048/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/o3d.dir/atm2d.json
+    metadata:
+      source_grid_name: fesom-NG5-hpz9-nested-v2
+      fixer_name: fesom-destine-v1
+  # NextGEMS4 json 2D oceanic source for hpz7
+  2D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2020/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2021/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2022/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2023/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2024/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2025/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2026/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2027/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2028/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2029/o2d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2030/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2031/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2032/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2033/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2034/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2035/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2036/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2037/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2038/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2039/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2040/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2041/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2042/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2043/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2044/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2045/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2046/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2047/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2048/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/o2d.dir/atm2d.json
+    metadata:
+      source_grid_name: fesom-NG5-hpz7-nested-v2
+      fixer_name: fesom-destine-v1
+  # NextGEMS4 json 3D oceanic source for hpz7                  
+  3D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2020/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2021/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2022/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2023/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2024/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2025/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2026/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2027/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2028/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2029/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2030/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2031/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2032/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2033/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2034/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2035/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2036/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2037/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2038/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2039/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2040/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2041/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2042/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2043/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2044/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2045/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2046/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2047/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2048/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/o3d.dir/atm2d.json
+    metadata:
+      source_grid_name: fesom-NG5-hpz7-nested-v2
+      fixer_name: fesom-destine-v1
     
 # Native sources
   hourly-native-atm2d-fdb1: &base-default
