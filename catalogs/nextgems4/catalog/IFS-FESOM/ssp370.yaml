@@ -24,7 +24,6 @@ sources:
     metadata:
       source_grid_name: hpz9-nested
       fixer_name: ifs-destine-v1 
-
   # NextGEMS4 parquet 2D atmospheric source for hpz7
   2D_hourly_healpix128:
     driver: zarr
@@ -52,7 +51,7 @@ sources:
       fixer_name: ifs-destine-v1 
     
 # Native sources
-  hourly-native-atm2d: &base-default
+  hourly-native-atm2d-fdb1: &base-default
     args: &args-default
       request: &request-default
         #domain: g
@@ -89,7 +88,7 @@ sources:
       source_grid_name: tco1279
       fixer_name: ifs-destine-v1
 
-  hourly-native-atm3d:
+  hourly-native-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on native grid (about 5km).
     args:
@@ -107,7 +106,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-native-oce2d:
+  daily-native-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on native grid NG5.
     args:
@@ -126,7 +125,7 @@ sources:
       source_grid_name: ng5-nodes-2d
       fixer_name: fesom-destine-v1
 
-  daily-native-oce3d:
+  daily-native-oce3d-fdb1:
     <<: *base-default
     description: daily 3D oceanic data on native grid NG5.
     args:
@@ -155,8 +154,7 @@ sources:
       fixer_name: fesom-destine-v1
 
 # Healpix h128 (zoom=7) 
-
-  hourly-hpz7-atm2d:
+  hourly-hpz7-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
     args:
@@ -169,7 +167,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/cycle4/fdb/healpix/'
       source_grid_name: hpz7-nested
 
-  hourly-hpz7-atm3d:
+  hourly-hpz7-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
@@ -190,7 +188,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-hpz7-oce2d:
+  daily-hpz7-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
@@ -210,7 +208,7 @@ sources:
       source_grid_name: fesom-nextgems4-hpz7-nested
       fixer_name: fesom-destine-v1
 
-  daily-hpz7-oce3d:
+  daily-hpz7-oce3d-fdb1:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
@@ -241,8 +239,7 @@ sources:
       fixer_name: fesom-destine-v1
 
 # Healpix h512 (zoom=9)
-
-  hourly-hpz9-atm2d:
+  hourly-hpz9-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=9, h512).
     args:
@@ -255,7 +252,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/cycle4/fdb/healpix/'
       source_grid_name: hpz9-nested
 
-  hourly-hpz9-atm3d:
+  hourly-hpz9-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
@@ -276,7 +273,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-hpz9-oce2d:
+  daily-hpz9-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=9, h512).
     args:
@@ -296,7 +293,7 @@ sources:
       source_grid_name: fesom-nextgems4-hpz9-nested
       fixer_name: fesom-destine-v1
 
-  daily-hpz9-oce3d:
+  daily-hpz9-oce3d-fdb1:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=9, h512).
     args:
@@ -328,8 +325,7 @@ sources:
 
 
 # Regular latlon r025 (atmosphere only)
-
-  hourly-r025-atm2d:
+  hourly-r025-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on regular r025 grid (1440x721).
     args:
@@ -342,7 +338,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/cycle4/fdb/latlon/'
       source_grid_name: era5-r025
 
-  hourly-r025-atm3d:
+  hourly-r025-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on regular r025 grid (1440x721).
     args:
@@ -366,7 +362,6 @@ sources:
 # Duplicates for additional FDBs (only hpz7)
 
 # FDB2
-
   hourly-hpz7-atm2d-fdb2:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
@@ -542,7 +537,6 @@ sources:
       fixer_name: fesom-destine-v1
 
 # FDB4
-
   hourly-hpz7-atm2d-fdb4:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
@@ -632,7 +626,6 @@ sources:
 # Duplicates for additional FDBs (hpz9)
 
 # FDB2
-
   hourly-hpz9-atm2d-fdb2:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=9, h512).
@@ -720,7 +713,6 @@ sources:
       fixer_name: fesom-destine-v1
 
 # FDB3
-
   hourly-hpz9-atm2d-fdb3:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=9, h512).
@@ -808,7 +800,6 @@ sources:
       fixer_name: fesom-destine-v1
 
 # FDB4
-
   hourly-hpz9-atm2d-fdb4:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=9, h512).

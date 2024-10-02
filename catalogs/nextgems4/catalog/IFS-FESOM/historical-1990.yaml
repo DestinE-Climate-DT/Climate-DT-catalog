@@ -49,7 +49,7 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: ifs-destine-v1 
 
-  hourly-hpz7-atm2d: &base-default
+  hourly-hpz7-atm2d-fdb1: &base-default
     args: &args-default
       request: &request-default
         class: d1
@@ -85,7 +85,7 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: ifs-fesom-destine-v1-nan
 
-  hourly-hpz7-atm3d:
+  hourly-hpz7-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
@@ -103,7 +103,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-hpz7-oce2d:
+  daily-hpz7-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
@@ -120,7 +120,7 @@ sources:
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263115, 263124]
       source_grid_name: fesom-nextgems4-hpz7-nested
 
-  daily-hpz7-oce3d:
+  daily-hpz7-oce3d-fdb1:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=7, h128)..
     args:
@@ -147,7 +147,7 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: fesom-nextgems4-hpz7-nested-3d
 
-  hourly-hpz9-atm2d:
+  hourly-hpz9-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=9, 512h).
     args:
@@ -160,7 +160,7 @@ sources:
       source_grid_name: hpz9-nested
 
 
-  hourly-hpz9-atm3d:
+  hourly-hpz9-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on healpix grid (zoom=9, 512h).
     args:
@@ -179,7 +179,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-hpz9-oce2d:
+  daily-hpz9-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=9, h512).
     args:
@@ -196,7 +196,7 @@ sources:
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263115, 263124]
       source_grid_name: fesom-hpz9-nested
 
-  daily-hpz9-oce3d:
+  daily-hpz9-oce3d-fdb1:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=9, h512).
     args:
@@ -224,7 +224,7 @@ sources:
       source_grid_name: fesom-hpz9-nested-3d
 
 
-  hourly-r025-atm2d:
+  hourly-r025-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on regular r025 grid (1440x721).
     args:
@@ -237,7 +237,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
       source_grid_name: era5-r025
 
-  hourly-r025-atm3d:
+  hourly-r025-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on regular r025 grid (1440x721).
     args:
@@ -258,7 +258,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  hourly-native-atm2d:
+  hourly-native-atm2d-fdb1:
     <<: *base-default
     description: hourly data on native grid tco1279.
     args:
