@@ -5,5 +5,5 @@ lumi:
     areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
   intake:
     # Same path as for the phase 1 test
-    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/lumi-phase2
     ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
