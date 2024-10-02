@@ -5,9 +5,9 @@ lumi:
     areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
   intake:
     # where LRA data is stored (available in all the machines listed)
-    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/climatedt-phase1
     # where the FDB schema is stored (available only on lumi)
-    FDB_PATH: /appl/local/climatedt
+    FDB_PATH: /appl/local/destine
     # where the historical FDB data is stored (available only on lumi)
     FDB_PATH_HISTORICAL: /project/project_465000454/experiments/a0h3
     # EERIE path for control 1990 (available only on lumi)
