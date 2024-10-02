@@ -152,7 +152,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2048/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix512/jsons.2049/o3d.dir/atm2d.json
     metadata:
-      source_grid_name: fesom-NG5-hpz9-nested-v2
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
       fixer_name: fesom-destine-v1
   # NextGEMS4 json 2D oceanic source for hpz7
   2D_daily_healpix128_ocean:
@@ -230,7 +230,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2048/o3d.dir/atm2d.json
       - reference::/work/bm1235/u233156/cycle4_purged/gribscan_1h1d_2D_healpix128/jsons.2049/o3d.dir/atm2d.json
     metadata:
-      source_grid_name: fesom-NG5-hpz7-nested-v2
+      source_grid_name: fesom-NG5-hpz7-nested-3d-v2
       fixer_name: fesom-destine-v1
     
 # Native sources
