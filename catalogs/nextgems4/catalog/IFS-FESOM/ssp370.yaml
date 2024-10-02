@@ -1,4 +1,56 @@
 sources:
+  # NextGEMS4 parquet 2D atmospheric source for hpz9
+  2D_hourly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_2D_hourly_healpix512_combined_V3.parq
+      drop_variables: ['sst', 'ci', '10si']
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz9-nested
+      fixer_name: ifs-destine-v1 
+  # NextGEMS4 parquet 3D atmospheric source for hpz9
+  3D_hourly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_3D_hourly_healpix512_combined_V3.parq
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz9-nested
+      fixer_name: ifs-destine-v1 
+
+  # NextGEMS4 parquet 2D atmospheric source for hpz7
+  2D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_2D_hourly_healpix128_combined_V3.parq
+      drop_variables: ['sst', 'ci', '10si']
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz7-nested
+      fixer_name: ifs-destine-v1 
+  # NextGEMS4 parquet 3D atmospheric source for hpz7
+  3D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+       - reference::/work/bm1235/b382776/cycle4/parquets/IFS_9-FESOM_5-production_3D_hourly_healpix128_combined_V3.parq
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz7-nested
+      fixer_name: ifs-destine-v1 
+    
 # Native sources
   hourly-native-atm2d: &base-default
     args: &args-default
