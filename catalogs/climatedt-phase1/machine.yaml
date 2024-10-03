@@ -31,7 +31,7 @@ MN5:
     weights: /gpfs/scratch/ehpc01/data/AQUA/weights
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
-    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-phase1
     FDB_PATH: /gpfs/projects/ehpc01/dte/fdb
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
