@@ -54,7 +54,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/ngc_72lev_HAM_prod_atm_mon/combined.parq
     metadata:
-      source_grid_name: R02B09 # TODO: This is a global mean source, what can we put as a placeholder?
       fixer_name: ICON-cycle3
   
   ngc_72lev_HAM_prod_oce_mon:
@@ -63,7 +62,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/ngc_72lev_HAM_prod_oce_mon/combined.parq
     metadata:
-      source_grid_name: R02B09 # TODO: This is a global mean source, what can we put as a placeholder?
       fixer_name: ICON-cycle3
   
   obgc_2d_P1DM:
@@ -72,7 +70,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_2d_P1DM/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   obgc_3d_EU_P1DM:
@@ -97,7 +94,6 @@ sources:
       - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_aou/combined.parq
       - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_P1DM_NPP/combined.parq 
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   obgc_3d_EU_diag_P15DM:
@@ -110,7 +106,6 @@ sources:
       - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_dissic/combined.parq
       - reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_EU_diag_P15DM_det/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
 
   obgc_3d_P15DM_o2:
@@ -119,7 +114,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_3d_P15DM_o2/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   obgc_monitor:
@@ -128,7 +122,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/obgc_monitor/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   oce_2d_1d_mean:
@@ -137,7 +130,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_2d_1d_mean/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   oce_3d_EU_P15DM_diag:
@@ -146,7 +138,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_3d_EU_P15DM_diag/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   oce_ml_1d_mean:
@@ -155,7 +146,6 @@ sources:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_ml_1d_mean/combined.parq
     metadata:
-      source_grid_name: R02B09
       fixer_name: ICON-cycle3
   
   oce_moc_1d_mean:
@@ -163,4 +153,6 @@ sources:
     args:
       consolidated: false
       urlpath: reference:://work/bm1344/DKRZ/kerchunks_batched/ngc_72lev_HAM_prod/oce_moc_1d_mean/combined.parq
+    metadata:
+      fixer_name: ICON-cycle3
     
