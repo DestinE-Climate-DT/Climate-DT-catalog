@@ -1758,7 +1758,7 @@ sources:
       urlpath:
       - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_1h6h_native/json.dir/atm3d.json
   
-  monthly-0.25deg-atm2d:
+  monthly-r025-atm2d:
     driver: zarr
     metadata:
       source_grid_name: multio-r025
@@ -1768,7 +1768,7 @@ sources:
       urlpath:
       - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_0.25deg/json.dir/atm2d.json
   
-  monthly-0.25deg-atm3d:
+  monthly-r025-atm3d:
     driver: zarr
     metadata:
       source_grid_name: multio-r025
@@ -1777,7 +1777,7 @@ sources:
       urlpath:
       - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_0.25deg/json.dir/atm3d.json
 
-  hourly-0.25deg-atm2d:
+  hourly-r025-atm2d:
     driver: zarr
     args:
       consolidated: False
@@ -1786,7 +1786,7 @@ sources:
       source_grid_name: multio-r025
       fixer_name: ifs-cycle3
     
-  hourly-0.25deg-atm3d:
+  hourly-r025-atm3d:
     driver: zarr
     args:
       consolidated: False
@@ -1795,7 +1795,7 @@ sources:
       source_grid_name: multio-r025
       fixer_name: ifs-cycle3
   
-  monthly-1deg-atm2d:
+  monthly-r100-atm2d:
     driver: zarr
     args:
       consolidated: False
@@ -1805,7 +1805,7 @@ sources:
       source_grid_name: lon-lat # to create multio-r100
       fixer_name: ifs-cycle3
   
-  monthly-1deg-atm3d:
+  monthly-r100-atm3d:
     driver: zarr
     args:
       consolidated: False
@@ -1815,7 +1815,7 @@ sources:
       source_grid_name: lon-lat # to create multio-r100
       fixer_name: ifs-cycle3
   
-  hourly-1deg-atm2d:
+  hourly-r100-atm2d:
     driver: zarr
     args:
       consolidated: False
@@ -1824,7 +1824,7 @@ sources:
       source_grid_name: lon-lat # to create multio-r100
       fixer_name: ifs-cycle3
   
-  hourly-1deg-atm3d:
+  hourly-r100-atm3d:
     driver: zarr
     args:
       consolidated: False
