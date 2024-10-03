@@ -1803,7 +1803,6 @@ sources:
       urlpath: 
       - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_1deg/json.dir/atm2d.json
     metadata:
-      source_grid_name: lon-lat # to create multio-r100
       fixer_name: ifs-multio-cycle3
   
   monthly-r100-atm3d:
