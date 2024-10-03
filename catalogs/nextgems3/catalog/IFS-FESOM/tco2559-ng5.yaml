@@ -311,7 +311,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/a_ice.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_1h_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-2d
 
   daily-native-oce2d:
@@ -1102,7 +1102,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/m_ice.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_daily_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-2d
 
   monthly-native-oce2d:
@@ -1173,7 +1173,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/runoff.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_monthly_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-2d
 
   monthly-native-oce2d-elem:
@@ -1304,7 +1304,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/ty_sur.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_monthly_native_elem
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-elems-2d
 
   daily-native-oce3d:
@@ -1557,7 +1557,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/salt.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 3D_daily_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-3d
 
   daily-native-oce3d-elem:
@@ -1689,7 +1689,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/v.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 3D_daily_native_elem
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-elems-3d
 
   daily-native-oce3d-zarr:
@@ -1719,6 +1719,25 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: ng5-nodes-3d
+      fixer_name: fesom-destine-v1
+  
+  monthly-native-atm2d:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_native/json.dir/atm2d.json
+    metadata:
+      source_grid_name: tco2559
+      fixer_name: IFS-default
+  
+  monthly-native-atm3d:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_native/json.dir/atm3d.json
+    metadata:
+      source_grid_name: tco2559
+      fixer_name: IFS-default
 
   hourly-native-atm2d:
     driver: zarr
@@ -1728,8 +1747,7 @@ sources:
     args:
       consolidated: false
       urlpath:
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm2d.json
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm2d.json
+      - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_1h6h_native/json.dir/atm2d.json
 
   hourly-native-atm3d:
     driver: zarr
@@ -1738,75 +1756,100 @@ sources:
     args:
       consolidated: false
       urlpath:
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native/json.dir/atm3d.json
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_native_p2/json.dir/atm3d.json
+      - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_1h6h_native/json.dir/atm3d.json
   
-  monthly-0.25deg-atm2d:
+  monthly-r025-atm2d:
     driver: zarr
     metadata:
-      source_grid_name: multio-r025
-      fixer_name: ifs-cycle3
+      source_grid_name: era5-r025
+      fixer_name: ifs-multio-cycle3
     args:
       consolidated: false
       urlpath:
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg/json.dir/atm2d.json
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg_p2/json.dir.job/atm2d.json
+      - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_0.25deg/json.dir/atm2d.json
   
-  monthly-0.25deg-atm3d:
+  monthly-r025-atm3d:
     driver: zarr
     metadata:
-      source_grid_name: multio-r025
+      source_grid_name: era5-r025
+      fixer_name: ifs-multio-cycle3
     args:
       consolidated: false
       urlpath:
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg/json.dir/atm3d.json
-      - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_0.25deg_p2/json.dir.job/atm3d.json
+      - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_0.25deg/json.dir/atm3d.json
 
-  lra-r100-monthly-atm:
+  hourly-r025-atm2d:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_0.25deg/json.dir.9999/atm2d.json
+    metadata:
+      source_grid_name: era5-r025
+      fixer_name: ifs-multio-cycle3
+    
+  hourly-r025-atm3d:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_0.25deg/json.dir.9999/atm3d.json
+    metadata:
+      source_grid_name: era5-r025
+      fixer_name: ifs-multio-cycle3
+  
+  monthly-r100-atm2d:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_1deg/json.dir/atm2d.json
+    metadata:
+      fixer_name: ifs-multio-cycle3
+  
+  monthly-r100-atm3d:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_1deg/json.dir/atm3d.json 
+    metadata:
+      source_grid_name: lon-lat # to create multio-r100
+      fixer_name: ifs-multio-cycle3
+  
+  hourly-r100-atm2d:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_1deg/json.dir.9999/atm2d.json
+    metadata:
+      source_grid_name: lon-lat # to create multio-r100
+      fixer_name: ifs-multio-cycle3
+  
+  hourly-r100-atm3d:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h6h_1deg/json.dir.9999/atm3d.json
+    metadata:
+      source_grid_name: lon-lat # to create multio-r100
+      fixer_name: ifs-multio-cycle3
+  
+  WAM_1h_native:
+    driver: zarr
+    args:
+      consolidated: false
+      urlpath: reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h_wam/json.dir/atm2d.json
+    metadata:
+      fixer_name: False
+
+  lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100 for IFS
     args:
       urlpath:
-        - /work/bb1153/b382076/LRA-cycle3/IFS/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
+        - /work/bb1153/b382076/LRA-cycle3/nextgems3/IFS-FESOM/tco2559-ng5/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
     metadata:
       source_grid_name: lon-lat
       fixer_name: lra-cycle3
-
-  lra-r100-monthly-oce:
-    driver: netcdf
-    description: LRA data monthly at r100 for FESOM
-    args:
-      urlpath:
-        - /work/bb1153/b382076/LRAv3/FESOM/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: ng5-nodes-3d
-      fixer_name: lra-cycle3
-  
-  # LEGACY
-  # 2D_monthly_1deg:
-  #   driver: zarr
-  #   args:
-  #     consolidated: false
-  #     urlpath:
-  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm2d.json
-  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg_p2/json.dir/atm2d.json
-  # 3D_monthly_1deg:
-  #   driver: zarr
-  #   args:
-  #     consolidated: false
-  #     urlpath:
-  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg/json.dir/atm3d.json
-  #     - reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_monthly_1deg_p2/json.dir/atm3d.json
-  # WAM_1h_native:
-  #   driver: zarr
-  #   args:
-  #     consolidated: false
-  #     urlpath: 
-  #       reference::/work/bm1235/a270046/cycle3/multio_cycle3/gribscan_1h_wam/json.dir/atm2d.json
-

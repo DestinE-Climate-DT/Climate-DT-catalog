@@ -1,0 +1,6 @@
+sources:
+  ngc4008:
+    description: nextGEMS4 ICON scenario run ssp370. 10km atm/5km oce 30 years saved on HeaPix grid
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/ngc4008.yaml"

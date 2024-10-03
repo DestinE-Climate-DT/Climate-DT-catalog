@@ -3,7 +3,7 @@ sources:
     args:
       metadata:
         grid: HealPIX
-        source_grid_name: icon-healpix
+        source_grid_name: icon-R02B09-hp-nested
         fixer_name: ICON-cycle3
       consolidated: true
       urlpath: 
@@ -32,7 +32,7 @@ sources:
     args:
       metadata:
         grid: HealPIX
-        source_grid_name: icon-healpix
+        source_grid_name: icon-R02B09-hp-nested
         fixer_name: ICON-cycle3
       consolidated: true
       urlpath: 
@@ -61,7 +61,7 @@ sources:
     args:
       metadata:
         grid: HealPIX
-        source_grid_name: icon-healpix
+        source_grid_name: icon-R02B09-hp-nested
         fixer_name: ICON-cycle3
       consolidated: true
       urlpath: 
