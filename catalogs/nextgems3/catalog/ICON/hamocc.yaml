@@ -22,7 +22,7 @@ sources:
         description: zoom resolution of the dataset
         type: int
     metadata:
-      source_grid_name: icon-healpix
+      # source_grid_name: icon-R02B08-hp-nested # Not compatible
       fixer_name: ICON-cycle3
   
   monthly-r100:
@@ -51,5 +51,5 @@ sources:
       - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__to__mergetime.nc 
       - /work/bm1255/m300689/hackathon_hamocc/1degree/MSM12_r2b8L128SMT_ERA5_nextGEMSpar_2000__v__mergetime.nc
     metadata:
-      source_grid_name: lon-lat #TODO: check
+      source_grid_name: lon-lat
       fixer_name: ICON-cycle3
