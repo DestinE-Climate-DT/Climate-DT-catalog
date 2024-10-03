@@ -311,7 +311,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/a_ice.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_1h_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-2d
 
   daily-native-oce2d:
@@ -1102,7 +1102,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/m_ice.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_daily_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-2d
 
   monthly-native-oce2d:
@@ -1173,7 +1173,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/runoff.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_monthly_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-2d
 
   monthly-native-oce2d-elem:
@@ -1304,7 +1304,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/ty_sur.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 2D_monthly_native_elem
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-elems-2d
 
   daily-native-oce3d:
@@ -1557,7 +1557,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/salt.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 3D_daily_native
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-nodes-3d
 
   daily-native-oce3d-elem:
@@ -1689,7 +1689,7 @@ sources:
       - /work/bm1235/a270046/cycle3/tco2559l137_2023/tco2559l137/hzfy/hres/intel.levante.openmpi/lvt.intel.sp/Cycle3_122024/v.fesom.2024.nc
     driver: netcdf
     metadata:
-      source: 3D_daily_native_elem
+      fixer_name: fesom-destine-v1
       source_grid_name: ng5-elems-3d
 
   daily-native-oce3d-zarr:
@@ -1719,6 +1719,7 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: ng5-nodes-3d
+      fixer_name: fesom-destine-v1
   
   monthly-native-atm2d:
     driver: zarr
@@ -1847,28 +1848,15 @@ sources:
       source_grid_name: lon-lat # TO DO
       fixer_name: False
 
-  lra-r100-monthly-atm:
+  lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100 for IFS
     args:
       urlpath:
-        - /work/bb1153/b382076/LRA-cycle3/IFS/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
+        - /work/bb1153/b382076/LRA-cycle3/nextgems3/IFS-FESOM/tco2559-ng5/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
     metadata:
       source_grid_name: lon-lat
-      fixer_name: lra-cycle3
-
-  lra-r100-monthly-oce:
-    driver: netcdf
-    description: LRA data monthly at r100 for FESOM
-    args:
-      urlpath:
-        - /work/bb1153/b382076/LRAv3/FESOM/tco2559-ng5-cycle3/r100/monthly/*tco2559-ng5-cycle3_r100_monthly_????.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: ng5-nodes-3d
       fixer_name: lra-cycle3
