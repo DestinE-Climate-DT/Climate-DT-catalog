@@ -6,3 +6,9 @@ lumi:
   #intake:
     # where aqua-analysis data is stored on lumi
     #DATA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output
+
+levante:
+  paths: 
+    grids: /work/bb1153/b382075/aqua/grids
+    weights: /work/bb1153/b382075/aqua/weights
+    areas: /work/bb1153/b382075/aqua/areas
