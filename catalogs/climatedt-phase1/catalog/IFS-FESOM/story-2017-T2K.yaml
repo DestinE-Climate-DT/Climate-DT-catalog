@@ -22,7 +22,7 @@ sources:
       data_end_date: 20231231T2300
       bridge_end_date: complete
       chunks: MS
-      savefreq: D # at what frequency are data saved
+      savefreq: h # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
       timestyle: date  # variable date or variable step
     description: hourly 2d atmospheric data on healpix grid (zoom=7, h128).
@@ -58,13 +58,12 @@ sources:
 
   hourly-hpz9-atm2d:
     <<: *base-default
-    description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
+    description: hourly 2D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
       chunks: 6H
       request:
         <<: *request-default
-        param: 129
         levtype: sfc
         resolution: high
     metadata:
