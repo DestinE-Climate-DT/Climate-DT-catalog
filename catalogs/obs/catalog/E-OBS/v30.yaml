@@ -1,0 +1,30 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+# coordinates are ill defined in E-OBS with noise at 10ˆ-14 level so that xarray 
+# has issues in putting all the datasets together
+sources:
+  daily-r010-temperature:
+    description: E-OBS daily average temperature
+    driver: netcdf
+    metadata:
+      source_grid_name: longitude-latitude
+      fixer_name: eobs-destine-v1
+    args:
+      urlpath: 
+        - '{{DATA_PATH}}/E-OBS/v30.0e/tg_ens_mean_0.1deg_reg_v30.0e.nc'
+        #- '{{DATA_PATH}}/E-OBS/v30.0e/tn_ens_mean_0.1deg_reg_v30.0e.nc'
+        #- '{{DATA_PATH}}/E-OBS/v30.0e/tx_ens_mean_0.1deg_reg_v30.0e.nc'
+      xarray_kwargs:
+        decode_times: True
+  daily-r010-precipitation:
+    description: E-OBS daily average precipitation
+    driver: netcdf
+    metadata:
+      source_grid_name: longitude-latitude
+      fixer_name: eobs-destine-v1
+    args:
+      urlpath: '{{DATA_PATH}}/E-OBS/v30.0e/rr_ens_mean_0.1deg_reg_v30.0e.nc'
+      xarray_kwargs:
+        decode_times: True
