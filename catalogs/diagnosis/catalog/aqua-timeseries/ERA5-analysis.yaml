@@ -8,18 +8,20 @@ sources:
     driver: netcdf
     description: t2m annual timeseries from ERA5
     args:
-      urlpath:
+      urlpath: 
+        #'{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc'
         - /work/ab0995/a270260/test_01/aqua_analysis_sh_output/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc
-          #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc
+        #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc
     metadata:
       source_grid_name: Null      
   t2m-mon:
     driver: netcdf
     description: t2m monthly timeseries from ERA5
     args:
-      urlpath:
+      urlpath: 
+        #'{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc'
         - /work/ab0995/a270260/test_01/aqua_analysis_sh_output/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc
-          #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc
+        #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc
     metadata:
       source_grid_name: Null   
 
@@ -92,7 +94,7 @@ sources:
           #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_lcc_ERA5_era5_ann.nc
     metadata:
       source_grid_name: Null      
-  hcc-mon:
+  lcc-mon:
     driver: netcdf
     description: lcc monthly timeseries from ERA5
     args:
