@@ -58,7 +58,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sfc.dir/atm2d.json      
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sfc.dir/atm2d.json
     metadata:
-      source_grid_name: multio-r025s
+      source_grid_name: multio-r025-unstructured
       fixer_name: ifs-destine-v1
   # NextGEMS4 json 3D atmospheric source for mutiIO025            
   3D_monthly_0.25deg:
@@ -70,7 +70,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json      
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json
     metadata:
-      source_grid_name: multio-r025s
+      source_grid_name: multio-r025-unstructured
       fixer_name: ifs-destine-v1
   # NextGEMS4 json 2D oceanic source for hpz9
   2D_daily_healpix512_ocean:
