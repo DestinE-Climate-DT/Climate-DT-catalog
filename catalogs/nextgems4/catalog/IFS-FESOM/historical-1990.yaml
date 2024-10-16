@@ -58,7 +58,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sfc.dir/atm2d.json      
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sfc.dir/atm2d.json
     metadata:
-      source_grid_name: era5-r025
+      source_grid_name: multio-r025s
       fixer_name: ifs-destine-v1
   # NextGEMS4 json 3D atmospheric source for mutiIO025            
   3D_monthly_0.25deg:
@@ -70,7 +70,7 @@ sources:
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json      
       - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json
     metadata:
-      source_grid_name: era5-r025
+      source_grid_name: multio-r025s
       fixer_name: ifs-destine-v1
   # NextGEMS4 json 2D oceanic source for hpz9
   2D_daily_healpix512_ocean:
@@ -418,7 +418,7 @@ sources:
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
-      source_grid_name: era5-r025
+      source_grid_name: era5-r025s
 
   hourly-r025-atm3d-fdb1:
     <<: *base-default
@@ -436,7 +436,7 @@ sources:
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
-      source_grid_name: era5-r025
+      source_grid_name: era5-r025s
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]

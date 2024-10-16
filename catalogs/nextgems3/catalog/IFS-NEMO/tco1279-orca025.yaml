@@ -50,7 +50,7 @@ sources:
       urlpath: 
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm2d.json
     metadata:
-      source_grid_name: multio-r025
+      source_grid_name: multio-r025s
       fixer_name: ifs-multio-cycle3
 
   hourly-r025-atm3d:
@@ -60,7 +60,7 @@ sources:
       urlpath: 
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm3d.json
     metadata:
-      source_grid_name: multio-r025
+      source_grid_name: multio-r025s
       fixer_name: ifs-multio-cycle3
 
   monthly-r025-atm2d:
@@ -70,7 +70,7 @@ sources:
       urlpath: 
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_0.25deg/json.dir.9999/atm2d.json
     metadata:
-      source_grid_name: multio-r025
+      source_grid_name: multio-r025s
       fixer_name: ifs-multio-cycle3
 
   monthly-r025-atm3d:
@@ -80,7 +80,7 @@ sources:
       urlpath: 
         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_0.25deg/json.dir.9999/atm3d.json
     metadata:
-      source_grid_name: multio-r025
+      source_grid_name: multio-r025s
       fixer_name: ifs-multio-cycle3
 
   hourly-r100-atm2d:
@@ -89,7 +89,7 @@ sources:
       consolidated: False
       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm2d.json
     metadata:
-      source_grid_name: multio-r100
+      source_grid_name: multio-r100s
       fixer_name: ifs-multio-cycle3
 
   hourly-r100-atm3d:
@@ -98,7 +98,7 @@ sources:
       consolidated: False
       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm3d.json
     metadata:
-      source_grid_name: multio-r100
+      source_grid_name: multio-r100s
       fixer_name: ifs-multio-cycle3
 
   monthly-r100-atm2d:
@@ -107,7 +107,7 @@ sources:
       consolidated: False
       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_1deg/json.dir.9999/atm2d.json
     metadata:
-      source_grid_name: multio-r100
+      source_grid_name: multio-r100s
       fixer_name: ifs-multio-cycle3
 
   monthly-r100-atm3d:
@@ -116,7 +116,7 @@ sources:
       consolidated: False
       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_1deg/json.dir.9999/atm3d.json
     metadata:
-      source_grid_name: multio-r100
+      source_grid_name: multio-r100s
       fixer_name: ifs-multio-cycle3
   
   hourly-native-WAM:
