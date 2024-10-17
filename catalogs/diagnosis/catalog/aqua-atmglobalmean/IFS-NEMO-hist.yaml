@@ -4,7 +4,7 @@
 
 
 sources:
-  t2:
+  t2m:
     driver: netcdf
     description: 2D Atmospheric global mean t2 IFS-NEMO-historical
     args:
