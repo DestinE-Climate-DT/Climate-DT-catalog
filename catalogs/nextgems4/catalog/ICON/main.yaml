@@ -5,37 +5,37 @@ sources:
     args:
         path: "{{CATALOG_DIR}}/ngc4008.yaml"
   AMIP_CNTL_R02B07:
-    description: nextGEMS4 ICON AMIP
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP control run
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/cntl_r02b07.yaml"
   AMIP_CNTL_R02B08:
-    description: nextGEMS4 ICON AMIP
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP control run
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/cntl_r02b08.yaml"
   AMIP_CNTL_R02B09:
-    description: nextGEMS4 ICON AMIP
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP control run
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/cntl_r02b09.yaml"
-  P4K_CNTL_R02B07:
-    description: nextGEMS4 ICON AMIP
+  AMIP_P4K_R02B07:
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP +4K
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/p4k_r02b07.yaml"
-  P4K_CNTL_R02B08:
-    description: nextGEMS4 ICON AMIP
+  AMIP_P4K_R02B08:
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP +4K
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/p4k_r02b08.yaml"
-  P4K_CNTL_R02B09:
-    description: nextGEMS4 ICON AMIP
+  AMIP_P4K_R02B09:
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP +4K
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/p4k_r02b09.yaml"
-  4CO2_CNTL_R02B08:
-    description: nextGEMS4 ICON AMIP
+  AMPI_4CO2_R02B08:
+    description: Cloud-Circulation Coupling in a Changing Climate (C5) ICON AMIP 4x CO2
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/4co2_r02b08.yaml"
