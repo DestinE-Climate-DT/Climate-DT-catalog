@@ -1,0 +1,49 @@
+sources: 
+  PT20M:
+      description: ICON-AMIP Control simulation on R02B08 grid with 20-minute time resolution.
+      args:
+        urlpath:
+          - "/work/mh0730/C5/experiments/LUMI_AMIP_R02B08_4CO2/public/LUMI_AMIP_hpz8_4CO2_atm_PT20M_*.nc"
+          - "/work/mh0730/C5/experiments/independent_R02B08.nc"
+          - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
+      driver: netcdf
+      metadata:
+        source_grid_name: hpz8-nested-nextgems4
+        atmospheric_grid_id: R02B08
+        experiment_id: AMIP
+        project: Cloud-Circulation Coupling in a Changing Climate (C5)
+        simulation_id: 4CO2
+        source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/66844e56fc6f0c6a8ee66a14bd5ef24be72110c0
+
+  PT3H:
+      description: ICON-AMIP Control simulation on R02B08 grid with 3-hour time resolution.
+      args:
+        urlpath:
+          - "/work/mh0730/C5/experiments/LUMI_AMIP_R02B08_4CO2/public/LUMI_AMIP_hpz8_4CO2_atm_PT3H_*.nc"
+          - "/work/mh0730/C5/experiments/independent_R02B08.nc"
+          - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
+      driver: netcdf
+      metadata:
+        source_grid_name: hpz8-nested-nextgems4
+        atmospheric_grid_id: R02B08
+        experiment_id: AMIP
+        project: Cloud-Circulation Coupling in a Changing Climate (C5)
+        simulation_id: 4CO2
+        source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/66844e56fc6f0c6a8ee66a14bd5ef24be72110c0
+
+  P1D:
+      description: ICON-AMIP Control simulation on R02B08 grid with daily time resolution.
+      args:
+        urlpath:
+          - "/work/mh0730/C5/experiments/LUMI_AMIP_R02B08_4CO2/public/LUMI_AMIP_hpz8_4CO2_atm_P1D_*.nc"
+          - "/work/mh0730/C5/experiments/independent_R02B08.nc"
+          - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
+      driver: netcdf
+      metadata:
+        source_grid_name: hpz8-nested-nextgems4
+        atmospheric_grid_id: R02B08
+        experiment_id: AMIP
+        project: Cloud-Circulation Coupling in a Changing Climate (C5)
+        simulation_id: 4CO2
+        source_id: https://gitlab.dkrz.de/icon/icon-mpim/-/commit/66844e56fc6f0c6a8ee66a14bd5ef24be72110c0
+    
