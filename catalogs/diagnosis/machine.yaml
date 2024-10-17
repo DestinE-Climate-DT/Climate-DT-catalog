@@ -13,4 +13,5 @@ levante:
     weights: /work/bb1153/b382075/aqua/weights
     areas: /work/bb1153/b382075/aqua/areas
   #intake:
-    #LRA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis 
+    #LRA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
+    ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
