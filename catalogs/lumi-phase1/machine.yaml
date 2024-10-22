@@ -1,10 +1,10 @@
 lumi:
   paths:
-    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
-    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
-    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+    grids: /appl/local/climatedt/data/AQUA/grids
+    weights: /appl/local/climatedt/data/AQUA/weights
+    areas: /appl/local/climatedt/data/data/AQUA/areas
   intake:
-    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/lumi-phase1
+    LRA_PATH: /appl/local/climatedt/data/AQUA/LRA/lumi-phase1
     # where the LRA development data is stored
     LRA_DEV: /pfs/lustrep3/projappl/project_465000454/padavini/LRA-dev
     # where the FDB schema is stored
