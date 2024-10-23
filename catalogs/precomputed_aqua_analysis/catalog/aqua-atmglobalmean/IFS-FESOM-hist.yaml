@@ -1,0 +1,27 @@
+#plugins:
+#source:
+#    - module: intake_xarray
+
+
+sources:
+  t2m:
+    driver: netcdf
+    description: 2D Atmospheric global mean t2 IFS-FESOM-historical
+    args:
+      urlpath: 
+        #'{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc'
+        - /work/ab0995/a270260/test_01/aqua_analysis_sh_output/IFS-FESOM/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.2t.IFS-FESOM_historical-1990.nc
+        #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc
+    metadata:
+      source_grid_name: lon-lat    
+
+  msl:
+    driver: netcdf
+    description: 2D Atmospheric global mean msl IFS-FESOM-historical
+    args:
+      urlpath:
+        - /work/ab0995/a270260/test_01/aqua_analysis_sh_output/IFS-FESOM/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.msl.IFS-FESOM_historical-1990.nc
+        #- /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/climatedt-phase1/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msl_ERA5_era5_ann.nc
+    metadata:
+      source_grid_name: lon-lat      
+

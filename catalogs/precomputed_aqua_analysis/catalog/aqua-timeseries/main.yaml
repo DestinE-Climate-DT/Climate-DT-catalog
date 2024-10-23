@@ -1,0 +1,18 @@
+sources:
+  ERA5-analysis: 
+    description: 1D diagnosis ref data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ERA5-analysis.yaml'
+  IFS-FESOM-hist:
+    description: 1D diagnosis IFS-FESOM data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/IFS-FESOM-hist.yaml'
+  IFS-NEMO-hist:
+    description: 1D diagnosis IFS-NEMO data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/IFS-NEMO-hist.yaml'
+
+
