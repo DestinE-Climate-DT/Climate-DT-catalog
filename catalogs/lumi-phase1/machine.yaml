@@ -10,4 +10,4 @@ lumi:
     # where the FDB schema is stored
     FDB_PATH: /appl/local/climatedt
     # where the different eccodes definitions are stored (necessary for FDB)
-    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
+    ECCODES_PATH: /appl/local/climatedt/data/AQUA/eccodes
