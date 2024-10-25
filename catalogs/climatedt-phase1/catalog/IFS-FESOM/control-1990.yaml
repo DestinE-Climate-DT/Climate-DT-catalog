@@ -456,7 +456,7 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: '{{ LRA_PATH }}/IFS-FESOM/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc'
+      urlpath: '{{ LRA_PATH }}/climatedt-phase1/IFS-FESOM/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
