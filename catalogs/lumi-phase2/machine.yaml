@@ -2,7 +2,7 @@ lumi:
   paths:
     grids: /appl/local/climatedt/data/AQUA/grids
     weights: /appl/local/climatedt/data/AQUA/weights
-    areas: /appl/local/climatedt/data/data/AQUA/areas
+    areas: /appl/local/climatedt/data/AQUA/areas
   intake:
     # Same path as for the phase 1 test
     LRA_PATH: /appl/local/climatedt/data/AQUA/LRA/lumi-phase2
