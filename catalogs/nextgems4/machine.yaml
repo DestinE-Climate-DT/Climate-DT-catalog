@@ -11,7 +11,7 @@ lumi:
   paths:
     grids: /appl/local/climatedt/data/AQUA/grids
     weights: /appl/local/climatedt/data/AQUA/weights
-    areas: /appl/local/climatedt/data/data/AQUA/areas
+    areas: /appl/local/climatedt/data/AQUA/areas
   intake:
     LRA_NEXTGEMS: /appl/local/climatedt/data/AQUA/LRA-nextgems4
     FDB_PATH: null

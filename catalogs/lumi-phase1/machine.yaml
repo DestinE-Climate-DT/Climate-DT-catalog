@@ -2,7 +2,7 @@ lumi:
   paths:
     grids: /appl/local/climatedt/data/AQUA/grids
     weights: /appl/local/climatedt/data/AQUA/weights
-    areas: /appl/local/climatedt/data/data/AQUA/areas
+    areas: /appl/local/climatedt/data/AQUA/areas
   intake:
     LRA_PATH: /appl/local/climatedt/data/AQUA/LRA/lumi-phase1
     # where the LRA development data is stored
