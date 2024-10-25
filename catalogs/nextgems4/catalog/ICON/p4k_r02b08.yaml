@@ -40,6 +40,7 @@ sources:
           - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
       driver: netcdf
       metadata:
+        fixer_name: ICON-cycle4
         source_grid_name: hpz8-nested-nextgems4
         atmospheric_grid_id: R02B08
         experiment_id: AMIP
