@@ -16,9 +16,9 @@ lumi:
   paths:
     grids: /appl/local/climatedt/data/AQUA/grids
     weights: /appl/local/climatedt/data/AQUA/weights
-    areas: /appl/local/climatedt/data/data/AQUA/areas
+    areas: /appl/local/climatedt/data/AQUA/areas
   intake:
-    DATA_PATH: /appl/local/climatedt/data/data/AQUA/datasets
+    DATA_PATH: /appl/local/climatedt/data/AQUA/datasets
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids
