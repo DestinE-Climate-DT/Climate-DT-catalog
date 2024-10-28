@@ -1,5 +1,5 @@
 sources:
-  hourly-hpz10-atm2d:
+  hourly-hpz9-atm2d:
     args:
       request:
         class: d1
@@ -33,7 +33,7 @@ sources:
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
         188, 212, 228, 235, 260048]
-      source_grid_name: hpz10-nested
+      source_grid_name: hpz9-nested
       fixer_name: ifs-destine-v1
 
   hourly-hpz7-atm2d:
@@ -72,7 +72,7 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: ifs-destine-v1
 
-  hourly-hpz10-atm3d:
+  hourly-hpz9-atm3d:
     args:
       request:
         class: d1
@@ -107,7 +107,7 @@ sources:
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
-      source_grid_name: hpz10-nested
+      source_grid_name: hpz9-nested
       fixer_name: ifs-destine-v1
 
   hourly-hpz7-atm3d:
@@ -149,7 +149,7 @@ sources:
       fixer_name: ifs-destine-v1
 
 
-  daily-hpz10-oce2d:
+  daily-hpz9-oce2d:
     args:
       request:
         class: d1
@@ -180,7 +180,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/healpix'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-      source_grid_name: fesom-NG5-hpz10-nested-v2
+      source_grid_name: fesom-NG5-hpz9-nested-v2
       fixer_name: fesom-destine-v1
 
 
@@ -219,7 +219,7 @@ sources:
       fixer_name: fesom-destine-v1
 
 
-  daily-hpz10-oce3d:
+  daily-hpz9-oce3d:
     args:
       request:
         class: d1
@@ -260,7 +260,7 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506]
-      source_grid_name: fesom-NG5-hpz10-nested-3d-v2
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
       fixer_name: fesom-destine-v1
 
 
@@ -308,7 +308,7 @@ sources:
       source_grid_name: fesom-NG5-hpz7-nested-3d-v2
       fixer_name: fesom-destine-v1
 
-  # hourly-hpz10-hl:
+  # hourly-hpz9-hl:
   #   args:
   #     request:
   #       class: d1
@@ -341,7 +341,7 @@ sources:
   #       eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
   #       levels: [100]
   #       variables: [228246, 228247]
-  #       source_grid_name: hpz10
+  #       source_grid_name: hpz9
   #       fixer_name: ifs-destine-v1
   # hourly-hpz7-hl:
   #   args:
@@ -379,7 +379,7 @@ sources:
   #       source_grid_name: hpz7
   #       fixer_name: ifs-destine-v1
 
-  # hourly-hpz10-sol:
+  # hourly-hpz9-sol:
   #   args:
   #     request:
   #       class: d1
@@ -412,7 +412,7 @@ sources:
   #       eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
   #       levels: [1, 2, 3, 4, 5]
   #       variables: [228141]
-  #       source_grid_name: hpz10
+  #       source_grid_name: hpz9
   #       fixer_name: ifs-destine-v1
 
   # hourly-hpz7-sol:
