@@ -13,14 +13,14 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000/to/2300/by/0100
         param: 8
         levtype: sfc
         step: 0
         regrid: 1/1
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -50,13 +50,13 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000/to/2300/by/0100
         param: 8
         levtype: sfc
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -86,7 +86,7 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000/to/2300/by/0100
         param: 60
         levtype: pl
@@ -94,7 +94,7 @@ sources:
           700, 850, 925, 1000]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -124,7 +124,7 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000/to/2300/by/0100
         param: 133
         levtype: pl
@@ -132,7 +132,7 @@ sources:
           700, 850, 925, 1000]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -163,13 +163,13 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000
         param: 263000
         levtype: o2d
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -198,13 +198,13 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000
         param: 263000
         levtype: o2d
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -233,7 +233,7 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000
         param: 263500
         levtype: o3d
@@ -243,7 +243,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -278,7 +278,7 @@ sources:
         expver: '0001'
         type: fc
         stream: clte
-        date: 19900101
+        date: 19900101/to/19900401
         time: 0000
         param: 263500
         levtype: o3d
@@ -288,7 +288,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 19900401T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -322,14 +322,14 @@ sources:
   #       expver: 1  # To be overwritten by workflow/config file
   #       type: fc
   #       stream: clte
-  #       date: 19900101  # To be overwritten by workflow/config file
+  #       date: 19900101/to/19900401
   #       time: "0000/to/2300/by/0100"
   #       param: 228246
   #       levtype: hl
   #       levelist: [100]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 19900401T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -357,14 +357,14 @@ sources:
   #       expver: 1  # To be overwritten by workflow/config file
   #       type: fc
   #       stream: clte
-  #       date: 19900101  # To be overwritten by workflow/config file
+  #       date: 19900101/to/19900401
   #       time: "0000/to/2300/by/0100"
   #       param: 228246
   #       levtype: hl
   #       levelist: [100]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 19900401T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -393,14 +393,14 @@ sources:
   #       expver: 1  # To be overwritten by workflow/config file
   #       type: fc
   #       stream: clte
-  #       date: 19900101  # To be overwritten by workflow/config file
+  #       date: 19900101/to/19900401
   #       time: "0000/to/2300/by/0100"
   #       param: 228141
   #       levtype: sol
   #       levelist: [1, 2, 3, 4, 5]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 19900401T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -429,14 +429,14 @@ sources:
   #       expver: 1  # To be overwritten by workflow/config file
   #       type: fc
   #       stream: clte
-  #       date: 19900101  # To be overwritten by workflow/config file
+  #       date: 19900101/to/19900401
   #       time: "0000/to/2300/by/0100"
   #       param: 228141
   #       levtype: sol
   #       levelist: [1, 2, 3, 4, 5]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 19900401T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -456,7 +456,8 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: '{{ LRA_PATH }}/IFS-FESOM/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc'
+      urlpath: 
+        /gpfs/scratch/ehpc01/tmp/a1t2/LRA/fc0/IFS-FESOM/control-1990/r100/monthly/*control-1990_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
