@@ -4,15 +4,15 @@ levante:
     weights: /work/bb1153/b382075/aqua/weights
     areas: /work/bb1153/b382075/aqua/areas
   intake:
-    LRA_NEXTGEMS: /work/bb1153/b382076/LRA_NG4
+    LRA_NEXTGEMS: /work/bb1153/b382076/LRA_NG4/nextgems4
     FDB_PATH: /work/bm1235/b382776
     ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
 lumi:
   paths:
-    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
-    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
-    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+    grids: /appl/local/climatedt/data/AQUA/grids
+    weights: /appl/local/climatedt/data/AQUA/weights
+    areas: /appl/local/climatedt/data/AQUA/areas
   intake:
-    LRA_NEXTGEMS: /projappl/project_465000454/data/AQUA/LRA-nextgems4
+    LRA_NEXTGEMS: /appl/local/climatedt/data/AQUA/LRA-nextgems4
     FDB_PATH: null
-    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
+    ECCODES_PATH: /appl/local/climatedt/data/AQUA/eccodes

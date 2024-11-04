@@ -14,6 +14,11 @@ metadata:
       default: /work/bb1153/b382075/aqua/eccodes
 
 sources:
+  ICON:
+    description: ICON model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
   IFS-FESOM:
     description: IFS-FESOM coupled model
     driver: yaml_file_cat

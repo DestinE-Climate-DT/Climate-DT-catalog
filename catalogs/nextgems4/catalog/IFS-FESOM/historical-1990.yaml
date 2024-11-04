@@ -1,5 +1,237 @@
 sources:
-  hourly-hpz7-atm2d: &base-default
+  # NextGEMS4 parquet 2D atmospheric source for hpz9
+  2D_hourly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_2D_hourly_healpix512_combined_V3.parq
+      drop_variables: ['sst', 'ci', '10si']
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz9-nested
+      fixer_name: ifs-destine-v1 
+  # NextGEMS4 parquet 3D atmospheric source for hpz9
+  3D_hourly_healpix512:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_3D_hourly_healpix512_combined_V3.parq
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz9-nested
+      fixer_name: ifs-destine-v1 
+  # NextGEMS4 parquet 2D atmospheric source for hpz7
+  2D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_2D_hourly_healpix128_combined_V3.parq
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz7-nested
+      fixer_name: ifs-destine-v1 
+  # NextGEMS4 parquet 3D atmospheric source for hpz7
+  3D_hourly_healpix128:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/b382776/cycle4_hist/parquets/IFS_9-FESOM_5-production-hist_3D_hourly_healpix128_combined_V3.parq
+      storage_options:
+        remote_protocol: file
+    metadata:
+      source_grid_name: hpz7-nested
+      fixer_name: ifs-destine-v1
+  # NextGEMS4 json 2D atmospheric source for mutiIO025
+  2D_monthly_0.25deg:
+    driver: zarr    
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/sfc.dir/atm2d.json    
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/sfc.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/sfc.dir/atm2d.json
+    metadata:
+      source_grid_name: multio-r025-unstructured
+      fixer_name: ifs-destine-v1
+  # NextGEMS4 json 3D atmospheric source for mutiIO025            
+  3D_monthly_0.25deg:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath:
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.1990-99/pl.dir/atm3d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2000-2009/pl.dir/atm3d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_monthly_0.25deg/jsons.2010-2019/pl.dir/atm3d.json
+    metadata:
+      source_grid_name: multio-r025-unstructured
+      fixer_name: ifs-destine-v1
+  # NextGEMS4 json 2D oceanic source for hpz9
+  2D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2000/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2001/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2002/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2003/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2004/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2005/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/o2d.dir/atm2d.json     
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2013/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2014/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2015/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o2d.dir/atm2d.json          
+      drop_variables: [avg_hfds,avg_swfup]
+    metadata:
+      source_grid_name: fesom-NG5-hpz9-nested-v2
+      fixer_name: fesom-destine-v1
+  # NextGEMS4 json 3D oceanic source for hpz9
+  3D_daily_healpix512_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1990/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1991/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1992/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1993/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1994/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1995/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1996/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1997/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1998/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.1999/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2000/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2001/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2002/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2003/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2004/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2005/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2006/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2007/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2008/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2009/o3d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2010/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2011/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2012/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2013/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2014/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2015/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2016/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2017/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2018/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix512/jsons.2019/o3d.dir/atm2d.json
+    metadata:
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
+      fixer_name: fesom-destine-v1
+  # NextGEMS4 json 2D oceanic source for hpz7
+  2D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/o2d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2000/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2001/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2002/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2003/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2004/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2005/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/o2d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2013/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2014/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2015/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/o2d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o2d.dir/atm2d.json       
+      drop_variables: [avg_hfds,avg_swfup]
+    metadata:
+      source_grid_name: fesom-NG5-hpz7-nested-v2
+      fixer_name: fesom-destine-v1
+  # NextGEMS4 json 3D oceanic source for hpz7            
+  3D_daily_healpix128_ocean:
+    driver: zarr
+    args:
+      consolidated: False
+      urlpath: 
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1990/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1991/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1992/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1993/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1994/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1995/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1996/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1997/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1998/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.1999/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2000/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2001/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2002/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2003/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2004/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2005/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2006/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2007/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2008/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2009/o3d.dir/atm2d.json      
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2010/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2011/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2012/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2013/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2014/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2015/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2016/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2017/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2018/o3d.dir/atm2d.json
+      - reference::/work/bm1235/u233156/cycle4_hist/gribscan_1h1d_2D_healpix128/jsons.2019/o3d.dir/atm2d.json
+    metadata:
+      source_grid_name: fesom-NG5-hpz7-nested-3d-v2
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz7-atm2d-fdb1: &base-default
     args: &args-default
       request: &request-default
         class: d1
@@ -35,7 +267,7 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: ifs-fesom-destine-v1-nan
 
-  hourly-hpz7-atm3d:
+  hourly-hpz7-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
@@ -53,7 +285,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-hpz7-oce2d:
+  daily-hpz7-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
@@ -68,36 +300,37 @@ sources:
     metadata:
       <<: *metadata-default
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263115, 263124]
-      source_grid_name: fesom-nextgems4-hpz7-nested
+      source_grid_name: fesom-NG5-hpz7-nested-v2
 
-  daily-hpz7-oce3d:
-    <<: *base-default
-    description: daily 3D oceanic data on healpix grid (zoom=7, h128)..
-    args:
-      <<: *args-default
-      chunks: D
-      savefreq: D
-      request:
-        <<: *request-default
-        resolution: standard
-        param: 263500
-        levtype: o3d
-        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
-          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
-          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-    metadata:
-      <<: *metadata-default
-      levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
-        62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
-        165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
-        560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525,
-        2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
-        6175]
-      variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: fesom-nextgems4-hpz7-nested-3d
+  # this source is DISABLED since no data is actually available
+  # daily-hpz7-oce3d-fdb1:
+  #   <<: *base-default
+  #   description: daily 3D oceanic data on healpix grid (zoom=7, h128)..
+  #   args:
+  #     <<: *args-default
+  #     chunks: D
+  #     savefreq: D
+  #     request:
+  #       <<: *request-default
+  #       resolution: standard
+  #       param: 263500
+  #       levtype: o3d
+  #       levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+  #         19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+  #         37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+  #         55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+  #   metadata:
+  #     <<: *metadata-default
+  #     levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
+  #       62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
+  #       165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
+  #       560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525,
+  #       2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
+  #       6175]
+  #     variables: [263500, 263501, 263505, 263506, 263507]
+  #     source_grid_name: fesom-NG5-hpz7-nested-3d-v2
 
-  hourly-hpz9-atm2d:
+  hourly-hpz9-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on healpix grid (zoom=9, 512h).
     args:
@@ -110,7 +343,7 @@ sources:
       source_grid_name: hpz9-nested
 
 
-  hourly-hpz9-atm3d:
+  hourly-hpz9-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on healpix grid (zoom=9, 512h).
     args:
@@ -129,7 +362,7 @@ sources:
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  daily-hpz9-oce2d:
+  daily-hpz9-oce2d-fdb1:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=9, h512).
     args:
@@ -144,9 +377,9 @@ sources:
     metadata:
       <<: *metadata-default
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263115, 263124]
-      source_grid_name: fesom-hpz9-nested
+      source_grid_name: fesom-NG5-hpz9-nested-v2
 
-  daily-hpz9-oce3d:
+  daily-hpz9-oce3d-fdb1:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=9, h512).
     args:
@@ -171,10 +404,10 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: fesom-hpz9-nested-3d
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
 
 
-  hourly-r025-atm2d:
+  hourly-r025-atm2d-fdb1:
     <<: *base-default
     description: hourly 2D atmospheric data on regular r025 grid (1440x721).
     args:
@@ -185,9 +418,9 @@ sources:
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
-      source_grid_name: era5-r025
+      source_grid_name: era5-r025s
 
-  hourly-r025-atm3d:
+  hourly-r025-atm3d-fdb1:
     <<: *base-default
     description: hourly 3D atmospheric data on regular r025 grid (1440x721).
     args:
@@ -203,12 +436,12 @@ sources:
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb/latlon'
-      source_grid_name: era5-r025
+      source_grid_name: era5-r025s
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
 
-  hourly-native-atm2d:
+  hourly-native-atm2d-fdb1:
     <<: *base-default
     description: hourly data on native grid tco1279.
     args:
@@ -275,7 +508,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb2/healpix'
       fdb_path: '{{ FDB_PATH }}/cycle4_hist/fdb2/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-      source_grid_name: fesom-nextgems4-hpz7-nested
+      source_grid_name: fesom-NG5-hpz7-nested-v2
 
   daily-hpz7-oce3d-fdb2:
     <<: *base-default
@@ -305,7 +538,7 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: fesom-nextgems4-hpz7-nested-3d
+      source_grid_name: fesom-NG5-hpz7-nested-3d-v2
       fixer_name: fesom-destine-v1
 
   # FDB3 (only hpz7)
@@ -361,7 +594,7 @@ sources:
       fdb_home: '{{ FDB_PATH }}/cycle4_hist/fdb3/healpix'
       fdb_path: '{{ FDB_PATH }}/cycle4_hist/fdb3/healpix/etc/fdb/config.yaml'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
-      source_grid_name: fesom-nextgems4-hpz7-nested
+      source_grid_name: fesom-NG5-hpz7-nested-v2
 
   daily-hpz7-oce3d-fdb3:
     <<: *base-default
@@ -391,8 +624,8 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: fesom-nextgems4-hpz7-nested-3d
-      fixer_name: fesom-destine-v1 
+      source_grid_name: fesom-NG5-hpz7-nested-3d-v2
+      fixer_name: fesom-destine-v1
 
   lra-r100-monthly:
     driver: netcdf

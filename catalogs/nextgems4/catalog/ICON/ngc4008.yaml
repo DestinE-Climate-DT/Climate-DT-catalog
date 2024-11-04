@@ -1,0 +1,104 @@
+sources:
+  P1D:
+    driver: zarr
+    metadata:
+      grid: HealPIX
+      source_grid_name: icon-R02B08-hp-nested
+      fixer_name: ICON-cycle3
+    args:
+      consolidated: true
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_P1D_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+
+  PT3H:
+    driver: zarr
+    metadata:
+      grid: HealPIX
+      source_grid_name: icon-R02B08-hp-nested
+      fixer_name: ICON-cycle3
+    args:
+      consolidated: true
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_PT3H_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+
+  PT15M:
+    driver: zarr
+    metadata:
+      grid: HealPIX
+      source_grid_name: icon-R02B08-hp-nested
+      fixer_name: ICON-cycle3
+    args:
+      consolidated: true
+      urlpath: /work/kd1453/rechunked_ngc4008/ngc4008_PT15M_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed:
+        - 10
+        - 9
+        - 8
+        - 7
+        - 6
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+        - 0
+        default: 0
+        description: zoom resolution of the dataset
+        type: int
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: '{{ LRA_NEXTGEMS }}/ICON/ngc4008/r100/monthly/*ngc4008_r100_monthly_*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 reference on zarr
+    args:
+      consolidated: false
+      combine: by_coords
+      urlpath:
+      - reference::{{ LRA_NEXTGEMS }}/ICON/ngc4008/r100/monthly/zarr/lra-yearly-files.json
+      - reference::{{ LRA_NEXTGEMS }}/ICON/ngc4008/r100/monthly/zarr/lra-monthly-files.json
+    metadata:
+      source_grid_name: lon-lat
+    fixer_name: false
