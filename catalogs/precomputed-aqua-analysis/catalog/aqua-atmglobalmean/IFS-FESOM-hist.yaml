@@ -1,0 +1,19 @@
+sources:
+  t2m:
+    driver: netcdf
+    description: 2D Atmospheric global mean t2 IFS-FESOM-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-FESOM/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.2t.IFS-FESOM_historical-1990.nc'
+    metadata:
+      source_grid_name: lon-lat    
+
+  msl:
+    driver: netcdf
+    description: 2D Atmospheric global mean msl IFS-FESOM-historical
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-FESOM/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.msl.IFS-FESOM_historical-1990.nc'
+    metadata:
+      source_grid_name: lon-lat      
+

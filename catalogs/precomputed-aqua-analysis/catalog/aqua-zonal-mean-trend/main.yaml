@@ -1,0 +1,13 @@
+sources:
+  IFS-FESOM-hist:
+    description: 2D Zonal mean trend IFS-FESOM-historical
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/IFS-FESOM-hist.yaml'
+  IFS-NEMO-hist:
+    description: 2D Zonal mean trend IFS-NEMO-historical
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/IFS-NEMO-hist.yaml'
+
+

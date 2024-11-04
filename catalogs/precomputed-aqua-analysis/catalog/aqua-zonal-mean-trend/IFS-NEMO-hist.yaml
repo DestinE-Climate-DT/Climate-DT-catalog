@@ -1,0 +1,56 @@
+sources:
+  zonal-mean-trend-arctic-mon:
+    driver: netcdf
+    description: 2D monthly zonal mean trend arctic ocean of IFS-NEMO-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_arctic_ocean.nc'
+    metadata:
+      source_grid_name: Null    
+
+  zonal-mean-trend-atlantic-mon:
+    driver: netcdf
+    description: 2D monthly zonal mean trend atlantic ocean of IFS-NEMO-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_atlantic_ocean.nc'
+    metadata:
+      source_grid_name: Null    
+
+  zonal-mean-trend-global-mon:
+    driver: netcdf
+    description: 2D monthly zonal mean trend global ocean of IFS-NEMO-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_global_ocean.nc'
+    metadata:
+      source_grid_name: Null    
+
+  zonal-mean-trend-indian-mon:
+    driver: netcdf
+    description: 2D monthly zonal mean trend indian ocean of IFS-NEMO-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_indian_ocean.nc'
+    metadata:
+      source_grid_name: Null    
+
+  zonal-mean-trend-pacific-mon:
+    driver: netcdf
+    description: 2D monthly zonal mean trend pacific ocean of IFS-NEMO-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_pacific_ocean.nc'
+    metadata:
+      source_grid_name: Null    
+
+  zonal-mean-trend-southern-mon:
+    driver: netcdf
+    description: 2D monthly zonal mean trend southern ocean of IFS-NEMO-historical
+    args:
+      urlpath: 
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_southern_ocean.nc'
+    metadata:
+      source_grid_name: Null    
+
+

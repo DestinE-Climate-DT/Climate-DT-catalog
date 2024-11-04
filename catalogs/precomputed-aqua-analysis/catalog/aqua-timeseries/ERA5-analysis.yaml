@@ -1,0 +1,272 @@
+sources:
+  t2m-ann:
+    driver: netcdf
+    description: t2m annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  t2m-mon:
+    driver: netcdf
+    description: t2m monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_2t_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  avg-siconc-ann:
+    driver: netcdf
+    description: avg-siconc annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_avg_siconc_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  avg-siconc-mon:
+    driver: netcdf
+    description: avg-siconc monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_avg_siconc_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  avg-tos-ann:
+    driver: netcdf
+    description: avg-tos annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_avg_tos_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  avg-tos-mon:
+    driver: netcdf
+    description: avg-tos monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_avg_tos_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  hcc-ann:
+    driver: netcdf
+    description: hcc annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_hcc_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  hcc-mon:
+    driver: netcdf
+    description: hcc monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_hcc_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  lcc-ann:
+    driver: netcdf
+    description: lcc annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_lcc_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  lcc-mon:
+    driver: netcdf
+    description: lcc monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_lcc_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  mcc-ann:
+    driver: netcdf
+    description: mcc annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mcc_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  mcc-mon:
+    driver: netcdf
+    description: mcc monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mcc_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  mer-ann:
+    driver: netcdf
+    description: mer annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mer_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  mer-mon:
+    driver: netcdf
+    description: mer monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mer_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  mslhf-ann:
+    driver: netcdf
+    description: mslhf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mslhf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  mslhf-mon:
+    driver: netcdf
+    description: mslhf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mslhf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  msl-ann:
+    driver: netcdf
+    description: msl annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msl_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  msl-mon:
+    driver: netcdf
+    description: msl monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msl_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  msnlwrf-ann:
+    driver: netcdf
+    description: msnlwrf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msnlwrf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  msnlwrf-mon:
+    driver: netcdf
+    description: msnlwrf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msnlwrf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  msnswrf-ann:
+    driver: netcdf
+    description: msnswrf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msnswrf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  msnswrf-mon:
+    driver: netcdf
+    description: msnswrf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msnswrf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  msshf-ann:
+    driver: netcdf
+    description: msshf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msshf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  msshf-mon:
+    driver: netcdf
+    description: msshf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_msshf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  mtnlwrf-ann:
+    driver: netcdf
+    description: mtnlwrf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mtnlwrf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  mtnlwrf-mon:
+    driver: netcdf
+    description: mtnlwrf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mtnlwrf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  mtnlwrf+mtnswrf-ann:
+    driver: netcdf
+    description: mtnlwrf+mtnswrf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mtnlwrf+mtnswrf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  mtnlwrf+mtnswrf-mon:
+    driver: netcdf
+    description: mtnlwrf+mtnswrf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mtnlwrf+mtnswrf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  mtnswrf-ann:
+    driver: netcdf
+    description: mtnswrf annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mtnswrf_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  mtnswrf-mon:
+    driver: netcdf
+    description: mtnswrf monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_mtnswrf_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
+
+  tcc-ann:
+    driver: netcdf
+    description: tcc annual timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_tcc_ERA5_era5_ann.nc'
+    metadata:
+      source_grid_name: Null
+  tcc-mon:
+    driver: netcdf
+    description: tcc monthly timeseries from ERA5
+    args:
+      urlpath:
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_tcc_ERA5_era5_mon.nc'
+    metadata:
+      source_grid_name: Null
