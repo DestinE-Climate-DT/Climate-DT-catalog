@@ -14,5 +14,5 @@ This is the AQUA catalog for Climate DT. Includes catalogs for levante, lumi, MN
 8. nextgems3: Catalog with the nextGEMS cycle3 experiments. (Levante)
 9. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
 10. obs: Catalog with the observational datasets. (multi machine)
-
+11. precomputed-aqua-analysis: Catalog for reloading the aqua-analysis data (mainly used for reloading ensembles in AQUA). (Levante) 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
