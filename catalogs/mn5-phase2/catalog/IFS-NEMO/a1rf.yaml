@@ -1,5 +1,5 @@
 sources:
-  monthly-r100-atm2d: &base-default
+  monthly-lon-lat-atm2d: &base-default
     args: &args-default
       request: &request-default
         class: d1
@@ -10,7 +10,7 @@ sources:
         model: IFS-NEMO
         resolution: standard
         realization: 1 #'{{ realization }}'
-        expver: 'a1mm'
+        expver: 'a1rf'
         type: fc
         stream: clmn
         year: 1990
@@ -18,7 +18,7 @@ sources:
         param: 228
         levtype: sfc
       data_start_date: 19500101T0000
-      data_end_date: 19991231T0000
+      data_end_date: 19560731T0000
       chunks: MS  # Default time chunk size
       savefreq: MS  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -32,14 +32,15 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      #fdb_home: /gpfs/scratch/ehpc01/experiments/a1mm/fdb/REGULARLL_grids/etc
-      fdb_path: /gpfs/scratch/ehpc01/experiments/a1mm/fdb/REGULARLL_grids/etc/fdb/config.yaml
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1rf/fdb/latlon/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1rf/fdb/latlon/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
-      variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 172182,  235049, 235050, 235051, 235052, 235053, 172228]       
+      # variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
+      variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235037, 235038, 235039, 235040, 235041, 235042, 172182, 235049, 235050, 235051, 235052, 235053, 172228]
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-reduced-output-monthly-v2_0_1_9
+      fixer_name: ifs-nemo-destine-v1-monthly
   
-  monthly-r100-atm3d:
+  monthly-lon-lat-atm3d:
     <<: *base-default
     description: monthly 3d atmospheric data on regural r025 grid.
     args:
@@ -52,10 +53,12 @@ sources:
       <<: *parameters-default
     metadata:
       <<: *metadata-default
-      variables: [235130, 235131, 235132, 235133]
+      variables: [130, 131, 132, 133]
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
   
-  monthly-r100-oce2d:
+
+
+  monthly-lon-lat-oce2d:
     <<: *base-default
     description: monthly 2d oceanic data on regural r100 grid.
     args:
@@ -68,10 +71,12 @@ sources:
       <<: *parameters-default
     metadata:
       <<: *metadata-default
-      variables: [263001,263121,263000,263008,263100,263101,263122]
+      # variables: [263001,263121,263000,263008,263100,263101,263122]
+      variables: [263000, 263001, 263008, 263100, 263101, 263123, 263124]
       source_grid_name: nemo-multiIO-r100
-  
-  monthly-r100-oce3d:
+
+
+  monthly-lon-lat-oce3d:
     <<: *base-default
     description: monthly 3d oceanic data on regural r100 grid.
     args:
@@ -85,7 +90,8 @@ sources:
       <<: *parameters-default
     metadata:
       <<: *metadata-default
-      variables: [263500,263501]
+      # variables: [263500,263501]
+      variables: [263500, 263501, 263503, 263504]
       levels: [5.057600e-01, 1.555855e+00, 2.667682e+00, 3.856280e+00, 5.140361e+00,6.543034e+00, 8.092519e+00, 9.822750e+00, 1.177368e+01, 1.399104e+01,1.652532e+01, 1.942980e+01, 2.275762e+01, 2.655830e+01, 3.087456e+01,3.574020e+01, 4.118002e+01, 4.721189e+01, 5.385064e+01, 6.111284e+01,6.902168e+01, 7.761116e+01, 8.692943e+01, 9.704131e+01, 1.080303e+02,1.200000e+02, 1.330758e+02, 1.474062e+02, 1.631645e+02, 1.805499e+02,1.997900e+02, 2.211412e+02, 2.448906e+02, 2.713564e+02, 3.008875e+02,3.338628e+02, 3.706885e+02, 4.117939e+02, 4.576256e+02, 5.086399e+02,5.652923e+02, 6.280260e+02, 6.972587e+02, 7.733683e+02, 8.566790e+02,9.474479e+02, 1.045854e+03, 1.151991e+03, 1.265861e+03, 1.387377e+03,1.516364e+03, 1.652568e+03, 1.795671e+03, 1.945296e+03, 2.101027e+03,2.262422e+03, 2.429025e+03, 2.600380e+03, 2.776039e+03, 2.955570e+03,3.138565e+03, 3.324641e+03, 3.513446e+03, 3.704657e+03, 3.897982e+03,4.093159e+03, 4.289953e+03, 4.488155e+03, 4.687581e+03, 4.888070e+03,5.089479e+03, 5.291683e+03, 5.494575e+03, 5.698061e+03, 5.902058e+03]
       source_grid_name: nemo-multiIO-r100-3d
 

@@ -8,7 +8,7 @@ sources:
         experiment: cont # To be overwritten by workflow/config file
         generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
-        realization: 3  # To be overwritten by workflow/config file
+        realization: 2  # To be overwritten by workflow/config file
         resolution: standard
         expver: a1pr  # To be overwritten by workflow/config file
         type: fc
