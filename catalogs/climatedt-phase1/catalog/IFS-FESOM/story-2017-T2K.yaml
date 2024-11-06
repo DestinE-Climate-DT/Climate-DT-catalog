@@ -190,6 +190,7 @@ sources:
       <<: *args-default
       chunks: 6h
       bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         resolution: high
@@ -205,6 +206,7 @@ sources:
       <<: *args-default
       chunks: h
       bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         levtype: pl

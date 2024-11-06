@@ -191,9 +191,11 @@ sources:
       <<: *args-default
       chunks: 6h
       bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         levtype: sfc
+        resolution: high  
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/fdb/native'
@@ -206,6 +208,7 @@ sources:
       <<: *args-default
       chunks: h
       bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         levtype: pl
