@@ -210,6 +210,7 @@ sources:
       request:
         <<: *request-default
         levtype: pl
+        resolution: high  
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
     metadata:
