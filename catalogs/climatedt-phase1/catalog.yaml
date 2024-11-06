@@ -7,7 +7,7 @@ metadata:
     FDB_PATH:
       type: str
       description: the path to the FDB
-      default: /appl/local/climatedt
+      default: /pfs/lustrep3/appl/local/climatedt
     FDB_PATH_HISTORICAL:
       type: str
       description: the path to the historical FDB data

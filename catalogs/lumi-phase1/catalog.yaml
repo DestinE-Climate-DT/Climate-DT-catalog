@@ -11,7 +11,7 @@ metadata:
     FDB_PATH:
       type: str
       description: the path to the FDB
-      default: /appl/local/climatedt
+      default: /pfs/lustrep3/appl/local/climatedt
     ECCODES_PATH:
       type: str
       description: the path to the eccodes definitions
