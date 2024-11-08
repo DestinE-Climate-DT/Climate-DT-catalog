@@ -39,3 +39,35 @@ sources:
         time: 24
       xarray_kwargs:
         decode_times: True
+
+  aqua-timeseries-monthly:
+    driver: netcdf
+    description: AQUA analysis timeseries 
+    args:
+      urlpath: 
+        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_ERA5_era5_mon.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_ERA5_era5_mon.nc'
+    #  chunks: {}
+      xarray_kwargs:
+        #decode_times: true
+        combine: 'nested'
+        compat: 'override'
+    metadata:
+      source_grid_name: Null
+
+  aqua-timeseries-annual:
+    driver: netcdf
+    description: AQUA analysis timeseries 
+    args:
+      urlpath:
+        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_ERA5_era5_ann.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_ERA5_era5_ann.nc' 
+    #  chunks: {}
+      xarray_kwargs:
+        #decode_times: true
+        combine: 'nested'
+        compat: 'override'
+    metadata:
+      source_grid_name: Null
+
+
