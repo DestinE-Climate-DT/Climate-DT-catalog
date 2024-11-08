@@ -9,10 +9,10 @@ levante:
     ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
 lumi:
   paths:
-    grids: /appl/local/climatedt/data/AQUA/grids
-    weights: /appl/local/climatedt/data/AQUA/weights
-    areas: /appl/local/climatedt/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
   intake:
-    LRA_NEXTGEMS: /appl/local/climatedt/data/AQUA/LRA-nextgems4
+    LRA_NEXTGEMS: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA-nextgems4
     FDB_PATH: null
-    ECCODES_PATH: /appl/local/climatedt/data/AQUA/eccodes
+    ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes

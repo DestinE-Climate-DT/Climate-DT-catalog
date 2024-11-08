@@ -3,11 +3,11 @@ metadata:
     LRA_PATH:
       type: str
       description: the path to the LRA
-      default: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA
     FDB_PATH:
       type: str
       description: the path to the FDB
-      default: /appl/local/climatedt
+      default: /pfs/lustrep3/appl/local/climatedt
     FDB_PATH_HISTORICAL:
       type: str
       description: the path to the historical FDB data
@@ -19,7 +19,7 @@ metadata:
     ECCODES_PATH:
       type: str
       description: the path to the eccodes definitions
-      default: /projappl/project_465000454/jvonhar/aqua/eccodes
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
   
 sources:
   IFS-NEMO:

@@ -190,13 +190,15 @@ sources:
     description: hourly 2D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
+      bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         resolution: high
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_home: '{{ FDB_PATH }}/fdb/native'
       source_grid_name: tco1279
 
   hourly-native-atm3d:
@@ -204,10 +206,13 @@ sources:
     description: hourly 3D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      chunks: H
+      chunks: h
+      bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         levtype: pl
+        resolution: high  
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
     metadata:
@@ -216,7 +221,7 @@ sources:
         850, 925, 1000]
       variables: [129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: tco1279
-      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_home: '{{ FDB_PATH }}/fdb/native'
 
 # OCEANIC NATIVE IS NOT READ BY THE GSV RETRIEVER
 #   hourly-native-oce2d:

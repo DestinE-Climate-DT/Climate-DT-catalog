@@ -639,7 +639,8 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
-
+      fixer_name: fesom-destine-v1
+      
   aqua-timeseries-monthly:
     driver: netcdf
     description: AQUA analysis timeseries 
@@ -681,6 +682,3 @@ sources:
         compat: 'override'
     metadata:
       source_grid_name: Null
-
-
-
