@@ -418,7 +418,7 @@ sources:
     description: AQUA analysis timeseries 
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_mon.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_mon.nc'
         - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_mon.nc'
       xarray_kwargs:
         #decode_times: true
@@ -432,7 +432,7 @@ sources:
     description: AQUA analysis timeseries 
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_ann.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_ann.nc'
         - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_ann.nc'
       xarray_kwargs:
         #decode_times: true
@@ -446,7 +446,7 @@ sources:
     description: AQUA analysis atm global mean 
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
         - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
       xarray_kwargs:
         #decode_times: true
@@ -460,8 +460,8 @@ sources:
     description: AQUA analysis zonal mean trend in Arctic ocean 
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_arctic_ocean.nc'
-        #- '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_arctic_ocean.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_arctic_ocean.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_arctic_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
@@ -474,8 +474,8 @@ sources:
     description: AQUA analysis zonal mean trend Atlantic ocean
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_atlantic_ocean.nc'
-        #- '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_atlantic_ocean.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_atlantic_ocean.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_atlantic_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
@@ -488,8 +488,8 @@ sources:
     description: AQUA analysis zonal mean trend Global ocean
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_global_ocean.nc'
-        #- '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_global_ocean.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_global_ocean.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_global_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
@@ -502,8 +502,8 @@ sources:
     description: AQUA analysis zonal mean trend Indian ocean
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_indian_ocean.nc'
-        #- '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_indian_ocean.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_indian_ocean.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_indian_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
@@ -516,8 +516,8 @@ sources:
     description: AQUA analysis zonal mean trend Pacific ocean
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_pacific_ocean.nc'
-        #- '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_pacific_ocean.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_pacific_ocean.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_pacific_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
@@ -530,8 +530,8 @@ sources:
     description: AQUA analysis zonal mean trend Southern ocean
     args:
       urlpath: 
-        - '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_southern_ocean.nc'
-        #- '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_southern_ocean.nc'
+        #- '/work/ab0995/a270260/pre_computed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_southern_ocean.nc'
+        - '/pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/precomputed_aqua_analysis/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_southern_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
