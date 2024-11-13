@@ -14,6 +14,7 @@ lumi:
     FDB_PATH_EERIE: /scratch/project_465000542/experiments/a14c
     # where the different eccodes definitions are stored (necessary for FDB)
     ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+    OUTPUT_AQUA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/pre_computed_aqua_analysis
 levante:
   paths: 
     grids: /work/bb1153/b382075/aqua/grids
@@ -25,6 +26,7 @@ levante:
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
     ECCODES_PATH: null
+    OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis/
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids
@@ -36,3 +38,4 @@ MN5:
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
     ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
+    OUTPUT_AQUA_PATH: null
