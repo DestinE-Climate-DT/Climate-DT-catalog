@@ -1,0 +1,6 @@
+sources:
+  a1ux:
+    description: IFS-FESOM tco399 FESOM2.6 classic
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1ux.yaml'
