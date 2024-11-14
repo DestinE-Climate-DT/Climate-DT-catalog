@@ -16,3 +16,8 @@ metadata:
       type: str
       description: the path to the eccodes definitions
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+    FDB_HOME:
+      type: str
+      description: fdb home path for Sebastian Beyer experiments
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+    

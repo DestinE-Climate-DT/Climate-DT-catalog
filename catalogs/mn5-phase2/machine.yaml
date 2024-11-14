@@ -5,6 +5,7 @@ MN5:
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
     ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
+    FDB_HOME: /gpfs/scratch/ehpc01/experiments/
 lumi:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
@@ -12,3 +13,4 @@ lumi:
     areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
   intake:
     ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+    FDB_HOME: /scratch/project_465000454/experiments
