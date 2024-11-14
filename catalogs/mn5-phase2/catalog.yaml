@@ -14,10 +14,10 @@ metadata:
   parameters:
     ECCODES_PATH:
       type: str
-      description: the path to the eccodes definitions
+      description: the path to the eccodes definitions. Default is Lumi
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
     FDB_HOME:
       type: str
-      description: fdb home path for Sebastian Beyer experiments
+      description: FDB HOME path. Default is Lumi
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
     
