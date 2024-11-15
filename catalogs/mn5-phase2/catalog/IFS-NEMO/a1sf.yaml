@@ -18,7 +18,7 @@ sources:
         param: 228
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T0000
+      data_end_date: 20191231T0000
       chunks: MS  # Default time chunk size
       savefreq: MS  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -37,7 +37,7 @@ sources:
       eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
       variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235037, 235038, 235039, 235040, 235041, 235042, 172182, 235049, 235050, 235051, 235052, 235053, 172228]
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-reduced-output-monthly-v2_0_1_9
+      fixer_name: ifs-nemo-reduced-output-monthly-v2
   
   monthly-lon-lat-atm3d:
     <<: *base-default
