@@ -22,7 +22,7 @@ sources:
       data_start_date: 20170101T0000
       data_end_date: 20231231T2300
       bridge_end_date: complete
-      aggregation: D  # Default aggregation / chunk size
+      chunks: D  # Default chunks size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
       timestyle: date  # variable date or variable step
@@ -42,7 +42,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 129
@@ -75,7 +75,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      aggregation: 6h
+      chunks: 6H
       request:
         <<: *request-default
         param: 129
@@ -95,7 +95,7 @@ sources:
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: MS
+      chunks: MS
       savefreq: D
       request:
         <<: *request-default
@@ -106,13 +106,14 @@ sources:
       <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v2
+      fixer_name: fesom-destine-v1
 
   daily-hpz7-oce3d:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       request:
         <<: *request-default
@@ -133,13 +134,14 @@ sources:
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v2
+      fixer_name: fesom-destine-v1
 
   daily-hpz9-oce2d:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=9, h1024).
     args:
       <<: *args-default
-      aggregation: MS
+      chunks: MS
       savefreq: D
       data_start_date: 20180101T0000
       request:
@@ -151,13 +153,14 @@ sources:
       <<: *metadata-default
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-NG5-hpz9-nested-v2
+      fixer_name: fesom-destine-v1
 
   daily-hpz9-oce3d:
     <<: *base-default
     description: daily 3D oceanic data on healpix grid (zoom=9, h1024).
     args:
       <<: *args-default
-      aggregation: D
+      chunks: D
       savefreq: D
       data_start_date: 20180101T0000
       request:
@@ -179,20 +182,23 @@ sources:
         6175]
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: fesom-NG5-hpz9-nested-3d-v2
+      fixer_name: fesom-destine-v1
 
   hourly-native-atm2d:
     <<: *base-default
     description: hourly 2D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      aggregation: 6H
+      chunks: 6h
+      bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
         levtype: sfc
-        resolution: high
+        resolution: high  
     metadata:
       <<: *metadata-default
-      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_home: '{{ FDB_PATH }}/fdb/native'
       source_grid_name: tco1279
 
   hourly-native-atm3d:
@@ -200,9 +206,12 @@ sources:
     description: hourly 3D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      aggregation: H
+      chunks: h
+      bridge_end_date: null
+      data_start_date: 20180101T0000
       request:
         <<: *request-default
+        resolution: high  
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
@@ -211,7 +220,7 @@ sources:
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [129, 130, 131, 132, 133, 135, 157, 246]
-      fdb_home: '{{ FDB_PATH }}/native'
+      fdb_home: '{{ FDB_PATH }}/fdb/native'
       source_grid_name: tco1279
 
   # OCEANIC NATIVE IS NOT READ BY THE GSV RETRIEVER
@@ -220,7 +229,7 @@ sources:
   #   description: hourly 2D ocean data on native grid ng5 (about 10km).
   #   args:
   #     <<: *args-default
-  #     aggregation: 6H
+  #     chunks: 6H
   #     request:
   #       <<: *request-default
   #       levtype: o2d
@@ -239,7 +248,7 @@ sources:
   #   description: hourly 3D oceanic data on native grid ng5 (about 10km).
   #   args:
   #     <<: *args-default
-  #     aggregation: 6H
+  #     chunks: 6H
   #     request:
   #       <<: *request-default
   #       levtype: o3d
@@ -258,6 +267,7 @@ sources:
   #   5275, 5525, 5825, 6175]
   #     variables: [263500, 263501, 263505, 263506, 263507]
   #     source_grid_name: ng5-nodes-3d
+
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
@@ -270,3 +280,4 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+      fixer_name: fesom-destine-v1

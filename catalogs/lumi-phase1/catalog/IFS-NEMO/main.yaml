@@ -19,6 +19,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a0xv.yaml'
+  a1al:
+    description: FDB IFS-NEMO tco399-eORCA025 SSP3-7.0 run
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1al.yaml'
   a16z:
     description: FDB IFS-NEMO tco399-eORCA025 1990 control run
     driver: yaml_file_cat
