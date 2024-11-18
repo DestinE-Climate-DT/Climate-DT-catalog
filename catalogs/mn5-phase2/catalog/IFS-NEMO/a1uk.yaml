@@ -45,7 +45,7 @@ sources:
       source_grid_name: lon-lat
       fixer_name: ifs-nemo-reduced-output-monthly-v2_0_1_9
   
-  monthly-r100-atm3d:
+  monthly-r100s-atm3d:
     <<: *base-default
     description: monthly 3d atmospheric data on regural r025 grid.
     args:
@@ -61,7 +61,7 @@ sources:
       variables: [130, 131, 132, 133]
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
   
-  monthly-r100-oce2d:
+  monthly-r100s-oce2d:
     <<: *base-default
     description: monthly 2d oceanic data on regural r100 grid.
     args:
@@ -77,7 +77,7 @@ sources:
       variables: [263001,263121,263000,263008,263100,263101,263122]
       source_grid_name: nemo-multiIO-r100
   
-  monthly-r100-oce3d:
+  monthly-r100s-oce3d:
     <<: *base-default
     description: monthly 3d oceanic data on regural r100 grid.
     args:

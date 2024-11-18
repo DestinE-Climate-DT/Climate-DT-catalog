@@ -1,5 +1,5 @@
 sources:
-  monthly-lon-lat-atm2d: &base-default
+  monthly-r100s-atm2d: &base-default
     args: &args-default
       request: &request-default
         class: d1
@@ -34,12 +34,12 @@ sources:
     metadata: &metadata-default
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1sc/fdb/latlon/etc
       fdb_path: /gpfs/scratch/ehpc01/experiments/a1sc/fdb/latlon/etc/fdb/config.yaml
-      eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
+      eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.36.0/eccodes/definitions
       variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235037, 235038, 235039, 235040, 235041, 235042, 172182, 235049, 235050, 235051, 235052, 235053, 172228]
       source_grid_name: lon-lat
-      fixer_name: ifs-nemo-destine-v2-monthly
+      fixer_name: ifs-nemo-reduced-output-monthly-v2_0_1_9
   
-  monthly-r100-atm3d:
+  monthly-r100s-atm3d:
     <<: *base-default
     description: monthly 3d atmospheric data on regural r025 grid.
     args:
@@ -55,7 +55,7 @@ sources:
       variables: [130, 131, 132, 133]
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
   
-  monthly-lon-lat-oce2d:
+  monthly-r100s-oce2d:
     <<: *base-default
     description: monthly 2d oceanic data on regural r100 grid.
     args:
@@ -71,7 +71,7 @@ sources:
       variables: [263000, 263001, 263008, 263100, 263101, 263123, 263124]
       source_grid_name: nemo-multiIO-r100
   
-  monthly-lon-lat-oce3d:
+  monthly-r100s-oce3d:
     <<: *base-default
     description: monthly 3d oceanic data on regural r100 grid.
     args:
