@@ -26,7 +26,7 @@ levante:
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
     ECCODES_PATH: null
-    OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis/
+    OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids
