@@ -494,6 +494,7 @@ sources:
       var:
         allowed: ['arctic','atlantic','global','indian','pacific','southern']
         description: AQUA analysis ocean3d_drift zonal diagnostics
+        type: str
         default: 'atlantic'
     metadata:
       source_grid_name: Null
