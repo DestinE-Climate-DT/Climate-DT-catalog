@@ -404,12 +404,23 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: 
-        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/r100/monthly/*historical-1990_r100_monthly_*.nc'
+      urlpath: '{{ LRA_PATH }}/IFS-NEMO/historical-1990/r100/monthly/*historical-1990_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
-        combine: 'by_coords'
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+  lra-r100-daily:
+    driver: netcdf
+    description: LRA data daily at r100
+    args:
+      urlpath: 
+        /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/climatedt-phase1/IFS-NEMO/historical-1990/r100/daily/*historical-1990_r100_daily_*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
     metadata:
       source_grid_name: lon-lat
 
