@@ -13,5 +13,5 @@ lumi-operational:
     weights: /scratch/project_462000560/trial_run/data/AQUA/weights
     areas: /scratch/project_462000560/trial_run/data/AQUA/areas
   intake:
-    LRA_PATH: /scratch/project_462000560/lrb_462000560_suite/a1sm/out/LRA/fc0/lumi-phase2/
+    LRA_PATH: null
     ECCODES_PATH: /pfs/lustrep1/projappl/project_462000560/software/eccodes/eccodes_2.36.0/definitions
