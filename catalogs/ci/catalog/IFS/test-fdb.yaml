@@ -7,7 +7,7 @@ sources:
         class: ea
         type: an
         expver: "0001"
-        param: t
+        param: 130
         levtype: pl
         levelist: [1000]
         date: "20080101"
@@ -23,6 +23,7 @@ sources:
     metadata:
       fdb_home: /app
       source_grid_name: lon-lat
+      variables: [130]
 
   fdb-auto:
     args:
@@ -40,7 +41,7 @@ sources:
         stream: clte
         date: 19900101
         time: "0000"
-        param: tcc
+        param: 164
         levtype: sfc
         step: 0
       data_start_date: auto
@@ -53,6 +54,7 @@ sources:
     metadata: 
       fdb_home: /app
       source_grid_name: lon-lat
+      variables: [164]
 
   fdb-levels: &base-default
     args: &args-default
@@ -62,7 +64,7 @@ sources:
         class: ea
         type: an
         expver: "0001"
-        param: t
+        param: 130
         levtype: pl
         levelist: [1000, 900, 800]
         date: "20080101"
@@ -79,6 +81,7 @@ sources:
       fdb_home: /app
       source_grid_name: lon-lat
       levels: [999.99, 899.99, 799.99]
+      variables: [130]
 
   fdb-levels-chunks:
     <<: *base-default
@@ -96,7 +99,7 @@ sources:
         class: ea
         type: an
         expver: "0001"
-        param: t
+        param: 130
         levtype: pl
         levelist: [1000, 900, 800]
         date: "20080101"
@@ -112,3 +115,4 @@ sources:
     metadata: 
       fdb_home: /app
       source_grid_name: lon-lat
+      variables: [130]
