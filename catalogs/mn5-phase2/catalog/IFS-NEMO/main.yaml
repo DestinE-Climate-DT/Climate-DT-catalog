@@ -130,6 +130,11 @@ sources:
       path: '{{CATALOG_DIR}}/a1vj.yaml'
     description: IFS/NEMO - 1990 hist with MACv2SP and only one background species added - Tco399/eORCA025
     driver: yaml_file_cat
+  a1vt:
+    args:
+      path: '{{CATALOG_DIR}}/a1vt.yaml'
+    description: IFS/NEMO - 1990 hist with MACv2SP and two background species - Tco399/eORCA025
+    driver: yaml_file_cat
   t01o:
     args:
       path: '{{CATALOG_DIR}}/t01o.yaml'

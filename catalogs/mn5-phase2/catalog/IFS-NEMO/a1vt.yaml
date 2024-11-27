@@ -10,7 +10,7 @@ sources:
         model: IFS-NEMO
         resolution: standard
         realization: 1 #'{{ realization }}'
-        expver: 'a1vj'
+        expver: 'a1vt'
         type: fc
         stream: clmn
         year: 1990
@@ -32,8 +32,8 @@ sources:
     description: monthly 2d atmospheric data on regural r025 grid.
     driver: gsv
     metadata: &metadata-default
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a1vj/fdb/latlon/etc
-      fdb_path: /gpfs/scratch/ehpc01/experiments/a1vj/fdb/latlon/etc/fdb/config.yaml
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a1vt/fdb/latlon/etc
+      fdb_path: /gpfs/scratch/ehpc01/experiments/a1vt/fdb/latlon/etc/fdb/config.yaml
       eccodes_path: /gpfs/scratch/bsc32/bsc032655/opt/eccodes-2.36.0/definitions
       variables: [172144, 235033, 235034, 235151, 228006, 235165, 235166, 228004, 235037, 235038, 235039, 235040, 235041, 235042, 172182, 235049, 235050, 235051, 235052, 235053, 172228]
       source_grid_name: lon-lat

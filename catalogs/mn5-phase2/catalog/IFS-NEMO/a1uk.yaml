@@ -18,7 +18,7 @@ sources:
         param: 228
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 19981231T0000
+      data_end_date: 20191231T0000
       chunks: MS  # Default time chunk size
       savefreq: MS  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
