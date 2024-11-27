@@ -4,8 +4,8 @@ sources:
       request: &request-default
         class: d1
         dataset: climate-dt
-        activity: HighResMIP  # To be overwritten by workflow/config file
-        experiment: cont # To be overwritten by workflow/config file
+        activity: CMIP6  # To be overwritten by workflow/config file
+        experiment: hist   # To be overwritten by workflow/config file
         generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 2  # To be overwritten by workflow/config file
@@ -20,7 +20,7 @@ sources:
         month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         # step: 0
       data_start_date: 19900101T0000
-      data_end_date: 20101231T0000
+      data_end_date: 20151231T0000
       chunks: MS
       savefreq: MS
       timestep: h
