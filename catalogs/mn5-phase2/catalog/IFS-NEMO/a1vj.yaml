@@ -1,5 +1,5 @@
 sources:
-  monthly-lon-lat-atm2d: &base-default
+  monthly-r100s-atm2d: &base-default
     args: &args-default
       request: &request-default
         class: d1
@@ -43,7 +43,7 @@ sources:
       fixer_name: ifs-nemo-reduced-output-monthly-v2_0_1_9 
 
 
-  monthly-lon-lat-atm3d:
+  monthly-r100s-atm3d:
     <<: *base-default
     description: monthly 3d atmospheric data on regural r025 grid.
     args:
@@ -61,7 +61,7 @@ sources:
   
 
 
-  monthly-lon-lat-oce2d:
+  monthly-r100s-oce2d:
     <<: *base-default
     description: monthly 2d oceanic data on regural r100 grid.
     args:
@@ -78,7 +78,7 @@ sources:
       source_grid_name: nemo-multiIO-r100
 
 
-  monthly-lon-lat-oce3d:
+  monthly-r100s-oce3d:
     <<: *base-default
     description: monthly 3d oceanic data on regural r100 grid.
     args:
