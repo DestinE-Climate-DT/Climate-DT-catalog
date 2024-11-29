@@ -316,6 +316,7 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+      fixer_name: False
 
 # LEGACY of native entry
   # hourly-native-atm3d:

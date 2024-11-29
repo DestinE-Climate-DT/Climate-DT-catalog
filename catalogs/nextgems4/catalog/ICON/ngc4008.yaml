@@ -90,6 +90,7 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+      fixer_name: False
   lra-r100-monthly-zarr:
     driver: zarr
     description: LRA data monthly at r100 reference on zarr
@@ -101,4 +102,4 @@ sources:
       - reference::{{ LRA_NEXTGEMS }}/ICON/ngc4008/r100/monthly/zarr/lra-monthly-files.json
     metadata:
       source_grid_name: lon-lat
-    fixer_name: false
+      fixer_name: false
