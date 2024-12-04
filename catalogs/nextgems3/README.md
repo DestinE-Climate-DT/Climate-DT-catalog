@@ -14,4 +14,4 @@ This is the catalog for the nextGEMS project cycle3.
 ### IFS-NEMO
 
 - [ ] Ocean is missing.
-- [ ] Check of the fixes, IFS is searching for IFS-default that is not associated to IFS-FESOM model, but to IFS only.
+- [ ] Check of the fixes, IFS is searching for ifs-nextgems that is not associated to IFS-FESOM model, but to IFS only.
