@@ -411,7 +411,6 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
-      fixer_name: False
   lra-r100-daily:
     driver: netcdf
     description: LRA data daily at r100
@@ -424,4 +423,3 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
-      fixer_name: False

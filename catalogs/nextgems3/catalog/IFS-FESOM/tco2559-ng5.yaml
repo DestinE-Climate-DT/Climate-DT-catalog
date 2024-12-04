@@ -1728,7 +1728,7 @@ sources:
       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_native/json.dir/atm2d.json
     metadata:
       source_grid_name: tco2559
-      fixer_name: IFS-default
+      fixer_name: ifs-nextgems
   
   monthly-native-atm3d:
     driver: zarr
@@ -1737,13 +1737,13 @@ sources:
       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/fastdata_4.4km_fesom/gribscan_monthly_native/json.dir/atm3d.json
     metadata:
       source_grid_name: tco2559
-      fixer_name: IFS-default
+      fixer_name: ifs-nextgems
 
   hourly-native-atm2d:
     driver: zarr
     metadata:
       source_grid_name: tco2559
-      fixer_name: IFS-default
+      fixer_name: ifs-nextgems
     args:
       consolidated: false
       urlpath:
@@ -1852,4 +1852,4 @@ sources:
         decode_times: true
     metadata:
       source_grid_name: lon-lat
-      fixer_name: lra-cycle3
+
