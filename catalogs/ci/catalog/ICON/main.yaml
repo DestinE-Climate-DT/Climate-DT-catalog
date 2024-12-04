@@ -3,9 +3,14 @@ sources:
     description: Healpix test data
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/test-healpix.yaml"
+      path: '{{CATALOG_DIR}}/test-healpix.yaml'
   test-r2b0:
     description: ICON r2b0 test data
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/test-r2b0.yaml"
+      path: '{{CATALOG_DIR}}/test-r2b0.yaml'
+  linobanfi:
+    description: FDB IFS/NEMO test run
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/linobanfi.yaml'
