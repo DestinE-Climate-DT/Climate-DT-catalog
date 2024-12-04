@@ -9,8 +9,3 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/test-r2b0.yaml'
-  linobanfi:
-    description: FDB IFS/NEMO test run
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/linobanfi.yaml'
