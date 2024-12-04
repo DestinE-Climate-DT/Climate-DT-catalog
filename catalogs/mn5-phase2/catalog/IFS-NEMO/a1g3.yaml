@@ -101,6 +101,4 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      # fixer_name: ifs-nemo-reduced-output-monthly-v1
       source_grid_name: lon-lat
-      fixer_name: False

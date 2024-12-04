@@ -150,7 +150,6 @@ sources:
     description: LRA data monthly at r100
     metadata:
       source_grid_name: lon-lat
-      fixer_name: False
     args:
       urlpath: '{{ LRA_DEV }}/IFS/control-1950-devcon/r100/monthly/*control-1950-devcon_r100_monthly_????.nc'
       chunks: {}

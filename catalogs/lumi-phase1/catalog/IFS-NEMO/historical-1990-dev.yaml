@@ -151,7 +151,6 @@ sources:
     description: LRA data monthly at r100
     metadata:
       source_grid_name: lon-lat
-      fixer_name: False
     args:
       urlpath: '{{ LRA_DEV }}/IFS/historical-1990-devcon/r100/monthly/*historical-1990-devcon_r100_monthly_????.nc'
       chunks: {}
