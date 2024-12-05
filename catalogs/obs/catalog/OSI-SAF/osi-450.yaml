@@ -8,6 +8,7 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-nh
+      fixer_name: OSI-SAF-default
     #cache:
     #  - argkey: urlpath
     #    regex: ''
@@ -22,6 +23,7 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-nh
+      fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-450/monthly/ice_conc_nh_ease2-250_cdr_v2p0_monthly_1979-2015.nc' 
       chunks:
@@ -33,6 +35,7 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-sh
+      fixer_name: OSI-SAF-default
     #cache:
     #  - argkey: urlpath
     #    regex: ''
@@ -47,6 +50,7 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-sh
+      fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-450/monthly/ice_conc_sh_ease2-250_cdr_v2p0_monthly_1979-2015.nc' 
       chunks:

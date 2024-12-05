@@ -34,8 +34,9 @@ sources:
       fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
-        187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
+        187, 188, 235, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
         180, 181, 182, 212, 228]
+        # 260048 (tprate) has been removed due to wrong accumulation time
       source_grid_name: hpz7-nested
       fixer_name: ifs-destine-v1
 
