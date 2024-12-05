@@ -9,6 +9,7 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: en4
+      fixer_name: EN4-default
     args:
       urlpath: '{{DATA_PATH}}/EN4/*-1950_2022.nc'
       chunks: 

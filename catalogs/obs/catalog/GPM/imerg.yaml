@@ -14,3 +14,4 @@ sources:
         decode_times: True
     metadata:
       source_grid_name: lon-lat
+      fixer_name: GPM-default
