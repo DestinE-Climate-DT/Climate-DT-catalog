@@ -80,14 +80,14 @@ sources:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y with mindate fixer
     driver: netcdf
-  long_default_fix:
-    metadata:
-      source_grid_name: lon-lat
-    args:
-      urlpath:
-      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
-    description: coarse IFS data 1y
-    driver: netcdf
+  # long_default_fix:
+  #   metadata:
+  #     source_grid_name: lon-lat
+  #   args:
+  #     urlpath:
+  #     - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
+  #   description: coarse IFS data 1y
+  #   driver: netcdf
   intake-esm-test:
     driver: intake_esm.esm_datastore
     description: Test Intake-ESM Catalog
