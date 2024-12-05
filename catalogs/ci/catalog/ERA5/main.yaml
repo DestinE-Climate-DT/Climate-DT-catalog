@@ -1,5 +1,5 @@
 sources:
-  era5-ci:
+  era5-hpz3:
     description: ERA5 5-year hpz3
     driver: yaml_file_cat
     args:
