@@ -1,0 +1,46 @@
+sources:
+  netcdf_source:
+    driver: netcdf
+    description: A netCDF source
+    args:
+      urlpath: 
+        /path/to/data/files/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: mygrid
+      fixer_name: myfixer
+  
+  fdb_source:
+    args:
+      request: # The GSV request
+        class: class-name
+        dataset: dataset-name
+        activity: activity-name
+        experiment: experiment-name
+        generation: 1 # int
+        model: model-name
+        resolution: resolution-name
+        realization: 1 # int, in case of ensemble
+        expver: expver-name
+        type: type-name
+        stream: stream-name
+        year: 1990
+        month: 1
+        param: 228 # default to open to check the metadata
+        levtype: level-type
+      data_start_date: 19900101T0000 # Format: YYYYMMDDTHHMM
+      data_end_date: 20571231T0000
+      chunks: MS  # Default time chunk size
+      savefreq: MS  # at what frequency are data saved
+      timestep: h  # base timestep for step timestyle
+      timestyle: yearmonth  # variable date or variable step
+    description: fdb_source description
+    driver: gsv
+    metadata:
+      fdb_home: /path/to/fdb/home
+      variables: [169,175,176,177,178,179,180,181,182,212,228,228004,164,165,166,144,146,147,151] # List of paramids
+      source_grid_name: mygrid
+      fixer_name: myfixer
