@@ -20,8 +20,8 @@ sources:
         levtype: sfc
         step: 0
       data_start_date: 20170101T0000
-      data_end_date: 20231231T2300
-      bridge_end_date: complete
+      data_end_date: 20241031T2300
+      bridge_end_date: 20231231T2300
       chunks: D  # Default chunks size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -29,11 +29,13 @@ sources:
     #description: hourly data on native grid Tco2559 (about 5km).
     driver: gsv
     metadata: &metadata-default
+      fdb_home: '{{ FDB_PATH }}'
       fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
-        187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
-        180, 181, 182, 212, 228]
+        187, 188, 235, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
+        180, 181, 182, 212, 228] 
+        # 260048 (tprate) has been removed due to wrong accumulation time
       source_grid_name: hpz7-nested
       fixer_name: ifs-destine-v1
 
@@ -280,4 +282,3 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
-      fixer_name: fesom-destine-v1

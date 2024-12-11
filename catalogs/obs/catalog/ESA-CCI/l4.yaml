@@ -4,7 +4,6 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: lon-lat
-      fixer_name: ESA-CCI-destine-v1
     args:
       urlpath: 
       - '{{DATA_PATH}}/ESA-CCI-L4/mon/analysed_sst/ESA-CCI-L4_*_analysed_sst.nc'

@@ -101,4 +101,3 @@ sources:
       - reference::{{ LRA_NEXTGEMS }}/ICON/ngc4008/r100/monthly/zarr/lra-monthly-files.json
     metadata:
       source_grid_name: lon-lat
-    fixer_name: false

@@ -8,6 +8,7 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: lon-lat
+      fixer_name: MSWEP-default
     args:
       consolidated: False
       urlpath: 
@@ -18,6 +19,7 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: lon-lat
+      fixer_name: MSWEP-default
     args:
       consolidated: False
       urlpath: 
@@ -69,6 +71,7 @@ sources:
     driver: zarr
     metadata:
       source_grid_name: lon-lat
+      fixer_name: MSWEP-default
     args:
       consolidated: False
       urlpath: 
