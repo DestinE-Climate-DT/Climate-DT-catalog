@@ -55,6 +55,7 @@ sources:
         allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
         description: Monthly Timeseries variable
         type: str
+        default: '2t'
     metadata:
       source_grid_name: null
   aqua-timeseries-annual:
