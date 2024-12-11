@@ -57,7 +57,7 @@ sources:
         type: str
         default: '2t'
     metadata:
-      source_grid_name: Null
+      source_grid_name: null
   aqua-timeseries-annual:
     driver: netcdf
     description: AQUA analysis timeseries 
@@ -75,6 +75,6 @@ sources:
         type: str
         default: '2t'
     metadata:
-      source_grid_name: Null
+      source_grid_name: null
 
 
