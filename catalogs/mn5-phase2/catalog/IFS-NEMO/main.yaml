@@ -125,3 +125,8 @@ sources:
       path: '{{CATALOG_DIR}}/a1rf.yaml'
     description: IFS/NEMO - 1950 control - Tco1279/eORCA12
     driver: yaml_file_cat
+  a1zn:
+    description: Test of the new data portfolio with IFS-NEMO
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1zn.yaml'
