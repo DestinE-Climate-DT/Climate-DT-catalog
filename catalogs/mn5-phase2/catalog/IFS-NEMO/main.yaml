@@ -125,3 +125,13 @@ sources:
       path: '{{CATALOG_DIR}}/a1rf.yaml'
     description: IFS/NEMO - 1950 control - Tco1279/eORCA12
     driver: yaml_file_cat
+  a1ym:
+    description: IFS/NEMO - 1990 historical - DSuite freeze - Tco1279/eORCA12
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1ym.yaml'
+  a1yv:
+    description: IFS/NEMO - 1990 control - DSuite freeze - Tco1279/eORCA12
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1yv.yaml'
