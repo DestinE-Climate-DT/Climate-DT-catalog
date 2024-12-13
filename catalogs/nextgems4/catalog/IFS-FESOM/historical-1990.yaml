@@ -646,13 +646,13 @@ sources:
     description: AQUA analysis timeseries 
     args:
       urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ var }}_IFS-FESOM_historical-1990_mon.nc'
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ variable }}_IFS-FESOM_historical-1990_mon.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
         compat: 'override'
     parameters:
-      var:
+      variable:
         allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
         description: Monthly Timeseries variable
         type: str
@@ -664,13 +664,13 @@ sources:
     description: AQUA analysis timeseries 
     args:
       urlpath:
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ var }}_IFS-FESOM_historical-1990_ann.nc' 
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-FESOM/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ variable }}_IFS-FESOM_historical-1990_ann.nc' 
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
         compat: 'override'
     parameters:
-      var:
+      variable:
         allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
         description: Annual timeseries variables
         type: str
