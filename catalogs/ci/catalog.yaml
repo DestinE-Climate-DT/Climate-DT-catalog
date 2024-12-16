@@ -26,3 +26,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/catalog/NEMO/main.yaml"
+  ERA5:
+    description: ERA5
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"

@@ -1,0 +1,14 @@
+plugins:
+  source:
+  - module: intake_xarray
+sources:
+  monthly:
+    metadata:
+      source_grid_name: test-hpz3-nested
+    args:
+      chunks:
+        time: 1
+      urlpath:
+      - '{{ TEST_PATH }}/ERA5/hpz3/ERA5*.nc'
+    description: monthly output
+    driver: netcdf
