@@ -683,7 +683,7 @@ sources:
     description: AQUA analysis atm global mean 
     args:
       urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-FESOM/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.{{ var }}.IFS-FESOM_historical-1990.nc'
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-FESOM/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps_{{ variable }}_IFS-FESOM_historical-1990.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
