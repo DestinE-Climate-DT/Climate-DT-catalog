@@ -4,7 +4,7 @@ plugins:
 sources:
   monthly:
     metadata:
-      source_grid_name: hpz3-nested
+      source_grid_name: test-hpz3-nested
     args:
       chunks:
         time: 1
