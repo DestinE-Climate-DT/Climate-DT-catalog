@@ -689,7 +689,7 @@ sources:
         combine: 'nested'
         compat: 'override'
     parameters:
-      var:
+      variable:
         allowed: ['2t', 'msl']
         description: AQUA atm global mean
         type: str

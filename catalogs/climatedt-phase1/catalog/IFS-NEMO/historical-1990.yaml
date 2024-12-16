@@ -472,7 +472,7 @@ sources:
         combine: 'nested'
         compat: 'override'
     parameters:
-      var:
+      variable:
         allowed: ['2t', 'msl']
         description: AQUA atm global mean
         type: str
@@ -491,7 +491,7 @@ sources:
         combine: 'nested'
         compat: 'override'
     parameters:
-      var:
+      variable:
         allowed: ['arctic','atlantic','global','indian','pacific','southern']
         description: AQUA analysis ocean3d_drift zonal diagnostics
         type: str
