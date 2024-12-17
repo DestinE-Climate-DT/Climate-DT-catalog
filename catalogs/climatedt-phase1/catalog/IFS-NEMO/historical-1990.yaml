@@ -423,3 +423,84 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+
+  aqua-timeseries-monthly:
+    driver: netcdf
+    description: AQUA analysis timeseries 
+    args:
+      urlpath: 
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ variable }}_IFS-NEMO_historical-1990_mon.nc'
+      xarray_kwargs:
+        #decode_times: true
+        combine: 'nested'
+        compat: 'override'
+    parameters:
+      variable:
+        allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
+        description: Monthly Timeseries variable
+        type: str
+        default: '2t'
+    metadata:
+      source_grid_name: null
+  aqua-timeseries-annual:
+    driver: netcdf
+    description: AQUA analysis timeseries 
+    args:
+      urlpath:
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ variable }}_IFS-NEMO_historical-1990_ann.nc' 
+      xarray_kwargs:
+        #decode_times: true
+        combine: 'nested'
+        compat: 'override'
+    parameters:
+      variable:
+        allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
+        description: Annual timeseries variables
+        type: str
+        default: '2t'
+    metadata:
+      source_grid_name: null
+
+  aqua-atmglobalmean:
+    driver: netcdf
+    description: AQUA analysis atm global mean 
+    args:
+      urlpath: 
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.{{ variable }}.IFS-NEMO_historical-1990.nc'
+      xarray_kwargs:
+        #decode_times: true
+        combine: 'nested'
+        compat: 'override'
+    parameters:
+      variable:
+        allowed: ['2t', 'msl']
+        description: AQUA atm global mean
+        type: str
+        default: '2t'
+    metadata:
+      source_grid_name: null
+
+  aqua-zonalmean:
+    driver: netcdf
+    description: AQUA analysis ocean3d_drift zonal diagnostics
+    args:
+      urlpath: 
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_{{ variable }}_ocean.nc'
+      xarray_kwargs:
+        #decode_times: true
+        combine: 'nested'
+        compat: 'override'
+    parameters:
+      variable:
+        #allowed: ['atlantic']
+        allowed: ['arctic','atlantic','global','indian','pacific','southern']
+        description: AQUA analysis ocean3d_drift zonal diagnostics
+        type: str
+        default: 'atlantic'
+      _var:
+        allowed: ['so','thetao']
+        description: AQUA analysis ocean3d_drift zonal diagnostics
+        type: str
+        default: 'so'
+    metadata:
+      source_grid_name: null
