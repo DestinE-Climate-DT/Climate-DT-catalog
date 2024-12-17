@@ -4,3 +4,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ux.yaml'
+  a1ye:
+    description: IFS-FESOM a1ye
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1ye.yaml'
