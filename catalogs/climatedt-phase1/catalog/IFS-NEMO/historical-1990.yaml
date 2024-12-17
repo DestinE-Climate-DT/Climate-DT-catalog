@@ -466,7 +466,7 @@ sources:
     description: AQUA analysis atm global mean 
     args:
       urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps_{{ variable }}_IFS-NEMO_historical-1990.nc'
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.{{ variable }}.IFS-NEMO_historical-1990.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
@@ -492,9 +492,15 @@ sources:
         compat: 'override'
     parameters:
       variable:
+        #allowed: ['atlantic']
         allowed: ['arctic','atlantic','global','indian','pacific','southern']
         description: AQUA analysis ocean3d_drift zonal diagnostics
         type: str
         default: 'atlantic'
+      _var:
+        allowed: ['so','thetao']
+        description: AQUA analysis ocean3d_drift zonal diagnostics
+        type: str
+        default: 'so'
     metadata:
       source_grid_name: null
