@@ -17,7 +17,6 @@ sources:
         time: 0000
         param: 8
         levtype: sfc
-        regid: "1/1"
       data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D
@@ -30,8 +29,7 @@ sources:
     metadata:
         fdb_home: /gpfs/scratch/ehpc01/experiments/a1ym/fdb
         eccodes_path: /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
-        variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164, 165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187, 188, 212, 228, 235, 
-                    # 260048
+        variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164, 165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187, 188, 212, 228, 235, 260048
                     ]
         source_grid_name: hpz9-nested
         fixer_name: climatedt-phase2-production
