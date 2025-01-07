@@ -5,6 +5,7 @@ sources:
   monthly:
     metadata:
       source_grid_name: test-hpz3-nested
+      fixer_name: ERA5-destine-v1
     args:
       chunks:
         time: 1

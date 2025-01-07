@@ -7,6 +7,7 @@ levante:
     LRA_NEXTGEMS: /work/bb1153/b382076/LRA_NG4/nextgems4
     FDB_PATH: /work/bm1235/b382776
     ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
+    OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
 lumi:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
@@ -16,3 +17,4 @@ lumi:
     LRA_NEXTGEMS: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA-nextgems4
     FDB_PATH: null
     ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+    OUTPUT_AQUA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/pre_computed_aqua_analysis

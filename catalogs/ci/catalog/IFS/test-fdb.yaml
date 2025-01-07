@@ -78,7 +78,7 @@ sources:
     driver: gsv
     metadata: 
       fdb_home: /app
-      source_grid_name: lon-lat
+      source_grid_name: test-hpz7-nested-fdb
       variables: [164]
 
   fdb-levels: &base-default
