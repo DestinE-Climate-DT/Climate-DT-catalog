@@ -1,0 +1,7 @@
+sources:
+  a216:
+    description: ICON run with ecCodes 2.39 (not all the monthly mean of data portfolio
+      phase2)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a216.yaml'
