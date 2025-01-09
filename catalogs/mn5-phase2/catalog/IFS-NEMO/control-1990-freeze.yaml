@@ -28,8 +28,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
         188, 212, 228, 235]
@@ -66,8 +64,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
         188, 212, 228, 235]
@@ -104,8 +100,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       variables: [129, 172]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
@@ -140,8 +134,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       variables: [129, 172]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
@@ -178,8 +170,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -218,8 +208,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -256,8 +244,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested
@@ -293,8 +279,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested
@@ -335,8 +319,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -394,8 +376,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -449,8 +429,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [100]
       variables: [228246, 228247]
       source_grid_name: hpz9
@@ -487,8 +465,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [100]
       variables: [228246, 228247]
       source_grid_name: hpz7
@@ -525,8 +501,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz9
@@ -563,8 +537,6 @@ sources:
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a1yv/fdb
-      eccodes_path: 
-        /gpfs/projects/ehpc01/models/ifs-nemo/dev-marc/DE_CY48R1.0_climateDT_develop/make/marenostrum5-intel/source/eccodes/definitions
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz7
