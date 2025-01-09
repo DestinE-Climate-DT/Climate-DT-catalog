@@ -1,6 +1,7 @@
 # Climate-DT-catalog
 
-This is the AQUA catalog for Climate DT. Includes catalogs for levante, lumi, MN5 and leonardo. 
+This is the AQUA catalog for Climate DT. Includes catalogs for levante, lumi, MN5 and leonardo.
+This repository focuses on the catalog, **the main AQUA codebase will be open-sourced soon**.
 
 ## Available catalogs
 
