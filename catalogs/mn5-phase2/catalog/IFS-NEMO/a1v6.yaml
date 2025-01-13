@@ -103,8 +103,8 @@ sources:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/data/AQUA//tmp/LRA_scWQAZIz4B/*_a1v6_r100_monthly_*.nc
+      urlpath:
+        /gpfs/scratch/ehpc01/data/AQUA/LRA/wf/mn5-phase2/IFS-NEMO/a1v6/r100/monthly/*_a1v6_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
