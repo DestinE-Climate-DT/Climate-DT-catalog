@@ -19,8 +19,13 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      data_start_date: 20200101T0000
+      # First month is not yet transferred to the databridge
+      # use the following as start date when the issue is resolved
+      # data_start_date: 20200101T0000
+      data_start_date: 20200201T0000
       data_end_date: 20391231T2300
+      bridge_start_date: 20200201T0000
+      bridge_end_date: 20391231T2300
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -99,6 +104,8 @@ sources:
       request:
         <<: *request-default
         resolution: standard
+      bridge_start_date: null
+      bridge_end_date: null
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/latlon'
@@ -117,6 +124,8 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
+      bridge_start_date: null
+      bridge_end_date: null
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/latlon'
@@ -138,6 +147,8 @@ sources:
         resolution: standard
         param: 263000
         levtype: o2d
+      bridge_start_date: null
+      bridge_end_date: null
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/latlon'
@@ -162,6 +173,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
+      bridge_start_date: null
+      bridge_end_date: null
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}/latlon'
