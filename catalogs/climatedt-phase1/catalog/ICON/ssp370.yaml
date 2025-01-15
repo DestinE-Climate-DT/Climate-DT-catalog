@@ -18,14 +18,18 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      data_start_date: 20200101T0000
+      # First nine months are not yet transferred to the databridge
+      # use the following as start date when the issue is resolved
+      # data_start_date: 20200101T0000
+      data_start_date: 20200901T0000
       data_end_date: 20391231T2300
-      bridge_end_date: complete
+      bridge_start_date: 20200901T0000
+      bridge_end_date: 20330901T2300
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
       timestyle: date  # variable date or variable step
-    #description: hourly data on native grid Tco2559 (about 5km).
+    description: hourly 2D atmospheric data on healpix grid (zoom=10, h1024).
     driver: gsv
     metadata: &metadata-default
       fdb_home: '{{ FDB_PATH }}'
