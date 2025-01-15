@@ -61,13 +61,8 @@ sources:
       request:
         <<: *request-default
         resolution: standard
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       source_grid_name: hpz7-nested
 
@@ -84,13 +79,8 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -105,13 +95,8 @@ sources:
       request:
         <<: *request-default
         resolution: high
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       source_grid_name: hpz10-nested
 
@@ -130,13 +115,8 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -310,13 +290,8 @@ sources:
         resolution: standard
         param: 263000
         levtype: o2d
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
@@ -334,13 +309,8 @@ sources:
         resolution: high
         param: 263000
         levtype: o2d
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
@@ -363,13 +333,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
@@ -411,13 +376,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
-      data_start_date: 19900101T0000
-      data_end_date: 20191231T2300
-      bridge_start_date: 19900101T0000
-      bridge_end_date: 19961231T2300
     metadata:
       <<: *metadata-default
-      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
