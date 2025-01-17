@@ -61,8 +61,8 @@ sources:
     metadata:
       <<: *metadata-default
       # variables: [263005,263001,263100,263124,263000,263008,263123,263101]
-      variables: [263001,263100,263124,263000,263008,263123,263101]
-      source_grid_name: nemo-multiIO-r025
+      variables: [263001,263100,263000,263008,263101]
+      source_grid_name: lon-lat
       fixer_name: ifs-nemo-reduced-output-monthly-v1
 
   monthly-r100-oce3d:
@@ -83,7 +83,7 @@ sources:
       <<: *metadata-default
       # variables: [263504, 263501,263503,263500]
       variables: [263501,263500]
-      source_grid_name: nemo-multiIO-r025-3d
+      source_grid_name: lon-lat
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035, 5.140361309051514,
                6.543033599853516, 8.09251880645752, 9.822750091552734, 11.773679733276367, 13.99103832244873,
                16.52532196044922, 19.42980194091797, 22.75761604309082, 26.558300018310547, 30.874561309814453,
