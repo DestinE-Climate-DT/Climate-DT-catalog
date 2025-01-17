@@ -1,7 +1,6 @@
 sources:
   hourly-hpz7-atm2d: &base-default
     args: &args-default
-      bridge_end_date: complete
       request: &request-default
         class: d1
         dataset: climate-dt
