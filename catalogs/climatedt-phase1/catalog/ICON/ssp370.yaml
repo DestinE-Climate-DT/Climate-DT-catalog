@@ -18,13 +18,10 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      # First nine months are not yet transferred to the databridge
-      # use the following as start date when the issue is resolved
-      # data_start_date: 20200101T0000
-      data_start_date: 20200901T0000
+      data_start_date: 20200101T0000
       data_end_date: 20391231T2300
       bridge_start_date: 20200901T0000
-      bridge_end_date: 20330901T2300
+      bridge_end_date: 20330930T2300
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle

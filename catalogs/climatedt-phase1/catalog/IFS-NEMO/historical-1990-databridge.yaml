@@ -18,12 +18,11 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      # This is not possible to read from both bridge and HPC since the
-      # expver was changed to '0001' in the bridge
       data_start_date: 19900101T0000
-      data_end_date: 19961231T2300
+      data_end_date: auto
       bridge_start_date: 19900101T0000
       bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle

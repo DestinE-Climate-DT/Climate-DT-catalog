@@ -18,13 +18,10 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      # Data until 03/1991 are not yet transferred to the databridge
-      # use the following as start date when the issue is resolved
-      # data_start_date: 19900101T0000
-      data_start_date: 19910301T0000
+      data_start_date: 19900101T0000
       data_end_date: 20191231T2300
       bridge_start_date: 19910301T0000
-      bridge_end_date: 20121231T2300
+      bridge_end_date: 20120618T2300  # Reconstructed, does not correspond to wiki table
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
