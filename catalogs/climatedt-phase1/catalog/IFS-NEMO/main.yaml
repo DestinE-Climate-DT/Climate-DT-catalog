@@ -4,11 +4,6 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
-  historical-1990-databridge:
-    description: FDB IFS/NEMO tco1279-orca012 historical 1990 run (available through the databridge)
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/historical-1990-databridge.yaml'
   ssp370:
     description: FDB IFS/NEMO tco2559-orca012 scenario 2020 run
     driver: yaml_file_cat
