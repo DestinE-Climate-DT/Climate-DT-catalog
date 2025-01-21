@@ -1,7 +1,6 @@
 sources:
-  a216:
-    description: ICON run with ecCodes 2.39 (not all the monthly mean of data portfolio
-      phase2)
+  control-1990-freeze:
+    description: ICON control 1990 freeze run (ecCodes 2.39 but not all monthly data)
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/a216.yaml'
+      path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
