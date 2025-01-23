@@ -135,3 +135,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  t039:
+    description: FDB IFS/NEMO historical run
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t039.yaml'
