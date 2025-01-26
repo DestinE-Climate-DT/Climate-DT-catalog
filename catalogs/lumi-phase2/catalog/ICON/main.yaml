@@ -1,6 +1,14 @@
 sources:
   control-1990-freeze:
-    description: ICON control 1990 freeze run (ecCodes 2.39 but not all monthly data)
+    description: ICON control 1990 freeze run (10km / r2b8) (ecCodes 2.39 but not all monthly data)
+    metadata:
+      catalog: lumi-phase2
+      model: ICON
+      exp: control-1990-freeze
+      expver: a216
+      resolution: SR
+      menu: control 1990
+      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'

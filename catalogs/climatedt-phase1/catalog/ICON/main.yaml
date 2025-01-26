@@ -1,11 +1,28 @@
 sources:
   historical-1990:
-    description: Phase1 ICON historical 1990 run
+    description: ICON, historical 1990, R2B9/9 5km (a0uo)
+    metadata:
+      catalog: climatedt-phase1
+      model: IFS-NEMO
+      exp: historical-1990
+      expver: a0uo
+      resolution: HR
+      menu: historical 1990
+      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
   ssp370:
-    description: Phase1 ICON historical 1990 run
+    description: ICON, SSP3-7.0 2020-2040, R2B9/9 5km (a0uq)
+    metadata:
+      catalog: climatedt-phase1
+      model: ICON
+      exp: ssp370
+      expver: a0uq
+      resolution: HR
+      menu: SSP3-7.0
+      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
+      
