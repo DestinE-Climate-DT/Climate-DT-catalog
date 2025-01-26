@@ -7,7 +7,7 @@ sources:
       exp: control-1990-freeze
       expver: a216
       resolution: SR
-      menu: control 1990
+      menu: control 1990 freeze
       note: null
     driver: yaml_file_cat
     args:

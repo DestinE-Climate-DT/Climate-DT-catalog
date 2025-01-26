@@ -133,7 +133,7 @@ sources:
       exp: historical-1990-freeze
       expver: a1ym
       resolution: SR
-      menu: historical 1990
+      menu: hist. 1990 freeze
       note: null
     driver: yaml_file_cat
     args:
@@ -146,7 +146,7 @@ sources:
       exp: control-1990-freeze
       expver: a1yv
       resolution: SR
-      menu: control 1990
+      menu: control 1990 freeze
       note: null
     driver: yaml_file_cat
     args:
