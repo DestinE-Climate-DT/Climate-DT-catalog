@@ -9,7 +9,7 @@ sources:
       start: 1990
       dashboard:
         menu:  historical 1990
-        resolution_id: HR
+        resolution_id: SR
         note: null
     driver: yaml_file_cat
     args:
@@ -24,7 +24,7 @@ sources:
       start: 2020
       dashboard:
         menu:  SSP3-7.0
-        resolution_id: HR
+        resolution_id: SR
         note: null
     driver: yaml_file_cat
     args:
