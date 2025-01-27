@@ -290,3 +290,4 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+      fixer_name: icon-destine-lra-story-2017-control
