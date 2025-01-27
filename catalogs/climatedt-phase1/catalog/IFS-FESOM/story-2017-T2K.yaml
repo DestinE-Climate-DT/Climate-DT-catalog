@@ -287,16 +287,15 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
-      fixer_name: fesom-destine-v1
 
-  lra-r100-monthly-zarr:
-    driver: zarr
-    description: LRA data monthly at r100 reference on zarr
-    args:
-      consolidated: false
-      combine: by_coords
-      urlpath:
-      - reference::{{ LRA_PATH }}/IFS-FESOM/story-2017-T2K/r100/monthly/zarr/lra-yearly-files.json
-    metadata:
-      source_grid_name: lon-lat
-      fixer_name: fesom-destine-v1
+  # lra-r100-monthly-zarr:
+  #   driver: zarr
+  #   description: LRA data monthly at r100 reference on zarr
+  #   args:
+  #     consolidated: false
+  #     combine: by_coords
+  #     urlpath:
+  #     - reference::{{ LRA_PATH }}/IFS-FESOM/story-2017-T2K/r100/monthly/zarr/lra-yearly-files.json
+  #   metadata:
+  #     source_grid_name: lon-lat
+  #     fixer_name: fesom-destine-v1
