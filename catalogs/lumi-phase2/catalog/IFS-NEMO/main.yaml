@@ -2,83 +2,105 @@ sources:
   a1bm:
     description: IFS/NEMO control run (ensemble) with single precision
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: a1bm
-      expver: a1bm
-      resolution: MR
-      menu: control 1990
-      note: ensemble, single precision, monthly data
+      expid: a1bm
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: MR
+        note: ensemble, single precision, monthly data
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1bm.yaml'
   a1ca:
     description: IFS/NEMO control run (ensemble) with double precision
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: a1ca
-      expver: a1ca
-      resolution: MR
-      menu: control 1990
-      note: ensemble, double precision, monthly data
+      expid: a1ca
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: MR
+        note: ensemble, double precision, monthly data
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ca.yaml'
   hs3l-control-1990:
-    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS. This contains the control tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 CTRL)
+    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: hs3l-control-1990
-      expver: hs3l
-      resolution: MR
-      menu: control 1990
-      note: null
+      expid: hs3l
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: MR
+        note: This contains the control tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 CTRL)
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hs3l-control-1990.yaml'
   hs3l-historical-1990:
-    description: IFS-NEMO tco399-eORCA025 1990 historical run from ATOS. This contains the historical tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 HIST)
+    description: IFS-NEMO tco399-eORCA025 1990 historical run from ATOS
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: hs3l-historical-1990
-      expver: hs3l
-      resolution: MR
-      menu: historical 1990
-      note: null
+      expid: hs3l
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: historical
+      start: 1990
+      dashboard:
+        menu: historical 1990
+        resolution_id: MR
+        note: This contains the historical tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 HIST)
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hs3l-historical-1990.yaml'
   if8s:
-    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ecmwf - recommended ocean settings
+    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ECMWF recommended ocean settings
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: if8s
-      expver: if8s
-      resolution: MR
-      menu: control 1990
-      note: null
+      expid: if8s
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: MR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/if8s.yaml'
   ifca:
-    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ecmwf-reccommended ocean settings and E-P term removed in qemp
+    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ECMWF reccommended ocean settings and E-P term removed in qemp
     metadata:
-      expver: ifca
-      resolution: MR
-      menu: control 1990
+      expid: ifca
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: MR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ifca.yaml'
   igsg:
     description: IFS-NEMO tco1279 1988 control run from ATOS
     metadata:
-      expver: igsg
-      resolution: SR
-      menu: control 1988
+      expid: igsg
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: 1988
+      dashboard:
+        menu: control 1988
+        resolution_id: MR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/igsg.yaml'

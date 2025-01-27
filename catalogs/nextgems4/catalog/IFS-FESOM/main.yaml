@@ -2,18 +2,30 @@ sources:
   historical-1990:
     description: IFS-FESOM, historical 1990, NextGEMS pre-final (cycle4) 1990-2020, tco1279/NG5
     metadata:
-      expver: null
-      resolution: HR
-      menu: historical 1990
+      expid: null
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: historical
+      start: 1990
+      dashboard:
+        menu:  historical 1990
+        resolution_id: HR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
   ssp370:
     description: IFS-FESOM, SSP3-7.0 NextGEMS pre-final (cycle4) 2020-2050, tco1279/NG5
     metadata:
-      expver: null
-      resolution: HR
-      menu: SSP3-7.0
+      expid: null
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: scenario ssp370
+      start: 2020
+      dashboard:
+        menu:  SSP3-7.0
+        resolution_id: HR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'

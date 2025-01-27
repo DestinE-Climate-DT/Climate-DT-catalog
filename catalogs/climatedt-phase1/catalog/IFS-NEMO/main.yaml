@@ -2,9 +2,15 @@ sources:
   historical-1990:
     description: IFS-NEMO, historical 1990, tco1279/eORCA12 (a0h3)
     metadata:
-      expver: a0h3
-      resolution: SR
-      menu: historical 1990
+      expid: a0h3
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: historical
+      start: 1990
+      dashboard:
+        menu: historical 1990
+        resolution_id: SR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
@@ -12,9 +18,15 @@ sources:
   ssp370:
     description: IFS-NEMO, SSP3-7.0 2020-2040, tco2559/eORCA12 (a0py)
     metadata:
-      expver: a0py
-      resolution: HR
-      menu: SSP3-7.0
+      expid: a0py
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: scenario ssp370
+      start: 2020
+      dashboard:
+        menu: SSP3-7.0
+        resolution_id: HR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
@@ -22,9 +34,15 @@ sources:
   control-1990:
     description: IFS-NEMO, control 1990, tco1279/eORCA12 (a14c)
     metadata:
-      expver: a14c
-      resolution: SR
-      menu: control 1990
+      expid: a14c
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: SR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'

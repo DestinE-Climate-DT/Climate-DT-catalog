@@ -1,21 +1,29 @@
 sources:
   historical-1990:
-    description: ICON, historical 1990, R2B9/9 5km (a0uo)
+    description: ICON, historical 1990, R2B9/9 10km-5km (a0uo)
     metadata:
-      expver: a0uo
-      resolution: HR
-      menu: historical 1990
-      note: null
+      expid: a0uo
+      resolution_atm: R2B8
+      resolution_oce: R2B8
+      forcing: historical
+      start: 1990
+      dashboard:
+        menu: historical 1990
+        resolution_id: HR
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
   ssp370:
-    description: ICON, SSP3-7.0 2020-2040, R2B9/9 5km (a0uq)
+    description: ICON, SSP3-7.0 2020-2040, R2B9/9 10km-5km (a0uq)
     metadata:
-      expver: a0uq
-      resolution: HR
-      menu: SSP3-7.0
-      note: null
+      expid: a0uq
+      resolution_atm: R2B8
+      resolution_oce: R2B9
+      forcing: SSP3-7.0
+      start: 2020
+      dashboard:
+        menu: SSP3-7.0
+        resolution_id: HR
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'

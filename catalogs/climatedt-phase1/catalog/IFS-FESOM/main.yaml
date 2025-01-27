@@ -2,45 +2,75 @@ sources:
   story-2017-control:
     description: IFS-FESOM, Story-nudging 2017, control, tco1279/NG5, storyline nudged from 2017 with ocean from control 1950
     metadata:
-      expver: a0w1
-      resolution: SR
-      menu: Story 2017 control
+      expid: a0w1
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines control
+      start: 2017
+      dashboard:
+        menu: story 2017 control
+        resolution_id: SR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-control.yaml'
   story-2017-historical:
     description:  IFS-FESOM, Story-nudging 2017, historical, tco1279/NG, storyline nudged from 2017 historical   
     metadata:
-      expver: a0uz
-      resolution: SR
-      menu: Story 2017 historical
+      expid: a0uz
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines historical
+      start: 2017
+      dashboard:
+        menu: story 2017 hist.
+        resolution_id: SR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-historical.yaml'
   story-2017-T2K:
     description: IFS-FESOM, Story-nudging 2017, 2K warming, tco1279/NG5, storyline nudged from 2017 for the 2K warme climate
     metadata:
-      expver: a13l
-      resolution: SR
-      menu: Story 2017 T2K
+      expid: a13l
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines plus2K
+      start: 2017
+      dashboard:
+        menu: story 2017 T2K
+        resolution_id: SR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-T2K.yaml'
   control-1990:
     description: Production IFS-FESOM, control 1990, tco1279-NG5
     metadata:
-      expver: a1n7
-      resolution: SR
-      menu: control 1990
+      expid: a1n7
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990
+        resolution_id: SR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'
   ssp370:
     description: Production IFS-FESOM, scenario ssp370, tco2559-NG5
     metadata:
-      expver: null
-      resolution: HR
-      menu: SSP3-7.0
+      expid: null
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: scenario ssp370
+      start: 2020
+      dashboard:
+        menu: SSP3-7.0
+        resolution_id: HR
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
