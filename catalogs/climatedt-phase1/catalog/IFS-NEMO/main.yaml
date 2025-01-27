@@ -2,14 +2,9 @@ sources:
   historical-1990:
     description: IFS-NEMO, historical 1990, tco1279/eORCA12 (a0h3)
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-NEMO
-      exp: historical-1990
       expver: a0h3
       resolution: SR
       menu: historical 1990
-      note: Created from catalogue entry historical-1990.yaml
-
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
@@ -17,13 +12,9 @@ sources:
   ssp370:
     description: IFS-NEMO, SSP3-7.0 2020-2040, tco2559/eORCA12 (a0py)
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-NEMO
-      exp: ssp370
       expver: a0py
       resolution: HR
       menu: SSP3-7.0
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
@@ -31,13 +22,9 @@ sources:
   control-1990:
     description: IFS-NEMO, control 1990, tco1279/eORCA12 (a14c)
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-NEMO
-      exp: control-1990
       expver: a14c
       resolution: SR
       menu: control 1990
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'

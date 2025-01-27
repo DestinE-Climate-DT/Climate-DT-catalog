@@ -2,9 +2,6 @@ sources:
   historical-1990:
     description: ICON, historical 1990, R2B9/9 5km (a0uo)
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-NEMO
-      exp: historical-1990
       expver: a0uo
       resolution: HR
       menu: historical 1990
@@ -15,9 +12,6 @@ sources:
   ssp370:
     description: ICON, SSP3-7.0 2020-2040, R2B9/9 5km (a0uq)
     metadata:
-      catalog: climatedt-phase1
-      model: ICON
-      exp: ssp370
       expver: a0uq
       resolution: HR
       menu: SSP3-7.0

@@ -128,26 +128,18 @@ sources:
   historical-1990-freeze:
     description: IFS/NEMO - 1990 historical - DSuite freeze - Tco1279/eORCA12
     metadata:
-      catalog: mn5-phase2
-      model: IFS-NEMO
-      exp: historical-1990-freeze
       expver: a1ym
       resolution: SR
       menu: hist. 1990 freeze
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990-freeze.yaml'
   control-1990-freeze:
     description: IFS/NEMO - 1990 control - DSuite freeze - Tco1279/eORCA12
     metadata:
-      catalog: mn5-phase2
-      model: IFS-NEMO
-      exp: control-1990-freeze
       expver: a1yv
       resolution: SR
       menu: control 1990 freeze
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'

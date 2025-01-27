@@ -2,65 +2,45 @@ sources:
   story-2017-control:
     description: IFS-FESOM, Story-nudging 2017, control, tco1279/NG5, storyline nudged from 2017 with ocean from control 1950
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-FESOM
-      exp: story-2017-control
       expver: a0w1
       resolution: SR
       menu: Story 2017 control
-      note: completed
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-control.yaml'
   story-2017-historical:
     description:  IFS-FESOM, Story-nudging 2017, historical, tco1279/NG, storyline nudged from 2017 historical   
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-FESOM
-      exp: story-2017-historical
       expver: a0uz
       resolution: SR
       menu: Story 2017 historical
-      note: completed
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-historical.yaml'
   story-2017-T2K:
     description: IFS-FESOM, Story-nudging 2017, 2K warming, tco1279/NG5, storyline nudged from 2017 for the 2K warme climate
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-FESOM
-      exp: story-2017-T2K
       expver: a13l
       resolution: SR
       menu: Story 2017 T2K
-      note: completed
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-T2K.yaml'
   control-1990:
     description: Production IFS-FESOM, control 1990, tco1279-NG5
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-FESOM
-      exp: control-1990
       expver: a1n7
       resolution: SR
       menu: control 1990
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'
   ssp370:
     description: Production IFS-FESOM, scenario ssp370, tco2559-NG5
     metadata:
-      catalog: climatedt-phase1
-      model: IFS-FESOM
-      exp: ssp370
       expver: null
       resolution: HR
       menu: SSP3-7.0
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'

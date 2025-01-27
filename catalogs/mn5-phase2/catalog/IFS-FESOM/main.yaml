@@ -2,9 +2,6 @@ sources:
   a1ux:
     description: IFS-FESOM tco399 FESOM2.6 classic
     metadata:
-      catalog: mn5-phase2
-      model: IFS-FESOM
-      exp: a1ux
       expver: a1ux
       resolution: MR
       menu: historical 1990

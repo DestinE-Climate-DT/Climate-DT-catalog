@@ -67,26 +67,18 @@ sources:
   ifca:
     description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ecmwf-reccommended ocean settings and E-P term removed in qemp
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: ifca
       expver: ifca
       resolution: MR
       menu: control 1990
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ifca.yaml'
   igsg:
     description: IFS-NEMO tco1279 1988 control run from ATOS
     metadata:
-      catalog: lumi-phase2
-      model: IFS-NEMO
-      exp: igsg
       expver: igsg
       resolution: SR
       menu: control 1988
-      note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/igsg.yaml'
