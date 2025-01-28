@@ -136,7 +136,6 @@ sources:
       dashboard:
         menu:  hist. 1990 freeze
         resolution_id: SR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990-freeze.yaml'
@@ -151,7 +150,6 @@ sources:
       dashboard:
         menu:  control 1990 freeze
         resolution_id: SR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'

@@ -1,6 +1,6 @@
 sources:
   control-1990-freeze:
-    description: ICON control 1990 freeze run (10km / R2B8) (ecCodes 2.39 but not all monthly data)
+    description: ICON control 1990 freeze run (10km / R2B8)
     metadata:
       expid: a216
       resolution_atm: R2B8

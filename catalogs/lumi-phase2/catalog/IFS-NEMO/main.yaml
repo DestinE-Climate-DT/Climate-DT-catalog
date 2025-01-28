@@ -70,7 +70,6 @@ sources:
       dashboard:
         menu: control 1990
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/if8s.yaml'
@@ -85,7 +84,6 @@ sources:
       dashboard:
         menu: control 1990
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ifca.yaml'
@@ -100,7 +98,6 @@ sources:
       dashboard:
         menu: control 1988
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/igsg.yaml'

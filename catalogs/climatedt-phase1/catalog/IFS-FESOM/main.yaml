@@ -10,7 +10,6 @@ sources:
       dashboard:
         menu: story 2017 control
         resolution_id: SR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-control.yaml'
@@ -25,7 +24,6 @@ sources:
       dashboard:
         menu: story 2017 hist.
         resolution_id: SR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-historical.yaml'
@@ -40,7 +38,6 @@ sources:
       dashboard:
         menu: story 2017 T2K
         resolution_id: SR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-T2K.yaml'
@@ -55,7 +52,6 @@ sources:
       dashboard:
         menu: control 1990
         resolution_id: SR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990.yaml'
@@ -70,7 +66,6 @@ sources:
       dashboard:
         menu: SSP3-7.0
         resolution_id: HR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'

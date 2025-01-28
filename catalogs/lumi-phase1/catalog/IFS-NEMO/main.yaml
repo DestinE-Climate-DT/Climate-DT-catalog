@@ -25,7 +25,6 @@ sources:
       dashboard:
         menu: hist.+proj. 1990
         resolution_id: LR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a0gg.yaml'
@@ -40,7 +39,6 @@ sources:
       dashboard:
         menu: SSP3-7.0
         resolution_id: LR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a0jp.yaml'
@@ -55,7 +53,6 @@ sources:
       dashboard:
         menu: control 1990
         resolution_id: LR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a0xv.yaml'
@@ -70,7 +67,6 @@ sources:
       dashboard:
         menu: SSP3-7.0
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1al.yaml'
@@ -85,7 +81,6 @@ sources:
       dashboard:
         menu: control 1990
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a16z.yaml'
@@ -100,7 +95,6 @@ sources:
       dashboard:
         menu: SSP3-7.0
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a17r.yaml'
@@ -115,7 +109,6 @@ sources:
       dashboard:
         menu: historical 1990
         resolution_id: MR
-        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a18j.yaml'
