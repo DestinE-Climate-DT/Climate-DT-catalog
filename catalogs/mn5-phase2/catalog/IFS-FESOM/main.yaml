@@ -1,6 +1,16 @@
 sources:
   a1ux:
     description: IFS-FESOM tco399 FESOM2.6 classic
+    metadata:
+      expid: a1ux
+      resolution_atm: tco399
+      resolution_oce: null
+      forcing: historical
+      start: 1990
+      dashboard:
+        menu: historical 1990
+        resolution_id: MR
+        note: monthly data
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ux.yaml'
