@@ -1,0 +1,587 @@
+sources:
+  hourly-hpz10-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 8
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5 
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
+        165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
+        188, 212, 228, 235, 260048]
+      source_grid_name: hpz10-nested
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz7-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 8
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
+        165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
+        188, 212, 228, 235, 260048]
+      source_grid_name: hpz7-nested
+      fixer_name: fesom-destine-v1
+
+  daily-hpz10-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 129
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      variables: [129, 172]
+      source_grid_name: hpz10-nested
+      fixer_name: fesom-destine-v1
+
+  daily-hpz7-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 129
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      variables: [129, 172]
+      source_grid_name: hpz7-nested
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz10-atm3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 60
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
+          700, 850, 925, 1000]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: 6h
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
+        850, 925, 1000]
+      variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
+      source_grid_name: hpz10-nested
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz7-atm3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 60
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
+          700, 850, 925, 1000]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: 6h
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
+        850, 925, 1000]
+      variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
+      source_grid_name: hpz7-nested
+      fixer_name: fesom-destine-v1
+
+  daily-hpz10-oce2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
+      source_grid_name: fesom-NG5-hpz10-nested-v2
+      fixer_name: fesom-destine-v1
+
+  daily-hpz7-oce2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
+      source_grid_name: fesom-NG5-hpz7-nested-v2
+      fixer_name: fesom-destine-v1
+
+  daily-hpz10-oce3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 263500
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
+        62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
+        165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
+        560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525,
+        2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
+        6175]
+      variables: [263500, 263501, 263505, 263506]
+      source_grid_name: fesom-NG5-hpz10-nested-3d-v2
+      fixer_name: fesom-destine-v1
+
+  daily-hpz7-oce3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 263500
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
+        62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
+        165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 400, 440, 480, 520,
+        560, 600, 640, 710, 810, 950, 1110, 1255, 1415, 1600, 1810, 2035, 2275, 2525,
+        2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
+        6175]
+      variables: [263500, 263501, 263505, 263506]
+      source_grid_name: fesom-NG5-hpz7-nested-3d-v2
+      fixer_name: fesom-destine-v1
+
+  daily-hpz10-oce3d-half:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 263507
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0,
+        60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 120.0, 130.0,
+        140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 220.0, 240.0, 260.0, 280.0,
+        300.0, 340.0, 380.0, 420.0, 460.0, 500.0, 540.0, 580.0, 620.0, 660.0, 760.0,
+        860.0, 1040.0, 1180.0, 1330.0, 1500.0, 1700.0, 1920.0, 2150.0, 2400.0, 2650.0,
+        2900.0, 3150.0, 3400.0, 3650.0, 3900.0, 4150.0, 4400.0, 4650.0, 4900.0, 5150.0,
+        5400.0, 5650.0, 6000.0, 6350.0]
+      variables: [263507]
+      source_grid_name: fesom-hpz10-nested-3d
+      fixer_name: fesom-destine-v1
+
+  daily-hpz7-oce3d-half:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 263507
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
+          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0,
+        60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 120.0, 130.0,
+        140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 220.0, 240.0, 260.0, 280.0,
+        300.0, 340.0, 380.0, 420.0, 460.0, 500.0, 540.0, 580.0, 620.0, 660.0, 760.0,
+        860.0, 1040.0, 1180.0, 1330.0, 1500.0, 1700.0, 1920.0, 2150.0, 2400.0, 2650.0,
+        2900.0, 3150.0, 3400.0, 3650.0, 3900.0, 4150.0, 4400.0, 4650.0, 4900.0, 5150.0,
+        5400.0, 5650.0, 6000.0, 6350.0]
+      variables: [263507]
+      source_grid_name: fesom-hpz7-nested-3d
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz10-hl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 228246
+        levtype: hl
+        levelist: [100]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [100]
+      variables: [228246, 228247]
+      source_grid_name: hpz10
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz7-hl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 228246
+        levtype: hl
+        levelist: [100]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [100]
+      variables: [228246, 228247]
+      source_grid_name: hpz7
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz10-sol:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 228141
+        levtype: sol
+        levelist: [1, 2, 3, 4, 5]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [1, 2, 3, 4, 5]
+      variables: [228141]
+      source_grid_name: hpz10
+      fixer_name: fesom-destine-v1
+
+  hourly-hpz7-sol:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: HighResMIP  # To be overwritten by workflow/config file
+        experiment: cont  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: a1ye  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19900101  # To be overwritten by workflow/config file
+        time: 0000
+        param: 228141
+        levtype: sol
+        levelist: [1, 2, 3, 4, 5]
+      data_start_date: 19900101T0000
+      data_end_date: 20051231
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    driver: gsv
+    metadata:
+      fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
+      levels: [1, 2, 3, 4, 5]
+      variables: [228141]
+      source_grid_name: hpz7
+      fixer_name: fesom-destine-v1
+
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/maqsood/lra_a1ye/mn5-phase2/IFS-FESOM/a1ye/r100/monthly/*a1ye_r100_monthly_*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
