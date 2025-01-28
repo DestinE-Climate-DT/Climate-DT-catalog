@@ -61,7 +61,7 @@ sources:
       expid: null
       resolution_atm: tco2559
       resolution_oce: NG5
-      forcing: scenario ssp370
+      forcing: ssp370
       start: 2020
       dashboard:
         menu: SSP3-7.0

@@ -19,7 +19,7 @@ sources:
       expid: a0uq
       resolution_atm: R2B8
       resolution_oce: R2B8
-      forcing: SSP3-7.0
+      forcing: ssp370
       start: 2020
       dashboard:
         menu: SSP3-7.0

@@ -20,7 +20,7 @@ sources:
       expid: a0gg
       resolution_atm: tco79
       resolution_oce: eORCA1
-      forcing: historical + scenario
+      forcing: historical + ssp370
       start: 1990
       dashboard:
         menu: hist.+proj. 1990
@@ -34,7 +34,7 @@ sources:
       expid: a0jp
       resolution_atm: tco79
       resolution_oce: eORCA1
-      forcing: scenario ssp370
+      forcing: ssp370
       start: 2020
       dashboard:
         menu: SSP3-7.0
@@ -62,7 +62,7 @@ sources:
       expid: a1al
       resolution_atm: tco399
       resolution_oce: eORCA1
-      forcing: scenario ssp370
+      forcing: ssp370
       start: 2020
       dashboard:
         menu: SSP3-7.0
@@ -90,7 +90,7 @@ sources:
       expid: a17r
       resolution_atm: tco399
       resolution_oce: eORCA1
-      forcing: scenario
+      forcing: ssp370
       start: 2020
       dashboard:
         menu: SSP3-7.0

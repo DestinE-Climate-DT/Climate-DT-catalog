@@ -20,7 +20,7 @@ sources:
       expid: a0py
       resolution_atm: tco2559
       resolution_oce: eORCA12
-      forcing: scenario ssp370
+      forcing: ssp370
       start: 2020
       dashboard:
         menu: SSP3-7.0
