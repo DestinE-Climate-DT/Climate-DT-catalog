@@ -11,3 +11,15 @@ sources:
       resolution_oce: CORE2
       forcing: historical
       start: 2020
+  hz9o:
+    description: FDB IFS/FESOM test run with tco1279/NG5 native grids regridded to
+      Healpix
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/hz9o.yaml'
+    metadata:
+      expid: hz9o
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: historical
+      start: 2020
