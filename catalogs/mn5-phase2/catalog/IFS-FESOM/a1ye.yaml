@@ -26,7 +26,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
@@ -61,7 +60,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       variables: [8, 9, 78, 79, 134, 137, 141, 144, 146, 147, 148, 151, 159, 164,
         165, 166, 167, 168, 169, 175, 176, 177, 178, 179, 180, 181, 182, 186, 187,
@@ -96,7 +94,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       variables: [129, 172]
       source_grid_name: hpz10-nested
@@ -129,7 +126,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       variables: [129, 172]
       source_grid_name: hpz7-nested
@@ -164,7 +160,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -201,7 +196,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -236,7 +230,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-NG5-hpz10-nested-v2
@@ -269,7 +262,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v2
@@ -306,7 +298,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
@@ -349,7 +340,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 57.5,
         62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 135, 145, 155,
@@ -392,7 +382,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0,
         60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 120.0, 130.0,
@@ -436,7 +425,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0,
         60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 120.0, 130.0,
@@ -477,7 +465,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [100]
       variables: [228246, 228247]
@@ -512,7 +499,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [100]
       variables: [228246, 228247]
@@ -547,7 +533,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
@@ -582,7 +567,6 @@ sources:
     description: FDB IFS/FESOM TCO1279 control run
     driver: gsv
     metadata:
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
