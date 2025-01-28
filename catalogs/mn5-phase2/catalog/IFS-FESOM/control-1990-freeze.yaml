@@ -23,7 +23,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5 
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -57,7 +57,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -91,7 +91,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -123,7 +123,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -157,7 +157,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -193,7 +193,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -227,7 +227,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -259,7 +259,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -295,7 +295,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -337,7 +337,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -379,7 +379,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -422,7 +422,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -462,7 +462,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -496,7 +496,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -530,7 +530,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'
@@ -564,7 +564,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: FDB IFS/FESOM TCO1279 control run
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
     driver: gsv
     metadata:
       fdb_home: '{{ FDB_HOME }}/a1ye/fdb'

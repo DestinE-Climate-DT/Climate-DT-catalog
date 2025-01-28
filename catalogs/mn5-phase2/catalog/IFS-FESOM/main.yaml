@@ -4,8 +4,17 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ux.yaml'
-  a1ye:
-    description: FDB IFS/FESOM TCO1279 control run
+  control-1990-freeze:
+    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
+    metadata:
+      expid: a1ye
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990 freeze
+        resolution_id: SR
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/a1ye.yaml'
+      path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
