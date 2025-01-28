@@ -5,7 +5,7 @@ sources:
       expid: a0w1
       resolution_atm: tco1279
       resolution_oce: NG5
-      forcing: storylines control
+      forcing: storylines-control
       start: 2017
       dashboard:
         menu: story 2017 control
@@ -19,7 +19,7 @@ sources:
       expid: a0uz
       resolution_atm: tco1279
       resolution_oce: NG5
-      forcing: storylines historical
+      forcing: storylines-historical
       start: 2017
       dashboard:
         menu: story 2017 hist.
@@ -33,7 +33,7 @@ sources:
       expid: a13l
       resolution_atm: tco1279
       resolution_oce: NG5
-      forcing: storylines plus2K
+      forcing: storylines-plus2K
       start: 2017
       dashboard:
         menu: story 2017 T2K
