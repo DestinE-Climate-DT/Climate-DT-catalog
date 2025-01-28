@@ -1,0 +1,7 @@
+sources:
+  hz9m:
+    description: FDB IFS/FESOM test run with tco79/CORE2 native grids regridded to
+      Healpix
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/hz9m.yaml'
