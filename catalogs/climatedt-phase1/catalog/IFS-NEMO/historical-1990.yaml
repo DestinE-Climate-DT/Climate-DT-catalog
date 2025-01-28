@@ -18,7 +18,7 @@ sources:
         param: 167
         levtype: sfc
         step: 0
-      data_start_date: auto
+      data_start_date: 19900101T0000
       data_end_date: auto
       chunks: D  # Default time chunk size
       savefreq: h  # at what frequency are data saved
@@ -60,9 +60,14 @@ sources:
       <<: *args-default
       request:
         <<: *request-default
+        expver: '0001'
         resolution: standard
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       source_grid_name: hpz7-nested
 
@@ -75,12 +80,17 @@ sources:
       request:
         <<: *request-default
         resolution: standard
+        expver: '0001'
         param: 131
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -95,8 +105,13 @@ sources:
       request:
         <<: *request-default
         resolution: high
+        expver: '0001'
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       source_grid_name: hpz10-nested
 
@@ -111,12 +126,17 @@ sources:
       request:
         <<: *request-default
         resolution: high
+        expver: '0001'
         param: 131
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
@@ -288,10 +308,15 @@ sources:
       request:
         <<: *request-default
         resolution: standard
+        expver: '0001'
         param: 263000
         levtype: o2d
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
@@ -307,10 +332,15 @@ sources:
       request:
         <<: *request-default
         resolution: high
+        expver: '0001'
         param: 263000
         levtype: o2d
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263021, 263022,
         263100, 263101, 263121, 263122, 263124]
@@ -326,6 +356,7 @@ sources:
       request:
         <<: *request-default
         resolution: standard
+        expver: '0001'
         param: 263500
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -333,8 +364,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
@@ -369,6 +404,7 @@ sources:
       request:
         <<: *request-default
         resolution: high
+        expver: '0001'
         param: 263500
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -376,8 +412,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 19961231T2300
+      hpc_expver: a0h3
     metadata:
       <<: *metadata-default
+      fdb_home_bridge: '{{ FDB_PATH }}/databridge'
       fdb_home: '{{ FDB_PATH_HISTORICAL }}/fdb/HEALPIX_grids'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
@@ -411,6 +451,7 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+
   lra-r100-daily:
     driver: netcdf
     description: LRA data daily at r100
@@ -427,80 +468,58 @@ sources:
   aqua-timeseries-monthly:
     driver: netcdf
     description: AQUA analysis timeseries 
+    # list of variables: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
     args:
-      urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ variable }}_IFS-NEMO_historical-1990_mon.nc'
+      urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_mon.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
         compat: 'override'
-    parameters:
-      variable:
-        allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
-        description: Monthly Timeseries variable
-        type: str
-        default: '2t'
     metadata:
       source_grid_name: null
+
   aqua-timeseries-annual:
     driver: netcdf
-    description: AQUA analysis timeseries 
+    description: AQUA analysis timeseries
+    # list of variables: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc'] 
     args:
-      urlpath:
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_{{ variable }}_IFS-NEMO_historical-1990_ann.nc' 
+      urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_ann.nc' 
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
         compat: 'override'
-    parameters:
-      variable:
-        allowed: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
-        description: Annual timeseries variables
-        type: str
-        default: '2t'
     metadata:
       source_grid_name: null
 
   aqua-atmglobalmean:
     driver: netcdf
-    description: AQUA analysis atm global mean 
+    description: AQUA analysis atm global mean
+    # list of variables: ['2t', 'msl'] 
     args:
-      urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.{{ variable }}.IFS-NEMO_historical-1990.nc'
+      urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
         compat: 'override'
-    parameters:
-      variable:
-        allowed: ['2t', 'msl']
-        description: AQUA atm global mean
-        type: str
-        default: '2t'
     metadata:
       source_grid_name: null
 
   aqua-zonalmean:
     driver: netcdf
     description: AQUA analysis ocean3d_drift zonal diagnostics
+    # list of variables: ['so','thetao']
     args:
       urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_{{ variable }}_ocean.nc'
+        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_{{ region }}_ocean.nc'
       xarray_kwargs:
         #decode_times: true
         combine: 'nested'
         compat: 'override'
     parameters:
-      variable:
-        #allowed: ['atlantic']
+      region:
         allowed: ['arctic','atlantic','global','indian','pacific','southern']
-        description: AQUA analysis ocean3d_drift zonal diagnostics
+        description: AQUA analysis regional ocean3d_drift zonal diagnostics
         type: str
         default: 'atlantic'
-      _var:
-        allowed: ['so','thetao']
-        description: AQUA analysis ocean3d_drift zonal diagnostics
-        type: str
-        default: 'so'
     metadata:
       source_grid_name: null

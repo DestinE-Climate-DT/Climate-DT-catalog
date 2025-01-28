@@ -99,6 +99,8 @@ sources:
       <<: *args-default
       chunks: MS
       savefreq: D
+      data_end_date: 20241031
+      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: standard
@@ -117,6 +119,8 @@ sources:
       <<: *args-default
       chunks: D
       savefreq: D
+      data_end_date: 20241031
+      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: standard
@@ -146,6 +150,8 @@ sources:
       chunks: MS
       savefreq: D
       data_start_date: 20180101T0000
+      data_end_date: 20241031
+      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: high
@@ -165,6 +171,8 @@ sources:
       chunks: D
       savefreq: D
       data_start_date: 20180101T0000
+      data_end_date: 20241031
+      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: high
@@ -282,3 +290,4 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+      fixer_name: icon-destine-lra-story-2017-control

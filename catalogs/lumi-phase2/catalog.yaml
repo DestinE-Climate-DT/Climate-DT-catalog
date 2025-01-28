@@ -10,6 +10,11 @@ metadata:
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
 
 sources:
+  ICON:
+    description: ICON model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
   IFS-NEMO:
     description: IFS-NEMO coupled model
     driver: yaml_file_cat

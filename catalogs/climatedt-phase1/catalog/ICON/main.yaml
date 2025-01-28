@@ -1,11 +1,11 @@
 sources:
   historical-1990:
-    #description: FDB ICON historical 1990 run (converted from unreadable FDB)
+    description: Phase1 ICON historical 1990 run
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
   ssp370:
-    #description: FDB ICON historical 1990 run (converted from unreadable FDB)
+    description: Phase1 ICON historical 1990 run
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'

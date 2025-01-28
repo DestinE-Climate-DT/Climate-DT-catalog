@@ -1,0 +1,6 @@
+sources:
+  control-1990-freeze:
+    description: ICON control 1990 freeze run (ecCodes 2.39 but not all monthly data)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
