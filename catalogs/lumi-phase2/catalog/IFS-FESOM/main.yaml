@@ -5,3 +5,9 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hz9m.yaml'
+    metadata:
+      expid: hz9m
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: 2020
