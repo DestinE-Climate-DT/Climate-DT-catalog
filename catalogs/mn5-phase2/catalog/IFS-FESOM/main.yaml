@@ -5,7 +5,7 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/a1ux.yaml'
   a1ye:
-    description: FDB IFS/FESOM TCO399 run
+    description: FDB IFS/FESOM TCO1279 control run
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ye.yaml'
