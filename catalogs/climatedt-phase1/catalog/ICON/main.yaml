@@ -27,4 +27,3 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
-      
