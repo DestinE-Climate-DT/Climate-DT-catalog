@@ -134,7 +134,7 @@ sources:
       forcing: historical
       start: 1990
       dashboard:
-        menu:  hist. 1990 freeze
+        menu: hist. 1990 freeze
         resolution_id: SR
     driver: yaml_file_cat
     args:
@@ -148,8 +148,23 @@ sources:
       forcing: control
       start: 1990
       dashboard:
-        menu:  control 1990 freeze
+        menu: control 1990 freeze
         resolution_id: SR
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  i9t5:
+    description: FDB IFS/NEMO test run with prodction resolution tco2559/eORCA12 native
+      grids regridded to Healpix
+    metadata:
+      expid: i9t5
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: ssp370
+      start: '2020'
+      dashboard:
+        menu: i9t5
+        resolution_id: HR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/i9t5.yaml'
