@@ -241,7 +241,7 @@ sources:
       fdb_home: /scratch/project_465000454/experiments/a216/fdb
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263123, 263124]
-      source_grid_name: icon-R02B08-hpz6-nested-v2
+      source_grid_name: icon-R02B08-hpz6-nested-v3
       fixer_name: climatedt-phase2-ICON-freeze
 
   daily-hpz9-oce2d:
@@ -275,7 +275,7 @@ sources:
       fdb_home: /scratch/project_465000454/experiments/a216/fdb
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263123, 263124]
-      source_grid_name: icon-R02B08-hpz9-nested-v2
+      source_grid_name: icon-R02B08-hpz9-nested-v3
       fixer_name: climatedt-phase2-ICON-freeze
 
   daily-hpz6-oce3d:
@@ -320,7 +320,7 @@ sources:
         3546.25, 3772.45, 4006.95, 4249.15, 4498.3, 4753.55, 5014.0, 5278.6, 5546.25,
         5815.75]
       variables: [263500, 263501, 263505, 263506]
-      source_grid_name: icon-R02B08-hpz6-nested-3d-v2
+      source_grid_name: icon-R02B08-hpz6-nested-3d-v3
       fixer_name: climatedt-phase2-ICON-freeze
 
   daily-hpz9-oce3d:
@@ -365,7 +365,7 @@ sources:
         3546.25, 3772.45, 4006.95, 4249.15, 4498.3, 4753.55, 5014.0, 5278.6, 5546.25,
         5815.75]
       variables: [263500, 263501, 263505, 263506]
-      source_grid_name: icon-R02B08-hpz9-nested-3d-v2
+      source_grid_name: icon-R02B08-hpz9-nested-3d-v3
       fixer_name: climatedt-phase2-ICON-freeze
 
   # daily-hpz6-oce3d-half:
