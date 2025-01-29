@@ -12,7 +12,7 @@ sources:
       forcing: historical
       start: 2020
   hz9o:
-    description: FDB IFS/FESOM test run with tco1279/NG5 native grids regridded to
+    description: FDB IFS/FESOM developer run with tco1279/NG5 native grids regridded to
       Healpix
     driver: yaml_file_cat
     args:

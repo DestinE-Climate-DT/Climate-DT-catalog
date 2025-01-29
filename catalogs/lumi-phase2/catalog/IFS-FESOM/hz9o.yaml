@@ -1,5 +1,5 @@
 sources:
-  hourly-hpz10-atm2d:
+  hourly-hpz9-atm2d:
     args:
       request:
         class: d1
@@ -31,7 +31,7 @@ sources:
       variables: [78, 79, 130, 134, 137, 151, 159, 165, 166, 167, 168, 207, 228164,
         235020, 235021, 235031, 235033, 235034, 235035, 235036, 235037, 235038, 235039,
         235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
-      source_grid_name: hpz10-nested
+      source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
   hourly-hpz7-atm2d:
     args:
@@ -67,7 +67,7 @@ sources:
         235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-  daily-hpz10-atm2d:
+  daily-hpz9-atm2d:
     args:
       request:
         class: d1
@@ -97,7 +97,7 @@ sources:
     metadata:
       fdb_home: /scratch/project_465000454/sbeyer/testfdb/HEALPix_grids
       variables: [228002, 172]
-      source_grid_name: hpz10-nested
+      source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
   daily-hpz7-atm2d:
     args:
@@ -131,7 +131,7 @@ sources:
       variables: [228002, 172]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-  hourly-hpz10-atm3d:
+  hourly-hpz9-atm3d:
     args:
       request:
         class: d1
@@ -165,7 +165,7 @@ sources:
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
-      source_grid_name: hpz10-nested
+      source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
   hourly-hpz7-atm3d:
     args:
@@ -203,7 +203,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-  daily-hpz10-oce2d:
+  daily-hpz9-oce2d:
     args:
       request:
         class: d1
@@ -234,7 +234,7 @@ sources:
       fdb_home: /scratch/project_465000454/sbeyer/testfdb/HEALPix_grids
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263123, 263124]
-      source_grid_name: fesom-NG5-hpz10-nested-v2
+      source_grid_name: fesom-NG5-hpz9-nested-v2
       fixer_name: climatedt-phase2-production
   daily-hpz7-oce2d:
     args:
@@ -269,7 +269,7 @@ sources:
         263123, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v2
       fixer_name: climatedt-phase2-production
-  daily-hpz10-oce3d:
+  daily-hpz9-oce3d:
     args:
       request:
         class: d1
@@ -309,7 +309,7 @@ sources:
         2775, 3025, 3275, 3525, 3775, 4025, 4275, 4525, 4775, 5025, 5275, 5525, 5825,
         6175]
       variables: [263500, 263501, 263505, 263506]
-      source_grid_name: fesom-NG5-hpz10-nested-3d-v2
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
       fixer_name: climatedt-phase2-production
   daily-hpz7-oce3d:
     args:
@@ -353,7 +353,7 @@ sources:
       variables: [263500, 263501, 263505, 263506]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v2
       fixer_name: climatedt-phase2-production
-  daily-hpz10-oce3d-half:
+  daily-hpz9-oce3d-half:
     args:
       request:
         class: d1
@@ -394,7 +394,7 @@ sources:
         2900.0, 3150.0, 3400.0, 3650.0, 3900.0, 4150.0, 4400.0, 4650.0, 4900.0, 5150.0,
         5400.0, 5650.0, 6000.0, 6350.0]
       variables: [263507]
-      source_grid_name: fesom-NG5-hpz10-nested-3d-v2
+      source_grid_name: fesom-NG5-hpz9-nested-3d-v2
       fixer_name: climatedt-phase2-production
   daily-hpz7-oce3d-half:
     args:
@@ -439,7 +439,7 @@ sources:
       variables: [263507]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v2
       fixer_name: climatedt-phase2-production
-  hourly-hpz10-hl:
+  hourly-hpz9-hl:
     args:
       request:
         class: d1
@@ -471,7 +471,7 @@ sources:
       fdb_home: /scratch/project_465000454/sbeyer/testfdb/HEALPix_grids
       levels: [100, 150]
       variables: [10, 131, 132]
-      source_grid_name: hpz10
+      source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
   hourly-hpz7-hl:
     args:
@@ -507,7 +507,7 @@ sources:
       variables: [10, 131, 132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-  hourly-hpz10-sol:
+  hourly-hpz9-sol:
     args:
       request:
         class: d1
@@ -539,7 +539,7 @@ sources:
       fdb_home: /scratch/project_465000454/sbeyer/testfdb/HEALPix_grids
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
-      source_grid_name: hpz10
+      source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
   hourly-hpz7-sol:
     args:
