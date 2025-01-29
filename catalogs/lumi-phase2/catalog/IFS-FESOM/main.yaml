@@ -1,6 +1,6 @@
 sources:
   hz9m:
-    description: FDB IFS/FESOM test run with tco79/CORE2 native grids regridded to
+    description: FDB IFS/FESOM lowres run with tco79/CORE2 native grids regridded to
       Healpix
     driver: yaml_file_cat
     args:
