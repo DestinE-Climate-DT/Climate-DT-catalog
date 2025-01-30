@@ -1,7 +1,7 @@
 sources:
   hz9m:
-    description: FDB IFS/FESOM lowres run with tco79/CORE2 native grids regridded to
-      Healpix
+    description: FDB IFS/FESOM lowres run with tco79/CORE2 native grids regridded
+      to Healpix
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hz9m.yaml'
@@ -12,8 +12,8 @@ sources:
       forcing: historical
       start: 2020
   hz9o:
-    description: FDB IFS/FESOM developer run with tco1279/NG5 native grids regridded to
-      Healpix
+    description: FDB IFS/FESOM developer run with tco1279/NG5 native grids regridded
+      to Healpix
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hz9o.yaml'
@@ -23,3 +23,19 @@ sources:
       resolution_oce: NG5
       forcing: historical
       start: 2020
+  hzfy:
+    description: FDB IFS/FESOM test run with tco2559/NG5 native grids regridded to
+      Healpix
+    metadata:
+      expid: hzfy
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: historical
+      start: '2020'
+      dashboard:
+        menu: hzfy
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/hzfy.yaml'
