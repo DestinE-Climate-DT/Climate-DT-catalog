@@ -6,7 +6,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -41,7 +41,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
@@ -76,7 +76,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -109,7 +109,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
@@ -142,7 +142,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -179,7 +179,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
@@ -216,7 +216,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -250,7 +250,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
@@ -284,7 +284,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -340,7 +340,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
@@ -396,7 +396,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -431,7 +431,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
@@ -466,7 +466,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
@@ -501,7 +501,7 @@ sources:
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
         experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
