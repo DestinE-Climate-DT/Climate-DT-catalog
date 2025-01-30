@@ -18,7 +18,7 @@ sources:
         param: 78
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: h
       timestep: h
@@ -53,7 +53,7 @@ sources:
         param: 78
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: h
       timestep: h
@@ -88,7 +88,7 @@ sources:
         param: 228002
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: D
       timestep: h
@@ -121,7 +121,7 @@ sources:
         param: 228002
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: D
       timestep: h
@@ -156,7 +156,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: 6h
       savefreq: h
       timestep: h
@@ -193,7 +193,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: 6h
       savefreq: h
       timestep: h
@@ -228,7 +228,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: D
       timestep: h
@@ -262,7 +262,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: D
       timestep: h
@@ -301,7 +301,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: D
       timestep: h
@@ -331,7 +331,7 @@ sources:
         4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
         5902.0576171875]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: nemo-eORCA12-hpz10-nested-3d
+      source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
   daily-hpz7-oce3d:
     args:
@@ -357,7 +357,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: D
       timestep: h
@@ -387,7 +387,7 @@ sources:
         4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
         5902.0576171875]
       variables: [263500, 263501, 263505, 263506, 263507]
-      source_grid_name: nemo-eORCA12-hpz7-nested-3d
+      source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
   hourly-hpz10-hl:
     args:
@@ -409,7 +409,7 @@ sources:
         levtype: hl
         levelist: [100, 150]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: h
       timestep: h
@@ -444,7 +444,7 @@ sources:
         levtype: hl
         levelist: [100, 150]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: h
       timestep: h
@@ -479,7 +479,7 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: h
       timestep: h
@@ -514,7 +514,7 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20200101T0000
-      data_end_date: auto
+      data_end_date: 20200102T0000
       chunks: D
       savefreq: h
       timestep: h
