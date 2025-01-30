@@ -17,7 +17,7 @@ sources:
         time: 0000
         param: 78
         levtype: sfc
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -51,7 +51,7 @@ sources:
         time: 0000
         param: 78
         levtype: sfc
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -85,7 +85,7 @@ sources:
         time: 0000
         param: 228002
         levtype: sfc
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -117,7 +117,7 @@ sources:
         time: 0000
         param: 228002
         levtype: sfc
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -151,7 +151,7 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: 6h
       savefreq: h
@@ -187,7 +187,7 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: 6h
       savefreq: h
@@ -221,7 +221,7 @@ sources:
         time: 0000
         param: 263000
         levtype: o2d
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -254,7 +254,7 @@ sources:
         time: 0000
         param: 263000
         levtype: o2d
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -291,7 +291,7 @@ sources:
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -333,7 +333,7 @@ sources:
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -375,7 +375,7 @@ sources:
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -418,7 +418,7 @@ sources:
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
@@ -458,7 +458,7 @@ sources:
         param: 10
         levtype: hl
         levelist: [100, 150]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -492,7 +492,7 @@ sources:
         param: 10
         levtype: hl
         levelist: [100, 150]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -526,7 +526,7 @@ sources:
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
@@ -560,7 +560,7 @@ sources:
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
-      data_start_date: 20200120T0000
+      data_start_date: 19880101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
