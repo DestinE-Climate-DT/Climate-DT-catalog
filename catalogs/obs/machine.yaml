@@ -30,3 +30,19 @@ MN5:
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/data/AQUA/datasets
     OUTPUT_AQUA_PATH: null
+lumi-e25.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA_O-25.1_v1.0/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA_O-25.1_v1.0/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA_O-25.1_v1.0/areas
+  intake:
+    DATA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA-obs_v1.0/datasets
+    OUTPUT_AQUA_PATH: null
+MN5-e25.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/shared_input_data/AQUA_O-25.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc01/shared_input_data/AQUA_O-25.1_v1.0/weights
+    areas: /gpfs/scratch/ehpc01/shared_input_data/AQUA_O-25.1_v1.0/areas
+  intake:
+    DATA_PATH: /gpfs/scratch/ehpc01/shared_input_data/AQUA-obs_v1.0//datasets
+    OUTPUT_AQUA_PATH: null
