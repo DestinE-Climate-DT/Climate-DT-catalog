@@ -12,7 +12,6 @@ sources:
         levelist: [1000]
         date: "20080101"
         time: "0000"
-        step: 0
       data_start_date: "20080101T1200"
       data_end_date: "20080101T1200"
       chunks: h
@@ -38,7 +37,6 @@ sources:
         levelist: [1000]
         date: "20080101"
         time: "0000"
-        step: 0
       data_start_date: "20080101T1200"
       data_end_date: "20080101T1200"
       chunks: h
@@ -68,7 +66,6 @@ sources:
         time: "0000"
         param: 164
         levtype: sfc
-        step: 0
       data_start_date: auto
       data_end_date: auto
       chunks: h
@@ -94,7 +91,6 @@ sources:
         levelist: [1000, 900, 800]
         date: "20080101"
         time: "0000"
-        step: 0
       data_start_date: "20080101T1200"
       data_end_date: "20080101T1200"
       chunks: h
@@ -129,7 +125,6 @@ sources:
         levelist: [1000, 900, 800]
         date: "20080101"
         time: "0000"
-        step: 0
       data_start_date: "20080101T1200"
       data_end_date: "20080101T1200"
       chunks: h
