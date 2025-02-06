@@ -145,3 +145,9 @@ sources:
       path: '{{CATALOG_DIR}}/t01o.yaml'
     description: IFS/NEMO test run for AQUA workflow integration
     driver: yaml_file_cat
+  a20t:
+    args:
+      path: '{{CATALOG_DIR}}/a20t.yaml'
+    description: IFS/NEMO - 1990 historical test with MACv2SP aerosols - Tco1279/eORCA12
+    driver: yaml_file_cat
+
