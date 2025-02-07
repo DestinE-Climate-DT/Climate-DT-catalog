@@ -5,3 +5,4 @@ default:
     areas: ./AQUA_tests/weights
   intake:
     TEST_PATH: ./AQUA_tests/models
+    FDB_HOME: /app
