@@ -6,3 +6,12 @@ default:
   intake:
     TEST_PATH: ./AQUA_tests/models
     FDB_HOME: /app
+lumi:
+  paths: 
+    grids: ./AQUA_tests/grids
+    weights: ./AQUA_tests/weights
+    areas: ./AQUA_tests/weights
+  intake:
+    TEST_PATH: ./AQUA_tests/models
+    # test FDB HOME on Lumi on padavini user
+    FDB_HOME: /pfs/lustrep3/projappl/project_465000454/padavini/FDB-TEST 
