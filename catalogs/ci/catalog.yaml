@@ -4,6 +4,10 @@ metadata:
       type: str
       description: the path to test datasets
       default: '.'
+    FDB_HOME:
+      type: str
+      description: the path to the FDB installation
+      default: '/app'
 
 sources:
   FESOM:
