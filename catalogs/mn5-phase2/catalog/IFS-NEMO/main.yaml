@@ -153,6 +153,20 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  ssp370-2020-freeze:
+    description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
+    metadata:
+      expid: a25q
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: control
+      start: 2020
+      dashboard:
+        menu: SSP3-7.0 2020 freeze
+        resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ssp370-2020-freeze.yaml'
   i9t5:
     description: FDB IFS/NEMO test run with prodction resolution tco2559/eORCA12 native
       grids regridded to Healpix
