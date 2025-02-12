@@ -21,7 +21,7 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata:
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
       variables: [130]
 
@@ -47,7 +47,7 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata:
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
 
   fdb-auto:
@@ -77,7 +77,7 @@ sources:
     description: test FDB archive using new schema and auto dates
     driver: gsv
     metadata: 
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: test-hpz7-nested-fdb
       variables: [164]
 
@@ -103,7 +103,7 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata: 
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
       levels: [999.99, 899.99, 799.99]
       variables: [130]
@@ -138,6 +138,6 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata: 
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
       variables: [130]
