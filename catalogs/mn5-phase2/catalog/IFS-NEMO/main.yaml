@@ -135,3 +135,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  a245:
+    description: FDB IFS/NEMO historical run
+    metadata:
+      expid: a245
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a245
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a245.yaml'
