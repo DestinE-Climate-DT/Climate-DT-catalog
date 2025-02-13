@@ -13,12 +13,12 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -47,12 +47,12 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -81,12 +81,12 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -112,14 +112,14 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: 6h
       savefreq: h
       timestep: h
@@ -147,14 +147,14 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -183,12 +183,12 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -215,12 +215,12 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -247,7 +247,7 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 263500
         levtype: o3d
@@ -257,7 +257,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -301,7 +301,7 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 263505
         levtype: o3d
@@ -311,7 +311,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: MS
       timestep: h
@@ -355,13 +355,13 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -388,13 +388,13 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 235131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -421,13 +421,13 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -454,13 +454,13 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -487,13 +487,13 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: 0000
         param: 260199
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -520,13 +520,13 @@ sources:
         expver: a245  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19900101/to/19900201
+        date: 19900101/to/19900301
         time: None
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 19900201T2300
+      data_end_date: 19900301T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -539,3 +539,15 @@ sources:
       variables: [235077]
       source_grid_name: hpz5
       fixer_name: ifs-destine-v1
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032376/a245/out/LRA/fc0/mn5-phase2/IFS-NEMO/a245/r100/monthly/*a245_r100_monthly_*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
