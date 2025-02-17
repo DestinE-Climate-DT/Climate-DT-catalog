@@ -23,7 +23,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -59,7 +58,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -95,7 +93,6 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -129,7 +126,6 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -165,7 +161,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -203,7 +198,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -239,7 +233,6 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -274,7 +267,6 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -314,7 +306,6 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -371,7 +362,6 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -424,7 +414,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -460,7 +449,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -496,7 +484,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -532,7 +519,6 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     driver: gsv
     metadata:
@@ -541,6 +527,7 @@ sources:
       variables: [228141]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
+
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
