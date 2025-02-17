@@ -168,3 +168,45 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/i9t5.yaml'
+  a23s:
+    description: 'ifs-nemo a23s, 1990, grids: tco399 eORCA025'
+    metadata:
+      expid: a23s
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a23s
+        resolution_id: MR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a23s.yaml'
+  a245:
+    description: 'ifs-nemo a245, 1990, grids: tco79 eORCA1'
+    metadata:
+      expid: a245
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a245
+        resolution_id: LR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a245.yaml'
+  a248:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
+    metadata:
+      expid: a248
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a248
+        resolution_id: HR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a248.yaml'
