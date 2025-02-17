@@ -54,7 +54,7 @@ sources:
         param: 8
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
@@ -90,7 +90,7 @@ sources:
         param: 129
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
@@ -124,7 +124,7 @@ sources:
         param: 129
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
@@ -160,7 +160,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: 6h
       savefreq: h
       timestep: h
@@ -198,7 +198,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: 6h
       savefreq: h
       timestep: h
@@ -234,7 +234,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
@@ -269,7 +269,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
@@ -309,7 +309,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
@@ -366,7 +366,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
@@ -419,7 +419,7 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
@@ -455,7 +455,7 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
@@ -491,7 +491,7 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
@@ -527,7 +527,7 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20200101T0000
-      data_end_date: 20251201T2300
+      data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
