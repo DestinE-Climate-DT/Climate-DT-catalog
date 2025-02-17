@@ -166,7 +166,7 @@ sources:
         resolution_id: SR
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/ssp370-2020-freeze.yaml'
+      path: '{{CATALOG_DIR}}/a25q.yaml'
   i9t5:
     description: FDB IFS/NEMO test run with prodction resolution tco2559/eORCA12 native
       grids regridded to Healpix

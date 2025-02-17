@@ -5,7 +5,7 @@ sources:
         class: d1
         dataset: climate-dt
         activity: ScenarioMIP  # To be overwritten by workflow/config file
-        experiment:   # To be overwritten by workflow/config file
+        experiment: SSP3-7.0  # To be overwritten by workflow/config file
         generation: 1  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
@@ -13,12 +13,12 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 20200101
         time: 0000
         param: 8
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
@@ -49,12 +49,12 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 8
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -85,12 +85,12 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 129
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -119,12 +119,12 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 129
         levtype: sfc
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -153,14 +153,14 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: 6h
       savefreq: h
       timestep: h
@@ -191,14 +191,14 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: 6h
       savefreq: h
       timestep: h
@@ -229,12 +229,12 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -264,12 +264,12 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -299,7 +299,7 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 263500
         levtype: o3d
@@ -309,7 +309,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -356,7 +356,7 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 263500
         levtype: o3d
@@ -366,7 +366,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -413,13 +413,13 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 228246
         levtype: hl
         levelist: [100]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -449,13 +449,13 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 228246
         levtype: hl
         levelist: [100]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -485,13 +485,13 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -521,13 +521,13 @@ sources:
         expver: a25q  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 20200101/to/20500101
+        date: 19900101/to/20251201
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20200101T0000
-      data_end_date: 20500101T2300
+      data_end_date: 20251201T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -541,3 +541,15 @@ sources:
       variables: [228141]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/data/AQUA//LRA/fc0/mn5-phase2/IFS-NEMO/a25q/r100/monthly/*a25q_r100_monthly_*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
