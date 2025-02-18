@@ -40,4 +40,4 @@ jobs:
 
             - name: Add catalogs from folders
               run: |
-                for catalog in $(ls catalogs); do aqua -vv add $catalog -e /workspace/catalogs/$catalog; done
+                for catalog in $(ls catalogs); do aqua -vv add $catalog -e catalogs/$catalog; done
