@@ -20,12 +20,27 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'ready')
         runs-on: ubuntu-latest
         continue-on-error: false
-        container:
-            image: ghcr.io/destine-climate-dt/aqua:0.13.1
-            options: --user root
+        # container:
+        #     image: ghcr.io/destine-climate-dt/aqua:0.13.1
+        #     options: --user root
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+            - name: Cache Docker layers
+              uses: actions/cache@v4
+              with:
+                path: /tmp/.buildx-cache
+                key: ${{ runner.os }}-docker-${{ github.sha }}
+                restore-keys: |
+                    ${{ runner.os }}-docker-
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v3
+            - name: Pull or Build Image
+              run: |
+                docker pull ghcr.io/destine-climate-dt/aqua:0.13.1 || \
+                docker build --cache-from=type=local,src=/tmp/.buildx-cache \
+                             --cache-to=type=local,dest=/tmp/.buildx-cache \
+                             -t ghcr.io/destine-climate-dt/aqua:0.13.1 .
             - name: Verify environment
               run: |
                 echo "Running inside container:"
