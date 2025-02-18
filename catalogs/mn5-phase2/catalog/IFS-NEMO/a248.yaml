@@ -23,7 +23,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -56,7 +56,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -89,7 +89,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -120,7 +120,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -153,7 +153,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -188,7 +188,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -221,7 +221,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -253,7 +253,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -290,7 +290,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -344,7 +344,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -394,7 +394,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -427,7 +427,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -460,7 +460,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
@@ -493,7 +493,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description:
+    description: 'ifs-nemo a248, 1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a248/fdb
