@@ -23,7 +23,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description:
+    description: 'ifs-nemo a23s, 1990, grids: tco399 eORCA025'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a23s/fdb
@@ -59,7 +59,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description:
+    description: 'ifs-nemo a23s, 1990, grids: tco399 eORCA025'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a23s/fdb
@@ -93,7 +93,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description:
+    description: 'ifs-nemo a23s, 1990, grids: tco399 eORCA025'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a23s/fdb
@@ -130,7 +130,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description:
+    description: 'ifs-nemo a23s, 1990, grids: tco399 eORCA025'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/a23s/fdb
