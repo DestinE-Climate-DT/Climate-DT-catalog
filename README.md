@@ -1,8 +1,7 @@
 # Climate-DT-catalog
 
 This is the AQUA catalog for Climate DT. Includes catalogs for levante, lumi, MN5 and leonardo.
-This repository focuses on the catalog, **the main AQUA codebase will be open-sourced soon**.
-
+This repository focuses on the catalog, the main AQUA codebase is open-sourced and can be found [here](https://github.com/DestinE-Climate-DT/AQUA)
 ## Available catalogs
 
 1. ci: Catalog for the CI/CD tests of AQUA.
@@ -18,3 +17,15 @@ This repository focuses on the catalog, **the main AQUA codebase will be open-so
 11. obs: Catalog with the observational datasets. (multi machine)
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
+
+## Check the catalogs
+
+To check that your changes to the catalog are correct, you can use the aqua code and run the following command:
+
+```bash
+aqua add catalog_name -e /path/to/repo/catalogs/catalog_name
+```
+
+If you want to know more on the AQUA code, please refer to the [AQUA documentation](https://aqua.readthedocs.io/en/latest/index.html).
+This test can also be run in the CI/CD pipeline, please set the label as `ready to merge` to enable the test.
+It is a requirement to successfully pass the test before merging the PR.
