@@ -44,6 +44,11 @@ sources:
       path: '{{CATALOG_DIR}}/a1mb.yaml'
     description: IFS/NEMO reduced output test source
     driver: yaml_file_cat
+  a1v6:
+    args:
+      path: '{{CATALOG_DIR}}/a1v6.yaml'
+    description: IFS/NEMO reduced output test source
+    driver: yaml_file_cat
   a1md:
     args:
       path: '{{CATALOG_DIR}}/a1md.yaml'
