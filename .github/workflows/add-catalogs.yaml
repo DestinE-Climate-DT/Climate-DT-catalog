@@ -1,0 +1,43 @@
+name: Test Catalogs
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+    schedule:
+        - cron: "0 3 * * 1" # run every Monday night at 3AM UTC
+
+permissions:
+    contents: read
+
+defaults:
+    run:
+        shell: bash -l -eo pipefail {0}
+
+jobs:
+    catalogs_test:
+        if: contains(github.event.pull_request.labels.*.name, 'ready to merge')
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        container:
+            image: ghcr.io/destine-climate-dt/aqua:0.13.1
+            options: --user root
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Verify environment
+              run: |
+                echo "Running inside container:"
+                uname -a
+                which python || echo "Python not found"
+
+            - name: Set up AQUA
+              run: |
+                # Initialize the AQUA catalog in the $HOME/.aqua folder
+                aqua -vv install github
+
+            - name: Add catalogs from folders
+              run: |
+                for catalog in $(ls catalogs); do aqua -vv add $catalog -e catalogs/$catalog; done
