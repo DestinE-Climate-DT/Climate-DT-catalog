@@ -14,3 +14,4 @@ Make sure to complete the checkboxes before applying the "ready" label.
  - [ ] Fixes are added to AQUA if new fixes are needed.
  - [ ] Grids are added to AQUA if new grids are needed.
  - [ ] Specific catalog README file is updated or added if needed (note of caution, errata, work to be done, etc.).
+ - [ ] Tests are passing.
