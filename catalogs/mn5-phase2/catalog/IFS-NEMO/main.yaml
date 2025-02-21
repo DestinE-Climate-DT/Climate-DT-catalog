@@ -168,3 +168,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/i9t5.yaml'
+  a28r:
+    description: FDB IFS/NEMO historical run
+    metadata:
+      expid: a28r
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a28r
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a28r.yaml'
