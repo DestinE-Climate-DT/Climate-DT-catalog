@@ -81,6 +81,40 @@ sources:
       source_grid_name: test-hpz7-nested-fdb
       variables: [164]
 
+  fdb-bridge:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-NEMO
+        realization: 1
+        resolution: standard
+        expver: a0h3
+        type: fc
+        stream: clte
+        date: 19900101
+        time: "0000"
+        param: 164
+        levtype: sfc
+        step: 0
+      data_start_date: 19900101T0000
+      data_end_date: 19900102T0000
+      bridge_start_date: 19900101T1200
+      bridge_end_date: 19900101T1800
+      chunks: h
+      timestep: h
+      timestyle: date
+    description: test FDB archive with bridge and hpc access
+    driver: gsv
+    metadata: 
+      fdb_home: "{{ FDB_HOME }}"
+      fdb_home_bridge: "{{ FDB_HOME }}"
+      source_grid_name: test-hpz7-nested-fdb
+      variables: [164]
+
   fdb-levels: &base-default
     args: &args-default
       request:
