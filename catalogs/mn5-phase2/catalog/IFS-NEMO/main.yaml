@@ -125,6 +125,16 @@ sources:
       path: '{{CATALOG_DIR}}/a1rf.yaml'
     description: IFS/NEMO - 1950 control - Tco1279/eORCA12
     driver: yaml_file_cat
+  a26d:
+    args:
+      path: '{{CATALOG_DIR}}/a26d.yaml'
+    description: IFS/NEMO - ensemble
+    driver: yaml_file_cat
+  a26j:
+    args:
+      path: '{{CATALOG_DIR}}/a26j.yaml'
+    description: IFS/NEMO - ensemble
+    driver: yaml_file_cat
   historical-1990-freeze:
     description: IFS/NEMO - 1990 historical - DSuite freeze - Tco1279/eORCA12
     metadata:
