@@ -168,3 +168,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/i9t5.yaml'
+  a27r:
+    description: IFS/NEMO - 1990 coupled spinup - Tco2559/eORCA12
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a27r.yaml'
