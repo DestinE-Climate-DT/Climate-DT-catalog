@@ -1,0 +1,62 @@
+sources:
+  monthly-r100-atm2d: &base-default
+    args: &args-default
+      request: &request-default
+        class: d1
+        dataset: climate-dt
+        activity: highresmip
+        experiment: cont
+        generation: 1
+        model: IFS-NEMO
+        resolution: standard
+        realization: 1
+        expver: a27r
+        type: fc
+        stream: clmn
+        year: 1988
+        month: 1
+        param: 235036
+        levtype: sfc
+      data_start_date: 19880101T0000
+      data_end_date: 19890101T2300
+      chunks: MS  # Default time chunk size
+      savefreq: MS  # at what frequency are data saved
+      timestep: h  # base timestep for step timestyle
+      timestyle: yearmonth  # variable date or variable step
+    description: monthly 2d atmospheric data on regural r025 grid.
+    driver: gsv
+    metadata: &metadata-default
+      fdb_home: /gpfs/scratch/ehpc01/experiments/a27r/fdb/latlon/
+      # eccodes_path: /gpfs/scratch/ehpc01/bsc032519/eccodes2.35.1/eccodes/definitions
+      variables: [235037, 172144, 235033, 235034, 235038, 235039, 235040, 172228,
+        235051, 235052, 235053, 228004, 172182, 235041, 235042, 235151, 235049, 235050]
+      source_grid_name: lon-lat
+      fixer_name: ifs-nemo-reduced-output-monthly-v2
+
+  monthly-r100-atm3d:
+    <<: *base-default
+    description: monthly 3d atmospheric data on regural r025 grid.
+    args:
+      <<: *args-default
+      request:
+        <<: *request-default
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
+          700, 850, 925, 1000]
+    metadata:
+      <<: *metadata-default
+      variables: [235130, 235131, 235132, 235133]
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
+        850, 925, 1000]
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/data/AQUA//LRA/wf/mn5-phase2/IFS-NEMO/a27r/r100/monthly/*a27r_r100_monthly_*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
