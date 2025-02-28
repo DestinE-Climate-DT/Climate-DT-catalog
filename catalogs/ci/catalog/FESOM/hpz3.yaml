@@ -2,10 +2,18 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  monthly:
+  monthly-2d:
+    metadata:
+      source_grid_name: test-hpz3-nested-fesom
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/FESOM/hpz3/IFS-FESOM_*_historical-1990_r100_monthly_1990-1994_hpz3.nc'
+    driver: netcdf
+
+  monthly-3d:
     metadata:
       source_grid_name: test-hpz3-nested-fesom-3d
     args:
       urlpath:
-      - '{{ TEST_PATH }}/FESOM/hpz3/IFS-FESOM_avg_thetao_historical-1990_r100_monthly_1990-1994_hpz3_lev12.nc'
+      - '{{ TEST_PATH }}/FESOM/hpz3/IFS-FESOM_*_historical-1990_r100_monthly_1990-1994_hpz3_lev12.nc'
     driver: netcdf
