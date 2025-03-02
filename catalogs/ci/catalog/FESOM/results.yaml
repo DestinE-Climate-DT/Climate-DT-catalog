@@ -1,0 +1,19 @@
+plugins:
+  source:
+  - module: intake_xarray
+sources:
+  timeseries-mon:
+    metadata:
+      source_grid_name: null
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/FESOM/results/global_time_series_timeseries_2t_IFS-FESOM_historical-1990_mon.nc'
+    driver: netcdf
+
+  atmglobalmean2D-2t:
+    metadata:
+      source_grid_name: 
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/FESOM/results/atmglobalmean.statistics_maps.2t.IFS-FESOM_historical-1990.nc'
+    driver: netcdf
