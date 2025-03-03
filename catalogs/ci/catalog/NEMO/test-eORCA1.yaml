@@ -5,6 +5,7 @@ sources:
   long-2d:
     metadata:
       source_grid_name: eORCA1-2d
+      time_coder: 's'
     args:
       chunks:
         time: 1
