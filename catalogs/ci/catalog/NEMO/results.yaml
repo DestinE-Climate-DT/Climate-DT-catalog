@@ -2,7 +2,7 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  zonal_mean-mon:
+  zonal_mean-latlev:
     metadata:
       source_grid_name: null
     args:

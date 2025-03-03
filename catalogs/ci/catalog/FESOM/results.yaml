@@ -2,7 +2,7 @@ plugins:
   source:
   - module: intake_xarray
 sources:
-  timeseries-mon:
+  timeseries1D:
     metadata:
       source_grid_name: null
     args:
@@ -10,7 +10,7 @@ sources:
       - '{{ TEST_PATH }}/FESOM/results/global_time_series_timeseries_2t_IFS-FESOM_historical-1990_mon.nc'
     driver: netcdf
 
-  atmglobalmean2D-2t:
+  atmglobalmean2D:
     metadata:
       source_grid_name: 
     args:
