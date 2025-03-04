@@ -14,3 +14,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/hpz3.yaml"
+  results:
+    description: AQUA output to test ensemble module
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/results.yaml"
