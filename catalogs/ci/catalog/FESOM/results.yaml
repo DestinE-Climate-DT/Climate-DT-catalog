@@ -12,7 +12,7 @@ sources:
 
   atmglobalmean2D:
     metadata:
-      source_grid_name: 
+      source_grid_name: null 
     args:
       urlpath:
       - '{{ TEST_PATH }}/FESOM/results/atmglobalmean.statistics_maps.2t.IFS-FESOM_historical-1990.nc'
