@@ -18,3 +18,13 @@ MN5-e25.1:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/weights
     areas: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/areas
+lumi-o25.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/areas
+MN5-o25.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/weights
+    areas: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/areas
