@@ -1,4 +1,19 @@
 sources:
   empty:
     description: Empty catalog
-    driver: null
+    driver:
+  t03r:
+    description: FDB IFS/NEMO historical run
+    metadata:
+      expid: t03r
+      resolution_atm: R2B8
+      resolution_oce: R02B08
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: t03r
+        resolution_id: SR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t03r.yaml'
