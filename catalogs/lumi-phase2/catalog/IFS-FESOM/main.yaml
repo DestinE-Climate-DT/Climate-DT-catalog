@@ -39,3 +39,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hzfy.yaml'
+  a280:
+    description: FDB IFS/NEMO historical run
+    metadata:
+      expid: a280
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a280
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a280.yaml'
