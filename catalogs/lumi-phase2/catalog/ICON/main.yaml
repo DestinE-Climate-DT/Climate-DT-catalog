@@ -31,7 +31,7 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/test-production.yaml'
   t03x:
-    description: FDB IFS/NEMO historical run
+    description: '"icon t03x 1990, grids: R2B9 R02B09"'
     metadata:
       expid: t03x
       resolution_atm: R2B9
