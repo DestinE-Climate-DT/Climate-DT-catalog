@@ -239,3 +239,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  t03g:
+    description: '"ifs-nemo t03g 1990, grids: tco79 eORCA1"'
+    metadata:
+      expid: t03g
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: t03g
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t03g.yaml'
