@@ -65,3 +65,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/WOA18/main.yaml"
+  WAGHC:
+    description: WAGHC climatology
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/WAGHC/main.yaml"
