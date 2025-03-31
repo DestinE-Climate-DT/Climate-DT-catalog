@@ -5,7 +5,6 @@ leonardo:
     areas: /leonardo_work/DestE_330_24/AQUA/areas
   intake:
     DATA_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
-    OUTPUT_AQUA_PATH: null
 levante:
   paths:
     grids: /work/bb1153/b382075/aqua/grids
@@ -13,7 +12,6 @@ levante:
     areas: /work/bb1153/b382075/aqua/areas
   intake:
     DATA_PATH: /work/bb1153/b382289/data/AQUA/datasets
-    OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
 lumi:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
@@ -21,7 +19,6 @@ lumi:
     areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
   intake:
     DATA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
-    OUTPUT_AQUA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/pre_computed_aqua_analysis
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids
@@ -29,7 +26,6 @@ MN5:
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/data/AQUA/datasets
-    OUTPUT_AQUA_PATH: null
 lumi-e25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
@@ -37,7 +33,6 @@ lumi-e25.1:
     areas: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/areas
   intake:
     DATA_PATH: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA-obs_v1.0/datasets
-    OUTPUT_AQUA_PATH: null
 MN5-e25.1:
   paths:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
@@ -45,7 +40,6 @@ MN5-e25.1:
     areas: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA-obs_v1.0/datasets
-    OUTPUT_AQUA_PATH: null
 lumi-o25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
@@ -53,7 +47,6 @@ lumi-o25.1:
     areas: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/areas
   intake:
     DATA_PATH: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA-obs_v1.0/datasets
-    OUTPUT_AQUA_PATH: null
 MN5-o25.1:
   paths:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
@@ -61,4 +54,3 @@ MN5-o25.1:
     areas: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA-obs_v1.0/datasets
-    OUTPUT_AQUA_PATH: null
