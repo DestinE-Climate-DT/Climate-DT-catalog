@@ -40,7 +40,8 @@ sources:
       dashboard:
         menu: control 1990
         resolution_id: MR
-        note: This contains the control tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 CTRL)
+        note: This contains the control tco399-eOrca0.25 starting from Charles ICs
+          and Charles namelists (Charles_v3 CTRL)
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hs3l-control-1990.yaml'
@@ -55,12 +56,14 @@ sources:
       dashboard:
         menu: historical 1990
         resolution_id: MR
-        note: This contains the historical tco399-eOrca0.25 starting from Charles ICs and Charles namelists (Charles_v3 HIST)
+        note: This contains the historical tco399-eOrca0.25 starting from Charles
+          ICs and Charles namelists (Charles_v3 HIST)
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hs3l-historical-1990.yaml'
   if8s:
-    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ECMWF recommended ocean settings
+    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ECMWF recommended
+      ocean settings
     metadata:
       expid: if8s
       resolution_atm: tco399
@@ -74,7 +77,8 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/if8s.yaml'
   ifca:
-    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ECMWF reccommended ocean settings and E-P term removed in qemp
+    description: IFS-NEMO tco399-eORCA025 1990 control run from ATOS using ECMWF reccommended
+      ocean settings and E-P term removed in qemp
     metadata:
       expid: ifca
       resolution_atm: tco399
@@ -101,3 +105,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/igsg.yaml'
+  a2cn:
+    description: '"ifs-nemo a2cn 1990, grids: tco79 eORCA1"'
+    metadata:
+      expid: a2cn
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a2cn
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2cn.yaml'
