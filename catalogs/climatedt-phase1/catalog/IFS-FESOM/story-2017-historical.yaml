@@ -74,6 +74,7 @@ sources:
     metadata:
       <<: *metadata-default
       source_grid_name: hpz9-nested
+      fixer_name: story-cerra
 
   hourly-hpz9-atm3d:
     <<: *base-default
@@ -201,7 +202,7 @@ sources:
     args:
       <<: *args-default
       chunks: 6h
-      bridge_end_date: null
+      bridge_end_date:
       data_start_date: 20180101T0000
       request:
         <<: *request-default
