@@ -54,3 +54,10 @@ MN5-o25.1:
     areas: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA-obs_v1.0/datasets
+hpc2020:
+  paths:
+    grids: /ec/res4/hpcperm/ccjh/aqua_data/grids
+    weights: /ec/res4/hpcperm/ccjh/aqua_data/weights
+    areas: /ec/res4/hpcperm/ccjh/aqua_data/areas
+  intake:
+    DATA_PATH: /ec/res4/hpcperm/ccjh/obs/destine/
