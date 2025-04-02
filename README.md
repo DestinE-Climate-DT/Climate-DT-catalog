@@ -30,3 +30,7 @@ aqua add catalog_name -e /path/to/repo/catalogs/catalog_name
 If you want to know more on the AQUA code, please refer to the [AQUA documentation](https://aqua.readthedocs.io/en/latest/index.html).
 This test can also be run in the CI/CD pipeline, please set the label as `ready to merge` to enable the test.
 It is a requirement to successfully pass the test before merging the PR.
+
+## License
+
+Climate-DT-catalog is distributed as open source software under Apache 2.0 License. The copyright owner is the European Union, represented by the European Commission. The development of Climate-DT-catalog has been funded by the European Union through Contract `DE_340_CSC - Destination Earth Programme Climate Adaptation Digital Twin (Climate DT)`. Further info can be found at https://destine.ecmwf.int/ and https://destination-earth.eu/
