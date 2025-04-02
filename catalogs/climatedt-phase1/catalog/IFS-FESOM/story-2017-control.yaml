@@ -71,6 +71,7 @@ sources:
     metadata:
       <<: *metadata-default
       source_grid_name: hpz9-nested
+      fixer_name: story-cerra
 
   hourly-hpz9-atm3d:
     <<: *base-default
