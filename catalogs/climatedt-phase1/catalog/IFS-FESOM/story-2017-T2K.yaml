@@ -20,7 +20,7 @@ sources:
         step: 0
       data_start_date: 20170101T0000
       data_end_date: 20241031T2300
-      bridge_end_date: 20231231T2300
+      #bridge_end_date: 20231231T2300
       chunks: D
       savefreq: h # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -30,7 +30,7 @@ sources:
     metadata: &metadata-default
       fdb_home: '{{ FDB_PATH }}'
       fdb_home_bridge: '{{ FDB_PATH }}/databridge'
-      eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
+      # eccodes_path: '{{ ECCODES_PATH }}/eccodes-2.32.5/definitions'
       variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
         187, 188, 235, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179, 180, 181,
         182, 212, 228]
@@ -71,6 +71,7 @@ sources:
     metadata:
       <<: *metadata-default
       source_grid_name: hpz9-nested
+      fixer_name: story-cerra
 
   hourly-hpz9-atm3d:
     <<: *base-default
@@ -154,7 +155,7 @@ sources:
       bridge_end_date: 20231231
       request:
         <<: *request-default
-        resolution: standard
+        resolution: high
         levtype: o2d
     metadata:
       <<: *metadata-default
@@ -174,7 +175,7 @@ sources:
       bridge_end_date: 20231231
       request:
         <<: *request-default
-        resolution: standard
+        resolution: high
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
