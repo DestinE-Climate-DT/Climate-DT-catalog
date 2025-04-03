@@ -30,3 +30,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/test-production.yaml'
+  t03x:
+    description: '"icon t03x 1990, grids: R2B9 R02B09"'
+    metadata:
+      expid: t03x
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: t03x
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t03x.yaml'
