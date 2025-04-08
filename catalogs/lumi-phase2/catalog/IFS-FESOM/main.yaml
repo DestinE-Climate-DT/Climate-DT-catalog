@@ -39,3 +39,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hzfy.yaml'
+  t04r:
+    description: '"ifs-fesom t04r 1988, grids: tco2559 NG5"'
+    metadata:
+      expid: t04r
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: control
+      start: '1988'
+      dashboard:
+        menu: t04r
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t04r.yaml'
