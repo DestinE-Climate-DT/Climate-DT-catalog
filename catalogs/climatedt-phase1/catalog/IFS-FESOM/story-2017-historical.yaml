@@ -95,6 +95,7 @@ sources:
         850, 925, 1000]
       variables: [129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz9-nested
+      fixer_name: story-cerra
 
 
   daily-hpz7-oce2d:
