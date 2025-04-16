@@ -11,8 +11,8 @@ MN5:
 lumi-e25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/areas
+    weights: /scratch/project_465001542/aqua_cache/weights
+    areas: /scratch/project_465001542/aqua_cache/areas
 MN5-e25.1:
   paths:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
