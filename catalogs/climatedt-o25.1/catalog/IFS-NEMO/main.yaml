@@ -1,4 +1,15 @@
 sources:
-  empty:
-    description: Empty catalog
-    driver: null
+  "hist-1990-10km":
+    description: IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12
+    metadata:
+      expid: "0001"
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: historical
+      start: 1990
+      dashboard:
+        menu: historical 1990 ensemble
+        resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/hist-1990-10km.yaml'
