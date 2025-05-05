@@ -1,0 +1,7 @@
+MN5:
+  paths:
+    grids: /path/to/grids
+    weights: /path/to/weights
+    areas: /path/to/areas
+  intake:
+    PARAMETER1: /path/to/something
