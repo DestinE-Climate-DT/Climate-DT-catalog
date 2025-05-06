@@ -1,5 +1,5 @@
 sources:
-  "hist-1990-10km":
+  "hist-1990-ensemble":
     description: IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12
     metadata:
       expid: "0001"
@@ -12,4 +12,4 @@ sources:
         resolution_id: SR
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/hist-1990-10km.yaml'
+      path: '{{CATALOG_DIR}}/hist-1990-ensemble.yaml'
