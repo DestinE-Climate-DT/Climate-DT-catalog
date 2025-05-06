@@ -20,7 +20,6 @@ sources:
         step: 0
       data_start_date: 20170101T0000
       data_end_date: 20241031T2300
-      #bridge_end_date: 20231231T2300
       chunks: D
       savefreq: h # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -36,7 +35,7 @@ sources:
         182, 212, 228]
         # 260048 (tprate) has been removed due to wrong accumulation time
       source_grid_name: hpz7-nested
-      fixer_name: ifs-destine-v1
+      fixer_name: story-cerra
 
 
   hourly-hpz7-atm3d:
@@ -107,7 +106,6 @@ sources:
         resolution: standard
         levtype: o2d
       data_end_date: 20241031
-      bridge_end_date: 20231231
     metadata:
       <<: *metadata-default
       fdb_home: '{{ FDB_PATH }}'
@@ -123,7 +121,6 @@ sources:
       chunks: D
       savefreq: D
       data_end_date: 20241031
-      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: standard
@@ -153,7 +150,6 @@ sources:
       chunks: MS
       savefreq: D
       data_end_date: 20241031
-      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: high
@@ -173,7 +169,6 @@ sources:
       chunks: D
       savefreq: D
       data_end_date: 20241031
-      bridge_end_date: 20231231
       request:
         <<: *request-default
         resolution: high
@@ -201,7 +196,7 @@ sources:
     args:
       <<: *args-default
       chunks: 6h
-      bridge_end_date:
+      bridge_end_date: null
       data_start_date: 20180101T0000
       request:
         <<: *request-default
@@ -217,7 +212,7 @@ sources:
     args:
       <<: *args-default
       chunks: h
-      bridge_end_date:
+      bridge_end_date: null
       data_start_date: 20180101T0000
       request:
         <<: *request-default

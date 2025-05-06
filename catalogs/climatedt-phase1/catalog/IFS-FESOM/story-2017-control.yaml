@@ -37,7 +37,7 @@ sources:
         180, 181, 182, 212, 228] 
         # 260048 (tprate) has been removed due to wrong accumulation time
       source_grid_name: hpz7-nested
-      fixer_name: ifs-destine-v1
+      fixer_name: story-cerra
 
   hourly-hpz7-atm3d:
     <<: *base-default
