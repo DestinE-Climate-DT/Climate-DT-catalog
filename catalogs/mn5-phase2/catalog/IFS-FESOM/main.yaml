@@ -1,30 +1,6 @@
 sources:
   a1ux:
     description: IFS-FESOM tco399 FESOM2.6 classic
-    metadata:
-      expid: a1ux
-      resolution_atm: tco399
-      resolution_oce: null
-      forcing: historical
-      start: 1990
-      dashboard:
-        menu: historical 1990
-        resolution_id: MR
-        note: monthly data
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1ux.yaml'
-  control-1990-freeze:
-    description: Production IFS-FESOM, control 1990 freeze run, TCO1279-NG5
-    metadata:
-      expid: a1ye
-      resolution_atm: tco1279
-      resolution_oce: NG5
-      forcing: control
-      start: 1990
-      dashboard:
-        menu: control 1990 freeze
-        resolution_id: SR
-    driver: yaml_file_cat
-    args:
-      path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
