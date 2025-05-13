@@ -21,7 +21,7 @@ sources:
         step: 0
       data_start_date: 20170101T0000
       data_end_date: 20241031T2300
-      bridge_end_date: 20231231T2300
+      bridge_end_date: stac
       chunks: D  # Default chunks size
       savefreq: h  # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -100,7 +100,7 @@ sources:
       chunks: MS
       savefreq: D
       data_end_date: 20241031
-      bridge_end_date: 20231231
+      bridge_end_date: stac
       request:
         <<: *request-default
         resolution: standard
@@ -120,7 +120,7 @@ sources:
       chunks: D
       savefreq: D
       data_end_date: 20241031
-      bridge_end_date: 20231231
+      bridge_end_date: stac
       request:
         <<: *request-default
         resolution: standard
@@ -151,7 +151,7 @@ sources:
       savefreq: D
       data_start_date: 20180101T0000
       data_end_date: 20241031
-      bridge_end_date: 20231231
+      bridge_end_date: stac
       request:
         <<: *request-default
         resolution: high
@@ -172,7 +172,7 @@ sources:
       savefreq: D
       data_start_date: 20180101T0000
       data_end_date: 20241031
-      bridge_end_date: 20231231
+      bridge_end_date: stac
       request:
         <<: *request-default
         resolution: high
