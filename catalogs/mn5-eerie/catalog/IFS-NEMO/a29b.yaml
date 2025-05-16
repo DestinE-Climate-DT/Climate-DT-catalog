@@ -114,3 +114,4 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: longitude-latitude
+      fixer-name: climatedt-phase2-production
