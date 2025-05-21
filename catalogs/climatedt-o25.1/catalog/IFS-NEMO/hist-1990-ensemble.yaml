@@ -4,13 +4,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -28,7 +28,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -44,13 +44,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -68,7 +68,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -84,13 +84,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -108,7 +108,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -124,13 +124,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -148,7 +148,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -164,13 +164,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -188,7 +188,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -201,13 +201,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -225,7 +225,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -238,13 +238,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -264,7 +264,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -279,13 +279,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -305,7 +305,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -320,13 +320,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -346,7 +346,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -362,13 +362,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -386,7 +386,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -400,13 +400,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -424,7 +424,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -438,13 +438,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -462,7 +462,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -476,13 +476,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -500,7 +500,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -514,13 +514,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -543,7 +543,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -574,13 +574,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -603,7 +603,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -634,13 +634,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -663,7 +663,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -694,13 +694,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -723,7 +723,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -754,13 +754,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -779,7 +779,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -793,13 +793,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -818,7 +818,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -832,13 +832,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -857,7 +857,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -871,13 +871,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -896,7 +896,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -910,13 +910,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -935,7 +935,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -949,13 +949,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -974,7 +974,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -988,13 +988,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -1013,7 +1013,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -1027,13 +1027,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -1052,7 +1052,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -1066,13 +1066,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -1091,7 +1091,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -1105,13 +1105,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: high
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -1130,7 +1130,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
@@ -1144,13 +1144,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline 
+        experiment: hist 
+        generation: 2 
         model: ifs-nemo
         realization: '{{ realization }}'
         resolution: standard
-        expver: '0001'  # To be overwritten by workflow/config file
+        expver: '0001' 
         type: fc
         stream: clte
         date: 19900101/to/19990101
@@ -1169,7 +1169,7 @@ sources:
         allowed: [1, 2, 3, 4]
         description: realization member
         type: int
-        default: 1
+        default: 2
     description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
