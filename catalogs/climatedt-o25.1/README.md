@@ -9,3 +9,5 @@ New machine names generated for the operators on Lumi and MN5 are:
 - MN5: `MN5-o25.1`
 
 Using this machine will point to the correct location for grids and observations necessary for the analysis of such models.
+
+The IFS-NEMO run having as experiment name `hist-1990-ensemble` consists of 3 members with realization key [2, 3, 4]. The official historical run of the model will be run with realization key 1 and will complete the ensemble.
