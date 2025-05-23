@@ -239,3 +239,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  a2da:
+    description: '"ifs-nemo a2da 1990, grids: tco79 eORCA1"'
+    metadata:
+      expid: a2da
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: a2da
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2da.yaml'
