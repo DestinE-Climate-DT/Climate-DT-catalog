@@ -239,3 +239,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  t06l:
+    description: '"ifs-nemo t06l 1990, grids: tco79 eORCA1"'
+    metadata:
+      expid: t06l
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: t06l
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t06l.yaml'
