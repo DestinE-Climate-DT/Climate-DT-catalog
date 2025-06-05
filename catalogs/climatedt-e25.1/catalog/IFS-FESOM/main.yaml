@@ -1,4 +1,19 @@
 sources:
   empty:
     description: Empty catalog
-    driver: null
+    driver:
+  o006:
+    description: '"ifs-fesom o006 1990, grids: tco2559 NG5"'
+    metadata:
+      expid: o006
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: o006
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o006.yaml'
