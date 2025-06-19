@@ -1,0 +1,7 @@
+wilma:
+  paths: 
+    grids: /work/scratch/users/paolo/aqua/grids
+    weights: /work/scratch/users/paolo/weights
+    areas: /work/scratch/users/paolo/aqua/areas
+  intake:
+    HIGHRESMIP: /archive/paolo/esgpull/CMIP6/HighResMIP

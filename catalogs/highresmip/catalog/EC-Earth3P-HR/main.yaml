@@ -1,0 +1,6 @@
+sources:
+  hist-1950:
+    description: historial simulation starting in 1950
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/hist-1950.yaml"

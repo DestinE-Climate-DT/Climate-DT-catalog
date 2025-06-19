@@ -1,0 +1,11 @@
+sources: 
+  Amon:
+    description: Amon data from EC-Earth3P-HR
+    driver: netcdf
+    args:
+      urlpath:  "{{ HIGHRESMIP }}/EC-Earth-Consortium/EC-Earth3P-HR/hist-1950/r1i1p2f1/Amon/*/*/*/*.nc"
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: F512

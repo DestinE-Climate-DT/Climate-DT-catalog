@@ -1,0 +1,12 @@
+metadata:
+  parameters:
+    HIGHRESMIP:
+      type: str
+      description: the path to the LRA
+      default: /archive/paolo/esgpull/CMIP6/HighResMIP
+sources:
+  EC-Earth3P-HR:
+    description: EC-Earth3P-HR model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/EC-Earth3P-HR/main.yaml"
