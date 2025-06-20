@@ -1,6 +1,6 @@
 sources:
   IFS-NEMO:
-    description: IFS-NEMO model
+    description: IFS-NEMO coupled model
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml'
