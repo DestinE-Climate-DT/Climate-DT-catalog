@@ -239,3 +239,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  t077:
+    description: '"ifs-nemo t077 , grids: tco79 eORCA1"'
+    metadata:
+      expid: t077
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: ''
+      dashboard:
+        menu: t077
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t077.yaml'
