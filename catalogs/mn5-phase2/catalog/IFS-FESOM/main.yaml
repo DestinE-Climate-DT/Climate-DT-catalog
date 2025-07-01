@@ -4,7 +4,7 @@ sources:
     metadata:
       expid: a1ux
       resolution_atm: tco399
-      resolution_oce: null
+      resolution_oce:
       forcing: historical
       start: 1990
       dashboard:
@@ -28,3 +28,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  a2kp:
+    description: '"ifs-fesom a2kp 1990, grids: tco79 CORE2"'
+    metadata:
+      expid: a2kp
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: a2kp
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2kp.yaml'
