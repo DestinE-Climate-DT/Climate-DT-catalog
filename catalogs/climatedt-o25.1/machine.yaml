@@ -3,28 +3,41 @@ lumi:
     grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
     weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
     areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+  intake:
+    # Where the LRA from the ensemble Historical 1990 is stored
+    LRA_IFS-NEMO_HIST_1990: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids
     weights: /gpfs/scratch/ehpc01/data/AQUA/weights
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+  intake:
+    LRA_IFS-NEMO_HIST_1990: /gpfs/scratch/ehpc01/bsc998159/a2ei/output/LRA/fc0/climatedt-e25.1/IFS-NEMO/0001
 lumi-e25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
+  intake:
+    LRA_IFS-NEMO_HIST_1990: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
 MN5-e25.1:
   paths:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
+  intake:
+    LRA_IFS-NEMO_HIST_1990: /gpfs/scratch/ehpc01/bsc998159/a2ei/output/LRA/fc0/climatedt-e25.1/IFS-NEMO/0001
 lumi-o25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
+  intake:
+    LRA_IFS-NEMO_HIST_1990: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
 MN5-o25.1:
   paths:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
+  intake:
+    LRA_IFS-NEMO_HIST_1990: /gpfs/scratch/ehpc01/bsc998159/a2ei/output/LRA/fc0/climatedt-e25.1/IFS-NEMO/0001
