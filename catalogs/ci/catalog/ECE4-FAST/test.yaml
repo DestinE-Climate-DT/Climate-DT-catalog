@@ -1,0 +1,60 @@
+lugins:
+  source:
+    - module: intake_xarray
+
+sources:
+
+  monthly-atm:
+    description: IFS 2D atmospheric data on tl63 grid.
+    driver: netcdf
+    metadata:
+      source_grid_name: tl63
+      fixer_name: ec-earth4-ifs
+    args:
+      urlpath:
+          - '{{ TEST_PATH }}/ECE4-FAST/test/t2pp_atm_cmip6_*.nc'
+      chunks:
+        time: 1
+      xarray_kwargs:
+        decode_times: True
+
+  monthly-oce:
+    description: NEMO ocean T output
+    driver: netcdf
+    metadata:
+      source_grid_name: ORCA2-ece
+      fixer_name: ec-earth4-nemo
+    args:
+      urlpath: '{{ TEST_PATH }}/ECE4-FAST/test/t2pp_oce_1m_T_*.nc'
+      chunks:
+        time_counter: 1
+      xarray_kwargs:
+        decode_times: True
+        #use_cftime: True
+
+  monthly-ice:
+    description: NEMO ice output
+    driver: netcdf
+    metadata:
+      source_grid_name: ORCA2-ece-ice
+      fixer_name: ec-earth4-nemo-ice
+    args:
+      urlpath: '{{ TEST_PATH }}/ECE4-FAST/test/t2pp_ice_1m_*.nc'
+      chunks:
+        time_counter: 1
+      xarray_kwargs:
+        decode_times: True
+        #use_cftime: True
+
+  # this is here only because of the OutputSaver bug #1685
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: '/dummy/*_r100_monthly_*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
