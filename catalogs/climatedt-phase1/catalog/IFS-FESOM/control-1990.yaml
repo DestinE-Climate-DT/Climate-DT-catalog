@@ -20,7 +20,9 @@ sources:
         step: 0
         regrid: 1/1
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -56,7 +58,9 @@ sources:
         levtype: sfc
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -94,7 +98,9 @@ sources:
           700, 850, 925, 1000]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -132,7 +138,9 @@ sources:
           700, 850, 925, 1000]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -169,7 +177,9 @@ sources:
         levtype: o2d
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -204,7 +214,9 @@ sources:
         levtype: o2d
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -243,7 +255,9 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -288,7 +302,9 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
         step: 0
       data_start_date: 19900101T0000
-      data_end_date: auto
+      data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -329,7 +345,7 @@ sources:
   #       levelist: [100]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 20041231T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -364,7 +380,7 @@ sources:
   #       levelist: [100]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 20041231T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -400,7 +416,7 @@ sources:
   #       levelist: [1, 2, 3, 4, 5]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 20041231T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
@@ -436,7 +452,7 @@ sources:
   #       levelist: [1, 2, 3, 4, 5]
   #       step: 0
   #     data_start_date: 19900101T0000
-  #     data_end_date: auto
+  #     data_end_date: 20041231T2300
   #     chunks: D
   #     savefreq: h
   #     timestep: h
