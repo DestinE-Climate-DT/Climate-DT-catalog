@@ -21,6 +21,8 @@ sources:
         regrid: 1/1
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -57,6 +59,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -95,6 +99,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -133,6 +139,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -170,6 +178,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -205,6 +215,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -244,6 +256,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -289,6 +303,8 @@ sources:
         step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
+      bridge_start_date: 19900101T0000
+      bridge_end_date: 20041231T2300
       chunks: D
       savefreq: D
       timestep: h
