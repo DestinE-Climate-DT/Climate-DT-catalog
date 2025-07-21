@@ -239,3 +239,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  t08h:
+    description: '"ifs-nemo t08h , grids: tco79 eORCA1"'
+    metadata:
+      expid: t08h
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: control
+      start: ''
+      dashboard:
+        menu: t08h
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t08h.yaml'
