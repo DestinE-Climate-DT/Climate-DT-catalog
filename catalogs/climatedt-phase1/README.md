@@ -13,3 +13,5 @@ If you see that the data are not up to date with the website, please open an iss
 
 At the current stage only the Data Bridge on Lumi HPC is accessible with AQUA.
 If you want to access locally the climatedt data, please remember to use the `engine='polytope'` argument in the Reader.
+
+The Ensemble for the IFS-FESOM storylines is available only on the HPC FDB and specific experiments name, such as `story-2017-T2K-ensemble`, `story-2017-control-ensemble`, and `story-2017-historical-ensemble`, are used to identify them.
