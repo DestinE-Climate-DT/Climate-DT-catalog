@@ -239,3 +239,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  a2n4:
+    description: '"ifs-nemo a2n4 1988, grids: tco1279 eORCA12"'
+    metadata:
+      expid: a2n4
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1988'
+      dashboard:
+        menu: a2n4
+        resolution_id: SR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2n4.yaml'
