@@ -26,14 +26,14 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 228141,
         228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053,
         235055]
       source_grid_name: hpz5-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-atm2d:
     args:
       request:
@@ -61,14 +61,14 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 235033,
         235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043,
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz5-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   daily-hpz5-atm2d:
     args:
       request:
@@ -96,11 +96,11 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [172, 228002]
       source_grid_name: hpz5-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   hourly-hpz5-atm3d:
     args:
       request:
@@ -130,13 +130,13 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz5-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-atm3d:
     args:
       request:
@@ -166,14 +166,14 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
         235246]
       source_grid_name: hpz5-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   daily-hpz5-oce2d:
     args:
       request:
@@ -201,12 +201,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA1-hpz5-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-oce2d:
     args:
       request:
@@ -234,12 +234,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA1-hpz5-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   daily-hpz5-oce3d:
     args:
       request:
@@ -272,7 +272,7 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -294,7 +294,7 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA1-hpz5-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-oce3d:
     args:
       request:
@@ -327,7 +327,7 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -349,7 +349,7 @@ sources:
       variables: [263505, 263500, 263501, 263506, 263507]
       source_grid_name: nemo-eORCA1-hpz5-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   hourly-hpz5-hl:
     args:
       request:
@@ -378,12 +378,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz5
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-hl:
     args:
       request:
@@ -412,12 +412,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [100]
       variables: [235131, 235132]
       source_grid_name: hpz5
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   hourly-hpz5-sol5:
     args:
       request:
@@ -446,12 +446,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz5
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-sol5:
     args:
       request:
@@ -480,12 +480,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz5
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   hourly-hpz5-sol4:
     args:
       request:
@@ -514,12 +514,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4]
       variables: [260199]
       source_grid_name: hpz5
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   monthly-hpz5-sol4:
     args:
       request:
@@ -548,12 +548,12 @@ sources:
     description: 'ifs-nemo t08s , grids: tco79 eORCA1'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/t08s/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz5
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/t08s/fdb/t08s.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032376/t08s/t08s.yaml
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
