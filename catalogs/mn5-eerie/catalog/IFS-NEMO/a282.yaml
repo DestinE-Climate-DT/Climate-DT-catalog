@@ -1,10 +1,10 @@
 sources:
-  lra-r100-monthly:
+  Amon:
     driver: netcdf
-    description: LRA data monthly at r100
+    description: Atmospheric monthly data at 100km res
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/*1995*.nc
+        /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Amon*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -12,3 +12,36 @@ sources:
     metadata:
       source_grid_name: lon-lat
       fixer-name: eerie
+  Omon:
+    driver: netcdf
+    description: Ocean monthly data at 100km res
+    args:
+      urlpath: # excluding so and sos (due to a units issue not solved yet by the fixer)
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Omon_thetao*.nc
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Omon_tos*.nc
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Omon_hfds*.nc
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Omon_mlotst*.nc
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Omon_zos*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie
+
+  SImon:
+    driver: netcdf
+    description: Sea-ice monthly data at 100km res
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/SImon*1995*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie
+
+
