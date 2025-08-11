@@ -12,6 +12,7 @@ sources:
     metadata:
       source_grid_name: longitude-latitude
       fixer-name: eerie
+
   Omon:
     driver: netcdf
     description: Ocean monthly data at 100km res
@@ -27,7 +28,7 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: longitude-latitude
       fixer-name: eerie
 
   SImon:
@@ -41,7 +42,7 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: longitude-latitude
       fixer-name: eerie
 
 
