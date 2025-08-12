@@ -1,0 +1,12 @@
+sources:
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath: '/esarchive/exp/ifsnemo/a282/original_files/EERIE/HighResMIP/IFS-CY48R1-Tco1279-NEMO4-eO12-EERIE/hist-1950/r1i1p1f1/Omon/thetao/gr/v20250516/thetao_Omon_IFS-CY48R1-Tco1279-NEMO4-eO12-EERIE_hist-1950_r1i1p1f1_gr_*2000*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
