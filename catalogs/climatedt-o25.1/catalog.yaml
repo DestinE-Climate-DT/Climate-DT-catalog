@@ -4,6 +4,10 @@ metadata:
       type: str
       description: the path to the LRA from the ensemble Historical 1990
       default: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
+    LRA_PATH:
+      type: str
+      description: the path to the LRA
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
 
 sources:
   IFS-NEMO:
