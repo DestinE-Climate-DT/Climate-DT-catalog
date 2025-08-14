@@ -104,7 +104,9 @@ sources:
         235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043,
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
+      # This was the original one, but to have the correct deltat, we need to use the reduced one (which has deltat=monthly)
+      #fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   monthly-hpz7-atm2d:
@@ -140,7 +142,7 @@ sources:
         235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043,
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   daily-hpz10-atm2d:
@@ -318,7 +320,7 @@ sources:
       variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
         235246]
       source_grid_name: hpz7-nested
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   daily-hpz10-oce2d:
@@ -420,7 +422,7 @@ sources:
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested-v3
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   monthly-hpz7-oce2d:
@@ -454,7 +456,7 @@ sources:
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   daily-hpz10-oce3d:
@@ -622,7 +624,7 @@ sources:
         5902.0576171875]
       variables: [263505]
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   monthly-hpz7-oce3d:
@@ -678,7 +680,7 @@ sources:
         5902.0576171875]
       variables: [263505, 263500, 263501, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   hourly-hpz10-hl:
@@ -783,7 +785,7 @@ sources:
       levels: [100]
       variables: [235131, 235132]
       source_grid_name: hpz7
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   hourly-hpz10-sol5:
@@ -888,7 +890,7 @@ sources:
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz10
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   monthly-hpz7-sol5:
@@ -923,7 +925,7 @@ sources:
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz7
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   hourly-hpz10-sol4:
@@ -1028,7 +1030,7 @@ sources:
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz10
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   monthly-hpz7-sol4:
@@ -1063,7 +1065,7 @@ sources:
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz7
-      fixer_name: climatedt-phase2-production
+      fixer_name: climatedt-phase2-reduced
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
       hpc_expver: o007
   lra-r100-monthly:
