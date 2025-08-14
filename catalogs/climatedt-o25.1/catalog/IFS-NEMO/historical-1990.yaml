@@ -40,13 +40,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -70,18 +70,19 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz10-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -105,18 +106,19 @@ sources:
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -140,18 +142,19 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   daily-hpz10-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -172,18 +175,19 @@ sources:
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   daily-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -204,18 +208,19 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz10-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -240,18 +245,19 @@ sources:
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -276,18 +282,19 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -313,18 +320,19 @@ sources:
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   daily-hpz10-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -346,18 +354,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   daily-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -379,18 +388,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz10-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -412,18 +422,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -445,18 +456,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   daily-hpz10-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -500,18 +512,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   daily-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -555,18 +568,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz10-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -610,18 +624,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -665,18 +680,19 @@ sources:
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz10-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -699,18 +715,19 @@ sources:
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -733,18 +750,19 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -767,18 +785,19 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz10-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline
+        experiment: hist
+        generation: 2
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -801,6 +820,7 @@ sources:
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz7-sol5:
     args:
       request:
@@ -812,7 +832,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -835,6 +855,7 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz10-sol5:
     args:
       request:
@@ -846,7 +867,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -869,6 +890,7 @@ sources:
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-sol5:
     args:
       request:
@@ -880,7 +902,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -903,6 +925,7 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz10-sol4:
     args:
       request:
@@ -914,7 +937,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -937,6 +960,7 @@ sources:
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   hourly-hpz7-sol4:
     args:
       request:
@@ -948,7 +972,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -971,6 +995,7 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz10-sol4:
     args:
       request:
@@ -982,7 +1007,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -1005,6 +1030,7 @@ sources:
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   monthly-hpz7-sol4:
     args:
       request:
@@ -1016,7 +1042,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: o007  # To be overwritten by workflow/config file
+        expver: '0001'  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: 19880101/to/20150101
@@ -1039,12 +1065,15 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o007/o007.yml
+      hpc_expver: o007
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o007/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o007/r100/monthly/*o007_r100_monthly_*.nc
+        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/r100/monthly/*o007_r100_monthly_*.nc'
+        # This is the original path for legacy data
+        #/gpfs/scratch/ehpc123/bsc655096/o007/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o007/r100/monthly/*o007_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
