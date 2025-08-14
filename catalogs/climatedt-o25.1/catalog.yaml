@@ -1,3 +1,10 @@
+metadata:
+  parameters:
+    LRA_IFS_NEMO_HIST_1990:
+      type: str
+      description: the path to the LRA from the ensemble Historical 1990
+      default: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
+
 sources:
   IFS-NEMO:
     description: IFS-NEMO model

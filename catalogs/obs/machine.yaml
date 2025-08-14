@@ -61,3 +61,10 @@ hpc2020:
     areas: /ec/res4/hpcperm/ccjh/aqua_data/areas
   intake:
     DATA_PATH: /ec/res4/hpcperm/ccjh/obs/destine/
+freja:
+  paths:
+    grids: /home/rossby/AQUA_DATA/grids
+    weights: /home/rossby/AQUA_DATA/weights
+    areas: /home/rossby/AQUA_DATA/areas
+  intake:
+    DATA_PATH: /home/rossby/AQUA_DATA/obs/
