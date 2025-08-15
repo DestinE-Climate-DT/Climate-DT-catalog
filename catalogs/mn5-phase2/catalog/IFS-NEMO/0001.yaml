@@ -39,7 +39,7 @@ sources:
         235055]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz7-atm2d:
     args:
       request:
@@ -80,7 +80,7 @@ sources:
         235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz9-atm2d:
     args:
       request:
@@ -121,7 +121,7 @@ sources:
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-atm2d:
     args:
       request:
@@ -162,7 +162,7 @@ sources:
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   daily-hpz9-atm2d:
     args:
       request:
@@ -200,7 +200,7 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   daily-hpz7-atm2d:
     args:
       request:
@@ -238,7 +238,7 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz9-atm3d:
     args:
       request:
@@ -280,7 +280,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz7-atm3d:
     args:
       request:
@@ -322,7 +322,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-atm3d:
     args:
       request:
@@ -365,7 +365,7 @@ sources:
         235246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   daily-hpz9-oce2d:
     args:
       request:
@@ -404,7 +404,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz9-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   daily-hpz7-oce2d:
     args:
       request:
@@ -443,7 +443,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz9-oce2d:
     args:
       request:
@@ -482,7 +482,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz9-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-oce2d:
     args:
       request:
@@ -521,7 +521,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   daily-hpz9-oce3d:
     args:
       request:
@@ -582,7 +582,7 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz9-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   daily-hpz7-oce3d:
     args:
       request:
@@ -643,7 +643,7 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz9-oce3d:
     args:
       request:
@@ -704,7 +704,7 @@ sources:
       variables: [263505]
       source_grid_name: nemo-eORCA12-hpz9-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-oce3d:
     args:
       request:
@@ -765,7 +765,7 @@ sources:
       variables: [263505, 263500, 263501, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz9-hl:
     args:
       request:
@@ -805,7 +805,7 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz7-hl:
     args:
       request:
@@ -845,7 +845,7 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-hl:
     args:
       request:
@@ -885,7 +885,7 @@ sources:
       variables: [235131, 235132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz9-sol5:
     args:
       request:
@@ -925,7 +925,7 @@ sources:
       variables: [228141]
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz7-sol5:
     args:
       request:
@@ -965,7 +965,7 @@ sources:
       variables: [228141]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz9-sol5:
     args:
       request:
@@ -1005,7 +1005,7 @@ sources:
       variables: [235078]
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-sol5:
     args:
       request:
@@ -1045,7 +1045,7 @@ sources:
       variables: [235078]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz9-sol4:
     args:
       request:
@@ -1085,7 +1085,7 @@ sources:
       variables: [260199]
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   hourly-hpz7-sol4:
     args:
       request:
@@ -1125,7 +1125,7 @@ sources:
       variables: [260199]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz9-sol4:
     args:
       request:
@@ -1165,7 +1165,7 @@ sources:
       variables: [235077]
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   monthly-hpz7-sol4:
     args:
       request:
@@ -1205,13 +1205,13 @@ sources:
       variables: [235077]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2nt/a2nt.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2o1/a2o1.yaml
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a2nt/output/LRA/fc2/mn5-phase2/IFS-NEMO/0001/r100/monthly/*0001_r3_r100_monthly_*.nc
+        /gpfs/scratch/ehpc01/bsc998159/a2o1/output/LRA/fc3/mn5-phase2/IFS-NEMO/0001/r100/monthly/*0001_r4_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
