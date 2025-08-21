@@ -1,0 +1,8 @@
+lumi:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+  intake:
+    # Where the obsall processed data are stored
+    OBSALL_SIM: /projappl/project_465000454/data/OBSALL_hackathon/SYNOP/simulations

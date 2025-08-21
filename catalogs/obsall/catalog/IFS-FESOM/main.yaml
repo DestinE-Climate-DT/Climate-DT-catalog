@@ -1,0 +1,15 @@
+sources:
+  story-2017-historical:
+    description:  IFS-FESOM, Story-nudging 2017, historical, tco1279/NG, storyline nudged from 2017 historical   
+    metadata:
+      expid: a0uz
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines-historical
+      start: 2017
+      dashboard:
+        menu: story 2017 hist.
+        resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-2017-historical.yaml'
