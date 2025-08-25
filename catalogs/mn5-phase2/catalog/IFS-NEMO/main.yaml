@@ -239,3 +239,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  a2ii:
+    description: '"ifs-nemo a2ii 2015, grids: tco1279 eORCA12"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2ii
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: ssp370
+      start: '2015'
+      dashboard:
+        menu: a2ii
+        resolution_id: SR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2ii.yaml'
