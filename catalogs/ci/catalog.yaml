@@ -4,30 +4,39 @@ metadata:
       type: str
       description: the path to test datasets
       default: '.'
+    FDB_HOME:
+      type: str
+      description: the path to the FDB installation
+      default: '/app'
 
 sources:
   FESOM:
     description: FESOM ocean model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/FESOM/main.yaml"
+      path: "{{CATALOG_DIR}}/catalog/FESOM/main.yaml"
   IFS:
     description: IFS atmospheric model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/IFS/main.yaml"
+      path: "{{CATALOG_DIR}}/catalog/IFS/main.yaml"
   ICON:
     description: ICON atmospheric model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
+      path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
   NEMO:
     description: NEMO oceanic model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/NEMO/main.yaml"
+      path: "{{CATALOG_DIR}}/catalog/NEMO/main.yaml"
   ERA5:
     description: ERA5
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"
+      path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"
+  ECE4-FAST:
+    description: ECE4-FAST tuning coupled run
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/ECE4-FAST/main.yaml"  

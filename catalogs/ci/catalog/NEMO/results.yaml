@@ -1,0 +1,12 @@
+plugins:
+  source:
+  - module: intake_xarray
+sources:
+  zonal_mean-latlev:
+    metadata:
+      source_grid_name: null
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/NEMO/results/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_atlantic_ocean.nc'
+    driver: netcdf
+

@@ -1,0 +1,23 @@
+metadata:
+  parameters:
+    LRA_IFS_NEMO_HIST_1990:
+      type: str
+      description: the path to the LRA from the ensemble Historical 1990
+      default: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
+
+sources:
+  IFS-NEMO:
+    description: IFS-NEMO coupled model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml"
+  IFS-FESOM:
+    description: IFS-FESOM coupled model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml"
+  ICON:
+    description: ICON coupled model
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"

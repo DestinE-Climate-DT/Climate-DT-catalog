@@ -1,0 +1,30 @@
+lumi:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+MN5:
+  paths:
+    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
+    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
+    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+lumi-e25.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
+    weights: /scratch/project_465001542/aqua_cache/weights
+    areas: /scratch/project_465001542/aqua_cache/areas
+MN5-e25.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc123/aqua_cache/weights
+    areas: /gpfs/scratch/ehpc123/aqua_cache/areas
+lumi-o25.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
+    weights: /scratch/project_465001542/aqua_cache/weights
+    areas: /scratch/project_465001542/aqua_cache/areas
+MN5-o25.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc123/aqua_cache/weights
+    areas: /gpfs/scratch/ehpc123/aqua_cache/areas
