@@ -99,3 +99,15 @@ sources:
                3513.445556640625, 3704.65673828125, 3897.98193359375, 4093.15869140625, 4289.95263671875, 4488.15478515625,
                4687.5810546875, 4888.06982421875, 5089.478515625, 5291.68310546875, 5494.5751953125, 5698.060546875,
                5902.0576171875]
+  lra-r100-monthly:
+    driver: netcdf
+    description: LRA data monthly at r100
+    args:
+      urlpath:
+        /gpfs/scratch/ehpc01/data/AQUA//LRA/wf/mn5-phase2/IFS-NEMO/a1z9/r100/monthly/*a1z9_r100_monthly_*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
