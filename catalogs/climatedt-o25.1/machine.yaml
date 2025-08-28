@@ -4,8 +4,6 @@ lumi:
     weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
     areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
   intake:
-    # Where the LRA from the ensemble Historical 1990 is stored
-    LRA_IFS_NEMO_HIST_1990: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
     # where LRA data is stored
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
 MN5:
@@ -14,7 +12,6 @@ MN5:
     weights: /gpfs/scratch/ehpc01/data/AQUA/weights
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
-    LRA_IFS_NEMO_HIST_1990: /gpfs/scratch/ehpc01/bsc998159/a2ei/output/LRA/fc0/climatedt-e25.1/IFS-NEMO/0001
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
 lumi-e25.1:
   paths:
@@ -22,7 +19,6 @@ lumi-e25.1:
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
   intake:
-    LRA_IFS_NEMO_HIST_1990: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
 MN5-e25.1:
   paths:
@@ -30,15 +26,13 @@ MN5-e25.1:
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
-    LRA_IFS_NEMO_HIST_1990: /gpfs/scratch/ehpc01/bsc998159/a2ei/output/LRA/fc0/climatedt-e25.1/IFS-NEMO/0001
-    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-e25.1
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
 lumi-o25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
   intake:
-    LRA_IFS_NEMO_HIST_1990: /appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1/IFS-NEMO/hist-1990-ensemble
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
 MN5-o25.1:
   paths:
@@ -46,5 +40,4 @@ MN5-o25.1:
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
-    LRA_IFS_NEMO_HIST_1990: /gpfs/scratch/ehpc01/bsc998159/a2ei/output/LRA/fc0/climatedt-e25.1/IFS-NEMO/0001
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
