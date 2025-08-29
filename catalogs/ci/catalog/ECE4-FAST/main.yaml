@@ -1,0 +1,6 @@
+sources:
+  test:
+    description: single month ECE-FAST tuning coupled run 
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/test.yaml'
