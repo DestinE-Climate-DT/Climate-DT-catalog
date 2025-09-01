@@ -4,9 +4,7 @@ sources:
     description: IFS-NEMO data at 25km res, with EERIE data pipeline
     args:
       urlpath: 
-        - /esarchive/exp/ifsnemo/a282/original_files/EERIE/HighResMIP/IFS-NEMO-ER/hist-1950/r1i1p1f1/Amon/*1995*
-        - /esarchive/exp/ifsnemo/a282/original_files/EERIE/HighResMIP/IFS-NEMO-ER/hist-1950/r1i1p1f1/*1995*
-        - /esarchive/exp/ifsnemo/a282/original_files/EERIE/HighResMIP/IFS-NEMO-ER/hist-1950/r1i1p1f1/*1995*
+        - /esarchive/exp/ifsnemo/a282/original_files/EERIE/HighResMIP/IFS-NEMO-ER/hist-1950/r1i1p1f1/Amon/*/gr/v20250516/*1995*nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
