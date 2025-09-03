@@ -41,3 +41,10 @@ MN5-o25.1:
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
+wilma:
+  paths:
+    grids: /work/users/mnurisso/aqua-data/grids
+    weights: /work/users/mnurisso/aqua-data/weights
+    areas: /work/users/mnurisso/aqua-data/areas
+  intake:
+    LRA_PATH: /archive/mnurisso/LRA/climatedt-o25.1
