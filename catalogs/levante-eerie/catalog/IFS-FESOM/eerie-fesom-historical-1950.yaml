@@ -1,0 +1,121 @@
+sources:
+  2D_daily_fesom_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE data pipeline
+    args:
+      urlpath: 
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_mlotst030/avg_mlotst030*.nc
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_mlotst125/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_siconc/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sigrowth/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sisnthick/*
+        #- /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sithick/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_siue/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sivn/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sos/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_tos/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_zos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie
+  2D_monthly_fesom_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE data pipeline
+    args:
+      urlpath: 
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_mlotst030/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_mlotst125/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_siconc/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_sigrowth/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_sisnthick/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_sithick/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_siue/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_sivn/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_sos/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_tos/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/monthly/2d/avg_zos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie
+  3D_daily_fesom_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE data pipeline
+    args:
+      urlpath: 
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_so/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_thetao/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_uoe/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_von/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie
+  3D_monthly_fesom_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE data pipeline
+    args:
+      urlpath: 
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_so/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_thetao/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_uoe/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_von/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie
+  # NOTE:
+  # Native 2D/3D has issue with "AlignmentError: cannot reindex or align along dimension 'ncells' because of conflicting dimension sizes: {14741520, 7402886}"
+  3D_daily_fesom_native:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE data pipeline
+    args:
+      urlpath: 
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_so/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_thetao/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_uoe/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_von/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: ng5-nodes-2d
+      fixer-name: eerie
+  3D_monthly_fesom_native:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE data pipeline
+    args:
+      urlpath: 
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/monthly/avg_so/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/monthly/avg_thetao/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/monthly/avg_uoe/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/monthly/avg_von/*
+        - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/monthly/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: ng5-nodes-3d
+      fixer-name: eerie
+
+
+
+
