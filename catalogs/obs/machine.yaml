@@ -68,3 +68,11 @@ freja:
     areas: /home/rossby/AQUA_DATA/areas
   intake:
     DATA_PATH: /home/rossby/AQUA_DATA/obs/
+nord4:
+  paths:
+    grids: /esarchive/scratch/AQUA/grids
+    weights: /esarchive/scratch/AQUA/weights
+    areas: /esarchive/scratch/AQUA/areas
+  intake:                                                                                  
+    DATA_PATH: /esarchive/scratch/AQUA/datasets
+
