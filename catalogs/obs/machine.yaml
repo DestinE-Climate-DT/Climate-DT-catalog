@@ -73,3 +73,6 @@ nord4:
     grids: /esarchive/scratch/AQUA/grids
     weights: /esarchive/scratch/AQUA/weights
     areas: /esarchive/scratch/AQUA/areas
+  intake:                                                                                  
+    DATA_PATH: /esarchive/scratch/AQUA/datasets
+
