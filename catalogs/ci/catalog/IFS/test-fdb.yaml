@@ -68,7 +68,7 @@ sources:
         time: "0000"
         param: 164
         levtype: sfc
-        step: 0
+        #step: 0
       data_start_date: auto
       data_end_date: auto
       chunks: h
@@ -99,7 +99,7 @@ sources:
         time: "0000"
         param: 164
         levtype: sfc
-        step: 0
+        #step: 0
       data_start_date: 19900101T0000
       data_end_date: 19900102T0000
       bridge_start_date: 19900101T1200
