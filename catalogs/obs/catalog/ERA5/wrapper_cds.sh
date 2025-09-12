@@ -1,9 +1,10 @@
 #!/bin/bash
-#This script works only for monthly files
+# This script works only for monthly files, it is run on Levante, and 
+# looks for availalbe data and then extend it using CDS features
 
 STOREDIR='/work/bb1153/b382076/ERA5'
 TMPDIR='/work/bb1153/b382076/ERA5'
-varlist='2m_temperature evaporation'
+#varlist='2m_temperature evaporation'
 CDSPATH=/home/b/b382076/CDS-retriever
 CDSconfig=/home/b/b382076/CDS-retriever/config.yaml
 
@@ -17,7 +18,7 @@ threeD_vars=("temperature" "u_component_of_wind" "v_component_of_wind" "specific
 
 for variable in "${varlist[@]}" ; do
 	if [[ " ${threeD_vars[*]} " == *" $variable "* ]]; then
-        	levelout=plev19
+        	levelout=plev8
         else
         	levelout=sfc
         fi
