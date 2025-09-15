@@ -1,0 +1,11 @@
+sources:
+  v2.1:
+    description: ESA-CCI-L4
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/v21.yaml"
+  v3.0:
+    description: ESA-CCI-L4
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/v30.yaml"

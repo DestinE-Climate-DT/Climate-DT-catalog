@@ -1,6 +1,6 @@
 sources:
   monthly:
-    description: ESA-CCI-L4 monthly data
+    description: ESA-CCI-L4 monthly data v2.1
     driver: netcdf
     metadata:
       source_grid_name: lon-lat
