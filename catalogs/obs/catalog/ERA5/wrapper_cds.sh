@@ -4,7 +4,6 @@
 
 STOREDIR='/work/bb1153/b382076/ERA5'
 TMPDIR='/work/bb1153/b382076/ERA5'
-#varlist='2m_temperature evaporation'
 CDSPATH=/home/b/b382076/CDS-retriever
 CDSconfig=/home/b/b382076/CDS-retriever/config.yaml
 
