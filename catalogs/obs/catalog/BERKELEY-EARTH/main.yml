@@ -1,0 +1,6 @@
+sources:
+  global:
+    description: BERKELEY EARTH Average Temperature with Air Temperatures at Sea Ice (1850-Recent)
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/global.yaml"
