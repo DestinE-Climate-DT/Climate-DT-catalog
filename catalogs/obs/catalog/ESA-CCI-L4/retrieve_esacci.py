@@ -141,6 +141,24 @@ def postprocess(data_dir, start, end):
         temp_file = os.path.join(data_dir, f"temp_merged_{year}.nc")
         
         try:
+            # Clean up any existing temporary file before starting
+            if os.path.exists(temp_file):
+                os.remove(temp_file)
+                logger.info(f"Removed existing temporary file: {temp_file}")
+            
+            # Check if all target files already exist
+            all_exist = True
+            for variable in ["analysed_sst", "sea_ice_fraction"]:
+                var_dir = os.path.join(data_dir, variable)
+                var_output_file = os.path.join(var_dir, f"ESA-CCI-L4_v3.0.1_monthly_{year}_{variable}.nc")
+                if not os.path.exists(var_output_file):
+                    all_exist = False
+                    break
+            
+            if all_exist:
+                logger.info(f"All target files for {year} already exist, skipping processing")
+                continue
+            
             # Step 1: Merge all daily files for the year
             logger.info(f"Merging daily files for {year}...")
             merge_cmd = f"cdo mergetime {input_files} {temp_file}"
@@ -156,6 +174,12 @@ def postprocess(data_dir, start, end):
                 os.makedirs(var_dir, exist_ok=True)
                 
                 var_output_file = os.path.join(var_dir, f"ESA-CCI-L4_v3.0.1_monthly_{year}_{variable}.nc")
+                
+                # Check if this specific variable file already exists
+                if os.path.exists(var_output_file):
+                    logger.info(f"Target file already exists, skipping: {var_output_file}")
+                    continue
+                
                 logger.info(f"Calculating monthly averages for {year}, variable: {variable}...")
                 monthly_cmd = f"cdo -f nc4 -z zip settime,00:00:00 -setday,1 -monmean -selname,{variable} {temp_file} {var_output_file}"
                 result = subprocess.run(monthly_cmd, shell=True, capture_output=True, text=True)
