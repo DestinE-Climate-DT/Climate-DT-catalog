@@ -6,29 +6,16 @@ and adds temperature to climatology variable.
 """
 
 import sys
-import subprocess
+import os
 import argparse
 import urllib.request
 import urllib.error
 from pathlib import Path
-
-
-def run_cdo_command(command, input_file, output_file):
-    """
-    Execute a CDO command
-    
-    Args:
-        command (str): CDO command to execute
-        input_file (str): Input file
-        output_file (str): Output file
-    
-    Returns:
-        bool: True if command executed successfully
-    """
-    cmd = f"cdo {command} {input_file} {output_file}"
-    print(f"Executing: {cmd}")
-    subprocess.run(cmd, shell=True, check=True, 
-                              capture_output=True, text=True)
+import xarray as xr
+import numpy as np
+import pandas as pd
+from cdo import Cdo
+cdo = Cdo()
 
 
 def download_berkeley_earth_file(output_dir, filename="Land_and_Ocean_LatLong1.nc"):
@@ -79,65 +66,56 @@ def download_berkeley_earth_file(output_dir, filename="Land_and_Ocean_LatLong1.n
         return None
 
 
-def process_berkeley_earth_file(input_file, output_dir=None, start_year=1850):
+def process_berkeley_earth_file(input_file, year1=1979):
     """
     Process Berkeley Earth file applying all necessary transformations
     
     Args:
         input_file (str): Path to Land_and_Ocean_LatLong1.nc file
-        output_dir (str): Output directory (optional)
-        start_year (int): Start year for time axis
+        year1 (str): selection starting year
     
     Returns:
         str: Path to processed file, None if error
     """
     input_path = Path(input_file)
-    
-    if not input_path.exists():
-        print(f"Error: File {input_file} does not exist")
-        return None
-    
-    if output_dir is None:
-        output_dir = input_path.parent
-    else:
-        output_dir = Path(output_dir)
-        output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Intermediate files
-    temp1 = output_dir / "temp1_time_axis.nc"
-    final_output = output_dir / f"processed_{input_path.name}"
-    
-    print(f"Processing file: {input_file}")
-    print(f"Final output: {final_output}")
-    
-    try:
-        # Step 1: Set monthly time axis from 1850 and hourly units
-        print("\nStep 1: Setting monthly time axis and hourly units...")
-        command = f"settunits,hours -settaxis,{start_year}-01-01,00:00:00,1mon"
-        run_cdo_command(command, input_file, temp1)
-        
-        # Step 2: Sum temperature and climatology variables
-        print("\nStep 2: Summing temperature and climatology variables...")
-        command = "expr,2m_temperature=temperature+climatology"
-        run_cdo_command(command, temp1, final_output)
-        
-        # Clean up temporary files
-        if temp1.exists():
-            temp1.unlink()
-        
-        print(f"\nProcessing completed successfully!")
-        print(f"Processed file saved to: {final_output}")
-        
-        return str(final_output)
-        
-    except Exception as e:
-        print(f"Error during processing: {e}")
-        # Clean up temporary files in case of error
-        if temp1.exists():
-            temp1.unlink()
-        return None
 
+    # load the data
+    ds = xr.open_dataset(input_path)
 
+    # create the full field
+    years = np.floor(ds['time'].values).astype(int)
+    frac = ds['time'].values - years
+    months = (np.floor(frac * 12).astype(int) + 1)
+    month_index = xr.DataArray(months - 1, dims=['time'], name='month_index')
+    clim_for_time = ds['climatology'].isel(month_number=month_index)
+    out = ds['temperature'] + clim_for_time
+
+    # time axis adjustment
+    timeaxis = pd.date_range(start=pd.Timestamp('1850-01-01T00:00:00'), periods=out.time.size, freq='MS')
+    out = out.assign_coords(time=timeaxis)
+    out.name = '2m_temperature'
+    out.attrs['long_name'] = 'Surface Temperature'
+    out.attrs['units'] = 'degC'
+
+    #nan count per year and selection
+    #nan_mask = out.isnull()
+    #count = nan_mask.groupby('time.year').sum(dim=['time','latitude','longitude'])
+    #count.year[count.where(count < 100).notnull()]
+
+    #select from year1 to today
+    year2=out.time.dt.year.max().values
+    out = out.sel(time=slice(f'{year1}-01-01', None))
+
+    # Salva temporaneamente e rimappa con extrapolation
+    if os.path.exists('temp_in.nc'):
+        os.remove('temp_in.nc')
+    out.to_netcdf('temp_in.nc')
+    outfile = f'Berkeley-Earth_aqua-filled_1x1_{year1}-{year2}.nc'
+    if os.path.exists(outfile):
+        os.remove(outfile)
+    cdo.fillmiss(options='-f nc4 -z zip', input='temp_in.nc', output=outfile)
+    os.remove('temp_in.nc')
+    
 def main():
     """Main function"""
     parser = argparse.ArgumentParser(
@@ -149,17 +127,13 @@ def main():
         help="Path to Land_and_Ocean_LatLong1.nc file to process (optional if using --download)"
     )
     parser.add_argument(
-        "--out", 
-        help="Output directory (default: current directory)"
-    )
-    parser.add_argument(
         "-d", "--download",
         action="store_true",
         help="Download original file from Berkeley Earth before processing"
     )
     parser.add_argument(
         "--download-only",
-        action="store_true", 
+        action="store_true",
         help="Download file only without processing"
     )
     
@@ -168,17 +142,12 @@ def main():
     # If no input_file and no download requested, error
     if not args.input_file and not args.download and not args.download_only:
         parser.error("You must specify an input file or use --download/--download-only")
-    
     # Determine output directory
-    if args.out:
-        output_dir = Path(args.out)
     elif args.input_file:
         output_dir = Path(args.input_file).parent
     else:
         output_dir = Path.cwd()
-    
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     # Handle download if requested
     input_file_path = args.input_file
     
@@ -201,17 +170,10 @@ def main():
     
     # Process the file (no CDO verification needed)
     if not args.download_only:
-        result = process_berkeley_earth_file(
-            input_file_path, 
-            output_dir
-        )
+        process_berkeley_earth_file(
+            input_file_path, year1=1979)
         
-        if result:
-            print(f"\nSuccess! Processed file: {result}")
-            sys.exit(0)
-        else:
-            print("\nError processing file")
-            sys.exit(1)
+    print("Success!")
 
 
 if __name__ == "__main__":
