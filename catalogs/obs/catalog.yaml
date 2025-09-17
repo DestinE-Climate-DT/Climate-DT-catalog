@@ -11,6 +11,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/AVISO/main.yaml"
+  BERKELEY-EARTH:
+    description: Berkeley Earth data
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/BERKELEY-EARTH/main.yaml"
   CERES:
     description: CERES-EBAF radiation data
     driver: yaml_file_cat
