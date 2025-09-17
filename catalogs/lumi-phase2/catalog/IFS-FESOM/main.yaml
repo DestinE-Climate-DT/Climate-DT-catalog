@@ -54,3 +54,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a280.yaml'
+  a2qw:
+    description: '"ifs-fesom a2qw 1990, grids: tco79 CORE2"'
+    metadata:
+      expid: a2qw
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: a2qw
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2qw.yaml'
