@@ -111,11 +111,14 @@ the data have been subsequently concatenated using CDO:
 ```bash
 #!/bin/bash
 
+# Double check namefiles!
+
 in_dir="./data"
 out_dir="."
 
-# Loop over the years 1979 to 2020
+# Loop over the years 1979 to 2020; 2021 to 2024
 for year in $(seq 1979 2020); do
+# for year in $(seq 2021 2024); do
     echo "Processing year $year..."
 
     # Define output file name
@@ -527,5 +530,19 @@ cdo    cat: Processed 403107840 values from 2160 variables over 360 timesteps [4
  -> Created ./ice_conc_sh_ease2-250_cdr-v3p0_2024.nc
 ```
 
+Finally, the data are concatenated:
 
-Finally, the data was monthly averaged using `cdo monmean`
+```bash
+cdo cat file1.nc file2.nc ... cat_nh.nc
+cdo cat file1.nc file2.nc ... cat_sh.nc
+```
+
+then time-sorted and monthly averaged using `cdo monmean`
+
+```bash
+cdo sorttime cat_nh.nc sorted_cat_nh.nc
+cdo monmean sorted_cat_nh.nc monmean_nh.nc
+
+cdo sorttime cat_sh.nc sorted_cat_sh.nc
+cdo monmean sorted_cat_sh.nc monmean_sh.nc
+```
