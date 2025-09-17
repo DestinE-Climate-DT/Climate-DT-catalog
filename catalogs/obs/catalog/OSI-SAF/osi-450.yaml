@@ -25,7 +25,7 @@ sources:
       source_grid_name: osi-saf-nh
       fixer_name: OSI-SAF-default
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-450/monthly/ice_conc_nh_ease2-250_cdr_v3_monthly_1979-2025.nc' 
+      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-450/monthly/ice_conc_nh_ease2-250_cdr_v3_monthly_1979-2024.nc' 
       chunks:
         time: 12
       xarray_kwargs:
@@ -52,7 +52,7 @@ sources:
       source_grid_name: osi-saf-sh
       fixer_name: OSI-SAF-default
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-450/monthly/ice_conc_sh_ease2-250_cdr_v3_monthly_1979-2025.nc' 
+      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-450/monthly/ice_conc_sh_ease2-250_cdr_v3_monthly_1979-2024.nc' 
       chunks:
         time: 12
       xarray_kwargs:
