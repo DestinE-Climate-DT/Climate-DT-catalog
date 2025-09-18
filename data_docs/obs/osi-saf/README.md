@@ -540,9 +540,13 @@ cdo cat file1.nc file2.nc ... cat_sh.nc
 then time-sorted and monthly averaged using `cdo monmean`
 
 ```bash
-cdo sorttimestamp cat_nh.nc sorted_cat_nh.nc # this step need to be checked if provide any practical advantage
-cdo monmean sorted_cat_nh.nc monmean_nh.nc
+# mergetime sort in time the data into one single file
+cdo mergetime ice_conc_nh*.nc merged_nh.nc
+# then monthly mean the resulting data 
+cdo monmean merged_nh.nc ice_conc_nh_ease2-250_cdr-v3_1978-2024.nc
 
-cdo sorttimestamp cat_sh.nc sorted_cat_sh.nc # this step need to be checked if provide any practical advantage
-cdo monmean sorted_cat_sh.nc monmean_sh.nc
+# mergetime sort in time the data into one single file
+cdo mergetime ice_conc_sh*.nc merged_sh.nc
+# then monthly mean the resulting data 
+cdo monmean merged_sh.nc ice_conc_sh_ease2-250_cdr-v3_1978-2024.nc
 ```
