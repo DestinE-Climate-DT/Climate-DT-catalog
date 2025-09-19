@@ -14,10 +14,10 @@ metadata:
   parameters:
     ECCODES_PATH:
       type: str
-      description: the path to the eccodes definitions. Default is Lumi
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+      description: the path to the eccodes definitions.
+      default: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes
     FDB_HOME:
       type: str
-      description: FDB HOME path. Default is Lumi
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+      description: FDB HOME path.
+      default: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes
 
