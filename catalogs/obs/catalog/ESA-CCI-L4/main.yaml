@@ -3,4 +3,4 @@ sources:
     description: ESA-CCI-L4
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/v30.yaml"
+      path: "{{CATALOG_DIR}}/v301.yaml"

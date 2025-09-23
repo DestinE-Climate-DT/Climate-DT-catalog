@@ -40,7 +40,7 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s: %(message)s",
     handlers=[logging.StreamHandler(sys.stdout)]
 )
-logger = logging.getLogger("ghrsst_downloader")
+logger = logging.getLogger("esacci_downloader")
 
 # --- SESSION WITH RETRY ---
 def make_session():
@@ -236,6 +236,40 @@ def main(args):
     if args.postproc and not args.dry_run:
         postprocess(args.out, start, end)
 
+
+# --- REGRID FUNCTION ---
+def regrid_var_output_files(data_dir, start, end):
+    logger.info("Starting regridding with CDO remapcon to r360x180...")
+    start_year = start.year
+    end_year = end.year
+    regridded_count = 0
+    import re
+    for variable in ["analysed_sst", "sea_ice_fraction"]:
+        var_dir = os.path.join(data_dir, variable)
+        if not os.path.isdir(var_dir):
+            logger.warning(f"Directory not found: {var_dir}")
+            continue
+        for fname in os.listdir(var_dir):
+            year = os.path.basename(fname).split("_")[3]
+            if start_year <= int(year) <= end_year:
+                in_file = os.path.join(var_dir, fname)
+                out_file = in_file.replace(f"_{variable}.nc", f"_{variable}_r360x180.nc")
+                if os.path.exists(out_file):
+                    logger.info(f"Regridded file already exists, skipping: {out_file}")
+                    continue
+                cmd = f"cdo remapcon,r360x180 {in_file} {out_file}"
+                logger.info(f"Regridding {in_file} -> {out_file}")
+                result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+                if result.returncode != 0:
+                    logger.error(f"CDO regrid failed for {in_file}: {result.stderr}")
+                else:
+                    logger.info(f"Created regridded file: {out_file}")
+                    regridded_count += 1
+    if regridded_count == 0:
+        logger.warning("No files were regridded. Check year range and file availability.")
+    else:
+        logger.info(f"Regridding completed. {regridded_count} file(s) processed.")
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description="NetCDF CEDA GHRSST downloader with optional postprocessing")
     p.add_argument("--start", required=True, help="Start date YYYY-MM-DD")
@@ -243,5 +277,11 @@ if __name__ == "__main__":
     p.add_argument("--out", required=True, help="Output folder")
     p.add_argument("--dry-run", action="store_true", help="Show URLs without downloading")
     p.add_argument("--postproc", action="store_true", help="Create yearly files of monthly averages using CDO (NC4 compressed, timestamps at midnight of first day of month)")
+    p.add_argument("--regrid-only", action="store_true", help="Regrid var_output_file to r360x180 using CDO remapcon (no download/postproc)")
     args = p.parse_args()
-    main(args)
+    if args.regrid_only:
+        start = datetime.strptime(args.start, "%Y-%m-%d").date()
+        end = datetime.strptime(args.end, "%Y-%m-%d").date()
+        regrid_var_output_files(args.out, start, end)
+    else:
+        main(args)
