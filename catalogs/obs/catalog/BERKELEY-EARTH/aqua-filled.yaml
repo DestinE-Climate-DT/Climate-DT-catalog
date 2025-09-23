@@ -3,13 +3,13 @@ lugins:
     - module: intake_xarray
 
 sources:
-  monthly-r100:
+  r100-monthly:
     description: Global Monthly Surface Temperature from Berkeley Earth (1979-2024) 1x1 deg
     driver: netcdf
     metadata:
       source_grid_name: lon-lat
     args:
-      urlpath: '/Users/paolo/Desktop/Climate-DT-catalog/catalogs/obs/catalog/BERKELEY-EARTH/Berkeley-Earth_aqua-filled_1x1*.nc'
+      urlpath: '{{DATA_PATH}}/BERKELEY-EARTH/Berkeley-Earth_aqua-filled_1x1*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True

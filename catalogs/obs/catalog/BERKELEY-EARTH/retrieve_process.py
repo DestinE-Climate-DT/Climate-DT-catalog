@@ -93,7 +93,7 @@ def process_berkeley_earth_file(input_file, year1=1979):
     # time axis adjustment
     timeaxis = pd.date_range(start=pd.Timestamp('1850-01-01T00:00:00'), periods=out.time.size, freq='MS')
     out = out.assign_coords(time=timeaxis)
-    out.name = '2m_temperature'
+    out.name = '2t'
     out.attrs['long_name'] = 'Surface Temperature'
     out.attrs['units'] = 'degC'
 
