@@ -4,7 +4,7 @@ sources:
     metadata:
       expid: a1ux
       resolution_atm: tco399
-      resolution_oce: null
+      resolution_oce:
       forcing: historical
       start: 1990
       dashboard:
@@ -28,3 +28,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  a2rw:
+    description: '"ifs-fesom a2rw 2017, grids: tco1279 NG5"'
+    metadata:
+      expid: a2rw
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: control
+      start: '2017'
+      dashboard:
+        menu: a2rw
+        resolution_id: SR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2rw.yaml'
