@@ -21,7 +21,7 @@ then `cd ./pscfiles/zhang/Global_seaice`, in this dir you can find many files su
 ```bash
 heff.H1985.nc.gz  
 heff.H1985.gz
-... Multiple years covering from heff.H1979 to 
+... Multiple years covering from heff.H1979 to heff.H2024
 ```
 
 - To set the dir where to download the data:
@@ -61,6 +61,12 @@ mget grid*
 mget io.dat_*
 ```
 
+It is suggested to double check the content of the grids.
+
+[Note]:  
+Since the data are in ASCII format, another solution to get the data is to copy/paste the grid file content that can be found in the 
+site online into brand-new created files.
+
 ## Download Data - PIOMAS:
 
 Downloaded `heff` data from: `/pscfiles/zhang/PIOMAS/data/v2.1/heff/`
@@ -71,6 +77,7 @@ mget heff*
 ```
 
 same was done for `area`.  
+
 To download the grids use `curl` for simplicity:  
 
 ```bash
@@ -79,4 +86,42 @@ curl -k -O https://pscfiles.apl.washington.edu/zhang/PIOMAS/grid.dat.pop
 curl -k -O https://pscfiles.apl.washington.edu/zhang/PIOMAS/io.dat_360_120.output
 ```
 
+Otherwise copy/paste the content as for GIOMAS.
+
 # Post-process the data
+
+First, create the dir `grid` with: 
+- `grid.dat`
+- `grid.dat.pop`
+- `io.dat_360_120.output` (for GIOMAS) and `io.dat_360_276.output` (for PIOMAS)  
+
+and the gunzip (.gz) compressed binary files (`gz_from_site/binary/heff.H*.gz`).
+
+Then run the scripts:
+
+- `process_sithick_binary_Giomas.py` for GIOMAS
+- `process_sithick_binary_Piomas.py` for PIOMAS
+
+which will produce a NetCDF file with the concatenated monthly averaged data (e.g. `sithick_r1i1p1_mon_197901-202412_GCCS360x120.nc`).
+
+### Set the curvilinear grid to the concatenated files
+
+Now it is necessary to set the curvilinear grid specification to both files.  
+We can use CDO for this purpose.
+
+#### GIOMAS
+
+To set the grid:
+- `cdo setgrid,grid_giomas.txt sithick_r1i1p1_mon_197901-202412_GCCS360x276.nc sithick_r1i1p1_mon_197901-202412_GCCS360x276_cgrid.nc`
+
+to set the fillNaNs:
+- `cdo setctomiss,9999.9 sithick_r1i1p1_mon_197901-202412_GCCS360x276_cgrid.nc sithick_r1i1p1_mon_197901-202412_GCCS360x276_curvgrid.nc`
+
+#### PIOMAS
+
+To set the grid:
+- `cdo setgrid,grid.txt sithick_r1i1p1_mon_197901-202412_GCCS360x120.nc sithick_r1i1p1_mon_197901-202412_GCCS360x120_curvgrid.nc`
+
+Note: no `cdo setctomiss,9999.9` command is done for PIOMAS, as this command is not present in the 'old' file history form F. Massonet. We wanted to keep consistent with that pre-processing steps.
+
+Finally, use `cdo sinfo FINAL_FILE.nc` to check that the grid is correctly `curvilinear`
