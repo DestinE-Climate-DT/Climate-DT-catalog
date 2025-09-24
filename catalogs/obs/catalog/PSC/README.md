@@ -1,10 +1,43 @@
-This readme document is an informal log of the steps and procedures followed to download and process the data.
+# The Polar Science Center (PSC) datasets
 
-# PSC - PIOMAS and GIOMAS (Global Ice-Ocean Modeling and Assimilation System)
+This readme document is an informal log of the steps and procedures followed to download and pre-process the sea ice data.  
 
-GIOMAS Global Sea Ice Data [page LINK](https://psc.apl.washington.edu/zhang/Global_seaice/data.html).
+At first, we give a brief extrapolation of the most relevant information collected from the online pages which provide and describe the data. Then are presented the steps for downloading the data and pre-process them.
 
-## Download Data - GIOMAS:
+
+## Introduction on GIOMAS (Global Ice-Ocean Modeling and Assimilation System) model
+GIOMAS Global Sea Ice Data [page LINK](https://psc.apl.washington.edu/zhang/Global_seaice/data.html), is global sea ice data for studying the variability and change of the polar climate, which consists of a global Parallel Ocean and sea Ice Model 
+([POIM, Zhang and Rothrock 2003](http://psc.apl.washington.edu/zhang/Pubs/POIM.pdf)) with data assimilation capabilities. The POIM is formulated in a generalized orthogonal curvilinear coordinate (GOCC) system. Satellite sea ice concentration data are assimilated in GIOMAS using the Lindsay and Zhang (2005) assimilation procedure. The procedure is based on 'nudging' the model estimate of ice concentration toward the observed concentration in a manner that emphasizes the ice extent and minimizes the effect of observational errors in the interior of the ice pack.  
+
+The dimension of the model is 360x276.  
+
+While in the southern hemisphere the model grid is based on a spherical coordinate system. In the northern hemisphere the model grid is a stretched GOCC grid with the northern grid pole displaced into Greenland.  
+ This allows the model to have its highest resolution in the Greenland Sea, Baffin Bay, and the eastern Canadian Archipelago, and therefore a  good connection between the Arctic Ocean and the Atlantic Ocean via the Greenland-Iceland-Norwegian (GIN) Sea and the Labrador Sea. The model was driven by the NCEP/NCAR reanalysis data.
+
+ For a more detailed report and information see: [LINK Description of GIOMAS](https://psc.apl.washington.edu/zhang/Global_seaice/data.html).
+
+ While GIOMAS cover the whole globe, PIOMAS is another model which covers the Northern Hemisphere ocean north of ~45° N.
+
+ ## Introduction on PIOMAS (Pan-Arctic Ice-Ocean Modeling and Assimilation System) model
+
+The Pan-Arctic Ice-Ocean Modeling and Assimilation System (PIOMAS) is a coupled ice‐ocean model developed at APL/PSC, used to calculate of some key ice and ocean variables such as the Arctic Sea Ice thickness Reanalysis. It is a numerical model with components for sea ice and ocean and the capacity for assimilating some kinds of observations, whose grid emphasizes the Arctic Ocean. Sea ice concentration information from the NSIDC near-real time product are assimilated into the model to improve ice thickness estimates. The pan-Arctic ocean model is forced with input from a global ocean model at its open boundaries located at 45 degrees North. PIOMAS is one-way nested inside the global model and uses monthly GIOMAS output for open boundary conditions along ~43° N.
+
+The dimension of the model is 360x120.  
+
+The current primary version of PIOMAS is v2.1. 
+
+For more info on PIOMAS 
+- see §2 at: [Schweiger et al., 2011](https://psc.apl.uw.edu/wordpress/wp-content/uploads/schweiger/pubs/Schweiger-2011-Uncertainty%20in%20model.pdf)  
+- or see: [LINK Description of PIOMAS](https://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/)
+
+| Dataset comparison | Grid type              | Grid size   | Spatial coverage | Typical horizontal resolution                                 |
+|---------|------------------------|-------------|------------------|---------------------------------------------------------------|
+| PIOMAS  | Generalized curvilinear | 360 × 120   | 45° N–90° N      | ~22 km mean in Arctic/Barents/GIN/Baffin Bay                  |
+| GIOMAS  | Generalized curvilinear | 360 × 276   | Global           | ~0.8° × 0.8° (~60 km) (reported average)                      |
+
+---
+
+## Download GIOMAS data:
 
 On LUMI directory: `/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/PSC/`
 
@@ -67,7 +100,7 @@ It is suggested to double check the content of the grids.
 Since the data are in ASCII format, another solution to get the data is to copy/paste the grid file content that can be found in the 
 site online into brand-new created files.
 
-## Download Data - PIOMAS:
+## Download PIOMAS data:
 
 Downloaded `heff` data from: `/pscfiles/zhang/PIOMAS/data/v2.1/heff/`
 
