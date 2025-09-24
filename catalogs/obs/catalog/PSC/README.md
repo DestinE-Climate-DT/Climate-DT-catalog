@@ -8,7 +8,7 @@ GIOMAS Global Sea Ice Data [page LINK](https://psc.apl.washington.edu/zhang/Glob
 
 On LUMI directory: `/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/PSC/`
 
-I created: `new/GIOMAS/heff`, then tried to connect with different methods, one that worked well is `sftp`.
+Folder created as: `new/GIOMAS/heff`, then tried to connect with different methods, one that worked well is `sftp`.
 
 ### Connect with `sftp`
 
@@ -125,3 +125,7 @@ To set the grid:
 Note: no `cdo setctomiss,9999.9` command is done for PIOMAS, as this command is not present in the 'old' file history form F. Massonet. We wanted to keep consistent with that pre-processing steps.
 
 Finally, use `cdo sinfo FINAL_FILE.nc` to check that the grid is correctly `curvilinear`
+
+
+---------
+Last updated by Emanuele Tovazzi, CNR, Sep 2025

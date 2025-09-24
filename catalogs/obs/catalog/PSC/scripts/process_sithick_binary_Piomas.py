@@ -2,13 +2,13 @@
 #
 # Francois Massonnet
 # May 2017
-# Adapted in 2025 to update the data up to 2024 by tovaz92.
+# Adapted in Sep 2025 to update the data up to 2024 by Emanuele Tovazzi
 #
-# Script to convert GIOMAS sea ice thickness, distributed as binary files,
+# Script to convert PIOMAS sea ice thickness, distributed as binary files,
 # into NetCDF files compliant with the TECLIM format
 #
-# Documentation on GIOMAS can be found here:
-# https://psc.apl.washington.edu/zhang/Global_seaice/data.html
+# Documentation on PIOMAS can be found here:
+# http://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/data/model_grid
 #
 # The approach to reading binaries is inspired from this post:
 #
@@ -70,8 +70,8 @@ sourcedir = "../../heff/gz_from_site/binary"
 griddir   = "../../grids"
 outdir    = "./output"
 
-# GIOMAS - Grid dimensions (should not change)
-ny = 276
+# Grid dimensions (should not change)
+ny = 120
 nx = 360
 nt = 12  # Number of time steps in one file. Here, monthly --> 12
 
@@ -107,10 +107,10 @@ for year in np.arange(yearb, yeare + 1):
 # 2. Deal with lon, lat
 # ---------------------
 # Information on lon and lat is stored in an ASCII file with 10 columns
-# and 19872 rows: the first 9936 for longitudes of scalars, the last 9936
+# and 8640 rows: the first 4320 for longitudes of scalars, the last 4320
 # for latitudes of scalars.
 #
-# This makes 10 * 9936 = 99360 = 360 * 276 points
+# This makes 10 * 4320 = 43200 = 360 * 120 points
 
 filein = griddir + "/" + "grid.dat"
 print("Open: ", filein)
@@ -129,8 +129,8 @@ lat = np.reshape(a[ny * nx:], (ny, nx))
 # 3. Deal with grid cell area
 # ---------------------------
 # Information on cell edge length is stored in an ASCII files with 10 columns
-# and 69552 = 7 * 9936 rows, following the same logic as for lon, lat
-# Inspired from ftp://pscftp.apl.washington.edu/zhang/PIOMAS/utilities/read_360_120.f
+# and 30240 = 7 * 4320 rows, following the same logic as for lon, lat
+# From ftp://pscftp.apl.washington.edu/zhang/PIOMAS/utilities/read_360_120.f
 # we know that the edge lengths for scalars are the third and fourth blocks
 
 tmp = list()
@@ -149,11 +149,11 @@ areacello = htn * 1000.0 * hte * 1000.0
 
 # 4. Deal with ocean mask
 # -----------------------
-# Information on land sea mask is stored in an ASCII File with 276 rows. Each row
+# Information on land sea mask is stored in an ASCII File with 120 rows. Each row
 # contains 720 characters. We can ignore even characters (0, 2, ...). Odd characters
 # greated than zero mean ocean, else land
 tmp = list()
-filein = griddir + "/" + "io.dat_360_276.output"
+filein = griddir + "/" + "io.dat_360_120.output"
 with open(filein, 'r') as f:
     reader = csv.reader(f)
     for row in reader:
@@ -252,13 +252,13 @@ sftof[:] = mask
 
 # ---- Global attributes ----
 f.Description = "model/reanalysis output"
-f.Model = "Global Ice-Ocean Modeling and Assimilation System (GIOMAS)"
+f.Model = "Panarctic Ice/Ocean Modeling and Assimilation System (PIOMAS)"
 f.Reference = "Zhang, J., and D.A. Rothrock, Modeling global sea ice with a thickness and enthalpy distribution model in generalized curvilinear coordinates, Mon. Wea. Rev., 131(5), 681-697, 2003"
 f.setncattr("raw_data", ", ".join(os.path.basename(fi) for fi in list_files))
 f.file_created = "Created " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 f.Conventions = "CF-1.8"
 f.setncattr("script_used", os.path.basename(sys.argv[0]))
-f.processing_info = "grid.dat, grid.dat.pop, and io.dat_360_276.output can be obtained at: https://psc.apl.washington.edu/zhang/Global_seaice/data.html"
+f.processing_info = "grid.dat, grid.dat.pop, and io.dat_360_120.output can be obtained at: https://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/data/model_grid"
 
 # Close
 f.close()
