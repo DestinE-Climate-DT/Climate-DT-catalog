@@ -39,3 +39,15 @@ MN5:
     FDB_PATH_EERIE: null
     ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
     OUTPUT_AQUA_PATH: null
+wilma:
+  paths:
+    grids: /work/users/mnurisso/aqua-data/grids
+    weights: /work/users/mnurisso/aqua-data/weights
+    areas: /work/users/mnurisso/aqua-data/areas
+  intake:
+    LRA_PATH: /archive/mnurisso/LRA/climatedt-phase1
+    FDB_PATH: null
+    FDB_PATH_HISTORICAL: null
+    FDB_PATH_EERIE: null
+    ECCODES_PATH: null
+    OUTPUT_AQUA_PATH: null
