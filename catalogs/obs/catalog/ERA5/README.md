@@ -18,3 +18,6 @@ it is not a straightforward operation
 Please check the property of the `CDS retriever` configuration file  and the path location. Original updated have been done on Levante DKRZ.
 
 Always double check  timestamp of fluxes variables, since they might need to be aligned to 00:00:00 to avoid issue with xarray.  
+
+---------
+Last updated by Paolo Davini, CNR, Sep 2025
