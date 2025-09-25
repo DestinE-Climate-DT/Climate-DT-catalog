@@ -13,5 +13,7 @@ Two sources are available:
 
 # How to update
 
+> Please note that the script uses an old folder structure and some rearrangament might be required if you want to download the data again
+
 A nice AI-based script to retrieve and create the monthly average separated per variable is available in the folder `retrieve_esacci.py`
 It is a bit of an overkill but should do everything required.
