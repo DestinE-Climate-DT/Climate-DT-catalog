@@ -1,3 +1,27 @@
+# Description of the data
+
+In our `obs` catalog for `OSI-SAF`, the sea-ice concentration Climate Data Record (CDR) for both the Northern and Southern Hemispheres is obtained by combining two complementary datasets, ensuring a continuous and homogeneous time series from 1978 to 2024. In our catalog, only complete years were included; therefore, 2025 was excluded.
+
+> By concatenating OSI-450-a1 (1978–2020) and OSI-430-a (2021–2024), we obtain a continuous, homogeneous sea-ice dataset spanning 1978–2024.
+
+## 1. OSI-450-a1 (Climate Data Record (CDR))
+
+- Latest full series temporal coverage: **1978–2020**, released in 2025.  
+We used the latest available release (`v3.1`, September 2025), in which corrections were applied to 343 days across the 40-year span, mostly affecting coastal regions.
+
+The product is provided on a 25 km EASE2 grid, with per-grid-cell uncertainty estimates included.
+
+This dataset is derived from passive microwave sensors (SMMR, SSM/I, SSMIS) and processed as L3+L4 products providing daily averages. We post-processed the data into monthly means.
+
+## 2. OSI-430-a1 (Interim CDR, ICDR)
+
+- Associated with the Climate Data Record OSI-450-a1 and fully consistent with it, ensuring homogeneity.  
+Temporal coverage: **2021-onwards**.
+
+The same processing chain as OSI-450-a1 was applied, ensuring consistency in algorithms and calibration across the transition.
+
+It likewise provides L3+L4 daily files, from which we derived monthly averages.
+
 # Downloading the OSI-SAF Data: 1978 - 2020 (OSI-450-a1)
 
 Link page: https://osi-saf.eumetsat.int/products/osi-450-a1 
