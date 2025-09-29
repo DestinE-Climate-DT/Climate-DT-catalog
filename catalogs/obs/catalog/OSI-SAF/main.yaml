@@ -1,6 +1,11 @@
 sources:
-  osi-saf:
+  osi-saf-450:
     description: OSI-SAF data
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/osi-saf.yaml"
+        path: "{{CATALOG_DIR}}/osi-saf-450.yaml"
+  osi-saf-aqua:
+    description: OSI-SAF data
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/osi-saf-aqua.yaml"
