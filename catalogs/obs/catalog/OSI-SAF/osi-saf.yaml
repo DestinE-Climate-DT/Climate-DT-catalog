@@ -14,7 +14,7 @@ sources:
     #    regex: ''
     #    type: file
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/raw_cat/ice_conc_nh*.nc'
+      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/daily_cat/ice_conc_nh*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
@@ -41,7 +41,7 @@ sources:
     #    regex: ''
     #    type: file
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/raw_cat/ice_conc_sh*.nc'
+      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/daily_cat/ice_conc_sh*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
