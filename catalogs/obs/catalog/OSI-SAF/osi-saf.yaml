@@ -4,7 +4,7 @@ plugins:
 
 sources:
   nh-daily:
-    description: Daily Northern Hemisphere OSI-450 sea-ice data
+    description: Daily Northern Hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-nh
@@ -19,7 +19,7 @@ sources:
       xarray_kwargs:
         decode_times: True
   nh-monthly:
-    description: Monthly averages of Northern Hemisphere OSI-450 sea-ice data
+    description: Monthly averages of Northern Hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-nh
@@ -31,7 +31,7 @@ sources:
       xarray_kwargs:
         decode_times: True
   sh-daily:
-    description: Southern hemisphere OSI-450 sea-ice data
+    description: Southern hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-sh
@@ -46,7 +46,7 @@ sources:
       xarray_kwargs:
         decode_times: True
   sh-monthly:
-    description: Monthly averages of Southern Hemisphere OSI-450 sea-ice data
+    description: Monthly averages of Southern Hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-sh
