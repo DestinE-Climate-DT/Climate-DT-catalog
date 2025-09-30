@@ -1,6 +1,6 @@
 levante:
   paths: 
-    grids: /work/ab0995/a270260/aqua_eerie_grid #/work/bb1153/b382075/aqua/grids 
+    grids: /work/bb1153/b382075/aqua/grids #/work/ab0995/a270260/aqua_eerie_grid
     weights: /work/bb1153/b382075/aqua/weights
     areas: /work/bb1153/b382075/aqua/areas
   intake:
