@@ -16,4 +16,4 @@ sources:
       xarray_kwargs:
         decode_times: True
       urlpath:
-      - '{{ DATA_PATH }}/PSC/PIOMAS/sivol_r1i1p1_mon_197901-202212_GCCS360x120.new.nc'
+      - '{{ DATA_PATH }}/PSC/PIOMAS/sithick_r1i1p1_mon_197901-202412_GCCS360x120_curvgrid.nc'
