@@ -83,65 +83,57 @@ process_variable() {
     
     local temp_file="temp_${final_name}_${year}${month_str}.nc"
     local combined_file="${final_name}_${year}${month_str}.nc"
-    local extracted=false
     
     info "Processing $final_name for $monthly_file"
     
     # 1. Extract variable + uncertainty
-    if cdo selvar,${orig_name},${uncert_name} "$monthly_file" "$temp_file" 2>/dev/null; then
-        success "Extracted $orig_name + $uncert_name"
-        extracted=true
-    elif cdo selvar,$orig_name "$monthly_file" "$temp_file" 2>/dev/null; then
-        warning "Only $orig_name extracted (uncertainty not available)"
-        extracted=true
-    else
-        warning "$orig_name not found in $monthly_file"
+    if ! cdo selvar,${orig_name},${uncert_name} "$monthly_file" "$temp_file" 2>/dev/null; then
+        error "$orig_name or $uncert_name not found in $monthly_file"
+        error "Both main variable and uncertainty are required!"
         return 1
     fi
     
-    if [ "$extracted" = true ]; then
-        # 2. Remove problematic attributes
-        ncatted -O -a valid_max,$orig_name,d,, "$temp_file" 2>/dev/null || true
-        ncatted -O -a valid_min,$orig_name,d,, "$temp_file" 2>/dev/null || true
-        ncatted -O -a valid_max,$uncert_name,d,, "$temp_file" 2>/dev/null || true
-        ncatted -O -a valid_min,$uncert_name,d,, "$temp_file" 2>/dev/null || true
-        
-        # 3. Rename variables
-        ncrename -v $orig_name,$final_name "$temp_file" 2>/dev/null || true
-        ncrename -v ${uncert_name},${final_name}_uncertainty "$temp_file" 2>/dev/null || true
-        
-        # 4. Change attributes
-        ncatted -O -a long_name,$final_name,m,c,"$long_name" "$temp_file" 2>/dev/null || true
-        ncatted -O -a standard_name,$final_name,m,c,"$standard_name" "$temp_file" 2>/dev/null || true
-        
-        # 5. Rename depth dimension to lev
-        ncrename -d depth,lev -v depth,lev "$temp_file" 2>/dev/null || true
-        ncatted -O -a standard_name,lev,c,c,"depth" "$temp_file" 2>/dev/null || true
-        
-        # 6. Convert time to float
-        local final_temp="temp_final_${final_name}_${year}${month_str}.nc"
-        ncap2 -O -s "time=float(time)" "$temp_file" "$final_temp" 2>/dev/null || cp "$temp_file" "$final_temp"
-        
-        # 7. Regridding (if grid file is available)
-        if [ -n "$GRID_FILE" ] && [ -f "$GRID_FILE" ]; then
-            info "Applying regridding to $final_name..."
-            cdo -s remapbil,"$GRID_FILE" "$final_temp" "$combined_file"
-            rm "$final_temp"
-            success "$final_name regridding completed"
-        else
-            mv "$final_temp" "$combined_file"
-            warning "Regridding skipped (grid not available)"
-        fi
-        
-        # Cleanup temporary file
-        rm -f "$temp_file"
-        
-        success "Processed $final_name: $combined_file"
-        echo "$combined_file"  # Return the filename
-        return 0
+    success "Extracted $orig_name + $uncert_name"
+    
+    # 2. Remove problematic attributes
+    ncatted -O -a valid_max,$orig_name,d,, "$temp_file" 2>/dev/null || true
+    ncatted -O -a valid_min,$orig_name,d,, "$temp_file" 2>/dev/null || true
+    ncatted -O -a valid_max,$uncert_name,d,, "$temp_file" 2>/dev/null || true
+    ncatted -O -a valid_min,$uncert_name,d,, "$temp_file" 2>/dev/null || true
+    
+    # 3. Rename variables
+    ncrename -v $orig_name,$final_name "$temp_file" 2>/dev/null || true
+    ncrename -v ${uncert_name},${final_name}_uncertainty "$temp_file" 2>/dev/null || true
+    
+    # 4. Change attributes
+    ncatted -O -a long_name,$final_name,m,c,"$long_name" "$temp_file" 2>/dev/null || true
+    ncatted -O -a standard_name,$final_name,m,c,"$standard_name" "$temp_file" 2>/dev/null || true
+    
+    # 5. Rename depth dimension to lev
+    ncrename -d depth,lev -v depth,lev "$temp_file" 2>/dev/null || true
+    ncatted -O -a standard_name,lev,c,c,"depth" "$temp_file" 2>/dev/null || true
+    
+    # 6. Convert time to float
+    local final_temp="temp_final_${final_name}_${year}${month_str}.nc"
+    ncap2 -O -s "time=float(time)" "$temp_file" "$final_temp" 2>/dev/null || cp "$temp_file" "$final_temp"
+    
+    # 7. Regridding (if grid file is available)
+    if [ -n "$GRID_FILE" ] && [ -f "$GRID_FILE" ]; then
+        info "Applying regridding to $final_name..."
+        cdo -s remapbil,"$GRID_FILE" "$final_temp" "$combined_file"
+        rm "$final_temp"
+        success "$final_name regridding completed"
+    else
+        mv "$final_temp" "$combined_file"
+        warning "Regridding skipped (grid not available)"
     fi
     
-    return 1
+    # Cleanup temporary file
+    rm -f "$temp_file"
+    
+    success "Processed $final_name: $combined_file"
+    echo "$combined_file"  # Return the filename
+    return 0
 }
 
 # Variables configuration
@@ -167,32 +159,21 @@ processed_files[thetao]=()
 mkdir -p "$WORK_DIR"
 cd "$WORK_DIR"
 
-info "=== Grid extraction for existing data ==="
+info "=== Grid configuration setup ==="
 
-# Look for a reference file to extract the grid
-GRID_FILE="$WORK_DIR/target_grid.txt"
-reference_file=""
+# Get script directory (where EN4_management.sh is located)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+GRID_FILE="$SCRIPT_DIR/EN4_target_grid.txt"
 
-# Look for a reference file in FINAL_DIR
-if [ -f "$FINAL_DIR/thetao-1950_2022.nc" ]; then
-    reference_file="$FINAL_DIR/thetao-1950_2022.nc"
-elif [ -f "$FINAL_DIR/so-1950_2022.nc" ]; then
-    reference_file="$FINAL_DIR/so-1950_2022.nc"
-else
-    # Look for any thetao or so file as fallback
-    reference_file=$(ls "$FINAL_DIR"/thetao*.nc "$FINAL_DIR"/so*.nc 2>/dev/null | head -1 || echo "")
-fi
-
-if [ -n "$reference_file" ] && [ -f "$reference_file" ]; then
-    success "Extracting grid from: $reference_file"
-    cdo griddes "$reference_file" > "$GRID_FILE"
-    success "Grid extracted and saved on: $GRID_FILE"
+# Check if the grid file exists
+if [ -f "$GRID_FILE" ]; then
+    success "Using target grid file: $GRID_FILE"
     
     # Show grid info
     info "Target grid info:"
     head -10 "$GRID_FILE"
 else
-    warning "No reference file found to extract grid."
+    warning "Target grid file not found: $GRID_FILE"
     warning "Regridding will be skipped."
     GRID_FILE=""
 fi
