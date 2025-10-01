@@ -4,7 +4,7 @@
 # Script to download, process, and merge EN4 oceanographic data
 # With post-processing to match existing data grid
 
-set -e  # Exit on error
+#set -e  # Exit on error
 
 # Colors for output
 RED='\033[0;31m'
@@ -40,21 +40,6 @@ safe_move() {
         return 1
     fi
     
-    # Check file size
-    local file_size=$(stat -f%z "$src" 2>/dev/null || stat -c%s "$src" 2>/dev/null)
-    info "File size: $(($file_size / 1024 / 1024)) MB"
-    
-    # Check available space in destination directory
-    local dst_dir=$(dirname "$dst")
-    local available_space=$(df "$dst_dir" | awk 'NR==2 {print $4}')
-    local required_space_kb=$((file_size / 1024))
-    
-    if [ $available_space -lt $required_space_kb ]; then
-        error "Not enough space in $dst_dir"
-        error "Required: $((required_space_kb / 1024)) MB, Available: $((available_space / 1024)) MB"
-        return 1
-    fi
-    
     # Try with mv first, if it fails use rsync
     if mv "$src" "$dst" 2>/dev/null; then
         success "File moved via mv: $dst"
@@ -84,16 +69,16 @@ process_variable() {
     local temp_file="temp_${final_name}_${year}${month_str}.nc"
     local combined_file="${final_name}_${year}${month_str}.nc"
     
-    info "Processing $final_name for $monthly_file"
+    info "Processing $final_name for $monthly_file" >&2
     
     # 1. Extract variable + uncertainty
     if ! cdo selvar,${orig_name},${uncert_name} "$monthly_file" "$temp_file" 2>/dev/null; then
-        error "$orig_name or $uncert_name not found in $monthly_file"
-        error "Both main variable and uncertainty are required!"
+        error "$orig_name or $uncert_name not found in $monthly_file"  >&2
+        error "Both main variable and uncertainty are required!" >&2
         return 1
     fi
     
-    success "Extracted $orig_name + $uncert_name"
+    success "Extracted $orig_name + $uncert_name" >&2
     
     # 2. Remove problematic attributes
     ncatted -O -a valid_max,$orig_name,d,, "$temp_file" 2>/dev/null || true
@@ -119,19 +104,19 @@ process_variable() {
     
     # 7. Regridding (if grid file is available)
     if [ -n "$GRID_FILE" ] && [ -f "$GRID_FILE" ]; then
-        info "Applying regridding to $final_name..."
+        info "Applying regridding to $final_name..." >&2
         cdo -s remapbil,"$GRID_FILE" "$final_temp" "$combined_file"
         rm "$final_temp"
-        success "$final_name regridding completed"
+        success "$final_name regridding completed" >&2
     else
         mv "$final_temp" "$combined_file"
-        warning "Regridding skipped (grid not available)"
+        warning "Regridding skipped (grid not available)" >&2
     fi
     
     # Cleanup temporary file
     rm -f "$temp_file"
     
-    success "Processed $final_name: $combined_file"
+    success "Processed $final_name: $combined_file" >&2
     echo "$combined_file"  # Return the filename
     return 0
 }
@@ -140,7 +125,7 @@ process_variable() {
 BASE_URL="https://www.metoffice.gov.uk/hadobs/en4/data/en4-2-1"
 WORK_DIR="/users/cadaumar/en4_download" #TO BE CHANGED AS NEEDED
 FINAL_DIR="/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4"
-START_YEAR=2023
+START_YEAR=2025
 START_MONTH=1
 END_YEAR=2025
 END_MONTH=6
@@ -151,19 +136,33 @@ VAR_CONFIGS[so]="salinity:so:salinity_uncertainty:Sea water salinity:sea_water_s
 VAR_CONFIGS[thetao]="temperature:thetao:temperature_uncertainty:Potential temperature:sea_water_potential_temperature"
 
 # Arrays for processed files
-declare -A processed_files
-processed_files[so]=()
-processed_files[thetao]=()
+declare -a processed_so_files
+declare -a processed_thetao_files
 
-# Work directory setup
-mkdir -p "$WORK_DIR"
-cd "$WORK_DIR"
 
 info "=== Grid configuration setup ==="
 
-# Get script directory (where EN4_management.sh is located)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Save original directory
+ORIGINAL_DIR="$(pwd)"
+
+# Get script directory using realpath if available
+if command -v realpath >/dev/null 2>&1; then
+    SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
+else
+    # Fallback method
+    SCRIPT_PATH="${BASH_SOURCE[0]}"
+    if [[ "$SCRIPT_PATH" != /* ]]; then
+        SCRIPT_PATH="$ORIGINAL_DIR/$SCRIPT_PATH"
+    fi
+    SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
+fi
+
 GRID_FILE="$SCRIPT_DIR/EN4_target_grid.txt"
+
+info "Original directory: $ORIGINAL_DIR"
+info "Script directory: $SCRIPT_DIR"
+info "Grid file path: $GRID_FILE"
+
 
 # Check if the grid file exists
 if [ -f "$GRID_FILE" ]; then
@@ -177,6 +176,11 @@ else
     warning "Regridding will be skipped."
     GRID_FILE=""
 fi
+
+# Work directory setup
+mkdir -p "$WORK_DIR"
+cd "$WORK_DIR"
+
 
 info "=== EN4 data download from ${START_YEAR}-$(printf "%02d" $START_MONTH) to ${END_YEAR}-$(printf "%02d" $END_MONTH) ==="
 
@@ -225,7 +229,11 @@ for year in $(seq $START_YEAR $END_YEAR); do
                 # Process each variable
                 for var_name in "${!VAR_CONFIGS[@]}"; do
                     if processed_file=$(process_variable "$monthly_file" "${VAR_CONFIGS[$var_name]}" "$year" "$month_str"); then
-                        processed_files[$var_name]+=("$processed_file")
+                        if [ "$var_name" = "so" ]; then
+                            processed_so_files+=("$processed_file")
+                        elif [ "$var_name" = "thetao" ]; then
+                            processed_thetao_files+=("$processed_file")
+                        fi
                         ((variables_processed++))
                     fi
                 done
@@ -257,11 +265,20 @@ mkdir -p "$FINAL_DIR"
 
 # Process each variable type
 for var_name in "${!VAR_CONFIGS[@]}"; do
-    if [ ${#processed_files[$var_name][@]} -gt 0 ]; then
-        success "Processed ${var_name} files: ${#processed_files[$var_name][@]}"
+    # Determine which array to use
+    if [ "$var_name" = "so" ]; then
+        current_files=("${processed_so_files[@]}")
+        file_count=${#processed_so_files[@]}
+    elif [ "$var_name" = "thetao" ]; then
+        current_files=("${processed_thetao_files[@]}")
+        file_count=${#processed_thetao_files[@]}
+    fi
+    
+    if [ $file_count -gt 0 ]; then
+        success "Processed ${var_name} files: $file_count"
         
         # Sort files by date
-        IFS=$'\n' sorted_files=($(sort <<<"${processed_files[$var_name][*]}"))
+        IFS=$'\n' sorted_files=($(sort <<<"${current_files[*]}"))
         unset IFS
         
         # Temporal merge
@@ -279,7 +296,7 @@ for var_name in "${!VAR_CONFIGS[@]}"; do
         fi
         
         # Cleanup temporary files
-        rm -f "${processed_files[$var_name][@]}"
+        rm -f "${current_files[@]}"
         
         # Store merged filename for later use
         eval "merged_${var_name}_file=\"$merged_file\""
@@ -341,3 +358,111 @@ for var_name in "${!VAR_CONFIGS[@]}"; do
         cdo info "$(basename "${!merged_var}")" | head -5
     fi
 done
+
+
+
+info "=== TEMPORARY: Coordinate comparison ==="
+
+# Function to compare coordinates between reference and new data
+compare_coordinates() {
+    local reference_file="$1"
+    local new_file="$2"
+    local var_name="$3"
+    
+    if [ ! -f "$reference_file" ]; then
+        warning "Reference file not found: $reference_file"
+        return 1
+    fi
+    
+    if [ ! -f "$new_file" ]; then
+        warning "New file not found: $new_file"
+        return 1
+    fi
+    
+    echo -e "${BLUE}=== Comparing coordinates for $var_name ===${NC}"
+    
+    # Compare grid properties
+    echo -e "${GREEN}--- GRID COMPARISON ---${NC}"
+    echo "Reference grid:"
+    cdo griddes "$reference_file" | head -10
+    
+    echo "New data grid:"
+    cdo griddes "$new_file" | head -10
+    
+    # Check if grids are identical
+    echo "Checking if grids are identical..."
+    if cdo diffn "$reference_file" "$new_file" > /dev/null 2>&1; then
+        success "✓ Grids are IDENTICAL"
+    else
+        # More detailed comparison
+        echo "Grid differences found, checking coordinates..."
+        
+        # Compare coordinate ranges using showname first
+        echo "Reference variables: $(cdo showname "$reference_file")"
+        echo "New variables: $(cdo showname "$new_file")"
+        
+        # Simple lat/lon range check using ncdump
+        echo "Reference lat/lon dimensions:"
+        ncdump -h "$reference_file" | grep -E "^\s*(lat|lon)\s*="
+        
+        echo "New data lat/lon dimensions:"
+        ncdump -h "$new_file" | grep -E "^\s*(lat|lon)\s*="
+    fi
+    
+    echo ""
+    
+    # Compare time values
+    echo -e "${GREEN}--- TIME COMPARISON ---${NC}"
+    echo "Reference time info:"
+    echo "Time range:"
+    cdo showtimestamp "$reference_file" | head -1
+    echo "..."
+    cdo showtimestamp "$reference_file" | tail -1
+    echo "Total timesteps: $(cdo ntime "$reference_file")"
+    
+    echo ""
+    echo "New data time info:"
+    echo "Time range:"
+    cdo showtimestamp "$new_file" | head -1
+    echo "..."
+    cdo showtimestamp "$new_file" | tail -1
+    echo "Total timesteps: $(cdo ntime "$new_file")"
+    
+    # Check temporal overlap
+    echo ""
+    echo "Time overlap analysis:"
+    ref_start=$(cdo showtimestamp "$reference_file" | head -1 | awk '{print $1}')
+    ref_end=$(cdo showtimestamp "$reference_file" | tail -1 | awk '{print $NF}')
+    new_start=$(cdo showtimestamp "$new_file" | head -1 | awk '{print $1}')
+    new_end=$(cdo showtimestamp "$new_file" | tail -1 | awk '{print $NF}')
+    
+    echo "Reference: $ref_start to $ref_end"
+    echo "New data: $new_start to $new_end"
+    
+    echo -e "${BLUE}=== End comparison for $var_name ===${NC}"
+    echo ""
+}
+
+# Find files to compare
+reference_so="$FINAL_DIR/so-1950_2022.nc"
+
+# Check what SO files we have
+if [ -n "${final_merged_so:-}" ] && [ -f "$FINAL_DIR/$final_merged_so" ]; then
+    new_so="$FINAL_DIR/$final_merged_so"
+    info "Comparing with complete merged SO file"
+elif [ -n "${merged_so_file:-}" ] && [ -f "$FINAL_DIR/$(basename "$merged_so_file")" ]; then
+    new_so="$FINAL_DIR/$(basename "$merged_so_file")"
+    info "Comparing with new SO file only"
+else
+    warning "No new SO file found for comparison"
+    new_so=""
+fi
+
+# Perform comparison if we have both files
+if [ -n "$new_so" ]; then
+    compare_coordinates "$reference_so" "$new_so" "SO"
+else
+    warning "Cannot perform coordinate comparison - missing files"
+    echo "Reference: $reference_so (exists: $([ -f "$reference_so" ] && echo "yes" || echo "no"))"
+    echo "New: $new_so"
+fi
