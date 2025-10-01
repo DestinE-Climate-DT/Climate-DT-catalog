@@ -1,8 +1,8 @@
 levante:
   paths: 
-    grids: /work/bb1153/b382075/aqua/grids
-    weights: /work/bb1153/b382075/aqua/weights
-    areas: /work/bb1153/b382075/aqua/areas
+    grids: /work/bb1153/b382289/data/aqua-dvc/grids
+    weights: /work/bb1153/b382289/data/aqua-dvc/weights
+    areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     LRA_NEXTGEMS: /work/bb1153/b382076/LRA_NG4/nextgems4
     FDB_PATH: /work/bm1235/b382776
