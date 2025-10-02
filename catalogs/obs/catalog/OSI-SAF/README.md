@@ -4,6 +4,8 @@ In our `obs` catalog for `OSI-SAF`, the sea-ice concentration Climate Data Recor
 
 > By concatenating OSI-450-a1 (1978–2020) and OSI-430-a (2021–2024), we obtain a continuous, homogeneous sea-ice dataset spanning 1978–2024.
 
+More info about the two datasets [Global Sea Ice Concentration CDR](https://osisaf-hl.met.no/osi-450a1-430a-desc)
+
 ## 1. OSI-450-a1 (Climate Data Record (CDR))
 
 - Latest full series temporal coverage: **1978–2020**, released in 2025.  
@@ -22,7 +24,32 @@ The same processing chain as OSI-450-a1 was applied, ensuring consistency in alg
 
 It likewise provides L3+L4 daily files, from which we derived monthly averages.
 
-# Downloading the OSI-SAF Data: 1978 - 2020 (OSI-450-a1)
+## Differences of new version (v3.1) against previous version (v2)
+
+As mentianed above, it is important to highlight that a newer version of the dataset is used respect to the old one (v2.0).
+Some of the different approach across multiple stages of the data processing are mentioned here:
+
+- the old data v2.0:  
+uses Fundamental Climate Data Record (FCDR) version V003 (see [LINK](https://osisaf-hl.met.no/osi-450a1-430a-desc))
+using _ERA-Interim_ data which is the base for the Climate Data Record (CDR) used for seaice concentration siconc.
+
+- the new data v3.1:  
+are based on FCDR V004 (so different full reprocessing), using _ERA5_ data as input for OSI FAS CDR version for siconc.
+
+The Product User Manual for OSI-450-a1 v3.1 states:
+
+In v3, the **binary land mask (smask)**:  
+“_The binary smask is tuned to closely match that of the NSIDC sea-ice concentration (SIC) CDR … this corresponds to setting all 25×25 km grid cells with a fraction of land lower than 30% to water (ocean or lake)._”
+
+where the **land spill-over correction**, is a filters applied in the OSI SAF SIC CDR and directly affects how many pixels end up masked or set to zero:  
+"_was improved for the v3 SIC CDR … validation confirmed less land spill-over effects in v3 than in v2._”
+
+Another thing that worth to be considered is that the spatial interpolation scheme in v3 has changed, which implies a different data reprocessing.
+
+For further info:  
+Product User's Manual for [OSI-450-a1 (v3.1) and OSI-430-a (v3.0)](https://osisaf-hl.met.no/sites/osisaf-hl/files/user_manuals/osisaf_cdop3_ss2_pum_sea-ice-conc-climate-data-record_v3p2.pdf)
+
+# Downloading the OSI-SAF Data: 1978 - 2020 (OSI-450-a1) - latest: v3.1
 
 Link page: https://osi-saf.eumetsat.int/products/osi-450-a1 
 
@@ -155,7 +182,7 @@ for year in $(seq 1979 2020); do
 done
 ```
 
-# Downloading the OSI-SAF Data: 2021 - 2024 (OSI-430-a)
+# Downloading the OSI-SAF Data: 2021 - 2024 (OSI-430-a) - latest: v3.0
 
 Link page to OSI SAF (Ocean & Sea Ice Satellite Application Facility)   
 presenting the OSI-430-a dataset data: https://osi-saf.eumetsat.int/products/osi-430-a 
