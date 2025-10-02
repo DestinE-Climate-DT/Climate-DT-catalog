@@ -126,9 +126,7 @@ BASE_URL="https://www.metoffice.gov.uk/hadobs/en4/data/en4-2-1"
 WORK_DIR="/users/cadaumar/en4_download" #TO BE CHANGED AS NEEDED
 FINAL_DIR="/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4"
 START_YEAR=2025
-START_MONTH=1
 END_YEAR=2025
-END_MONTH=6
 
 # Variable configurations: "original_name:final_name:uncertainty_name:long_name:standard_name"
 declare -A VAR_CONFIGS
@@ -182,7 +180,7 @@ mkdir -p "$WORK_DIR"
 cd "$WORK_DIR"
 
 
-info "=== EN4 data download from ${START_YEAR}-$(printf "%02d" $START_MONTH) to ${END_YEAR}-$(printf "%02d" $END_MONTH) ==="
+info "=== EN4 data download from ${START_YEAR} to ${END_YEAR} ==="
 
 # Loop to download and process data year by year
 for year in $(seq $START_YEAR $END_YEAR); do
@@ -194,7 +192,7 @@ for year in $(seq $START_YEAR $END_YEAR); do
     
     # Download with wget
     if ! wget -c "$url"; then
-        error "Error in the download of $zip_filename, continuing with next year..."
+        error "Error in the download of $zip_filename, skipping this year..."
         continue
     fi
     
@@ -203,21 +201,8 @@ for year in $(seq $START_YEAR $END_YEAR); do
         unzip -o "$zip_filename"
         rm "$zip_filename"
         
-        # Determine start and end months for this year
-        if [ $year -eq $START_YEAR ]; then
-            start_m=$START_MONTH
-        else
-            start_m=1
-        fi
-        
-        if [ $year -eq $END_YEAR ]; then
-            end_m=$END_MONTH
-        else
-            end_m=12
-        fi
-        
-        # Process monthly files extracted for this year
-        for month in $(seq $start_m $end_m); do
+        # Process 12 monthly files
+        for month in $(seq 1 12); do
             month_str=$(printf "%02d" $month)
             monthly_file="EN.4.2.2.f.analysis.g10.${year}${month_str}.nc"
             
@@ -228,11 +213,11 @@ for year in $(seq $START_YEAR $END_YEAR); do
                 
                 # Process each variable
                 for var_name in "${!VAR_CONFIGS[@]}"; do
-                    if processed_file=$(process_variable "$monthly_file" "${VAR_CONFIGS[$var_name]}" "$year" "$month_str"); then
+                    if combined_file=$(process_variable "$monthly_file" "${VAR_CONFIGS[$var_name]}" "$year" "$month_str"); then
                         if [ "$var_name" = "so" ]; then
-                            processed_so_files+=("$processed_file")
+                            processed_so_files+=("$combined_file")
                         elif [ "$var_name" = "thetao" ]; then
-                            processed_thetao_files+=("$processed_file")
+                            processed_thetao_files+=("$combined_file")
                         fi
                         ((variables_processed++))
                     fi
@@ -240,17 +225,22 @@ for year in $(seq $START_YEAR $END_YEAR); do
                 
                 # Show debug info if no variables were processed
                 if [ $variables_processed -eq 0 ]; then
-                    error "Error in processing $monthly_file - check variable names"
+                    error "Error processing $monthly_file - check variable names"
                     warning "Available variables in $monthly_file:"
                     cdo showname "$monthly_file" || ncdump -h "$monthly_file" | grep -A 20 "variables:"
                 fi
                 
                 rm "$monthly_file"
             else
-                warning "Monthly file $monthly_file not found."
+                warning "Monthly file $monthly_file not found - year $year might be incomplete!"
+                warning "Skipping year $year..."
+                # Cleanup any files from this incomplete year
+                rm -f *_${year}*.nc
+                # Skip to next year
+                continue 2
             fi
         done
-        
+
         # Clean up any remaining .nc files
         rm -f EN.4.2.2.f.analysis.g10.${year}*.nc
         
@@ -282,7 +272,7 @@ for var_name in "${!VAR_CONFIGS[@]}"; do
         unset IFS
         
         # Temporal merge
-        merged_file="${var_name}_EN4_${START_YEAR}$(printf "%02d" $START_MONTH)_${END_YEAR}$(printf "%02d" $END_MONTH).nc"
+        merged_file="${var_name}_EN4_${START_YEAR}_${END_YEAR}.nc"
         info "Creating ${var_name} temporal merge: $merged_file"
         
         cdo mergetime "${sorted_files[@]}" "$merged_file"
