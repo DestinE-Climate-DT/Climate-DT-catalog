@@ -1,16 +1,41 @@
 plugins:
   source:
-    - module: intake_xarray
+  - module: intake_xarray
 
 sources:
   daily:
-    description: AVISO ssh vDT2021    
+    description: AVISO ssh vDT2021
     driver: zarr
     metadata:
       source_grid_name: aviso
+      fixer_name: ssh-adt
     args:
-      consolidated: False
+      consolidated: false
       compat: override
       combine: nested
+      urlpath:
+      - reference::{{DATA_PATH}}/AVISO/json/AVISO.json
+  aqua-sshVariability-sshVariability:
+    driver: netcdf
+    description: AQUA diagnostic sshVariability data for product sshVariability
+    args:
       urlpath: 
-      - 'reference::{{DATA_PATH}}/AVISO/json/AVISO.json'
+        ./netcdf/sshVariability.sshVariability.obs.AVISO.ssh-L4.{{realization}}.*.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
