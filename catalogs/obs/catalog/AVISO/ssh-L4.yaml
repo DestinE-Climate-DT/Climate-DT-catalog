@@ -15,6 +15,19 @@ sources:
       combine: nested
       urlpath:
       - reference::{{DATA_PATH}}/AVISO/json/AVISO.json
+  ssh-AVISO-test:
+    driver: netcdf
+    description: AVISO test dataset for sshVariability diagnostic development
+    args:
+      urlpath:
+      - /scratch/a/a270260/ssh_output/obs.AVISO.ssh-L4.daily.zos.1994-01-01.to.1994-01-04-latlon.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: lon-lat
+
+
   aqua-sshVariability-sshVariability:
     driver: netcdf
     description: AQUA diagnostic sshVariability data for product sshVariability
