@@ -22,7 +22,7 @@ sources:
     description: Monthly averages of Northern Hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
-      source_grid_name: osi-saf-nh
+      source_grid_name: osi-saf-nh-aqua
       fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/monthly/ice_conc_nh_ease2-250_cdr_v3_monthly_1979-2024.nc' 
@@ -49,7 +49,7 @@ sources:
     description: Monthly averages of Southern Hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
-      source_grid_name: osi-saf-sh
+      source_grid_name: osi-saf-sh-aqua
       fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/monthly/ice_conc_sh_ease2-250_cdr_v3_monthly_1979-2024.nc' 
