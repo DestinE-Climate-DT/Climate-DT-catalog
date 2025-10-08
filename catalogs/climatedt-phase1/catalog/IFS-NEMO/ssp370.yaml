@@ -333,7 +333,7 @@ sources:
     args:
       urlpath:
       - '{{ LRA_PATH }}/IFS-NEMO/ssp370/r100/monthly/*ssp370_r100_monthly_*.nc'
-      - '{{ DROP_PATH }}/IFS-NEMO/ssp370/r1/r100/monthly/mean/global/*_climatedt-phase1_IFS-NEMO_ssp370_r1_r100_monthly_mean_global_*.nc'
+      - '{{ DROP_PATH }}/IFS-NEMO/ssp370/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-phase1_IFS-NEMO_ssp370_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
