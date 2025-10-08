@@ -24,7 +24,26 @@ sources:
       start: 1990
       dashboard:
         menu: control 1990 freeze
-        resolution_id: SR
+        resolution_id: HR # SR
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+
+  a2m9:
+    description: FDB IFS/FESOM tco399-DARS run
+    metadata:
+      author: Maqsood
+      maintainer: not specified
+      machine: mn5
+      expid: 0001
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: a2m9
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2m9.yaml'
