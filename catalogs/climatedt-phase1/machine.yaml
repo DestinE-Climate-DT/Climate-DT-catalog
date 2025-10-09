@@ -6,6 +6,8 @@ lumi:
   intake:
     # where LRA data is stored (available in all the machines listed)
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-phase1
+    # where DROP data is stored (available in all the machines listed)
+    DROP_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/DROP/climatedt-phase1
     # where the FDB schema is stored (available only on lumi)
     FDB_PATH: /pfs/lustrep3/appl/local/destine
     # where the historical FDB data is stored (available only on lumi)
@@ -22,6 +24,7 @@ levante:
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     LRA_PATH: /work/bb1153/b382076/LRA-lumi
+    DROP_PATH: null
     FDB_PATH: null
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
@@ -34,6 +37,7 @@ MN5:
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-phase1
+    DROP_PATH: null
     FDB_PATH: /gpfs/projects/ehpc01/dte/fdb
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
@@ -46,6 +50,7 @@ wilma:
     areas: /work/users/mnurisso/aqua-data/areas
   intake:
     LRA_PATH: /archive/mnurisso/LRA/climatedt-phase1
+    DROP_PATH: null
     FDB_PATH: null
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
