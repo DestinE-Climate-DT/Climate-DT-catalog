@@ -1,6 +1,7 @@
 # MSWEP v2.8 information
 
-MSWEP is a global precipitation product with a 3‑hourly 0.1° resolution available from 1979 to ~3 hours from real-time. The product is unique in that it merges gauge, satellite, and reanalysis data to obtain the highest quality precipitation estimates at every location.
+MSWEP is a global precipitation product with a 3‑hourly 0.1° resolution available from 1979 to ~3 hours from real-time. 
+The product is unique in that it merges gauge, satellite, and reanalysis data to obtain the highest quality precipitation estimates at every location.
 
 The currently available dataset is:
 
@@ -40,6 +41,11 @@ typically only the second one will be needed, since the "Past" archive does not 
 You will then need to postprocess the data to generate the rechunked netcdf files as described above.
 
 Conversion to zarr can be achieved easily using the [nc2zarr utility](https://github.com/bcdev/nc2zarr) or similar tools.
+We provide a sample configuration file for `nc2zarr`to be used as follows:
+
+````
+nc2zarr -c scripts/monthly.yaml
+````
 
 
 
