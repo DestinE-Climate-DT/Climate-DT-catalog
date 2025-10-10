@@ -19,7 +19,7 @@ y2=2020
 for ((y=y1; y<=y2; y++)); do
 
  echo $y
- cdo -z zip_1 -k grid -f nc4 cat [ $INDIR/${y}??.nc ] $OUTDIR/MSWEP_v280_monthly_$y.nc
+ cdo -z zip_1 -k grid -f nc4 -settime,0 cat [ $INDIR/${y}??.nc ] $OUTDIR/MSWEP_v280_monthly_$y.nc
 
 done
 
