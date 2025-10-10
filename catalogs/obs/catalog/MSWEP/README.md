@@ -19,6 +19,10 @@ The reconstruction is documented in the script `scripts/reconstruct.sh`
 
 Since the month of December of 2020 is missing from the 'Past' archive, these data were filled from the NRT dataset which starts in December 2020.
 
+### NRT 3 hour data
+
+Starting in April 2020 the NRT data contain also two additional variables ("combination" and "cumulative_weight") so that precipitation needs to be selected to merge them with other dates.
+
 ### Rechunking
 
 The original data have a chunking also in space which is not adequate for AQUA. All netcdf data (and zarr consequently) were preprocessed, rechunking them with the script `scripts/rechunk.sh`.
