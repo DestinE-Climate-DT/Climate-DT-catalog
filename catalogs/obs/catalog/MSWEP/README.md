@@ -31,12 +31,13 @@ The dataset is dowloaded from MSWEP from Google Drive using `rclone`.
 It is necessary to contact the maintainers following the "Apply" link on [their web page](https://www.gloh2o.org/mswep/) to
 get access to a GoogleDrive with the data.
 
-The full commands (merging Past and NRT) are for example:
+The full commands are for example:
 ````
-rclone sync -v  --drive-shared-with-me GoogleDrive:/MSWEP_V280/NRT/Monthly/ /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/MSWEP/v2.8/netcdf/Past-NRT/monthly
-rclone sync -v  --drive-shared-with-me GoogleDrive:/MSWEP_V280/Past/Monthly/ /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/MSWEP/v2.8/netcdf/Past-NRT/monthly
+rclone sync -v  --drive-shared-with-me GoogleDrive:/MSWEP_V280/NRT/Monthly/ /YOURDIR/Past/monthly
+rclone sync -v  --drive-shared-with-me GoogleDrive:/MSWEP_V280/Past/Monthly/ /YOURDIR/NRT/monthly
 ````
-typically only the sond one will be needed, since the "Past" archive does not change. Similarly for `Daily` and `3hourly` data.
+typically only the second one will be needed, since the "Past" archive does not change. Similarly for `Daily` and `3hourly` data.
+You will then need to postprocess the data to generate the rechunked netcdf files as described above.
 
 Conversion to zarr can be achieved easily using the [nc2zarr utility](https://github.com/bcdev/nc2zarr) or similar tools.
 
