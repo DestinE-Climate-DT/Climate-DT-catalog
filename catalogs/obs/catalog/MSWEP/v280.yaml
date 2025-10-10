@@ -3,6 +3,7 @@ plugins:
     - module: intake_xarray
 
 sources:
+
   monthly:
     description: monthly MSWEP_V280 data Past+NRT in zarr format
     driver: zarr
@@ -10,16 +11,10 @@ sources:
       source_grid_name: lon-lat
       fixer_name: MSWEP-default
     args:
-      consolidated: True
-        #chunks:
-        # use_cftime: True
-        # decode_times: False
+      consolidated: False
       urlpath: 
       - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.monthly.zarr'
-        #xarray_kwargs:
-        # decode_times: True
-        #use_cftime: True
-
+  
   monthly-netcdf:
     description: monthly MSWEP_V280 data Past+NRT in netcdf format
     driver: netcdf
