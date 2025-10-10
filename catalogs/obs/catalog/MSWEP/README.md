@@ -29,7 +29,7 @@ Conversion to zarr can be achieved easily using the [nc2zarr utility](https://gi
 We provide a sample configuration file for `nc2zarr`to be used as follows:
 
 ````
-nc2zarr -c scripts/monthly.yaml
+nc2zarr -vv -s name -c scripts/monthly.yaml
 ````
 
 ### How to update
