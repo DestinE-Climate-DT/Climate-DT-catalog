@@ -3,7 +3,7 @@ plugins:
     - module: intake_xarray
 
 sources:
-  monthly-zarr:
+  monthly:
     description: monthly MSWEP_V280 data Past+NRT in zarr format
     driver: zarr
     metadata:
@@ -15,12 +15,12 @@ sources:
         # use_cftime: True
         # decode_times: False
       urlpath: 
-      - '{{DATA_PATH}}/MSWEP/v2.8/zarr/past-nrt-monthly.zarr'
+      - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.monthly.zarr'
         #xarray_kwargs:
         # decode_times: True
         #use_cftime: True
 
-  monthly:
+  monthly-netcdf:
     description: monthly MSWEP_V280 data Past+NRT in netcdf format
     driver: netcdf
     metadata:
@@ -31,7 +31,7 @@ sources:
       - '{{DATA_PATH}}/MSWEP/v2.8/netcdf/Past/monthly/MSWEP_v280_monthly_????.nc'
       - '{{DATA_PATH}}/MSWEP/v2.8/netcdf/NRT/monthly/MSWEP_v280_monthly_????.nc'
 
-  daily-zarr:
+  daily:
     description: daily MSWEP_V280 data Past+NRT in zarr format
     driver: zarr
     metadata:
@@ -40,18 +40,8 @@ sources:
     args:
       consolidated: True
       urlpath: 
-      - '{{DATA_PATH}}/MSWEP/v2.8/zarr/past-nrt-daily.zarr'
+      - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.daily.zarr/'
 
-  daily:
-    description: daily MSWEP_V280 data Past+NRT in netcdf format
-    driver: netcdf
-    metadata:
-      source_grid_name: lon-lat
-      fixer_name: MSWEP-default
-    args:
-      urlpath: 
-      - '{{DATA_PATH}}/MSWEP/v2.8/netcdf/Past/daily/MSWEP_v280_daily_????.nc'
-      - '{{DATA_PATH}}/MSWEP/v2.8/netcdf/NRT/daily/MSWEP_v280_daily_????.nc'
 
   # 3hourly:
   #   description: 3 hourly MSWEP_V280 data Past+NRT in zarr format
