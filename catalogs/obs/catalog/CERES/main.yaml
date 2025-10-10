@@ -25,12 +25,12 @@ sources:
     args:
       path: "{{CATALOG_DIR}}/syn-toa41.yaml"
   ebaf-sfc422:
-    description: CERES-EBAF v4.2.2 updated version up to 2025-06
+    description: CERES-EBAF v4.2.1 updated version up to 2025-06
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/ebaf-sfc422.yaml"
+      path: "{{CATALOG_DIR}}/ebaf-sfc421.yaml"
   ebaf-toa422:
-    description: CERES-EBAF v4.2.2 updated version up to 2025-06
+    description: CERES-EBAF v4.2.1 updated version up to 2025-06
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/ebaf-toa422.yaml"
+      path: "{{CATALOG_DIR}}/ebaf-toa421.yaml"

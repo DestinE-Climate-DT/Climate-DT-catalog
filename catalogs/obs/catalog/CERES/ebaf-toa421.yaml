@@ -4,13 +4,13 @@ plugins:
 
 sources:
   monthly:
-    description: CERES EBAF TOA Ed4.2.2 from 2000-03 to 2025-06
+    description: CERES EBAF TOA Ed4.2.1 from 2000-03 to 2025-06
     driver: netcdf
     metadata:
       fixer_name: ceres-ebaf-toa-destine-v1
       source_grid_name: lon-lat
     args:
-      urlpath: '{{DATA_PATH}}/CERES/EBAF_v4.2.2/CERES_EBAF-TOA_Edition4.2.1_MONTHLY_200003-202506.nc'
+      urlpath: '{{DATA_PATH}}/CERES/EBAF_v4.2.1/CERES_EBAF-TOA_Edition4.2.1_MONTHLY_200003-202506.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True

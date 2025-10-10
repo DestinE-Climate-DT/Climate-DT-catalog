@@ -16,7 +16,7 @@ The AQUA team currently utilizes the following CERES datasets:
 - **EBAF-Surface**: Energy Balanced and Filled surface radiation data
 - **EBAF-TOA**: Energy Balanced and Filled Top-of-Atmosphere radiation data
 
-The current implementation uses **version v4.2.2**, which is the most recent version available, 
+The current implementation uses **version v4.2.1**, which is the most recent version available, 
 although previous versions are also accessible.
 
 ### Other Available Datasets
