@@ -28,22 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
-
-  a2m9:
-    description: FDB IFS/FESOM tco399-DARS run
+  historical-1990-intermediate:
+    description: FDB IFS/FESOM intermediate  tco399/DARS ocean run
     metadata:
-      author: Maqsood
+      author: AWI-DestinE
       maintainer: not specified
-      machine: mn5
-      expid: 0001
-      resolution_atm: tco2559
-      resolution_oce: NG5
+      machine: MN5
+      expid: a2m9
+      resolution_atm: tco399
+      resolution_oce: D3
       forcing: historical
       start: '1990'
       dashboard:
-        menu: a2m9
-        resolution_id: HR
+        menu: historical-1990-intermediate
+        resolution_id: MR
         note: null
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/a2m9.yaml'
+      path: '{{CATALOG_DIR}}/historical-1990-intermediate.yaml'
