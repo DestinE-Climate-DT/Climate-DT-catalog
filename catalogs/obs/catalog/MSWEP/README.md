@@ -19,6 +19,8 @@ The reconstruction is documented in the script `scripts/reconstruct.sh`
 
 Since the month of December of 2020 is missing from the 'Past' archive, these data were filled from the NRT dataset which starts in December 2020.
 
+The NRT file `2023132.21.nc` is broken and was substituted with `2023132.18.nc`.
+
 ### NRT 3 hourly data
 
 Starting in April 2020 the NRT data contain also two additional variables ("combination" and "cumulative_weight") so that precipitation needs to be selected to merge them with other dates. 
