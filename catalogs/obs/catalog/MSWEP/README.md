@@ -8,7 +8,8 @@ the "NRT" (near-real time) archive (202012-present). The two datasets are compat
 of the other. "monthly", "daily" and "3hourly" sources are currently available. 
 In order to keep only full years as reference, the data currently extend only till 2024-12-31.
 
-A netcdf and a zarr source are available. The nectdf files are grouped on a yearly basis for all time frequencies.
+The default sources ("monthly", "daily", "3hourly") are in zarr format and a "monthly-netcdf" source in netcdf format is available.
+The nectdf files are grouped on a yearly basis.
 
 ### Missing data
 
