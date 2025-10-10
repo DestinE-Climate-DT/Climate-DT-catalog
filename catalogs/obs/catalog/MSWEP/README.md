@@ -3,16 +3,12 @@
 MSWEP is a global precipitation product with a 3‑hourly 0.1° resolution available from 1979 to ~3 hours from real-time. 
 The product is unique in that it merges gauge, satellite, and reanalysis data to obtain the highest quality precipitation estimates at every location.
 
-The currently available dataset is:
+The currently available dataset is a merge of the MSWEP "Past" archive including gauge correction (197901-202011) plus
+the "NRT" (near-real time) archive (202012-present). The two datasets are compatible and one is the continuation 
+of the other. "monthly", "daily" and "3hourly" sources are currently available. 
+In order to keep only full years as reference, the data currently extend only till 2024-12-31.
 
-- past-nrt: this is actually a merge of the MSWEP "Past" archive including gauge correction (197901-202011) plus
-            the "NRT" (near-real time) archive (202012-present). The two datasets are compatible and one is the continuation 
-            of the other. "monthly", "daily" and "3hourly" sources are currently available. 
-            In order to keep only full years as reference the data currently extend only till 2024-12-31.
-
-A netcdf and and experimental zarr source are available. The nectdf files are grouped on a yearly basis for all time frequency.
-
-## Notes
+A netcdf and a zarr source are available. The nectdf files are grouped on a yearly basis for all time frequencies.
 
 ### Missing data
 
@@ -24,9 +20,19 @@ Since the month of December of 2020 is missing from the 'Past' archive, these da
 
 ### Rechunking
 
-The original data have a chunking also in space which is not adequate for AQUA. All netcdf data (and zarr consequently) were preporcessed rechunking them with the script `scripts/rechunk.sh`.
+The original data have a chunking also in space which is not adequate for AQUA. All netcdf data (and zarr consequently) were preprocessed, rechunking them with the script `scripts/rechunk.sh`.
 
-## How to update
+
+### Zarr
+
+Conversion to zarr can be achieved easily using the [nc2zarr utility](https://github.com/bcdev/nc2zarr) or similar tools.
+We provide a sample configuration file for `nc2zarr`to be used as follows:
+
+````
+nc2zarr -c scripts/monthly.yaml
+````
+
+### How to update
 
 The dataset is dowloaded from MSWEP from Google Drive using `rclone`.
 It is necessary to contact the maintainers following the "Apply" link on [their web page](https://www.gloh2o.org/mswep/) to
@@ -40,12 +46,6 @@ rclone sync -v  --drive-shared-with-me GoogleDrive:/MSWEP_V280/Past/Monthly/ /YO
 typically only the second one will be needed, since the "Past" archive does not change. Similarly for `Daily` and `3hourly` data.
 You will then need to postprocess the data to generate the rechunked netcdf files as described above.
 
-Conversion to zarr can be achieved easily using the [nc2zarr utility](https://github.com/bcdev/nc2zarr) or similar tools.
-We provide a sample configuration file for `nc2zarr`to be used as follows:
-
-````
-nc2zarr -c scripts/monthly.yaml
-````
 
 
 
