@@ -1,0 +1,25 @@
+
+input:
+  paths: 
+     - /data/datasets/obs/MSWEP_V280/Past/3hourly_byyear_rechunked/MSWEP_v280*.nc
+     - /data/datasets/obs/MSWEP_V280/NRT/3hourly_byyear_rechunked/MSWEP_v280*.nc
+
+#  decode_cf: true
+#  multi_file: true
+
+process:
+  rechunk:
+    '*':
+      lon: null  # no chunking for lon dim in all variables
+      lat: null  # no chunking for lon dim in all variables
+      time: 1    # chunk size 1 for time dim in all variables
+    lon: null    # no chunking for lon dim in lon variable
+    lat: null    # no chunking for lat dim in lat variable
+    time: 1   
+
+output:
+  path: /data/datasets/obs/MSWEP_V280/zarr/mswep280.past-nrt.3hourly.zarr
+  overwrite: true
+  consolidated: true
+  append_dim: time
+
