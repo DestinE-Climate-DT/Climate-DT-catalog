@@ -5,6 +5,16 @@ plugins:
 sources:
   monthly:
     description: ERA5 monthly data from 1940 to 2024
+    driver: zarr
+    metadata:
+      source_grid_name: era5-r025s
+      fixer_name: ERA5-destine-v1
+    args:
+      consolidated: True
+      urlpath: '{{DATA_PATH}}/ERA5/zarr/era5_monthly_1940-2024.zarr'
+
+  monthly-netcdf:
+    description: ERA5 monthly data from 1940 to 2024
     driver: netcdf
     metadata:
       source_grid_name: era5-r025s
@@ -15,6 +25,7 @@ sources:
         time: 12
       xarray_kwargs:
         decode_times: True
+
   daily:
     description: ERA5 daily data from 1940 to 2022 (test)
     driver: netcdf
