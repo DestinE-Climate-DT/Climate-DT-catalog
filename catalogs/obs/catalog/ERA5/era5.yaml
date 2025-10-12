@@ -12,6 +12,8 @@ sources:
     args:
       consolidated: True
       urlpath: '{{DATA_PATH}}/ERA5/zarr/era5_monthly_1940-2024.zarr'
+      chunks:
+        time: 12
 
   monthly-netcdf:
     description: ERA5 monthly data from 1940 to 2024
