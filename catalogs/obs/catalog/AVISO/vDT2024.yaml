@@ -1,0 +1,14 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  daily:
+      description: daily aviso vDT2024 in zarr format
+      driver: zarr
+      metadata:
+        source_grid_name: aviso
+      args:
+        consolidated: True
+        urlpath: 
+        - '/home/b/b382076/scratch/aviso/aviso_test.zarr'
