@@ -1311,3 +1311,39 @@ sources:
         type: str
         allowed:
         - global
+  aqua-ocean-timeseries-levante:
+    driver: netcdf
+    description: AQUA diagnostic ocean data for product timeseries
+    args:
+      urlpath: 
+        /scratch/a/a270260/ts_cat_entry/ocean.timeseries.climatedt-o25.1.IFS-NEMO.hist-1990-ensemble.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r2
+        type: str
+        allowed:
+        - r2
+        - r3
+        - r4
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - northmidlatitudes
+        - southmidlatitudes
+
