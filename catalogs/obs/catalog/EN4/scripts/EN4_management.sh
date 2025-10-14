@@ -94,9 +94,16 @@ process_variable() {
     ncatted -O -a long_name,$final_name,m,c,"$long_name" "$temp_file" 2>/dev/null || true
     ncatted -O -a standard_name,$final_name,m,c,"$standard_name" "$temp_file" 2>/dev/null || true
     
-    # 5. Rename depth dimension to lev
+    # 5a. Rename depth dimension to lev
     ncrename -d depth,lev -v depth,lev "$temp_file" 2>/dev/null || true
     ncatted -O -a standard_name,lev,c,c,"depth" "$temp_file" 2>/dev/null || true
+
+    # 5b. Standardise lev units to 'm'
+    info "Standardizing lev coordinate units to 'm'..." >&2
+    ncatted -O -a units,lev,o,c,"m" "$temp_file" 2>/dev/null || true
+
+    # 5c. Optional: Add positive attribute for clarity
+    ncatted -O -a positive,lev,o,c,"down" "$temp_file" 2>/dev/null || true
     
     # 6. Convert time to float
     local final_temp="temp_final_${final_name}_${year}${month_str}.nc"
@@ -351,7 +358,7 @@ done
 
 
 
-info "=== TEMPORARY: Coordinate comparison ==="
+info "=== OPTIONAL: Coordinate comparison ==="
 
 # Function to compare coordinates between reference and new data
 compare_coordinates() {
