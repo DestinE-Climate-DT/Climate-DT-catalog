@@ -1,9 +1,17 @@
 lumi:
   paths:
-    grids: /pfs/lustrep3/projappl/project_465000454/data/AQUA/grids
-    weights: /pfs/lustrep3/projappl/project_465000454/data/AQUA/weights
-    areas: /pfs/lustrep3/projappl/project_465000454/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
   intake:
     # Same path as for the phase 1 test
-    LRA_PATH: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA/lumi-phase2
-    ECCODES_PATH: /projappl/project_465000454/jvonhar/aqua/eccodes
+    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/lumi-phase2
+    ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+lumi-operational:
+  paths:
+    grids: /scratch/project_462000560/trial_run/data/AQUA/grids
+    weights: /scratch/project_462000560/trial_run/data/AQUA/weights
+    areas: /scratch/project_462000560/trial_run/data/AQUA/areas
+  intake:
+    LRA_PATH: null
+    ECCODES_PATH: /pfs/lustrep1/projappl/project_462000560/software/eccodes/eccodes_2.36.0/definitions

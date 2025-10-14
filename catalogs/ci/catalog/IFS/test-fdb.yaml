@@ -7,6 +7,32 @@ sources:
         class: ea
         type: an
         expver: "0001"
+        param: 130
+        levtype: pl
+        levelist: [1000]
+        date: "20080101"
+        time: "0000"
+        step: 0
+      data_start_date: "20080101T1200"
+      data_end_date: "20080101T1200"
+      chunks: h
+      timestep: h
+      timestyle: date
+    description: test FDB archive
+    driver: gsv
+    metadata:
+      fdb_home: "{{ FDB_HOME }}"
+      source_grid_name: lon-lat
+      variables: [130]
+
+  fdb-novariables:
+    args:
+      request:
+        domain: g
+        stream: oper
+        class: ea
+        type: an
+        expver: "0001"
         param: t
         levtype: pl
         levelist: [1000]
@@ -21,7 +47,7 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata:
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
 
   fdb-auto:
@@ -40,9 +66,9 @@ sources:
         stream: clte
         date: 19900101
         time: "0000"
-        param: tcc
+        param: 164
         levtype: sfc
-        step: 0
+        #step: 0
       data_start_date: auto
       data_end_date: auto
       chunks: h
@@ -51,8 +77,43 @@ sources:
     description: test FDB archive using new schema and auto dates
     driver: gsv
     metadata: 
-      fdb_home: /app
-      source_grid_name: lon-lat
+      fdb_home: "{{ FDB_HOME }}"
+      source_grid_name: test-hpz7-nested-fdb
+      variables: [164]
+
+  fdb-bridge:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-NEMO
+        realization: 1
+        resolution: standard
+        expver: a0h3
+        type: fc
+        stream: clte
+        date: 19900101
+        time: "0000"
+        param: 164
+        levtype: sfc
+        #step: 0
+      data_start_date: 19900101T0000
+      data_end_date: 19900102T0000
+      bridge_start_date: 19900101T1200
+      bridge_end_date: 19900101T1800
+      chunks: h
+      timestep: h
+      timestyle: date
+    description: test FDB archive with bridge and hpc access
+    driver: gsv
+    metadata: 
+      fdb_home: "{{ FDB_HOME }}"
+      fdb_home_bridge: "{{ FDB_HOME }}"
+      source_grid_name: test-hpz7-nested-fdb
+      variables: [164]
 
   fdb-levels: &base-default
     args: &args-default
@@ -62,7 +123,7 @@ sources:
         class: ea
         type: an
         expver: "0001"
-        param: t
+        param: 130
         levtype: pl
         levelist: [1000, 900, 800]
         date: "20080101"
@@ -76,9 +137,10 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata: 
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
       levels: [999.99, 899.99, 799.99]
+      variables: [130]
 
   fdb-levels-chunks:
     <<: *base-default
@@ -96,7 +158,7 @@ sources:
         class: ea
         type: an
         expver: "0001"
-        param: t
+        param: 130
         levtype: pl
         levelist: [1000, 900, 800]
         date: "20080101"
@@ -110,5 +172,6 @@ sources:
     description: test FDB archive
     driver: gsv
     metadata: 
-      fdb_home: /app
+      fdb_home: "{{ FDB_HOME }}"
       source_grid_name: lon-lat
+      variables: [130]

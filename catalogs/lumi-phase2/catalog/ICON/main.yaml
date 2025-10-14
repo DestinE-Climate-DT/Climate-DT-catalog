@@ -1,0 +1,32 @@
+sources:
+  control-1990-freeze:
+    description: ICON control 1990 freeze run (10km / R2B8)
+    metadata:
+      expid: a216
+      resolution_atm: R2B8
+      resolution_oce: R2B8
+      forcing: control
+      start: 1990
+      dashboard:
+        menu: control 1990 freeze
+        resolution_id: SR
+        note: ecCodes 2.39 but not all monthly data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+
+  test-production:
+    description: ICON control 1990 freeze run (10km / R2B8)
+    metadata:
+      expid: a216
+      resolution_atm: R2B9
+      resolution_oce: R2B9
+      forcing: ssp370
+      start: 1990
+      dashboard:
+        menu: control 1990 freeze
+        resolution_id: SR
+        note: ecCodes 2.39 but not all monthly data
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/test-production.yaml'

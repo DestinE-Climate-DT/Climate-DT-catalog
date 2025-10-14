@@ -9,3 +9,13 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/test-pi.yaml"
+  hpz3:
+    description: hpz3 5 years data from FESOM nextgems4 
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/hpz3.yaml"
+  results:
+    description: AQUA output to test ensemble module
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/results.yaml"

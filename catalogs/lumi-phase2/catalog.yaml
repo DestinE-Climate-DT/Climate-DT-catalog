@@ -3,15 +3,25 @@ metadata:
     LRA_PATH:
       type: str
       description: the path to the LRA
-      default: /pfs/lustrep3/projappl/project_465000454/data/AQUA/LRA
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA
     ECCODES_PATH:
       type: str
       description: the path to the eccodes definitions
-      default: /projappl/project_465000454/jvonhar/aqua/eccodes
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
 
 sources:
+  ICON:
+    description: ICON model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ICON/main.yaml'
+  IFS-FESOM:
+    description: IFS-FESOM model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml'
   IFS-NEMO:
     description: IFS-NEMO coupled model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml'

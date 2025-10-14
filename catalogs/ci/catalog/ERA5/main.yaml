@@ -1,0 +1,6 @@
+sources:
+  era5-hpz3:
+    description: ERA5 5-year hpz3
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/era5-hpz3.yaml"

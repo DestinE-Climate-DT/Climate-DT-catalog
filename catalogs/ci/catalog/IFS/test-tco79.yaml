@@ -53,7 +53,7 @@ sources:
     driver: netcdf
   short_disable_fix:
     metadata:
-      fixer_name: False
+      fixer_name: false
       source_grid_name: tco79-nn
     args:
       chunks:
@@ -80,14 +80,14 @@ sources:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y with mindate fixer
     driver: netcdf
-  long_default_fix:
-    metadata:
-      source_grid_name: lon-lat
-    args:
-      urlpath:
-      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
-    description: coarse IFS data 1y
-    driver: netcdf
+  # long_default_fix:
+  #   metadata:
+  #     source_grid_name: lon-lat
+  #   args:
+  #     urlpath:
+  #     - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
+  #   description: coarse IFS data 1y
+  #   driver: netcdf
   intake-esm-test:
     driver: intake_esm.esm_datastore
     description: Test Intake-ESM Catalog
@@ -109,4 +109,40 @@ sources:
       - '{{ TEST_PATH }}/IFS/teleconnections/nao_test.nc'
       - '{{ TEST_PATH }}/IFS/teleconnections/enso_test.nc'
     description: teleconnections catalogue
+    driver: netcdf
+  long-shift-pandas:
+    metadata:
+      fixer_name: ifs-ci-pandas
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
+    description: coarse IFS data 1y
+    driver: netcdf
+  long-shift-timestep:
+    metadata:
+      fixer_name: ifs-ci-timestep
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
+    description: coarse IFS data 1y
+    driver: netcdf
+  long-deltat:
+    metadata:
+      fixer_name: ifs-ci-nodeltat
+      source_grid_name: lon-lat
+      deltat: 3600
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
+    description: coarse IFS data 1y
+    driver: netcdf
+  long-nogrid:
+    metadata:
+      fixer_name: ifs-ci-test
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
+    description: coarse IFS data 1y
     driver: netcdf

@@ -1,7 +1,12 @@
 sources:
   en4:
-    description: AQUA updated version of EN4 data 
+    description: original EN4 data up 2022 
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/en4.yaml"
+  v4.2.2:
+    description: AQUA updated version of EN4 data 
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/v4.2.2.yaml"
 

@@ -1,0 +1,17 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  daily-zarr: &daily-zarr
+      description: daily aviso vDT2024 in zarr format
+      driver: zarr
+      metadata:
+        source_grid_name: aviso
+      args:
+        consolidated: True
+        urlpath: 
+        - '{{DATA_PATH}}/AVISO/vDT2024/zarr/daily/aviso_daily_1993-2024_vDT2024.zarr'
+
+  daily:
+    <<: *daily-zarr
