@@ -27,5 +27,5 @@ A `nc2zarr` configuration file is avalable in the `scripts` subdirectory. Please
 
 ---------
 Last updated by 
-- Paolo Davini, CNR, Sep 2025
+- Paolo Davini, CNR, Oct 2025
 - Jost von Hardenberg, PoliTO, Oct 2025
