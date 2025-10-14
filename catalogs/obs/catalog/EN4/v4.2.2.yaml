@@ -6,7 +6,7 @@ sources:
       source_grid_name: en4
       fixer_name: EN4-default
     args:
-      urlpath: '{{DATA_PATH}}/EN4/v4.2.2/*EN4-1950-2024.nc'
+      urlpath: '{{DVC_PATH}}/EN4/v4.2.2/*EN4-1950-2024.nc'
       chunks: 
         time: 12
       xarray_kwargs:
