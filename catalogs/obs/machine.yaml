@@ -14,11 +14,12 @@ levante:
     DATA_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
   intake:
     DATA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
+    DVC_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets
 MN5:
   paths:
     grids: /gpfs/scratch/ehpc01/data/AQUA/grids

@@ -14,7 +14,7 @@ sources:
     #    regex: ''
     #    type: file
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/daily_cat/ice_conc_nh*.nc'
+      urlpath: '{{DVC_PATH}}/OSI-SAF/OSI-AQUA/daily_cat/ice_conc_nh*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
@@ -52,7 +52,7 @@ sources:
       source_grid_name: osi-saf-sh-aqua
       fixer_name: OSI-SAF-default
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/monthly/ice_conc_sh_ease2-250_cdr_v3_monthly_1979-2024.nc' 
+      urlpath: '{{DVC_PATH}}/OSI-SAF/OSI-AQUA/monthly/ice_conc_sh_ease2-250_cdr_v3_monthly_1979-2024.nc' 
       chunks:
         time: 12
       xarray_kwargs:

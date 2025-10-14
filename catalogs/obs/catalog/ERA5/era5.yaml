@@ -10,7 +10,7 @@ sources:
       source_grid_name: era5-r025s
       fixer_name: ERA5-destine-v1
     args:
-      urlpath: '{{DATA_PATH}}/ERA5/mon/ERA5_*_mon_full*.nc'
+      urlpath: '{{DVC_PATH}}/ERA5/mon/ERA5_*_mon_full*.nc'
       chunks: 
         time: 12
       xarray_kwargs:

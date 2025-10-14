@@ -6,8 +6,8 @@ sources:
       source_grid_name: lon-lat
     args:
       urlpath: 
-      - '{{DATA_PATH}}/ESA-CCI-L4/v3.0.1/native-monthly/analysed_sst/ESA-CCI-L4_*_analysed_sst.nc'
-      - '{{DATA_PATH}}/ESA-CCI-L4/v3.0.1/native-monthly/sea_ice_fraction/ESA-CCI-L4_*_sea_ice_fraction.nc'
+      - '{{DVC_PATH}}/ESA-CCI-L4/v3.0.1/native-monthly/analysed_sst/ESA-CCI-L4_*_analysed_sst.nc'
+      - '{{DVC_PATH}}/ESA-CCI-L4/v3.0.1/native-monthly/sea_ice_fraction/ESA-CCI-L4_*_sea_ice_fraction.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
@@ -18,8 +18,8 @@ sources:
       source_grid_name: lon-lat
     args:
       urlpath: 
-      - '{{DATA_PATH}}/ESA-CCI-L4/v3.0.1/r100-monthly/analysed_sst/ESA-CCI-L4_*_analysed_sst_r360x180.nc'
-      - '{{DATA_PATH}}/ESA-CCI-L4/v3.0.1/r100-monthly/sea_ice_fraction/ESA-CCI-L4_*_sea_ice_fraction_r360x180.nc'
+      - '{{DVC_PATH}}/ESA-CCI-L4/v3.0.1/r100-monthly/analysed_sst/ESA-CCI-L4_*_analysed_sst_r360x180.nc'
+      - '{{DVC_PATH}}/ESA-CCI-L4/v3.0.1/r100-monthly/sea_ice_fraction/ESA-CCI-L4_*_sea_ice_fraction_r360x180.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
