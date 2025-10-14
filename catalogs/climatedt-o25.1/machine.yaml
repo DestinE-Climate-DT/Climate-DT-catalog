@@ -48,3 +48,12 @@ wilma:
     areas: /work/users/mnurisso/aqua-data/areas
   intake:
     LRA_PATH: /archive/mnurisso/LRA/climatedt-o25.1
+levante:
+  paths:
+    grids: /work/bb1153/b382075/aqua/grids
+    weights: /work/bb1153/b382075/aqua/weights
+    areas: /work/bb1153/b382075/aqua/areas
+  intake:
+    # where LRA data is stored
+    LRA_PATH: null
+
