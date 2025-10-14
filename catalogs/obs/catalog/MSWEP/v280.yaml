@@ -13,7 +13,7 @@ sources:
     args:
       consolidated: False
       urlpath: 
-      - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.monthly.zarr'
+      - '{{DVC_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.monthly.zarr'
   
   monthly-netcdf: &monthly-netcdf
     description: monthly MSWEP_V280 data Past+NRT in netcdf format
