@@ -3,8 +3,8 @@
 
 input:
   paths:
-     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4/v4.2.2/thetao-EN4-1950-2024.nc
-     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4/v4.2.2/so-EN4-1950-2024.nc
+     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets/EN4/v4.2.2/thetao-EN4-1950-2024.nc
+     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets/EN4/v4.2.2/so-EN4-1950-2024.nc
 
 #  decode_cf: true
   multi_file: true
@@ -15,12 +15,14 @@ process:
       lon: null  # no chunking for lon dim in all variables
       lat: null  # no chunking for lon dim in all variables
       time: 1    # chunk size 1 for time dim in all variables
+      lev: null
     lon: null    # no chunking for lon dim in lon variable
     lat: null    # no chunking for lat dim in lat variable
     time: 1
+    lev: null
 
 output:
-  path: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4/v4.2.2/EN4.v422.1950-2024.zarr
+  path: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4/v4.2.2/EN4.v422.1950-2024.clev.zarr
   overwrite: true
   consolidated: true
   append_dim: time
