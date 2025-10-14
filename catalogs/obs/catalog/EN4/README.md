@@ -11,6 +11,9 @@ widely utilises the following variables on the analysis:
 
 Variable names follow the CMOR standard.
 
+The resulting netcdf data have been converted to a zarr store using nc2zarr and the configuration file `scripts/en4-monthly.yml`.
+Both zarr (the dafault `monthly` source) and netcdf (`monthly-netcdf`) sources are available.
+
 We provide a script, named `EN4_management.sh` in the `scripts` folder, where the data timeseries 
 can be extended after 2024. The `bash` script is structured ad follows: 
 
@@ -85,4 +88,6 @@ source files
 - Sufficient disk space in working directory (~1GB per year)
 
 ---------
-Last updated by Marco Cadau, Politecnico di Torino, Oct 2025
+Last updated by 
+- Marco Cadau, Politecnico di Torino, Oct 2025
+- Jost von Hardenberg, PoliTO, Oct 2025
