@@ -1,9 +1,4 @@
 sources:
-  past:
-    description: past MSWEP v280 data (deprecated)
-    driver: yaml_file_cat
-    args:
-        path: "{{CATALOG_DIR}}/past.yaml"
   v280:
     description: merged v2.80 MSWEP Past + NRT archive
     driver: yaml_file_cat
