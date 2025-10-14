@@ -4,7 +4,7 @@ Two dataset are avalaible:
 - arco-era5: Complete dataset offered by Google via cloud storage. Currently not maintained, for testing purposes
 - era5: official AQUA ClimateDT ERA5 compact repo. it includes monthly data from 1940 to 2024 of a subselection of variables.
 
-For monthly data the dafault format is zarr. A `monthly-netcdf` netcdf source is available.
+For monthly data the dafault format is netcdf. A `monthly-zarr` zarr source is also available, which may be considerably faster for some applications.
 
 ## How to update
 
