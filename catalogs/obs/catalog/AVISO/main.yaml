@@ -4,8 +4,3 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/vDT2024.yaml" 
- vDT2021:
-    description: AVISO Sea Surface Height L4 from version vDT2021 and derived variables
-    driver: yaml_file_cat
-    args:
-      path: "{{CATALOG_DIR}}/vDT2021.yaml" 

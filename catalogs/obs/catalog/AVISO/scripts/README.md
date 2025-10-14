@@ -4,9 +4,7 @@ This includes CNES AVISO dataset for sea surface height, currently developed by 
 
 Sea level anomaly is defined as the height of water over the mean sea surface in a given time and region. In this dataset sea level anomalies are computed with respect to a twenty-year mean reference period (1993-2012) using up-to-date altimeter standard
 
-Two version are availalbe:
-- vDT2024: Regularly updated; based on 2024 version of Level-2 input data (currently supported by AQUA)
-- vDT2021: No longer updated; based on 2021 version of Level-2 input data (old AQUA version, now deprecated)
+Data from the "vDT2024" is available: Regularly updated; based on 2024 version of Level-2 input data (currently supported by AQUA)
 
 ## Download and processing
 
