@@ -5,6 +5,7 @@ leonardo:
     areas: /leonardo_work/DestE_330_24/AQUA/areas
   intake:
     DATA_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
+    DVC_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
 levante:
   paths:
     grids: /work/bb1153/b382289/data/aqua-dvc/grids
@@ -12,6 +13,7 @@ levante:
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     DATA_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
+    DVC_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
 lumi:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
@@ -27,6 +29,7 @@ MN5:
     areas: /gpfs/scratch/ehpc01/data/AQUA/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/data/AQUA/datasets
+    DVC_PATH: /gpfs/scratch/ehpc01/data/AQUA/aqua-dvc/datasets
 lumi-e25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
