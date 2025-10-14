@@ -4,6 +4,10 @@ metadata:
       type: str
       description: the path to observational datasets
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
+    ZARR_PATH:
+      type: str
+      description: the path to observational datasets in zarr format
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
   
 sources:
   AVISO:
