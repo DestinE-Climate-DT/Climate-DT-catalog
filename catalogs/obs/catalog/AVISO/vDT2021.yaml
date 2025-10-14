@@ -4,7 +4,7 @@ plugins:
 
 sources:
   daily:
-    description: AVISO ssh vDT2021    
+    description: AVISO ssh vDT2021 (deprecated)   
     driver: zarr
     metadata:
       source_grid_name: aviso
@@ -13,4 +13,4 @@ sources:
       compat: override
       combine: nested
       urlpath: 
-      - 'reference::{{DATA_PATH}}/AVISO/json/AVISO.json'
+      - 'reference::{{DATA_PATH}}/AVISO/vDT2021/json/AVISO.json'
