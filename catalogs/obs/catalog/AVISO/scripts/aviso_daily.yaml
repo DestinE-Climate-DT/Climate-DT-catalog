@@ -1,9 +1,9 @@
-# Run with: nc2zarr -vv -c aviso_monthly.yml
+# Run with: nc2zarr -vv -c aviso_daily.yaml
 # When providing a list of directories use the "-s name" option
 
 input:
   paths:
-     - /home/b/b382076/scratch/aviso/1993/??/dt*2024.nc
+     - /home/b/b382076/scratch/aviso/????/??/dt*vDT2024.nc
 
 #  decode_cf: true
   multi_file: true
@@ -19,7 +19,7 @@ process:
     time: 1
 
 output:
-  path: /home/b/b382076/scratch/aviso/aviso_test.zarr
+  path: /home/b/b382076/scratch/aviso/aviso_daily_1993-2024_vDT2024.zarr
   overwrite: false
   consolidated: true
   append_dim: time
