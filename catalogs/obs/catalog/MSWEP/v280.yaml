@@ -15,7 +15,7 @@ sources:
       urlpath: 
       - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.monthly.zarr'
   
-  monthly:
+  monthly-netcdf: &monthly-netcdf
     description: monthly MSWEP_V280 data Past+NRT in netcdf format
     driver: netcdf
     metadata:
@@ -23,8 +23,11 @@ sources:
       fixer_name: MSWEP-default
     args:
       urlpath: 
-      - '{{DATA_PATH}}/MSWEP/v2.8/netcdf/Past/monthly/MSWEP_v280_monthly_????.nc'
-      - '{{DATA_PATH}}/MSWEP/v2.8/netcdf/NRT/monthly/MSWEP_v280_monthly_????.nc'
+      - '{{DVC_PATH}}/MSWEP/v2.8/netcdf/Past/monthly/MSWEP_v280_monthly_????.nc'
+      - '{{DVC_PATH}}/MSWEP/v2.8/netcdf/NRT/monthly/MSWEP_v280_monthly_????.nc'
+
+  monthly:
+    <<: *monthly-netcdf
 
   daily-zarr:
     description: daily MSWEP_V280 data Past+NRT in zarr format
