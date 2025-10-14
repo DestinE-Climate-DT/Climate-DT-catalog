@@ -11,7 +11,4 @@ sources:
       args:
         consolidated: True
         urlpath: 
-        - '{{DATA_PATH}}/AVISO/vDT2024/zarr/daily/aviso_daily_1993-2024_vDT2024.zarr'
-
-  daily:
-    <<: *daily-zarr
+        - '{{DVC_PATH}}/AVISO/vDT2024/zarr/daily/aviso_daily_1993-2024_vDT2024.zarr'

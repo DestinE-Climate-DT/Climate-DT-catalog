@@ -1,6 +1,6 @@
 sources:
-  v280:
+  v2.8:
     description: merged v2.80 MSWEP Past + NRT archive
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/v280.yaml"
+        path: "{{CATALOG_DIR}}/v2.8.yaml"
