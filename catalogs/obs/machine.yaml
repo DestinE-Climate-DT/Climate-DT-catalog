@@ -8,11 +8,11 @@ leonardo:
     ZARR_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
 levante:
   paths:
-    grids: /work/bb1153/b382075/aqua/grids
-    weights: /work/bb1153/b382075/aqua/weights
-    areas: /work/bb1153/b382075/aqua/areas
+    grids: /work/bb1153/b382289/data/aqua-dvc/grids
+    weights: /work/bb1153/b382289/data/aqua-dvc/weights
+    areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
-    DATA_PATH: /work/bb1153/b382289/data/AQUA/datasets
+    DATA_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
     ZARR_PATH: /work/bb1153/b382289/data/AQUA/datasets
 lumi:
   paths:

@@ -2,6 +2,7 @@
 
 This is the AQUA catalog for Climate DT. Includes catalogs for levante, lumi, MN5 and leonardo.
 This repository focuses on the catalog, the main AQUA codebase is open-sourced and can be found [here](https://github.com/DestinE-Climate-DT/AQUA)
+
 ## Available catalogs
 
 1. ci: Catalog for the CI/CD tests of AQUA.
