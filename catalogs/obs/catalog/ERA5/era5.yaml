@@ -11,7 +11,7 @@ sources:
       fixer_name: ERA5-destine-v1
     args:
       consolidated: True
-      urlpath: '{{ZARR_PATH}}/ERA5/zarr/era5_monthly_1940-2024.zarr'
+      urlpath: '{{DATA_PATH}}/ERA5/zarr/era5_monthly_1940-2024.zarr'
       chunks:
         time: 12
 
