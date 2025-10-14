@@ -1,5 +1,5 @@
 sources: 
-  monthly:
+  monthly-zarr: &monthly-zarr
     description: EN4 data v4.2.2_g10 version from 1950 to 2024 in zarr format
     driver: zarr
     metadata:
@@ -11,7 +11,7 @@ sources:
       chunks:
         time: 12
 
-  monthly-netcdf:
+  monthly-netcdf: &monthly-netcdf
     description: EN4 data v4.2.2_g10 version from 1950 to 2024 in netcdf format
     driver: netcdf
     metadata:
@@ -23,3 +23,6 @@ sources:
         time: 12
       xarray_kwargs:
         decode_times: True
+
+  monthly:
+    <<: *monthly-netcdf
