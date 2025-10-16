@@ -60,11 +60,12 @@ MN5-o25.1:
     DATA_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA-obs_v1.0/datasets
 hpc2020:
   paths:
-    grids: /ec/res4/hpcperm/ccjh/aqua_data/grids
-    weights: /ec/res4/hpcperm/ccjh/aqua_data/weights
-    areas: /ec/res4/hpcperm/ccjh/aqua_data/areas
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
   intake:
-    DATA_PATH: /ec/res4/hpcperm/ccjh/obs/destine/
+    DVC_PATH: /ec/res4/hpcperm/itmn/data/aqua-dvc/datasets
+    DATA_PATH: null
 freja:
   paths:
     grids: /home/rossby/AQUA_DATA/grids
