@@ -48,3 +48,10 @@ wilma:
     areas: /work/users/mnurisso/aqua-data/areas
   intake:
     LRA_PATH: /archive/mnurisso/LRA/climatedt-o25.1
+hpc2020:
+  paths:
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: null

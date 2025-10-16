@@ -56,3 +56,16 @@ wilma:
     FDB_PATH_EERIE: null
     ECCODES_PATH: null
     OUTPUT_AQUA_PATH: null
+hpc2020:
+  paths:
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: null
+    DROP_PATH: null
+    FDB_PATH: null
+    FDB_PATH_HISTORICAL: null
+    FDB_PATH_EERIE: null
+    ECCODES_PATH: null
+    OUTPUT_AQUA_PATH: null
