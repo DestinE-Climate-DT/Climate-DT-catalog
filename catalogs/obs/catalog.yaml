@@ -2,11 +2,11 @@ metadata:
   parameters:
     DATA_PATH:
       type: str
-      description: the path to observational datasets
+      description: the path to observational datasets on the local machine
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
     DVC_PATH:
       type: str
-      description: the path to observational datasets in zarr format
+      description: the path to observational datasets on the DVC repository
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets
   
 sources:
@@ -36,7 +36,7 @@ sources:
     args:
       path: "{{CATALOG_DIR}}/catalog/ESA-CCI-L4/main.yaml"
   ERA5:
-    description: test ERA5 data on fdb
+    description: ECMWF ERA5 reanalysis data
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"
@@ -46,17 +46,17 @@ sources:
     args:
       path: "{{CATALOG_DIR}}/catalog/GPM/main.yaml"
   MSWEP:
-    description: MSWEP_V280 precipitation data
+    description: MSWEP precipitation data
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/MSWEP/main.yaml"
   OSI-SAF:
-    description: OSI-SAF sea-ice data
+    description: OSI-SAF sea-ice concentration data
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/OSI-SAF/main.yaml"
   PHC3:
-    description: PHC3 climatology
+    description: PHC3 climatology for sea ice volume
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/PHC3/main.yaml"
