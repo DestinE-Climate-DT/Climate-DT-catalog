@@ -64,7 +64,8 @@ hpc2020:
     weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
     areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
   intake:
-    DATA_PATH: /ec/res4/hpcperm/itmn/data/aqua-dvc/datasets
+    DVC_PATH: /ec/res4/hpcperm/itmn/data/aqua-dvc/datasets
+    DATA_PATH: null
 freja:
   paths:
     grids: /home/rossby/AQUA_DATA/grids
