@@ -1,4 +1,19 @@
 sources:
   empty:
     description: Empty catalog
-    driver: null
+    driver:
+  o017:
+    description: '"ifs-nemo o017 1995, grids: tco2559 eORCA12"'
+    metadata:
+      expid: '0001'
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1995'
+      dashboard:
+        menu: o017
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o017.yaml'
