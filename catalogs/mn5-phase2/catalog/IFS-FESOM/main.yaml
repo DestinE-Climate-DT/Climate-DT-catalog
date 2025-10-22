@@ -28,7 +28,7 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
-  historical-1990-intermediate:
+  a2m9:
     description: FDB IFS/FESOM intermediate  tco399/DARS ocean run
     metadata:
       author: AWI-DestinE
@@ -45,4 +45,4 @@ sources:
         note: null
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/historical-1990-intermediate.yaml'
+      path: '{{CATALOG_DIR}}/a2m9.yaml'
