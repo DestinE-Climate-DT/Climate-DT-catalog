@@ -23,7 +23,10 @@ sources:
       - /scratch/a/a270260/ssh_output/obs.AVISO.ssh-L4.daily.zos.1994-01-01.to.1994-01-04-latlon.nc
       chunks: {}
       xarray_kwargs:
+        #consolidated: false
         decode_times: true
+        #compat: override
+        #combine: nested
     metadata:
       source_grid_name: lon-lat
 
