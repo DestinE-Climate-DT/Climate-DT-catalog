@@ -1,0 +1,22 @@
+sources:
+  #eerie-fesom-control-1950:
+  #  args:
+  #    path: '{{CATALOG_DIR}}/eerie-fesom-control-1950.yaml'
+  #  description: IFS/FESOM control-1950 phase1 Tco1279/NG5 - EERIE
+  #  driver: yaml_file_cat
+  eerie-fesom-historical-1950:
+    args:
+      path: '{{CATALOG_DIR}}/eerie-fesom-historical-1950.yaml'
+    description: IFS/FESOM historical-1950 phase1 Tco1279/NG5 - EERIE
+    driver: yaml_file_cat
+  
+  
+  # cmorised EERIE data
+  CMORIzed-historical-1950:
+    args:
+      path: '{{CATALOG_DIR}}/CMORIzed-historical-1950.yaml'
+    description: CMORIzed IFS-FESOM historical-1950 phase1 Tco1279/NG5 - EERIE
+    driver: yaml_file_cat
+
+
+

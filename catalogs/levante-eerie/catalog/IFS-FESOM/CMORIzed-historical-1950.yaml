@@ -1,0 +1,74 @@
+sources:
+  2D_monthly_atm_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km lon-lat - monthly, EERIE CMORIzed data
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/clt/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        #compat: override
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  #2D_monthly_atm_0.25deg:
+  #  driver: netcdf
+  #  description: IFS-FESOM historical-1950 run for phase1 with convervative 
+  #    remapping to 25km lon-lat - monthly, EERIE CMORIzed data
+  #  args:
+  #    urlpath: # clt evspsbl hfls hfss huss pr prc prsn ps psl rlds rsds sfcWind tas tasmax tasmin tauu tauv ts uas vas 
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/clt/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/evspsbl/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfls/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfss/gr/v20240304/*.nc
+  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/huss/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/pr/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prc/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prsn/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ps/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/psl/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rlds/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rsds/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/sfcWind/gr/v20240304/*.nc
+  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tas/gr/v20240304/*.nc
+  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmax/gr/v20240304/*.nc
+  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmin/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauu/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauv/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ts/gr/v20240304/*.nc
+  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/uas/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/vas/gr/v20240304/*.nc
+  #    chunks: {}
+  #    xarray_kwargs:
+  #      decode_times: true
+  #      combine: nested
+  #      concat_dim: None
+  #      #combine: by_coords
+  #      compat: override
+  #  metadata:
+  #    source_grid_name: fesom-0.25deg-r25s-2d
+  #    fixer_name: fesom-eerie-2d
+
+  3D_monthly_atm_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data
+    args:
+      urlpath: # hur hus ta ua va zg
+      - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hur/gr/v20240304/*.nc
+      - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hus/gr/v20240304/*.nc
+      - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ta/gr/v20240304/*.nc
+      - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ua/gr/v20240304/*.nc
+      - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/va/gr/v20240304/*.nc
+      - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/zg/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        #compat: override
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d

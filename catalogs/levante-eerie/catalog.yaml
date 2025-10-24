@@ -1,0 +1,27 @@
+sources:
+  #IFS-NEMO:
+  #  description: IFS-NEMO model
+  #  driver: yaml_file_cat
+  #  args:
+  #    path: '{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml'
+  IFS-FESOM:
+    description: IFS-FESOM model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml'
+  #ICON:
+  #  description: ICON model
+  #  driver: yaml_file_cat
+  #  args:
+  #    path: '{{CATALOG_DIR}}/catalog/ICON/main.yaml'
+
+metadata:
+  parameters:
+    ECCODES_PATH:
+      type: str
+      description: the path to the eccodes definitions.
+      default: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes
+    #FDB_HOME:
+    #  type: str
+    #  description: FDB HOME path.
+    #  default: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes
