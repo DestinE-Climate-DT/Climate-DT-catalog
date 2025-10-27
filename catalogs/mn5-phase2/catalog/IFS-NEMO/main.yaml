@@ -249,3 +249,39 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  a2vu:
+    description: '"ifs-nemo a2vu , grids: tco399 eORCA025"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2vu
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: ''
+      dashboard:
+        menu: a2vu
+        resolution_id: MR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2vu.yaml'
+  a2vh:
+    description: '"ifs-nemo a2vh , grids: tco399 eORCA025"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2vh
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: ''
+      dashboard:
+        menu: a2vh
+        resolution_id: MR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2vh.yaml'
