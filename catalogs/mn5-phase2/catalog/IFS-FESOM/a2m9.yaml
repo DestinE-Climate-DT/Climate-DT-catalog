@@ -30,7 +30,7 @@ sources:
       variables: [228004, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 
           235053, 235055, 235151, 235165, 235166] #, 235288]
-      source_grid_name: null #hpz7-nested
+      source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
   monthly-hpz7-atm3d:
     args:
@@ -65,7 +65,7 @@ sources:
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [235130, 235131, 235132, 235133]
-      source_grid_name: null #hpz7-nested
+      source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
   monthly-hpz7-oce2d:
     args:
