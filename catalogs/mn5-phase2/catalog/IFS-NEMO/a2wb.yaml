@@ -5,12 +5,12 @@ sources:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: null
@@ -23,27 +23,27 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [151, 165, 166, 167, 168, 207, 228164, 235035, 235040, 235043, 
           235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   daily-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: null
@@ -56,26 +56,26 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   monthly-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clmn
         year: null
@@ -88,28 +88,28 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [228004, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 
           235053, 235055, 235151, 235165, 235166, 235288]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   6-hourly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: null
@@ -124,28 +124,28 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [129, 131, 132]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   monthly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clmn
         year: null
@@ -160,28 +160,28 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [235130, 235131, 235132, 235133]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   daily-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: null
@@ -194,26 +194,26 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: nemo-eORCA025-hpz7-nested-v3
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   monthly-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clmn
         year: null
@@ -226,26 +226,26 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [263000, 263001, 263008, 263100, 263101, 263123]
       source_grid_name: nemo-eORCA025-hpz7-nested-v3
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   monthly-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clmn
         year: null
@@ -263,10 +263,10 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
           8.09251880645752, 9.822750091552734, 11.773679733276367, 
@@ -293,19 +293,19 @@ sources:
       variables: [263500, 263501]
       source_grid_name: nemo-eORCA025-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   hourly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
         activity: baseline  # To be overwritten by workflow/config file
-        experiment: cont  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
         generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2vh  # To be overwritten by workflow/config file
+        expver: a2wb  # To be overwritten by workflow/config file
         type: fc
         stream: clte
         date: null
@@ -319,24 +319,118 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo a2vh , grids: tco399 eORCA025'
+    description: 'ifs-nemo a2wb , grids: tco399 eORCA025'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/scratch/ehpc01/experiments/a2vh/fdb
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-reduced
-      fdb_info_file: /gpfs/scratch/ehpc01/experiments/a2vh/fdb/a2vh.yaml
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc998159/a2wb/a2wb.yaml
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
-      urlpath:
-        /gpfs/scratch/ehpc01/bsc998159/a2vh/output/LRA/fc0/mn5-phase2/IFS-NEMO/a2vh/r1/r100/monthly/mean/global/*a2vh_r1_r100_monthly_*.nc
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a2wb/output/LRA/fc0/mn5-phase2/IFS-NEMO/a2wb/r1/r100/monthly/mean/global/*a2wb_r1_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+  aqua-radiation-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a2wb/output/aqua-analysis/mn5-phase2/IFS-NEMO/a2wb/{{realization}}/radiation/netcdf/radiation.timeseries.mn5-phase2.IFS-NEMO.a2wb.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-atmosphere-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a2wb/output/aqua-analysis/mn5-phase2/IFS-NEMO/a2wb/{{realization}}/timeseries/netcdf/atmosphere.seasonalcycles.mn5-phase2.IFS-NEMO.a2wb.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-atmosphere-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a2wb/output/aqua-analysis/mn5-phase2/IFS-NEMO/a2wb/{{realization}}/timeseries/netcdf/atmosphere.timeseries.mn5-phase2.IFS-NEMO.a2wb.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - tropics
+        - europe

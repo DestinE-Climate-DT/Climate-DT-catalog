@@ -285,3 +285,39 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a2vh.yaml'
+  a2wb:
+    description: '"ifs-nemo a2wb , grids: tco399 eORCA025"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2wb
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: abrupt4xco2
+      start: ''
+      dashboard:
+        menu: a2wb
+        resolution_id: MR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2wb.yaml'
+  a2wd:
+    description: '"ifs-nemo a2wd , grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2wd
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: abrupt4xco2
+      start: ''
+      dashboard:
+        menu: a2wd
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2wd.yaml'
