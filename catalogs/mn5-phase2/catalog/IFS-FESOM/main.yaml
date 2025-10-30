@@ -4,7 +4,7 @@ sources:
     metadata:
       expid: a1ux
       resolution_atm: tco399
-      resolution_oce: null
+      resolution_oce:
       forcing: historical
       start: 1990
       dashboard:
@@ -28,3 +28,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  t0av:
+    description: '"ifs-fesom t0av 2017, grids: tco79 CORE2"'
+    metadata:
+      expid: t0av
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: '2017'
+      dashboard:
+        menu: t0av
+        resolution_id: LR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0av.yaml'
