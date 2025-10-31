@@ -8,9 +8,9 @@ lumi:
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
 MN5:
   paths:
-    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
-    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
-    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
+    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
+    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
 lumi-e25.1:
