@@ -28,3 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  a2wk:
+    description: '"ifs-fesom a2wk , grids: tco79 CORE2"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: MN5
+      expid: a2wk
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: ''
+      dashboard:
+        menu: a2wk
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2wk.yaml'
