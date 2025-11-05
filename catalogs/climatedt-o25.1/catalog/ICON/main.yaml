@@ -1,4 +1,19 @@
 sources:
   empty:
     description: Empty catalog
-    driver: null
+    driver:
+  o0f1-ssp370:
+    description: '"icon o0f1-ssp370 2015, grids: R2B9 R02B09"'
+    metadata:
+      expid: '0001'
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: ssp370
+      start: '2015'
+      dashboard:
+        menu: o0f1-ssp370
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o0f1-ssp370.yaml'
