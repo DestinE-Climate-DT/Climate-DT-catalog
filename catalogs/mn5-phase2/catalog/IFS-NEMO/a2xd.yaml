@@ -626,6 +626,7 @@ sources:
         allowed:
         - global
         - southmidlatitudes
+        - northmidlatitudes
   aqua-atmosphere-timeseries:
     driver: netcdf
     description: AQUA diagnostic atmosphere data for product timeseries
@@ -664,6 +665,36 @@ sources:
     args:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc032376/a2xd/output/aqua-analysis/mn5-phase2/IFS-NEMO/a2xd/{{realization}}/timeseries/netcdf/atmosphere.seasonalcycles.mn5-phase2.IFS-NEMO.a2xd.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-ocean-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic ocean data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032376/a2xd/output/aqua-analysis/mn5-phase2/IFS-NEMO/a2xd/{{realization}}/timeseries/netcdf/ocean.seasonalcycles.mn5-phase2.IFS-NEMO.a2xd.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
