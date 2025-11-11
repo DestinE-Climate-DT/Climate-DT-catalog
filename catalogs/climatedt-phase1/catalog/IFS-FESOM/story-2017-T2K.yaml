@@ -17,10 +17,9 @@ sources:
         time: '0000'
         param: 167
         levtype: sfc
-        step: 0
       data_start_date: 20170101T0000
-      data_end_date: 20241115T2300
-      bridge_end_date: 20231231T2300
+      data_end_date: 20241231T2300
+      bridge_end_date: complete
       chunks: D
       savefreq: h # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
