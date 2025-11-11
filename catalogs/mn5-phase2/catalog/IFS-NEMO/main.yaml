@@ -321,3 +321,39 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a2wd.yaml'
+  a2xh:
+    description: '"Continuation from a2vu ifs-nemo a2xh , grids: tco399 eORCA025"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2xh
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: control
+      start: ''
+      dashboard:
+        menu: a2xh
+        resolution_id: MR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2xh.yaml'
+  a2xn:
+    description: '"ifs-nemo a2xn , grids: tco399 eORCA025"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2xn
+      resolution_atm: tco399
+      resolution_oce: eORCA025
+      forcing: abrupt4xco2
+      start: ''
+      dashboard:
+        menu: a2xn
+        resolution_id: MR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2xn.yaml'
