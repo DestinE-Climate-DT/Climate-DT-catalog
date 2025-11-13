@@ -6,4 +6,5 @@ levante:
   intake:
     #LRA_EERIE: null
     #FDB_PATH: null
-    ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
+    FDB_HOME: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes #/work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes
+    ECCODES_PATH: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes #/work/bb1153/b382075/aqua/eccodes

@@ -1,0 +1,358 @@
+sources:
+  2D_daily_fesom_0.25deg_avg_mlotst030:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Mixed layer depth, potential density threshold 0.03 kg m⁻³)
+      # Note the data starts from 1990-onwards
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_mlotst030/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_mlotst125:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Mixed layer depth, potential density threshold 0.125 kg m⁻³)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_mlotst125/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_siconc:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice concentration)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_siconc/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sigrowth:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice growth rate)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_sigrowth/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sisnthick:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Snow thickness over sea ice)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_sisnthick/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sithick:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice thickness)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_sithick/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_siue:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice eastward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_siue/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sivn:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice northward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_sivn/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sos:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea surface salinity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_sos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_tos:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea surface temperature)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_tos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_zos:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea surface height)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/daily/nc/avg_zos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-2d
+      fixer_name: fesom-eerie-2d
+
+  3D_daily_fesom_0.25deg_avg_so:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water salinity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg/avg_so/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_thetao:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water potential temperature)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg/avg_thetao/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_uoe:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water eastward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg/avg_uoe/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_von:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water northward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg/avg_von/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_wo:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water vertical velocity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_so:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water salinity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg_monmean/avg_so/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_thetao:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water potential temperature)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg_monmean/avg_thetao/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_uoe:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water eastward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg_monmean/avg_uoe/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_von:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water northward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg_monmean/avg_von/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_wo:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water vertical velocity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-CTL-FESOM/remapped_025deg_monmean/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-0.25deg-r25s-3d-lev
+      fixer_name: fesom-eerie-3d
+
+  #################################################################################################################################################################### 
+  # NOTE:
+  #   # Native 2D/3D has issue with "AlignmentError: cannot reindex or align along dimension 'ncells' because of conflicting dimension sizes: {14741520, 7402886}"
+  3D_daily_fesom_native:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE 
+      data pipeline
+    args:
+      urlpath:
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/daily/avg_so/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/daily/avg_thetao/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/daily/avg_uoe/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/daily/avg_von/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/daily/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: null
+      fixer-name: fesom-eerie-3d
+  3D_monthly_fesom_native:
+    driver: netcdf
+    description: IFS-FESOM control-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-CTL-FESOM, only fesom monthly data), with EERIE 
+      data pipeline
+    args:
+      urlpath:
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/monthly/avg_so/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/monthly/avg_thetao/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/monthly/avg_uoe/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/monthly/avg_von/*
+      - /work/bm1344/a270228/Phase1-CTL-FESOM/1950/native/monthly/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: null
+      fixer-name: fesom-eerie-3d
