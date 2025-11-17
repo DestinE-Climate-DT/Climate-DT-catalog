@@ -1,1093 +1,163 @@
-plugins:
-  source:
-  - module: intake_xarray
-  - module: gribscan
-
 sources:
-  2D_monthly_native_atmos_avg:
-    driver: zarr 
+  hourly-native-hist-atm3d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution atmospheric 3D pressure-level fields
     args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1950-1959/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1960-1969/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1970-1979/sfc.dir/atm2d_avg.json    
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1980-1989/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1990-1999/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2000-2009/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2010-2014/sfc.dir/atm2d_avg.json
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19820528
+        time: 0000
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
+        #step: 0
+        param: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      data_start_date: 19820528T0000
+      data_end_date: 19820530T0000
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
     metadata:
-      source_grid_name: null # to create multio-r100-unstructured
-      #fixer_name: 
+      fdb_home: '/work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids'
+      eccodes_path: '/work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions'
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000]
+      variables: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      #fdb_path: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids 
+      source_grid_name: null
+      fixer_name: null
 
-  2D_monthly_native_atmos_min:
-    driver: zarr
+  hourly-native-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution atmospheric 2D surface fields
     args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1950-1959/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1960-1969/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1970-1979/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1980-1989/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1990-1999/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2000-2009/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2010-2014/sfc.dir/atm2d_min.json
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19820528
+        time: 0000
+        levtype: sfc
+        param: 228004
+        #step: 0
+        #param: [235168, 235040, 228005, 228004, 235165, 235035, 51, 168, 172228, 235084, 235166,
+        #  172205, 235187, 235034, 235039, 235041, 235038, 207, 235052, 167, 172182, 172143, 235037,
+        #  235049, 235050, 235053, 172144, 52, 235186, 172009, 235036, 235159, 235134, 235051, 165,
+        #  235042, 235033, 235151, 235079, 235188, 235137, 235136, 166, 235088, 235089, 49, 228006,
+        #  235141, 172008, 235083, 235087]
+      data_start_date: 19820528T0000
+      data_end_date: 19820530T0000
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: '/work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids'
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'  #/work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions
+      #fdb_path: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      #variables: [235168, 235040, 228005, 228004, 235165, 235035, 51, 168, 172228, 235084, 235166,
+      #  172205, 235187, 235034, 235039, 235041, 235038, 207, 235052, 167, 172182, 172143, 235037,
+      #  235049, 235050, 235053, 172144, 52, 235186, 172009, 235036, 235159, 235134, 235051, 165,
+      #  235042, 235033, 235151, 235079, 235188, 235137, 235136, 166, 235088, 235089, 49, 228006,
+      #  235141, 172008, 235083, 235087]
+      variables: [228004, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
+        235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 
+        235053, 235055, 235151, 235165, 235166]
+      source_grid_name: null
+      fixer_name: null
 
-  2D_monthly_native_atmos_max:
-    driver: zarr
+  hourly-native-hist-atm2d-3hourly:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution atmospheric 2D fields (3-hourly)
     args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1950-1959/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1960-1969/sfc.dir/atm2d_max.json      
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1970-1979/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1980-1989/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1990-1999/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2000-2009/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2010-2014/sfc.dir/atm2d_max.json
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19820530
+        time: 0600/1200/1800
+        levtype: sfc
+        #step: 0
+        param: [168, 207, 167, 165, 166]
+      data_start_date: 19820528T0000
+      data_end_date: 19820530T1800
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T1800
+      chunks: D
+      savefreq: 3h
+      timestep: 3h
+      timestyle: date
+    metadata:
+      fdb_home: '/work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids'
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [168, 207, 167, 165, 166]
+      source_grid_name: null
+      fixer_name: null
 
-  3D_monthly_native_soil_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1950-1959/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1960-1969/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1970-1979/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1980-1989/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1990-1999/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2000-2009/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2010-2014/sol.dir/atm2d_avg.json
+  #hourly-hpz9-hist-atm-solar:
+  #  driver: gsv
+  #  description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution atmospheric solar-level fields
+  #  args:
+  #    request:
+  #      class: ed
+  #      dataset: climate-dt
+  #      activity: CMIP6
+  #      experiment: hist
+  #      generation: 1
+  #      model: IFS-FESOM
+  #      realization: 1
+  #      resolution: high
+  #      expver: i2hj
+  #      type: fc
+  #      stream: clte
+  #      date: 19820530
+  #      time: 0000
+  #      levtype: sol
+  #      levelist: [1, 2, 3, 4]
+  #      step: 0
+  #      param: [235094, 235077]
+  #    data_start_date: 19820530T0000
+  #    data_end_date: 19820530T0000
+  #    bridge_start_date: 19820530T0000
+  #    bridge_end_date: 19820530T0000
+  #    chunks: D
+  #    savefreq: h
+  #    timestep: h
+  #    timestyle: date
+  #  metadata:
+  #    fdb_home: '{{ FDB_PATH }}/healpix'
+  #    eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+  #    levels: [1, 2, 3, 4]
+  #    variables: [235094, 235077]
+  #    source_grid_name: hpz9-nested
+  #    fixer_name: ifs-destine-v1
 
-  3D_monthly_native_atmos_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1970-1979/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1980-1989/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.1990-1999/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2000-2009/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2010-2014/pl.dir/atm3d_avg.json
-      
-  2D_daily_native_atmos_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1950/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1951/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1952/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1953/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1954/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1955/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1956/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1957/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1958/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1959/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1960/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1961/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1962/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1963/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1964/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1965/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1966/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1967/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1968/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1969/sfc.dir/atm2d_avg.json 
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1976/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1977/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1978/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1979/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1980/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1981/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1982/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1983/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1984/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1985/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1986/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1987/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1988/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1989/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1990/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1991/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1992/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1993/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1994/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1995/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1996/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1997/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1998/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1999/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2000/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2001/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2002/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2003/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2004/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2005/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2006/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2007/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2008/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2009/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2010/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2011/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2012/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2013/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2014/sfc.dir/atm2d_avg.json
-
-
-  2D_daily_native_atmos_min:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1950/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1951/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1952/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1953/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1954/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1955/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1956/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1957/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1958/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1959/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1960/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1961/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1962/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1963/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1964/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1965/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1966/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1967/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1968/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1969/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1976/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1977/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1978/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1979/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1980/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1981/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1982/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1983/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1984/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1985/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1986/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1987/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1988/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1989/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1990/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1991/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1992/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1993/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1994/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1995/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1996/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1997/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1998/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1999/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2000/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2001/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2002/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2003/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2004/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2005/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2006/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2007/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2008/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2009/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2010/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2011/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2012/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2013/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2014/sfc.dir/atm2d_min.json
-
-  2D_daily_native_atmos_max:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1950/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1951/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1952/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1953/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1954/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1955/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1956/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1957/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1958/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1959/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1960/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1961/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1962/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1963/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1964/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1965/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1966/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1967/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1968/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1969/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1976/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1977/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1978/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1979/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1980/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1981/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1982/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1983/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1984/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1985/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1986/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1987/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1988/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1989/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1990/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1991/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1992/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1993/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1994/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1995/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1996/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1997/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1998/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1999/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2000/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2001/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2002/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2003/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2004/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2005/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2006/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2007/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2008/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2009/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2010/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2011/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2012/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2013/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2014/sfc.dir/atm2d_max.json
-
-  
-  2D_6hourly_native_atmos_instant:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1976/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1977/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1978/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1979/sfc.dir/atm2d.json
-
-  2D_6hourly_native_atmos_accumulated:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sfc.dir/atm2d_acc.json
-
-  3D_daily_native_soil_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: 
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1950/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1951/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1952/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1953/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1954/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1955/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1956/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1957/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1958/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1959/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1960/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1961/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1962/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1963/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1964/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1965/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1966/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1967/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1968/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1969/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1976/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1977/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1978/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1979/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1980/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1981/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1982/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1983/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1984/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1985/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1986/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1987/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1988/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1989/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1990/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1991/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1992/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1993/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1994/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1995/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1996/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1997/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1998/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1999/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2000/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2001/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2002/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2003/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2004/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2005/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2006/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2007/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2008/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2009/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2010/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2011/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2012/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2013/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2014/sol.dir/atm2d_avg.json
-
-  3D_6hourly_native_soil:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/sol.dir/atm2d.json
-
-  3D_daily_native_atmos_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1976/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1977/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1978/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1979/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1980/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1981/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1982/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1983/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1984/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1985/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1986/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1987/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1988/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1989/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1990/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1991/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1992/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1993/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1994/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1995/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1996/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1997/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1998/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1999/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2000/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2001/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2002/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2003/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2004/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2005/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2006/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2007/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2008/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2009/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2010/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2011/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2012/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2013/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.2014/pl.dir/atm3d_avg.json
-
-  3D_6hourly_native_atmos:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1970/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1971/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1972/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1973/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1974/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_NATIVE/jsons.1975/pl.dir/atm3d.json
-
-  
-  3D_daily_0.25deg_atmos_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1950/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1951/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1952/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1953/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1954/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1955/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1956/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1957/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1958/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1959/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1960/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1961/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1962/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1963/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1964/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1965/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1966/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1967/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1968/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1969/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/pl.dir/atm3d_avg.json
-
-  3D_6hourly_0.25deg_atmos:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/pl.dir/atm3d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/pl.dir/atm3d.json
-
-  2D_daily_0.25deg_atmos_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1950/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1951/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1952/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1953/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1954/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1955/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1956/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1957/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1958/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1959/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1960/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1961/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1962/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1963/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1964/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1965/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1966/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1967/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1968/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1969/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sfc.dir/atm2d_avg.json
-
-      
-
-  2D_daily_0.25deg_atmos_min:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1950/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1951/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1952/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1953/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1954/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1955/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1956/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1957/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1958/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1959/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1960/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1961/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1962/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1963/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1964/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1965/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1966/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1967/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1968/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1969/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sfc.dir/atm2d_min.json
-
-
-  2D_daily_0.25deg_atmos_max:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1950/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1951/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1952/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1953/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1954/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1955/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1956/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1957/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1958/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1959/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1960/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1961/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1962/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1963/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1964/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1965/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1966/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1967/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1968/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1969/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sfc.dir/atm2d_max.json
-
-
-  2D_6hourly_0.25deg_atmos_instant:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sfc.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sfc.dir/atm2d.json
-
-  2D_6hourly_0.25deg_atmos_accumulated:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sfc.dir/atm2d_acc.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sfc.dir/atm2d_acc.json
-      
-
-  3D_daily_0.25deg_soil_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: 
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1950/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1951/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1952/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1953/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1954/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1955/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1956/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1957/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1958/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1959/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1960/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1961/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1962/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1963/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1964/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1965/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1966/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1967/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1968/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1969/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sol.dir/atm2d_avg.json
-
-
-
-  3D_6hourly_0.25deg_soil:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1970/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1971/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1972/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1973/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1974/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1975/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1976/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1977/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1978/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1979/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1980/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1981/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1982/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1983/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1984/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1985/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1986/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1987/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1988/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1989/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1990/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1991/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1992/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1993/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1994/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1995/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1996/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1997/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1998/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.1999/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2000/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2001/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2002/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2003/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2004/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2005/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2006/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2007/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2008/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2009/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2010/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2011/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2012/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2013/sol.dir/atm2d.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1d_REGULARLL/jsons.2014/sol.dir/atm2d.json
-
-
-
-  2D_monthly_0.25deg_atmos_avg:
-    driver: zarr    
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1950-1959/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1960-1969/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1970-1979/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1980-1989/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1990-1999/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2000-2009/sfc.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2010-2014/sfc.dir/atm2d_avg.json
-  
-  2D_monthly_0.25deg_atmos_min:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1950-1959/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1960-1969/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1970-1979/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1980-1989/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1990-1999/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2000-2009/sfc.dir/atm2d_min.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2010-2014/sfc.dir/atm2d_min.json
-
-  2D_monthly_0.25deg_atmos_max:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1950-1959/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1960-1969/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1970-1979/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1980-1989/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1990-1999/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2000-2009/sfc.dir/atm2d_max.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2010-2014/sfc.dir/atm2d_max.json    
-  
-  3D_monthly_0.25deg_soil_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1950-1959/sol.dir/atm2d_avg.json 
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1960-1969/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1970-1979/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1980-1989/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1990-1999/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2000-2009/sol.dir/atm2d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2010-2014/sol.dir/atm2d_avg.json
-  
-  3D_monthly_0.25deg_atmos_avg:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath:
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1950-1959/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1960-1969/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1970-1979/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1980-1989/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.1990-1999/pl.dir/atm3d_avg.json
-      - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_REGULARLL/jsons.2000-2009/pl.dir/atm3d_avg.json

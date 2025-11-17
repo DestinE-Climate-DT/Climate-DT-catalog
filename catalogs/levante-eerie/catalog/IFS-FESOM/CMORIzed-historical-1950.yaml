@@ -21,25 +21,25 @@ sources:
   #  args:
   #    urlpath: # clt evspsbl hfls hfss huss pr prc prsn ps psl rlds rsds sfcWind tas tasmax tasmin tauu tauv ts uas vas 
   #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/clt/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/evspsbl/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfls/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfss/gr/v20240304/*.nc
-  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/huss/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/pr/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prc/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prsn/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ps/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/psl/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rlds/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rsds/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/sfcWind/gr/v20240304/*.nc
-  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tas/gr/v20240304/*.nc
-  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmax/gr/v20240304/*.nc
-  #    ##- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmin/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauu/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauv/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ts/gr/v20240304/*.nc
-  #    #- /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/uas/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/evspsbl/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfls/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfss/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/huss/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/pr/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prc/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prsn/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ps/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/psl/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rlds/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rsds/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/sfcWind/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tas/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmax/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmin/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauu/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauv/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ts/gr/v20240304/*.nc
+  #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/uas/gr/v20240304/*.nc
   #    - /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/vas/gr/v20240304/*.nc
   #    chunks: {}
   #    xarray_kwargs:

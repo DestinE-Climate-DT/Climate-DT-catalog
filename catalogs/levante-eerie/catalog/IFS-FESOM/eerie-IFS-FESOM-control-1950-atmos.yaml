@@ -4,8 +4,9 @@ plugins:
   - module: gribscan
 
 sources:
+
   2D_monthly_native_atmos_avg:
-    driver: zarr 
+    driver: zarr
     args:
       consolidated: False
       urlpath:
@@ -17,8 +18,10 @@ sources:
       - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2000-2009/sfc.dir/atm2d_avg.json
       - reference::/work/bm1344/a270228/phase1_hist/gribscan_1m_NATIVE/jsons.2010-2014/sfc.dir/atm2d_avg.json
     metadata:
+      eccodes_path: /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions
       source_grid_name: null # to create multio-r100-unstructured
-      #fixer_name: 
+      #fixer_name:
+      compressor: null
 
   2D_monthly_native_atmos_min:
     driver: zarr
