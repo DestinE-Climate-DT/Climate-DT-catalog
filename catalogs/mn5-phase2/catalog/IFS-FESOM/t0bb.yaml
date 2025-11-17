@@ -917,7 +917,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/r2/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -959,7 +959,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/r2/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1000,7 +1000,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1101,7 +1101,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bb/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bb/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-FESOM.t0bb.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
