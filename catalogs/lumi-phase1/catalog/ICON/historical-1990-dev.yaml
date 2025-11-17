@@ -6,7 +6,6 @@ sources:
         time: '0000'
         param: 165
         levtype: sfc
-        step: 0
       data_start_date: 19900101T0100
       data_end_date: 19951231T2300
       chunks: D  # Default time chunk size
