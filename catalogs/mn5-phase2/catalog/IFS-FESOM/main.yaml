@@ -28,3 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  o01n:
+    description: '"ifs-fesom o01n 2017, grids: tco1279 NG5"'
+    metadata:
+      author: csc771634
+      maintainer: not specified
+      machine: MN5
+      expid: o01n
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: historical
+      start: '2017'
+      dashboard:
+        menu: o01n
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o01n.yaml'
