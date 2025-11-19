@@ -702,6 +702,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -874,7 +875,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bs/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bs/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0bs.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bs/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bs/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0bs.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -920,6 +921,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -953,6 +955,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -1053,6 +1056,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
