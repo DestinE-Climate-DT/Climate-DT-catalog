@@ -1039,7 +1039,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bu/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bu/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0bu.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bu/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bu/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0bu.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
