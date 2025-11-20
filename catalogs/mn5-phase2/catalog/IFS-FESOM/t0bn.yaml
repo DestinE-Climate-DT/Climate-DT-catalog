@@ -801,7 +801,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/r3/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/r2/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -822,7 +822,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/r3/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/r2/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1053,7 +1053,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/{{realization}}/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1074,7 +1074,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0bn/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0bn/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t0bn.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
