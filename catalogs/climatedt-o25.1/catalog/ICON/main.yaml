@@ -1,4 +1,19 @@
 sources:
   empty:
     description: Empty catalog
-    driver: null
+    driver:
+  '0001':
+    description: '"icon 0001 1995, grids: R2B9 R02B09"'
+    metadata:
+      expid: '0001'
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: control
+      start: '1995'
+      dashboard:
+        menu: '0001'
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/0001.yaml'
