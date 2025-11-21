@@ -1411,7 +1411,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01q/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01q/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1466,6 +1466,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1561,6 +1562,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
