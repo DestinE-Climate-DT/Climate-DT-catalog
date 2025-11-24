@@ -7,7 +7,7 @@ sources:
     metadata:
       author: bsc655096
       maintainer: not specified
-      machine: MN5-o25.1
+      machine: MN5
       expid: o01r
       resolution_atm: tco1279
       resolution_oce: NG5

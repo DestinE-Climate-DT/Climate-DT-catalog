@@ -1353,14 +1353,13 @@ sources:
     parameters:
       realization:
         description: Parameter realization
-        default: r1
+        default: r2
         type: str
         allowed:
-        - r1
         - r2
         - r3
-        - r4
         - r5
+        - r1
       region:
         description: Parameter region
         default: global
@@ -1373,6 +1372,48 @@ sources:
         type: str
         allowed:
         - mean
+  aqua-ocean2d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic ocean2d data for product annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+        - r2
+        - r3
+        - r5
+  aqua-ocean2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic ocean2d data for product seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r2
+        type: str
+        allowed:
+        - r2
+        - r3
+        - r1
+        - r5
   aqua-water_cycle-timeseries:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product timeseries
@@ -1393,14 +1434,255 @@ sources:
         - monthly
       realization:
         description: Parameter realization
-        default: r4
+        default: r2
         type: str
         allowed:
-        - r4
-        - r3
+        - r2
+        - r1
         - r5
+        - r3
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-radiation_surface-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r2
+        type: str
+        allowed:
+        - r2
+        - r1
+        - r5
+        - r3
+  aqua-radiation_toa-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r5/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
         - r1
         - r2
+        - r5
+  aqua-atmosphere2d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r2
+        type: str
+        allowed:
+        - r2
+        - r1
+        - r3
+        - r5
+  aqua-radiation_surface-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r2
+        type: str
+        allowed:
+        - r2
+        - r1
+        - r5
+        - r3
+  aqua-atmosphere3d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+        - r5
+        - r2
+        - r3
+  aqua-atmosphere3d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+        - r3
+        - r5
+  aqua-atmosphere2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+        - r3
+        - r5
+        - r2
+  aqua-radiation_toa-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r5/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r5
+        type: str
+        allowed:
+        - r5
+        - r2
+        - r1
+  aqua-radiation_toa-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r2
+        type: str
+        allowed:
+        - r2
+        - r1
+        - r3
+        - r5
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-water_cycle-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.europe.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+        - r2
+        - r5
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1430,14 +1712,13 @@ sources:
         - monthly
       realization:
         description: Parameter realization
-        default: r3
+        default: r2
         type: str
         allowed:
-        - r3
-        - r4
         - r2
-        - r5
         - r1
+        - r5
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1447,40 +1728,6 @@ sources:
         - North Midlatitudes
         - South Midlatitudes
         - Europe
-  aqua-radiation_toa-timeseries:
-    driver: netcdf
-    description: AQUA diagnostic radiation_toa data for product timeseries
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.{{region}}.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      freq:
-        description: Parameter freq
-        default: monthly
-        type: str
-        allowed:
-        - monthly
-      realization:
-        description: Parameter realization
-        default: r4
-        type: str
-        allowed:
-        - r4
-        - r5
-        - r3
-        - r2
-        - r1
-      region:
-        description: Parameter region
-        default: global
-        type: str
-        allowed:
-        - global
   aqua-radiation_surface-timeseries:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product timeseries
@@ -1501,54 +1748,61 @@ sources:
         - monthly
       realization:
         description: Parameter realization
-        default: r3
+        default: r1
         type: str
         allowed:
-        - r3
-        - r5
-        - r4
-        - r2
         - r1
+        - r3
+        - r2
+        - r5
       region:
         description: Parameter region
         default: global
         type: str
         allowed:
         - global
-  aqua-water_cycle-seasonalcycles:
+  aqua-water_cycle-annual_climatology:
     driver: netcdf
-    description: AQUA diagnostic water_cycle data for product seasonalcycles
+    description: AQUA diagnostic water_cycle data for product annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
     metadata:
       source_grid_name: false
     parameters:
-      freq:
-        description: Parameter freq
-        default: monthly
-        type: str
-        allowed:
-        - monthly
       realization:
         description: Parameter realization
         default: r2
         type: str
         allowed:
         - r2
-        - r5
-        - r4
-        - r3
         - r1
-      region:
-        description: Parameter region
-        default: global
+        - r3
+        - r5
+  aqua-water_cycle-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
         type: str
         allowed:
-        - global
+        - r1
+        - r2
+        - r5
   aqua-atmosphere2d-seasonalcycles:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
@@ -1569,13 +1823,12 @@ sources:
         - monthly
       realization:
         description: Parameter realization
-        default: r2
+        default: r3
         type: str
         allowed:
+        - r3
         - r2
         - r5
-        - r3
-        - r4
         - r1
       region:
         description: Parameter region
@@ -1583,3 +1836,6 @@ sources:
         type: str
         allowed:
         - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
