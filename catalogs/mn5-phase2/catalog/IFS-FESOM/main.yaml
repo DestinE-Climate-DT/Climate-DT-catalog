@@ -28,3 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  t064:
+    description: '"ifs-fesom t064 1990, grids: tco79 CORE2"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: t064
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: t064
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t064.yaml'
