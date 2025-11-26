@@ -1830,7 +1830,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
