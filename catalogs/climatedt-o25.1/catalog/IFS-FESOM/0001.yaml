@@ -1422,7 +1422,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1435,6 +1435,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r2
@@ -1483,7 +1484,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r2/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1506,7 +1507,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r4/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r2/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1598,7 +1599,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r3/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r2/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1621,7 +1622,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/r2/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1656,6 +1657,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r2
@@ -1677,7 +1679,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01r/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1727,6 +1729,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r2
@@ -1764,6 +1767,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
