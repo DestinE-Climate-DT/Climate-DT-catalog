@@ -1392,6 +1392,7 @@ sources:
         - r1
         - r2
         - r3
+        - r4
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
@@ -1412,6 +1413,7 @@ sources:
         - r1
         - r2
         - r3
+        - r4
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -1433,6 +1435,7 @@ sources:
         - r1
         - r2
         - r3
+        - r4
   aqua-water_cycle-timeseries:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product timeseries
@@ -1487,6 +1490,7 @@ sources:
         - r1
         - r3
         - r2
+        - r4
   aqua-atmosphere3d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -1508,6 +1512,7 @@ sources:
         - r1
         - r3
         - r2
+        - r4
   aqua-atmosphere2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
@@ -1529,6 +1534,7 @@ sources:
         - r1
         - r3
         - r2
+        - r4
   aqua-radiation_toa-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
@@ -1550,6 +1556,7 @@ sources:
         - r1
         - r3
         - r2
+        - r4
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -1592,6 +1599,7 @@ sources:
         - r1
         - r3
         - r2
+        - r4
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -1613,6 +1621,7 @@ sources:
         - r1
         - r3
         - r2
+        - r4
   aqua-atmosphere2d-timeseries:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product timeseries
