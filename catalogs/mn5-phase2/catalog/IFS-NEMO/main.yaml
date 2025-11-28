@@ -249,3 +249,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  '0001':
+    description: '"ifs-nemo 0001 1990, grids: tco1279 eORCA12"'
+    metadata:
+      expid: '0001'
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: '0001'
+        resolution_id: SR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/0001.yaml'
