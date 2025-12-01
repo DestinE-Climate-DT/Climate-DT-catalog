@@ -1,0 +1,1062 @@
+sources:
+  hourly-hpz5-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 78
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
+          228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
+        235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 
+          235051, 235052, 235053, 235055]
+      source_grid_name: hpz5-nested
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235087
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
+        228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 
+          235033, 235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041,
+        235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
+      source_grid_name: hpz5-nested
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  daily-hpz5-atm2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 172
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [172, 228002]
+      source_grid_name: hpz5-nested
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  hourly-hpz5-atm3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 60
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: 6h
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
+          700, 850, 925, 1000]
+      variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
+      source_grid_name: hpz5-nested
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-atm3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235100
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
+          700, 850, 925, 1000]
+      variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
+        235246]
+      source_grid_name: hpz5-nested
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  daily-hpz5-oce2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
+        263121, 263122, 263123, 263124]
+      source_grid_name: fesom-CORE2-hpz5-nested-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-oce2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 263000
+        levtype: o2d
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
+        263121, 263122, 263123, 263124]
+      source_grid_name: fesom-CORE2-hpz5-nested-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  daily-hpz5-oce3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 263500
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [2.5, 7.5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 107.5, 125, 147.5, 
+          175, 210, 255, 310, 375, 450, 535, 630, 735, 850, 975, 1110, 1255, 
+          1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025,
+        4275, 4525, 4775, 5025, 5275, 5525, 5825, 6125]
+      variables: [263500, 263501, 263505, 263506]
+      source_grid_name: fesom-CORE2-hpz5-nested-3d-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-oce3d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 263505
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [2.5, 7.5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 107.5, 125, 147.5, 
+          175, 210, 255, 310, 375, 450, 535, 630, 735, 850, 975, 1110, 1255, 
+          1415, 1600, 1810, 2035, 2275, 2525, 2775, 3025, 3275, 3525, 3775, 4025,
+        4275, 4525, 4775, 5025, 5275, 5525, 5825, 6125]
+      variables: [263505, 263500, 263501, 263506]
+      source_grid_name: fesom-CORE2-hpz5-nested-3d-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  daily-hpz5-oce3d-half:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 263507
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 115, 135, 160, 190,
+        230, 280, 340, 410, 490, 580, 680, 790, 910, 1040, 1180, 1330, 1500, 
+          1700, 1920, 2150, 2400, 2650, 2900, 3150, 3400, 3650, 3900, 4150, 4400,
+        4650, 4900, 5150, 5400, 5650, 6000, 6250]
+      variables: [263507]
+      source_grid_name: fesom-CORE2-hpz5-nested-3d-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-oce3d-half:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 263507
+        levtype: o3d
+        levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+          37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 115, 135, 160, 190,
+        230, 280, 340, 410, 490, 580, 680, 790, 910, 1040, 1180, 1330, 1500, 
+          1700, 1920, 2150, 2400, 2650, 2900, 3150, 3400, 3650, 3900, 4150, 4400,
+        4650, 4900, 5150, 5400, 5650, 6000, 6250]
+      variables: [263507]
+      source_grid_name: fesom-CORE2-hpz5-nested-3d-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  hourly-hpz5-hl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 131
+        levtype: hl
+        levelist: [100]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [100]
+      variables: [131, 132]
+      source_grid_name: hpz5
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-hl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235131
+        levtype: hl
+        levelist: [100]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [100]
+      variables: [235131, 235132]
+      source_grid_name: hpz5
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  hourly-hpz5-sol5:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 228141
+        levtype: sol
+        levelist: [1, 2, 3, 4, 5]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4, 5]
+      variables: [228141]
+      source_grid_name: hpz5
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-sol5:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235078
+        levtype: sol
+        levelist: [1, 2, 3, 4, 5]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4, 5]
+      variables: [235078]
+      source_grid_name: hpz5
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  hourly-hpz5-sol4:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clte
+        date: 19900101
+        time: 0000
+        param: 260199
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4]
+      variables: [260199, 260360]
+      source_grid_name: hpz5
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  monthly-hpz5-sol4:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: hist  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: t064  # To be overwritten by workflow/config file
+        expid: t064
+        type: fc
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235077
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+      data_start_date: 19900101T0000
+      data_end_date: auto
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'ifs-fesom t064 1990, grids: tco79 CORE2'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4]
+      variables: [235077, 235094]
+      source_grid_name: hpz5
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc01/bsc032056/t064/t064.yaml
+  lra-r100-monthly:
+    driver: netcdf
+    description: AQUA netcdf DROP-generated data monthly at r100
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/LRA/mn5-phase2/IFS-FESOM/t064/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-FESOM_t064_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+      chunks:
+        lat: 180
+        lon: 360
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: r100
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+      stat:
+        description: Parameter stat
+        default: mean
+        type: str
+        allowed:
+        - mean
+  aqua-ocean2d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic ocean2d data for product annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-ocean2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic ocean2d data for product seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-water_cycle-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.{{freq}}.europe.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-atmosphere2d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_toa-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_surface-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_toa-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere3d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_surface-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere3d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-water_cycle-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.{{freq}}.europe.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-atmosphere2d-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-radiation_toa-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-atmosphere2d-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-radiation_surface-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/radiation-surface/netcdf/radiation_surface.timeseries.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-water_cycle-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-water_cycle-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t064/output/aqua-analysis/mn5-phase2/IFS-FESOM/t064/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.mn5-phase2.IFS-FESOM.t064.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
