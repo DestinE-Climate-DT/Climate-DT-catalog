@@ -1644,7 +1644,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01u/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01u/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1717,7 +1717,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01u/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/bsc655096/o01u/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.0001.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
