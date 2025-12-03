@@ -13,12 +13,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -48,12 +48,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -83,12 +83,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -118,12 +118,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -153,12 +153,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -185,12 +185,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -217,14 +217,14 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: 6h
       savefreq: h
       timestep: h
@@ -253,14 +253,14 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: 6h
       savefreq: h
       timestep: h
@@ -289,14 +289,14 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -326,12 +326,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -359,12 +359,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -392,12 +392,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -425,12 +425,12 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -458,7 +458,7 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 263500
         levtype: o3d
@@ -468,7 +468,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -518,7 +518,7 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 263500
         levtype: o3d
@@ -528,7 +528,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: D
       timestep: h
@@ -578,7 +578,7 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 263505
         levtype: o3d
@@ -588,7 +588,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: MS
       timestep: h
@@ -638,7 +638,7 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 263505
         levtype: o3d
@@ -648,7 +648,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: MS
       timestep: h
@@ -698,13 +698,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -732,13 +732,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -766,13 +766,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 235131
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -786,7 +786,7 @@ sources:
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  hourly-hpz10-sol5:
+  hourly-hpz10-sol:
     args:
       request:
         class: d1
@@ -800,13 +800,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -816,11 +816,11 @@ sources:
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [228141]
+      variables: [228141, 260199]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  hourly-hpz7-sol5:
+  hourly-hpz7-sol:
     args:
       request:
         class: d1
@@ -834,13 +834,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: D
       savefreq: h
       timestep: h
@@ -850,11 +850,11 @@ sources:
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [228141]
+      variables: [228141, 260199]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  monthly-hpz10-sol5:
+  monthly-hpz10-sol:
     args:
       request:
         class: d1
@@ -868,13 +868,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -884,11 +884,11 @@ sources:
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [235078]
+      variables: [235078, 235077]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  monthly-hpz7-sol5:
+  monthly-hpz7-sol:
     args:
       request:
         class: d1
@@ -902,13 +902,13 @@ sources:
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
         stream: clte
-        date: 19880101/to/20370101
+        date: 19880101/to/20410101
         time: None
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
+      data_end_date: 20410101T2300
       chunks: MS
       savefreq: MS
       timestep: h
@@ -918,143 +918,7 @@ sources:
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [235078]
-      source_grid_name: hpz7
-      fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  hourly-hpz10-sol4:
-    args:
-      request:
-        class: d1
-        dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
-        model: IFS-NEMO
-        realization: 1
-        resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
-        type: fc
-        stream: clte
-        date: 19880101/to/20370101
-        time: 0000
-        param: 260199
-        levtype: sol
-        levelist: [1, 2, 3, 4]
-      data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
-      chunks: D
-      savefreq: h
-      timestep: h
-      timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
-    driver: gsv
-    metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
-      levels: [1, 2, 3, 4]
-      variables: [260199]
-      source_grid_name: hpz10
-      fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  hourly-hpz7-sol4:
-    args:
-      request:
-        class: d1
-        dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
-        model: IFS-NEMO
-        realization: 1
-        resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
-        type: fc
-        stream: clte
-        date: 19880101/to/20370101
-        time: 0000
-        param: 260199
-        levtype: sol
-        levelist: [1, 2, 3, 4]
-      data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
-      chunks: D
-      savefreq: h
-      timestep: h
-      timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
-    driver: gsv
-    metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
-      levels: [1, 2, 3, 4]
-      variables: [260199]
-      source_grid_name: hpz7
-      fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  monthly-hpz10-sol4:
-    args:
-      request:
-        class: d1
-        dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
-        model: IFS-NEMO
-        realization: 1
-        resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
-        type: fc
-        stream: clte
-        date: 19880101/to/20370101
-        time: None
-        param: 235077
-        levtype: sol
-        levelist: [1, 2, 3, 4]
-      data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
-      chunks: MS
-      savefreq: MS
-      timestep: h
-      timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
-    driver: gsv
-    metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
-      levels: [1, 2, 3, 4]
-      variables: [235077]
-      source_grid_name: hpz10
-      fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
-  monthly-hpz7-sol4:
-    args:
-      request:
-        class: d1
-        dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
-        model: IFS-NEMO
-        realization: 1
-        resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
-        type: fc
-        stream: clte
-        date: 19880101/to/20370101
-        time: None
-        param: 235077
-        levtype: sol
-        levelist: [1, 2, 3, 4]
-      data_start_date: 20150101T0000
-      data_end_date: 20370101T2300
-      chunks: MS
-      savefreq: MS
-      timestep: h
-      timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
-    driver: gsv
-    metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
-      levels: [1, 2, 3, 4]
-      variables: [235077]
+      variables: [235078, 235077]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
       fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
@@ -1063,7 +927,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc032120/o00q/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o00q/r100/monthly/*o00q_r100_monthly_*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o00q/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o00q/r100/monthly/*o00q_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
