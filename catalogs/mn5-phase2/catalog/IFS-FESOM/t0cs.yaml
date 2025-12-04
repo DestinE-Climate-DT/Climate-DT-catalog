@@ -983,7 +983,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc032056/t0cs/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0cs/r2/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0cs.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc032056/t0cs/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0cs/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0cs.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
