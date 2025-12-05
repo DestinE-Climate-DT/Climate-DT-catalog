@@ -28,3 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  t0cx:
+    description: '"ifs-fesom t0cx 2017, grids: tco79 CORE2"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: t0cx
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: '2017'
+      dashboard:
+        menu: t0cx
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0cx.yaml'
