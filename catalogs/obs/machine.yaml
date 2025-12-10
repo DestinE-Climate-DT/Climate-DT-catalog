@@ -75,8 +75,8 @@ freja:
     DATA_PATH: /home/rossby/AQUA_DATA/obs/
 nord4:
   paths:
-    grids: /esarchive/scratch/AQUA/grids
-    weights: /esarchive/scratch/AQUA/weights
-    areas: /esarchive/scratch/AQUA/areas
+    grids: /esarchive/scratch/AQUA/aqua-dvc/grids
+    weights: /esarchive/scratch/AQUA/aqua-dvc/weights
+    areas: /esarchive/scratch/AQUA/aqua-dvc/areas
   intake:                                                                                  
-    DATA_PATH: /esarchive/scratch/AQUA/datasets
+    DVC_PATH: /esarchive/scratch/AQUA/aqua-dvc/datasets
