@@ -52,7 +52,8 @@ sources:
   a1ml:
     args:
       path: '{{CATALOG_DIR}}/a1ml.yaml'
-    description: IFS/NEMO - 1990 control - sicoupl=2 nn_flxdist=2 - Tco399/eORCA025
+    description: IFS/NEMO - 1990 control - sicoupl=2 nn_flxdist=2 - 
+      Tco399/eORCA025
     driver: yaml_file_cat
   a1mm:
     args:
@@ -67,8 +68,8 @@ sources:
   a1nk:
     args:
       path: '{{CATALOG_DIR}}/a1nk.yaml'
-    description: IFS/NEMO - 1990 control ecmwf revised namelist (but keeping TEOS10)
-      - Tco399/eORCA025
+    description: IFS/NEMO - 1990 control ecmwf revised namelist (but keeping 
+      TEOS10) - Tco399/eORCA025
     driver: yaml_file_cat
   a1ob:
     args:
@@ -103,17 +104,20 @@ sources:
   a1si:
     args:
       path: '{{CATALOG_DIR}}/a1si.yaml'
-    description: IFS/NEMO - 1990 historical test with MACv2SP aerosols - Tco399/eORCA025
+    description: IFS/NEMO - 1990 historical test with MACv2SP aerosols - 
+      Tco399/eORCA025
     driver: yaml_file_cat
   a1uk:
     args:
       path: '{{CATALOG_DIR}}/a1uk.yaml'
-    description: IFS/NEMO - 1990 historical test with CONFESS aerosols - Tco399/eORCA025
+    description: IFS/NEMO - 1990 historical test with CONFESS aerosols - 
+      Tco399/eORCA025
     driver: yaml_file_cat
   a1sj:
     args:
       path: '{{CATALOG_DIR}}/a1sj.yaml'
-    description: IFS/NEMO - 1990 control test with MACv2SP aerosols - Tco399/eORCA025
+    description: IFS/NEMO - 1990 control test with MACv2SP aerosols - 
+      Tco399/eORCA025
     driver: yaml_file_cat
   a1r3:
     args:
@@ -154,12 +158,14 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
   a1z9:
-    description: IFS/NEMO - 1990 coupled spinup w/o --cbmf_reduced - Tco2559/eORCA12
+    description: IFS/NEMO - 1990 coupled spinup w/o --cbmf_reduced - 
+      Tco2559/eORCA12
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a1z9.yaml'
   a27r:
-    description: IFS/NEMO - 1990 coupled spinup w --cbmf_reduced- Tco2559/eORCA12
+    description: IFS/NEMO - 1990 coupled spinup w --cbmf_reduced- 
+      Tco2559/eORCA12
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a27r.yaml'
@@ -178,8 +184,8 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/ssp370-2020-freeze.yaml'
   i9t5:
-    description: FDB IFS/NEMO test run with prodction resolution tco2559/eORCA12 native
-      grids regridded to Healpix
+    description: FDB IFS/NEMO test run with prodction resolution tco2559/eORCA12
+      native grids regridded to Healpix
     metadata:
       expid: i9t5
       resolution_atm: tco2559
@@ -245,7 +251,25 @@ sources:
       dashboard:
         menu: a24z
         resolution_id: SR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a24z.yaml'
+  '0001':
+    description: '"ifs-nemo 0001 2015, grids: tco1279 eORCA12"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2zm
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: SSP1-2.6
+      start: '2015'
+      dashboard:
+        menu: '0001'
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/0001.yaml'
