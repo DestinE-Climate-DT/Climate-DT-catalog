@@ -1,16 +1,16 @@
 MN5:
   paths:
-    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
-    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
-    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
+    grids: /gpfs/scratch/ehpc01/awi548625/t0di/aqua-data/grids
+    weights: /gpfs/scratch/ehpc01/awi548625/t0di/aqua-data/weights
+    areas: /gpfs/scratch/ehpc01/awi548625/t0di/aqua-data/areas
   intake:
     ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
     FDB_HOME: /gpfs/scratch/ehpc01/experiments/
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+    grids: /gpfs/scratch/ehpc01/awi548625/t0di/aqua-data/grids
+    weights: /gpfs/scratch/ehpc01/awi548625/t0di/aqua-data/weights
+    areas: /gpfs/scratch/ehpc01/awi548625/t0di/aqua-data/areas
   intake:
     ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
     FDB_HOME: /scratch/project_465000454/experiments

@@ -28,3 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  t0di:
+    description: '"ifs-fesom t0di 1990, grids: tco399 DARS"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: t0di
+      resolution_atm: tco399
+      resolution_oce: DARS
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: t0di
+        resolution_id: MR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0di.yaml'
