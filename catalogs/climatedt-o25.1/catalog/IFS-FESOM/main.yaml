@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  '0001':
+    description: '"ifs-fesom 0001 2017, grids: tco1279 NG5"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5
+      expid: o01v
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: historical
+      start: '2017'
+      dashboard:
+        menu: '0001'
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/0001.yaml'
