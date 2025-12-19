@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t0dk:
+    description: '"ifs-fesom t0dk 2017, grids: tco1279 NG5"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: MN5
+      expid: t0dk
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: control
+      start: '2017'
+      dashboard:
+        menu: t0dk
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0dk.yaml'
