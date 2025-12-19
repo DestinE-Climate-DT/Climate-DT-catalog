@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  tco79-test-2017-historical:
+    description: '"ifs-fesom tco79-test-2017-historical 2017, grids: tco79 CORE2"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: MN5
+      expid: t0do
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: control
+      start: '2017'
+      dashboard:
+        menu: tco79-test-2017-historical
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/tco79-test-2017-historical.yaml'
