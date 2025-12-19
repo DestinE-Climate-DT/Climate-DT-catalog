@@ -697,44 +697,6 @@ sources:
         type: str
         allowed:
         - r1
-  aqua-atmosphere3d-annual_climatology:
-    driver: netcdf
-    description: AQUA diagnostic atmosphere3d data for product 
-      annual_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
-  aqua-atmosphere2d-seasonal_climatology:
-    driver: netcdf
-    description: AQUA diagnostic atmosphere2d data for product 
-      seasonal_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -773,13 +735,32 @@ sources:
         type: str
         allowed:
         - r1
-  aqua-atmosphere3d-seasonal_climatology:
+  aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
-    description: AQUA diagnostic atmosphere3d data for product 
+    description: AQUA diagnostic atmosphere2d data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_toa-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -811,13 +792,32 @@ sources:
         type: str
         allowed:
         - r1
-  aqua-radiation_toa-seasonal_climatology:
+  aqua-atmosphere3d-annual_climatology:
     driver: netcdf
-    description: AQUA diagnostic radiation_toa data for product 
+    description: AQUA diagnostic atmosphere3d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere3d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc032056/t0ct/output/aqua-analysis/mn5-phase2/IFS-NEMO/t0ct/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.mn5-phase2.IFS-NEMO.t0ct.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
