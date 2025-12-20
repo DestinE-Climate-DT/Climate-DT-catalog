@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  storyline-control:
+    description: '"ifs-fesom storyline-control 2017, grids: tco1279 NG5"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: MN5
+      expid: o021
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: control
+      start: '2017'
+      dashboard:
+        menu: storyline-control
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/storyline-control.yaml'
