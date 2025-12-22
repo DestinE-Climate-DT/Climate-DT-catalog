@@ -29,9 +29,9 @@ MN5-o26.1:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-e26.1
 wilma:
   paths:
-    grids: /work/users/mnurisso/aqua-data/grids
-    weights: /work/users/mnurisso/aqua-data/weights
-    areas: /work/users/mnurisso/aqua-data/areas
+    grids: /scratch/users/mnurisso/aqua-dvc/grids
+    weights: /scratch/users/mnurisso/aqua-dvc/weights
+    areas: /scratch/users/mnurisso/aqua-dvc/areas
   intake:
     LRA_PATH: /archive/mnurisso/LRA/climatedt-e26.1
 hpc2020:
