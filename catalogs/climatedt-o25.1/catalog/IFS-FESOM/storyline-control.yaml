@@ -1664,6 +1664,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r4
@@ -1701,6 +1702,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r4
@@ -1735,6 +1737,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r4
@@ -1809,6 +1812,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r4
