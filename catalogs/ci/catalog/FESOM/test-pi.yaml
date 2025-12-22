@@ -26,6 +26,20 @@ sources:
       - '{{ TEST_PATH }}/FESOM/short/sst.fesom.1986.nc'
     description: original 2d output
     driver: netcdf
+  original_2d_filter:
+    metadata:
+      source_grid_name: test-pi-2d
+      fixer_name: FESOM-default
+      filter_key: year
+    args:
+      chunks:
+        time: 1
+      urlpath:
+      - '{{ TEST_PATH }}/FESOM/short/a_ice.fesom.*.nc'
+      - '{{ TEST_PATH }}/FESOM/short/MLD2.fesom.*.nc'
+      - '{{ TEST_PATH }}/FESOM/short/sst.fesom.*.nc'
+    description: original 2d output
+    driver: netcdf
   original_2d_fix:
     metadata:
       source_grid_name: test-pi-2d

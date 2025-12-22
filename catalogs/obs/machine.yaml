@@ -24,12 +24,12 @@ lumi:
     DVC_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets
 MN5:
   paths:
-    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
-    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
-    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
+    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
+    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/data/AQUA/datasets
-    DVC_PATH: /gpfs/scratch/ehpc01/data/AQUA/aqua-dvc/datasets
+    DVC_PATH: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/datasets
 lumi-e25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
