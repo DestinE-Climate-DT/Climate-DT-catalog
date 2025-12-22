@@ -7,19 +7,21 @@ This repository focuses on the catalog, the main AQUA codebase is open-sourced a
 
 1. ci: Catalog for the CI/CD tests of AQUA.
 2. climatedt-e25.1: Catalog for the Climate DT E suite 25.1 experiments.
-3. climatedt-o25.1: Catalog for the Climate DT O suite 25.1 experiments.
-4. climatedt-phase1: Catalog for the Climate DT phase1 production experiments. (Lumi, LRA on Levante and MN5 as well)
-5. leonardo: Catalog for the Leonardo HPC.
-6. levante: Catalog for the Levante HPC.
-7. lumi-phase1: Catalog for the LUMI HPC development phase1
-8. lumi-phase2: Catalog for the LUMI HPC development phase2
-9. mn5-eerie: Catalog for the EERIE project in the MN5 machine
-10. mn5-phase2: Catalog for the MN5 HPC development phase2
-11. nextgems3: Catalog with the nextGEMS cycle3 experiments. (Levante)
-12. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
-13. nord4-eerie: Catalog for the EERIE project in the Nord4 machine
-14. obs: Catalog with the observational datasets. (multi machine)
-15. template: A template catalog to be used for new catalog generation
+3. climatedt-e26.1: Catalog for the Climate DT E suite 26.1 experiments.
+4. climatedt-o25.1: Catalog for the Climate DT O suite 25.1 experiments.
+5. climatedt-o26.1: Catalog for the Climate DT O suite 26.1 experiments.
+6. climatedt-phase1: Catalog for the Climate DT phase1 production experiments. (Lumi, LRA on Levante and MN5 as well)
+7. leonardo: Catalog for the Leonardo HPC.
+8. levante: Catalog for the Levante HPC.
+9. lumi-phase1: Catalog for the LUMI HPC development phase1
+10. lumi-phase2: Catalog for the LUMI HPC development phase2
+11. mn5-eerie: Catalog for the EERIE project in the MN5 machine
+12. mn5-phase2: Catalog for the MN5 HPC development phase2
+13. nextgems3: Catalog with the nextGEMS cycle3 experiments. (Levante)
+14. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
+15. nord4-eerie: Catalog for the EERIE project in the Nord4 machine
+16. obs: Catalog with the observational datasets. (multi machine)
+17. template: A template catalog to be used for new catalog generation
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
 
