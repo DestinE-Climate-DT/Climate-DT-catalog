@@ -1423,7 +1423,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r3/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r5/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1446,7 +1446,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r3/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r5/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1515,7 +1515,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r4/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1561,7 +1561,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1724,7 +1724,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1762,7 +1762,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
