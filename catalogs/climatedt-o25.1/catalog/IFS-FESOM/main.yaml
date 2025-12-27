@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  storyline-Tplus2K:
+    description: '"ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: MN5
+      expid: o022
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: tplus2K
+      start: '2017'
+      dashboard:
+        menu: storyline-Tplus2K
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/storyline-Tplus2K.yaml'
