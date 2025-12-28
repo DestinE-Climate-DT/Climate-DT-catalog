@@ -1752,7 +1752,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/awi229971/o021/output/aqua-analysis/climatedt-o25.1/IFS-FESOM/storyline-control/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o25.1.IFS-FESOM.storyline-control.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
