@@ -1,17 +1,17 @@
 sources:
   empty:
     description: Empty catalog
-    driver:
+    driver: null
   historical-1990:
     description: 'IFS-NEMO historical-1990 o25.1, grids: tco2559 eORCA12'
     metadata:
-      expid: "0001"
+      expid: '0001'
       resolution_atm: tco2559
       resolution_oce: eORCA12
       forcing: historical
       start: '1990'
       machine: mn5
-      author: 'Cheng You'
+      author: Cheng You
       dashboard:
         menu: historical-1990
         resolution_id: HR
@@ -20,9 +20,9 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
   hist-1990-ensemble:
-    description: 'IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12'
+    description: IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12
     metadata:
-      expid: "0001"
+      expid: '0001'
       resolution_atm: tco1279
       resolution_oce: eORCA12
       forcing: historical
@@ -33,3 +33,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hist-1990-ensemble.yaml'
+  o024:
+    description: '"ifs-nemo o024 1990, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-o25.1
+      expid: o024
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: o024
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o024.yaml'
