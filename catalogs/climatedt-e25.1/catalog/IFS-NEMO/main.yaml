@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  o024:
+    description: '"ifs-nemo o024 1990, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-e25.1
+      expid: o024
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: o024
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o024.yaml'
