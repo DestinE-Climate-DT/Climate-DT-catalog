@@ -1,4 +1,17 @@
 sources:
-  empty:
-    description: Empty catalog
-    driver: null
+  historical-1990:
+    description: '"IFS-FESOM historical 1990, grids: tco2559 NG5"'
+    metadata:
+      expid: '0001'
+      expver: o00i
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: historical-1990
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/historical-1990.yaml'
