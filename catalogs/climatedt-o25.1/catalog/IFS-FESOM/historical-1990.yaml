@@ -84,9 +84,9 @@ sources:
         resolution: high
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
@@ -94,7 +94,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -120,9 +120,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
@@ -130,7 +130,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -296,9 +296,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
@@ -308,7 +308,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -402,9 +402,9 @@ sources:
         resolution: high
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
@@ -412,7 +412,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -436,9 +436,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
@@ -446,7 +446,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -556,9 +556,9 @@ sources:
         resolution: high
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -570,7 +570,7 @@ sources:
       chunks: D
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -599,9 +599,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -613,7 +613,7 @@ sources:
       chunks: D
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -730,9 +730,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263507
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -744,7 +744,7 @@ sources:
       chunks: D
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -844,9 +844,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235131
         levtype: hl
         levelist: [100]
@@ -855,7 +855,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -949,9 +949,9 @@ sources:
         resolution: high
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
@@ -960,7 +960,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -984,9 +984,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
@@ -995,7 +995,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -1089,9 +1089,9 @@ sources:
         resolution: high
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
@@ -1100,7 +1100,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -1124,9 +1124,9 @@ sources:
         resolution: standard
         expver: 0001  # To be overwritten by workflow/config file
         type: fc
-        stream: clte
-        date: 19880101/to/20150101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
@@ -1135,7 +1135,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
