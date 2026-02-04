@@ -1,4 +1,17 @@
 sources:
-  empty:
-    description: Empty catalog
-    driver: null
+  historical-1990:
+    description: '"ICON historical 1990, grids: R2B9 R02B09"'
+    metadata:
+      expid: '0001'
+      expver: o00k
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: historical
+      start: '1990'
+      dashboard:
+        menu: historical-1990
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/historical-1990.yaml'

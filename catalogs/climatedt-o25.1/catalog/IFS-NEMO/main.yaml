@@ -1,7 +1,4 @@
 sources:
-  empty:
-    description: Empty catalog
-    driver:
   historical-1990:
     description: 'IFS-NEMO historical-1990 o25.1, grids: tco2559 eORCA12'
     metadata:
