@@ -1,5 +1,5 @@
 sources:
-   control-1990:
+  control-1990:
     description: '"ifs-nemo control 1990, grids: tco2559 eORCA12"'
     metadata:
       expid: '0001'
