@@ -1,4 +1,19 @@
 sources:
+  control-1990:
+    description: '"ifs-nemo control 1990, grids: tco2559 eORCA12"'
+    metadata:
+      expid: '0001'
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: control-1990
+        resolution_id: HR
+        note: 'The first 5 years were run in the e25.1 suite'
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/control-1990.yaml'
   historical-1990:
     description: 'IFS-NEMO historical-1990 o25.1, grids: tco2559 eORCA12'
     metadata:
