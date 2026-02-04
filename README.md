@@ -12,15 +12,14 @@ This repository focuses on the catalog, the main AQUA codebase is open-sourced a
 5. climatedt-phase1: Catalog for the Climate DT phase1 production experiments. (Lumi, LRA on Levante and MN5 as well)
 6. leonardo: Catalog for the Leonardo HPC.
 7. levante: Catalog for the Levante HPC.
-8. lumi-phase1: Catalog for the LUMI HPC development phase1
-9. lumi-phase2: Catalog for the LUMI HPC development phase2
-10. mn5-eerie: Catalog for the EERIE project in the MN5 machine
-11. mn5-phase2: Catalog for the MN5 HPC development phase2
-12. nextgems3: Catalog with the nextGEMS cycle3 experiments. (Levante)
-13. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
-14. nord4-eerie: Catalog for the EERIE project in the Nord4 machine
-15. obs: Catalog with the observational datasets. (multi machine)
-16. template: A template catalog to be used for new catalog generation
+8. lumi-phase2: Catalog for the LUMI HPC development phase2
+9. mn5-eerie: Catalog for the EERIE project in the MN5 machine
+10. mn5-phase2: Catalog for the MN5 HPC development phase2
+11. nextgems3: Catalog with the nextGEMS cycle3 experiments. (Levante)
+12. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
+13. nord4-eerie: Catalog for the EERIE project in the Nord4 machine
+14. obs: Catalog with the observational datasets. (multi machine)
+15. template: A template catalog to be used for new catalog generation
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
 
