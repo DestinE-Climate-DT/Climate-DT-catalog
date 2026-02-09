@@ -4,26 +4,26 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -34,32 +34,32 @@ sources:
         235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -70,32 +70,32 @@ sources:
         235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz10-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
-        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -106,32 +106,32 @@ sources:
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
-        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -142,32 +142,32 @@ sources:
         235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz10-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -175,32 +175,32 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -208,34 +208,34 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz10-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: 6h
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -245,34 +245,34 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: 6h
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -282,19 +282,19 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -304,12 +304,12 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -320,32 +320,32 @@ sources:
         235246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz10-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -354,32 +354,32 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -388,19 +388,19 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz10-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -408,12 +408,12 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -422,19 +422,19 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -442,12 +442,12 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -456,22 +456,22 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz10-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 263500
         levtype: o3d
@@ -480,12 +480,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -499,22 +499,22 @@ sources:
       variables: [263500, 263501, 263505, 263506]
       source_grid_name: fesom-NG5-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 263500
         levtype: o3d
@@ -523,12 +523,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -542,19 +542,19 @@ sources:
       variables: [263500, 263501, 263505, 263506]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz10-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -566,12 +566,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -585,19 +585,19 @@ sources:
       variables: [263505]
       source_grid_name: fesom-NG5-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -609,12 +609,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -628,22 +628,22 @@ sources:
       variables: [263505, 263500, 263501, 263506]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz10-oce3d-half:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 263507
         levtype: o3d
@@ -652,12 +652,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -672,22 +672,22 @@ sources:
       variables: [263507]
       source_grid_name: fesom-NG5-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   daily-hpz7-oce3d-half:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 263507
         levtype: o3d
@@ -696,12 +696,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -716,19 +716,19 @@ sources:
       variables: [263507]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-oce3d-half:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -740,12 +740,12 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: MS
       timestep: h
-      timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+      timestyle: date
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -760,33 +760,33 @@ sources:
       variables: [263507]
       source_grid_name: fesom-NG5-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz10-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -795,33 +795,33 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -830,19 +830,19 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -851,12 +851,12 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -865,33 +865,33 @@ sources:
       variables: [235131, 235132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz10-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -900,33 +900,33 @@ sources:
       variables: [228141]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz7-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -935,19 +935,19 @@ sources:
       variables: [228141]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz10-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -956,12 +956,12 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -970,19 +970,19 @@ sources:
       variables: [235078]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -991,12 +991,12 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+      timestyle: date
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -1005,33 +1005,33 @@ sources:
       variables: [235078]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz10-sol4:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 260199
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -1040,33 +1040,33 @@ sources:
       variables: [260199]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   hourly-hpz7-sol4:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
-        date: 19900101/to/20141231
+        date: 19900101/to/19991231
         time: 0000
         param: 260199
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -1075,19 +1075,19 @@ sources:
       variables: [260199]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz10-sol4:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -1096,12 +1096,12 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -1110,19 +1110,19 @@ sources:
       variables: [235077]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   monthly-hpz7-sol4:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: baseline  # To be overwritten by workflow/config file
-        experiment: hist  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: baseline  
+        experiment: cont  
+        generation: 2  
         model: IFS-FESOM
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clmn
         year: 1990
@@ -1131,12 +1131,12 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20141231T2300
+      data_end_date: 19991231T2300
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom o00i 1990, grids: tco2559 NG5'
+    description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
       fdb_home: /appl/local/destine/fdb
@@ -1145,15 +1145,15 @@ sources:
       variables: [235077]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/youcheng/o00i/o00i.yml
+      fdb_info_file: /scratch/project_465001542/kiszlert/o00r/o00r.yml
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
       urlpath:
-        '{{ LRA_PATH }}/IFS-FESOM/historical-1990/r100/monthly/*o00i_r100_monthly_*.nc'
+        '{{ LRA_PATH }}/IFS-FESOM/control-1990/r100/monthly/*o00r_r100_monthly_*.nc'
         # This is the original path used in the production environment, kept for legacy.
-        # /scratch/project_465001542/youcheng/o00i/output/LRA/fc0/climatedt-o25.1/IFS-FESOM/o00i/r100/monthly/*o00i_r100_monthly_*.nc
+        # /scratch/project_465001542/kiszlert/o00r/output/LRA/fc0/climatedt-o25.1/IFS-FESOM/o00r/r100/monthly/*o00r_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
