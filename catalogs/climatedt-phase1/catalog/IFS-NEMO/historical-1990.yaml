@@ -39,7 +39,7 @@ sources:
     description: hourly 3D atmospheric data on native grid TCo1279 (about 10km).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 131
@@ -75,7 +75,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         resolution: standard
@@ -160,7 +160,7 @@ sources:
     description: hourly 3D atmospheric data on regular r025 grid (1440x721).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         resolution: standard
