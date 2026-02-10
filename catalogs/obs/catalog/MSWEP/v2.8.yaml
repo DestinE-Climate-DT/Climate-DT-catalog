@@ -17,14 +17,27 @@ sources:
   
   monthly-netcdf: &monthly-netcdf
     description: monthly MSWEP_V280 data Past+NRT in netcdf format
-    driver: netcdf
+    driver: zarr
     metadata:
       source_grid_name: lon-lat
       fixer_name: MSWEP-default
     args:
+      consolidated: False
       urlpath: 
       - '{{DVC_PATH}}/MSWEP/v2.8/netcdf/Past/monthly/MSWEP_v280_monthly_????.nc'
       - '{{DVC_PATH}}/MSWEP/v2.8/netcdf/NRT/monthly/MSWEP_v280_monthly_????.nc'
+
+  #monthly-netcdf: &monthly-netcdf
+  #  description: monthly MSWEP_V280 data Past+NRT in netcdf format
+  #  driver: netcdf
+  #  metadata:
+  #    source_grid_name: lon-lat
+  #    fixer_name: MSWEP-default
+  #  args:
+  #    urlpath: 
+  #    - '{{DVC_PATH}}/MSWEP/v2.8/netcdf/Past/monthly/MSWEP_v280_monthly_????.nc'
+  #    - '{{DVC_PATH}}/MSWEP/v2.8/netcdf/NRT/monthly/MSWEP_v280_monthly_????.nc'
+
 
   monthly:
     <<: *monthly-netcdf

@@ -1,0 +1,8 @@
+sources:
+  # Cmorised EERIE data
+  CMORIzed-historical-1950:
+    args:
+      path: '{{CATALOG_DIR}}/CMORIzed-historical-1950.yaml'
+    description: CMORIzed ICON historical-1950 phase1 - EERIE
+    driver: yaml_file_cat
+

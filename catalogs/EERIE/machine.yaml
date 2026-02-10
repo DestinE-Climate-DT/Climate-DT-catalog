@@ -1,8 +1,8 @@
 levante:
   paths: 
-    grids: /work/bb1153/b382075/aqua/grids
-    weights: /work/bb1153/b382075/aqua/weights
-    areas: /work/bb1153/b382075/aqua/areas
+    grids: /work/ab0995/a270260/AQUA_grids #/work/bb1153/b382075/aqua/grids
+    weights: /scratch/a/a270260/EERIE_AQUA_weights #/work/bb1153/b382075/aqua/weights
+    areas: /scratch/a/a270260/EERIE_AQUA_areas #/work/bb1153/b382075/aqua/areas
   intake:
     #LRA_EERIE: null
     FDB_PATH: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids

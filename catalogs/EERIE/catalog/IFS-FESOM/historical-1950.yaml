@@ -1,0 +1,1425 @@
+sources:
+  ############# zarr ################
+  monthly-native-atm2d-zarr:
+    driver: zarr
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 2D fields - zarr
+    args:
+      urlpath: 
+        /work/ab0995/a270260/EERIE_zarr/ifs-fesom2-sr_hist-1950_v20240304_atmos2D_native/ifs-fesom2-sr_hist-1950_v20240304_atmos2D_native_*.zarr
+      chunks: {}
+      #xarray_kwargs:
+      #  decode_times: true
+      #  combine: by_coords
+    metadata:
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+  monthly-native-atm3d-zarr:
+    driver: zarr
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 3D pressure-level fields - zarr
+    args:
+      urlpath: 
+        /work/ab0995/a270260/EERIE_zarr/ifs-fesom2-sr_hist-1950_v20240304_atmos3D_native/ifs-fesom2-sr_hist-1950_v20240304_atmos3D_native_*.zarr
+      chunks: {}
+      #xarray_kwargs:
+      #  decode_times: true
+      #  combine: by_coords
+    metadata:
+      source_grid_name: tco1279
+      fixer_name: ifs-eerie-3d
+
+  ##################### Hourly and Daily IFS NATIVE ############################
+  # # FDB data from 1950 to 1969 does not have complete keys. Therefore GSV does not work.
+  # GSV request failsat some timestamps becuase of missing data for multiple dates 
+  # e.g., 1970-01-01, 1976-11-01 and so on ...
+
+  daily-native-atm3d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 3D pressure-level fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0000
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+        #step: 0
+        param: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
+          700, 850, 925, 1000]
+      variables: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  hourly-native-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 2D surface fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0000
+        levtype: sfc
+        param: [235168, 235040, 228005, 228004, 235165, 235035, 51, 168, 172228, 
+            235084, 235166, 172205, 235187, 235034, 235039, 235041, 235038, 207, 
+            235052, 167, 172182, 172143, 235037, 235049, 235050, 235053, 172144, 
+            52, 235186, 172009, 235036, 235159, 235134, 235051, 165, 235042, 
+            235033, 235151, 235079, 235188, 235137, 235136, 166, 235088, 235089, 
+            49, 228006, 235141, 172008, 235083, 235087]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions # '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [235168, 235040, 228005, 228004, 235165, 235035, 51, 168, 
+          172228, 235084, 235166, 172205, 235187, 235034, 235039, 235041, 235038,
+        207, 235052, 167, 172182, 172143, 235037, 235049, 235050, 235053, 172144,
+        52, 235186, 172009, 235036, 235159, 235134, 235051, 165, 235042, 235033, 
+          235151, 235079, 235188, 235137, 235136, 166, 235088, 235089, 49, 
+          228006, 235141, 172008, 235083, 235087]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  3hourly-native-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 2D fields (3-hourly)
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0600/1200/1800
+        levtype: sfc
+        #step: 0
+        param: [168, 207, 167, 165, 166]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T1800
+      chunks: D
+      savefreq: 3h
+      timestep: 3h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions # '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [168, 207, 167, 165, 166]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  daily-native-sol:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      soil fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0000
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+        #step: 0
+        param: [235094, 235077]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions #'{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      levels: [1, 2, 3, 4]
+      variables: [235094, 235077]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  ####################### Monthly IFS ###############################
+  # FDB data from 1950 to 1969 does not have complete keys. Therefore GSV does not work.
+  # FDB data missing for year 1987
+  monthly-native-atm3d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 3D pressure-level fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clmn
+        year: 1970
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+        param: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101T0000
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
+          700, 850, 925, 1000]
+      variables: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  # GSV request failing for mssing data e.g., 1987-01
+  monthly-native-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      atmospheric 2D surface fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clmn
+        year: 1970
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        levtype: sfc
+        param: [172205, 235040, 235035, 235089, 235049, 228005, 235079, 235188, 
+            235050, 235186, 235151, 235084, 235166, 172228, 228006, 235137, 
+            235159, 235039, 235141, 235053, 235051, 235041, 235042, 235187, 
+            235038, 235165, 228004, 172182, 235037, 235052, 235168, 172143, 
+            235036, 235136, 172144, 235033, 235034, 202, 201, 235134, 235088, 
+            172009, 49, 172008, 235083, 235087]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101T0000
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions # '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [172205, 235040, 235035, 235089, 235049, 228005, 235079, 235188,
+        235050, 235186, 235151, 235084, 235166, 172228, 228006, 235137, 235159, 
+          235039, 235141, 235053, 235051, 235041, 235042, 235187, 235038, 235165,
+        228004, 172182, 235037, 235052, 235168, 172143, 235036, 235136, 172144, 
+          235033, 235034, 202, 201, 235134, 235088, 172009, 49, 172008, 235083, 
+          235087]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  monthly-native-sol:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – high-resolution 
+      soil fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clmn
+        year: 1970
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+        param: [235094, 235077]
+      data_start_date: 19700101T0000
+      data_end_date: 20150101
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions  #'{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      levels: [1, 2, 3, 4]
+      variables: [235094, 235077]
+      source_grid_name: tco1279
+      fixer_name: ifs-destine-v1
+
+  ##################### Hourly and Daily IFS REGULAR ############################
+  # # FDB data from 1950 to 1969 does not have complete keys. Therefore GSV does not work.
+  # GSV request failsat some timestamps becuase of missing data for multiple dates 
+  # e.g., 1970-01-01, 1976-11-01 and so on ...
+
+  daily-regular-atm3d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution atmospheric 3D pressure-level fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0000
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+        #step: 0
+        param: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
+          700, 850, 925, 1000]
+      variables: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  hourly-regular-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution atmospheric 2D surface fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0000
+        levtype: sfc
+        param: [235168, 235040, 228005, 228004, 235165, 235035, 51, 168, 172228, 
+            235084, 235166, 172205, 235187, 235034, 235039, 235041, 235038, 207, 
+            235052, 167, 172182, 172143, 235037, 235049, 235050, 235053, 172144, 
+            52, 235186, 172009, 235036, 235159, 235134, 235051, 165, 235042, 
+            235033, 235151, 235079, 235188, 235137, 235136, 166, 235088, 235089, 
+            49, 228006, 235141, 172008, 235083, 235087]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions  # '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [235168, 235040, 228005, 228004, 235165, 235035, 51, 168, 
+          172228, 235084, 235166, 172205, 235187, 235034, 235039, 235041, 235038,
+        207, 235052, 167, 172182, 172143, 235037, 235049, 235050, 235053, 172144,
+        52, 235186, 172009, 235036, 235159, 235134, 235051, 165, 235042, 235033, 
+          235151, 235079, 235188, 235137, 235136, 166, 235088, 235089, 49, 
+          228006, 235141, 172008, 235083, 235087]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  3hourly-regular-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution atmospheric 2D fields (3-hourly)
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0600/1200/1800
+        levtype: sfc
+        #step: 0
+        param: [168, 207, 167, 165, 166]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T1800
+      chunks: D
+      savefreq: 3h
+      timestep: 3h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions # '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [168, 207, 167, 165, 166]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  daily-regular-sol:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution soil fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19700101
+        time: 0000
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+        #step: 0
+        param: [235094, 235077]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions #'{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      levels: [1, 2, 3, 4]
+      variables: [235094, 235077]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  ####################### Monthly IFS REGULAR ###############################
+  # FDB data from 1950 to 1969 does not have complete keys. Therefore GSV does not work.
+  # FDB data missing for year 1987
+  monthly-regular-atm3d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution atmospheric 3D pressure-level fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clmn
+        year: 1970
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+        param: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions
+      levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
+          700, 850, 925, 1000]
+      variables: [235129, 235133, 235157, 235132, 235135, 235131, 235130]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  # GSV request failing for mssing data e.g., 1987-01
+  monthly-regular-atm2d:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution atmospheric 2D surface fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clmn
+        year: 1970
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        levtype: sfc
+        param: [172205, 235040, 235035, 235089, 235049, 228005, 235079, 235188, 
+            235050, 235186, 235151, 235084, 235166, 172228, 228006, 235137, 
+            235159, 235039, 235141, 235053, 235051, 235041, 235042, 235187, 
+            235038, 235165, 228004, 172182, 235037, 235052, 235168, 172143, 
+            235036, 235136, 172144, 235033, 235034, 202, 201, 235134, 235088, 
+            172009, 49, 172008, 235083, 235087]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions # '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [172205, 235040, 235035, 235089, 235049, 228005, 235079, 235188,
+        235050, 235186, 235151, 235084, 235166, 172228, 228006, 235137, 235159, 
+          235039, 235141, 235053, 235051, 235041, 235042, 235187, 235038, 235165,
+        228004, 172182, 235037, 235052, 235168, 172143, 235036, 235136, 172144, 
+          235033, 235034, 202, 201, 235134, 235088, 172009, 49, 172008, 235083, 
+          235087]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  monthly-regular-sol:
+    driver: gsv
+    description: IFS-FESOM CMIP6 historical run (expver=i2hj) – 
+      standard-resolution soil fields
+    args:
+      request:
+        class: ed
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: i2hj
+        type: fc
+        stream: clmn
+        year: 1970
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+        param: [235094, 235077]
+      data_start_date: 19700101T0000
+      data_end_date: 20141231
+      #bridge_start_date: 19820530T0000
+      #bridge_end_date: 19820530T0000
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/REGULARLL_grids
+      eccodes_path: 
+        /work/bm1344/a270228/ifs-bundle-DE_CY48R1-icgen/source/eccodes/definitions  #'{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      levels: [1, 2, 3, 4]
+      variables: [235094, 235077]
+      source_grid_name: lon-lat
+      fixer_name: ifs-destine-v1
+
+  ################################### Ocean 0.25km remapped ###############################
+
+  2D_daily_fesom_0.25deg_avg_mlotst030:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Mixed layer depth, potential density threshold 0.03 kg m⁻³)
+      # Note the data starts from 1990-onwards
+    args:
+      urlpath:
+      - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_mlotst030/*.nc
+      - /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_mlotst030/1990-1999/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_mlotst125:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Mixed layer depth, potential density threshold 0.125 kg 
+      m⁻³)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_mlotst125/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_siconc:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice concentration)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_siconc/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sigrowth:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice growth rate)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sigrowth/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sisnthick:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Snow thickness over sea ice)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sisnthick/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d  # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sithick:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice thickness)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sithick/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d-avg_sithick
+
+  2D_daily_fesom_0.25deg_avg_siue:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice eastward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_siue/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sivn:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea ice northward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sivn/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_sos:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea surface salinity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_sos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_tos:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea surface temperature)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_tos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  2D_daily_fesom_0.25deg_avg_zos:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom daily data), with EERIE 
+      data pipeline (Sea surface height)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/daily/nc/avg_zos/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-2d # fesom-eerie-r25s-2d # fesom-0.25deg-r25s-2d # eerie-fesom-0.25deg-2d
+      fixer_name: fesom-eerie-2d
+
+  ####### 3D Daily Ocean 7 levels - remapped to 0.25deg
+  #
+  3D_daily_fesom_0.25deg_avg_so:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water salinity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_so/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-7 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_thetao:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water potential temperature)
+    args:
+      urlpath: 
+        /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_thetao/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-7 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_uoe:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water eastward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_uoe/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-7 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_von:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water northward velocity component)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_von/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-7 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_daily_fesom_0.25deg_avg_wo:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water vertical velocity)
+    args:
+      urlpath: /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-7 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  ###### 3D Monthly Ocean - 69 levels - remapped to 0.25deg
+  3D_monthly_fesom_0.25deg_avg_so:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water salinity)
+    args:
+      urlpath: 
+        /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_so/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        #combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-69 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_thetao:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water potential temperature)
+    args:
+      urlpath: 
+        /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_thetao/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-69 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: null # fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_uoe:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water eastward velocity component)
+    args:
+      urlpath: 
+        /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_uoe/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-69 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_von:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water northward velocity component)
+    args:
+      urlpath: 
+        /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_von/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-69 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  3D_monthly_fesom_0.25deg_avg_wo:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline (Sea water vertical velocity)
+    args:
+      urlpath: 
+        /work/bm1344/a270228/Phase1-HIST-FESOM/remapped_025deg_monmean/avg_wo/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: fesom-eerie-r25-3d-lev-69 # fesom-eerie-r25s-3d-depth # fesom-0.25deg-r25s-3d-lev # eerie-fesom-0.25deg-3d
+      fixer_name: fesom-eerie-3d
+
+  ###################################### FESOM NATIVE ######################################### 
+  # NOTE:
+  #   # Native 2D/3D has issue with "AlignmentError: cannot reindex or align along dimension 'ncells' because of conflicting dimension sizes: {14741520, 7402886}"
+  3D_daily_fesom_native_avg_so:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline
+    args:
+      urlpath:
+      - /work/bm1344/a270228/Phase1-HIST-FESOM/2000/native/daily/avg_so/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: null # eerie-NG5-grid-3d # ng5-elems-3d
+      fixer-name: null # fesom-eerie-native-3d
+
+  3D_daily_fesom_native_avg_thetao:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline
+    args:
+      urlpath:
+      - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_thetao/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: null # eerie-NG5-grid-3d # ng5-elems-3d
+      fixer-name: null # fesom-eerie-native-3d
+
+  3D_daily_fesom_native_avg_uoe:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative 
+      remapping to 25km (Phase1-HIST-FESOM, only fesom monthly data), with EERIE
+      data pipeline
+    args:
+      urlpath:
+      - /work/bm1344/a270228/Phase1-HIST-FESOM/1950/native/daily/avg_uoe/*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: null # eerie-NG5-grid-3d # ng5-elems-3d
+      fixer-name: null # fesom-eerie-native-3d
+
+  ####################################### LRA #############################################
+  lra-r100-monthly:
+    driver: netcdf
+    description: AQUA netcdf DROP-generated data monthly at r100
+    args:
+      urlpath: 
+        /work/ab0995/a270260/EERIE_LRA/historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_EERIE_IFS-FESOM_historical-1950_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+      chunks:
+        lat: 180
+        lon: 360
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: r100
+      fixer-name: lra-eerie-ifs-fesom
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+      stat:
+        description: Parameter stat
+        default: mean
+        type: str
+        allowed:
+        - mean
+  aqua-ocean2d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic ocean2d data for product annual_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-ocean2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic ocean2d data for product seasonal_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_toa-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/radiation-toa/netcdf/radiation_toa.annual_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_surface-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_toa-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_surface-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-water_cycle-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product timeseries
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.{{freq}}.europe.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-atmosphere2d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere3d-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere3d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere3d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-water_cycle-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product seasonalcycles
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-radiation_toa-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product timeseries
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-atmosphere2d-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product timeseries
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-atmosphere2d-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product seasonalcycles
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-radiation_surface-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product timeseries
+    args:
+      urlpath: 
+        /scratch/a/a270260/EERIE_LRA/AQUA_analysis_1970_to_2014_historical-1950/EERIE/IFS-FESOM/historical-1950/{{realization}}/radiation-surface/netcdf/radiation_surface.timeseries.EERIE.IFS-FESOM.historical-1950.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
