@@ -43,7 +43,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
@@ -76,7 +76,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
@@ -238,7 +238,7 @@ sources:
   #   description: hourly 2D ocean data on native grid ng5 (about 10km).
   #   args:
   #     <<: *args-default
-  #     chunks: 6H
+  #     chunks: 6h
   #     request:
   #       <<: *request-default
   #       levtype: o2d
@@ -257,7 +257,7 @@ sources:
   #   description: hourly 3D oceanic data on native grid ng5 (about 10km).
   #   args:
   #     <<: *args-default
-  #     chunks: 6H
+  #     chunks: 6h
   #     request:
   #       <<: *request-default
   #       levtype: o3d
