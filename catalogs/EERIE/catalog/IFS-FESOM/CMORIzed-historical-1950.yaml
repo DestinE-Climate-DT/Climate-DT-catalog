@@ -1,0 +1,378 @@
+sources:
+
+  2D_monthly_atm_clt_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Total Cloud Fraction (clt)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/clt/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_evspsbl_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Evaporation (evspsbl)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/evspsbl/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_hfls_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Surface Latent Heat Flux (hfls)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfls/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_hfss_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Surface Sensible Heat Flux (hfss)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hfss/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_huss_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Near-Surface Specific Humidity (huss)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/huss/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_pr_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Precipitation (pr)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/pr/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_prc_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Convective Precipitation (prc)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prc/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_prsn_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Snowfall (prsn)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/prsn/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_ps_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Surface Pressure (ps)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ps/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_psl_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Sea Level Pressure (psl)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/psl/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_rlds_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Downwelling Longwave Radiation (rlds)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rlds/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_rsds_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Downwelling Shortwave Radiation (rsds)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/rsds/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_sfcWind_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Near-Surface Wind Speed (sfcWind)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/sfcWind/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_tas_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Near-Surface Air Temperature (tas)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tas/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_tasmax_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Daily Maximum Temperature (tasmax)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmax/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_tasmin_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Daily Minimum Temperature (tasmin)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tasmin/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_tauu_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Zonal Wind Stress (tauu)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauu/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_tauv_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Meridional Wind Stress (tauv)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/tauv/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_ts_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for Surface Temperature (ts)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ts/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_uas_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for 10m Zonal Wind (uas)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/uas/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  2D_monthly_atm_vas_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat - monthly, EERIE CMORIzed data for 10m Meridional Wind (vas)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/vas/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+  3D_monthly_atm_hur_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data for Relative Humidity (hur)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hur/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  3D_monthly_atm_hus_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data for Specific Humidity (hus)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/hus/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  3D_monthly_atm_ta_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data for Air Temperature (ta)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ta/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  3D_monthly_atm_ua_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data for Eastward Wind (ua)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/ua/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  3D_monthly_atm_va_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data for Northward Wind (va)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/va/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+
+
+  3D_monthly_atm_zg_0.25deg:
+    driver: netcdf
+    description: IFS-FESOM historical-1950 run for phase1 with convervative remapping to 25km lon-lat-plev - monthly, EERIE CMORIzed data for Geopotential Height (zg)
+    args:
+      urlpath: /work/bm1344/DKRZ/CMOR/EERIE/HighResMIP/AWI/IFS-FESOM2-SR/hist-1950/r1i1p1f1/Amon/zg/gr/v20240304/*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name:
+

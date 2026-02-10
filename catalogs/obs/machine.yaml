@@ -9,8 +9,8 @@ leonardo:
 levante:
   paths:
     grids: /work/bb1153/b382289/data/aqua-dvc/grids
-    weights: /work/bb1153/b382289/data/aqua-dvc/weights
-    areas: /work/bb1153/b382289/data/aqua-dvc/areas
+    weights: /scratch/a/a270260/EERIE_LRA/weights
+    areas: /scratch/a/a270260/EERIE_LRA/areas
   intake:
     DATA_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
     DVC_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
