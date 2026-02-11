@@ -21,6 +21,7 @@ This repository focuses on the catalog, the main AQUA codebase is open-sourced a
 14. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
 15. nord4-eerie: Catalog for the EERIE project in the Nord4 machine
 16. obs: Catalog with the observational datasets. (multi machine)
+17. EERIE: Catalog for EERIE Phase 1 experiments. (Levante)
 17. template: A template catalog to be used for new catalog generation
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
