@@ -1,8 +1,8 @@
 MN5:
   paths:
-    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
-    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
-    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
+    grids: /gpfs/scratch/ehpc01/awi548625/t0kw/aqua-data/grids
+    weights: /gpfs/scratch/ehpc01/awi548625/t0kw/aqua-data/weights
+    areas: /gpfs/scratch/ehpc01/awi548625/t0kw/aqua-data/areas
   intake:
     ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
     FDB_HOME: /gpfs/scratch/ehpc01/experiments/
