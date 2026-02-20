@@ -67,6 +67,8 @@ sources:
       fixer_name: ifs-ci-test
       source_grid_name: lon-lat
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
@@ -76,6 +78,8 @@ sources:
       fixer_name: ifs-ci-test
       source_grid_name: lon-lat
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9_400.nc'
     description: coarse IFS data 1y after year 2400
@@ -85,6 +89,8 @@ sources:
       fixer_name: ifs-ci-test
       source_grid_name: lon-lat
     args:
+      chunks:
+        time: 24
       xarray_kwargs:
         decode_times: True
         use_cftime: True
@@ -98,6 +104,8 @@ sources:
       fixer_name: ifs-ci-mindate
       source_grid_name: lon-lat
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y with mindate fixer
@@ -137,6 +145,8 @@ sources:
       fixer_name: ifs-ci-pandas
       source_grid_name: lon-lat
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
@@ -146,6 +156,8 @@ sources:
       fixer_name: ifs-ci-timestep
       source_grid_name: lon-lat
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
@@ -156,6 +168,8 @@ sources:
       source_grid_name: lon-lat
       deltat: 3600
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
@@ -164,6 +178,8 @@ sources:
     metadata:
       fixer_name: ifs-ci-test
     args:
+      chunks:
+        time: 24
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
