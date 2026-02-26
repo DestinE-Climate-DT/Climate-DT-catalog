@@ -760,7 +760,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -780,6 +780,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -795,7 +796,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/r3/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -809,6 +810,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -829,13 +831,14 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-radiation_toa-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/r2/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -849,6 +852,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-atmosphere3d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -869,13 +873,14 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-radiation_toa-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/r2/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -889,13 +894,14 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/r3/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -909,6 +915,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -929,6 +936,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -949,6 +957,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
   aqua-atmosphere2d-timeseries:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product timeseries
@@ -973,6 +982,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1006,6 +1016,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1036,6 +1047,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1047,8 +1059,10 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1064,12 +1078,16 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
       region:
         description: Parameter region
         default: global
         type: str
         allowed:
         - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
   aqua-water_cycle-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product annual_climatology
@@ -1077,6 +1095,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1086,6 +1106,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -1094,6 +1115,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1103,6 +1126,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
   aqua-atmosphere2d-seasonalcycles:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
@@ -1127,6 +1151,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1143,6 +1168,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1152,6 +1179,7 @@ sources:
         type: str
         allowed:
         - r2
+        - r3
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
@@ -1159,6 +1187,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0lh/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0lh/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0lh.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1168,3 +1198,4 @@ sources:
         type: str
         allowed:
         - r2
+        - r3
