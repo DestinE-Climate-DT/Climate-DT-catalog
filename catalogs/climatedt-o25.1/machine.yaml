@@ -61,4 +61,4 @@ levante:
     weights: /work/bb1153/b382289/data/aqua-dvc/weights
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
-    LRA_PATH: null
+    LRA_PATH: /work/bb1153/b383197/DROP/climatedt-o25.1

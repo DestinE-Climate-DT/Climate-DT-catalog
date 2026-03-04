@@ -1223,4 +1223,4 @@ sources:
         type: int
         default: 2
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-r100

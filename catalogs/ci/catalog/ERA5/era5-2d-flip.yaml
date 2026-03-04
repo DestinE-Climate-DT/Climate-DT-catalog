@@ -1,0 +1,15 @@
+plugins:
+  source:
+  - module: intake_xarray
+sources:
+  monthly:
+    metadata:
+      source_grid_name: era5-r025s
+      fixer_name: ERA5-destine-v1
+    args:
+      chunks:
+        time: 1
+      urlpath:
+      - '{{ TEST_PATH }}/ERA5/era5-2d-flip-2mon2021.nc'
+    description: ERA5 2D flip test (2 months, 2021)
+    driver: netcdf
