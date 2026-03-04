@@ -1,4 +1,20 @@
 sources:
+  control-1990:
+    description: '"ifs-fesom control-1990, grids: tco2559 NG5"'
+    metadata:
+      expid: '0001'
+      expver: o00r
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: control-1990
+        resolution_id: HR
+        note: 'first five years are part of the e-suite'
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/control-1990.yaml'
   historical-1990:
     description: '"IFS-FESOM historical 1990, grids: tco2559 NG5"'
     metadata:

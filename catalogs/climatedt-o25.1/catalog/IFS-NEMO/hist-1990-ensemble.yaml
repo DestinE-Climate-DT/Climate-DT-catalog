@@ -13,26 +13,27 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 228141,
         228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053,
@@ -54,26 +55,27 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 78
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 228141,
         228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053,
@@ -94,27 +96,28 @@ sources:
         resolution: high
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 235033,
         235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043,
@@ -135,27 +138,28 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 235033,
         235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043,
@@ -177,26 +181,27 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [172, 228002]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
@@ -215,26 +220,27 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 172
         levtype: sfc
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
@@ -253,28 +259,29 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -295,28 +302,29 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 60
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -336,29 +344,30 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
@@ -380,26 +389,27 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz9-nested-v3
@@ -419,26 +429,27 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
@@ -457,27 +468,28 @@ sources:
         resolution: high
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz9-nested-v3
@@ -496,27 +508,28 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
@@ -536,7 +549,7 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 263500
         levtype: o3d
@@ -546,21 +559,22 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -597,7 +611,7 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 263500
         levtype: o3d
@@ -607,21 +621,22 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -657,9 +672,9 @@ sources:
         resolution: high
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -668,21 +683,22 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -718,9 +734,9 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -729,21 +745,22 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 3.8562798500061035,
         5.140361309051514, 6.543033599853516, 8.09251880645752, 9.822750091552734,
         11.773679733276367, 13.99103832244873, 16.52532196044922, 19.42980194091797,
@@ -780,27 +797,28 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz9
@@ -820,27 +838,28 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz7
@@ -859,28 +878,29 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235131
         levtype: hl
         levelist: [100]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [100]
       variables: [235131, 235132]
       source_grid_name: hpz7
@@ -900,27 +920,28 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz9
@@ -940,27 +961,28 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 228141
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz7
@@ -979,28 +1001,29 @@ sources:
         resolution: high
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz9
@@ -1019,28 +1042,29 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz7
@@ -1060,27 +1084,28 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 260199
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     description: 'ifs-nemo "0001" 1990, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4]
       variables: [260199]
       source_grid_name: hpz9
@@ -1100,27 +1125,28 @@ sources:
         expver: '0001' 
         type: fc
         stream: clte
-        date: 19900101/to/19990101
+        date: 19900101/to/20141231
         time: 0000
         param: 260199
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4]
       variables: [260199]
       source_grid_name: hpz7
@@ -1139,28 +1165,29 @@ sources:
         resolution: high
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz9
@@ -1179,28 +1206,29 @@ sources:
         resolution: standard
         expver: '0001' 
         type: fc
-        stream: clte
-        date: 19900101/to/19990101
-        time: None
+        stream: clmn
+        year: 1990
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
-      data_end_date: 20020101T2300
+      data_end_date: 20141231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     parameters:
       realization:
-        allowed: [1, 2, 3, 4]
-        description: realization member
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
-    description: 'ifs-nemo ""0001"" 1990, grids: tco1279 eORCA12'
+    description: 'ifs-nemo historical 1990 ensemble, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz7
@@ -1219,7 +1247,7 @@ sources:
     parameters:
       realization:
         allowed: [2, 3, 4]
-        description: realization member
+        description: realization member, the first member is considered the 5km run
         type: int
         default: 2
     metadata:
