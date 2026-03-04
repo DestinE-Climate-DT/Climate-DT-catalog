@@ -19,6 +19,7 @@ sources:
         levtype: sfc
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -34,7 +35,7 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   hourly-hpz7-atm2d:
     args:
       request:
@@ -55,6 +56,7 @@ sources:
         levtype: sfc
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -70,7 +72,7 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz10-atm2d:
     args:
       request:
@@ -91,6 +93,7 @@ sources:
         levtype: sfc
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -106,7 +109,7 @@ sources:
         235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz7-atm2d:
     args:
       request:
@@ -127,6 +130,7 @@ sources:
         levtype: sfc
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -142,7 +146,7 @@ sources:
         235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   daily-hpz10-atm2d:
     args:
       request:
@@ -163,6 +167,7 @@ sources:
         levtype: sfc
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -175,7 +180,7 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   daily-hpz7-atm2d:
     args:
       request:
@@ -196,6 +201,7 @@ sources:
         levtype: sfc
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -208,7 +214,7 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   hourly-hpz10-atm3d:
     args:
       request:
@@ -231,6 +237,7 @@ sources:
             600, 700, 850, 925, 1000]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -245,7 +252,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   hourly-hpz7-atm3d:
     args:
       request:
@@ -268,6 +275,7 @@ sources:
             600, 700, 850, 925, 1000]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -282,7 +290,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz7-atm3d:
     args:
       request:
@@ -305,6 +313,7 @@ sources:
             600, 700, 850, 925, 1000]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -320,7 +329,7 @@ sources:
         235246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   daily-hpz10-oce2d:
     args:
       request:
@@ -341,6 +350,7 @@ sources:
         levtype: o2d
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -354,7 +364,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   daily-hpz7-oce2d:
     args:
       request:
@@ -375,6 +385,7 @@ sources:
         levtype: o2d
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -388,7 +399,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz10-oce2d:
     args:
       request:
@@ -409,6 +420,7 @@ sources:
         levtype: o2d
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -422,7 +434,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz7-oce2d:
     args:
       request:
@@ -443,6 +455,7 @@ sources:
         levtype: o2d
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -456,7 +469,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   daily-hpz10-oce3d:
     args:
       request:
@@ -481,6 +494,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -502,7 +516,7 @@ sources:
       variables: [263500, 263501, 263506, 263505]
       source_grid_name: icon-R02B09-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   daily-hpz7-oce3d:
     args:
       request:
@@ -527,6 +541,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -548,7 +563,7 @@ sources:
       variables: [263500, 263501, 263506]
       source_grid_name: icon-R02B09-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz10-oce3d:
     args:
       request:
@@ -573,6 +588,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: MS
       timestep: h
@@ -594,7 +610,7 @@ sources:
       variables: [263505]
       source_grid_name: icon-R02B09-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz7-oce3d:
     args:
       request:
@@ -619,6 +635,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: MS
       timestep: h
@@ -640,7 +657,7 @@ sources:
       variables: [263505, 263500, 263501, 263506]
       source_grid_name: icon-R02B09-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   hourly-hpz10-sol4:
     args:
       request:
@@ -662,6 +679,7 @@ sources:
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -675,7 +693,7 @@ sources:
       variables: [260199]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   hourly-hpz7-sol4:
     args:
       request:
@@ -697,6 +715,7 @@ sources:
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -710,7 +729,7 @@ sources:
       variables: [260199]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz10-sol4:
     args:
       request:
@@ -732,6 +751,7 @@ sources:
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -745,7 +765,7 @@ sources:
       variables: [235077]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   monthly-hpz7-sol4:
     args:
       request:
@@ -767,6 +787,7 @@ sources:
         levelist: [1, 2, 3, 4]
       data_start_date: 19900101T0000
       data_end_date: 20091231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -780,7 +801,7 @@ sources:
       variables: [235077]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465001542/kiszlert/o00a/o00a.yml
+      
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
