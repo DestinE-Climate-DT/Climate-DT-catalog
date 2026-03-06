@@ -31,3 +31,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/historical-1990.yaml'
+  ssp370:
+    description: '"ifs-fesom o010-ssp370 2015, grids: tco2559 NG5"'
+    metadata:
+      expid: '0001'
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: ssp370
+      start: '2015'
+      dashboard:
+        menu: ssp370
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ssp370.yaml'
