@@ -19,6 +19,7 @@ sources:
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -54,6 +55,7 @@ sources:
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -89,6 +91,7 @@ sources:
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -124,6 +127,7 @@ sources:
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -159,6 +163,7 @@ sources:
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -191,6 +196,7 @@ sources:
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -225,6 +231,7 @@ sources:
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -261,6 +268,7 @@ sources:
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -297,6 +305,7 @@ sources:
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -332,6 +341,7 @@ sources:
         levtype: o2d
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -365,6 +375,7 @@ sources:
         levtype: o2d
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -398,6 +409,7 @@ sources:
         levtype: o2d
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -431,6 +443,7 @@ sources:
         levtype: o2d
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -469,6 +482,7 @@ sources:
           73, 74, 75]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -529,6 +543,7 @@ sources:
           73, 74, 75]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -589,6 +604,7 @@ sources:
           73, 74, 75]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: MS
       timestep: h
@@ -649,6 +665,7 @@ sources:
           73, 74, 75]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: MS
       timestep: h
@@ -705,6 +722,7 @@ sources:
         levelist: [100]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -739,6 +757,7 @@ sources:
         levelist: [100]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -773,6 +792,7 @@ sources:
         levelist: [100]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -807,6 +827,7 @@ sources:
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -841,6 +862,7 @@ sources:
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -875,6 +897,7 @@ sources:
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -909,6 +932,7 @@ sources:
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20181201T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
