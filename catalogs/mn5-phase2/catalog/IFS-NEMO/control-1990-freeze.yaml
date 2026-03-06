@@ -548,7 +548,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/data/AQUA//LRA/wf/mn5-phase2/IFS-NEMO/control-1990-freeze/r100/monthly/*control-1990-freeze_r100_monthly_*.nc
+        /gpfs/scratch/ehpc01/data/AQUA//LRA/mn5-phase2/IFS-NEMO/control-1990-freeze/r100/monthly/*control-1990-freeze_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true

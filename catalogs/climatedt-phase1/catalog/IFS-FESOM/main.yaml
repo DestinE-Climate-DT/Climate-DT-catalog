@@ -69,3 +69,45 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/ssp370.yaml'
+  story-2017-control-ensemble:
+    description: IFS-FESOM, Story-nudging 2017, control, tco1279/NG5, storyline nudged from 2017 with ocean from control 1950, ensemble from 20240801 to 20241231
+    metadata:
+      expid: a0w1
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines-control
+      start: 2017
+      dashboard:
+        menu: story 2017 control
+        resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-2017-control-ensemble.yaml'
+  story-2017-historical-ensemble:
+    description:  IFS-FESOM, Story-nudging 2017, historical, tco1279/NG, storyline nudged from 2017 historical, ensemble from 20240801 to 20241231
+    metadata:
+      expid: a0uz
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines-historical
+      start: 2017
+      dashboard:
+        menu: story 2017 hist.
+        resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-2017-historical-ensemble.yaml'
+  story-2017-T2K-ensemble:
+    description: IFS-FESOM, Story-nudging 2017, 2K warming, tco1279/NG5, storyline nudged from 2017 for the 2K warmer climate, ensemble from 20240801 to 20241231
+    metadata:
+      expid: a13l
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: storylines-plus2K
+      start: 2017
+      dashboard:
+        menu: story 2017 T2K
+        resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-2017-T2K-ensemble.yaml'

@@ -1,0 +1,50 @@
+lumi:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
+  intake:
+    # where LRA data is stored
+    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-e26.1
+MN5:
+  paths:
+    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
+    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
+    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
+  intake:
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-e26.1
+lumi-o26.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-26.1_v1.0/grids
+    weights: /scratch/project_465001542/aqua_cache/weights
+    areas: /scratch/project_465001542/aqua_cache/areas
+  intake:
+    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-e26.1
+MN5-o26.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-26.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc123/aqua_cache/weights
+    areas: /gpfs/scratch/ehpc123/aqua_cache/areas
+  intake:
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-e26.1
+wilma:
+  paths:
+    grids: /scratch/users/mnurisso/aqua-dvc/grids
+    weights: /scratch/users/mnurisso/aqua-dvc/weights
+    areas: /scratch/users/mnurisso/aqua-dvc/areas
+  intake:
+    LRA_PATH: /archive/mnurisso/LRA/climatedt-e26.1
+hpc2020:
+  paths:
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: null
+levante:
+  paths:
+    grids: /work/bb1153/b382289/data/aqua-dvc/grids
+    weights: /work/bb1153/b382289/data/aqua-dvc/weights
+    areas: /work/bb1153/b382289/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: null

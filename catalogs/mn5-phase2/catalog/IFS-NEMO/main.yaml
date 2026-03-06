@@ -153,6 +153,16 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  a1z9:
+    description: IFS/NEMO - 1990 coupled spinup w/o --cbmf_reduced - Tco2559/eORCA12
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a1z9.yaml'
+  a27r:
+    description: IFS/NEMO - 1990 coupled spinup w --cbmf_reduced- Tco2559/eORCA12
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a27r.yaml'
   ssp370-2020-freeze:
     description: IFS/NEMO - 2020 SSP3-7.0 - DSuite freeze - Tco1279/eORCA12
     metadata:

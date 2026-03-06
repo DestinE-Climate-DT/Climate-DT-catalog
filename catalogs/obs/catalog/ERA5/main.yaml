@@ -5,7 +5,7 @@ sources:
     args:
         path: "{{CATALOG_DIR}}/era5.yaml"
   arco-era5:
-    description: ERA5 hourly data from 1940 to 2022 with ARCO ERA5 Google cloud
+    description: ERA5 hourly data from with ARCO ERA5 Google cloud
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/arco-era5.yaml"

@@ -5,7 +5,7 @@ sources:
     args:
       path: "{{CATALOG_DIR}}/ebaf-toa41.yaml"
   ebaf-toa42:
-    description: CERES-EBAF
+    description: CERES-EBAF original data up to 2022
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/ebaf-toa42.yaml"
@@ -15,7 +15,7 @@ sources:
     args:
       path: "{{CATALOG_DIR}}/ebaf-sfc41.yaml"
   ebaf-sfc42:
-    description: CERES-EBAF
+    description: CERES-EBAF original data up to 2022
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/ebaf-sfc42.yaml"
@@ -24,3 +24,13 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/syn-toa41.yaml"
+  ebaf-sfc421:
+    description: CERES-EBAF v4.2.1 updated version up to 2025-06
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/ebaf-sfc421.yaml"
+  ebaf-toa421:
+    description: CERES-EBAF v4.2.1 updated version up to 2025-06
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/ebaf-toa421.yaml"

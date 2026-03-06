@@ -17,10 +17,9 @@ sources:
         time: '0000'
         param: 167
         levtype: sfc
-        step: 0
       data_start_date: 20170101T0000
-      data_end_date: 20241031T2300
-      bridge_end_date: 20231231T2300
+      data_end_date: 20241231T2300
+      bridge_end_date: complete
       chunks: D
       savefreq: h # at what frequency are data saved
       timestep: h  # base timestep for step timestyle
@@ -44,7 +43,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
@@ -63,7 +62,7 @@ sources:
     description: hourly 2D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         levtype: sfc
@@ -77,7 +76,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
@@ -237,7 +236,7 @@ sources:
 #     description: hourly 2D ocean data on native grid ng5 (about 10km).
 #     args:
 #       <<: *args-default
-#       chunks: 6H
+#       chunks: 6h
 #       request:
 #         <<: *request-default
 # #        param: 131
@@ -255,7 +254,7 @@ sources:
 #     description: hourly 3D oceanic data on native grid ng5 (about 10km).
 #     args:
 #       <<: *args-default
-#       chunks: 6H
+#       chunks: 6h
 #       request:
 #         <<: *request-default
 # #        param: 131
@@ -286,7 +285,7 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-r100
 
   # lra-r100-monthly-zarr:
   #   driver: zarr
