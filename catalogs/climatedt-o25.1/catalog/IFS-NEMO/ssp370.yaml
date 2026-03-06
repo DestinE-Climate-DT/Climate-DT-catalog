@@ -4,13 +4,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -33,19 +33,19 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -68,19 +68,19 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz10-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -103,19 +103,19 @@ sources:
         235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -138,19 +138,19 @@ sources:
         235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   daily-hpz10-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -170,19 +170,19 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   daily-hpz7-atm2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -202,19 +202,19 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz10-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -238,19 +238,19 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -274,19 +274,19 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz7-atm3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -311,19 +311,19 @@ sources:
         235246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   daily-hpz10-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -344,19 +344,19 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   daily-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -377,19 +377,19 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz10-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -410,19 +410,19 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz7-oce2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -443,19 +443,19 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   daily-hpz10-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -503,19 +503,19 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   daily-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -563,19 +563,19 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz10-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -623,19 +623,19 @@ sources:
       variables: [263505]
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz7-oce3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -683,19 +683,19 @@ sources:
       variables: [263505, 263500, 263501, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz10-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -717,19 +717,19 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -751,19 +751,19 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -785,19 +785,19 @@ sources:
       variables: [235131, 235132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz10-sol:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -819,19 +819,19 @@ sources:
       variables: [228141, 260199]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   hourly-hpz7-sol:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -853,19 +853,19 @@ sources:
       variables: [228141, 260199]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz10-sol:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -887,19 +887,19 @@ sources:
       variables: [235078, 235077]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   monthly-hpz7-sol:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  # To be overwritten by workflow/config file
-        experiment: SSP3-7.0  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: projections  
+        experiment: SSP3-7.0  
+        generation: 2  
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         type: fc
         stream: clte
         date: 20180701/to/20181201
@@ -921,7 +921,7 @@ sources:
       variables: [235078, 235077]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o00q/o00q.yml
+      
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
