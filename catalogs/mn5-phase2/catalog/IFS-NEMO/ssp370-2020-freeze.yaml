@@ -533,7 +533,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/data/AQUA//LRA/fc0/mn5-phase2/IFS-NEMO/a25q/r100/monthly/*a25q_r100_monthly_*.nc
+        /gpfs/scratch/ehpc01/data/AQUA//LRA/mn5-phase2/IFS-NEMO/a25q/r100/monthly/*a25q_r100_monthly_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true

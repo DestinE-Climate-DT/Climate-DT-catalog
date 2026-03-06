@@ -1,0 +1,17 @@
+sources:
+  #  a29b:
+  #  args:
+  #    path: '{{CATALOG_DIR}}/a29b.yaml'
+  #  description: IFS/NEMO - 1950 spinup Tco399/eORCA025 - EERIE
+  #  driver: yaml_file_cat
+  a282:
+    args:
+      path: '{{CATALOG_DIR}}/a282.yaml'
+    description: IFS/NEMO - 1950 hist Tco1279/eORCA012 - EERIE
+    driver: yaml_file_cat
+      #a28a:
+    #  args:
+    #  path: '{{CATALOG_DIR}}/a28a.yaml'
+    #description: IFS/NEMO - 1950 spinup Tco1279/eORCA012 - EERIE
+    #driver: yaml_file_cat
+

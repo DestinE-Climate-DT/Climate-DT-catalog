@@ -1,0 +1,6 @@
+sources:
+  aqua-filled:
+    description: BERKELEY EARTH from 1979 to 2024 with filled missing values with CDO for aqua usage
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/aqua-filled.yaml"

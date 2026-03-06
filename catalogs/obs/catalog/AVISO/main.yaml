@@ -1,6 +1,6 @@
 sources:
- ssh-L4:
-    description: AVISO Sea Surface Height L4 product and derived variables
+ vDT2024:
+    description: AVISO Sea Surface Height L4 from version vDT2024 and derived variables
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/ssh-L4.yaml" 
+      path: "{{CATALOG_DIR}}/vDT2024.yaml" 

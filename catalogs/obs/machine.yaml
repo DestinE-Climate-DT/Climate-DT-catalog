@@ -5,27 +5,31 @@ leonardo:
     areas: /leonardo_work/DestE_330_24/AQUA/areas
   intake:
     DATA_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
+    DVC_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
 levante:
   paths:
-    grids: /work/bb1153/b382075/aqua/grids
-    weights: /work/bb1153/b382075/aqua/weights
-    areas: /work/bb1153/b382075/aqua/areas
+    grids: /work/bb1153/b382289/data/aqua-dvc/grids
+    weights: /work/bb1153/b382289/data/aqua-dvc/weights
+    areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
-    DATA_PATH: /work/bb1153/b382289/data/AQUA/datasets
+    DATA_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
+    DVC_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
   intake:
     DATA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
+    DVC_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets
 MN5:
   paths:
-    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
-    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
-    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
+    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
+    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/data/AQUA/datasets
+    DVC_PATH: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/datasets
 lumi-e25.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-25.1_v1.0/grids
@@ -54,10 +58,49 @@ MN5-o25.1:
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA-obs_v1.0/datasets
+lumi-o26.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-26.1_v1.0/grids
+    weights: /scratch/project_465001542/aqua_cache/weights
+    areas: /scratch/project_465001542/aqua_cache/areas
+  intake:
+    DVC_PATH: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-26.1_v1.0/datasets
+    DATA_PATH: null
+MN5-o26.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-26.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc123/aqua_cache/weights
+    areas: /gpfs/scratch/ehpc123/aqua_cache/areas
+  intake:
+    DVC_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-26.1_v1.0/datasets
+    DATA_PATH: null
 hpc2020:
   paths:
-    grids: /ec/res4/hpcperm/ccjh/aqua_data/grids
-    weights: /ec/res4/hpcperm/ccjh/aqua_data/weights
-    areas: /ec/res4/hpcperm/ccjh/aqua_data/areas
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
   intake:
-    DATA_PATH: /ec/res4/hpcperm/ccjh/obs/destine/
+    DVC_PATH: /ec/res4/hpcperm/itmn/data/aqua-dvc/datasets
+    DATA_PATH: null
+freja:
+  paths:
+    grids: /home/rossby/AQUA_DATA/grids
+    weights: /home/rossby/AQUA_DATA/weights
+    areas: /home/rossby/AQUA_DATA/areas
+  intake:
+    DATA_PATH: /home/rossby/AQUA_DATA/obs/
+nord4:
+  paths:
+    grids: /esarchive/scratch/AQUA/grids
+    weights: /esarchive/scratch/AQUA/weights
+    areas: /esarchive/scratch/AQUA/areas
+  intake:                                                                                  
+    DATA_PATH: /esarchive/scratch/AQUA/datasets
+wilma:
+  paths:
+    grids: /scratch/users/mnurisso/aqua-dvc/grids
+    weights: /scratch/users/mnurisso/aqua-dvc/weights
+    areas: /scratch/users/mnurisso/aqua-dvc/areas
+  intake:
+    DVC_PATH: /scratch/users/mnurisso/aqua-dvc/datasets
+    DATA_PATH: null

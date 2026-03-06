@@ -4,6 +4,10 @@ metadata:
       type: str
       description: the path to the LRA
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA
+    DROP_PATH:
+      type: str
+      description: the path to the DROP output
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/DROP
     FDB_PATH:
       type: str
       description: the path to the FDB

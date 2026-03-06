@@ -1,11 +1,13 @@
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
   intake:
     # where LRA data is stored (available in all the machines listed)
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-phase1
+    # where DROP data is stored (available in all the machines listed)
+    DROP_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/DROP/climatedt-phase1
     # where the FDB schema is stored (available only on lumi)
     FDB_PATH: /pfs/lustrep3/appl/local/destine
     # where the historical FDB data is stored (available only on lumi)
@@ -17,11 +19,12 @@ lumi:
     OUTPUT_AQUA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/pre_computed_aqua_analysis
 levante:
   paths: 
-    grids: /work/bb1153/b382075/aqua/grids
-    weights: /work/bb1153/b382075/aqua/weights
-    areas: /work/bb1153/b382075/aqua/areas
+    grids: /work/bb1153/b382289/data/aqua-dvc/grids
+    weights: /work/bb1153/b382289/data/aqua-dvc/weights
+    areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     LRA_PATH: /work/bb1153/b382076/LRA-lumi
+    DROP_PATH: null
     FDB_PATH: null
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
@@ -29,13 +32,40 @@ levante:
     OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
 MN5:
   paths:
-    grids: /gpfs/scratch/ehpc01/data/AQUA/grids
-    weights: /gpfs/scratch/ehpc01/data/AQUA/weights
-    areas: /gpfs/scratch/ehpc01/data/AQUA/areas
+    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
+    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
+    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-phase1
+    DROP_PATH: null
     FDB_PATH: /gpfs/projects/ehpc01/dte/fdb
     FDB_PATH_HISTORICAL: null
     FDB_PATH_EERIE: null
     ECCODES_PATH: /gpfs/projects/ehpc01/eccodes
+    OUTPUT_AQUA_PATH: null
+wilma:
+  paths:
+    grids: /scratch/users/mnurisso/aqua-dvc/grids
+    weights: /scratch/users/mnurisso/aqua-dvc/weights
+    areas: /scratch/users/mnurisso/aqua-dvc/areas
+  intake:
+    LRA_PATH: /archive/mnurisso/LRA/climatedt-phase1
+    DROP_PATH: null
+    FDB_PATH: null
+    FDB_PATH_HISTORICAL: null
+    FDB_PATH_EERIE: null
+    ECCODES_PATH: null
+    OUTPUT_AQUA_PATH: null
+hpc2020:
+  paths:
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: null
+    DROP_PATH: null
+    FDB_PATH: null
+    FDB_PATH_HISTORICAL: null
+    FDB_PATH_EERIE: null
+    ECCODES_PATH: null
     OUTPUT_AQUA_PATH: null

@@ -13,3 +13,39 @@ sources:
       - '{{ TEST_PATH }}/ICON/healpix0/healpix_0.nc'
     description: Healpix coarser resolution
     driver: netcdf
+  fake-ensemble-int:
+    metadata:
+      fixer_name: ICON-hpx
+      source_grid_name: test-healpix
+    args:
+      chunks:
+        time: 1
+      urlpath:
+      - '{{ TEST_PATH }}/ICON/healpix0/healpix_0.nc'
+    description: Healpix coarser resolution
+    driver: netcdf
+    parameters:
+      realization:
+        allowed: [1, 2, 3]
+        description: realization member
+        type: int
+        default: 2
+  fake-ensemble-str:
+    metadata:
+      fixer_name: ICON-hpx
+      source_grid_name: test-healpix
+    args:
+      chunks:
+        time: 1
+      urlpath:
+      - '{{ TEST_PATH }}/ICON/healpix0/healpix_0.nc'
+    description: Healpix coarser resolution
+    driver: netcdf
+    parameters:
+      realization:
+        allowed: ["r1i1p1", "r2i1p1", "r3i1p1"]
+        description: realization member
+        type: str
+        default: "r1i1p1"
+
+        
