@@ -11,13 +11,13 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-5km/main.yaml'
-  # IFS-FESOM-5km:
-  #   description: IFS-FESOM coupled model
-  #   driver: yaml_file_cat
-  #   args:
-  #     path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-5km/main.yaml'
-  # ICON-5km:
-  #   description: ICON coupled model
-  #   driver: yaml_file_cat
-  #   args:
-  #     path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'
+  IFS-FESOM-5km:
+    description: IFS-FESOM coupled model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-5km/main.yaml'
+  ICON-5km:
+    description: ICON coupled model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'
