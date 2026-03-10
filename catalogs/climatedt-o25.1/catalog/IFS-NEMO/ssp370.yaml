@@ -951,7 +951,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        - '{{ LRA_PATH }}/IFS-FESOM/ssp370/r100/monthly/*o010-ssp370_r100_monthly_*.nc'
+        - '{{ LRA_PATH }}/IFS-NEMO/ssp370/r100/monthly/*o00q_r100_monthly_*.nc'
         # Legacy path in the MN5 operational project
         # /gpfs/scratch/ehpc123/bsc655096/o00q/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o00q/r100/monthly/*o00q_r100_monthly_*.nc
       chunks: {}
