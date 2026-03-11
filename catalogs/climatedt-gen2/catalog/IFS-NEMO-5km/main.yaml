@@ -45,3 +45,19 @@ sources:
   #   driver: yaml_file_cat
   #   args:
   #     path: '{{CATALOG_DIR}}/hist-1990-ensemble.yaml'
+  projections-ssp370:
+    description: '"IFS-NEMO ssp370 2015, grids: tco2559 eORCA12"'
+    metadata:
+      expid: '0001'
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: ssp370
+      start: '2015'
+      machine: mn5
+      dashboard:
+        menu: projections-ssp370
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp370.yaml'
