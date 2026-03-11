@@ -29,13 +29,13 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
   t0ku:
-    description: '"ifs-fesom t0ku 1990, grids: tco399 DARS2"'
+    description: '"ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2"'
     metadata:
       author: awi548625
       maintainer: not specified
       machine: MN5
       expid: t0ku
-      resolution_atm: tco399
+      resolution_atm: tco%CONFIGURATION.IFS.RESOL%
       resolution_oce: DARS2
       forcing: historical
       start: '1990'

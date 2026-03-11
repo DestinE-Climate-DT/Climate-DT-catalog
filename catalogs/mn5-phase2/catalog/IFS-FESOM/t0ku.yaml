@@ -24,7 +24,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -60,7 +60,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -96,7 +96,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -131,7 +131,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -168,7 +168,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -204,7 +204,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -238,7 +238,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -276,7 +276,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -318,7 +318,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -360,7 +360,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -402,7 +402,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -441,7 +441,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -476,7 +476,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -511,7 +511,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -546,7 +546,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -581,7 +581,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -616,7 +616,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-fesom t0ku 1990, grids: tco399 DARS2'
+    description: 'ifs-fesom t0ku 1990, grids: tco%CONFIGURATION.IFS.RESOL% DARS2'
     driver: gsv
     metadata:
       fdb_home: /gpfs/scratch/ehpc01/experiments/t0ku/fdb
@@ -691,82 +691,6 @@ sources:
         type: str
         allowed:
         - r1
-  aqua-radiation_toa-annual_climatology:
-    driver: netcdf
-    description: AQUA diagnostic radiation_toa data for product 
-      annual_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
-  aqua-radiation_surface-annual_climatology:
-    driver: netcdf
-    description: AQUA diagnostic radiation_surface data for product 
-      annual_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
-  aqua-radiation_toa-seasonal_climatology:
-    driver: netcdf
-    description: AQUA diagnostic radiation_toa data for product 
-      seasonal_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
-  aqua-radiation_surface-seasonal_climatology:
-    driver: netcdf
-    description: AQUA diagnostic radiation_surface data for product 
-      seasonal_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
-      chunks: {}
-      xarray_kwargs:
-        decode_times: true
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
   aqua-atmosphere2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
@@ -774,6 +698,44 @@ sources:
     args:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-atmosphere2d-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_toa-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-toa/netcdf/radiation_toa.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -805,29 +767,13 @@ sources:
         type: str
         allowed:
         - r1
-  aqua-water_cycle-annual_climatology:
+  aqua-radiation_toa-seasonal_climatology:
     driver: netcdf
-    description: AQUA diagnostic water_cycle data for product annual_climatology
-    args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
-      chunks: {}
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
-  aqua-atmosphere2d-seasonal_climatology:
-    driver: netcdf
-    description: AQUA diagnostic atmosphere2d data for product 
+    description: AQUA diagnostic radiation_toa data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -847,6 +793,60 @@ sources:
     args:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_surface-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-water_cycle-annual_climatology:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product annual_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+  aqua-radiation_surface-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/awi548625/t0ku/output/aqua-analysis/mn5-phase2/IFS-FESOM/t0ku/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.mn5-phase2.IFS-FESOM.t0ku.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
