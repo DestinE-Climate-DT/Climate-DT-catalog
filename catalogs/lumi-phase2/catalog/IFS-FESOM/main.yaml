@@ -1,7 +1,7 @@
 sources:
   hz9m:
-    description: FDB IFS/FESOM lowres run with tco79/CORE2 native grids regridded
-      to Healpix
+    description: FDB IFS/FESOM lowres run with tco79/CORE2 native grids 
+      regridded to Healpix
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hz9m.yaml'
@@ -12,8 +12,8 @@ sources:
       forcing: historical
       start: 2020
   hz9o:
-    description: FDB IFS/FESOM developer run with tco1279/NG5 native grids regridded
-      to Healpix
+    description: FDB IFS/FESOM developer run with tco1279/NG5 native grids 
+      regridded to Healpix
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hz9o.yaml'
@@ -24,8 +24,8 @@ sources:
       forcing: historical
       start: 2020
   hzfy:
-    description: FDB IFS/FESOM test run with tco2559/NG5 native grids regridded to
-      Healpix
+    description: FDB IFS/FESOM test run with tco2559/NG5 native grids regridded 
+      to Healpix
     metadata:
       expid: hzfy
       resolution_atm: tco2559
@@ -35,7 +35,7 @@ sources:
       dashboard:
         menu: hzfy
         resolution_id: HR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/hzfy.yaml'
@@ -50,7 +50,25 @@ sources:
       dashboard:
         menu: a280
         resolution_id: LR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/a280.yaml'
+  t0ll:
+    description: '"ifs-fesom t0ll 1990, grids: tco79 CORE2"'
+    metadata:
+      author: shafeequ1
+      maintainer: not specified
+      machine: lumi
+      expid: t0ll
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: t0ll
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0ll.yaml'
