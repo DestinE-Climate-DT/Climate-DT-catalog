@@ -1,16 +1,16 @@
 sources:
   IFS-NEMO:
-    description: IFS-NEMO coupled model
+    description: IFS-NEMO model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml'
   IFS-FESOM:
     description: IFS-FESOM coupled model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml'
   ICON:
     description: ICON coupled model
     driver: yaml_file_cat
     args:
-        path: "{{CATALOG_DIR}}/catalog/ICON/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/ICON/main.yaml'
