@@ -40,4 +40,4 @@ mafalda:
     weights: /work/common/aqua/aqua-dvc/weights
     areas: /work/common/aqua/aqua-dvc/areas
   intake:
-    LRA_PATH: /data/datasets/lra/climatedt-gen2/
+    LRA_PATH: /data/datasets/lra/climatedt-o25.1
