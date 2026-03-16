@@ -950,7 +950,6 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -986,7 +985,6 @@ sources:
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
-      bridge_start_date: complete
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
