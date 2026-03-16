@@ -457,7 +457,7 @@ sources:
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
       
-  daily-hpz10-o2d:
+  daily-hpz10-o3d:
     args:
       request:
         class: d1
@@ -518,7 +518,7 @@ sources:
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
       
-  daily-hpz7-o2d:
+  daily-hpz7-o3d:
     args:
       request:
         class: d1
