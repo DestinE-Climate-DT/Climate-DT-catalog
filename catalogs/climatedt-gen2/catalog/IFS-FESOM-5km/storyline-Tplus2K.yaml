@@ -34,15 +34,13 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
         235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 
           235051, 235052, 235053, 235055]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      #fdb_info_file: /gpfs/scratch/ehpc123/awi229971/o022/o022.yaml
   hourly-hpz7-atm2d:
     args:
       request:
@@ -63,8 +61,8 @@ sources:
         param: 78
         levtype: sfc
       data_start_date: 20170101T0000
-      data_end_date: auto
-      bridge_start_date: complete
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -106,6 +104,8 @@ sources:
         param: 235087
         levtype: sfc
       data_start_date: 20170101T0000
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       data_end_date: auto
       chunks: MS
       savefreq: MS
@@ -148,7 +148,8 @@ sources:
         param: 235087
         levtype: sfc
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -190,7 +191,8 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -229,7 +231,8 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -270,7 +273,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -313,7 +317,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -356,7 +361,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -398,7 +404,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -438,7 +445,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -478,7 +486,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -518,7 +527,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -562,7 +572,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -611,7 +622,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -660,7 +672,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -709,7 +722,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -758,7 +772,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -809,7 +824,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -860,7 +876,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -908,7 +925,8 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -949,7 +967,8 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -990,7 +1009,8 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -1031,7 +1051,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -1072,7 +1093,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -1113,7 +1135,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -1154,7 +1177,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -1195,7 +1219,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -1236,7 +1261,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -1277,7 +1303,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -1318,7 +1345,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4]
       data_start_date: 20170101T0000
-      data_end_date: auto
+      data_end_date: 20241231T2300
+      data_bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
