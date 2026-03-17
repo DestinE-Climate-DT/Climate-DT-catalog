@@ -17,7 +17,6 @@ sources:
         time: 0000/to/2300/by/0100
         param: 8
         levtype: sfc
-        step: 0
         regrid: 1/1
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
@@ -56,7 +55,6 @@ sources:
         time: 0000/to/2300/by/0100
         param: 8
         levtype: sfc
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -96,7 +94,6 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -136,7 +133,6 @@ sources:
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600,
           700, 850, 925, 1000]
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -175,7 +171,6 @@ sources:
         time: 0000
         param: 263000
         levtype: o2d
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -212,7 +207,6 @@ sources:
         time: 0000
         param: 263000
         levtype: o2d
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -253,7 +247,6 @@ sources:
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -300,7 +293,6 @@ sources:
           19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20041231T2300
       bridge_start_date: 19900101T0000
@@ -343,7 +335,7 @@ sources:
   #       param: 228246
   #       levtype: hl
   #       levelist: [100]
-  #       step: 0
+  #       
   #     data_start_date: 19900101T0000
   #     data_end_date: 20041231T2300
   #     chunks: D
@@ -378,7 +370,7 @@ sources:
   #       param: 228246
   #       levtype: hl
   #       levelist: [100]
-  #       step: 0
+  #       
   #     data_start_date: 19900101T0000
   #     data_end_date: 20041231T2300
   #     chunks: D
@@ -414,7 +406,7 @@ sources:
   #       param: 228141
   #       levtype: sol
   #       levelist: [1, 2, 3, 4, 5]
-  #       step: 0
+  #       
   #     data_start_date: 19900101T0000
   #     data_end_date: 20041231T2300
   #     chunks: D
@@ -450,7 +442,7 @@ sources:
   #       param: 228141
   #       levtype: sol
   #       levelist: [1, 2, 3, 4, 5]
-  #       step: 0
+  #       
   #     data_start_date: 19900101T0000
   #     data_end_date: 20041231T2300
   #     chunks: D
@@ -478,4 +470,5 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-r100
+      fixer_name: fesom-destine-v1  # some FESOM details to be fixed even in the LRA

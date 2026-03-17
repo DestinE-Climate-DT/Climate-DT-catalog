@@ -10,9 +10,9 @@ levante:
     OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
   intake:
     LRA_NEXTGEMS: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA-nextgems4
     FDB_PATH: null

@@ -19,7 +19,6 @@ sources:
         time: '0000'
         param: 167
         levtype: sfc
-        step: 0
       data_start_date: 20240801T0000
       data_end_date: 20241231T2300
       chunks: D  # Default chunks size
@@ -51,7 +50,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=7, h128).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
@@ -76,7 +75,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
@@ -97,7 +96,7 @@ sources:
     description: hourly 3D atmospheric data on healpix grid (zoom=9, h512).
     args:
       <<: *args-default
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 129
