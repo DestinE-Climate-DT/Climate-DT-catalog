@@ -106,7 +106,6 @@ sources:
       data_start_date: 20170101T0000
       data_end_date: 20241231T2300
       data_bridge_start_date: complete
-      data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
@@ -1371,7 +1370,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi229971/o022/output/LRA/climatedt-o25.1/IFS-FESOM/storyline-Tplus2K/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-o25.1_IFS-FESOM_storyline-Tplus2K_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+       '{{ LRA_PATH }}/IFS-FESOM/storyline-Tplus2K/{{realization}}/r100/monthly/mean/global/*_climatedt-o25.1_IFS-FESOM_storyline-Tplus2K_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks:
         lat: 180
         lon: 360
