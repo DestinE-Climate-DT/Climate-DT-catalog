@@ -58,6 +58,7 @@ MN5-o25.1:
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
     DATA_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA-obs_v1.0/datasets
+    DVC_PATH: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-26.1_v1.0/datasets
 lumi-o26.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-26.1_v1.0/grids
