@@ -62,3 +62,10 @@ levante:
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     LRA_PATH: /work/bb1153/b383197/DROP/climatedt-o25.1
+mafalda:
+  paths:
+    grids: /work/common/aqua/aqua-dvc/grids
+    weights: /work/common/aqua/aqua-dvc/weights
+    areas: /work/common/aqua/aqua-dvc/areas
+  intake:
+    LRA_PATH: null
