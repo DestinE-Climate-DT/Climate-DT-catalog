@@ -6,6 +6,8 @@ lumi:
   intake:
     # where LRA data is stored
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
+    # where Zarr data is stored
+    ZARR_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-gen2
 MN5:
   paths:
     grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
@@ -13,6 +15,7 @@ MN5:
     areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
   intake:
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
+    ZARR_PATH: null
 wilma:
   paths:
     grids: /scratch/users/mnurisso/aqua-dvc/grids
@@ -20,6 +23,7 @@ wilma:
     areas: /scratch/users/mnurisso/aqua-dvc/areas
   intake:
     LRA_PATH: /archive/mnurisso/LRA/climatedt-o25.1
+    ZARR_PATH: null
 hpc2020:
   paths:
     grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
@@ -27,6 +31,7 @@ hpc2020:
     areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
   intake:
     LRA_PATH: null
+    ZARR_PATH: null
 levante:
   paths:
     grids: /work/bb1153/b382289/data/aqua-dvc/grids
@@ -34,6 +39,7 @@ levante:
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     LRA_PATH: /work/bb1153/b383197/DROP/climatedt-o25.1
+    ZARR_PATH: null
 mafalda:
   paths:
     grids: /work/common/aqua/aqua-dvc/grids
@@ -41,3 +47,4 @@ mafalda:
     areas: /work/common/aqua/aqua-dvc/areas
   intake:
     LRA_PATH: /data/datasets/lra/climatedt-o25.1
+    ZARR_PATH: null
