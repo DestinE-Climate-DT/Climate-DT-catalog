@@ -4,13 +4,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -46,13 +46,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -89,13 +89,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -132,13 +132,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -175,13 +175,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -215,13 +215,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -255,13 +255,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -299,13 +299,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -343,13 +343,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -388,13 +388,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -429,13 +429,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -470,13 +470,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -511,13 +511,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -552,13 +552,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -602,13 +602,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -652,13 +652,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -702,13 +702,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -752,13 +752,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -804,13 +804,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -856,13 +856,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -908,13 +908,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -950,13 +950,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -992,13 +992,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -1034,13 +1034,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -1076,13 +1076,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -1118,13 +1118,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -1160,13 +1160,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -1202,13 +1202,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -1244,13 +1244,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clte
@@ -1286,13 +1286,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: high
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
@@ -1328,13 +1328,13 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: story-nudging  # To be overwritten by workflow/config file
-        experiment: Tplus2.0K  # To be overwritten by workflow/config file
-        generation: 2  # To be overwritten by workflow/config file
+        activity: story-nudging  
+        experiment: Tplus2.0K  
+        generation: 2  
         model: IFS-FESOM
         realization: '{{ realization }}'
         resolution: standard
-        expver: 0001  # To be overwritten by workflow/config file
+        expver: 0001  
         expid: o022
         type: fc
         stream: clmn
