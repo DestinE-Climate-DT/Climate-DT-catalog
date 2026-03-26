@@ -1,4 +1,22 @@
 sources:
+  baseline-abrupt4xco2:
+    description: '"IFS-NEMO 4xCO2, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2wd
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: abrupt4xco2
+      start: '1995'
+      dashboard:
+        menu: a2wd
+        resolution_id: HR
+        note: extra run, not part of the official set of runs
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a2wd.yaml'
   baseline-cont:
       description: '"IFS-NEMO control 1990, grids: tco2559 eORCA12"'
       metadata:
