@@ -13,3 +13,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/baseline-hist.yaml'
+  projections-ssp126:
+    description: 'IFS/NEMO - 2015 SSP1-2.6  - 3 members ensemble - Tco1279/eORCA12'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2zm
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: SSP1-2.6
+      start: '2015'
+      dashboard:
+        menu: projections SSP1-2.6 ensemble
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
