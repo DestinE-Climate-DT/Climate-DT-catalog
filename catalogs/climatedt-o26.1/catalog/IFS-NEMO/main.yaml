@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  ifs-nemo-e2e-1month-test:
+    description: '"ifs-nemo ifs-nemo-e2e-1month-test 1990, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: t0mz
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: ifs-nemo-e2e-1month-test
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/ifs-nemo-e2e-1month-test.yaml'
