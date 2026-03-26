@@ -31,3 +31,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
+  projections-ssp370:
+    description: 'IFS/NEMO - 2015 SSP3-7.0  - 3 members ensemble - Tco1279/eORCA12'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a2ii
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: SSP3-7.0
+      start: '2015'
+      dashboard:
+        menu: projections SSP3-7.0 ensemble
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp370.yaml'
