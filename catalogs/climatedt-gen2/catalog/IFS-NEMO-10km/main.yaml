@@ -1,4 +1,19 @@
 sources:
+  baseline-cont:
+    description: 'IFS/NEMO - 1990 cont  - 3 members ensemble - Tco1279/eORCA12'
+    metadata:
+      expid: a2nt
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      dashboard:
+        menu: control 1990 ensemble
+        resolution_id: SR
+        note: "run with 3 expid, which are: a2nt, a2nk, a2o1"
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-cont.yaml'
   baseline-hist:
     description: 'IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12'
     metadata:
