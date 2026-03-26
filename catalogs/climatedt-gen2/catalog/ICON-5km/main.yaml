@@ -1,6 +1,21 @@
 sources:
+  baseline-abrupt4xco2:
+    description: 'icon abrupt 4xCO2 1995, grids: R2B9 R02B09'
+    metadata:
+      expid: a2vt
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: abrupt4xco2
+      start: '1995'
+      dashboard:
+        menu: baseline-abrupt4xco2
+        resolution_id: HR
+        note:
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
   baseline-cont:
-    description: '"ICON control 1990, grids: R2B9 R02B09"'
+    description: 'ICON control 1990, grids: R2B9 R02B09'
     metadata:
       expid: '0001'
       expver: o00a
@@ -16,7 +31,7 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/baseline-cont.yaml'
   baseline-hist:
-    description: '"ICON historical 1990, grids: R2B9 R02B09"'
+    description: 'ICON historical 1990, grids: R2B9 R02B09'
     metadata:
       expid: '0001'
       expver: o00k
