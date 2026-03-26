@@ -1370,8 +1370,10 @@ sources:
     driver: netcdf
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
-      urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o01v/output/LRA/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-o25.1_IFS-FESOM_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+      urlpath:
+        # Legacy path
+        # /gpfs/scratch/ehpc123/bsc655096/o01v/output/LRA/climatedt-o25.1/IFS-FESOM/0001/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-o25.1_IFS-FESOM_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        '{{ LRA_PATH }}/IFS-FESOM/storyline-historical/r100/monthly/*_climatedt-o25.1_IFS-FESOM_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks:
         lat: 180
         lon: 360
