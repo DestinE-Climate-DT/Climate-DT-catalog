@@ -11,12 +11,12 @@ sources:
       forcing: abrupt4xco2
       start: '1995'
       dashboard:
-        menu: a2wd
+        menu: baseline-abrupt4xco2
         resolution_id: HR
         note: extra run, not part of the official set of runs
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/a2wd.yaml'
+      path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
   baseline-cont:
       description: '"IFS-NEMO control 1990, grids: tco2559 eORCA12"'
       metadata:
