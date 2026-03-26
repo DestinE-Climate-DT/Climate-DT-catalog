@@ -834,3 +834,20 @@ sources:
         type: str
         allowed:
         - mean
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-NEMO-10km/projections-ssp370/ifs-nemo-10km_projections-ssp370-r{{ realization }}.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    parameters:
+      realization:
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
+        type: int
+        default: 2
+    metadata:
+      source_grid_name: lon-lat-r100
