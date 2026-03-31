@@ -1252,3 +1252,20 @@ sources:
         default: 2
     metadata:
       source_grid_name: lon-lat-r100
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-NEMO-10km/baseline-hist/ifs-nemo-10km_baseline-hist-r{{ realization }}.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    parameters:
+      realization:
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
+        type: int
+        default: 2
+    metadata:
+      source_grid_name: lon-lat-r100

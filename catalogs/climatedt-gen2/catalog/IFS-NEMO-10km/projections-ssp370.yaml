@@ -805,8 +805,10 @@ sources:
     driver: netcdf
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a35w/output/LRA/mn5-phase2/IFS-NEMO/a2ii/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+      urlpath:
+        # Legacy path
+        # /gpfs/scratch/ehpc01/bsc998159/a35w/output/LRA/mn5-phase2/IFS-NEMO/a2ii/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        '{{ LRA_PATH }}/IFS-NEMO/ssp370-ensemble/r100/monthly/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -834,3 +836,20 @@ sources:
         type: str
         allowed:
         - mean
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-NEMO-10km/projections-ssp370/ifs-nemo-10km_projections-ssp370-r{{ realization }}.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    parameters:
+      realization:
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
+        type: int
+        default: 2
+    metadata:
+      source_grid_name: lon-lat-r100

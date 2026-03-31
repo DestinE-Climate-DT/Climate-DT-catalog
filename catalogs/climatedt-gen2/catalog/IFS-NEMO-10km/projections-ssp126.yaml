@@ -805,8 +805,10 @@ sources:
     driver: netcdf
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
-      urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a2zm/output/LRA/mn5-phase2/IFS-NEMO/0001/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+      urlpath:
+        # Legacy path 
+        # /gpfs/scratch/ehpc01/bsc998159/a2zm/output/LRA/mn5-phase2/IFS-NEMO/0001/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        '{{ LRA_PATH }}/IFS-NEMO/ssp126-ensemble/r100/monthly/*_mn5-phase2_IFS-NEMO_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true

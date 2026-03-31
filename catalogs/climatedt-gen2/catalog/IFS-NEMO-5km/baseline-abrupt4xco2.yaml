@@ -689,3 +689,14 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-NEMO-5km/baseline-abrupt4xco2/ifs-nemo-5km_baseline-abrupt4xco2.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    metadata:
+      source_grid_name: lon-lat-r100
