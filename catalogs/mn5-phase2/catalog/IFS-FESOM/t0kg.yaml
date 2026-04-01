@@ -774,6 +774,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r3
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
