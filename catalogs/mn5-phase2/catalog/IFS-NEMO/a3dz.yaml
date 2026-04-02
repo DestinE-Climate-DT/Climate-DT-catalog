@@ -727,7 +727,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a3dz/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3dz/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-NEMO.a3dz.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc01/bsc998159/a3dz/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3dz/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-NEMO.a3dz.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
