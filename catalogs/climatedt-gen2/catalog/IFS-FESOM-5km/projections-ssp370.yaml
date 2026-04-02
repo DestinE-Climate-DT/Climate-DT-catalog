@@ -583,7 +583,7 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: date
@@ -627,7 +627,7 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: date
@@ -763,7 +763,7 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: date

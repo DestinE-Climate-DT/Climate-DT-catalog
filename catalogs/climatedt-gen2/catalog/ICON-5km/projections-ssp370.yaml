@@ -574,7 +574,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: date
@@ -620,7 +620,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: date
