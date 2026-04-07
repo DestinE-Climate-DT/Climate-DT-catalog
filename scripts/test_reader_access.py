@@ -86,7 +86,7 @@ if __name__ == "__main__":
                 logger.debug(f"Successfully retrieved data for {label}.")
                 successful_sources += 1
             except Exception as e:
-                self.logger.error(f"Failed to retrieve data for {label}: {e}")
+                logger.error(f"Failed to retrieve data for {label}: {e}")
                 failures[(catalog, model_name, exp_name)].append((source_name, str(e)))
         else:
             skipped_labels.append(label)
