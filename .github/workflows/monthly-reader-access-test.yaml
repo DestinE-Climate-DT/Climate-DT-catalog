@@ -46,6 +46,15 @@ jobs:
                 echo "Available AQUA catalogs:"
                 aqua -vv list
 
+            - name: Set up Polytope Key
+              run: |
+                # Set up polytope secrets
+                cat >$HOME/.polytopeapirc << EOF
+                {
+                  "user_key": "${{ secrets.POLYTOPE_KEY }}"
+                }
+                EOF
+
             - name: Validate Reader access for Climate-DT Gen2
               run: |
                 python scripts/test_reader_access.py
