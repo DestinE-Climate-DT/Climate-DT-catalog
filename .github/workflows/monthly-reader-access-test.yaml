@@ -1,0 +1,51 @@
+name: Monthly Reader Access Test
+
+on:
+    schedule:
+        - cron: "0 3 1 * *" # run monthly on the 1st day at 03:00 UTC
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+defaults:
+    run:
+        shell: bash -l -eo pipefail {0}
+
+jobs:
+    monthly_reader_access:
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        container:
+            image: ghcr.io/destine-climate-dt/aqua-core:1.0.0a3
+            options: --user root
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v5
+
+            - name: Verify environment
+              run: |
+                echo "Running inside container:"
+                uname -a
+                python --version
+                aqua --version || true
+
+            - name: Set up AQUA
+              run: |
+                # Initialize AQUA catalogs in $HOME/.aqua
+                aqua -vv install github
+
+            - name: Add catalogs from repository
+              run: |
+                for catalog in $(ls catalogs); do
+                  aqua -vv add "$catalog" -e "catalogs/$catalog"
+                done
+            
+            - name: List available catalogs
+              run: |
+                echo "Available AQUA catalogs:"
+                aqua -vv list
+
+            - name: Validate Reader access for Climate-DT Gen2
+              run: |
+                python scripts/test_reader_access.py
