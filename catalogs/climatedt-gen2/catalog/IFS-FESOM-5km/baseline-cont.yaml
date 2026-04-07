@@ -745,7 +745,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -996,7 +996,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
