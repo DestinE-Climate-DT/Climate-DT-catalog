@@ -94,21 +94,21 @@ if __name__ == "__main__":
 
     failed_source_count = sum(len(source_failures) for source_failures in failures.values())
 
-    logger.info("Run summary")
+    logger.info("RUN SUMMARY")
     logger.info(f"Validated sources: {tested_sources}")
     logger.info(f"Successful sources: {successful_sources}")
-    logger.info(f"Skipped sources: {len(skipped_labels)}")
-    logger.info(f"Failed sources: {failed_source_count}")
+    logger.debug(f"Skipped sources: {len(skipped_labels)}")
+    logger.warning(f"Failed sources: {failed_source_count}")
 
     if skipped_labels:
-        logger.info("Skipped entries:")
+        logger.debug("SKIPPED ENTRIES:")
         for skipped_label in skipped_labels:
-            logger.info(f"  - {skipped_label}")
+            logger.debug(f"  - {skipped_label}")
 
     if failures:
-        logger.info("Failed experiments:")
+        logger.warning("FAILED EXPERIMENTS:")
         for (_, model_name, exp_name), source_failures in sorted(failures.items()):
-            logger.info(f"  - {catalog}/{model_name}/{exp_name}")
+            logger.warning(f"  - {catalog}/{model_name}/{exp_name}")
             for source_name, error_message in source_failures:
                 logger.info(f"      source={source_name}: {error_message}")
     else:
