@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  o02f-e2e-test-lumi:
+    description: '"ifs-fesom o02f-e2e-test-lumi 1988, grids: tco2559 NG5"'
+    metadata:
+      author: shafeequ1
+      maintainer: not specified
+      machine: lumi-o26.1
+      expid: o02f
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: control
+      start: '1988'
+      dashboard:
+        menu: o02f-e2e-test-lumi
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o02f-e2e-test-lumi.yaml'
