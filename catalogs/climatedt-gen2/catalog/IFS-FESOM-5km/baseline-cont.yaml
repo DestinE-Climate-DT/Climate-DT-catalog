@@ -568,7 +568,7 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 19991231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
@@ -611,7 +611,7 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 19991231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
@@ -742,10 +742,10 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 19991231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -996,7 +996,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom control 1990, grids: tco2559 NG5'
     driver: gsv
     metadata:

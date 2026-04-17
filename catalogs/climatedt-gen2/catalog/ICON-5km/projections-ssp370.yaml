@@ -85,17 +85,18 @@ sources:
         resolution: high
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -121,17 +122,18 @@ sources:
         resolution: standard
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -297,19 +299,20 @@ sources:
         resolution: standard
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -403,17 +406,18 @@ sources:
         resolution: high
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -437,17 +441,18 @@ sources:
         resolution: standard
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -563,9 +568,9 @@ sources:
         resolution: high
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -574,10 +579,11 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
-      chunks: D
+      bridge_end_date: 20361231T2300
+      chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -609,9 +615,9 @@ sources:
         resolution: standard
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -620,10 +626,11 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
-      chunks: D
+      bridge_end_date: 20361231T2300
+      chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -725,18 +732,19 @@ sources:
         resolution: high
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -760,18 +768,19 @@ sources:
         resolution: standard
         expver: 0001
         type: fc
-        stream: clte
-        date: 20141201/to/20370501
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
       data_end_date: 20370501T2300
+      bridge_end_date: 20361231T2300
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:

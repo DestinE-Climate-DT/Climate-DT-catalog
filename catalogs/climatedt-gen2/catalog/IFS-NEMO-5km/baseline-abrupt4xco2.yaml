@@ -10,7 +10,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -44,7 +44,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -78,7 +78,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -111,7 +111,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -144,7 +144,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -179,7 +179,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -214,7 +214,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -251,7 +251,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -288,7 +288,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -325,7 +325,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -362,7 +362,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -395,7 +395,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -428,7 +428,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -461,7 +461,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -494,7 +494,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -555,7 +555,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clmn
         year: null
@@ -616,7 +616,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null
@@ -651,7 +651,7 @@ sources:
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: a2wd
+        expver: 0001 
         type: fc
         stream: clte
         date: null

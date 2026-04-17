@@ -685,7 +685,7 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 20141231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
