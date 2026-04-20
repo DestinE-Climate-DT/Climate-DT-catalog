@@ -1,11 +1,11 @@
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
+    grids: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/grids
+    weights: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/weights
+    areas: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/areas
   intake:
     # where LRA data is stored
-    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
+    LRA_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/LRA/climatedt-o25.1
 MN5:
   paths:
     grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
