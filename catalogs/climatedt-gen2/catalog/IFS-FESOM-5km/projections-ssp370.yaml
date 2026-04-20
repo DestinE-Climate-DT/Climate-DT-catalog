@@ -86,9 +86,9 @@ sources:
         resolution: high
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
@@ -97,7 +97,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -123,9 +123,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
@@ -134,7 +134,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -304,9 +304,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
@@ -317,7 +317,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -413,9 +413,9 @@ sources:
         resolution: high
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
@@ -424,7 +424,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -448,9 +448,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
@@ -459,7 +459,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -571,9 +571,9 @@ sources:
         resolution: high
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -583,10 +583,10 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -615,9 +615,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -627,10 +627,10 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -751,9 +751,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263507
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -763,10 +763,10 @@ sources:
       data_start_date: 20150101T0000
       data_end_date: 20500101T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -869,9 +869,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235131
         levtype: hl
         levelist: [100]
@@ -881,7 +881,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -977,9 +977,9 @@ sources:
         resolution: high
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
@@ -989,7 +989,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -1013,9 +1013,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235078
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
@@ -1025,7 +1025,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -1121,9 +1121,9 @@ sources:
         resolution: high
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
@@ -1133,7 +1133,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -1157,9 +1157,9 @@ sources:
         resolution: standard
         expver: 0001  
         type: fc
-        stream: clte
-        date: 19880101/to/20500101
-        time: None
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4]
@@ -1169,7 +1169,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'ifs-fesom o010-ssp370 2015, grids: tco2559 NG5'
     driver: gsv
     metadata:
@@ -1194,3 +1194,14 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-FESOM-5km/projections-ssp370/ifs-fesom-5km_projections-ssp370.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    metadata:
+      source_grid_name: lon-lat-r100

@@ -583,7 +583,7 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 20141231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
@@ -627,7 +627,7 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 20141231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
@@ -761,7 +761,7 @@ sources:
       data_start_date: 19900101T0000
       data_end_date: 20141231T2300
       bridge_start_date: complete
-      chunks: D
+      chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
@@ -1191,3 +1191,14 @@ sources:
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-FESOM-5km/baseline-hist/ifs-fesom-5km_baseline-hist.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    metadata:
+      source_grid_name: lon-lat-r100
