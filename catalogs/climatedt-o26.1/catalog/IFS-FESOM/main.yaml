@@ -3,7 +3,7 @@ sources:
     description: Empty catalog
     driver: null
   o02d-story-2017-historical:
-    description: '"ifs-fesom o02d-story-2017-historical 2025, grids: tco1279 NG5"'
+    description: '"ifs-fesom o02d-story-2017-historical 2022, grids: tco1279 NG5"'
     metadata:
       author: bsc655096
       maintainer: not specified
@@ -12,7 +12,7 @@ sources:
       resolution_atm: tco1279
       resolution_oce: NG5
       forcing: tplus2K
-      start: '2025'
+      start: '2022'
       dashboard:
         menu: o02d-story-2017-historical
         resolution_id: SR
