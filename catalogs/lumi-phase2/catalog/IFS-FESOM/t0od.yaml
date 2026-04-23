@@ -639,7 +639,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /scratch/project_465000454/shafeequ1/t0od/output/LRA/lumi-phase2/IFS-FESOM/t0od/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_lumi-phase2_IFS-FESOM_t0od_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /appl/local/climatedt/data/AQUA/LRA/lumi-phase2/IFS-FESOM/t0od/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_lumi-phase2_IFS-FESOM_t0od_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
