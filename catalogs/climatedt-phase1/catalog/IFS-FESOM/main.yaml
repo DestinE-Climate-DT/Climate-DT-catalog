@@ -111,3 +111,18 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-T2K-ensemble.yaml'
+  historical-1950:
+    description: IFS-FESOM, EERIE phase 1, toc1279/NG5
+    metadata:
+      expid: i2hj
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing:
+      start: 1950
+      #dashboard:
+      #  menu:
+      #  resolution_id: SR
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/historical-1950.yaml'
+ 

@@ -1,0 +1,35 @@
+sources:
+  daily-native-oce2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: CMIP6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: high
+        expver: i2hj
+        type: fc
+        stream: clte
+        date: 19500101
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 19500101T0000
+      data_end_date: 20141231T2300
+      #bridge_start_date: 19900101T0000
+      #bridge_end_date: 20041231T2300
+      chunks: D
+      savefreq: D
+      timestep: D
+      timestyle: date
+    description: EERIE IFS-FESOM historical 1950 run tco1279
+    driver: gsv
+    metadata:
+      fdb_home: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+      eccodes_path: '{{ ECCODES_PATH }}/eccodes2.35.1/eccodes/definitions'
+      variables: [263000, 263001, 263002, 263003, 263004, 263100, 263101, 263124]
+      source_grid_name: ng5-nodes-2d
+      fixer_name: fesom-destine-v1
