@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  baseline-abrupt4xco2:
+    description: '"ifs-fesom baseline-abrupt4xco2 1995, grids: tco2559 NG5"'
+    metadata:
+      author: kiszlert
+      maintainer: not specified
+      machine: lumi-o26.1
+      expid: a3hx
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: abrupt4xco2
+      start: '1995'
+      dashboard:
+        menu: baseline-abrupt4xco2
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
