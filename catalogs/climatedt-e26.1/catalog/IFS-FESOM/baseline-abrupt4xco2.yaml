@@ -983,7 +983,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /scratch/project_465001542/kiszlert/a3hx/output/aqua-analysis/climatedt-e26.1/IFS-FESOM/baseline-abrupt4xco2/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-e26.1.IFS-FESOM.baseline-abrupt4xco2.{{realization}}.*.{{freq}}.{{region}}.nc
+        /scratch/project_465001542/kiszlert/a3hx/output/aqua-analysis/climatedt-e26.1/IFS-FESOM/baseline-abrupt4xco2/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-e26.1.IFS-FESOM.baseline-abrupt4xco2.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
