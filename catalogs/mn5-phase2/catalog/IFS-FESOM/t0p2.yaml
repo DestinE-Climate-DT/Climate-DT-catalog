@@ -622,7 +622,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0p2/output/LRA/mn5-phase2/IFS-FESOM/t0p2/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-FESOM_t0p2_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /appl/local/climatedt/data/AQUA/LRA/mn5-phase2/IFS-FESOM/t0p2/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-FESOM_t0p2_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
