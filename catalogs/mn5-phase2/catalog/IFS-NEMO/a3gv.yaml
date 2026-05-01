@@ -522,7 +522,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a3gv/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3gv/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.mn5-phase2.IFS-NEMO.a3gv.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc01/bsc998159/a3gv/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3gv/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.mn5-phase2.IFS-NEMO.a3gv.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
