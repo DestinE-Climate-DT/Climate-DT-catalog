@@ -1,8 +1,8 @@
 lumi:
   paths:
-    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/grids
-    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/weights
-    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/areas
+    grids: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/grids
+    weights: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/weights
+    areas: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/areas
   intake:
     # Same path as for the phase 1 test
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/lumi-phase2

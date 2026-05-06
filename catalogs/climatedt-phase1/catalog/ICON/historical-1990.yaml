@@ -17,7 +17,6 @@ sources:
         time: '0000'
         param: 167
         levtype: sfc
-        step: 0
       data_start_date: 19900101T0000
       data_end_date: 20191231T2300
       bridge_start_date: 19910301T0000
@@ -150,5 +149,5 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-r100
       fixer_name: icon-destine-v1-lra

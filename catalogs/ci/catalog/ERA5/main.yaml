@@ -4,3 +4,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/era5-hpz3.yaml"
+  era5-2d-flip:
+    description: ERA5 2D flip test (2 months, 2021)
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/era5-2d-flip.yaml"
