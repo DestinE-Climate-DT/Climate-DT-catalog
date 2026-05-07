@@ -28,3 +28,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/control-1990-freeze.yaml'
+  a3iz:
+    description: '"ifs-fesom a3iz 2017, grids: tco79 CORE2"'
+    metadata:
+      author: bsc122036
+      maintainer: not specified
+      machine: MN5
+      expid: a3iz
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: historical
+      start: '2017'
+      dashboard:
+        menu: a3iz
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a3iz.yaml'
