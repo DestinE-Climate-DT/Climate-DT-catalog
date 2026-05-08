@@ -1120,3 +1120,16 @@ sources:
     metadata:
       source_grid_name: lon-lat-r100
 
+  daily-hpz7-o2d-zos:
+    args:
+      chunks: 'auto'
+      urlpath: 
+        /work/ab0995/a270260/polytope2zarr/zos_climatedt-gen2_IFS-NEMO-5km_baseline-hist_daily-hpz7-o2d.zarr
+      consolidated: true
+    description: 'ifs-nemo historical 1990, grids: tco2559 eORCA12'
+    driver: zarr
+    metadata:
+      source_grid_name: nemo-eORCA12-hpz7-nested-v3
+      fixer_name: climatedt-phase2-production
+      hpc_expver: o007
+
