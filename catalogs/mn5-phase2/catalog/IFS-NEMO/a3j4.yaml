@@ -372,6 +372,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -388,6 +390,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -499,6 +503,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -535,6 +541,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -544,3 +552,199 @@ sources:
         type: str
         allowed:
         - r1
+  aqua-water_cycle-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.europe.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-radiation_toa-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-atmosphere2d-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-water_cycle-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic water_cycle data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.europe.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
+  aqua-radiation_surface-timeseries:
+    driver: netcdf
+    description: AQUA diagnostic radiation_surface data for product timeseries
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/radiation-surface/netcdf/radiation_surface.timeseries.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+  aqua-atmosphere2d-seasonalcycles:
+    driver: netcdf
+    description: AQUA diagnostic atmosphere2d data for product seasonalcycles
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.{{region}}.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+        - North Midlatitudes
+        - South Midlatitudes
+        - Europe
