@@ -656,7 +656,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc01/bsc998159/a3j4/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j4/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-NEMO.a3j4.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
