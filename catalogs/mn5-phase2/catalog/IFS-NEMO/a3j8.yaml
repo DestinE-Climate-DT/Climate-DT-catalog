@@ -757,6 +757,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -773,6 +775,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
