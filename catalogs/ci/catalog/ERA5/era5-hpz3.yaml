@@ -24,3 +24,11 @@ sources:
       - '{{ TEST_PATH }}/ERA5/hpz3/ERA5*.nc'
     description: monthly output with a regrid_method nn
     driver: netcdf
+  monthly-no-grid:
+    metadata:
+      source_grid_name: false
+    args:     
+      urlpath:
+      - '{{ TEST_PATH }}/ERA5/hpz3/ERA5*.nc'
+    description: monthly output with no grid
+    driver: netcdf
