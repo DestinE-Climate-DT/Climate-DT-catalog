@@ -40,6 +40,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/ERA5/main.yaml"
+  ECMWF:
+    description: ECMWF ERA5 reanalysis data
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/ECMWF/main.yaml"
   GPM:
     description: Global Precipitation Measurement
     driver: yaml_file_cat
