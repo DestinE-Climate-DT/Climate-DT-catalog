@@ -4,7 +4,7 @@ plugins:
 sources:
   timeseries1D:
     metadata:
-      source_grid_name: null
+      source_grid_name: False
     args:
       urlpath:
       - '{{ TEST_PATH }}/FESOM/results/global_time_series_timeseries_2t_IFS-FESOM_historical-1990_mon.nc'
@@ -12,7 +12,7 @@ sources:
 
   atmglobalmean2D:
     metadata:
-      source_grid_name: null 
+      source_grid_name: False
     args:
       urlpath:
       - '{{ TEST_PATH }}/FESOM/results/atmglobalmean.statistics_maps.2t.IFS-FESOM_historical-1990.nc'
