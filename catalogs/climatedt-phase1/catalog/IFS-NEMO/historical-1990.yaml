@@ -475,7 +475,7 @@ sources:
         combine: 'nested'
         compat: 'override'
     metadata:
-      source_grid_name: null
+      source_grid_name: False
 
   aqua-timeseries-annual:
     driver: netcdf
@@ -488,7 +488,7 @@ sources:
         combine: 'nested'
         compat: 'override'
     metadata:
-      source_grid_name: null
+      source_grid_name: False
 
   aqua-atmglobalmean:
     driver: netcdf
@@ -501,7 +501,7 @@ sources:
         combine: 'nested'
         compat: 'override'
     metadata:
-      source_grid_name: null
+      source_grid_name: False
 
   aqua-zonalmean:
     driver: netcdf
@@ -521,4 +521,4 @@ sources:
         type: str
         default: 'atlantic'
     metadata:
-      source_grid_name: null
+      source_grid_name: False
