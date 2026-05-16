@@ -111,3 +111,9 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-2017-T2K-ensemble.yaml'
+  historical-1990:
+    description: aqua IFS-FESOM historical 1990 monthly timeseries
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/historical-1990.yaml'
+   
