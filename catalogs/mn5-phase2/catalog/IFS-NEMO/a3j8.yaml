@@ -556,7 +556,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -590,7 +590,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -623,7 +623,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc01/bsc998159/a3j8/output/aqua-analysis/mn5-phase2/IFS-NEMO/a3j8/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.mn5-phase2.IFS-NEMO.a3j8.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
