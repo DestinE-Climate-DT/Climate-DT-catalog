@@ -91,6 +91,44 @@ sources:
       variables: [129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz9-nested
 
+  daily-hpz9-atm2d:
+    <<: *base-default
+    description: daily 2D atmospheric data on healpix grid (zoom=9, h1024) (orography and land-sea mask only).
+    args:
+      <<: *args-default
+      chunks: D
+      savefreq: D
+      data_start_date: 20210101T0000
+      data_end_date: 20241031
+      bridge_end_date: complete
+      request:
+        <<: *request-default
+        resolution: high
+        param: 129
+    metadata:
+      <<: *metadata-default
+      variables: [129, 172]
+      source_grid_name: hpz9-nested
+
+  daily-hpz7-atm2d:
+    <<: *base-default
+    description: daily 2D atmospheric data on healpix grid (zoom=7, h128) (orography and land-sea mask only).
+    args:
+      <<: *args-default
+      chunks: D
+      savefreq: D
+      data_start_date: 20210101T0000
+      data_end_date: 20241031
+      bridge_end_date: complete
+      request:
+        <<: *request-default
+        resolution: standard
+        param: 129
+    metadata:
+      <<: *metadata-default
+      variables: [129, 172]
+      source_grid_name: hpz7-nested
+
   daily-hpz7-oce2d:
     <<: *base-default
     description: daily 2D oceanic data on healpix grid (zoom=7, h128).
