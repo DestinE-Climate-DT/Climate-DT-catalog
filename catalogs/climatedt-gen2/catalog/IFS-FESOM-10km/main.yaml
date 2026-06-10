@@ -1,0 +1,55 @@
+sources:
+  story-nudging-cont:
+    description: '"ifs-fesom storyline-control 2017, grids: tco1279 NG5"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: MN5
+      expid: o021
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: control
+      start: '2017'
+      dashboard:
+        menu: story-nudging-cont
+        resolution_id: SR
+        note: ocean LRA missing
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-nudging-cont.yaml'
+  story-nudging-hist:
+    description: '"ifs-fesom storyline-historical 2017, grids: tco1279 NG5"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5
+      expid: o01v
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: historical
+      start: '2017'
+      dashboard:
+        menu: story-nudging-hist
+        resolution_id: SR
+        note: ocean LRA missing
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-nudging-hist.yaml'
+  story-nudging-Tplus2K:
+    description: '"ifs-fesom story-nudging-Tplus2K 2017, grids: tco1279 NG5"'
+    metadata:
+      author: awi229971
+      maintainer: not specified
+      machine: mn5
+      expid: o022
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: tplus2K
+      start: '2017'
+      dashboard:
+        menu: story-nudging-Tplus2K
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-nudging-Tplus2K.yaml'

@@ -474,7 +474,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20000101T0000
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 131
@@ -560,7 +560,7 @@ sources:
     args:
       <<: *args-default
       data_start_date: 20100101T0000
-      chunks: 6H
+      chunks: 6h
       request:
         <<: *request-default
         param: 131

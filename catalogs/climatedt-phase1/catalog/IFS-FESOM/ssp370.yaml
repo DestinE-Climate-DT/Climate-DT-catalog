@@ -463,4 +463,5 @@ sources:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-r100
+      fixer_name: fesom-destine-v1  # some FESOM details to be fixed even in the LRA
