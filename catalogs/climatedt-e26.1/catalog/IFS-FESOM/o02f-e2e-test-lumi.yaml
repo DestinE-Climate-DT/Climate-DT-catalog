@@ -1185,7 +1185,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /scratch/project_465001542/shafeequ1/o02f/output/LRA/climatedt-e26.1/IFS-FESOM/o02f-e2e-test-lumi/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-e26.1_IFS-FESOM_o02f-e2e-test-lumi_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /appl/local/climatedt/data/AQUA/LRA/climatedt-e26.1/IFS-FESOM/o02f-e2e-test-lumi/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-e26.1_IFS-FESOM_o02f-e2e-test-lumi_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
