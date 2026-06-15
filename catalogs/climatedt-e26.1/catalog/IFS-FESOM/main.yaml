@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  o02e-e2e-test-mn5:
+    description: '"ifs-fesom o02e-e2e-test-mn5 1988, grids: tco2559 NG5"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: o02w
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: baseline-cont
+      start: '1988'
+      dashboard:
+        menu: o02e-e2e-test-mn5
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o02e-e2e-test-mn5.yaml'
