@@ -18,7 +18,9 @@ This repository focuses on the catalog, the main AQUA codebase is open-sourced a
 11. nextgems4: Catalog with the nextGEMS cycle4 experiments. (Levante)
 12. nord4-eerie: Catalog for the EERIE project in the Nord4 machine
 13. obs: Catalog with the observational datasets. (multi machine)
-14. template: A template catalog to be used for new catalog generation
+14. test-phase3: Catalog for tests in ClimateDT Phase3
+15. template: A template catalog to be used for new catalog generation
+
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.
 
