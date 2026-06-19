@@ -92,8 +92,8 @@ sources:
       chunks:
         time: 24
       xarray_kwargs:
-        decode_times: True
-        use_cftime: True
+        decode_times: true
+        use_cftime: true
       urlpath:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y

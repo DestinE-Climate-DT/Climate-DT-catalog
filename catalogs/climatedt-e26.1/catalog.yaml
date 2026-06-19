@@ -6,18 +6,33 @@ metadata:
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o26.1
 
 sources:
-  IFS-NEMO:
+  IFS-NEMO-5km:
     description: IFS-NEMO model
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml'
-  IFS-FESOM:
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-5km/main.yaml'
+  IFS-FESOM-5km:
     description: IFS-FESOM coupled model
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM/main.yaml'
-  ICON:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-5km/main.yaml'
+  ICON-5km:
     description: ICON coupled model
     driver: yaml_file_cat
     args:
-      path: '{{CATALOG_DIR}}/catalog/ICON/main.yaml'
+      path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'
+  IFS-NEMO-10km:
+    description: IFS-NEMO model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-10km/main.yaml'
+  IFS-FESOM-10km:
+    description: IFS-FESOM coupled model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-10km/main.yaml'
+  ICON-10km:
+    description: ICON coupled model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ICON-10km/main.yaml'
