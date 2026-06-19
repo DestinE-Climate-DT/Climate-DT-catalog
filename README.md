@@ -6,7 +6,7 @@ This repository focuses on the catalog, the main AQUA codebase is open-sourced a
 ## Available catalogs
 
 1. ci: Catalog for the CI/CD tests of AQUA.
-2. climatedt-gen2: catalog for the climatedt-gen2 simulations (consolidated rusn from o25.1 and operational run from o26.1)
+2. climatedt-gen2: catalog for the climatedt-gen2 simulations (consolidated runs from o25.1 and operational run from o26.1)
 3. climatedt-e26.1: Catalog for the Climate DT E suite 26.1 experiments.
 4. climatedt-o25.1: Catalog for the Climate DT O suite 25.1 experiments.
 5. climatedt-phase1: Catalog for the Climate DT phase1 production experiments. (Lumi, LRA on Levante and MN5 as well)
