@@ -14,3 +14,49 @@ lumi:
   intake:
     ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
     FDB_HOME: /scratch/project_465000454/experiments
+lumi-o26.1:
+  paths:
+    grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-26.1_v1.0/grids
+    weights: /scratch/project_465001542/aqua_cache/weights
+    areas: /scratch/project_465001542/aqua_cache/areas
+  intake:
+    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o26.1
+MN5-o26.1:
+  paths:
+    grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-26.1_v1.0/grids
+    weights: /gpfs/scratch/ehpc123/aqua_cache/weights
+    areas: /gpfs/scratch/ehpc123/aqua_cache/areas
+  intake:
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o26.1
+wilma:
+  paths:
+    grids: /scratch/users/mnurisso/aqua-dvc/grids
+    weights: /scratch/users/mnurisso/aqua-dvc/weights
+    areas: /scratch/users/mnurisso/aqua-dvc/areas
+  intake:
+    LRA_PATH: /archive/mnurisso/LRA/climatedt-o25.1
+    ZARR_PATH: null
+hpc2020:
+  paths:
+    grids: /ec/res4/hpcperm/itmn/data/aqua-dvc/grids
+    weights: /ec/res4/hpcperm/itmn/data/aqua-dvc/weights
+    areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: null
+    ZARR_PATH: null
+levante:
+  paths:
+    grids: /work/bb1153/b382289/data/aqua-dvc/grids
+    weights: /work/bb1153/b382289/data/aqua-dvc/weights
+    areas: /work/bb1153/b382289/data/aqua-dvc/areas
+  intake:
+    LRA_PATH: /work/bb1153/b383197/DROP/climatedt-o25.1
+    ZARR_PATH: null
+mafalda:
+  paths:
+    grids: /work/common/aqua/aqua-dvc/grids
+    weights: /work/common/aqua/aqua-dvc/weights
+    areas: /work/common/aqua/aqua-dvc/areas
+  intake:
+    LRA_PATH: /data/datasets/lra/climatedt-o25.1
+    ZARR_PATH: null
