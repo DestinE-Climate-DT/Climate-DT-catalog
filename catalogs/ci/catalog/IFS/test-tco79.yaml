@@ -184,15 +184,3 @@ sources:
       - '{{ TEST_PATH }}/IFS/long/regridded_r18x9.nc'
     description: coarse IFS data 1y
     driver: netcdf
-  r100-monthly-zarr:
-    driver: zarr
-    description: AQUA zarr DROP-generated data monthly at r100
-    args:
-      urlpath:
-      - reference::drop_test/ci/IFS/test-tco79/r1/r100/monthly/mean/global/zarr/drop-monthly-files.json
-      chunks:
-        lat: 180
-        lon: 360
-        time: 12
-    metadata:
-      source_grid_name: r100
