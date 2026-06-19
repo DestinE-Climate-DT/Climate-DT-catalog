@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  o02y-storyline-historical:
+    description: '"ifs-fesom o02y-storyline-historical 2017, grids: tco1279 NG5"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: o02y
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: baseline-hist
+      start: '2017'
+      dashboard:
+        menu: o02y-storyline-historical
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o02y-storyline-historical.yaml'
