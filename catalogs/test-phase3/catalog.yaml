@@ -36,6 +36,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/IFS-FESOM-25km/main.yaml"
+  IFS-FESOM-31km:
+    description: A model dataset
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/IFS-FESOM-31km/main.yaml"
   IFS-FESOM-120km:
     description: A model dataset
     driver: yaml_file_cat
