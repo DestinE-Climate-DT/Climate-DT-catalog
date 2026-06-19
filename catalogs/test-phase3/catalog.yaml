@@ -1,13 +1,4 @@
-metadata:
-  parameters:
-    ECCODES_PATH:
-      type: str
-      description: the path to the eccodes definitions. Default is Lumi
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
-    FDB_HOME:
-      type: str
-      description: FDB HOME path. Default is Lumi
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
+
   
 sources:
   IFS-NEMO-5km:
