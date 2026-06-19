@@ -1,53 +1,51 @@
-
-  
 sources:
   IFS-NEMO-5km:
     description: IFS-NEMO Tco2559eORCA12
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-NEMO-5km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-5km/main.yaml'
   IFS-NEMO-10km:
     description: IFS-NEMO Tco1279eORCA12
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-NEMO-10km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-10km/main.yaml'
   IFS-NEMO-25km:
-    description: IFS-NEMO Tco399eORCA025 
+    description: IFS-NEMO Tco399eORCA025
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-NEMO-25km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-25km/main.yaml'
   IFS-NEMO-120km:
     description: IFS-NEMO Tco79eORCA1
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-NEMO-120km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-120km/main.yaml'
   IFS-FESOM-5km:
     description: A model dataset
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-FESOM-5km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-5km/main.yaml'
   IFS-FESOM-10km:
     description: A model dataset
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-FESOM-10km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-10km/main.yaml'
   IFS-FESOM-25km:
     description: A model dataset
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-FESOM-25km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-25km/main.yaml'
   IFS-FESOM-120km:
     description: A model dataset
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/IFS-FESOM-120km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-120km/main.yaml'
   ICON-5km:
-    description: ICON r2b9 
+    description: ICON r2b9
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'
   ICON-10km:
     description: ICON r2b8
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/ICON-10km/main.yaml"
+      path: '{{CATALOG_DIR}}/catalog/ICON-10km/main.yaml'
