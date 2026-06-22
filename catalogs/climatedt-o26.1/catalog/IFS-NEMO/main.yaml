@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  projections-ssp126:
+    description: '"ifs-nemo projections-ssp126 2015, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: a3om
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: ssp126
+      start: '2015'
+      dashboard:
+        menu: projections-ssp126
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
