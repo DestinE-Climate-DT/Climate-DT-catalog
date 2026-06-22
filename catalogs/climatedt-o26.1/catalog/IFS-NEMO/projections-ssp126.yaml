@@ -1328,7 +1328,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/a3om/output/aqua-analysis/climatedt-o26.1/IFS-NEMO/projections-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o26.1.IFS-NEMO.projections-ssp126.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /gpfs/scratch/ehpc123/bsc655096/a3om/output/aqua-analysis/climatedt-o26.1/IFS-NEMO/projections-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-o26.1.IFS-NEMO.projections-ssp126.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1413,7 +1413,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/a3om/output/aqua-analysis/climatedt-o26.1/IFS-NEMO/projections-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-o26.1.IFS-NEMO.projections-ssp126.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/bsc655096/a3om/output/aqua-analysis/climatedt-o26.1/IFS-NEMO/projections-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-o26.1.IFS-NEMO.projections-ssp126.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
