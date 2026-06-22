@@ -584,7 +584,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /appl/local/climatedt/data/AQUA/LRA/test-phase3/IFS-NEMO-5km/t0rp/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_test-phase3_IFS-NEMO-5km_t0rp_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /gpfs/scratch/ehpc01/bsc984535/t0rp/output/LRA/test-phase3/IFS-NEMO-5km/t0rp/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_test-phase3_IFS-NEMO-5km_t0rp_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
@@ -677,6 +677,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0rp/output/aqua-analysis/test-phase3/IFS-NEMO-5km/t0rp/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.test-phase3.IFS-NEMO-5km.t0rp.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -750,6 +752,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0rp/output/aqua-analysis/test-phase3/IFS-NEMO-5km/t0rp/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.test-phase3.IFS-NEMO-5km.t0rp.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -804,6 +808,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0rp/output/aqua-analysis/test-phase3/IFS-NEMO-5km/t0rp/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.test-phase3.IFS-NEMO-5km.t0rp.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -821,6 +827,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc984535/t0rp/output/aqua-analysis/test-phase3/IFS-NEMO-5km/t0rp/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.test-phase3.IFS-NEMO-5km.t0rp.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
