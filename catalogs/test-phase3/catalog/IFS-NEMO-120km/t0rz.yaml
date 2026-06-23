@@ -584,7 +584,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/bsc122036/t0rz/output/LRA/test-phase3/IFS-NEMO-120km/t0rz/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_test-phase3_IFS-NEMO-120km_t0rz_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /appl/local/climatedt/data/AQUA/LRA/test-phase3/IFS-NEMO-120km/t0rz/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_test-phase3_IFS-NEMO-120km_t0rz_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
