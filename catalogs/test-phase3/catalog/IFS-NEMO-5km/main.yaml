@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t0s8:
+    description: '"IFS-NEMO-5km t0s8 1990, grids: tco79 eORCA1"'
+    metadata:
+      author: bsc984535
+      maintainer: not specified
+      machine: MN5
+      expid: t0s8
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: baseline-cont
+      start: '1990'
+      dashboard:
+        menu: t0s8
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0s8.yaml'
