@@ -1,8 +1,8 @@
 MN5:
   paths:
-    grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
-    weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
-    areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
+    grids: /gpfs/scratch/ehpc01/awi548625/t0rq/aqua-data/grids
+    weights: /gpfs/scratch/ehpc01/awi548625/t0rq/aqua-data/weights
+    areas: /gpfs/scratch/ehpc01/awi548625/t0rq/aqua-data/areas
 lumi:
   paths:
     grids: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/grids
