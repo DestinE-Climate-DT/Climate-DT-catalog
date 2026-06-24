@@ -38,6 +38,7 @@ sources:
       fixer_name: MSWEP-default
     args:
       consolidated: True
+      chunks: auto
       urlpath: 
       - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.daily.zarr'
 
