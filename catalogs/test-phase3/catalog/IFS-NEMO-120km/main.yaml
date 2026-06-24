@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t0rr:
+    description: '"IFS-NEMO-120km t0rr 1990, grids: tco79 eORCA1"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: t0rr
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: baseline-cont
+      start: '1990'
+      dashboard:
+        menu: t0rr
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0rr.yaml'
