@@ -20,7 +20,7 @@ lumi:
     weights: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/weights
     areas: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/areas
   intake:
-    DATA_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/datasets
+    DATA_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-datasets
     DVC_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/datasets
 MN5:
   paths:
