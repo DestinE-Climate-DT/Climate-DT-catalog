@@ -1294,6 +1294,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o031/output/aqua-analysis/climatedt-gen2/IFS-NEMO-5km/projections-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-gen2.IFS-NEMO-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1310,6 +1312,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o031/output/aqua-analysis/climatedt-gen2/IFS-NEMO-5km/projections-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-gen2.IFS-NEMO-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1572,6 +1576,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o031/output/aqua-analysis/climatedt-gen2/IFS-NEMO-5km/projections-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-gen2.IFS-NEMO-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1589,6 +1595,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o031/output/aqua-analysis/climatedt-gen2/IFS-NEMO-5km/projections-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-gen2.IFS-NEMO-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
