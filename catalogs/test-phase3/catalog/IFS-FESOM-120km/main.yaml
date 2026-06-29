@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t0sw:
+    description: '"IFS-FESOM-120km t0sw 1990, grids: tco79 CORE2"'
+    metadata:
+      author: bsc984535
+      maintainer: not specified
+      machine: MN5
+      expid: t0sw
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: baseline-hist
+      start: '1990'
+      dashboard:
+        menu: t0sw
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0sw.yaml'
