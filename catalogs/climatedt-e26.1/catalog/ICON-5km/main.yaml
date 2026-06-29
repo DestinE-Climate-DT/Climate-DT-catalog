@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  projections-ssp126:
+    description: '"ICON-5km projections-ssp126 2015, grids: R2B9 R02B09"'
+    metadata:
+      author: youcheng
+      maintainer: not specified
+      machine: lumi-o26.1
+      expid: a3ov
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: projections-ssp1-2-6
+      start: '2015'
+      dashboard:
+        menu: projections-ssp126
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
