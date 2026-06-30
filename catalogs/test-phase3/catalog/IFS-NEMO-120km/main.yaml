@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  a011:
+    description: '"IFS-NEMO-120km a011 1990, grids: tco79 eORCA1"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: a011
+      resolution_atm: tco79
+      resolution_oce: eORCA1
+      forcing: baseline-cont
+      start: '1990'
+      dashboard:
+        menu: a011
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a011.yaml'
