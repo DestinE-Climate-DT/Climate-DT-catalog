@@ -10,7 +10,7 @@ sources:
           trust_env: True
       chunks: auto
     metadata:
-      source_grid_name: False
+      source_grid_name: lon-lat
       fixer_name: era5-earth-data-hub
   hourly-r025-pl: 
     description: ERA5 hourly data from 1940 to 2026 with ARCO Earth Data Hub on pressure levels
@@ -23,7 +23,7 @@ sources:
           trust_env: True
       chunks: auto
     metadata:
-      source_grid_name: False
+      source_grid_name: lon-lat
       fixer_name: era5-earth-data-hub
   daily-r025-sfc: 
     description: ERA5 daily data from 1940 to 2026 with ARCO Earth Data Hub on single levels
