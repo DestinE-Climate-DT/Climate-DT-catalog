@@ -3,12 +3,12 @@ sources:
     description: ERA5 hourly data from 1940 to 2026 with ARCO Earth Data Hub on single levels
     driver: zarr
     args:
-      urlpath: "https://data.earthdatahub.destine.eu/era5/reanalysis-era5-single-levels-v0.zarr"
+      urlpath: "https://api.earthdatahub.destine.eu/era5/reanalysis-era5-single-levels-v0.zarr"
       consolidated: True
       storage_options: 
         client_kwargs:
           trust_env: True
-      chunks: null
+      chunks: auto
     metadata:
       source_grid_name: False
       fixer_name: era5-earth-data-hub
@@ -16,12 +16,12 @@ sources:
     description: ERA5 hourly data from 1940 to 2026 with ARCO Earth Data Hub on pressure levels
     driver: zarr
     args:
-      urlpath: "https://data.earthdatahub.destine.eu/era5/reanalysis-era5-pressure-levels-v0.zarr"
+      urlpath: "https://api.earthdatahub.destine.eu/era5/reanalysis-era5-pressure-levels-v0.zarr"
       consolidated: True
       storage_options: 
         client_kwargs:
           trust_env: True
-      chunks: null
+      chunks: auto
     metadata:
       source_grid_name: False
       fixer_name: era5-earth-data-hub
@@ -29,13 +29,13 @@ sources:
     description: ERA5 daily data from 1940 to 2026 with ARCO Earth Data Hub on single levels
     driver: zarr
     args:
-      urlpath: "https://data.earthdatahub.destine.eu/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr"
+      urlpath: "https://api.earthdatahub.destine.eu/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr"
       consolidated: True
       storage_options: 
         client_kwargs:
           trust_env: True
-      chunks: null
+      chunks: auto
     metadata:
-      source_grid_name: False
+      source_grid_name: lon-lat
       fixer_name: era5-earth-data-hub
   
