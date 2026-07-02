@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t40e:
+    description: '"IFS-FESOM-120km t40e 1990, grids: tco79 CORE2"'
+    metadata:
+      author: shafeequ1
+      maintainer: not specified
+      machine: lumi
+      expid: t40e
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: baseline-cont
+      start: '1990'
+      dashboard:
+        menu: t40e
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t40e.yaml'
