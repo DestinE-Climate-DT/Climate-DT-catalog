@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t406:
+    description: '"IFS-FESOM-120km t406 1990, grids: tco79 CORE2"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: t406
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: baseline-hist
+      start: '1990'
+      dashboard:
+        menu: t406
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t406.yaml'
