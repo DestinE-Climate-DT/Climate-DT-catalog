@@ -4,13 +4,18 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/era5.yaml"
-  arco-era5:
+  google-era5:
     description: ERA5 hourly data from with ARCO ERA5 Google cloud
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/arco-era5.yaml"
-  earth-era5:
+  earthhub-era5:
     description: ERA5 hourly data from with ARCO Earth Data Hub Google cloud
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/earth-era5.yaml"
+  cds-era5:
+    description: ERA5 hourly data from with ARCO Earth Data Hub Google cloud
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/cds-era5.yaml"
