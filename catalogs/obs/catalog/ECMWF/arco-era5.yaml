@@ -11,3 +11,4 @@ sources:
     metadata:
       source_grid_name: longitude-latitude
       fixer_name: era5-arco
+      startdate: 1940-01-01
