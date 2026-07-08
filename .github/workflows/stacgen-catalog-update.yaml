@@ -1,0 +1,255 @@
+name: Generate STAC Catalogs with AQUA
+
+on:
+    schedule:
+        - cron: "0 3 * * 1" # run every Monday at 03:00 UTC
+    workflow_dispatch:
+        inputs:
+            models:
+                description: 'JSON array of models to process (e.g. ["icon", "ifs-fesom"])'
+                required: false
+                default: '["icon"]'
+                type: string
+            activities:
+                description: 'JSON array of activities to process (e.g. ["baseline", "projections"])'
+                required: false
+                default: '["baseline"]'
+                type: string
+            aqua_branch:
+                description: 'AQUA repository branch to use'
+                required: false
+                default: 'stac-catgen'
+                type: string
+            create_pr:
+                description: 'Create pull request automatically'
+                required: false
+                default: true
+                type: boolean
+
+permissions:
+    contents: write
+    pull-requests: write
+
+defaults:
+    run:
+        shell: bash -l -eo pipefail {0}
+
+jobs:
+    generate_stac:
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        strategy:
+            matrix:
+                model: ${{ fromJson(inputs.models || '["icon"]') }}
+                activity: ${{ fromJson(inputs.activities || '["baseline"]') }}
+            fail-fast: true
+        
+        steps:
+            - name: Checkout Climate-DT-catalog repository
+              uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
+
+            - name: Checkout AQUA repository
+              uses: actions/checkout@v6
+              with:
+                  repository: DestinE-Climate-DT/AQUA
+                  ref: ${{ inputs.aqua_branch || 'stac-catgen' }}
+                  path: aqua-repo
+
+            - name: Setup Micromamba environment
+              uses: mamba-org/setup-micromamba@v2
+              with:
+                  environment-file: aqua-repo/environment.yml
+                  cache-environment: true
+                  cache-downloads: true
+
+            - name: Install AQUA in editable mode
+              run: |
+                  cd aqua-repo
+                  pip install -e .
+                  cd ..
+                  echo "AQUA installation completed"
+                  aqua --version
+
+            - name: Set up AQUA catalogs
+              run: |
+                  # Initialize AQUA catalogs in $HOME/.aqua
+                  aqua -vv install github
+                  
+                  # Add catalogs from repository
+                  echo "Adding catalogs from repository..."
+                  for catalog in $(ls catalogs); do
+                    echo "Adding catalog: $catalog"
+                    aqua -vv add "$catalog" -e "catalogs/$catalog"
+                  done
+
+            - name: Set up Polytope Key
+              run: |
+                  # Set up polytope secrets
+                  cat >$HOME/.polytopeapirc << EOF
+                  {
+                    "user_key": "${{ secrets.POLYTOPE_KEY }}"
+                  }
+                  EOF
+
+            - name: Run stacgen for ${{ matrix.model }} - ${{ matrix.activity }}
+              run: |
+                  echo "==========================================="
+                  echo "Generating STAC catalog for:"
+                  echo "  Model: ${{ matrix.model }}"
+                  echo "  Activity: ${{ matrix.activity }}"
+                  echo "==========================================="
+                  
+                  aqua -vv stacgen --model ${{ matrix.model }} --activity ${{ matrix.activity }}
+                  
+                  echo "==========================================="
+                  echo "STAC generation completed"
+                  echo "==========================================="
+
+            - name: Show generated files
+              run: |
+                  echo "Modified files:"
+                  git status --short
+
+            - name: Upload generated catalog artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                  name: stacgen-${{ matrix.model }}-${{ matrix.activity }}
+                  path: catalogs/
+                  retention-days: 7
+                  if-no-files-found: error
+
+    create_pr:
+        needs: [generate_stac]
+        runs-on: ubuntu-latest
+        if: ${{ (inputs.create_pr != false) && success() }}
+        
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
+                  token: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Download all artifacts
+              uses: actions/download-artifact@v4
+              with:
+                  pattern: stacgen-*
+                  path: artifacts
+                  merge-multiple: false
+
+            - name: Merge artifacts into catalogs
+              run: |
+                  echo "Merging all generated catalogs..."
+                  
+                  # Copy all artifacts back to catalogs directory
+                  for artifact_dir in artifacts/stacgen-*; do
+                    if [ -d "$artifact_dir/catalogs" ]; then
+                      echo "Merging: $artifact_dir"
+                      cp -r "$artifact_dir"/catalogs/* catalogs/ 2>/dev/null || true
+                    fi
+                  done
+                  
+                  echo "Files after merge:"
+                  git status --short
+
+            - name: Configure git
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            - name: Create branch and commit changes
+              id: commit
+              run: |
+                  # Create branch name with current date
+                  BRANCH_NAME="stacgen-update-$(date +%Y-%m-%d-%H%M)"
+                  echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+                  
+                  # Create and switch to new branch
+                  git checkout -b "$BRANCH_NAME"
+                  
+                  # Stage all changes in catalogs
+                  git add catalogs/
+                  
+                  # Check if there are changes to commit
+                  if git diff --cached --quiet; then
+                    echo "No changes to commit"
+                    echo "has_changes=false" >> $GITHUB_OUTPUT
+                    exit 0
+                  fi
+                  
+                  echo "has_changes=true" >> $GITHUB_OUTPUT
+                  
+                  # Create commit message
+                  MODELS="${{ inputs.models || '[\"icon\"]' }}"
+                  ACTIVITIES="${{ inputs.activities || '[\"baseline\"]' }}"
+                  AQUA_BRANCH="${{ inputs.aqua_branch || 'stac-catgen' }}"
+                  
+                  git commit -m "chore: update STAC catalogs via stacgen [automated]" \
+                            -m "" \
+                            -m "Models: $MODELS" \
+                            -m "Activities: $ACTIVITIES" \
+                            -m "AQUA branch: $AQUA_BRANCH" \
+                            -m "" \
+                            -m "Generated by: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  
+                  # Push branch
+                  git push origin "$BRANCH_NAME"
+
+            - name: Create Pull Request
+              if: steps.commit.outputs.has_changes == 'true'
+              uses: peter-evans/create-pull-request@v6
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  branch: ${{ steps.commit.outputs.branch_name }}
+                  title: "Update STAC catalogs with AQUA stacgen"
+                  body: |
+                      ## 🤖 Automated STAC Catalog Update
+                      
+                      **Generated on**: ${{ github.event.repository.updated_at }}
+                      **AQUA branch**: `${{ inputs.aqua_branch || 'stac-catgen' }}`
+                      **Models processed**: ${{ inputs.models || '["icon"]' }}
+                      **Activities processed**: ${{ inputs.activities || '["baseline"]' }}
+                      
+                      ### Commands executed
+                      
+                      For each model/activity combination:
+                      ```bash
+                      aqua -vv stacgen --model <model> --activity <activity>
+                      ```
+                      
+                      ### Workflow details
+                      
+                      - 🔗 [Workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+                      - 🌿 Branch: `${{ steps.commit.outputs.branch_name }}`
+                      - ⏰ Triggered: ${{ github.event_name }}
+                      
+                      ---
+                      
+                      ⚠️ **Please review the generated catalogs before merging**
+                      
+                      This PR contains automatically generated STAC catalog updates. Please verify:
+                      - [ ] Generated YAML files are syntactically correct
+                      - [ ] Catalog structure is as expected
+                      - [ ] No sensitive information was accidentally committed
+                      - [ ] Data references are valid
+                  labels: |
+                      automated
+                      stac-generation
+                  delete-branch: true
+                  committer: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
+            - name: Summary
+              if: steps.commit.outputs.has_changes == 'true'
+              run: |
+                  echo "✅ Pull request created successfully"
+                  echo "Branch: ${{ steps.commit.outputs.branch_name }}"
+                  echo "Models: ${{ inputs.models || '[\"icon\"]' }}"
+                  echo "Activities: ${{ inputs.activities || '[\"baseline\"]' }}"
+
+            - name: No changes summary
+              if: steps.commit.outputs.has_changes == 'false'
+              run: |
+                  echo "ℹ️ No changes detected after running stacgen"
+                  echo "The generated catalogs are identical to the existing ones"
