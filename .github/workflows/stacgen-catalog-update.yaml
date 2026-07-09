@@ -91,7 +91,7 @@ jobs:
                   echo "  Activity: ${{ matrix.activity }}"
                   echo "==========================================="
                   
-                  aqua -vv stacgen --model ${{ matrix.model }} --activity ${{ matrix.activity }}
+                  aqua -vv stacgen --model ${{ matrix.model }} --activity ${{ matrix.activity }} --output catalogs/
                   
                   echo "==========================================="
                   echo "STAC generation completed"
@@ -135,9 +135,11 @@ jobs:
                   
                   # Copy all artifacts back to catalogs directory
                   for artifact_dir in artifacts/stacgen-*; do
-                    if [ -d "$artifact_dir/catalogs" ]; then
+                    if [ -d "$artifact_dir" ]; then
                       echo "Merging: $artifact_dir"
-                      cp -r "$artifact_dir"/catalogs/* catalogs/ 2>/dev/null || true
+                      echo "Contents:"
+                      ls -la "$artifact_dir"
+                      cp -rv "$artifact_dir"/* catalogs/ 2>/dev/null || true
                     fi
                   done
                   
