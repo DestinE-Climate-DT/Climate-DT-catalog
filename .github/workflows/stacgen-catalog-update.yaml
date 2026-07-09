@@ -35,14 +35,8 @@ defaults:
         shell: bash -l -eo pipefail {0}
 
 jobs:
-    generate_stac:
+    stacgen_and_pr:
         runs-on: ubuntu-latest
-        continue-on-error: false
-        strategy:
-            matrix:
-                model: ${{ fromJson(inputs.models || '["icon"]') }}
-                activity: ${{ fromJson(inputs.activities || '["baseline"]') }}
-            fail-fast: true
         
         steps:
             - name: Checkout Climate-DT-catalog repository
@@ -83,150 +77,69 @@ jobs:
                   }
                   EOF
 
-            - name: Run stacgen for ${{ matrix.model }} - ${{ matrix.activity }}
+            - name: Generate STAC catalogs for all models/activities
+              env:
+                  MODELS_INPUT: ${{ inputs.models }}
+                  ACTIVITIES_INPUT: ${{ inputs.activities }}
               run: |
                   echo "==========================================="
-                  echo "Generating STAC catalog for:"
-                  echo "  Model: ${{ matrix.model }}"
-                  echo "  Activity: ${{ matrix.activity }}"
+                  echo "Generating STAC catalogs"
+                  echo "Models: ${MODELS_INPUT:='["icon"]'}"
+                  echo "Activities: ${ACTIVITIES_INPUT:='["baseline"]'}"
                   echo "==========================================="
                   
-                  aqua -vv stacgen --model ${{ matrix.model }} --activity ${{ matrix.activity }} --output ./
+                  # Use defaults if not provided
+                  MODELS="${MODELS_INPUT:='["icon"]'}"
+                  ACTIVITIES="${ACTIVITIES_INPUT:='["baseline"]'}"
                   
-                  echo "==========================================="
-                  echo "STAC generation completed"
-                  echo "==========================================="
-
-            - name: Show generated files
-              run: |
-                  echo "Modified files:"
-                  git status --short
-
-            - name: Upload generated catalog artifacts
-              uses: actions/upload-artifact@v7
-              with:
-                  name: stacgen-${{ matrix.model }}-${{ matrix.activity }}
-                  path: |
-                      catalogs/
-                  retention-days: 7
-                  if-no-files-found: error
-
-    create_pr:
-        needs: [generate_stac]
-        runs-on: ubuntu-latest
-        if: ${{ (inputs.create_pr != false) && success() }}
-        
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v6
-              with:
-                  fetch-depth: 0
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  persist-credentials: false
-
-            - name: Download all artifacts
-              uses: actions/download-artifact@v8
-              with:
-                  pattern: stacgen-*
-                  path: artifacts
-                  merge-multiple: false
-
-            - name: DEBUG - List artifacts structure
-              run: |
-                  echo "=== ARTIFACT DIRECTORY STRUCTURE ==="
-                  ls -laR artifacts/ | head -100
-                  echo ""
-                  echo "=== FIND ALL FILES IN ARTIFACTS ==="
-                  find artifacts -type f | head -30
-                  echo ""
-                  echo "=== CHECKING ARTIFACT CONTENTS ==="
-                  for artifact_dir in artifacts/stacgen-*; do
-                    echo "Found artifact: $artifact_dir"
-                    echo "  Contents:"
-                    ls -la "$artifact_dir"/ 2>/dev/null || echo "    ERROR: Cannot list $artifact_dir"
-                    if [ -d "$artifact_dir/catalogs" ]; then
-                      echo "  Catalogs subdirectory found:"
-                      ls -la "$artifact_dir/catalogs/" | head -10
-                    else
-                      echo "  WARNING: No catalogs subdirectory in $artifact_dir"
-                    fi
-                  done
-
-            - name: Merge artifacts into catalogs
-              run: |
-                  echo "=== MERGING ARTIFACTS ==="
-                  echo "Merging all generated catalogs..."
+                  # Count total
+                  TOTAL_MODELS=$(echo "$MODELS" | jq 'length')
+                  TOTAL_ACTIVITIES=$(echo "$ACTIVITIES" | jq 'length')
+                  TOTAL=$((TOTAL_MODELS * TOTAL_ACTIVITIES))
+                  COUNT=0
                   
-                  MERGED_COUNT=0
-                  
-                  # Copy all artifacts back to catalogs directory
-                  for artifact_dir in artifacts/stacgen-*; do
-                    if [ -d "$artifact_dir" ]; then
+                  # Generate for each combination
+                  for model in $(echo "$MODELS" | jq -r '.[]'); do
+                    for activity in $(echo "$ACTIVITIES" | jq -r '.[]'); do
+                      ((COUNT++))
                       echo ""
-                      echo "Processing artifact: $artifact_dir"
-                      
-                      # Try to find where the actual catalogs are
-                      if [ -d "$artifact_dir/catalogs" ]; then
-                        echo "  Found catalogs/ in artifact"
-                        echo "  Copying: $artifact_dir/catalogs/* -> catalogs/"
-                        cp -rv "$artifact_dir"/catalogs/* catalogs/ && echo "  ✓ Copy successful" || echo "  ✗ Copy failed"
-                        ((MERGED_COUNT++))
-                      elif [ -f "$artifact_dir" ]; then
-                        echo "  ERROR: $artifact_dir is a file, not a directory"
-                      else
-                        echo "  ERROR: No catalogs/ directory found in $artifact_dir"
-                        echo "  Contents of $artifact_dir:"
-                        ls -la "$artifact_dir/" || true
-                      fi
-                    else
-                      echo "  ERROR: $artifact_dir is not a directory"
-                    fi
+                      echo "[$COUNT/$TOTAL] Generating: $model - $activity"
+                      aqua -vv stacgen --model "$model" --activity "$activity" --output ./
+                    done
                   done
                   
                   echo ""
-                  echo "=== MERGE COMPLETE ==="
-                  echo "Artifacts merged: $MERGED_COUNT"
-                  echo ""
-                  echo "Files after merge:"
-                  git status --short
+                  echo "==========================================="
+                  echo "All STAC generation completed"
+                  echo "==========================================="
 
             - name: Check for changes
-              id: commit
+              id: check
               run: |
-                  # Create branch name with current date (create-pull-request will actually create this branch)
-                  BRANCH_NAME="stacgen-update-$(date +%Y-%m-%d-%H%M)"
-                  echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-
-                  echo ""
-                  echo "=== CHECKING FOR CHANGES ==="
-                  echo "Current git status:"
+                  echo "=== GIT STATUS BEFORE ADD ==="
                   git status --short
-                  echo ""
                   
-                  # Stage all changes in catalogs so we can detect whether there's anything to commit
                   git add catalogs/
                   
-                  echo "After git add catalogs/:"
-                  git status --short
                   echo ""
-
-                  # Check if there are changes to commit
+                  echo "=== GIT STATUS AFTER ADD ==="
+                  git status --short
+                  
                   if git diff --cached --quiet; then
-                    echo "❌ No changes to commit"
                     echo "has_changes=false" >> $GITHUB_OUTPUT
+                    echo "❌ No changes detected"
                   else
-                    echo "✅ Changes detected!"
                     echo "has_changes=true" >> $GITHUB_OUTPUT
-                    echo "Files staged for commit:"
+                    echo "✅ Changes detected:"
                     git diff --cached --name-status | head -30
                   fi
 
             - name: Create Pull Request
-              if: steps.commit.outputs.has_changes == 'true'
+              if: ${{ (inputs.create_pr != false) && steps.check.outputs.has_changes == 'true' }}
               uses: peter-evans/create-pull-request@v8
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
-                  branch: ${{ steps.commit.outputs.branch_name }}
+                  branch: stacgen-update-${{ github.run_number }}
                   base: main
                   commit-message: |
                       chore: update STAC catalogs via stacgen [automated]
@@ -240,7 +153,7 @@ jobs:
                   body: |
                       ## 🤖 Automated STAC Catalog Update
 
-                      **Generated on**: ${{ github.event.repository.updated_at }}
+                      **Run ID**: ${{ github.run_id }}
                       **AQUA branch**: `${{ inputs.aqua_branch || 'stac-catgen' }}`
                       **Models processed**: ${{ inputs.models || '["icon"]' }}
                       **Activities processed**: ${{ inputs.activities || '["baseline"]' }}
@@ -248,21 +161,19 @@ jobs:
                       ### Commands executed
 
                       For each model/activity combination:
-
+                      ```bash
                       aqua -vv stacgen --model <model> --activity <activity>
-
+                      ```
 
                       ### Workflow details
 
                       - 🔗 [Workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
-                      - 🌿 Branch: `${{ steps.commit.outputs.branch_name }}`
                       - ⏰ Triggered: ${{ github.event_name }}
 
                       ---
 
                       ⚠️ **Please review the generated catalogs before merging**
 
-                      This PR contains automatically generated STAC catalog updates. Please verify:
                       - [ ] Generated YAML files are syntactically correct
                       - [ ] Catalog structure is as expected
                       - [ ] No sensitive information was accidentally committed
@@ -274,15 +185,11 @@ jobs:
                   committer: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
 
             - name: Summary
-              if: steps.commit.outputs.has_changes == 'true'
+              if: always()
               run: |
-                  echo "✅ Pull request created successfully"
-                  echo "Branch: ${{ steps.commit.outputs.branch_name }}"
-                  echo "Models: ${{ inputs.models || '[\"icon\"]' }}"
-                  echo "Activities: ${{ inputs.activities || '[\"baseline\"]' }}"
-
-            - name: No changes summary
-              if: steps.commit.outputs.has_changes == 'false'
-              run: |
-                  echo "ℹ️ No changes detected after running stacgen"
-                  echo "The generated catalogs are identical to the existing ones"
+                  if [ "${{ steps.check.outputs.has_changes }}" = "true" ]; then
+                    echo "✅ PR created successfully"
+                    echo "Branch: stacgen-update-${{ github.run_number }}"
+                  else
+                    echo "ℹ️ No changes detected - skipping PR creation"
+                  fi
