@@ -91,7 +91,7 @@ jobs:
                   echo "  Activity: ${{ matrix.activity }}"
                   echo "==========================================="
                   
-                  aqua -vv stacgen --model ${{ matrix.model }} --activity ${{ matrix.activity }} --output catalogs/
+                  aqua -vv stacgen --model ${{ matrix.model }} --activity ${{ matrix.activity }} --output ./
                   
                   echo "==========================================="
                   echo "STAC generation completed"
@@ -106,7 +106,8 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: stacgen-${{ matrix.model }}-${{ matrix.activity }}
-                  path: catalogs/
+                  path: |
+                      catalogs/
                   retention-days: 7
                   if-no-files-found: error
 
@@ -137,8 +138,6 @@ jobs:
                   for artifact_dir in artifacts/stacgen-*; do
                     if [ -d "$artifact_dir" ]; then
                       echo "Merging: $artifact_dir"
-                      echo "Contents:"
-                      ls -la "$artifact_dir"
                       cp -rv "$artifact_dir"/* catalogs/ 2>/dev/null || true
                     fi
                   done
@@ -195,6 +194,7 @@ jobs:
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   branch: ${{ steps.commit.outputs.branch_name }}
+                  base: main
                   title: "Update STAC catalogs with AQUA stacgen"
                   body: |
                       ## 🤖 Automated STAC Catalog Update
