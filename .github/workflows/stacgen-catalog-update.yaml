@@ -139,7 +139,7 @@ jobs:
                   for artifact_dir in artifacts/stacgen-*; do
                     if [ -d "$artifact_dir" ]; then
                       echo "Merging: $artifact_dir"
-                      cp -rv "$artifact_dir"/* catalogs/ 2>/dev/null || true
+                      cp -rv "$artifact_dir"/catalogs/* catalogs/ 2>/dev/null || true
                     fi
                   done
 
@@ -162,6 +162,8 @@ jobs:
                     echo "has_changes=false" >> $GITHUB_OUTPUT
                   else
                     echo "has_changes=true" >> $GITHUB_OUTPUT
+                    echo "Files staged for commit:"
+                    git diff --cached --name-status | head -20
                   fi
 
             - name: Create Pull Request
