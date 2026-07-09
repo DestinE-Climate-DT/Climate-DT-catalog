@@ -55,35 +55,21 @@ jobs:
               with:
                   repository: DestinE-Climate-DT/AQUA
                   ref: ${{ inputs.aqua_branch || 'stac-catgen' }}
-                  path: aqua-repo
+                  path: AQUA
 
             - name: Setup Micromamba environment
               uses: mamba-org/setup-micromamba@v2
               with:
-                  environment-file: aqua-repo/environment.yml
+                  environment-file: AQUA/environment.yml
                   cache-environment: true
                   cache-downloads: true
 
-            - name: Install AQUA in editable mode
-              run: |
-                  cd aqua-repo
-                  pip install -e .
-                  cd ..
-                  echo "AQUA installation completed"
-                  aqua --version
 
-            - name: Set up AQUA catalogs
+            - name: Set up AQUA
               run: |
                   # Initialize AQUA catalogs in $HOME/.aqua
                   aqua -vv install github
-                  
-                  # Add catalogs from repository
-                  echo "Adding catalogs from repository..."
-                  for catalog in $(ls catalogs); do
-                    echo "Adding catalog: $catalog"
-                    aqua -vv add "$catalog" -e "catalogs/$catalog"
-                  done
-
+        
             - name: Set up Polytope Key
               run: |
                   # Set up polytope secrets
