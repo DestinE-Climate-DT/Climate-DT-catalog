@@ -131,18 +131,62 @@ jobs:
                   path: artifacts
                   merge-multiple: false
 
-            - name: Merge artifacts into catalogs
+            - name: DEBUG - List artifacts structure
               run: |
-                  echo "Merging all generated catalogs..."
-
-                  # Copy all artifacts back to catalogs directory
+                  echo "=== ARTIFACT DIRECTORY STRUCTURE ==="
+                  ls -laR artifacts/ | head -100
+                  echo ""
+                  echo "=== FIND ALL FILES IN ARTIFACTS ==="
+                  find artifacts -type f | head -30
+                  echo ""
+                  echo "=== CHECKING ARTIFACT CONTENTS ==="
                   for artifact_dir in artifacts/stacgen-*; do
-                    if [ -d "$artifact_dir" ]; then
-                      echo "Merging: $artifact_dir"
-                      cp -rv "$artifact_dir"/catalogs/* catalogs/ 2>/dev/null || true
+                    echo "Found artifact: $artifact_dir"
+                    echo "  Contents:"
+                    ls -la "$artifact_dir"/ 2>/dev/null || echo "    ERROR: Cannot list $artifact_dir"
+                    if [ -d "$artifact_dir/catalogs" ]; then
+                      echo "  Catalogs subdirectory found:"
+                      ls -la "$artifact_dir/catalogs/" | head -10
+                    else
+                      echo "  WARNING: No catalogs subdirectory in $artifact_dir"
                     fi
                   done
 
+            - name: Merge artifacts into catalogs
+              run: |
+                  echo "=== MERGING ARTIFACTS ==="
+                  echo "Merging all generated catalogs..."
+                  
+                  MERGED_COUNT=0
+                  
+                  # Copy all artifacts back to catalogs directory
+                  for artifact_dir in artifacts/stacgen-*; do
+                    if [ -d "$artifact_dir" ]; then
+                      echo ""
+                      echo "Processing artifact: $artifact_dir"
+                      
+                      # Try to find where the actual catalogs are
+                      if [ -d "$artifact_dir/catalogs" ]; then
+                        echo "  Found catalogs/ in artifact"
+                        echo "  Copying: $artifact_dir/catalogs/* -> catalogs/"
+                        cp -rv "$artifact_dir"/catalogs/* catalogs/ && echo "  ✓ Copy successful" || echo "  ✗ Copy failed"
+                        ((MERGED_COUNT++))
+                      elif [ -f "$artifact_dir" ]; then
+                        echo "  ERROR: $artifact_dir is a file, not a directory"
+                      else
+                        echo "  ERROR: No catalogs/ directory found in $artifact_dir"
+                        echo "  Contents of $artifact_dir:"
+                        ls -la "$artifact_dir/" || true
+                      fi
+                    else
+                      echo "  ERROR: $artifact_dir is not a directory"
+                    fi
+                  done
+                  
+                  echo ""
+                  echo "=== MERGE COMPLETE ==="
+                  echo "Artifacts merged: $MERGED_COUNT"
+                  echo ""
                   echo "Files after merge:"
                   git status --short
 
@@ -153,17 +197,28 @@ jobs:
                   BRANCH_NAME="stacgen-update-$(date +%Y-%m-%d-%H%M)"
                   echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
+                  echo ""
+                  echo "=== CHECKING FOR CHANGES ==="
+                  echo "Current git status:"
+                  git status --short
+                  echo ""
+                  
                   # Stage all changes in catalogs so we can detect whether there's anything to commit
                   git add catalogs/
+                  
+                  echo "After git add catalogs/:"
+                  git status --short
+                  echo ""
 
                   # Check if there are changes to commit
                   if git diff --cached --quiet; then
-                    echo "No changes to commit"
+                    echo "❌ No changes to commit"
                     echo "has_changes=false" >> $GITHUB_OUTPUT
                   else
+                    echo "✅ Changes detected!"
                     echo "has_changes=true" >> $GITHUB_OUTPUT
                     echo "Files staged for commit:"
-                    git diff --cached --name-status | head -20
+                    git diff --cached --name-status | head -30
                   fi
 
             - name: Create Pull Request
