@@ -20,11 +20,6 @@ on:
                 required: false
                 default: 'stac-catgen'
                 type: string
-            create_pr:
-                description: 'Create pull request automatically'
-                required: false
-                default: true
-                type: boolean
 
 permissions:
     contents: write
@@ -37,7 +32,7 @@ defaults:
 jobs:
     stacgen_and_pr:
         runs-on: ubuntu-latest
-        
+
         steps:
             - name: Checkout Climate-DT-catalog repository
               uses: actions/checkout@v6
@@ -67,7 +62,7 @@ jobs:
               run: |
                   # Initialize AQUA catalogs in $HOME/.aqua
                   aqua -vv install github
-        
+
             - name: Set up Polytope Key
               run: |
                   # Set up polytope secrets
@@ -84,47 +79,77 @@ jobs:
               run: |
                   echo "==========================================="
                   echo "Generating STAC catalogs"
-                  echo "Models: ${MODELS_INPUT:='["icon"]'}"
-                  echo "Activities: ${ACTIVITIES_INPUT:='["baseline"]'}"
                   echo "==========================================="
-                  
-                  # Use defaults if not provided
-                  MODELS="${MODELS_INPUT:='["icon"]'}"
-                  ACTIVITIES="${ACTIVITIES_INPUT:='["baseline"]'}"
-                  
-                  # Count total
+
+                  # Use defaults if not provided (falls through on schedule triggers too,
+                  # since inputs.* is empty on non-workflow_dispatch events)
+                  MODELS="${MODELS_INPUT:-'["icon"]'}"
+                  ACTIVITIES="${ACTIVITIES_INPUT:-'["baseline"]'}"
+                  [ -z "$MODELS" ] && MODELS='["icon"]'
+                  [ -z "$ACTIVITIES" ] && ACTIVITIES='["baseline"]'
+
+                  echo "Models: $MODELS"
+                  echo "Activities: $ACTIVITIES"
+
                   TOTAL_MODELS=$(echo "$MODELS" | jq 'length')
                   TOTAL_ACTIVITIES=$(echo "$ACTIVITIES" | jq 'length')
                   TOTAL=$((TOTAL_MODELS * TOTAL_ACTIVITIES))
                   COUNT=0
-                  
+                  FAILED=()
+
                   # Generate for each combination
                   for model in $(echo "$MODELS" | jq -r '.[]'); do
                     for activity in $(echo "$ACTIVITIES" | jq -r '.[]'); do
-                      ((COUNT++))
+                      # NOTE: use arithmetic expansion, not ((COUNT++)) -- the latter
+                      # evaluates to the pre-increment value (0 on the first pass),
+                      # which `set -e` treats as a failing command and kills the script.
+                      COUNT=$((COUNT + 1))
                       echo ""
                       echo "[$COUNT/$TOTAL] Generating: $model - $activity"
-                      aqua -vv stacgen --model "$model" --activity "$activity" --output ./
+
+                      # Don't let one failing combination abort the rest of the run.
+                      if ! aqua -vv stacgen --model "$model" --activity "$activity" --output ./; then
+                        echo "⚠️  FAILED: $model - $activity"
+                        FAILED+=("$model/$activity")
+                      fi
                     done
                   done
-                  
+
                   echo ""
                   echo "==========================================="
-                  echo "All STAC generation completed"
+                  if [ ${#FAILED[@]} -eq 0 ]; then
+                    echo "✅ All STAC generation completed successfully"
+                  else
+                    echo "⚠️  STAC generation finished with failures:"
+                    printf '  - %s\n' "${FAILED[@]}"
+                  fi
                   echo "==========================================="
+
+                  # Fail the step (after doing all the work) if anything failed,
+                  # so the run is still flagged red in the Actions UI.
+                  if [ ${#FAILED[@]} -ne 0 ]; then
+                    exit 1
+                  fi
 
             - name: Check for changes
               id: check
               run: |
                   echo "=== GIT STATUS BEFORE ADD ==="
                   git status --short
-                  
-                  git add catalogs/
-                  
+
+                  # Guard against `catalogs/` not existing (e.g. if stacgen wrote
+                  # elsewhere) so `git add` doesn't error out under set -e.
+                  if [ -d catalogs ]; then
+                    git add catalogs/
+                  else
+                    echo "⚠️  'catalogs/' directory not found -- checking for other changes"
+                    git add -A
+                  fi
+
                   echo ""
                   echo "=== GIT STATUS AFTER ADD ==="
                   git status --short
-                  
+
                   if git diff --cached --quiet; then
                     echo "has_changes=false" >> $GITHUB_OUTPUT
                     echo "❌ No changes detected"
@@ -135,7 +160,7 @@ jobs:
                   fi
 
             - name: Create Pull Request
-              if: ${{ (inputs.create_pr != false) && steps.check.outputs.has_changes == 'true' }}
+              if: ${{ steps.check.outputs.has_changes == 'true' }}
               uses: peter-evans/create-pull-request@v8
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
