@@ -1,0 +1,11 @@
+sources:
+  test-eORCA1:
+    description: test data for eORCA1
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/test-eORCA1.yaml"
+  results:
+    description: AQUA output to test ensemble module
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/results.yaml"

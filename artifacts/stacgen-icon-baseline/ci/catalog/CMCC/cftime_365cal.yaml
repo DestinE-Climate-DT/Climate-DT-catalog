@@ -1,0 +1,17 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  monthly-atm:
+    description: CMCC atmosphere tprate data
+    driver: netcdf
+    metadata:
+      source_grid_name: cmcc-cm2-vhr4-atm
+    args:
+      urlpath:
+          - '{{ TEST_PATH }}/CMCC/cftime_365cal/cmcc_shifted_365cal.nc'
+      chunks:
+        time: 1
+      xarray_kwargs:
+        decode_times: True

@@ -1,0 +1,6 @@
+sources:
+  exp1:
+    description: An experiment
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/exp1.yaml'

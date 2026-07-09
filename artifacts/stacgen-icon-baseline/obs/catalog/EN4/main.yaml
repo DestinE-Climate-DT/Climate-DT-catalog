@@ -1,0 +1,7 @@
+sources:
+  v4.2.2:
+    description: AQUA updated version of EN4 data 
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/v4.2.2.yaml"
+

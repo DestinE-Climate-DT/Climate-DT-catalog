@@ -1,0 +1,11 @@
+sources:
+  control-1950-devcon:
+    description: DE340 development control run with fixed GHG from 1950
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/control-1950-devcon.yaml"
+  historical-1990-devcon:
+    description: DE340 development control run with fixed GHG from 1950
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/historical-1990-devcon.yaml"

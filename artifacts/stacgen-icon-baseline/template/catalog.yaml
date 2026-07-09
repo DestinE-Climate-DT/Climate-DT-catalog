@@ -1,0 +1,13 @@
+metadata:
+  parameters:
+    PARAMETER1:
+      type: str
+      description: an example parameter
+      default: /path/to/something
+  
+sources:
+  Model1:
+    description: A model dataset
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/Model1/main.yaml"

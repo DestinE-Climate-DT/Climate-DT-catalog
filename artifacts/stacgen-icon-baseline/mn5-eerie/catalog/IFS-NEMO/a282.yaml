@@ -1,0 +1,16 @@
+sources:
+  EERIE:
+    driver: netcdf
+    description: IFS-NEMO data at 25km res, with EERIE data pipeline
+    args:
+      urlpath: 
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Amon*
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/Omon*
+        - /gpfs/scratch/ehpc01/bsc032120/lab/output/eerie/a282/SImon*
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+    metadata:
+      source_grid_name: lon-lat
+      fixer-name: eerie

@@ -1,0 +1,32 @@
+metadata:
+  parameters:
+    LRA_PATH:
+      type: str
+      description: the path to the LRA
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
+    ZARR_PATH:
+      type: str
+      description: the path to the Zarr data
+      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-gen2
+
+sources:
+  IFS-NEMO-5km:
+    description: IFS-NEMO model at 5km resolution
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-5km/main.yaml'
+  IFS-FESOM-5km:
+    description: IFS-FESOM coupled model at 5km resolution
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-5km/main.yaml'
+  IFS-FESOM-10km:
+    description: IFS-FESOM coupled model at 10km resolution
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-10km/main.yaml'
+  ICON-5km:
+    description: ICON coupled model at 5km resolution
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'

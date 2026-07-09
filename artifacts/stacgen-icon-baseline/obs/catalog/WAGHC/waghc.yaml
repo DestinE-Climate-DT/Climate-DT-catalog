@@ -1,0 +1,38 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+  clim-bar:
+    description: WAGHC 1985-2016 from isobaric interpolation
+    driver: netcdf
+    metadata:
+      source_grid_name: waghc
+      fixer_name: WAGHC
+    args:
+      urlpath:
+      - '{{DATA_PATH}}/WAGHC/WAGHC*BAR*01*.nc' 
+      xarray_kwargs:
+        decode_times: False
+  clim-pyc:
+    description: WAGHC 1985-2016 from isopyncal interpolation
+    driver: netcdf
+    metadata:
+      source_grid_name: waghc
+      fixer_name: WAGHC
+    args:
+      urlpath:
+      - '{{DATA_PATH}}/WAGHC/WAGHC*PYC*01*.nc' 
+      xarray_kwargs:
+        decode_times: False
+  clim-mixedlayer:
+    description: WAGHC 1985-2016 mixed layer depth
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat #enough since it is 2d field
+      fixer_name: WAGHC
+    args:
+      urlpath:
+      - '{{DATA_PATH}}/WAGHC/WAGHC_Mixedlayer_Bottomdepth_UHAM-ICDC_v1_0.nc' 
+      xarray_kwargs:
+        decode_times: False

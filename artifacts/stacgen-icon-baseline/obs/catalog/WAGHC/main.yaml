@@ -1,0 +1,6 @@
+sources:
+ waghc:
+    description: WOCE/Argo Global Hydrographic Climatology (WAGHC) 1986-2016
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/waghc.yaml"

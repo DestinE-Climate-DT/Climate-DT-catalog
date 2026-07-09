@@ -1,0 +1,13 @@
+sources:
+  hourly-r025: 
+    description: ERA5 hourly data from 1940 to 2022 with ARCO ERA5 Google cloud
+    driver: zarr
+    args:
+      urlpath: 'gs://gcp-public-data-arco-era5/ar/full_37-1h-0p25deg-chunk-1.zarr-v3'
+      consolidated: True
+      storage_options: 
+        token: 'anon'
+      chunks: null
+    metadata:
+      source_grid_name: longitude-latitude
+      fixer_name: era5-arco
