@@ -58,12 +58,16 @@ jobs:
                   path: AQUA
 
             - name: Setup Micromamba environment
-              uses: mamba-org/setup-micromamba@v2
+              uses: mamba-org/setup-micromamba@v3
               with:
                   environment-file: AQUA/environment.yml
                   cache-environment: true
                   cache-downloads: true
 
+            - name: Install AQUA
+              run: |
+                    cd AQUA
+                    pip install -e .
 
             - name: Set up AQUA
               run: |
