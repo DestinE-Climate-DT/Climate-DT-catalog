@@ -1,0 +1,27 @@
+sources:
+  baseline-abrupt4xco2:
+    description: STAC-derived catalog entry for daily-hpz10-o2d (icon, 
+      abrupt4xco2)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
+  baseline-cont:
+    description: STAC-derived catalog entry for daily-hpz10-o2d (icon, cont)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-cont.yaml'
+  baseline-hist:
+    description: STAC-derived catalog entry for daily-hpz10-o2d (icon, hist)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-hist.yaml'
+  projections-ssp126:
+    description: STAC-derived catalog entry for hourly-hpz10-hl (icon, ssp1-2.6)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
+  projections-ssp370:
+    description: STAC-derived catalog entry for daily-hpz10-o2d (icon, ssp3-7.0)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp370.yaml'

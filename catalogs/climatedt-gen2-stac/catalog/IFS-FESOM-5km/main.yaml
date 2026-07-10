@@ -1,0 +1,25 @@
+sources:
+  baseline-abrupt4xco2:
+    description: STAC-derived catalog entry for hourly-hpz10-hl (ifs-fesom, 
+      abrupt4xco2)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
+  baseline-cont:
+    description: STAC-derived catalog entry for hourly-hpz10-hl (ifs-fesom, 
+      cont)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-cont.yaml'
+  baseline-hist:
+    description: STAC-derived catalog entry for hourly-hpz10-hl (ifs-fesom, 
+      hist)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-hist.yaml'
+  projections-ssp370:
+    description: STAC-derived catalog entry for hourly-hpz10-hl (ifs-fesom, 
+      ssp3-7.0)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp370.yaml'

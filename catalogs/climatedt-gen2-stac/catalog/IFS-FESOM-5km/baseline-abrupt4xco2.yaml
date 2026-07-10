@@ -1,0 +1,257 @@
+sources:
+  hourly-hpz10-hl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 131
+        levtype: hl
+        levelist: [100]
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for hourly-hpz10-hl (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [131, 132]
+      source_grid_name: hpz10
+      fixer_name: climatedt-phase2-production
+  daily-hpz10-o2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for daily-hpz10-o2d (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [263000, 263001, 263003, 263004, 263100, 263101, 263124]
+      source_grid_name: fesom-NG5-hpz10-nested-v4
+      fixer_name: climatedt-phase2-production
+  hourly-hpz10-pl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 129
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: 6h
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for hourly-hpz10-pl (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [129, 131, 132]
+      source_grid_name: hpz10-nested
+      fixer_name: climatedt-phase2-production
+  hourly-hpz10-sfc:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 151
+        levtype: sfc
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for hourly-hpz10-sfc (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [151, 165, 166, 167, 168, 172, 207, 228002, 228164, 235035, 
+          235040, 235043, 235055]
+      source_grid_name: hpz10-nested
+      fixer_name: climatedt-phase2-production
+  hourly-hpz7-hl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 131
+        levtype: hl
+        levelist: [100]
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for hourly-hpz7-hl (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [131, 132]
+      source_grid_name: hpz7
+      fixer_name: climatedt-phase2-production
+  daily-hpz7-o2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for daily-hpz7-o2d (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [263000, 263001, 263003, 263004, 263100, 263101, 263124]
+      source_grid_name: fesom-NG5-hpz7-nested-v4
+      fixer_name: climatedt-phase2-production
+  hourly-hpz7-pl:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 129
+        levtype: pl
+        levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
+            600, 700, 850, 925, 1000]
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: 6h
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for hourly-hpz7-pl (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [129, 131, 132]
+      source_grid_name: hpz7-nested
+      fixer_name: climatedt-phase2-production
+  hourly-hpz7-sfc:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: baseline  # To be overwritten by workflow/config file
+        experiment: abrupt4xco2  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: ifs-fesom
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        type: fc
+        stream: clte
+        date: 19950101
+        time: 0000
+        param: 151
+        levtype: sfc
+      data_start_date: 19950101T0000
+      data_end_date: 20160331T2300
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: STAC-derived catalog entry for hourly-hpz7-sfc (ifs-fesom, 
+      abrupt4xco2)
+    driver: gsv
+    metadata:
+      variables: [151, 165, 166, 167, 168, 172, 207, 228002, 228164, 235035, 
+          235040, 235043, 235055]
+      source_grid_name: hpz7-nested
+      fixer_name: climatedt-phase2-production
