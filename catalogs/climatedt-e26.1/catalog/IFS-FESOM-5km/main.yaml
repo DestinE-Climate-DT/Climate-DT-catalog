@@ -2,3 +2,22 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  a3ox-e2e-test-ifs-fesom-ssp126:
+    description: '"IFS-FESOM-5km a3ox-e2e-test-ifs-fesom-ssp126 2015, grids: tco2559
+      NG5"'
+    metadata:
+      author: avartiai
+      maintainer: not specified
+      machine: lumi-o26.1
+      expid: a3ox
+      resolution_atm: tco2559
+      resolution_oce: NG5
+      forcing: projections-ssp1-2-6
+      start: '2015'
+      dashboard:
+        menu: a3ox-e2e-test-ifs-fesom-ssp126
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a3ox-e2e-test-ifs-fesom-ssp126.yaml'
