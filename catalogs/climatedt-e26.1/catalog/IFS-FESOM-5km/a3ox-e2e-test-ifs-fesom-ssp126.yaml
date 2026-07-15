@@ -1328,6 +1328,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/avartiai/a3ox/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-5km/a3ox-e2e-test-ifs-fesom-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-e26.1.IFS-FESOM-5km.a3ox-e2e-test-ifs-fesom-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1420,6 +1422,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/avartiai/a3ox/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-5km/a3ox-e2e-test-ifs-fesom-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-e26.1.IFS-FESOM-5km.a3ox-e2e-test-ifs-fesom-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1436,6 +1440,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/avartiai/a3ox/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-5km/a3ox-e2e-test-ifs-fesom-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-e26.1.IFS-FESOM-5km.a3ox-e2e-test-ifs-fesom-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1453,6 +1459,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/avartiai/a3ox/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-5km/a3ox-e2e-test-ifs-fesom-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-e26.1.IFS-FESOM-5km.a3ox-e2e-test-ifs-fesom-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
