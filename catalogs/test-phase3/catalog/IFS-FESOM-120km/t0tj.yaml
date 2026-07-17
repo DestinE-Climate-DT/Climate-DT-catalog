@@ -1502,7 +1502,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r16/atmosphere2d/netcdf/atmosphere2d.annual_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r17/atmosphere2d/netcdf/atmosphere2d.annual_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1516,13 +1516,14 @@ sources:
         allowed:
         - r16
         - r1
+        - r17
   aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r16/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r17/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1536,6 +1537,7 @@ sources:
         allowed:
         - r16
         - r1
+        - r17
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -1555,13 +1557,14 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-radiation_toa-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r16/radiation-toa/netcdf/radiation_toa.annual_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r17/radiation-toa/netcdf/radiation_toa.annual_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1575,6 +1578,7 @@ sources:
         allowed:
         - r16
         - r1
+        - r17
   aqua-ocean2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product annual_climatology
@@ -1582,6 +1586,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1591,6 +1597,7 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -1610,6 +1617,7 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
@@ -1617,6 +1625,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1626,13 +1636,14 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-radiation_toa-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r16/radiation-toa/netcdf/radiation_toa.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
+        /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/r17/radiation-toa/netcdf/radiation_toa.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1646,6 +1657,7 @@ sources:
         allowed:
         - r16
         - r1
+        - r17
   aqua-water_cycle-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product annual_climatology
@@ -1653,6 +1665,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1662,6 +1676,7 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-atmosphere3d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -1681,6 +1696,7 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -1689,6 +1705,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0tj/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0tj/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0tj.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1698,6 +1716,7 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -1717,3 +1736,4 @@ sources:
         type: str
         allowed:
         - r16
+        - r17
