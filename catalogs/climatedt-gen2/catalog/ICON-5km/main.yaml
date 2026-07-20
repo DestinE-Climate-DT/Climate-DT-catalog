@@ -10,7 +10,7 @@ sources:
       dashboard:
         menu: baseline-abrupt4xco2
         resolution_id: HR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
@@ -26,7 +26,7 @@ sources:
       dashboard:
         menu: baseline-cont
         resolution_id: HR
-        note: 'first five years are part of the e-suite'
+        note: first five years are part of the e-suite
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/baseline-cont.yaml'
@@ -42,7 +42,7 @@ sources:
       dashboard:
         menu: baseline-hist
         resolution_id: HR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/baseline-hist.yaml'
@@ -57,7 +57,25 @@ sources:
       dashboard:
         menu: projections-ssp370
         resolution_id: HR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/projections-ssp370.yaml'
+  projections-ssp126:
+    description: '"ICON-5km projections-ssp126 2015, grids: R2B9 R02B09"'
+    metadata:
+      author: lrb_465001542_prod
+      maintainer: not specified
+      machine: lumi-o26.1
+      expid: o02q
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: projections-ssp1-2-6
+      start: '2015'
+      dashboard:
+        menu: projections-ssp126
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
