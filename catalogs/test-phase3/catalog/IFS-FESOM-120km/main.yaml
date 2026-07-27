@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  a3pz:
+    description: '"IFS-FESOM-120km a3pz 1990, grids: tco79 CORE2"'
+    metadata:
+      author: awi466536
+      maintainer: not specified
+      machine: MN5
+      expid: a3pz
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: baseline-hist
+      start: '1990'
+      dashboard:
+        menu: a3pz
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a3pz.yaml'
