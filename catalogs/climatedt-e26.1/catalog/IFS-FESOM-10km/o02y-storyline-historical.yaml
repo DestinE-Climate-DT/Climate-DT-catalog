@@ -1610,7 +1610,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o035/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.o02y-storyline-historical.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /gpfs/scratch/ehpc123/awi466536/o035/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.o02y-storyline-historical.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1677,7 +1677,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o035/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.o02y-storyline-historical.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/awi466536/o035/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.o02y-storyline-historical.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1763,6 +1763,7 @@ sources:
         type: str
         allowed:
         - r2
+        - r1
       region:
         description: Parameter region
         default: global
@@ -1793,6 +1794,7 @@ sources:
         type: str
         allowed:
         - r2
+        - r1
       region:
         description: Parameter region
         default: global
@@ -1826,6 +1828,7 @@ sources:
         type: str
         allowed:
         - r2
+        - r1
       region:
         description: Parameter region
         default: global
@@ -1839,6 +1842,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/awi466536/o035/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.o02y-storyline-historical.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1848,6 +1853,7 @@ sources:
         type: str
         allowed:
         - r2
+        - r1
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -1856,6 +1862,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/awi466536/o035/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.o02y-storyline-historical.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1865,3 +1873,4 @@ sources:
         type: str
         allowed:
         - r2
+        - r1
