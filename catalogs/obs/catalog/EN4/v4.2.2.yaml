@@ -10,13 +10,13 @@ sources:
       urlpath: '{{DVC_PATH}}/EN4/v4.2.2/zarr/EN4.v422.1950-2024.clev.zarr'
 
   monthly-netcdf: &monthly-netcdf
-    description: EN4 data v4.2.2_g10 version from 1950 to 2024 in netcdf format
+    description: EN4 data v4.2.2_g10 version from 1950 to 2025 in netcdf4 zip format
     driver: netcdf
     metadata:
       source_grid_name: en4
       fixer_name: EN4-default
     args:
-      urlpath: '{{DVC_PATH}}/EN4/v4.2.2/netcdf/*EN4-1950-2024.nc'
+      urlpath: '{{DVC_PATH}}/EN4/v4.2.2/netcdf/*EN4-1950-2025.nc'
       chunks: 
         time: 12
       xarray_kwargs:

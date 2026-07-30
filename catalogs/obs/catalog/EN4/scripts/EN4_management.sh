@@ -130,8 +130,8 @@ process_variable() {
 
 # Variables configuration
 BASE_URL="https://www.metoffice.gov.uk/hadobs/en4/data/en4-2-1"
-WORK_DIR="/users/cadaumar/en4_download" #TO BE CHANGED AS NEEDED
-FINAL_DIR="/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4"
+WORK_DIR="/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/en4/download" #TO BE CHANGED AS NEEDED
+FINAL_DIR="/pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/en4"
 START_YEAR=2025
 END_YEAR=2025
 
@@ -441,7 +441,7 @@ compare_coordinates() {
 }
 
 # Find files to compare
-reference_so="$FINAL_DIR/so-1950_2022.nc"
+reference_so="$FINAL_DIR/so-EN4-1950_2024.nc"
 
 # Check what SO files we have
 if [ -n "${final_merged_so:-}" ] && [ -f "$FINAL_DIR/$final_merged_so" ]; then
