@@ -1,0 +1,3 @@
+Two sets of CDR and ICDR sea ice concentration datasets from the EUMETSAT OSI SAF. One set based on AMSR-E/AMSR2 data: OSI-458+OSI-438 (covering 2002-present), and one set based on SMMR/SSMI/SSMIS data, OSI-450-a1+OSI-430-a (covering 1978-2025). The sea ice concentration is computed from atmospherically corrected PMW brightness temperatures, using a combination of state-of-the-art algorithms and dynamic tie points. It includes error bars for each grid cell (uncertainties). OSI-458 and OSI-430 were released in November 2022, OSI-450-a1 in June 2025 and OSI-438 will be released in May 2026. OSI-450 and OSI-430 will be frozen in April 2026.
+
+./get_osi_saf.py nh --start-year 2020 --end-year 2026 --concat --outdir ~/aqua-data/datasets-new/osi-saf/ --product 438
