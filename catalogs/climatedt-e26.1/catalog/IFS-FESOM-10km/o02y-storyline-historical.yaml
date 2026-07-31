@@ -1340,7 +1340,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o035/output/LRA/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-e26.1_IFS-FESOM-10km_o02y-storyline-historical_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /appl/local/climatedt/data/AQUA/LRA/climatedt-e26.1/IFS-FESOM-10km/o02y-storyline-historical/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-e26.1_IFS-FESOM-10km_o02y-storyline-historical_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
