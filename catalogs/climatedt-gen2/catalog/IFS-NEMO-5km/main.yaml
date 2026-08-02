@@ -18,31 +18,31 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
   baseline-cont:
-      description: '"IFS-NEMO control 1990, grids: tco2559 eORCA12"'
-      metadata:
-        expid: '0001'
-        resolution_atm: tco2559
-        resolution_oce: eORCA12
-        forcing: control
-        start: '1990'
-        machine: mn5
-        dashboard:
-          menu: baseline-cont
-          resolution_id: HR
-          note: 'The first 5 years were run in the e25.1 suite'
-      driver: yaml_file_cat
-      args:
-        path: '{{CATALOG_DIR}}/baseline-cont.yaml'
+    description: '"IFS-NEMO control 1990, grids: tco2559 eORCA12"'
+    metadata:
+      expid: '0001'
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: control
+      start: '1990'
+      machine: mn5
+      dashboard:
+        menu: baseline-cont
+        resolution_id: HR
+        note: The first 5 years were run in the e25.1 suite
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-cont.yaml'
   baseline-hist:
     description: 'IFS-NEMO historical-1990 o25.1, grids: tco2559 eORCA12'
     metadata:
-      expid: "0001"
+      expid: '0001'
       resolution_atm: tco2559
       resolution_oce: eORCA12
       forcing: historical
       start: '1990'
       machine: mn5
-      author: 'Cheng You'
+      author: Cheng You
       dashboard:
         menu: baseline-hist
         resolution_id: HR
@@ -62,7 +62,25 @@ sources:
       dashboard:
         menu: projections-ssp370
         resolution_id: HR
-        note:
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/projections-ssp370.yaml'
+  projections-ssp126:
+    description: '"IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: o031
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: projections-ssp1-2-6
+      start: '2015'
+      dashboard:
+        menu: projections-ssp126
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
