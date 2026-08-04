@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  o039-storyline-historical:
+    description: '"IFS-FESOM-10km o039-storyline-historical 2026, grids: tco1279 NG5"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: o039
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: story-nudging-hist
+      start: '2026'
+      dashboard:
+        menu: o039-storyline-historical
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/o039-storyline-historical.yaml'
