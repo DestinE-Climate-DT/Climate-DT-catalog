@@ -1419,6 +1419,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/lrb_465001542_prod/o034/output/aqua-analysis/climatedt-gen2/IFS-FESOM-5km/projections-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-gen2.IFS-FESOM-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1435,6 +1437,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/lrb_465001542_prod/o034/output/aqua-analysis/climatedt-gen2/IFS-FESOM-5km/projections-ssp126/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1697,6 +1701,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/lrb_465001542_prod/o034/output/aqua-analysis/climatedt-gen2/IFS-FESOM-5km/projections-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-gen2.IFS-FESOM-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1714,6 +1720,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/lrb_465001542_prod/o034/output/aqua-analysis/climatedt-gen2/IFS-FESOM-5km/projections-ssp126/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-gen2.IFS-FESOM-5km.projections-ssp126.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
