@@ -1771,7 +1771,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ul/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0ul/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.test-phase3.IFS-FESOM-120km.t0ul.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /gpfs/scratch/ehpc01/awi548625/t0ul/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0ul/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.test-phase3.IFS-FESOM-120km.t0ul.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1805,7 +1805,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc01/awi548625/t0ul/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0ul/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.test-phase3.IFS-FESOM-120km.t0ul.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /gpfs/scratch/ehpc01/awi548625/t0ul/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0ul/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.test-phase3.IFS-FESOM-120km.t0ul.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1857,6 +1857,7 @@ sources:
         type: str
         allowed:
         - r21
+        - r22
       region:
         description: Parameter region
         default: global
@@ -1890,6 +1891,7 @@ sources:
         type: str
         allowed:
         - r21
+        - r22
       region:
         description: Parameter region
         default: global
@@ -1923,6 +1925,7 @@ sources:
         type: str
         allowed:
         - r21
+        - r22
       region:
         description: Parameter region
         default: global
@@ -1953,6 +1956,7 @@ sources:
         type: str
         allowed:
         - r21
+        - r22
       region:
         description: Parameter region
         default: global
@@ -1966,6 +1970,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0ul/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0ul/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.test-phase3.IFS-FESOM-120km.t0ul.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1975,6 +1981,7 @@ sources:
         type: str
         allowed:
         - r21
+        - r22
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -1983,6 +1990,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/awi548625/t0ul/output/aqua-analysis/test-phase3/IFS-FESOM-120km/t0ul/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.test-phase3.IFS-FESOM-120km.t0ul.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1992,3 +2001,4 @@ sources:
         type: str
         allowed:
         - r21
+        - r22
