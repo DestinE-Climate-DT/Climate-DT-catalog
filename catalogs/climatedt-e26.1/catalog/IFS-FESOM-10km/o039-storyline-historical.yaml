@@ -1242,6 +1242,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o03c/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o039-storyline-historical/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.o039-storyline-historical.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1296,6 +1298,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o03c/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o039-storyline-historical/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.o039-storyline-historical.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1630,6 +1634,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o03c/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o039-storyline-historical/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.o039-storyline-historical.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1647,6 +1653,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o03c/output/aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/o039-storyline-historical/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.o039-storyline-historical.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
