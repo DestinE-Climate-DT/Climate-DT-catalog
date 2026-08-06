@@ -464,44 +464,50 @@ sources:
     metadata:
       source_grid_name: lon-lat
 
-  aqua-timeseries-monthly:
+  # Note: in the new catalog entries the frequencies are named: monthly and annual instead of mon and ann
+  aqua-timeseries-timeseries:
     driver: netcdf
     description: AQUA analysis timeseries 
     # list of variables: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc']
     args:
-      urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_mon.nc'
+      urlpath: 
+        '{{OUTPUT_AQUA_PATH}}/IFS-NEMO/historical-1990/global_time_series/netcdf/{{region}}_time_series_timeseries_*_IFS-NEMO_historical-1990_{{freq}}.nc'
+      chunks: {}
       xarray_kwargs:
-        #decode_times: true
+        decode_times: true
         combine: 'nested'
         compat: 'override'
     metadata:
-      source_grid_name: null
+      source_grid_name: false
+    parameters:
+      freq:
+        description: Parameter freq
+        default: mon
+        type: str
+        allowed:
+        - mon
+        - ann
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
 
-  aqua-timeseries-annual:
+  # Note: the Map statistics in the old entry is 'statistics_maps' 
+  aqua-globalbiases-annual_climatology:
     driver: netcdf
-    description: AQUA analysis timeseries
-    # list of variables: ['2t', 'avg_tos', 'avg_siconc', 'hcc', 'lcc', 'mcc', 'msl', 'mslhf', 'msnlwrf', 'msnswrf', 'msshf', 'mtnlwrf', 'mtnlwrf+mtnswrf', 'mtnswrf', 'tcc'] 
-    args:
-      urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/global_time_series/netcdf/global_time_series_timeseries_*_IFS-NEMO_historical-1990_ann.nc' 
-      xarray_kwargs:
-        #decode_times: true
-        combine: 'nested'
-        compat: 'override'
-    metadata:
-      source_grid_name: null
-
-  aqua-atmglobalmean:
-    driver: netcdf
-    description: AQUA analysis atm global mean
+    description: AQUA analysis annual climatology
     # list of variables: ['2t', 'msl'] 
     args:
       urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
+      chunks: {}
       xarray_kwargs:
-        #decode_times: true
+        decode_times: true
         combine: 'nested'
         compat: 'override'
     metadata:
-      source_grid_name: null
+      source_grid_name: false
 
   aqua-zonalmean:
     driver: netcdf
@@ -520,4 +526,4 @@ sources:
         type: str
         default: 'atlantic'
     metadata:
-      source_grid_name: null
+      source_grid_name: false
