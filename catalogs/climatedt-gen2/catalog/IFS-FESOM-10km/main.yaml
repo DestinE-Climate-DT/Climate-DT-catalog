@@ -36,15 +36,15 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/story-nudging-hist.yaml'
   story-nudging-Tplus2K:
-    description: '"ifs-fesom story-nudging-Tplus2K 2017, grids: tco1279 NG5"'
+    description: '"IFS-FESOM-10km story-nudging-Tplus2K 2017, grids: tco1279 NG5"'
     metadata:
-      author: awi229971
+      author: bsc655096
       maintainer: not specified
-      machine: mn5
-      expid: o022
+      machine: MN5-o26.1
+      expid: o03g
       resolution_atm: tco1279
       resolution_oce: NG5
-      forcing: tplus2K
+      forcing: story-nudging-hist
       start: '2017'
       dashboard:
         menu: story-nudging-Tplus2K
