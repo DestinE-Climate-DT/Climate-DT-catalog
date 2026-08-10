@@ -472,11 +472,11 @@ sources:
     args:
       urlpath: 
         '{{OUTPUT_AQUA_PATH}}/IFS-NEMO/historical-1990/global_time_series/netcdf/{{region}}_time_series_timeseries_*_IFS-NEMO_historical-1990_{{freq}}.nc'
-      chunks: {}
       xarray_kwargs:
         decode_times: true
         combine: 'nested'
         compat: 'override'
+        chunks: {}
     metadata:
       source_grid_name: false
     parameters:
@@ -500,9 +500,10 @@ sources:
     description: AQUA analysis annual climatology
     # list of variables: ['2t', 'msl'] 
     args:
-      urlpath: '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
-      chunks: {}
+      urlpath: 
+        '{{OUTPUT_AQUA_PATH}}/IFS-NEMO/historical-1990/atmglobalmean/netcdf/atmglobalmean.statistics_maps.*.IFS-NEMO_historical-1990.nc'
       xarray_kwargs:
+        chunks: {}
         decode_times: true
         combine: 'nested'
         compat: 'override'
@@ -515,7 +516,7 @@ sources:
     # list of variables: ['so','thetao']
     args:
       urlpath: 
-        - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_{{ region }}_ocean.nc'
+        '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_{{ region }}_ocean.nc'
       xarray_kwargs:
         decode_times: false
         chunks: {}
