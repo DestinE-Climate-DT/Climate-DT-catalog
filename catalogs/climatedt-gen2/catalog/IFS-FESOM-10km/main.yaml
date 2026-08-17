@@ -53,3 +53,21 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-nudging-Tplus2K.yaml'
+  story-nudging-Tplus2k:
+    description: '"IFS-FESOM-10km story-nudging-Tplus2k 2026, grids: tco1279 NG5"'
+    metadata:
+      author: awi466536
+      maintainer: not specified
+      machine: MN5-o26.1
+      expid: o038
+      resolution_atm: tco1279
+      resolution_oce: NG5
+      forcing: story-nudging-tplus2-0k
+      start: '2026'
+      dashboard:
+        menu: story-nudging-Tplus2k
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/story-nudging-Tplus2k.yaml'
