@@ -2999,6 +2999,7 @@ sources:
         - r3
         - r2
         - r5
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3017,7 +3018,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r5/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r4/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3033,6 +3034,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -3055,13 +3057,14 @@ sources:
         - r3
         - r2
         - r5
+        - r4
   aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r5/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r4/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3077,13 +3080,14 @@ sources:
         - r3
         - r2
         - r5
+        - r4
   aqua-radiation_toa-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r5/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r4/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3099,6 +3103,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -3121,6 +3126,7 @@ sources:
         - r3
         - r2
         - r5
+        - r4
   aqua-ocean2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product annual_climatology
@@ -3142,6 +3148,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-atmosphere3d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -3164,6 +3171,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-water_cycle-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product annual_climatology
@@ -3185,13 +3193,14 @@ sources:
         - r3
         - r2
         - r5
+        - r4
   aqua-radiation_toa-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r5/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/r4/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3207,6 +3216,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
@@ -3228,6 +3238,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -3250,6 +3261,7 @@ sources:
         - r2
         - r3
         - r5
+        - r4
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -3272,3 +3284,4 @@ sources:
         - r3
         - r2
         - r5
+        - r4
