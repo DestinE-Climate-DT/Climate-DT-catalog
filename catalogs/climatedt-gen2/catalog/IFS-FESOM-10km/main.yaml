@@ -1,19 +1,19 @@
 sources:
   story-nudging-cont:
-    description: '"ifs-fesom storyline-control 2017, grids: tco1279 NG5"'
+    description: '"IFS-FESOM-10km story-nudging-cont 2026, grids: tco1279 NG5"'
     metadata:
-      author: awi229971
+      author: awi466536
       maintainer: not specified
-      machine: MN5
-      expid: o021
+      machine: MN5-o26.1
+      expid: o037
       resolution_atm: tco1279
       resolution_oce: NG5
-      forcing: control
-      start: '2017'
+      forcing: story-nudging-cont
+      start: '2026'
       dashboard:
         menu: story-nudging-cont
         resolution_id: SR
-        note: ocean LRA missing
+        note: null
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/story-nudging-cont.yaml'
