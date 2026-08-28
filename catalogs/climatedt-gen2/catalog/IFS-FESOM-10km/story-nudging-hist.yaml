@@ -2997,6 +2997,9 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
+        - r5
       region:
         description: Parameter region
         default: global
@@ -3029,6 +3032,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -3049,6 +3054,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-water_cycle-timeseries:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product timeseries
@@ -3075,6 +3082,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3104,6 +3113,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-ocean2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product annual_climatology
@@ -3123,6 +3134,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
@@ -3143,6 +3156,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -3163,6 +3178,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
@@ -3182,6 +3199,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-atmosphere3d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -3202,6 +3221,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-radiation_toa-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
@@ -3222,6 +3243,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -3242,6 +3265,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
   aqua-ocean2d-timeseries:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product timeseries
@@ -3268,6 +3293,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3301,6 +3328,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3335,6 +3364,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3348,7 +3379,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3369,6 +3400,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3404,6 +3437,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r4
+        - r3
       region:
         description: Parameter region
         default: global
@@ -3429,6 +3464,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r4
+        - r3
   aqua-atmosphere2d-seasonalcycles:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
@@ -3454,6 +3491,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r4
+        - r3
       region:
         description: Parameter region
         default: global
@@ -3483,6 +3522,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r4
+        - r3
   aqua-radiation_surface-timeseries:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product timeseries
@@ -3509,6 +3550,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
