@@ -18,16 +18,16 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/story-nudging-cont.yaml'
   story-nudging-hist:
-    description: '"IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5"'
+    description: '"IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5"'
     metadata:
       author: awi466536
       maintainer: not specified
       machine: MN5-o26.1
-      expid: o03b
+      expid: o036
       resolution_atm: tco1279
       resolution_oce: NG5
       forcing: story-nudging-hist
-      start: '2017'
+      start: '2026'
       dashboard:
         menu: story-nudging-hist
         resolution_id: SR
