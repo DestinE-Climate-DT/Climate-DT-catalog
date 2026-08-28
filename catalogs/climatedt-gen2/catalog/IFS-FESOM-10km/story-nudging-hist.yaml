@@ -8,34 +8,23 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 78
         levtype: sfc
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -76,7 +65,7 @@ sources:
       - 235055
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz7-sfc:
     args:
       request:
@@ -86,34 +75,23 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 78
         levtype: sfc
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -154,7 +132,7 @@ sources:
       - 235055
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz9-sfc:
     args:
       request:
@@ -164,13 +142,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -186,24 +164,13 @@ sources:
         - 12
         param: 235087
         levtype: sfc
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -244,7 +211,7 @@ sources:
       - 235055
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-sfc:
     args:
       request:
@@ -254,13 +221,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -276,24 +243,13 @@ sources:
         - 12
         param: 235087
         levtype: sfc
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -334,7 +290,7 @@ sources:
       - 235055
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz9-sfc:
     args:
       request:
@@ -344,34 +300,23 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 172
         levtype: sfc
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -380,7 +325,7 @@ sources:
       - 228002
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz7-sfc:
     args:
       request:
@@ -390,34 +335,23 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 172
         levtype: sfc
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -426,7 +360,7 @@ sources:
       - 228002
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz9-pl:
     args:
       request:
@@ -436,13 +370,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 60
         levtype: pl
@@ -466,24 +400,13 @@ sources:
         - 850
         - 925
         - 1000
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: 6h
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -519,7 +442,7 @@ sources:
       - 246
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz7-pl:
     args:
       request:
@@ -529,13 +452,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 60
         levtype: pl
@@ -559,24 +482,13 @@ sources:
         - 850
         - 925
         - 1000
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: 6h
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -612,7 +524,7 @@ sources:
       - 246
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-pl:
     args:
       request:
@@ -622,13 +534,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -664,24 +576,13 @@ sources:
         - 850
         - 925
         - 1000
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -717,7 +618,7 @@ sources:
       - 235246
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz9-o2d:
     args:
       request:
@@ -727,34 +628,23 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 263000
         levtype: o2d
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -773,7 +663,7 @@ sources:
       - 263124
       source_grid_name: fesom-NG5-hpz9-nested-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz7-o2d:
     args:
       request:
@@ -783,34 +673,23 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 263000
         levtype: o2d
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -829,7 +708,7 @@ sources:
       - 263124
       source_grid_name: fesom-NG5-hpz7-nested-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz9-o2d:
     args:
       request:
@@ -839,13 +718,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -861,24 +740,13 @@ sources:
         - 12
         param: 263000
         levtype: o2d
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -897,7 +765,7 @@ sources:
       - 263124
       source_grid_name: fesom-NG5-hpz9-nested-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-o2d:
     args:
       request:
@@ -907,13 +775,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -929,24 +797,13 @@ sources:
         - 12
         param: 263000
         levtype: o2d
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -965,7 +822,7 @@ sources:
       - 263124
       source_grid_name: fesom-NG5-hpz7-nested-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz9-o3d:
     args:
       request:
@@ -975,13 +832,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 263500
         levtype: o3d
@@ -1055,24 +912,13 @@ sources:
         - 67
         - 68
         - 69
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -1153,7 +999,7 @@ sources:
       - 263506
       source_grid_name: fesom-NG5-hpz9-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz7-o3d:
     args:
       request:
@@ -1163,13 +1009,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 263500
         levtype: o3d
@@ -1243,24 +1089,13 @@ sources:
         - 67
         - 68
         - 69
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -1341,7 +1176,7 @@ sources:
       - 263506
       source_grid_name: fesom-NG5-hpz7-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz9-o3d:
     args:
       request:
@@ -1351,13 +1186,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -1443,24 +1278,13 @@ sources:
         - 67
         - 68
         - 69
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -1538,7 +1362,7 @@ sources:
       - 263505
       source_grid_name: fesom-NG5-hpz9-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-o3d:
     args:
       request:
@@ -1548,13 +1372,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -1640,24 +1464,13 @@ sources:
         - 67
         - 68
         - 69
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -1738,7 +1551,7 @@ sources:
       - 263506
       source_grid_name: fesom-NG5-hpz7-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz9-o3d-half:
     args:
       request:
@@ -1748,13 +1561,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 263507
         levtype: o3d
@@ -1829,24 +1642,13 @@ sources:
         - 68
         - 69
         - 70
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -1925,7 +1727,7 @@ sources:
       - 263507
       source_grid_name: fesom-NG5-hpz9-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   daily-hpz7-o3d-half:
     args:
       request:
@@ -1935,13 +1737,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 263507
         levtype: o3d
@@ -2016,24 +1818,13 @@ sources:
         - 68
         - 69
         - 70
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: D
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2112,7 +1903,7 @@ sources:
       - 263507
       source_grid_name: fesom-NG5-hpz7-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-o3d-half:
     args:
       request:
@@ -2122,13 +1913,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -2215,24 +2006,13 @@ sources:
         - 68
         - 69
         - 70
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2311,7 +2091,7 @@ sources:
       - 263507
       source_grid_name: fesom-NG5-hpz7-nested-3d-v4
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz9-hl:
     args:
       request:
@@ -2321,36 +2101,25 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 131
         levtype: hl
         levelist:
         - 100
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2361,7 +2130,7 @@ sources:
       - 132
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz7-hl:
     args:
       request:
@@ -2371,36 +2140,25 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 131
         levtype: hl
         levelist:
         - 100
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2411,7 +2169,7 @@ sources:
       - 132
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-hl:
     args:
       request:
@@ -2421,13 +2179,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -2445,24 +2203,13 @@ sources:
         levtype: hl
         levelist:
         - 100
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2473,7 +2220,7 @@ sources:
       - 235132
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz9-sol5:
     args:
       request:
@@ -2483,13 +2230,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 228141
         levtype: sol
@@ -2499,24 +2246,13 @@ sources:
         - 3
         - 4
         - 5
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2530,7 +2266,7 @@ sources:
       - 228141
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz7-sol5:
     args:
       request:
@@ -2540,13 +2276,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 228141
         levtype: sol
@@ -2556,24 +2292,13 @@ sources:
         - 3
         - 4
         - 5
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2587,7 +2312,7 @@ sources:
       - 228141
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz9-sol5:
     args:
       request:
@@ -2597,13 +2322,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -2625,24 +2350,13 @@ sources:
         - 3
         - 4
         - 5
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2656,7 +2370,7 @@ sources:
       - 235078
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-sol5:
     args:
       request:
@@ -2666,13 +2380,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -2694,24 +2408,13 @@ sources:
         - 3
         - 4
         - 5
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2725,7 +2428,7 @@ sources:
       - 235078
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz9-sol4:
     args:
       request:
@@ -2735,13 +2438,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 260199
         levtype: sol
@@ -2750,24 +2453,13 @@ sources:
         - 2
         - 3
         - 4
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2781,7 +2473,7 @@ sources:
       - 260360
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   hourly-hpz7-sol4:
     args:
       request:
@@ -2791,13 +2483,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clte
-        date: 20260701
+        date: 20170101
         time: 0
         param: 260199
         levtype: sol
@@ -2806,24 +2498,13 @@ sources:
         - 2
         - 3
         - 4
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: D
       savefreq: h
       timestep: h
       timestyle: date
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2837,7 +2518,7 @@ sources:
       - 260360
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz9-sol4:
     args:
       request:
@@ -2847,13 +2528,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: high
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -2874,24 +2555,13 @@ sources:
         - 2
         - 3
         - 4
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2905,7 +2575,7 @@ sources:
       - 235094
       source_grid_name: hpz9
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   monthly-hpz7-sol4:
     args:
       request:
@@ -2915,13 +2585,13 @@ sources:
         experiment: hist
         generation: 2
         model: IFS-FESOM
-        realization: '{{ realization }}'
+        realization: 11
         resolution: standard
         expver: 1
-        expid: o036
+        expid: o03b
         type: fc
         stream: clmn
-        year: 2026
+        year: 2017
         month:
         - 1
         - 2
@@ -2942,24 +2612,13 @@ sources:
         - 2
         - 3
         - 4
-      data_start_date: 20260701T0000
+      data_start_date: 20170101T0000
       data_end_date: auto
       chunks: MS
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    parameters:
-      realization:
-        allowed:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        description: realization member
-        type: int
-        default: 1
-    description: 'IFS-FESOM-10km story-nudging-hist 2026, grids: tco1279 NG5'
+    description: 'IFS-FESOM-10km story-nudging-hist 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -2973,7 +2632,7 @@ sources:
       - 235094
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o036/o036.yaml
+      fdb_info_file: /gpfs/scratch/ehpc123/awi466536/o03b/o03b.yaml
   lra-r100-monthly:
     driver: netcdf
     description: AQUA netcdf DROP-generated data monthly at r100
@@ -3008,13 +2667,13 @@ sources:
         type: str
         allowed:
         - mean
-  aqua-atmosphere2d-annual_climatology:
+  aqua-radiation_surface-annual_climatology:
     driver: netcdf
-    description: AQUA diagnostic atmosphere2d data for product 
+    description: AQUA diagnostic radiation_surface data for product 
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3029,11 +2688,11 @@ sources:
         - r1
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
-    description: AQUA diagnostic radiation_surface data for product 
+    description: AQUA diagnostic radiation_toa data for product 
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/r11/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3115,13 +2774,13 @@ sources:
         type: str
         allowed:
         - r1
-  aqua-atmosphere2d-seasonal_climatology:
+  aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
-    description: AQUA diagnostic atmosphere2d data for product 
+    description: AQUA diagnostic radiation_surface data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3136,11 +2795,27 @@ sources:
         - r1
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
-    description: AQUA diagnostic radiation_surface data for product 
+    description: AQUA diagnostic ocean2d data for product seasonal_climatology
+    args:
+      urlpath: 
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+      chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r11
+        type: str
+        allowed:
+        - r11
+  aqua-radiation_toa-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/r11/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3175,7 +2850,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3220,6 +2895,13 @@ sources:
     metadata:
       source_grid_name: false
     parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -3444,7 +3126,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o03b/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.nc
       chunks: {}
     metadata:
       source_grid_name: false
