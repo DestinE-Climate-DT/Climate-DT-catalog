@@ -8,10 +8,20 @@ metadata:
       type: str
       description: the path to the DROP output
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/DROP
+    #FDB_PATH:
+    #  type: str
+    #  description: the path to the FDB
+    #  default: /pfs/lustrep3/appl/local/climatedt
+    ###########################
+    FDB_HOME:
+      type: str
+      description: FDB HOME path.
+      default: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids/
     FDB_PATH:
       type: str
-      description: the path to the FDB
-      default: /pfs/lustrep3/appl/local/climatedt
+      description: FDB data path.
+      default: /work/ab0995/a270260/EERIE_data/fdb_hist1950/NATIVE_grids
+    ###########################
     FDB_PATH_HISTORICAL:
       type: str
       description: the path to the historical FDB data
