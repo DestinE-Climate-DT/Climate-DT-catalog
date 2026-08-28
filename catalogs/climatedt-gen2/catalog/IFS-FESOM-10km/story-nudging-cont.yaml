@@ -3018,7 +3018,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r2/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r4/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3064,7 +3064,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r2/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r4/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3133,7 +3133,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r2/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r4/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3178,7 +3178,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r2/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/awi466536/o037/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-cont/r4/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.story-nudging-cont.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3311,6 +3311,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3346,6 +3348,8 @@ sources:
         allowed:
         - r2
         - r1
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3380,6 +3384,8 @@ sources:
         allowed:
         - r2
         - r1
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3414,6 +3420,8 @@ sources:
         allowed:
         - r2
         - r1
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3448,6 +3456,8 @@ sources:
         allowed:
         - r2
         - r1
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3482,6 +3492,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3514,6 +3526,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
@@ -3545,6 +3559,8 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
+        - r4
       region:
         description: Parameter region
         default: global
