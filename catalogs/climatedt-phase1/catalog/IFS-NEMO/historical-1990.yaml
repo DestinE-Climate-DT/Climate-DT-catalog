@@ -511,9 +511,8 @@ sources:
       urlpath: 
         - '{{ OUTPUT_AQUA_PATH }}/IFS-NEMO/historical-1990/ocean3d_drift/netcdf/IFS-NEMO-historical-1990-lra-r100-monthly_zonal_mean_trend_{{ region }}_ocean.nc'
       xarray_kwargs:
-        #decode_times: true
-        combine: 'nested'
-        compat: 'override'
+        decode_times: false
+        chunks: {}
     parameters:
       region:
         allowed: ['arctic','atlantic','global','indian','pacific','southern']
