@@ -441,7 +441,7 @@ compare_coordinates() {
 }
 
 # Find files to compare
-reference_so="$FINAL_DIR/so-EN4-1950_2024.nc"
+reference_so="$FINAL_DIR/so-EN4-1950-$((START_YEAR-1)).nc"
 
 # Check what SO files we have
 if [ -n "${final_merged_so:-}" ] && [ -f "$FINAL_DIR/$final_merged_so" ]; then
