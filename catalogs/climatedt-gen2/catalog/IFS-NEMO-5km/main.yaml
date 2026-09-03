@@ -50,6 +50,24 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/baseline-hist.yaml'
+  projections-ssp126:
+    description: '"IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12"'
+    metadata:
+      author: bsc655096
+      maintainer: not specified
+      machine: mn5
+      expid: o031
+      resolution_atm: tco2559
+      resolution_oce: eORCA12
+      forcing: projections-ssp1-2-6
+      start: '2015'
+      dashboard:
+        menu: projections-ssp126
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
   projections-ssp370:
     description: '"IFS-NEMO ssp370 2015, grids: tco2559 eORCA12"'
     metadata:

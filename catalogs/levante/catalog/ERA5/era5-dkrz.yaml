@@ -1,7 +1,6 @@
 plugins:
   source:
     - module: intake_xarray
-    - module: gribscan
 
 sources:
   monthly_inst:
