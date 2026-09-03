@@ -682,7 +682,7 @@ sources:
       urlpath: 
         # Legacy path on MN5
         # /gpfs/scratch/ehpc01/bsc998159/a2wd/output/LRA/fc0/mn5-phase2/IFS-NEMO/a2wd/r1/r100/monthly/mean/global/*a2wd_r1_r100_monthly_*.nc
-        '{{ LRA_PATH }}/IFS-NEMO/baseline-abrupt4xco2/*a2wd_r100_monthly_*.nc'
+        '{{ LRA_PATH }}/IFS-NEMO-5km/baseline-abrupt4xco2/*a2wd_r100_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
