@@ -340,7 +340,7 @@ sources:
         stream: clmn
         year: 1995
         month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        param: 235130
+        param: 235133  #235130
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
@@ -732,7 +732,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product timeseries
     args:
       urlpath: 
-        /scratch/project_465001542/kiszlert/a3hx/output/aqua-analysis/climatedt-e26.1/IFS-FESOM/baseline-abrupt4xco2/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-e26.1.IFS-FESOM.baseline-abrupt4xco2.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /scratch/project_465001542/kiszlert/a3hx/output/aqua-analysis/climatedt-e26.1/IFS-FESOM/baseline-abrupt4xco2/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-e26.1.IFS-FESOM.baseline-abrupt4xco2.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
