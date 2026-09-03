@@ -808,7 +808,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath:
-        '{{ LRA_PATH }}/ICON/ssp370/r100/monthly/*o0f1-ssp370_r100_monthly_*.nc'
+        '{{ LRA_PATH }}/ICON-5km/projections-ssp370/r100/monthly/*o0f1-ssp370_r100_monthly_*.nc'
         # Legacy path
         # /scratch/project_465001542/kiszlert/o01f/output/LRA/default/climatedt-o25.1/ICON/o0f1-ssp370/r100/monthly/*o0f1-ssp370_r100_monthly_*.nc
       chunks: {}
