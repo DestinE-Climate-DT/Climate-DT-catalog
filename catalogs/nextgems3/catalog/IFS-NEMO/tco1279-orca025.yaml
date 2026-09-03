@@ -1,8 +1,4 @@
-plugins:
-  source:
-  - module: intake_xarray
-#   - module: gribscan
-# sources:
+sources:
 #   hourly-native-atm2d:
 #     driver: zarr
 #     args:
