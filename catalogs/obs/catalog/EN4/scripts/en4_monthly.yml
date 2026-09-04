@@ -1,10 +1,14 @@
-# Run with: nc2zarr -vv -c era5_monthly.yml
+# Run with: nc2zarr -vv -c en4_monthly.yml
 # When providing a list of directories use the "-s name" option
+#
+# Input is the DVC-tracked netcdf; the store is written to the staging area and
+# copied under aqua-dvc only afterwards, so that netcdf and zarr can be registered
+# with a single `dvc add`. Never point `output.path` at a DVC-tracked store.
 
 input:
   paths:
-     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets/EN4/v4.2.2/thetao-EN4-1950-2024.nc
-     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets/EN4/v4.2.2/so-EN4-1950-2024.nc
+     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets/EN4/v4.2.2/netcdf/thetao-EN4-1950-2025.nc
+     - /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets/EN4/v4.2.2/netcdf/so-EN4-1950-2025.nc
 
 #  decode_cf: true
   multi_file: true
@@ -22,7 +26,6 @@ process:
     lev: null
 
 output:
-  path: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets/EN4/v4.2.2/EN4.v422.1950-2024.clev.zarr
-  overwrite: true
+  path: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/en4/EN4.v422.1950-2025.clev.zarr
+  overwrite: false
   consolidated: true
-  append_dim: time
