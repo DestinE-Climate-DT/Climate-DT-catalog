@@ -21,11 +21,11 @@ jobs:
         runs-on: ubuntu-latest
         continue-on-error: false
         container:
-            image: ghcr.io/destine-climate-dt/aqua-core:1.0.0a4
+            image: ghcr.io/destine-climate-dt/aqua-core:1.0.1
             options: --user root
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v5
+              uses: actions/checkout@v7
 
             - name: Verify environment
               run: |
