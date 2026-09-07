@@ -10,9 +10,11 @@ CDSPATH=/home/b/b382076/CDS-retriever
 CDSconfig=/home/b/b382076/CDS-retriever/config.yaml
 
 year1=1940
-year2=2024
+year2=2025
+oldyear=2024
+align=false
 
-varlist=($(for f in $STOREDIR/mon/ERA5_*.nc; do
+varlist=($(for f in $STOREDIR/mon/ERA5_*-${oldyear}.nc; do
     basename "$f" | sed -E 's/^ERA5_([^_]+(_[^_]+)*)_mon_.*$/\1/'
 done))
 
@@ -38,13 +40,15 @@ done
 DIR=$STOREDIR/mon
 
 # fix to enforce time axis for fluxes variables
-varlist="evaporation surface_net_solar_radiation_clear_sky surface_net_solar_radiation surface_net_thermal_radiation_clear_sky surface_net_thermal_radiation surface_sensible_heat_flux surface_solar_radiation_downwards surface_thermal_radiation_downwards top_net_solar_radiation_clear_sky top_net_solar_radiation top_net_thermal_radiation_clear_sky top_net_thermal_radiation total_precipitation surface_latent_heat_flux "
+if [[ $align == true ]] ; then
+varlist="evaporation surface_net_solar_radiation_clear_sky surface_net_solar_radiation surface_net_thermal_radiation_clear_sky surface_net_thermal_radiation surface_sensible_heat_flux surface_solar_radiation_downwards surface_thermal_radiation_downwards top_net_solar_radiation_clear_sky top_net_solar_radiation top_net_thermal_radiation_clear_sky top_net_thermal_radiation total_precipitation surface_latent_heat_flux"
 for var in $varlist ; do
 	file=$DIR/ERA5_${var}_mon_full_sfc_${year1}-${year2}.nc
 	echo $file
 	cdo -f nc4 -z zip settunits,hours -settaxis,${year1}-01-01,00:00:00,1mon $file $DIR/test.nc
 	mv $DIR/test.nc $file
 done
+fi
 
 
 
