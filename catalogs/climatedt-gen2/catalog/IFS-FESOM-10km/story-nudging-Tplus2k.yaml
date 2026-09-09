@@ -3290,7 +3290,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc123/awi466536/o038/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-Tplus2k/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-gen2.IFS-FESOM-10km.story-nudging-Tplus2k.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
