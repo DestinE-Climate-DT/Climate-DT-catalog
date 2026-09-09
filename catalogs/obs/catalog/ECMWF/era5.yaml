@@ -16,7 +16,7 @@ sources:
         time: 12
 
   monthly-netcdf: &monthly-netcdf
-    description: ERA5 monthly data from 1940 to 2024 in netcdf
+    description: ERA5 monthly data from 1940 to 2025 in netcdf
     driver: netcdf
     metadata:
       source_grid_name: era5-r025s
