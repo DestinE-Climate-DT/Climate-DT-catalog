@@ -2979,7 +2979,7 @@ sources:
     description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        /appl/local/climatedt/data/AQUA/LRA/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-gen2_IFS-FESOM-10km_story-nudging-hist_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+        /gpfs/scratch/ehpc123/awi466536/o036/output/LRA/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-gen2_IFS-FESOM-10km_story-nudging-hist_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks:
         lat: 180
         lon: 360
@@ -3320,7 +3320,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3393,7 +3393,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3488,7 +3488,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/awi466536/o036/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/story-nudging-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.story-nudging-hist.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
