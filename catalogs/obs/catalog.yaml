@@ -3,11 +3,11 @@ metadata:
     DATA_PATH:
       type: str
       description: the path to observational datasets on the local machine
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets
+      default: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-datasets
     DVC_PATH:
       type: str
       description: the path to observational datasets on the DVC repository
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/aqua-dvc/datasets
+      default: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/datasets
   
 sources:
   AVISO:
