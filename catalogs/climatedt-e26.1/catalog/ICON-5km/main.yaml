@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  baseline-abrupt4xco2:
+    description: '"ICON-5km baseline-abrupt4xco2 1995, grids: R2B9 R02B09"'
+    metadata:
+      author: kiszlert
+      maintainer: not specified
+      machine: lumi-o26.1
+      expid: o03h
+      resolution_atm: R2B9
+      resolution_oce: R02B09
+      forcing: baseline-abrupt4xco2
+      start: '1995'
+      dashboard:
+        menu: baseline-abrupt4xco2
+        resolution_id: HR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/baseline-abrupt4xco2.yaml'
