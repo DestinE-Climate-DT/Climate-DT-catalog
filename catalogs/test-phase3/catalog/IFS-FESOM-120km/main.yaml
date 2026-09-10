@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  t41o:
+    description: '"IFS-FESOM-120km t41o 2017, grids: tco79 CORE2"'
+    metadata:
+      author: awi548625
+      maintainer: not specified
+      machine: MN5
+      expid: t41o
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: story-nudging-hist
+      start: '2017'
+      dashboard:
+        menu: t41o
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t41o.yaml'
