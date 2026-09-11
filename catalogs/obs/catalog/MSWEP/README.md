@@ -55,7 +55,11 @@ Another particularity is the fact that while the "Past" 3-hourly data are intege
 ### Rechunking
 
 The original data have a chunking also in space which is not adequate for AQUA. All netcdf data (and zarr consequently) were preprocessed, rechunking them with the script `scripts/rechunk.sh`.
+For monthly NRT data, needed for routine data extension, there is a dedicated script `scripts/rechunk_nrt_monthly.sh` which can be used to generate the rechunked files from the original NRT netcdf files and takes care also of setting the correct time axis.
 
+### Validation of new data extension
+
+In order to validate the new data extension, we suggest to create also years already available and to use the cdo command `cdo diff file_old.nc file_new.nc` to check that the new files are identical to the old ones.
 
 ### Zarr
 
