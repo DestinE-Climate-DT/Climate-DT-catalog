@@ -22,9 +22,9 @@
 set -e
 
 RESOLUTION="monthly"
-ARCHIVE="Past"
-VERSION="MSWEP_V316_test"
-OUTDIR="/scratch/project_465002727/mnurisso/MSWEP/v3.16"
+ARCHIVE="NRT"
+VERSION="MSWEP_V280"
+OUTDIR="/aqua/work/users/aqua-dvc/datasets/MSWEP/v2.8/netcdf/NRT"
 
 usage() {
     echo "Usage: $0 -o <outdir> [-r 3hourly|daily|monthly] [-a Past|NRT] [-v <gdrive-version-folder>]"
