@@ -1492,6 +1492,12 @@ sources:
     metadata:
       source_grid_name: false
     parameters:
+      freq:
+        description: Parameter freq
+        default: monthly
+        type: str
+        allowed:
+        - monthly
       realization:
         description: Parameter realization
         default: r2
