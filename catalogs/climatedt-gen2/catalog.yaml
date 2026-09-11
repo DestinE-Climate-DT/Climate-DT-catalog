@@ -30,3 +30,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'
+  IFS-NEMO-10km:
+    description: IFS-NEMO-10km model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-NEMO-10km/main.yaml'
