@@ -1485,7 +1485,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03l/output/aqua-analysis/climatedt-gen2/IFS-NEMO-10km/projections-ssp370/r2/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-NEMO-10km.projections-ssp370.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03l/output/aqua-analysis/climatedt-gen2/IFS-NEMO-10km/projections-ssp370/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-NEMO-10km.projections-ssp370.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1500,6 +1500,7 @@ sources:
         - r2
         - r4
         - r1
+        - r3
   aqua-atmosphere2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
@@ -1541,6 +1542,7 @@ sources:
         allowed:
         - r4
         - r2
+        - r3
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -1582,6 +1584,7 @@ sources:
         allowed:
         - r4
         - r2
+        - r3
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -1610,6 +1613,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o03l/output/aqua-analysis/climatedt-gen2/IFS-NEMO-10km/projections-ssp370/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-gen2.IFS-NEMO-10km.projections-ssp370.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1619,6 +1624,8 @@ sources:
         type: str
         allowed:
         - r4
+        - r2
+        - r3
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
@@ -1626,6 +1633,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc123/bsc655096/o03l/output/aqua-analysis/climatedt-gen2/IFS-NEMO-10km/projections-ssp370/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-gen2.IFS-NEMO-10km.projections-ssp370.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1635,6 +1644,8 @@ sources:
         type: str
         allowed:
         - r4
+        - r2
+        - r3
   aqua-water_cycle-timeseries:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product timeseries
@@ -1677,7 +1688,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03l/output/aqua-analysis/climatedt-gen2/IFS-NEMO-10km/projections-ssp370/r2/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-NEMO-10km.projections-ssp370.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03l/output/aqua-analysis/climatedt-gen2/IFS-NEMO-10km/projections-ssp370/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-NEMO-10km.projections-ssp370.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1692,6 +1703,7 @@ sources:
         - r2
         - r4
         - r1
+        - r3
   aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
