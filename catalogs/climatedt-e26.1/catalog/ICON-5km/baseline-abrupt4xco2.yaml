@@ -2638,6 +2638,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/kiszlert/o03h/output/aqua-analysis/climatedt-e26.1/ICON-5km/baseline-abrupt4xco2/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-e26.1.ICON-5km.baseline-abrupt4xco2.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -2673,6 +2675,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/kiszlert/o03h/output/aqua-analysis/climatedt-e26.1/ICON-5km/baseline-abrupt4xco2/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-e26.1.ICON-5km.baseline-abrupt4xco2.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -2988,6 +2992,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/kiszlert/o03h/output/aqua-analysis/climatedt-e26.1/ICON-5km/baseline-abrupt4xco2/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-e26.1.ICON-5km.baseline-abrupt4xco2.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -3005,6 +3011,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/kiszlert/o03h/output/aqua-analysis/climatedt-e26.1/ICON-5km/baseline-abrupt4xco2/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-e26.1.ICON-5km.baseline-abrupt4xco2.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
