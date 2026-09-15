@@ -30,6 +30,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/EN4/main.yaml"
+  E-OBS:
+    description: E-OBS
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/E-OBS/main.yaml"
   ESA-CCI-L4:
     description: ESA-CCI Level 4 SST and SIC data
     driver: yaml_file_cat

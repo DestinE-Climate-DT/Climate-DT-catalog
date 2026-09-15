@@ -1,0 +1,24 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+# coordinates are ill defined in E-OBS with noise at 10ˆ-14 level so that xarray 
+# has issues in putting all the datasets together
+# join ovverride is a bit of a hack but given that coordinate are all the same is the way to go
+sources:
+  daily-r010:
+    description: E-OBS daily daily data at 0.1deg resolution over Europe
+    driver: netcdf
+    metadata:
+      source_grid_name: longitude-latitude
+      fixer_name: eobs-destine-v1
+    args:
+      urlpath: 
+        - '{{DATA_PATH}}/E-OBS/v30.0e/tg_ens_mean_0.1deg_reg_v30.0e.nc'
+        - '{{DATA_PATH}}/E-OBS/v30.0e/tn_ens_mean_0.1deg_reg_v30.0e.nc'
+        - '{{DATA_PATH}}/E-OBS/v30.0e/tx_ens_mean_0.1deg_reg_v30.0e.nc'
+        - '{{DATA_PATH}}/E-OBS/v30.0e/rr_ens_mean_0.1deg_reg_v30.0e.nc'
+      xarray_kwargs:
+        decode_times: True
+        combine: by_coords
+        join: override

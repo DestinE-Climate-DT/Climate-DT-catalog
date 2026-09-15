@@ -1,0 +1,6 @@
+sources:
+ v30:
+    description: E-OBS v30.0e daily gridded observational dataset in Europe
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/v30.yaml" 
