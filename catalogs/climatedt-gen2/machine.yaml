@@ -39,7 +39,7 @@ levante:
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
     LRA_PATH: /work/bb1153/b383197/DROP/climatedt-gen2
-    ZARR_PATH: null
+    ZARR_PATH: /work/bk1580/destine_phase2/LRA/climatedt-gen2-zarr
 mafalda:
   paths:
     grids: /work/common/aqua/aqua-dvc/grids
