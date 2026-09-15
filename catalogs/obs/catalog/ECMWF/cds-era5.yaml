@@ -1,0 +1,30 @@
+sources:
+  hourly-r025-sfc: 
+    description: ERA5 hourly data from 1940 to 2026 with ARCO CDS Data Hub on single levels
+    driver: zarr
+    args:
+      urlpath: https://arco.datastores.ecmwf.int/cadl-arco-time-002/arco/reanalysis_era5_single_levels/sfc/timeChunked.zarr
+      consolidated: True
+      chunks: auto
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name: era5-earth-data-hub
+      key: cds
+  hourly-r025-pl: 
+    description: ERA5 hourly data from 1940 to 2026 with ARCO CDS Data Hub on pressure levels
+    driver: zarr
+    args:
+      urlpath: https://arco.datastores.ecmwf.int/cadl-arco-time-048/arco/reanalysis_era5_pressure_levels/pl/timeChunked.zarr
+      consolidated: True
+      chunks: auto
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name: era5-earth-data-hub
+      key: cds
+
+
+
+
+
+
+      
