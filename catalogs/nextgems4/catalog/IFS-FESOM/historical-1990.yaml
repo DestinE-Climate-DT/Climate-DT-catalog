@@ -677,3 +677,38 @@ sources:
         compat: 'override'
     metadata:
       source_grid_name: null
+
+  hourly-hpz7-atm2d-polytope:
+    args:
+      request:
+        class: ng
+        dataset: climate-dt
+        activity: cmip6
+        experiment: hist
+        generation: 1
+        model: IFS-FESOM
+        realization: 1
+        resolution: standard
+        expver: '0001'
+        type: fc
+        stream: clte
+        date: 19900101
+        time: '0000'
+        param: 167
+        levtype: sfc
+      data_start_date: 19900101T0000
+      data_end_date: 20191231T2300
+      bridge_end_date: complete
+      chunks: D  # Default time chunk size
+      savefreq: h  # at what frequency are data saved
+      timestep: h  # base timestep for step timestyle
+      timestyle: date  # variable date or variable step
+    description: hourly 2D atmospheric data on healpix grid (zoom=7, h128).
+    driver: gsv
+    metadata:
+      fdb_home_bridge: pippo
+      variables: [78, 79, 134, 137, 141, 148, 151, 159, 164, 165, 166, 167, 168, 186,
+        187, 188, 235, 260048, 8, 9, 144, 146, 147, 169, 175, 176, 177, 178, 179,
+        180, 181, 182, 212, 228]
+      source_grid_name: hpz7-nested
+      fixer_name: ifs-fesom-destine-v1-nan
