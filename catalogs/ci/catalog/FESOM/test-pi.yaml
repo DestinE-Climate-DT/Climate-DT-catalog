@@ -72,7 +72,7 @@ sources:
   original_3d_coord_fix:
     metadata:
       fixer_name: FESOM-change-coords
-      source_grid_name: test-pi-3d
+      source_grid_name: test-pi-3d-coord-fix
     args:
       urlpath:
       - '{{ TEST_PATH }}/FESOM/short/temp.fesom.1985.nc'
