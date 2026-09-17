@@ -1114,6 +1114,14 @@ sources:
     args:
       urlpath: 
         '{{ ZARR_PATH }}/IFS-NEMO-5km/baseline-hist/ifs-nemo-5km_baseline-hist.zarr'
+      storage_options:
+        anon: true
+        asynchronous: true
+        client_kwargs:
+          endpoint_url: https://lumidata.eu
+        config_kwargs:
+          s3:
+            addressing_style: path
       chunks: 
         time: 1
       consolidated: true
