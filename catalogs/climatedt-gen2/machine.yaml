@@ -5,16 +5,16 @@ lumi:
     areas: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/areas
   intake:
     # where LRA data is stored
-    LRA_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/LRA/climatedt-o25.1
+    LRA_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/LRA/climatedt-gen2
     # where Zarr data is stored
-    ZARR_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/LRA/climatedt-gen2
+    ZARR_PATH: /pfs/lustrep4/projappl/project_465002727/aqua/LRA/climatedt-gen2-zarr
 MN5:
   paths:
     grids: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/grids
     weights: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/weights
     areas: /gpfs/projects/ehpc01/data/AQUA/aqua-dvc/areas
   intake:
-    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-gen2
     ZARR_PATH: null
 wilma:
   paths:
@@ -22,7 +22,7 @@ wilma:
     weights: /scratch/users/mnurisso/aqua-dvc/weights
     areas: /scratch/users/mnurisso/aqua-dvc/areas
   intake:
-    LRA_PATH: /archive/mnurisso/LRA/climatedt-o25.1
+    LRA_PATH: /archive/mnurisso/LRA/climatedt-gen2
     ZARR_PATH: null
 hpc2020:
   paths:
@@ -38,7 +38,7 @@ levante:
     weights: /work/bb1153/b382289/data/aqua-dvc/weights
     areas: /work/bb1153/b382289/data/aqua-dvc/areas
   intake:
-    LRA_PATH: /work/bb1153/b383197/DROP/climatedt-o25.1
+    LRA_PATH: /work/bb1153/b383197/DROP/climatedt-gen2
     ZARR_PATH: null
 mafalda:
   paths:
@@ -46,7 +46,7 @@ mafalda:
     weights: /work/common/aqua/aqua-dvc/weights
     areas: /work/common/aqua/aqua-dvc/areas
   intake:
-    LRA_PATH: /data/datasets/lra/climatedt-o25.1
+    LRA_PATH: /data/datasets/lra/climatedt-gen2
     ZARR_PATH: null
 lumi-o25.1:
   paths:
@@ -54,14 +54,14 @@ lumi-o25.1:
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
   intake:
-    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
+    LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-gen2
 MN5-o25.1:
   paths:
     grids: /gpfs/scratch/ehpc01/input_data/applications/AQUA_O-25.1_v1.0/grids
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
-    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-o25.1
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-gen2
 lumi-o26.1:
   paths:
     grids: /pfs/lustrep3/appl/local/climatedt/input_data/applications/AQUA_O-26.1_v1.0/grids
@@ -75,4 +75,4 @@ MN5-o26.1:
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
-    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-e26.1
+    LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-gen2

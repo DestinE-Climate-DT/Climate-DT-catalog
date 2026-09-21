@@ -1,142 +1,138 @@
-plugins:
-  source:
-  - module: intake_xarray
-  - module: gribscan
 sources:
-  hourly-native-atm2d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: tco1279
-      fixer_name: ifs-nextgems
+#   hourly-native-atm2d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: tco1279
+#       fixer_name: ifs-nextgems
 
-  hourly-native-atm3d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir.9999/atm3d.json
-    metadata:
-      source_grid_name: tco1279
-      fixer_name: ifs-nextgems
+#   hourly-native-atm3d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir.9999/atm3d.json
+#     metadata:
+#       source_grid_name: tco1279
+#       fixer_name: ifs-nextgems
 
-  monthly-native-atm2d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: tco1279
-      fixer_name: ifs-nextgems
+#   monthly-native-atm2d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: tco1279
+#       fixer_name: ifs-nextgems
 
-  monthly-native-atm3d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir.9999/atm3d.json
-    metadata:
-      source_grid_name: tco1279
-      fixer_name: ifs-nextgems
+#   monthly-native-atm3d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_native/json.dir.9999/atm3d.json
+#     metadata:
+#       source_grid_name: tco1279
+#       fixer_name: ifs-nextgems
 
-  hourly-r025-atm2d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: multio-r025-unstructured
-      fixer_name: ifs-multio-cycle3
+#   hourly-r025-atm2d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: multio-r025-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  hourly-r025-atm3d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm3d.json
-    metadata:
-      source_grid_name: multio-r025-unstructured
-      fixer_name: ifs-multio-cycle3
+#   hourly-r025-atm3d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_0.25deg/json.dir.9999/atm3d.json
+#     metadata:
+#       source_grid_name: multio-r025-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  monthly-r025-atm2d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_0.25deg/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: multio-r025-unstructured
-      fixer_name: ifs-multio-cycle3
+#   monthly-r025-atm2d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_0.25deg/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: multio-r025-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  monthly-r025-atm3d:
-    driver: zarr
-    args:
-      consolidated: false
-      urlpath: 
-        reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_0.25deg/json.dir.9999/atm3d.json
-    metadata:
-      source_grid_name: multio-r025-unstructured
-      fixer_name: ifs-multio-cycle3
+#   monthly-r025-atm3d:
+#     driver: zarr
+#     args:
+#       consolidated: false
+#       urlpath: 
+#         reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_0.25deg/json.dir.9999/atm3d.json
+#     metadata:
+#       source_grid_name: multio-r025-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  hourly-r100-atm2d:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: multio-r100-unstructured
-      fixer_name: ifs-multio-cycle3
+#   hourly-r100-atm2d:
+#     driver: zarr
+#     args:
+#       consolidated: False
+#       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: multio-r100-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  hourly-r100-atm3d:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm3d.json
-    metadata:
-      source_grid_name: multio-r100-unstructured
-      fixer_name: ifs-multio-cycle3
+#   hourly-r100-atm3d:
+#     driver: zarr
+#     args:
+#       consolidated: False
+#       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_1deg/json.dir.9999/atm3d.json
+#     metadata:
+#       source_grid_name: multio-r100-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  monthly-r100-atm2d:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_1deg/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: multio-r100-unstructured
-      fixer_name: ifs-multio-cycle3
+#   monthly-r100-atm2d:
+#     driver: zarr
+#     args:
+#       consolidated: False
+#       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_1deg/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: multio-r100-unstructured
+#       fixer_name: ifs-multio-cycle3
 
-  monthly-r100-atm3d:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_1deg/json.dir.9999/atm3d.json
-    metadata:
-      source_grid_name: multio-r100-unstructured
-      fixer_name: ifs-multio-cycle3
+#   monthly-r100-atm3d:
+#     driver: zarr
+#     args:
+#       consolidated: False
+#       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_monthly_1deg/json.dir.9999/atm3d.json
+#     metadata:
+#       source_grid_name: multio-r100-unstructured
+#       fixer_name: ifs-multio-cycle3
   
-  hourly-native-WAM:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h_wam/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: tco1279
-      fixer_name: False
+#   hourly-native-WAM:
+#     driver: zarr
+#     args:
+#       consolidated: False
+#       urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h_wam/json.dir.9999/atm2d.json
+#     metadata:
+#       source_grid_name: tco1279
+#       fixer_name: False
 
-  # TODO: add the correct grid name
-  hourly-native-camaflood2d:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/camaflood/cycle_3/9km_NEMO/json.dir/atm2d.json
-    metadata:
-      source_grid_name: tco1279 # not the correct grid
-      fixer_name: False
+#   # TODO: add the correct grid name
+#   hourly-native-camaflood2d:
+    # driver: zarr
+    # args:
+    #   consolidated: False
+    #   urlpath: reference::/work/bm1235/b381679/camaflood/cycle_3/9km_NEMO/json.dir/atm2d.json
+    # metadata:
+    #   source_grid_name: tco1279 # not the correct grid
+    #   fixer_name: False
 
   lra-r100-monthly:
     driver: netcdf
@@ -150,10 +146,10 @@ sources:
     metadata:
       source_grid_name: lon-lat
 
-  3D_1h6h_native:
-    driver: zarr
-    args:
-      consolidated: False
-      urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir.9999/atm2d.json
-    metadata:
-      source_grid_name: tco1279
+  # 3D_1h6h_native:
+  #   driver: zarr
+  #   args:
+  #     consolidated: False
+  #     urlpath: reference::/work/bm1235/b381679/IFS_cycle3/9km_nemo/gribscan_1h6h_native/json.dir.9999/atm2d.json
+  #   metadata:
+  #     source_grid_name: tco1279

@@ -1099,7 +1099,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath: 
-        '{{ LRA_PATH }}/IFS-NEMO/historical-1990/r100/monthly/*o007_r100_monthly_*.nc'
+        '{{ LRA_PATH }}/IFS-NEMO-5km/baseline-hist/r100/monthly/*o007_r100_monthly_*.nc'
         # This is the original path for legacy data
         #/gpfs/scratch/ehpc123/bsc655096/o007/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o007/r100/monthly/*o007_r100_monthly_*.nc
       chunks: {}

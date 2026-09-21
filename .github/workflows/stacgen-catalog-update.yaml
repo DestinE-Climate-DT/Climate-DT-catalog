@@ -35,12 +35,12 @@ jobs:
 
         steps:
             - name: Checkout Climate-DT-catalog repository
-              uses: actions/checkout@v6
+              uses: actions/checkout@v7
               with:
                   fetch-depth: 0
 
             - name: Checkout AQUA repository
-              uses: actions/checkout@v6
+              uses: actions/checkout@v7
               with:
                   repository: DestinE-Climate-DT/AQUA
                   ref: ${{ inputs.aqua_branch || 'stac-catgen' }}

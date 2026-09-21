@@ -16,11 +16,11 @@ sources:
         time: 12
 
   monthly-netcdf: &monthly-netcdf
-    description: ERA5 monthly data from 1940 to 2024 in netcdf
+    description: ERA5 monthly data from 1940 to 2025 in netcdf
     driver: netcdf
     metadata:
       source_grid_name: era5-r025s
-      fixer_name: ERA5-destine-v1
+      fixer_name: ERA5-destine-v2
     args:
       urlpath: '{{DVC_PATH}}/ERA5/mon/ERA5_*_mon_full*.nc'
       chunks: 

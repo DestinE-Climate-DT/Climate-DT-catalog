@@ -4,16 +4,17 @@ sources:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 78
         levtype: sfc
@@ -24,7 +25,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -34,22 +35,23 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   hourly-hpz7-sfc:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 78
         levtype: sfc
@@ -60,7 +62,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -70,19 +72,20 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   monthly-hpz10-sfc:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -96,7 +99,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -106,19 +109,20 @@ sources:
         235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   monthly-hpz7-sfc:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -132,7 +136,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -142,22 +146,23 @@ sources:
         235042, 235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   daily-hpz10-sfc:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 172
         levtype: sfc
@@ -168,29 +173,30 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   daily-hpz7-sfc:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 172
         levtype: sfc
@@ -201,29 +207,30 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   hourly-hpz10-pl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 60
         levtype: pl
@@ -236,7 +243,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -245,22 +252,23 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   hourly-hpz7-pl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 60
         levtype: pl
@@ -273,7 +281,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -282,19 +290,20 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   monthly-hpz7-pl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -310,7 +319,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -320,56 +329,23 @@ sources:
         235246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   daily-hpz10-o2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
-        type: fc
-        stream: clmn
-        year: 2015
-        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        param: 263000
-        levtype: o2d
-      data_start_date: 20150101T0000
-      data_end_date: 20491231T2300
-      bridge_start_date: complete
-      chunks: D
-      savefreq: D
-      timestep: h
-      timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
-    driver: gsv
-    metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
-      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
-        263121, 263122, 263123, 263124]
-      source_grid_name: nemo-eORCA12-hpz10-nested-v3
-      fixer_name: climatedt-phase2-production
-      
-  daily-hpz7-o2d:
-    args:
-      request:
-        class: d1
-        dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
-        model: IFS-NEMO
-        realization: 1
-        resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 263000
         levtype: o2d
@@ -380,41 +356,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
-    driver: gsv
-    metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
-      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
-        263121, 263122, 263123, 263124]
-      source_grid_name: nemo-eORCA12-hpz7-nested-v3
-      fixer_name: climatedt-phase2-production
-      
-  monthly-hpz10-o2d:
-    args:
-      request:
-        class: d1
-        dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
-        model: IFS-NEMO
-        realization: 1
-        resolution: high
-        expver: 0001  
-        type: fc
-        stream: clmn
-        year: 2015
-        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        param: 263000
-        levtype: o2d
-      data_start_date: 20150101T0000
-      data_end_date: 20491231T2300
-      bridge_start_date: complete
-      chunks: MS
-      savefreq: MS
-      timestep: h
-      timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -422,19 +364,55 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      
-  monthly-hpz7-o2d:
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  daily-hpz7-o2d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
+        type: fc
+        stream: clte
+        date: 20150101
+        time: 0000
+        param: 263000
+        levtype: o2d
+      data_start_date: 20150101T0000
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
+      chunks: D
+      savefreq: D
+      timestep: h
+      timestyle: date
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
+        263121, 263122, 263123, 263124]
+      source_grid_name: nemo-eORCA12-hpz7-nested-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  monthly-hpz10-o2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-NEMO
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -448,7 +426,42 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
+        263121, 263122, 263123, 263124]
+      source_grid_name: nemo-eORCA12-hpz10-nested-v3
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  monthly-hpz7-o2d:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-NEMO
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
+        type: fc
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 263000
+        levtype: o2d
+      data_start_date: 20150101T0000
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -456,22 +469,23 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   daily-hpz10-o3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 263500
         levtype: o3d
@@ -487,7 +501,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -517,22 +531,23 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   daily-hpz7-o3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 263500
         levtype: o3d
@@ -548,7 +563,7 @@ sources:
       savefreq: D
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -578,19 +593,20 @@ sources:
       variables: [263500, 263501, 263505, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   monthly-hpz10-o3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -609,7 +625,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -639,19 +655,20 @@ sources:
       variables: [263505]
       source_grid_name: nemo-eORCA12-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   monthly-hpz7-o3d:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -670,7 +687,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -700,22 +717,23 @@ sources:
       variables: [263505, 263500, 263501, 263506, 263507]
       source_grid_name: nemo-eORCA12-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   hourly-hpz10-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 131
         levtype: hl
@@ -727,7 +745,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -735,22 +753,23 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   hourly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 131
         levtype: hl
@@ -762,7 +781,7 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -770,19 +789,20 @@ sources:
       variables: [131, 132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   monthly-hpz7-hl:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -797,7 +817,7 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
@@ -805,22 +825,23 @@ sources:
       variables: [235131, 235132]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      
-  hourly-hpz10-sol:
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  hourly-hpz10-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 228141
         levtype: sol
@@ -832,30 +853,31 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [228141, 260199]
+      variables: [228141]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      
-  hourly-hpz7-sol:
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  hourly-hpz7-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clte
-        date: 20180701/to/20181201
+        date: 20150101
         time: 0000
         param: 228141
         levtype: sol
@@ -867,27 +889,28 @@ sources:
       savefreq: h
       timestep: h
       timestyle: date
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [228141, 260199]
+      variables: [228141]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      
-  monthly-hpz10-sol:
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  monthly-hpz10-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: high
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -902,27 +925,28 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [235078, 235077]
+      variables: [235078]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      
-  monthly-hpz7-sol:
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  monthly-hpz7-sol5:
     args:
       request:
         class: d1
         dataset: climate-dt
-        activity: projections  
-        experiment: SSP3-7.0  
-        generation: 2  
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
         model: IFS-NEMO
         realization: 1
         resolution: standard
-        expver: 0001  
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
         type: fc
         stream: clmn
         year: 2015
@@ -937,37 +961,192 @@ sources:
       savefreq: MS
       timestep: h
       timestyle: yearmonth
-    description: 'ifs-nemo o00q 2015, grids: tco2559 eORCA12'
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
       fdb_home: /gpfs/projects/ehpc01/dte/fdb
       levels: [1, 2, 3, 4, 5]
-      variables: [235078, 235077]
+      variables: [235078]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  hourly-hpz10-sol4:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-NEMO
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
+        type: fc
+        stream: clte
+        date: 20150101
+        time: 0000
+        param: 260199
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+      data_start_date: 20150101T0000
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4]
+      variables: [260199, 260360]
+      source_grid_name: hpz10
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  hourly-hpz7-sol4:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-NEMO
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
+        type: fc
+        stream: clte
+        date: 20150101
+        time: 0000
+        param: 260199
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+      data_start_date: 20150101T0000
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
+      chunks: D
+      savefreq: h
+      timestep: h
+      timestyle: date
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4]
+      variables: [260199, 260360]
+      source_grid_name: hpz7
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  monthly-hpz10-sol4:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-NEMO
+        realization: 1
+        resolution: high
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
+        type: fc
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235077
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+      data_start_date: 20150101T0000
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4]
+      variables: [235077, 235094]
+      source_grid_name: hpz10
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
+  monthly-hpz7-sol4:
+    args:
+      request:
+        class: d1
+        dataset: climate-dt
+        activity: projections  # To be overwritten by workflow/config file
+        experiment: SSP1-2.6  # To be overwritten by workflow/config file
+        generation: 2  # To be overwritten by workflow/config file
+        model: IFS-NEMO
+        realization: 1
+        resolution: standard
+        expver: 0001  # To be overwritten by workflow/config file
+        expid: o031
+        type: fc
+        stream: clmn
+        year: 2015
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        param: 235077
+        levtype: sol
+        levelist: [1, 2, 3, 4]
+      data_start_date: 20150101T0000
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
+      chunks: MS
+      savefreq: MS
+      timestep: h
+      timestyle: yearmonth
+    description: 'IFS-NEMO-5km projections-ssp126 2015, grids: tco2559 eORCA12'
+    driver: gsv
+    metadata:
+      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      levels: [1, 2, 3, 4]
+      variables: [235077, 235094]
+      source_grid_name: hpz7
+      fixer_name: climatedt-phase2-production
+      fdb_info_file: /gpfs/scratch/ehpc123/bsc655096/o031/o031.yaml
   lra-r100-monthly:
     driver: netcdf
-    description: LRA data monthly at r100
+    description: AQUA netcdf DROP-generated data monthly at r100
     args:
       urlpath: 
-        - '{{ LRA_PATH }}/IFS-NEMO-5km/projections-ssp370/r100/monthly/*o00q_r100_monthly_*.nc'
+        - '{{ LRA_PATH }}/IFS-NEMO-5km/projections-ssp126/global/*o00q_r100_monthly_*.nc'
         # Legacy path in the MN5 operational project
-        # /gpfs/scratch/ehpc123/bsc655096/o00q/output/LRA/fc0/climatedt-o25.1/IFS-NEMO/o00q/r100/monthly/*o00q_r100_monthly_*.nc
-      chunks: {}
+        # /gpfs/scratch/ehpc123/bsc655096/o031/output/LRA/climatedt-gen2/IFS-NEMO-5km/projections-ssp126/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-gen2_IFS-NEMO-5km_projections-ssp126_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
+      chunks:
+        lat: 180
+        lon: 360
+        time: 12
       xarray_kwargs:
         decode_times: true
         combine: by_coords
     metadata:
-      source_grid_name: lon-lat
-  lra-r100-monthly-zarr:
-    driver: zarr
-    description: LRA data monthly at r100 in zarr format
-    args:
-      urlpath: 
-        '{{ ZARR_PATH }}/IFS-NEMO-5km/projections-ssp370/ifs-nemo-5km_projections-ssp370.zarr'
-      chunks: 
-        time: 1
-      consolidated: true
-    metadata:
-      source_grid_name: lon-lat-r100
+      source_grid_name: r100
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+      stat:
+        description: Parameter stat
+        default: mean
+        type: str
+        allowed:
+        - mean
