@@ -6,8 +6,8 @@ metadata:
       default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-o25.1
     ZARR_PATH:
       type: str
-      description: the path to the Zarr data
-      default: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-gen2
+      description: the path to the Zarr data, default to Lumi-o bucket
+      default: s3://465001542:aqua-lra-zarr-files/climatedt-gen2-zarr
 
 sources:
   IFS-NEMO-5km:
