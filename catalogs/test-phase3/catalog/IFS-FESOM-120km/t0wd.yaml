@@ -1519,6 +1519,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1552,6 +1553,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1585,6 +1587,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1619,6 +1622,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1653,6 +1657,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1687,6 +1692,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1721,6 +1727,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
@@ -1752,6 +1759,7 @@ sources:
         allowed:
         - r1
         - r2
+        - r3
       region:
         description: Parameter region
         default: global
