@@ -10,7 +10,7 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -35,7 +35,7 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   hourly-hpz7-sfc:
     args:
       request:
@@ -47,7 +47,7 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -72,7 +72,7 @@ sources:
           235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz10-sfc:
     args:
       request:
@@ -84,11 +84,11 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 19950101T0000
@@ -97,7 +97,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -109,7 +109,7 @@ sources:
         235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz7-sfc:
     args:
       request:
@@ -121,11 +121,11 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235087
         levtype: sfc
       data_start_date: 19950101T0000
@@ -134,7 +134,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -146,7 +146,7 @@ sources:
         235043, 235049, 235050, 235051, 235052, 235053, 235055]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   daily-hpz10-sfc:
     args:
       request:
@@ -158,7 +158,7 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -180,7 +180,7 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   daily-hpz7-sfc:
     args:
       request:
@@ -192,7 +192,7 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -214,7 +214,7 @@ sources:
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   hourly-hpz10-pl:
     args:
       request:
@@ -226,7 +226,7 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -252,7 +252,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   hourly-hpz7-pl:
     args:
       request:
@@ -264,7 +264,7 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -290,7 +290,7 @@ sources:
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz7-pl:
     args:
       request:
@@ -302,11 +302,11 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235100
         levtype: pl
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
@@ -317,7 +317,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -329,7 +329,7 @@ sources:
         235246]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   daily-hpz10-o2d:
     args:
       request:
@@ -341,7 +341,7 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -364,7 +364,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   daily-hpz7-o2d:
     args:
       request:
@@ -376,7 +376,7 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -399,7 +399,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz10-o2d:
     args:
       request:
@@ -411,11 +411,11 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 19950101T0000
@@ -424,7 +424,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -434,7 +434,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz7-o2d:
     args:
       request:
@@ -446,11 +446,11 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263000
         levtype: o2d
       data_start_date: 19950101T0000
@@ -459,7 +459,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -469,7 +469,7 @@ sources:
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   daily-hpz10-o3d:
     args:
       request:
@@ -481,7 +481,7 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -516,7 +516,7 @@ sources:
       variables: [263500, 263501, 263506, 263505]
       source_grid_name: icon-R02B09-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   daily-hpz7-o3d:
     args:
       request:
@@ -528,7 +528,7 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -563,7 +563,7 @@ sources:
       variables: [263500, 263501, 263506]
       source_grid_name: icon-R02B09-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz10-o3d:
     args:
       request:
@@ -575,11 +575,11 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -592,7 +592,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -610,7 +610,7 @@ sources:
       variables: [263505]
       source_grid_name: icon-R02B09-hpz10-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz7-o3d:
     args:
       request:
@@ -622,11 +622,11 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 263505
         levtype: o3d
         levelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
@@ -639,7 +639,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -657,7 +657,7 @@ sources:
       variables: [263505, 263500, 263501, 263506]
       source_grid_name: icon-R02B09-hpz7-nested-3d-v3
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   hourly-hpz10-sol:
     args:
       request:
@@ -669,7 +669,7 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -693,7 +693,7 @@ sources:
       variables: [260199]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   hourly-hpz7-sol:
     args:
       request:
@@ -705,7 +705,7 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
         stream: clte
         date: 19950101/to/20110101
@@ -729,7 +729,7 @@ sources:
       variables: [260199]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz10-sol:
     args:
       request:
@@ -741,11 +741,11 @@ sources:
         model: ICON
         realization: 1
         resolution: high
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
@@ -755,7 +755,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -765,7 +765,7 @@ sources:
       variables: [235077]
       source_grid_name: hpz10
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   monthly-hpz7-sol:
     args:
       request:
@@ -777,11 +777,11 @@ sources:
         model: ICON
         realization: 1
         resolution: standard
-        expver: a2vt
+        expver: 0001
         type: fc
-        stream: clte
-        date: 19950101/to/20110101
-        time: None
+        stream: clmn
+        year: 1995
+        month: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         param: 235077
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
@@ -791,7 +791,7 @@ sources:
       chunks: MS
       savefreq: MS
       timestep: h
-      timestyle: date
+      timestyle: yearmonth
     description: 'icon abrupt-4xCO2 1995, grids: R2B9 R02B09'
     driver: gsv
     metadata:
@@ -801,28 +801,44 @@ sources:
       variables: [235077]
       source_grid_name: hpz7
       fixer_name: climatedt-phase2-production
-      fdb_info_file: /scratch/project_465000454/kiszlert/a2vt/a2vt.yml
+
   lra-r100-monthly:
     driver: netcdf
     description: LRA data monthly at r100
     args:
       urlpath: 
-        # Legacy path on Lumi development project
-        # /scratch/project_465000454/kiszlert/a2vt/output/LRA/default/lumi-phase2/ICON/a2vt-abrupt-4xCO2-1990/r100/monthly/*a2vt-abrupt-4xCO2-1990_r100_monthly_*.nc
-        '{{ LRA_PATH }}/ICON-5km/baseline-abrupt4xco2/r100/monthly/*a2vt-abrupt-4xCO2-1990_r100_monthly_*.nc'
+        /scratch/project_462000911/mnurisso/lra-test/test_container/climatedt-gen2/ICON-5km/baseline-abrupt4xco2/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_climatedt-gen2_ICON-5km_baseline-abrupt4xco2_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
         combine: by_coords
     metadata:
       source_grid_name: lon-lat
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+      region:
+        description: Parameter region
+        default: global
+        type: str
+        allowed:
+        - global
+      stat:
+        description: Parameter stat
+        default: mean
+        type: str
+        allowed:
+        - mean
   lra-r100-monthly-zarr:
     driver: zarr
     description: LRA data monthly at r100 in zarr format
     args:
-      urlpath: 
-        '{{ ZARR_PATH }}/ICON-5km/baseline-abrupt4xco2/icon-5km_baseline-abrupt4xco2.zarr'
-      chunks: 
+      urlpath: '{{ ZARR_PATH }}/ICON-5km/baseline-abrupt4xco2/icon-5km_baseline-abrupt4xco2.zarr'
+      chunks:
         time: 1
       consolidated: true
     metadata:
