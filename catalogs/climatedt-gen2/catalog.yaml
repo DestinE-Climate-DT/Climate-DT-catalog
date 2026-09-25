@@ -8,6 +8,14 @@ metadata:
       type: str
       description: the path to the Zarr data, default to Lumi-o bucket
       default: s3://465001542:aqua-lra-zarr-files/climatedt-gen2-zarr
+    FDB_HOME:
+      type: str
+      description: the path to the FDB home directory, default to the Lumi path
+      default: /appl/local/destine/fdb
+    FDB_HOME_BRIDGE:
+      type: str
+      description: the path to the FDB home bridge directory, default to the Lumi path
+      default: /appl/local/destine/databridge
 
 sources:
   IFS-NEMO-5km:

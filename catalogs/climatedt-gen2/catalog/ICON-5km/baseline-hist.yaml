@@ -27,8 +27,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 228141,
         228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053,
@@ -64,8 +64,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 228141,
         228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 235053,
@@ -101,8 +101,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235020, 235021, 235031, 235033, 235034,
         235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049,
@@ -138,8 +138,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235020, 235021, 235031, 235033, 235034,
         235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049,
@@ -175,8 +175,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
@@ -209,8 +209,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
@@ -245,8 +245,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -283,8 +283,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -321,8 +321,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700,
         850, 925, 1000]
       variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
@@ -358,8 +358,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
@@ -393,8 +393,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
@@ -428,8 +428,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
@@ -463,8 +463,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
@@ -502,8 +502,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 37.65,
         43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 132.9, 147.95,
         164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 329.75, 362.65, 398.45,
@@ -548,8 +548,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 37.65,
         43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 132.9, 147.95,
         164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 329.75, 362.65, 398.45,
@@ -594,8 +594,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 37.65,
         43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 132.9, 147.95,
         164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 329.75, 362.65, 398.45,
@@ -640,8 +640,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 37.65,
         43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 132.9, 147.95,
         164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 329.75, 362.65, 398.45,
@@ -683,8 +683,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [260199]
       source_grid_name: hpz10
@@ -719,8 +719,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [260199]
       source_grid_name: hpz7
@@ -755,8 +755,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz10
@@ -791,8 +791,8 @@ sources:
     description: 'icon o00k 1990, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [235077]
       source_grid_name: hpz7
