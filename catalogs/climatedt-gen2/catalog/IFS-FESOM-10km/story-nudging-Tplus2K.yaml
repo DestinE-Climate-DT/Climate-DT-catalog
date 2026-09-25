@@ -34,7 +34,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
         235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 
@@ -76,7 +77,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
         235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 
@@ -119,7 +121,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 
           235033, 235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041,
@@ -162,7 +165,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 
           235033, 235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041,
@@ -205,7 +209,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-production
@@ -245,7 +250,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
@@ -287,7 +293,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -331,7 +338,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -375,7 +383,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
@@ -418,7 +427,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz9-nested-v4
@@ -459,7 +469,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v4
@@ -500,7 +511,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz9-nested-v4
@@ -541,7 +553,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: fesom-NG5-hpz7-nested-v4
@@ -586,7 +599,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 
           57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 
           135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 
@@ -636,7 +650,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 
           57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 
           135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 
@@ -686,7 +701,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 
           57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 
           135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 
@@ -736,7 +752,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 32.5, 37.5, 42.5, 47.5, 52.5, 
           57.5, 62.5, 67.5, 72.5, 77.5, 82.5, 87.5, 92.5, 97.5, 105, 115, 125, 
           135, 145, 155, 165, 175, 185, 195, 210, 230, 250, 270, 290, 320, 360, 
@@ -786,7 +803,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 
           55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 
           120.0, 130.0, 140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 220.0, 
@@ -838,7 +856,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 
           55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 
           120.0, 130.0, 140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 220.0, 
@@ -890,7 +909,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 
           55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0, 110.0, 
           120.0, 130.0, 140.0, 150.0, 160.0, 170.0, 180.0, 190.0, 200.0, 220.0, 
@@ -939,7 +959,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz9
@@ -981,7 +1002,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz7
@@ -1023,7 +1045,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [100]
       variables: [235131, 235132]
       source_grid_name: hpz7
@@ -1065,7 +1088,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz9
@@ -1107,7 +1131,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
       source_grid_name: hpz7
@@ -1149,7 +1174,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz9
@@ -1191,7 +1217,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
       source_grid_name: hpz7
@@ -1233,7 +1260,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [260199, 260360]
       source_grid_name: hpz9
@@ -1275,7 +1303,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [260199, 260360]
       source_grid_name: hpz7
@@ -1317,7 +1346,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [235077, 235094]
       source_grid_name: hpz9
@@ -1359,7 +1389,8 @@ sources:
     description: 'ifs-fesom storyline-Tplus2K 2017, grids: tco1279 NG5'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4]
       variables: [235077, 235094]
       source_grid_name: hpz7
