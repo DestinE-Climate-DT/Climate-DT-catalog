@@ -1518,6 +1518,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1550,6 +1551,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1582,6 +1584,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1615,6 +1618,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1648,6 +1652,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1681,6 +1686,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1714,6 +1720,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -1744,6 +1751,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
