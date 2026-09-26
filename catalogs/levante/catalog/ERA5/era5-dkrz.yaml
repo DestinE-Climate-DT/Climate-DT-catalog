@@ -1,7 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   monthly_inst:
       driver: intake_esm.esm_datastore
