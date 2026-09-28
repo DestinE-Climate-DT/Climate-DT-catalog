@@ -1,7 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   daily-zarr: &daily-zarr
       description: daily aviso vDT2024 in zarr format

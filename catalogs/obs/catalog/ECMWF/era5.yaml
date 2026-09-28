@@ -1,7 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   monthly-zarr: &monthly-zarr
     description: ERA5 monthly data from 1940 to 2024 in zarr
