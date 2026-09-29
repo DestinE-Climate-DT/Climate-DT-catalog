@@ -1,7 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   nh-daily:
     description: Daily Northern Hemisphere OSI-450 and OSI-430 sea-ice data

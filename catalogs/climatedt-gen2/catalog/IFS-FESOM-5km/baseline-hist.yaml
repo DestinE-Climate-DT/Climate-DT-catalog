@@ -1182,7 +1182,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath:
-        '{{ LRA_PATH }}/IFS-FESOM/historical-1990/r100/monthly/*o00i_r100_monthly_*.nc'
+        '{{ LRA_PATH }}/IFS-FESOM-5km/baseline-hist/r100/monthly/*o00i_r100_monthly_*.nc'
         # This is the original path used in the production environment, kept for legacy.
         # /scratch/project_465001542/youcheng/o00i/output/LRA/fc0/climatedt-o25.1/IFS-FESOM/o00i/r100/monthly/*o00i_r100_monthly_*.nc
       chunks: {}

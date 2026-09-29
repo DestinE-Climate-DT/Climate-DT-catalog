@@ -1241,7 +1241,7 @@ sources:
       urlpath:
         # Legacy path on MN5
         # /gpfs/scratch/ehpc01/bsc998159/a2nt/output/LRA/fc2/mn5-phase2/IFS-NEMO/0001/r100/monthly/*0001_r3_r100_monthly_*.nc
-        "{{ LRA_PATH }}/IFS-NEMO/cont-1990-ensemble/r100/monthly/*0001_r{{ realization }}_r100_monthly_*.nc"
+        "{{ LRA_PATH }}/IFS-NEMO-10km/baseline-cont/r100/monthly/*0001_r{{ realization }}_r100_monthly_*.nc"
       chunks: {}
       xarray_kwargs:
         decode_times: true
