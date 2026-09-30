@@ -4,10 +4,10 @@ i#!/usr/bin/env bash
 # for 1979-2025 from the Polar Science Center.
 #
 # Usage:
-#   bash download_giomas_heff_1979_2025.sh [DESTINATION]
+#   bash download_giomas_heff.sh [DESTINATION]
 #
 # Example:
-#   bash download_giomas_heff_1979_2025.sh \
+#   bash download_giomas_heff.sh \
 #       ../../../GIOMAS/heff/gz_from_site/binary
 #
 # Original location where the dowload script was (same for piomas download script):
