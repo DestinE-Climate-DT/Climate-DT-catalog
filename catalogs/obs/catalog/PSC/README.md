@@ -126,7 +126,7 @@ Otherwise copy/paste the content as for GIOMAS.
 First, create the dir `grid` with: 
 - `grid.dat`
 - `grid.dat.pop`
-- `io.dat_360_120.output` (for GIOMAS) and `io.dat_360_276.output` (for PIOMAS)  
+- `io.dat_360_120.output` (for PIOMAS) and `io.dat_360_276.output` (for GIOMAS)  
 
 and the gunzip (.gz) compressed binary files (`gz_from_site/binary/heff.H*.gz`).
 
