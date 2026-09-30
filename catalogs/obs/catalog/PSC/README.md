@@ -161,4 +161,4 @@ Finally, use `cdo sinfo FINAL_FILE.nc` to check that the grid is correctly `curv
 
 
 ---------
-Last updated by Emanuele Tovazzi, CNR, Sep 2025
+Last updated by Emanuele Tovazzi, CNR, Sep 2026
