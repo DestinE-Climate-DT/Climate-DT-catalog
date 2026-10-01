@@ -12,7 +12,7 @@
 set -euo pipefail
 shopt -s nullglob
 
-ROOT="${1:-.}"
+ROOT="${1:-./SSMIS}"
 ROOT="$(cd "$ROOT" && pwd)"
 
 BASE_CAT="https://thredds.met.no/thredds/catalog/osisaf/met.no/reprocessed/ice/conc_cra_files"
