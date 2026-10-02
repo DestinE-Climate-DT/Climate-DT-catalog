@@ -10,7 +10,7 @@ sources:
     #    regex: ''
     #    type: file
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/SSMIS/daily_cat/ice_conc_nh*.nc'
+      urlpath: '{{DATA_PATH}}/OSI-SAF/SSMIS/daily_cat/ice_conc_nh*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
@@ -21,7 +21,7 @@ sources:
       source_grid_name: osi-saf-nh-aqua
       fixer_name: OSI-SAF-default
     args:
-      urlpath: '{{DVC_PATH}}/OSI-SAF/OSI-AQUA/SSMIS/monthly/ice_conc_nh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc' 
+      urlpath: '{{DVC_PATH}}/OSI-SAF/SSMIS/monthly/ice_conc_nh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc' 
       chunks:
         time: 12
       xarray_kwargs:
@@ -37,7 +37,7 @@ sources:
     #    regex: ''
     #    type: file
     args:
-      urlpath: '{{DATA_PATH}}/OSI-SAF/OSI-AQUA/SSMIS/daily_cat/ice_conc_sh*.nc'
+      urlpath: '{{DATA_PATH}}/OSI-SAF/SSMIS/daily_cat/ice_conc_sh*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
@@ -48,7 +48,7 @@ sources:
       source_grid_name: osi-saf-sh-aqua
       fixer_name: OSI-SAF-default
     args:
-      urlpath: '{{DVC_PATH}}/OSI-SAF/OSI-AQUA/SSMIS/monthly/ice_conc_sh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc' 
+      urlpath: '{{DVC_PATH}}/OSI-SAF/SSMIS/monthly/ice_conc_sh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc' 
       chunks:
         time: 12
       xarray_kwargs:
