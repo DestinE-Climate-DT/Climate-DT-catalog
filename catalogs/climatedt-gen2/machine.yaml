@@ -56,6 +56,8 @@ lumi-o25.1:
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
   intake:
+    FDB_HOME: /appl/local/destine/fdb
+    FDB_HOME_BRIDGE: /appl/local/destine/databridge
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-gen2
 MN5-o25.1:
   paths:
@@ -63,6 +65,7 @@ MN5-o25.1:
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
+    FDB_HOME: /gpfs/projects/ehpc01/dte/fdb/
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-gen2
 lumi-o26.1:
   paths:
@@ -70,6 +73,8 @@ lumi-o26.1:
     weights: /scratch/project_465001542/aqua_cache/weights
     areas: /scratch/project_465001542/aqua_cache/areas
   intake:
+    FDB_HOME: /appl/local/destine/fdb
+    FDB_HOME_BRIDGE: /appl/local/destine/databridge
     LRA_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/LRA/climatedt-e26.1
 MN5-o26.1:
   paths:
@@ -77,4 +82,5 @@ MN5-o26.1:
     weights: /gpfs/scratch/ehpc123/aqua_cache/weights
     areas: /gpfs/scratch/ehpc123/aqua_cache/areas
   intake:
+    FDB_HOME: /gpfs/projects/ehpc01/dte/fdb/
     LRA_PATH: /gpfs/scratch/ehpc01/data/AQUA/LRA/climatedt-gen2
