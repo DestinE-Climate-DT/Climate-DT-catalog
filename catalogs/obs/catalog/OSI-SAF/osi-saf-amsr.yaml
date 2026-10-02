@@ -5,10 +5,6 @@ sources:
     metadata:
       source_grid_name: osi-saf-nh
       fixer_name: OSI-SAF-default
-    #cache:
-    #  - argkey: urlpath
-    #    regex: ''
-    #    type: file
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/AMSR/daily_cat/ice_conc_nh*.nc'
       chunks: {}
@@ -32,10 +28,6 @@ sources:
     metadata:
       source_grid_name: osi-saf-sh
       fixer_name: OSI-SAF-default
-    #cache:
-    #  - argkey: urlpath
-    #    regex: ''
-    #    type: file
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/AMSR/daily_cat/ice_conc_sh*.nc'
       chunks: {}
