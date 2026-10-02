@@ -34,7 +34,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [151, 165, 166, 167, 168, 207, 228164, 235035, 235040, 235043, 
           235055]
       source_grid_name: hpz9-nested
@@ -75,7 +76,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [151, 165, 166, 167, 168, 207, 228164, 235035, 235040, 235043, 
           235055]
       source_grid_name: hpz7-nested
@@ -116,7 +118,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz9-nested
       fixer_name: climatedt-phase2-reduced
@@ -156,7 +159,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-reduced
@@ -196,7 +200,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [228004, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 
           235053, 235055, 235151, 235165, 235166, 235288]
@@ -238,7 +243,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [228004, 235031, 235033, 235034, 235035, 235036, 235037, 235038,
         235039, 235040, 235041, 235042, 235043, 235049, 235050, 235051, 235052, 
           235053, 235055, 235151, 235165, 235166, 235288]
@@ -282,7 +288,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [129, 131, 132]
@@ -326,7 +333,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [129, 131, 132]
@@ -370,7 +378,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [235130, 235131, 235132, 235133]
@@ -414,7 +423,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [235130, 235131, 235132, 235133]
@@ -456,7 +466,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: nemo-eORCA12-hpz9-nested-v3
       fixer_name: climatedt-phase2-reduced
@@ -496,7 +507,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263100, 263101, 263124]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-reduced
@@ -536,7 +548,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263008, 263100, 263101, 263123]
       source_grid_name: nemo-eORCA12-hpz9-nested-v3
       fixer_name: climatedt-phase2-reduced
@@ -576,7 +589,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263008, 263100, 263101, 263123]
       source_grid_name: nemo-eORCA12-hpz7-nested-v3
       fixer_name: climatedt-phase2-reduced
@@ -621,7 +635,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
           8.09251880645752, 9.822750091552734, 11.773679733276367, 
@@ -689,7 +704,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
           8.09251880645752, 9.822750091552734, 11.773679733276367, 
@@ -753,7 +769,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz9
@@ -795,7 +812,8 @@ sources:
     description: 'ifs-nemo 0001 2015, grids: tco1279 eORCA12'
     driver: gsv
     metadata:
-      fdb_home: /gpfs/projects/ehpc01/dte/fdb/
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [100]
       variables: [131, 132]
       source_grid_name: hpz7

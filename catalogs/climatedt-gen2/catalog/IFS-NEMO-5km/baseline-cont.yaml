@@ -27,6 +27,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
@@ -63,6 +65,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
@@ -99,6 +103,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 
@@ -135,6 +141,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235288, 235020, 235021, 235031, 
@@ -171,6 +179,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [172, 228002]
       source_grid_name: hpz10-nested
@@ -204,6 +214,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [172, 228002]
       source_grid_name: hpz7-nested
@@ -239,6 +251,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
@@ -276,6 +290,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
@@ -313,6 +329,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
@@ -349,6 +367,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
@@ -383,6 +403,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
@@ -417,6 +439,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
@@ -451,6 +475,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
@@ -490,6 +516,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
@@ -551,6 +579,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
@@ -612,6 +642,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
@@ -673,6 +705,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [0.5057600140571594, 1.5558552742004395, 2.6676816940307617, 
           3.8562798500061035, 5.140361309051514, 6.543033599853516, 
@@ -730,6 +764,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [100]
       variables: [131, 132]
@@ -765,6 +801,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [100]
       variables: [131, 132]
@@ -800,6 +838,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [100]
       variables: [235131, 235132]
@@ -835,6 +875,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
@@ -870,6 +912,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4, 5]
       variables: [228141]
@@ -905,6 +949,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
@@ -940,6 +986,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4, 5]
       variables: [235078]
@@ -975,6 +1023,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4]
       variables: [260199]
@@ -1010,6 +1060,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4]
       variables: [260199]
@@ -1045,6 +1097,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4]
       variables: [235077]
@@ -1080,6 +1134,8 @@ sources:
     description: 'ifs-nemo control-1990, grids: tco2559 eORCA12'
     driver: gsv
     metadata:
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       
       levels: [1, 2, 3, 4]
       variables: [235077]
