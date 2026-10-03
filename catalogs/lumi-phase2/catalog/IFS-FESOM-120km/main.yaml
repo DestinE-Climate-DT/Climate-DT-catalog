@@ -1,0 +1,19 @@
+sources:
+  t41x:
+    description: '"IFS-FESOM-120km t41x 1990, grids: tco79 CORE2"'
+    metadata:
+      author: shafeequ1
+      maintainer: not specified
+      machine: lumi
+      expid: t41x
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: baseline-cont
+      start: '1990'
+      dashboard:
+        menu: t41x
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t41x.yaml'
