@@ -1,13 +1,10 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   daily-zarr: &daily-zarr
       description: daily aviso vDT2024 in zarr format
       driver: zarr
       metadata:
         source_grid_name: aviso
+        fixer_name: ssh-adt
       args:
         consolidated: True
         urlpath: 

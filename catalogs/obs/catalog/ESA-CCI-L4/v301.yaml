@@ -1,6 +1,6 @@
 sources:
   native-monthly:
-    description: ESA-CCI-L4 monthly data v3.0.1 from 1980 to 2023
+    description: ESA-CCI-L4 monthly data v3.0.1 from 1980 to 2025
     driver: netcdf
     metadata:
       source_grid_name: lon-lat
@@ -12,7 +12,7 @@ sources:
       xarray_kwargs:
         decode_times: True
   r100-monthly:
-    description: ESA-CCI-L4 monthly data v3.0.1 from 1980 to 2023
+    description: ESA-CCI-L4 monthly data v3.0.1 from 1980 to 2025
     driver: netcdf
     metadata:
       source_grid_name: lon-lat

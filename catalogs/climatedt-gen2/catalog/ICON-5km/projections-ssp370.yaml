@@ -19,7 +19,8 @@ sources:
         param: 78
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -27,8 +28,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
         235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 
@@ -55,7 +56,8 @@ sources:
         param: 78
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -63,8 +65,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [78, 79, 134, 136, 137, 151, 165, 166, 167, 168, 207, 235, 
           228141, 228164, 235020, 235021, 235031, 235033, 235034, 235035, 235036,
         235037, 235038, 235039, 235040, 235041, 235042, 235043, 235049, 235050, 
@@ -91,8 +93,8 @@ sources:
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -100,8 +102,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235020, 235021, 235031, 235033, 
           235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042,
@@ -128,8 +130,8 @@ sources:
         param: 235087
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -137,8 +139,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [235087, 235088, 235134, 235136, 235137, 235151, 235165, 235166,
         228004, 235168, 228005, 235079, 235078, 235020, 235021, 235031, 235033, 
           235034, 235035, 235036, 235037, 235038, 235039, 235040, 235041, 235042,
@@ -165,7 +167,8 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -173,8 +176,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz10-nested
       fixer_name: climatedt-phase2-production
@@ -198,7 +201,8 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -206,8 +210,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [172, 228002]
       source_grid_name: hpz7-nested
       fixer_name: climatedt-phase2-production
@@ -233,7 +237,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -241,8 +246,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -270,7 +275,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: 6h
       savefreq: h
       timestep: h
@@ -278,8 +284,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [60, 129, 130, 131, 132, 133, 135, 157, 246]
@@ -307,8 +313,8 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -316,8 +322,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 
           700, 850, 925, 1000]
       variables: [235100, 235129, 235130, 235131, 235132, 235133, 235135, 235157,
@@ -344,7 +350,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -352,8 +359,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
@@ -378,7 +385,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -386,8 +394,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
@@ -412,8 +420,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -421,8 +429,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz10-nested-v3
@@ -447,8 +455,8 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -456,8 +464,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       variables: [263000, 263001, 263003, 263004, 263008, 263009, 263100, 263101,
         263121, 263122, 263123, 263124]
       source_grid_name: icon-R02B09-hpz7-nested-v3
@@ -486,7 +494,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -494,8 +503,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 
           37.65, 43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 
           132.9, 147.95, 164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 
@@ -532,7 +541,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: D
       timestep: h
@@ -540,8 +550,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 
           37.65, 43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 
           132.9, 147.95, 164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 
@@ -578,8 +588,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -587,8 +597,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 
           37.65, 43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 
           132.9, 147.95, 164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 
@@ -625,8 +635,8 @@ sources:
           37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -634,8 +644,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1.0, 3.1, 5.45, 8.1, 11.05, 14.35, 18.05, 22.2, 26.85, 32.0, 
           37.65, 43.8, 50.55, 57.95, 66.0, 74.8, 84.45, 95.0, 106.5, 119.1, 
           132.9, 147.95, 164.35, 182.25, 201.8, 223.15, 246.45, 271.85, 299.55, 
@@ -669,7 +679,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -677,8 +688,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [260199]
       source_grid_name: hpz10
@@ -704,7 +715,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: D
       savefreq: h
       timestep: h
@@ -712,8 +724,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [260199]
       source_grid_name: hpz7
@@ -739,8 +751,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -748,8 +760,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [235077]
       source_grid_name: hpz10
@@ -775,8 +787,8 @@ sources:
         levtype: sol
         levelist: [1, 2, 3, 4, 5]
       data_start_date: 20150101T0000
-      data_end_date: 20370501T2300
-      bridge_end_date: 20361231T2300
+      data_end_date: 20491231T2300
+      bridge_start_date: complete
       chunks: MS
       savefreq: MS
       timestep: h
@@ -784,8 +796,8 @@ sources:
     description: 'icon o0f1-ssp370 2015, grids: R2B9 R02B09'
     driver: gsv
     metadata:
-      fdb_home: /appl/local/destine/fdb
-      fdb_home_bridge: /appl/local/destine/databridge
+      fdb_home: '{{ FDB_HOME }}'
+      fdb_home_bridge: '{{ FDB_HOME_BRIDGE }}'
       levels: [1, 2, 3, 4, 5]
       variables: [235077]
       source_grid_name: hpz7
@@ -796,7 +808,7 @@ sources:
     description: LRA data monthly at r100
     args:
       urlpath:
-        '{{ LRA_PATH }}/ICON/ssp370/r100/monthly/*o0f1-ssp370_r100_monthly_*.nc'
+        '{{ LRA_PATH }}/ICON-5km/projections-ssp370/r100/monthly/*o0f1-ssp370_r100_monthly_*.nc'
         # Legacy path
         # /scratch/project_465001542/kiszlert/o01f/output/LRA/default/climatedt-o25.1/ICON/o0f1-ssp370/r100/monthly/*o0f1-ssp370_r100_monthly_*.nc
       chunks: {}

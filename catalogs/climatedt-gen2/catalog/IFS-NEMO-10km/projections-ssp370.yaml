@@ -10,7 +10,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -19,7 +19,7 @@ sources:
         param: 151
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -51,7 +51,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -60,7 +60,7 @@ sources:
         param: 151
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -92,7 +92,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -101,7 +101,7 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -132,7 +132,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -141,7 +141,7 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -172,7 +172,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -181,7 +181,7 @@ sources:
         param: 228004
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -214,7 +214,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -223,7 +223,7 @@ sources:
         param: 228004
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -256,7 +256,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -267,7 +267,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: 6h
       savefreq: h
@@ -300,7 +300,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -311,7 +311,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: 6h
       savefreq: h
@@ -344,7 +344,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -355,7 +355,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -388,7 +388,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -399,7 +399,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -432,7 +432,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -441,7 +441,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -472,7 +472,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -481,7 +481,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -512,7 +512,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -521,7 +521,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -552,7 +552,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -561,7 +561,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -592,7 +592,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -606,7 +606,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -660,7 +660,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clmn
@@ -674,7 +674,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -728,7 +728,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: high
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -738,7 +738,7 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -770,7 +770,7 @@ sources:
         model: IFS-NEMO
         realization: '{{ realization }}'
         resolution: standard
-        expver: a2ii
+        expver: 0001
         expid: a35w
         type: fc
         stream: clte
@@ -780,7 +780,7 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -808,7 +808,7 @@ sources:
       urlpath:
         # Legacy path
         # /gpfs/scratch/ehpc01/bsc998159/a35w/output/LRA/mn5-phase2/IFS-NEMO/a2ii/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
-        '{{ LRA_PATH }}/IFS-NEMO/ssp370-ensemble/r100/monthly/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
+        '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp370/r100/monthly/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
