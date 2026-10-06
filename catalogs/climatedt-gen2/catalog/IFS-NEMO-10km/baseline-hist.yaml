@@ -1325,3 +1325,22 @@ sources:
         default: 2
     metadata:
       source_grid_name: lon-lat-r100
+  aqua-latlon:
+    driver: netcdf
+    description: AQUA analysis latlon
+    args:
+      urlpath: 
+        '/work/bb1153/b383197/personal_tests/cli_tests/lat_lon_profiles/outputs/climatedt-gen2/IFS-NEMO-10km/baseline-hist/r2/netcdf/lat_lon_profiles_test.zonal_profile.climatedt-gen2.IFS-NEMO-10km.baseline-hist.r{{ realization }}.longterm.2t.tropics.nc'
+      xarray_kwargs:
+        decode_times: true
+        combine: 'nested'
+        compat: 'override'
+        chunks: {}
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        allowed: [2, 3, 4]
+        description: realization member, the first member is considered the 5km run
+        type: int
+        default: 2
