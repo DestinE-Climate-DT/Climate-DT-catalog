@@ -30,9 +30,9 @@ hpc2020:
     areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
 levante:
   paths:
-    grids: /work/bb1153/b382289/data/aqua-dvc/grids
-    weights: /work/bb1153/b382289/data/aqua-dvc/weights
-    areas: /work/bb1153/b382289/data/aqua-dvc/areas
+    grids: /work/bk1580/aqua-dvc/grids
+    weights: /work/bk1580/aqua-dvc/weights
+    areas: /work/bk1580/aqua-dvc/areas
 mafalda:
   paths:
     grids: /work/common/aqua/aqua-dvc/grids

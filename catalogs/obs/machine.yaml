@@ -8,12 +8,12 @@ leonardo:
     DVC_PATH: /leonardo_work/DestE_330_24/AQUA/datasets
 levante:
   paths:
-    grids: /work/bb1153/b382289/data/aqua-dvc/grids
-    weights: /work/bb1153/b382289/data/aqua-dvc/weights
-    areas: /work/bb1153/b382289/data/aqua-dvc/areas
+    grids: /work/bk1580/aqua-dvc/grids
+    weights: /work/bk1580/aqua-dvc/weights
+    areas: /work/bk1580/aqua-dvc/areas
   intake:
-    DATA_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
-    DVC_PATH: /work/bb1153/b382289/data/aqua-dvc/datasets
+    DATA_PATH: /work/bk1580/aqua-dvc/datasets
+    DVC_PATH: /work/bk1580/aqua-dvc/datasets
 lumi:
   paths:
     grids: /pfs/lustrep4/projappl/project_465002727/aqua/aqua-dvc/grids

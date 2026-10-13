@@ -37,9 +37,9 @@ hpc2020:
     ZARR_PATH: null
 levante:
   paths:
-    grids: /work/bb1153/b382289/data/aqua-dvc/grids
-    weights: /work/bb1153/b382289/data/aqua-dvc/weights
-    areas: /work/bb1153/b382289/data/aqua-dvc/areas
+    grids: /work/bk1580/aqua-dvc/grids
+    weights: /work/bk1580/aqua-dvc/weights
+    areas: /work/bk1580/aqua-dvc/aqua-dvc/areas
   intake:
     LRA_PATH: /work/bb1153/b383197/DROP/climatedt-gen2
     ZARR_PATH: /work/bk1580/destine_phase2/LRA/climatedt-gen2-zarr
