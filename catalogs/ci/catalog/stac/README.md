@@ -1,7 +1,7 @@
 # Local STAC examples for AQUA CI
 
 The `ci` catalog has one `stac` entry that loads `catalog.yaml` in this
-directory. It follows the structure of the `eerie-cloud` catalog:
+directory. It provides collection entries and a nested catalog of items:
 
 - `ifs` and `nemo` point directly to the corresponding STAC collection JSON
   files. Their `source_grid_name` and `fixer_name` metadata are dictionaries
