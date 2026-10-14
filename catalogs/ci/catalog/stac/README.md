@@ -48,3 +48,4 @@ catalog = intake.open_catalog("/path/to/Climate-DT-catalog/catalogs/ci/catalog.y
 print(list(catalog["stac"]["ifs"]))
 data = catalog["stac"]["ifs"]["ifs-short-ifs2d-tco79"]["data"].read()
 ```
+
