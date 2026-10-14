@@ -1,0 +1,6 @@
+sources:
+  ICON-5km:
+    description: ICON-5km model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ICON-5km/main.yaml'
