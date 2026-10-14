@@ -45,25 +45,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/ECE4-FAST/main.yaml"
-  stac-ifs:
-    description: IFS test data through the local STAC collection
-    driver: stac
-    args:
-      urlpath: tests/stac_catalogue/collections/ifs.json
-      item: ifs-long-regridded-r18x9
-      asset: data
-      chunks:
-        time: 12
-      xarray_kwargs:
-        engine: netcdf4
-    metadata:
-      source_grid_name:
-        ifs-long-regridded-r18x9: lon-lat
-        ifs-short-ifs2d-tco79: tco79
-      fixer_name:
-        ifs-long-regridded-r18x9: ifs-ci-test
-  stac-ifs-items:
-    description: Individually configured IFS STAC items
+  stac:
+    description: Local STAC examples for AQUA test data
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/STAC/ifs-items.yaml"
+      path: "{{CATALOG_DIR}}/catalog/stac/main.yaml"

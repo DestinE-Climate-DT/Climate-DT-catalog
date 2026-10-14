@@ -1,13 +1,12 @@
 # Local STAC examples for AQUA CI
 
-The `ci` catalog provides two ways to read the IFS fixtures from AQUA's static
-STAC catalog:
+The `ci` catalog exposes `stac` as a nested Intake catalog. Its `main.yaml`
+provides two ways to read the IFS fixtures from AQUA's static STAC catalog:
 
-- `stac-ifs` points to the IFS collection. Its default item is
-  `ifs-long-regridded-r18x9`, and another item can be selected at read time.
-  The item-specific grid and fixer metadata live on this collection entry.
-- `stac-ifs-items` points to `ifs-items.yaml`, which gives each example item
-  its own Intake entry and metadata.
+- `ifs` points to the IFS collection. Its items can be selected by ID. The
+  item-specific grid and fixer metadata live on this collection entry.
+- `ifs-long-regridded-r18x9` and `ifs-short-ifs2d-tco79` point directly to
+  individual STAC item JSON files and carry their own metadata.
 
 The STAC JSON files are in `tests/stac_catalogue` in the AQUA repository. Their
 NetCDF assets are in `AQUA_tests` at the same repository root; CI downloads that
@@ -22,16 +21,16 @@ from aqua import Reader
 
 collection_reader = Reader(
     catalog="ci",
-    model="stac-ifs",
-    exp="ifs-long-regridded-r18x9",
-    source="data",
+    model="stac",
+    exp="ifs",
+    source="ifs-long-regridded-r18x9",
     areas=False,
 )
 collection_data = collection_reader.retrieve()
 
 item_reader = Reader(
     catalog="ci",
-    model="stac-ifs-items",
+    model="stac",
     exp="ifs-short-ifs2d-tco79",
     source="data",
     areas=False,
@@ -46,6 +45,6 @@ import aqua  # Registers AQUA's STAC Intake driver.
 import intake
 
 catalog = intake.open_catalog("/path/to/Climate-DT-catalog/catalogs/ci/catalog.yaml")
-print(list(catalog["stac-ifs"]))
-data = catalog["stac-ifs"]["ifs-short-ifs2d-tco79"]["data"].read()
+print(list(catalog["stac"]["ifs"]))
+data = catalog["stac"]["ifs"]["ifs-short-ifs2d-tco79"]["data"].read()
 ```
