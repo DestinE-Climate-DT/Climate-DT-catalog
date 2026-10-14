@@ -1,12 +1,14 @@
 # Local STAC examples for AQUA CI
 
-The `ci` catalog exposes `stac` as a nested Intake catalog. Its `main.yaml`
-provides two ways to read the IFS fixtures from AQUA's static STAC catalog:
+The `ci` catalog has two nested Intake entries for the IFS fixtures in AQUA's
+static STAC catalog:
 
-- `ifs` points to the IFS collection. Its items can be selected by ID. The
-  item-specific grid and fixer metadata live on this collection entry.
-- `ifs-long-regridded-r18x9` and `ifs-short-ifs2d-tco79` point directly to
-  individual STAC item JSON files and carry their own metadata.
+- `stac` loads `catalog/stac/main.yaml`. Its `ifs` entry points to the IFS
+  collection, where items can be selected by ID. Item-specific grid and fixer
+  metadata live on the collection entry.
+- `stac-items` loads `catalog/stac/items/main.yaml`. Its entries point directly
+  to individual STAC item JSON files and carry their own metadata, following
+  the nested YAML pattern used by the `eerie-cloud` catalog.
 
 The STAC JSON files are in `tests/stac_catalogue` in the AQUA repository. Their
 NetCDF assets are in `AQUA_tests` at the same repository root; CI downloads that
@@ -30,7 +32,7 @@ collection_data = collection_reader.retrieve()
 
 item_reader = Reader(
     catalog="ci",
-    model="stac",
+    model="stac-items",
     exp="ifs-short-ifs2d-tco79",
     source="data",
     areas=False,
@@ -47,5 +49,6 @@ import intake
 catalog = intake.open_catalog("/path/to/Climate-DT-catalog/catalogs/ci/catalog.yaml")
 print(list(catalog["stac"]["ifs"]))
 data = catalog["stac"]["ifs"]["ifs-short-ifs2d-tco79"]["data"].read()
+item_data = catalog["stac-items"]["ifs-short-ifs2d-tco79"]["data"].read()
 ```
 

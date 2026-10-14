@@ -14,28 +14,3 @@ sources:
         ifs-short-ifs2d-tco79: tco79
       fixer_name:
         ifs-long-regridded-r18x9: ifs-ci-test
-  ifs-long-regridded-r18x9:
-    description: Coarse IFS test data through a STAC item
-    driver: stac
-    args:
-      urlpath: tests/stac_catalogue/items/ifs/ifs-long-regridded-r18x9.json
-      asset: data
-      chunks:
-        time: 12
-      xarray_kwargs:
-        engine: netcdf4
-    metadata:
-      source_grid_name: lon-lat
-      fixer_name: ifs-ci-test
-  ifs-short-ifs2d-tco79:
-    description: Native IFS test data through a STAC item
-    driver: stac
-    args:
-      urlpath: tests/stac_catalogue/items/ifs/ifs-short-ifs2d-tco79.json
-      asset: data
-      chunks:
-        time: 1
-      xarray_kwargs:
-        engine: netcdf4
-    metadata:
-      source_grid_name: tco79
