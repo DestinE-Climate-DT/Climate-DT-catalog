@@ -43,19 +43,19 @@ def test_cli_list_and_targets(tmp_path, catalog_copy, capsys):
         cli.main(["list", "-c", str(config), "-m", "levante"])
     assert exc.value.code == 0
     out = capsys.readouterr().out
-    assert "psc" in out and "giomas" in out and "(frozen)" in out
-    assert cli.parse_targets(["psc:piomas", "en4", "psc:giomas"]) == {"psc": ["piomas", "giomas"], "en4": None}
+    assert "PSC:GIOMAS:monthly" in out and "EN4:v4.2.2:monthly-netcdf" in out and "(frozen)" in out
+    assert cli.parse_targets(["psc:PIOMAS", "EN4", "PSC:GIOMAS:monthly"]) == {"PSC": ["PIOMAS", "GIOMAS:monthly"], "EN4": None}
     with pytest.raises(SystemExit):
         cli.parse_targets(["nope"])
 
 
 def test_machine_dataset_overrides(tmp_path, catalog_copy):
     config = write_config(tmp_path, catalog_copy,
-                          datasets={"en4": {"start_year": 1950, "products": ["so", "zarr"]}},
+                          datasets={"en4": {"start_year": 1950, "products": ["so"]}},
                           machines={"laptop": {"output_root": "~/obs", "catalog_root": str(tmp_path / "cat"),
-                                               "datasets": {"en4": {"start_year": 2024}}}})
+                                               "datasets": {"EN4": {"start_year": 2024}}}})
     settings = load_settings(config, machine="laptop")
-    assert settings.dataset_options("en4") == {"start_year": 2024, "products": ["so", "zarr"]}
+    assert settings.dataset_options("en4") == {"start_year": 2024, "products": ["so"]}
     assert settings.catalog_root == tmp_path / "cat"
     assert str(settings.output_root).startswith(str(Path.home()))
 

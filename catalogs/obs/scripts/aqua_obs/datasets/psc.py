@@ -63,14 +63,14 @@ def read_mask(path, ny):
 
 
 class PSC(ObsDataset):
-    name = "psc"
-    catalog_dir = "PSC"
+    name = "PSC"
     description = "PSC PIOMAS/GIOMAS monthly sea-ice thickness"
     start_year = 1979
     complete_years = True
 
     def all_products(self):
-        return [Product(key, f"sithick_r1i1p1_mon_{{start}}-{{end}}_GCCS{NX}x{model['ny']}_curvgrid.nc",
+        return [Product(key.upper(), "monthly",
+                        f"sithick_r1i1p1_mon_{{start}}-{{end}}_GCCS{NX}x{model['ny']}_curvgrid.nc",
                         f"PSC/{key.upper()}", catalog=[CatalogEntry(f"{key}.yaml", "monthly")],
                         params=dict(model))
                 for key, model in MODELS.items()]
@@ -98,12 +98,26 @@ class PSC(ObsDataset):
         last = pd.Period(f"{last_year}-{nmonths:02d}", freq="M")
         return Remote(last=last, text=f"{min(years)}-01..{last}")
 
+    def fetch_plan(self, product, start, end):
+        listed = self._listing(product)
+        last_year = end.year if end is not None else max(listed, default=start.year)
+        years = [y for y in range(start.year, last_year + 1) if y in listed]
+        if not years:
+            return ["nothing listed upstream for these years"]
+        dest = self.workdir / "raw" / product.exp
+        cached = [y for y in years if (dest / f"heff.H{y}.gz").exists() or (dest / f"heff.H{y}").exists()]
+        lines = [f"{len(years)} yearly heff files {years[0]}-{years[-1]} from {product.params['heff_url']}, "
+                 f"{len(cached)} cached in {dest} (raw files re-downloaded if grown upstream)"]
+        if not (self.find_local(product)):
+            lines.append(f"grid files from {product.params['grid_url']}")
+        return lines
+
     def fetch(self, product, start, end):
         """{year: local file} for the years of start..end available upstream."""
         listed = self._listing(product)
         last_year = end.year if end is not None else max(listed, default=start.year)
         base, unit = product.params["heff_url"], self._month_bytes(product)
-        dest = self.workdir / "raw" / product.key
+        dest = self.workdir / "raw" / product.exp
         files = {}
         for year in range(start.year, last_year + 1):
             if year not in listed:
@@ -126,7 +140,7 @@ class PSC(ObsDataset):
 
     def _grid_file(self, product, name):
         return self.fetcher.download(f"{product.params['grid_url']}/{name}",
-                                     self.workdir / "grids" / product.key / name)
+                                     self.workdir / "grids" / product.exp / name)
 
     def build(self, product, raw, start, end, template=None):
         ny = product.params["ny"]
@@ -182,5 +196,5 @@ class PSC(ObsDataset):
                     "file_created": "Created " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                     "processing_info": f"grid files from {p['doc']}"}
         log.warning("%s: built from scratch; check the grid against the previous curvgrid product",
-                    product.key)
+                    product.exp)
         return ds

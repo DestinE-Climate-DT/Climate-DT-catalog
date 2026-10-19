@@ -28,12 +28,11 @@ def test_en4_glob_and_anchor(catalog_copy):
     path = catalog_copy / "catalog" / "EN4" / "v4.2.2.yaml"
     before = path.read_text()
     sync_range(path, "monthly-netcdf", "195001", "202612")
-    sync_range(path, "monthly-zarr", "195001", "202612")
     after = path.read_text()
-    assert len(changed_lines(before, after)) == 4
+    assert len(changed_lines(before, after)) == 2
     assert "'{{DVC_PATH}}/EN4/v4.2.2/netcdf/*EN4-195001-202612.nc'" in after
-    assert "EN4.v422.195001-202612.clev.zarr" in after
-    assert "from 1950 to 2026 in zarr format" in after
+    assert "from 1950 to 2026 in netcdf4 zip format" in after
+    assert "EN4.v422.1950-2025.clev.zarr" in after  # zarr source untouched
     assert "<<: *monthly-zarr" in after
 
 

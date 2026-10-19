@@ -31,7 +31,11 @@ class Settings:
     datasets: dict = field(default_factory=dict)
 
     def dataset_options(self, name):
-        return dict(self.datasets.get(name) or {})
+        """Options of a dataset (catalog model name, case-insensitive)."""
+        for key, opts in self.datasets.items():
+            if key.lower() == name.lower():
+                return dict(opts or {})
+        return {}
 
 
 def aqua_machine():
@@ -86,9 +90,10 @@ def load_settings(config=None, machine=None, output_root=None, workdir=None):
         catalog_root = _path(override["catalog_root"])
 
     # dataset options: machine-specific values override the global ones, key by key
-    datasets = {name: dict(opts or {}) for name, opts in (cfg.get("datasets") or {}).items()}
+    # (dataset names are case-insensitive)
+    datasets = {name.lower(): dict(opts or {}) for name, opts in (cfg.get("datasets") or {}).items()}
     for name, opts in (override.get("datasets") or {}).items():
-        datasets.setdefault(name, {}).update(opts or {})
+        datasets.setdefault(name.lower(), {}).update(opts or {})
 
     return Settings(machine=machine, output_root=output_root, workdir=workdir,
                     catalog_root=catalog_root, data_path=_path(intake.get("DATA_PATH")),

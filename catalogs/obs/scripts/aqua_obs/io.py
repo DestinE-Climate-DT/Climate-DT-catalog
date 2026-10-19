@@ -1,9 +1,8 @@
-"""Read, extend and write the output products (netCDF and zarr)."""
+"""Read, extend and write the netCDF output products."""
 
 import datetime
 import logging
 import os
-import shutil
 from pathlib import Path
 
 import numpy as np
@@ -24,9 +23,6 @@ class CompatibilityError(ValueError):
 
 def open_product(path):
     """Open an existing product lazily."""
-    path = Path(path)
-    if path.suffix == ".zarr":
-        return xr.open_zarr(path)
     return xr.open_dataset(path, chunks={})
 
 
@@ -146,47 +142,3 @@ def write_netcdf(ds, path, complevel=1):
     ds.to_netcdf(tmp, format="NETCDF4", encoding=netcdf_encoding(ds, complevel))
     os.replace(tmp, path)
     return path
-
-
-def extend_zarr(old_store, new, new_store, dim="time", chunks=None):
-    """Copy old_store to new_store and append the time steps of new to the copy."""
-    old_store, new_store = Path(old_store), Path(new_store)
-    if new_store.exists():
-        raise FileExistsError(f"{new_store} already exists")
-    reference = xr.open_zarr(old_store)
-    check_compatible(reference, new, dim)
-    tmp = new_store.with_name(new_store.name + ".tmp")
-    if tmp.exists():
-        shutil.rmtree(tmp)
-    log.info("Copying %s to %s", old_store, tmp)
-    shutil.copytree(old_store, tmp)
-    new = new[time_vars(reference, dim)]
-    new = new.drop_vars([c for c in new.coords if dim not in new[c].dims])
-    for var in new.variables:
-        new[var].encoding = {}
-        if var in reference.variables:
-            new[var].attrs = reference[var].attrs
-    if chunks:
-        new = new.chunk(chunks)
-    log.info("Appending %d time steps to %s", new.sizes[dim], tmp)
-    new.to_zarr(tmp, append_dim=dim, consolidated=True)
-    os.replace(tmp, new_store)
-    return new_store
-
-
-def write_zarr(ds, store, chunks=None):
-    """Write a new zarr store (used when no previous store exists)."""
-    store = Path(store)
-    if store.exists():
-        raise FileExistsError(f"{store} already exists")
-    tmp = store.with_name(store.name + ".tmp")
-    if tmp.exists():
-        shutil.rmtree(tmp)
-    for var in ds.variables:
-        ds[var].encoding = {}
-    if chunks:
-        ds = ds.chunk(chunks)
-    # zarr v2, as the stores produced by nc2zarr and read by the catalog
-    ds.to_zarr(tmp, consolidated=True, zarr_format=2)
-    os.replace(tmp, store)
-    return store

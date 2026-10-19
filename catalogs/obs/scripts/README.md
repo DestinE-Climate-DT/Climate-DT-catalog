@@ -5,18 +5,28 @@ sources for new data, then downloads and processes the requested months and writ
 Optionally, it also updates the date ranges in the catalog yaml files. Publishing with DVC is
 still a manual step.
 
-| dataset    | products                         | upstream                          | modes          |
-|------------|----------------------------------|-----------------------------------|----------------|
-| `berkeley` | `v2`, `v2-highres` (`v1` frozen) | Berkeley Earth gridded TAVG (GCS) | append, replace |
-| `psc`      | `piomas`, `giomas`               | PSC annual `heff` binaries        | append, replace |
-| `en4`      | `so`, `thetao`, `zarr`           | Met Office EN.4.2.2 g10 analyses  | append, replace |
+Datasets and products follow the obs catalog: a dataset is a catalog model, and a product is a
+source of one of its experiments, written `MODEL:exp:source`. Each product also names the
+aqua-dvc pointer that tracks it, which is what you pull to get the published version locally.
+
+| product                                   | files                         | aqua-dvc pointer                  | upstream |
+|-------------------------------------------|-------------------------------|-----------------------------------|----------|
+| `BERKELEY-EARTH:aqua-filled:r100-monthly` | `Berkeley-Earth_aqua-filled_1x1_*.nc` | `BERKELEY-EARTH/aqua-filled` | Berkeley Earth gridded TAVG, 1° |
+| `BERKELEY-EARTH:aqua-filled:r025-monthly` | `Berkeley-Earth_aqua-filled_0.25x0.25_*.nc` | `BERKELEY-EARTH/aqua-filled` | same, 0.25° |
+| `PSC:PIOMAS:monthly`                      | `sithick_..._GCCS360x120_curvgrid.nc` | `PSC/PIOMAS`              | PSC annual `heff` binaries |
+| `PSC:GIOMAS:monthly`                      | `sithick_..._GCCS360x276_curvgrid.nc` | `PSC/GIOMAS`              | PSC annual `heff` binaries |
+| `EN4:v4.2.2:monthly-netcdf`               | `so-EN4-*.nc`, `thetao-EN4-*.nc` | `EN4/v4.2.2`                   | Met Office EN.4.2.2 g10 analyses |
+
+`BERKELEY-EARTH:aqua-filled:r100-monthly-v1` is kept as a frozen product. All products support
+both update modes. A product can be made of several files covering the same months, as EN4
+`v4.2.2`: they are always found, checked, extended and published together.
 
 The older per-dataset scripts in `catalog/<DATASET>/scripts/` will be removed once each dataset
 has been validated here.
 
 ## Installation
 
-You need `cdo` and an environment with xarray, netCDF4, zarr, requests and ruamel.yaml. The AQUA
+You need `cdo` and an environment with xarray, netCDF4, requests and ruamel.yaml. The AQUA
 environment already has all of them. Run from this directory:
 
 ```bash
@@ -50,7 +60,7 @@ deleted.
 The `datasets:` section of `config.yaml` sets, for each dataset:
 
 - `enabled`;
-- `products`;
+- `products`: experiments (`PIOMAS`) or `experiment:source` (`aqua-filled:r100-monthly`);
 - `start_year`, used as the default start of a replace run;
 - `complete_years`: when no `--end` is given, extend only up to the last available December.
   It is on by default for PSC and EN4.
@@ -59,19 +69,22 @@ The `datasets:` section of `config.yaml` sets, for each dataset:
 
 `config.yaml` has an `altai` entry for the Mac:
 
-- products go to `~/aqua-obs/datasets`;
+- products go to the local aqua-dvc clone, `~/Desktop/aqua-dvc/datasets`;
 - downloads and state go to `~/aqua-obs/work`;
-- Berkeley processes only `v2`;
+- Berkeley processes only `aqua-filled:r100-monthly`;
 - an EN4 replace run starts in 2024.
+
+To extend the published version of a product, first pull it in the aqua-dvc clone. `check` names
+the pointer of every missing product, e.g. `dvc pull datasets/PSC/PIOMAS.dvc`.
 
 Because the machine is read from the AQUA config, `aqua-obs` picks this entry up without options.
 For a first round trip:
 
 ```bash
 aqua-obs check
-aqua-obs update psc --mode replace --start 202301 --end 202412   # build a small product
-aqua-obs check psc                                               # now "new data"
-aqua-obs update psc --end 202512 --catalog                       # append and edit the yaml
+aqua-obs update PSC:PIOMAS --mode replace --start 202301 --end 202412   # build a small product
+aqua-obs check PSC                                                      # now "new data"
+aqua-obs update PSC:PIOMAS --end 202512 --catalog                       # append and edit the yaml
 git diff ../catalog/PSC                                          # inspect, then git checkout
 ```
 
@@ -84,13 +97,14 @@ revert them with `git checkout`. To work on a copy instead, set `catalog_root` u
 ```bash
 aqua-obs list                                # datasets, modes, products and target paths
 aqua-obs check                               # local range vs upstream, nothing downloaded
-aqua-obs check psc en4:zarr                  # restrict to datasets or dataset:product
-aqua-obs update --dry-run                    # mode and months each product would get
-aqua-obs update psc                          # append up to the latest available (complete) year
-aqua-obs update en4 --end 202606             # append up to June 2026, error if not available
-aqua-obs update psc:giomas --mode replace    # rebuild from the dataset start year
-aqua-obs update berkeley --mode replace --start 198001 --end 202412
-aqua-obs update en4 --catalog                # also edit the catalog yaml
+aqua-obs check PSC EN4:v4.2.2                # restrict to MODEL, MODEL:exp or MODEL:exp:source
+aqua-obs update --dry-run                    # per product: mode, months, downloads, output, catalog
+aqua-obs -l DEBUG check                      # log level before or after the subcommand
+aqua-obs update PSC                          # append up to the latest available (complete) year
+aqua-obs update EN4 --end 202606             # append up to June 2026, error if not available
+aqua-obs update PSC:GIOMAS --mode replace    # rebuild from the dataset start year
+aqua-obs update BERKELEY-EARTH:aqua-filled:r100-monthly --mode replace --start 198001 --end 202412
+aqua-obs update EN4 --catalog                # also edit the catalog yaml
 aqua-obs catalog --dry-run                   # yaml edits matching the files on disk
 ```
 
@@ -111,6 +125,22 @@ The catalog yaml is edited only when this is enabled, either with `update_catalo
 `config.yaml` (globally or under a machine) or with `--catalog`. `--no-catalog` disables it for a
 single run. Without it, `aqua-obs catalog` aligns the yaml with the files on disk at any later time.
 
+`-l/--loglevel` (DEBUG, INFO, WARNING, ERROR; default INFO) sets the aqua-obs messages. HTTP
+requests and library warnings (e.g. xarray) are shown only at DEBUG.
+
+`--dry-run` downloads nothing and writes nothing. For each product it shows:
+
+- the mode and why it was chosen;
+- the local product and its range;
+- what upstream offers;
+- the months to process and the expected last month;
+- what would be downloaded, and what is already cached;
+- the output file name;
+- the obsolete file;
+- the catalog edits, when enabled.
+
+It warns when `--end` is beyond what upstream is known to provide.
+
 For each product, `update` prints:
 
 - the new file;
@@ -119,6 +149,8 @@ For each product, `update` prints:
 - a reminder to `dvc add` and `dvc push`, then `git pull` and `dvc pull` on every machine.
 
 The obsolete file can be removed once the new version is in DVC.
+
+Model names are case-insensitive on the command line and in `config.yaml`.
 
 ### File names
 
@@ -161,17 +193,14 @@ Before anything is written, the suite checks that:
 - the new data follow the existing product with no overlap or gap;
 - the written file has a continuous monthly time axis (checked again after writing).
 
-When appending:
-
-- netCDF products are rewritten under the new name;
-- zarr stores are copied, and the new months are appended to the copy (zarr format 2).
+When appending, the netCDF product is rewritten under the new name.
 
 Shared helpers:
 
 | module        | content |
 |---------------|---------|
 | `fetch.py`    | downloads with retry, `.part` files, resume and validators; HEAD requests; directory listings |
-| `io.py`       | append/template checks, atomic netCDF writes, zarr copy and append |
+| `io.py`       | append/template checks, atomic netCDF writes |
 | `catalog.py`  | edits only the range in the `urlpath`/`description` lines of a source |
 | `timeaxis.py` | month parsing, selection and checks |
 | `cdo.py`      | CDO via subprocess |
@@ -179,9 +208,12 @@ Shared helpers:
 ### Adding a dataset
 
 1. Create `aqua_obs/datasets/<name>.py` with a subclass of `ObsDataset`:
-   - set `name`, `catalog_dir`, `start_year` and `complete_years`;
-   - restrict `modes` if needed;
-   - implement `all_products()`, `remote_info()`, `fetch()` and `build()`.
+   - set `name` to the model name in the obs catalog (`catalog/<name>/`);
+   - set `start_year` and `complete_years`, and restrict `modes` if needed;
+   - implement `all_products()`, returning a `Product(exp, source, template, subdir, ...)` per
+     catalog source to maintain. Use `files={key: [variables]}` and a `{file}` placeholder for
+     products split in several files;
+   - implement `remote_info()`, `fetch()` and `build()`.
 2. Import the module in `aqua_obs/datasets/__init__.py`.
 3. Add its options to `config.yaml`, and add tests in `tests/`.
 
@@ -228,6 +260,10 @@ possibly incomplete; extend into it with `--end`.
 
 The processed months are cached in `workdir/en4/processed`; clear the cache to pick up upstream
 revisions.
+
+The zarr store of the catalog (`monthly-zarr`, which `monthly` points to) is not produced. After
+an update, regenerate it from the new netCDF files with `nc2zarr`, as described in
+`catalog/EN4/README.md`. Keep both sources at the same end month.
 
 ## Tests
 

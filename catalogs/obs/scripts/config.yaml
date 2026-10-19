@@ -19,16 +19,19 @@ defaults:
 # Per machine: output_root, workdir, optionally catalog_root and `datasets:` overrides
 # (merged key by key over the global `datasets:` section below).
 machines:
-  # local tests on the Mac (not in machine.yaml): products, downloads and state under ~/aqua-obs
+  # local tests on the Mac (not in machine.yaml): products in the local aqua-dvc clone
+  # (`dvc pull datasets/<MODEL>/<exp>.dvc` to get the current products to append to),
+  # downloads, cache and state outside of it
   altai:
-    output_root: ~/aqua-obs/datasets
+    output_root: ~/Desktop/aqua-dvc/datasets
+    # output_root: ~/aqua-obs/datasets    # standalone sandbox, no DVC
     workdir: ~/aqua-obs/work
     # catalog_root: ~/aqua-obs/catalog   # edit a copy of catalogs/obs instead of the repo yaml
     datasets:
-      berkeley:
-        products: [v2]                    # v2-highres is several GB
-      en4:
-        start_year: 2024                  # replace runs: ~180 MB per year
+      BERKELEY-EARTH:
+        products: [aqua-filled:r100-monthly]   # r025-monthly is several GB
+      EN4:
+        start_year: 2024                       # replace runs: ~180 MB per year
   lumi:
     output_root: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/aqua-obs/datasets
     workdir: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/aqua-obs/work
@@ -36,21 +39,20 @@ machines:
   #   output_root: /work/bk1580/aqua-dvc/datasets
   #   workdir: /scratch/b/<user>/aqua-obs
 
-# Per dataset:
+# Per dataset, named as the models of the obs catalog (catalog/<MODEL>/):
 #   enabled         include the dataset when no target is given on the command line
-#   products        products to process (default: all)
+#   products        experiments or experiment:source of the catalog to process (default: all)
 #   start_year      first year of a replace run (default: dataset specific)
 #   complete_years  without --end, extend only up to the last December available
-#                   (default: true for psc and en4, false for berkeley)
+#                   (default: true for PSC and EN4, false for BERKELEY-EARTH)
 datasets:
-  berkeley:
+  BERKELEY-EARTH:
     enabled: true
-    products: [v2, v2-highres]
+    products: [aqua-filled:r100-monthly, aqua-filled:r025-monthly]
     start_year: 1979
-  psc:
+  PSC:
     enabled: true
-    products: [piomas, giomas]
-  en4:
+    products: [PIOMAS, GIOMAS]
+  EN4:
     enabled: true
-    version: 4.2.2
-    products: [so, thetao, zarr]
+    version: 4.2.2             # experiment v4.2.2

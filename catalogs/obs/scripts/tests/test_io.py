@@ -54,16 +54,6 @@ def test_write_netcdf_keeps_encoding(tmp_path):
         assert "_FillValue" not in res.lon.encoding
 
 
-def test_extend_zarr(tmp_path):
-    store = io.write_zarr(make([2020]), tmp_path / "a.zarr", chunks={"time": 1})
-    new = io.extend_zarr(store, make([2021], static=False), tmp_path / "b.zarr", chunks={"time": 1})
-    with xr.open_zarr(new) as res, xr.open_zarr(store) as old:
-        assert res.sizes["time"] == 24 and old.sizes["time"] == 12
-        assert res.tas.chunks[0] == (1,) * 24
-    with pytest.raises(FileExistsError):
-        io.extend_zarr(store, make([2021]), new)
-
-
 def test_like_template():
     ref, new = make([2020]), make([1990, 1991], static=False)
     out = io.like_template(ref, new)

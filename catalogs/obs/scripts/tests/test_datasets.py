@@ -10,7 +10,7 @@ import xarray as xr
 from aqua_obs import io
 from aqua_obs.base import ObsDataset
 from aqua_obs.datasets import berkeley, en4, psc
-from aqua_obs.timeaxis import month_bounds, month_starts
+from aqua_obs.timeaxis import month_bounds, month_starts, select_months
 
 NY = 4
 M = lambda s: pd.Period(s, freq="M")  # noqa: E731
@@ -52,21 +52,21 @@ def existing_product(settings, first, last):
 
 
 def test_registry():
-    assert {"berkeley", "en4", "psc"} <= set(ObsDataset.registry)
+    assert {"BERKELEY-EARTH", "EN4", "PSC"} <= set(ObsDataset.registry)
 
 
 def test_psc_append_default_complete_years(settings, piomas):
     old = existing_product(settings, "1999-01", "2000-12")
     ds = psc.PSC(settings)
-    [status] = ds.check(["piomas"])
+    [status] = ds.check(["PIOMAS"])
     assert status.action == "new data" and status.message == "up to 2002-12"
     assert status.remote == "2001-01..2003-05"
 
-    [result] = ds.update(["piomas"], update_catalog=True)
+    [result] = ds.update(["PIOMAS"], update_catalog=True)
     assert not result.error and result.mode == "append"
-    assert result.output.name == f"sithick_r1i1p1_mon_199901-200212_GCCS360x{NY}_curvgrid.nc"
-    assert result.obsolete == old
-    with xr.open_dataset(result.output) as out:
+    assert result.outputs[0].name == f"sithick_r1i1p1_mon_199901-200212_GCCS360x{NY}_curvgrid.nc"
+    assert result.obsolete == [old]
+    with xr.open_dataset(result.outputs[0]) as out:
         assert out.sizes["time"] == 48
         assert "areacello" in out and "time" not in out.areacello.dims
         np.testing.assert_array_equal(out.sithick.isel(y=0, x=0).values[24:27], [2001, 2002, 2003])
@@ -75,49 +75,53 @@ def test_psc_append_default_complete_years(settings, piomas):
     assert "199901-200212_GCCS360x4" in yaml
 
     # only the incomplete 2003 is left: nothing to do by default
-    [status] = ds.check(["piomas"])
+    [status] = ds.check(["PIOMAS"])
     assert status.action == "up-to-date"
-    [result] = ds.update(["piomas"])
-    assert result.output is None and result.message == "nothing new upstream"
+    [result] = ds.update(["PIOMAS"])
+    assert result.outputs == [] and result.message == "nothing new upstream"
 
 
 def test_psc_append_until_end_month(settings, piomas):
     existing_product(settings, "1999-01", "2002-12")
     ds = psc.PSC(settings)
-    [result] = ds.update(["piomas"], end=M("2003-03"))
-    assert result.output.name.startswith("sithick_r1i1p1_mon_199901-200303_")
+    [result] = ds.update(["PIOMAS"], end=M("2003-03"))
+    assert result.outputs[0].name.startswith("sithick_r1i1p1_mon_199901-200303_")
     assert result.edits == []  # catalog untouched by default
     # beyond what upstream has: error, nothing written
-    [result] = ds.update(["piomas"], end=M("2003-08"))
+    [result] = ds.update(["PIOMAS"], end=M("2003-08"))
     assert "available only up to 2003-05" in result.error
-    assert result.output is None
+    assert result.outputs == []
     # append start must follow the local end
-    [result] = ds.update(["piomas"], start=M("2003-01"))
+    [result] = ds.update(["PIOMAS"], start=M("2003-01"))
     assert "append continues from 2003-04" in result.error
 
 
 def test_psc_replace_with_template(settings, piomas):
     old = existing_product(settings, "1999-01", "2000-12")
     ds = psc.PSC(settings)
-    [result] = ds.update(["piomas"], mode="replace", start=M("2001-01"), end=M("2002-06"))
+    [result] = ds.update(["PIOMAS"], mode="replace", start=M("2001-01"), end=M("2002-06"))
     assert not result.error and result.mode == "replace"
-    assert result.output.name.startswith("sithick_r1i1p1_mon_200101-200206_")
-    with xr.open_dataset(result.output) as out:
+    assert result.outputs[0].name.startswith("sithick_r1i1p1_mon_200101-200206_")
+    with xr.open_dataset(result.outputs[0]) as out:
         assert out.sizes["time"] == 18 and "areacello" in out
     assert old.exists()
-    [result] = ds.update(["piomas"], mode="replace", start=M("1990-01"), end=M("2001-12"))
+    [result] = ds.update(["PIOMAS"], mode="replace", start=M("1990-01"), end=M("2001-12"))
     assert "upstream data start at 2001-01" in result.error
 
 
 def test_psc_dry_run_touches_nothing(settings, piomas):
     old = existing_product(settings, "1999-01", "2000-12")
-    [result] = psc.PSC(settings).update(["piomas"], dry_run=True)
-    assert result.mode == "append" and result.message == "(dry run) 2001-01 to latest available"
+    [result] = psc.PSC(settings).update(["PIOMAS"], dry_run=True)
+    assert result.mode == "append" and result.message == "(dry run)"
+    details = "\n".join(result.details)
+    assert "months   : 2001-01..latest available (expected 2002-12), complete years only" in details
+    assert f"sithick_r1i1p1_mon_199901-200212_GCCS360x{NY}_curvgrid.nc" in details
+    assert "3 yearly heff files 2001-2003" in details
     assert list(old.parent.iterdir()) == [old]
 
 
 def test_append_needs_local(settings, piomas):
-    [result] = psc.PSC(settings).update(["piomas"], mode="append")
+    [result] = psc.PSC(settings).update(["PIOMAS"], mode="append")
     assert "use --mode replace" in result.error
 
 
@@ -146,9 +150,36 @@ def test_en4_cmorize():
     assert out.lev.attrs["positive"] == "down" and out.depth_bnds.dims == ("lev", "bnds")
 
 
-def test_legacy_names_are_found(settings):
-    product = psc.PSC(settings).all_products()[0]
-    assert product.match("sithick_r1i1p1_mon_197901-202512_GCCS360x120_curvgrid.nc") == ("197901", "202512")
-    en = en4.EN4(settings).all_products()[0]
-    assert en.match("so-EN4-1950-2025.nc") == ("1950", "2025")
-    assert en.filename(M("1950-01"), M("2026-06")) == "so-EN4-195001-202606.nc"
+def test_products_follow_catalog(settings):
+    piomas = psc.PSC(settings).all_products()[0]
+    assert piomas.key == "PIOMAS:monthly" and piomas.dvc == "PSC/PIOMAS"
+    assert piomas.match("sithick_r1i1p1_mon_197901-202512_GCCS360x120_curvgrid.nc") == ("197901", "202512")
+    [v422] = en4.EN4(settings).all_products()
+    assert v422.key == "v4.2.2:monthly-netcdf" and v422.dvc == "EN4/v4.2.2"
+    assert v422.file_keys == ["so", "thetao"]
+    assert v422.match("so-EN4-1950-2025.nc", "so") == ("1950", "2025")
+    assert v422.match("so-EN4-1950-2025.nc", "thetao") is None
+    assert v422.filename(M("1950-01"), M("2026-06"), "thetao") == "thetao-EN4-195001-202606.nc"
+    berkeley_keys = [p.key for p in berkeley.BerkeleyEarth(settings).products(["aqua-filled"])]
+    assert berkeley_keys == ["aqua-filled:r100-monthly-v1", "aqua-filled:r100-monthly", "aqua-filled:r025-monthly"]
+
+
+def test_multi_file_product(settings):
+    """EN4 v4.2.2: both files are found together, must cover the same months, are split by variable."""
+    ds = en4.EN4(settings)
+    [product] = ds.all_products()
+    folder = settings.output_root / "EN4" / "v4.2.2" / "netcdf"
+    times = month_starts(M("2000-01"), M("2000-12"))
+    full = xr.Dataset({v: (("time", "lat"), np.zeros((12, 2), "f4"))
+                       for v in ("so", "so_uncertainty", "thetao", "thetao_uncertainty")},
+                      coords={"time": times, "lat": [0.0, 1.0]})
+    full["time_bnds"] = (("time", "bnds"), month_bounds(times))
+    so = ds.split(product, full, "so")
+    assert set(so.data_vars) == {"so", "so_uncertainty", "time_bnds"}
+    io.write_netcdf(so, folder / "so-EN4-2000-2000.nc")
+    with pytest.raises(Exception, match="no file for thetao"):
+        ds.local_range(product, ds.find_local(product))
+    io.write_netcdf(select_months(ds.split(product, full, "thetao"), None, M("2000-06")),
+                    folder / "thetao-EN4-200001-200006.nc")
+    with pytest.raises(Exception, match="different months"):
+        ds.local_range(product, ds.find_local(product))

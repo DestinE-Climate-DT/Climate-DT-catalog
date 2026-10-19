@@ -36,21 +36,20 @@ class BerkeleyEarth(ObsDataset):
     """A single upstream file per product, revised monthly: append takes the months after the
     local end (earlier months are not revised), replace reprocesses everything."""
 
-    name = "berkeley"
-    catalog_dir = "BERKELEY-EARTH"
+    name = "BERKELEY-EARTH"
     description = "Berkeley Earth monthly surface temperature (filled)"
     start_year = 1979
 
     def all_products(self):
-        subdir = "BERKELEY-EARTH/aqua-filled"
+        exp, subdir = "aqua-filled", "BERKELEY-EARTH/aqua-filled"
         return [
-            Product("v1", TEMPLATE.format(res="1") + "_v1.nc", subdir, frozen=True,
+            Product(exp, "r100-monthly-v1", TEMPLATE.format(res="1") + "_v1.nc", subdir, frozen=True,
                     params={"url": f"{S3}/Land_and_Ocean_LatLong1.nc"}),
-            Product("v2", TEMPLATE.format(res="1") + ".nc", subdir,
+            Product(exp, "r100-monthly", TEMPLATE.format(res="1") + ".nc", subdir,
                     catalog=[CatalogEntry("aqua-filled.yaml", "r100-monthly"),
                              CatalogEntry("main.yaml", "aqua-filled", fields=("description",))],
                     params={"url": f"{GCS}/Global_TAVG_Gridded_1deg.nc"}),
-            Product("v2-highres", TEMPLATE.format(res="0.25") + ".nc", subdir,
+            Product(exp, "r025-monthly", TEMPLATE.format(res="0.25") + ".nc", subdir,
                     catalog=[CatalogEntry("aqua-filled.yaml", "r025-monthly")],
                     params={"url": f"{GCS}/Global_TAVG_Gridded_0p25deg.nc"}),
         ]
@@ -66,6 +65,14 @@ class BerkeleyEarth(ObsDataset):
             remote.last = pd.Period(last, freq="M")
             remote.text = f"..{last}, " + remote.text
         return remote
+
+    def fetch_plan(self, product, start, end):
+        url = product.params["url"]
+        sig = self.fetcher.head(url) or {}
+        path = self.workdir / "raw" / url.rsplit("/", 1)[1]
+        cached = path.exists() and self.state.get(product.key, "raw_signature") == sig
+        size = f"{sig['size'] / 1e6:.0f} MB" if sig.get("size") else "size unknown"
+        return [f"{url} ({size}, {'cached in ' + str(path) if cached else 'not cached'})"]
 
     def fetch(self, product, start, end):
         """The upstream file, downloaded again only if its signature changed."""
@@ -86,7 +93,7 @@ class BerkeleyEarth(ObsDataset):
             return out.to_dataset()
         staging = self.workdir / "staging"
         staging.mkdir(parents=True, exist_ok=True)
-        unfilled, filled = staging / f"{product.key}_unfilled.nc", staging / f"{product.key}_filled.nc"
+        unfilled, filled = staging / f"{product.source}_unfilled.nc", staging / f"{product.source}_filled.nc"
         out.to_netcdf(unfilled)
         filled.unlink(missing_ok=True)
         log.info("Filling missing values with cdo fillmiss")

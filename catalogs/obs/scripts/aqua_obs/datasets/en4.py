@@ -50,25 +50,18 @@ def cmorize(ds):
 
 
 class EN4(ObsDataset):
-    name = "en4"
-    catalog_dir = "EN4"
+    name = "EN4"
     description = "EN4.2.2 g10 monthly so/thetao on 1x1 grid"
     start_year = 1950
     complete_years = True
 
     def all_products(self):
         version = self.options.get("version", "4.2.2")
-        subdir = f"EN4/v{version}"
-        netcdf = CatalogEntry(f"v{version}.yaml", "monthly-netcdf")
-        products = [Product(var, f"{var}-EN4-{{start}}-{{end}}.nc", f"{subdir}/netcdf", catalog=[netcdf],
-                            params={"variables": [var, f"{var}_uncertainty"]})
-                    for var in ("so", "thetao")]
-        products.append(Product(
-            "zarr", f"EN4.v{version.replace('.', '')}.{{start}}-{{end}}.clev.zarr", f"{subdir}/zarr",
-            catalog=[CatalogEntry(f"v{version}.yaml", "monthly-zarr")],
-            params={"variables": ["so", "so_uncertainty", "thetao", "thetao_uncertainty"],
-                    "chunks": {"time": 1, "lev": -1, "lat": -1, "lon": -1}}))
-        return products
+        exp = f"v{version}"
+        # one product, two files with the same months; DVC tracks EN4/v4.2.2 as a whole
+        return [Product(exp, "monthly-netcdf", "{file}-EN4-{start}-{end}.nc", f"EN4/{exp}/netcdf",
+                        catalog=[CatalogEntry(f"{exp}.yaml", "monthly-netcdf")],
+                        files={name: [name, f"{name}_uncertainty"] for name, _, _ in VARIABLES.values()})]
 
     @cached_property
     def zip_urls(self):
@@ -87,8 +80,17 @@ class EN4(ObsDataset):
         years = sorted(self.zip_urls)
         if not years:
             return Remote(text="nothing listed")
-        return Remote(last=pd.Period(f"{years[-1] - 1}-12", freq="M"),
+        return Remote(last=pd.Period(f"{years[-1] - 1}-12", freq="M"), exact=False,
                       text=f"{years[0]}-01..{years[-1]} (months of {years[-1]} unknown)")
+
+    def fetch_plan(self, product, start, end):
+        last_year = end.year if end is not None else max(self.zip_urls, default=start.year)
+        years = [y for y in range(start.year, last_year + 1) if y in self.zip_urls]
+        if not years:
+            return ["nothing listed upstream for these years"]
+        cached = [y for y in years if len(list((self.workdir / "raw" / str(y)).rglob("*.nc"))) == 12]
+        return [f"{len(years)} yearly zips {years[0]}-{years[-1]} (~180 MB each) from {DOWNLOAD_ROOT}, "
+                f"{len(cached)} already extracted in {self.workdir / 'raw'}"]
 
     def _year_files(self, year, wanted):
         """{month: file} of a year, downloading the zip unless the wanted months are cached
@@ -140,8 +142,8 @@ class EN4(ObsDataset):
         paths = [self._processed(month, raw[month]) for month in sorted(raw)]
         ds = xr.open_mfdataset(paths, combine="by_coords", data_vars="minimal", coords="minimal",
                                compat="override")
-        extra = [v for v in ds.data_vars if v.endswith("_bnds")]
-        ds = ds[product.params["variables"] + extra]
+        variables = [v for names in product.files.values() for v in names]
+        ds = ds[variables + [v for v in ds.data_vars if v.endswith("_bnds")]]
         if template is not None and "time" in template:
             ds["time"].encoding = dict(template["time"].encoding)
         return ds

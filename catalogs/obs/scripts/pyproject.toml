@@ -16,7 +16,6 @@ dependencies = [
     "pyyaml",
     "requests",
     "ruamel.yaml",
-    "zarr",
 ]
 
 [project.optional-dependencies]
