@@ -1,0 +1,56 @@
+# aqua-obs configuration
+#
+# Paths are taken from catalogs/obs/machine.yaml: the products are written under the
+# DVC_PATH of the machine unless `output_root` is set below or --output-root is given.
+# Point output_root to a staging area (or to the aqua-dvc working copy) rather than to a
+# deployment checkout: files are added there and then registered with `dvc add`.
+
+machine: auto            # 'auto' reads `machine:` from the AQUA config ($AQUA_CONFIG or ~/.aqua)
+
+# catalog_root: ..       # catalogs/obs, default is the parent of this file's directory
+
+update_catalog: false    # edit the catalog yaml after an update (per machine too; CLI --catalog/--no-catalog)
+
+defaults:
+  retries: 5             # HTTP retries
+  timeout: 60            # HTTP timeout in seconds
+  # workdir: /path/to/aqua-obs-work   # downloads, processing cache and state
+
+# Per machine: output_root, workdir, optionally catalog_root and `datasets:` overrides
+# (merged key by key over the global `datasets:` section below).
+machines:
+  # local tests on the Mac (not in machine.yaml): products, downloads and state under ~/aqua-obs
+  altai:
+    output_root: ~/aqua-obs/datasets
+    workdir: ~/aqua-obs/work
+    # catalog_root: ~/aqua-obs/catalog   # edit a copy of catalogs/obs instead of the repo yaml
+    datasets:
+      berkeley:
+        products: [v2]                    # v2-highres is several GB
+      en4:
+        start_year: 2024                  # replace runs: ~180 MB per year
+  lumi:
+    output_root: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/aqua-obs/datasets
+    workdir: /pfs/lustrep3/appl/local/climatedt/data/AQUA/datasets-new/aqua-obs/work
+  # levante:
+  #   output_root: /work/bk1580/aqua-dvc/datasets
+  #   workdir: /scratch/b/<user>/aqua-obs
+
+# Per dataset:
+#   enabled         include the dataset when no target is given on the command line
+#   products        products to process (default: all)
+#   start_year      first year of a replace run (default: dataset specific)
+#   complete_years  without --end, extend only up to the last December available
+#                   (default: true for psc and en4, false for berkeley)
+datasets:
+  berkeley:
+    enabled: true
+    products: [v2, v2-highres]
+    start_year: 1979
+  psc:
+    enabled: true
+    products: [piomas, giomas]
+  en4:
+    enabled: true
+    version: 4.2.2
+    products: [so, thetao, zarr]

@@ -1,0 +1,22 @@
+# Minimal environment for aqua-obs, including the tool itself (editable install):
+#   conda env create -f environment.yml     # run from catalogs/obs/scripts
+#   conda activate aqua-obs && aqua-obs --help
+name: aqua-obs
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11
+  - cdo
+  - dask
+  - netcdf4
+  - numpy
+  - pandas
+  - pyyaml
+  - requests
+  - ruamel.yaml
+  - xarray
+  - zarr
+  - pytest
+  - pip
+  - pip:
+      - -e .

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aqua-obs"
+dynamic = ["version"]
+description = "Retrieve and extend the observational datasets of the AQUA obs catalog"
+requires-python = ">=3.11"
+dependencies = [
+    "xarray",
+    "dask",
+    "netCDF4",
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "requests",
+    "ruamel.yaml",
+    "zarr",
+]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[project.scripts]
+aqua-obs = "aqua_obs.cli:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "aqua_obs.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["aqua_obs*"]
+
+[tool.setuptools.package-data]
+aqua_obs = ["data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
