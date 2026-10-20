@@ -1461,7 +1461,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1481,7 +1481,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1518,7 +1518,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1539,7 +1539,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1560,7 +1560,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/r2/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1581,7 +1581,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1602,7 +1602,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1623,7 +1623,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere3d/netcdf/atmosphere3d.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1644,7 +1644,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/r2/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1665,7 +1665,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1686,7 +1686,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere3d/netcdf/atmosphere3d.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1706,7 +1706,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1741,7 +1741,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1777,7 +1777,7 @@ sources:
     description: AQUA diagnostic radiation_toa data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-toa/netcdf/radiation_toa.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1810,7 +1810,7 @@ sources:
     description: AQUA diagnostic radiation_surface data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/radiation-surface/netcdf/radiation_surface.timeseries.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1843,7 +1843,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1877,7 +1877,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1912,7 +1912,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1947,7 +1947,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1968,7 +1968,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/csc771634/o03r/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/csc771634/o03r/output//aqua-analysis/climatedt-gen2/IFS-FESOM-10km/baseline-hist/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.baseline-hist.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
