@@ -865,6 +865,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -1020,6 +1021,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3vt/output/aqua-analysis/test-phase3/IFS-NEMO-10km/a3vt/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.test-phase3.IFS-NEMO-10km.a3vt.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1055,6 +1058,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3vt/output/aqua-analysis/test-phase3/IFS-NEMO-10km/a3vt/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.test-phase3.IFS-NEMO-10km.a3vt.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1082,6 +1087,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -1147,6 +1153,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -1245,6 +1252,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
@@ -1264,6 +1272,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3vt/output/aqua-analysis/test-phase3/IFS-NEMO-10km/a3vt/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.test-phase3.IFS-NEMO-10km.a3vt.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1281,6 +1291,8 @@ sources:
       urlpath: 
         /gpfs/scratch/ehpc01/bsc998159/a3vt/output/aqua-analysis/test-phase3/IFS-NEMO-10km/a3vt/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.test-phase3.IFS-NEMO-10km.a3vt.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -1308,6 +1320,7 @@ sources:
         type: str
         allowed:
         - monthly
+        - annual
       realization:
         description: Parameter realization
         default: r1
