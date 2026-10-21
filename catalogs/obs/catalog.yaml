@@ -25,6 +25,11 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/CERES/main.yaml"
+  CMEMS-SSS:
+    description: CNR multi-observation sea surface salinity and density (Copernicus Marine)
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/CMEMS-SSS/main.yaml"
   EN4:
     description: EN4 3D temperature and salinity observational data
     driver: yaml_file_cat
@@ -50,11 +55,6 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/MSWEP/main.yaml"
-  MULTIOBS-SSS:
-    description: CNR multi-observation sea surface salinity and density (Copernicus Marine)
-    driver: yaml_file_cat
-    args:
-      path: "{{CATALOG_DIR}}/catalog/MULTIOBS-SSS/main.yaml"
   OSI-SAF:
     description: OSI-SAF sea-ice concentration data
     driver: yaml_file_cat

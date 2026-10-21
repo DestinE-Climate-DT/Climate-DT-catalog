@@ -5,7 +5,7 @@ sources:
     metadata:
       source_grid_name: longitude-latitude
     args:
-      urlpath: '{{DVC_PATH}}/MULTIOBS-SSS/multiobs/monthly-netcdf/sss_monthly_*.nc'
+      urlpath: '{{DVC_PATH}}/CMEMS-SSS/multiobs/monthly-netcdf/sss_monthly_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: True
@@ -16,4 +16,4 @@ sources:
       source_grid_name: longitude-latitude
     args:
       consolidated: True
-      urlpath: '{{DVC_PATH}}/MULTIOBS-SSS/multiobs/daily-zarr/sss_daily_*.zarr'
+      urlpath: '{{DVC_PATH}}/CMEMS-SSS/multiobs/daily-zarr/sss_daily_*.zarr'
