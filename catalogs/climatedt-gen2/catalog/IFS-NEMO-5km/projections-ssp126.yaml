@@ -1178,3 +1178,14 @@ sources:
         type: str
         allowed:
         - mean
+  lra-r100-monthly-zarr:
+    driver: zarr
+    description: LRA data monthly at r100 in zarr format
+    args:
+      urlpath: 
+        '{{ ZARR_PATH }}/IFS-NEMO-5km/projections-ssp126/ifs-nemo-5km_projections-ssp126.zarr'
+      chunks: 
+        time: 1
+      consolidated: true
+    metadata:
+      source_grid_name: lon-lat-r100
