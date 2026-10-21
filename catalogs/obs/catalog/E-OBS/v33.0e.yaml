@@ -5,7 +5,7 @@ sources:
     description: E-OBS v33.0e daily ensemble mean 0.1deg over Europe 1950-2025
     driver: netcdf
     metadata:
-      source_grid_name: longitude-latitude
+      source_grid_name: lon-lat
     args:
       urlpath:
         - '{{DVC_PATH}}/E-OBS/v33.0e/daily-netcdf/tg_ens_mean_0.1deg_reg_v33.0e_195001-202512.nc'
@@ -20,7 +20,7 @@ sources:
     description: E-OBS v33.0e monthly ensemble mean 0.1deg over Europe 1950-2025
     driver: netcdf
     metadata:
-      source_grid_name: longitude-latitude
+      source_grid_name: lon-lat
     args:
       urlpath:
         - '{{DVC_PATH}}/E-OBS/v33.0e/monthly-netcdf/tg_ens_mean_0.1deg_reg_v33.0e_mon_195001-202512.nc'
