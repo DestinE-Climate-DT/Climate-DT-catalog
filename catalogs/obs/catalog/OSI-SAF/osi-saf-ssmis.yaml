@@ -4,7 +4,7 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: osi-saf-nh
-      fixer_name: OSI-SAF-default`
+      fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/SSMIS/daily_cat/ice_conc_nh*.nc'
       chunks: {}
