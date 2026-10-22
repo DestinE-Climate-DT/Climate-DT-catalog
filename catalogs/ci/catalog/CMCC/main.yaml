@@ -1,0 +1,6 @@
+sources:
+  cftime_365cal:
+    description: single month CMCC tprate data, 365 day calendar shifted of 400 years
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/cftime_365cal.yaml'

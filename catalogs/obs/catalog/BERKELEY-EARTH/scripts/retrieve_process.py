@@ -18,18 +18,35 @@ from cdo import Cdo
 cdo = Cdo()
 
 
-def download_berkeley_earth_file(output_dir, filename="Land_and_Ocean_LatLong1.nc"):
+PRODUCTS = {
+    'v1': {
+        'url': 'https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Gridded',
+        'filename': 'Land_and_Ocean_LatLong1.nc'
+        },
+    'v2': {
+        'url': 'https://storage.googleapis.com/berkeley-earth-temperature-hr/global/gridded',
+        'filename': 'Global_TAVG_Gridded_1deg.nc'
+        },
+    'v2-highres': {
+        'url': 'https://storage.googleapis.com/berkeley-earth-temperature-hr/global/gridded',
+        'filename': 'Global_TAVG_Gridded_0p25deg.nc'
+    }
+}
+
+def download_berkeley_earth_file(output_dir, version='v2'):
     """
     Download Berkeley Earth file from S3 repository
     
     Args:
         output_dir (str): Directory to save the file
-        filename (str): Filename to save
-    
+        version (str): Version of the file to download
+
     Returns:
         str: Path of downloaded file, None if error
     """
-    url = f"https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Gridded/{filename}"
+
+    filename = PRODUCTS[version]['filename']
+    url = f"{PRODUCTS[version]['url']}/{filename}"
     output_path = Path(output_dir) / filename
     
     print(f"Downloading Berkeley Earth file from: {url}")
@@ -66,21 +83,20 @@ def download_berkeley_earth_file(output_dir, filename="Land_and_Ocean_LatLong1.n
         return None
 
 
-def process_berkeley_earth_file(input_file, year1=1979):
+def process_berkeley_earth_file(output_dir, year1=1979, version='v2'):
     """
     Process Berkeley Earth file applying all necessary transformations
     
     Args:
-        input_file (str): Path to Land_and_Ocean_LatLong1.nc file
+        output_dir (str): Directory to save the processed file
         year1 (str): selection starting year
-    
-    Returns:
-        str: Path to processed file, None if error
+        version (str): Version of the file to process
     """
-    input_path = Path(input_file)
+    filename = PRODUCTS[version]['filename']
+    input_file = Path(output_dir) / filename
 
     # load the data
-    ds = xr.open_dataset(input_path)
+    ds = xr.open_dataset(input_file)
 
     # create the full field
     years = np.floor(ds['time'].values).astype(int)
@@ -107,14 +123,18 @@ def process_berkeley_earth_file(input_file, year1=1979):
     out = out.sel(time=slice(f'{year1}-01-01', None))
 
     # Salva temporaneamente e rimappa con extrapolation
-    if os.path.exists('temp_in.nc'):
-        os.remove('temp_in.nc')
-    out.to_netcdf('temp_in.nc')
-    outfile = f'Berkeley-Earth_aqua-filled_1x1_{year1}-{year2}.nc'
+    if os.path.exists(Path(output_dir) / 'temp_in.nc'):
+        os.remove(Path(output_dir) / 'temp_in.nc')
+    out.to_netcdf(Path(output_dir) / 'temp_in.nc')
+    if 'highres' in version:
+        resolution = '0.25'
+    else:
+        resolution = '1'
+    outfile = Path(output_dir) / Path(f'Berkeley-Earth_aqua-filled_{resolution}x{resolution}_{year1}-{year2}.nc')
     if os.path.exists(outfile):
         os.remove(outfile)
-    cdo.fillmiss(options='-f nc4 -z zip', input='temp_in.nc', output=outfile)
-    os.remove('temp_in.nc')
+    cdo.fillmiss(options='-f nc4 -z zip', input=str(Path(output_dir) / 'temp_in.nc'), output=str(outfile))
+    os.remove(Path(output_dir) / 'temp_in.nc')
     
 def main():
     """Main function"""
@@ -122,9 +142,9 @@ def main():
         description="Process Berkeley Earth files with CDO to set time axis and climatology"
     )
     parser.add_argument(
-        "input_file", 
+        "output_dir", 
         nargs='?',
-        help="Path to Land_and_Ocean_LatLong1.nc file to process (optional if using --download)"
+        help="Path to output directory (optional if using --download)"
     )
     parser.add_argument(
         "-d", "--download",
@@ -136,24 +156,23 @@ def main():
         action="store_true",
         help="Download file only without processing"
     )
+    parser.add_argument(
+        "-v", "--version",
+        choices=['v1', 'v2', 'v2-highres'],
+        default='v2',
+        help="Version of Berkeley Earth data to download (default: v2)"
+    )
     
     args = parser.parse_args()
     
     # If no input_file and no download requested, error
-    if not args.input_file and not args.download and not args.download_only:
+    if not args.output_dir and not args.download and not args.download_only:
         parser.error("You must specify an input file or use --download/--download-only")
     # Determine output directory
-    elif args.input_file:
-        output_dir = Path(args.input_file).parent
-    else:
-        output_dir = Path.cwd()
-
-    # Handle download if requested
-    input_file_path = args.input_file
     
     if args.download or args.download_only:
         print("Download option enabled...")
-        downloaded_file = download_berkeley_earth_file(output_dir)
+        downloaded_file = download_berkeley_earth_file(args.output_dir, version=args.version)
         
         if not downloaded_file:
             print("Error downloading file")
@@ -165,13 +184,11 @@ def main():
             sys.exit(0)
         
         # Otherwise use downloaded file as input
-        input_file_path = downloaded_file
-        print(f"Will use downloaded file: {input_file_path}")
     
     # Process the file (no CDO verification needed)
     if not args.download_only:
         process_berkeley_earth_file(
-            input_file_path, year1=1979)
+            args.output_dir, year1=1979, version=args.version)
         
     print("Success!")
 

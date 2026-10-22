@@ -1,3 +1,793 @@
+
+# OSI SAF sea-ice concentration datasets in AQUA
+
+This README documents the OSI SAF sea-ice concentration observational datasets prepared for use in AQUA.
+
+The catalogue currently contains two complementary passive-microwave sea-ice concentration families:
+
+- **SSMIS family**: OSI-450-a1 + OSI-430-a, based on SMMR, SSM/I and SSMIS observations.
+- **AMSR family**: OSI-458 + OSI-438, based on AMSR-E and AMSR2 observations.
+
+This first part of the README describes the **current catalogue configuration as of 2 October 2026**, including the present data coverage, local organisation, download strategy and post-processing workflow.
+
+The original documentation produced during the 2025 construction of the OSI SAF catalogue is retained unchanged further below as a historical and reproducibility record.
+
+---
+
+## Current catalogue status — update 02-10-2026
+
+| Local family | OSI SAF products | Sensors | Source-product coverage | Current AQUA monthly coverage | Status / update policy | Final monthly products |
+|---|---|---|---|---|---|---|
+| **SSMIS** | OSI-450-a1 CDR v3.1 + OSI-430-a ICDR v3.0 | SMMR, SSM/I, SSMIS | OSI-450-a1: 1978–2020; OSI-430-a: 2021–Sep 2025 | **1979-01 → 2025-09** | Historical/frozen product family | `ice_conc_nh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc` and SH equivalent |
+| **AMSR** | OSI-458 CDR v3.0 + OSI-438 ICDR v3.0 | AMSR-E, AMSR2 | OSI-458: Jun 2002–2020; OSI-438: 2021–present | **2002-06 → 2025-12** in the current build | Actively extendable through OSI-438 | `ice_conc_nh_ease2-250_amsr_v3_monthly_200206-202512.nc` and SH equivalent |
+
+The names `SSMIS` and `AMSR` are **local catalogue-family names** used to distinguish the two observational records.
+
+In particular, `SSMIS` does not imply that the complete historical record comes from SSMIS. The earlier part of that family contains SMMR and SSM/I observations before the transition to SSMIS.
+
+Similarly, the `AMSR` family combines the AMSR-E and AMSR2 records into one consistent OSI SAF CDR/ICDR branch while retaining the original product provenance in the intermediate files.
+
+---
+
+## Current data organisation — update 02-10-2026
+
+The data are currently organised under:
+
+```text
+OSI-AQUA/
+├── SSMIS/
+│   ├── daily/
+│   ├── daily_cat/
+│   └── monthly/
+│
+└── AMSR/
+    ├── daily/
+    │   ├── manifests/
+    │   ├── osi-458-v3p0-nh/
+    │   ├── osi-458-v3p0-sh/
+    │   ├── osi-438-v3p0-nh/
+    │   └── osi-438-v3p0-sh/
+    │
+    ├── daily_cat/
+    │
+    └── monthly/
+        └── yearly/
+```
+
+The different levels have distinct purposes:
+
+- `daily/` contains the original downloaded daily OSI SAF files.
+- `daily_cat/` contains the daily files concatenated into one file per year.
+- `monthly/yearly/` contains yearly monthly-mean files used as a **processing cache**.
+- `monthly/` contains the final multi-year monthly products used by the catalogue, together with the AQUA grid and mask files.
+
+The `monthly/yearly/` files should not be interpreted as additional catalogue products. They are retained because they make the processing restartable and substantially reduce the computational cost of future updates.
+
+Instead of recalculating monthly means from the complete daily archive every time a new year is added, only new or modified annual files have to be processed.
+
+---
+
+## Dataset families and scientific provenance — update 02-10-2026
+
+### SSMIS family
+
+The SSMIS family combines:
+
+- **OSI-450-a1**, Climate Data Record (CDR), version 3.1;
+- **OSI-430-a**, Interim Climate Data Record (ICDR), version 3.0.
+
+The underlying passive-microwave sensor sequence is:
+
+```text
+SMMR → SSM/I → SSMIS
+```
+
+OSI-450-a1 provides the historical CDR through 2020, while OSI-430-a provides its consistent continuation from 2021 through September 2025.
+
+The current local monthly product covers:
+
+```text
+1979-01 → 2025-09
+```
+
+for both hemispheres.
+
+The resulting files are:
+
+```text
+ice_conc_nh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc
+ice_conc_sh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc
+```
+
+This extends the original 2025 catalogue, which had been constructed only through the end of 2024.
+
+The OSI-450-a1/OSI-430-a family is now a **historical/frozen branch**. The current local product therefore ends with the available OSI-430-a record in September 2025.
+
+The known SMMR data interruption in 1986 remains present in this updated record and is intentionally not filled.
+
+The detailed construction of the original OSI-450-a1/OSI-430-a dataset is documented in the historical 2025 section below.
+
+### AMSR family
+
+The AMSR family combines:
+
+- **OSI-458**, Climate Data Record (CDR), version 3.0;
+- **OSI-438**, Interim Climate Data Record (ICDR), version 3.0.
+
+The underlying sensor sequence is:
+
+```text
+AMSR-E → AMSR2
+```
+
+OSI-458 provides the historical CDR from June 2002 through December 2020. It includes:
+
+```text
+AMSR-E : June 2002 → October 2011
+AMSR2  : July 2012 → December 2020
+```
+
+OSI-438 provides the AMSR2-based continuation from January 2021 onward.
+
+For the current AQUA build, OSI-438 has been downloaded and processed through:
+
+```text
+2025-12-31
+```
+
+giving the current local monthly coverage:
+
+```text
+2002-06 → 2025-12
+```
+
+for both hemispheres.
+
+The final products are:
+
+```text
+ice_conc_nh_ease2-250_amsr_v3_monthly_200206-202512.nc
+ice_conc_sh_ease2-250_amsr_v3_monthly_200206-202512.nc
+```
+
+Both OSI-458 and OSI-438 are daily Level-4 sea-ice concentration products provided on the native **25 km EASE2 polar grids**.
+
+Although they are combined into one final AMSR time series, their provenance is retained in the intermediate filenames. Files originating from OSI-458 retain the `cdr-v3p0` designation, while files originating from OSI-438 retain the `icdr-v3p0` designation.
+
+---
+
+## Data acquisition — update 02-10-2026
+
+### SSMIS family
+
+The original OSI-450-a1 and OSI-430-a acquisition through the OSI SAF THREDDS service is documented in detail in the historical 2025 section of this README.
+
+That documentation is intentionally retained unchanged because it records:
+
+- the original URLs;
+- the URL-list generation procedure;
+- the download commands;
+- the original catalogue decisions;
+- the annual concatenation procedure;
+- the processing logs and timestep counts.
+
+The current SSMIS product extends that original record using the available **2025 OSI-430-a daily files through September 2025**.
+
+The resulting 2025 extension was processed consistently with the historical record and subsequently joined to the existing monthly product to form the final 1979-01–2025-09 files.
+
+No extension is currently expected beyond this point because the OSI-450-a1/OSI-430-a branch has been frozen.
+
+### AMSR family
+
+The AMSR products were downloaded through the **Copernicus Marine Service**, which redistributes the OSI SAF CDR and ICDR products.
+
+Copernicus Marine product:
+
+```text
+SEAICE_GLO_SEAICE_L4_REP_OBSERVATIONS_011_009
+```
+
+Product page:
+
+```text
+https://data.marine.copernicus.eu/product/SEAICE_GLO_SEAICE_L4_REP_OBSERVATIONS_011_009/description
+```
+
+The exact datasets used are:
+
+#### OSI-458 — CDR
+
+Northern Hemisphere:
+
+```text
+osisaf_obs-si_glo_phy_sic-north_my_amsr_cdr_P1D-m
+```
+
+Southern Hemisphere:
+
+```text
+osisaf_obs-si_glo_phy_sic-south_my_amsr_cdr_P1D-m
+```
+
+#### OSI-438 — ICDR
+
+Northern Hemisphere:
+
+```text
+osisaf_obs-si_glo_phy_sic-north_my_amsr_icdr_P1D-m
+```
+
+Southern Hemisphere:
+
+```text
+osisaf_obs-si_glo_phy_sic-south_my_amsr_icdr_P1D-m
+```
+
+### Native-grid retrieval
+
+The data were retrieved using the Copernicus Marine:
+
+```text
+originalGrid
+```
+
+dataset part.
+
+The workflow uses:
+
+```bash
+copernicusmarine get
+```
+
+rather than:
+
+```bash
+copernicusmarine subset
+```
+
+because the objective is to retain the original OSI SAF files and native EASE2 grid rather than request a spatially or structurally transformed representation of the dataset.
+
+The native files are on a:
+
+```text
+432 × 432
+```
+
+grid with:
+
+```text
+25 km × 25 km
+```
+
+grid spacing.
+
+### OSI-458 download
+
+OSI-458 is a fixed historical CDR and was therefore downloaded using a reproducible, version-pinned workflow.
+
+The Copernicus Marine dataset version used during the download was:
+
+```text
+202603
+```
+
+The download script is:
+
+```text
+download_osi458_amsr_by_year.sh
+```
+
+A single request containing the complete multi-thousand-file time series proved inefficient during file-list resolution. The download was therefore divided into **yearly chunks**.
+
+The workflow:
+
+1. obtains the upstream file manifest;
+2. selects the `originalGrid` files;
+3. separates the requested files by hemisphere and year;
+4. downloads each year independently;
+5. checks the number of downloaded files.
+
+This provides a more robust and restartable download than requesting the full 2002–2020 archive in a single operation.
+
+### OSI-438 download
+
+OSI-438 is the operational ICDR continuation and is therefore downloaded incrementally.
+
+The download script is:
+
+```text
+download_osi438_amsr_incremental.sh
+```
+
+Unlike the fixed OSI-458 CDR, the OSI-438 workflow intentionally queries the currently available upstream dataset rather than permanently pinning one historical dataset version.
+
+At each execution the script:
+
+1. refreshes the authoritative upstream file manifest;
+2. filters the final OSI-438 files for the requested date range;
+3. separates them by hemisphere and year;
+4. compares the upstream filenames with the files already available locally;
+5. skips existing non-empty files;
+6. downloads only missing files;
+7. verifies the resulting local file set.
+
+Only final OSI-438 products matching the expected:
+
+```text
+icdr-v3p0-amsr
+```
+
+naming convention are retained. Temporary/forecast `icdrft` products are excluded.
+
+For the current fixed catalogue build:
+
+```text
+START_DATE=2021-01-01
+END_DATE=2025-12-31
+```
+
+For future updates, the downloader can instead use:
+
+```text
+END_DATE=latest
+```
+
+to retrieve all currently available upstream OSI-438 observations while leaving the existing local archive untouched.
+
+---
+
+## Post-processing workflow — update 02-10-2026
+
+### SSMIS family
+
+The original SSMIS processing is documented in detail in the historical section.
+
+In summary, the original procedure was:
+
+```text
+daily OSI-450-a1 / OSI-430-a files
+              │
+              │ cdo cat
+              ▼
+       yearly daily_cat files
+              │
+              │ cdo mergetime
+              ▼
+       merged daily record
+              │
+              │ cdo monmean
+              ▼
+       multi-year monthly file
+```
+
+For the 2026 update, the existing historical monthly record was retained and extended with the newly processed 2025 OSI-430-a data.
+
+The final current SSMIS files are:
+
+```text
+ice_conc_nh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc
+ice_conc_sh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc
+```
+
+### AMSR family
+
+The AMSR processing uses the same general CDO-based philosophy but introduces a yearly monthly cache to make future updates substantially faster.
+
+The final workflow is:
+
+```text
+original daily OSI-458 / OSI-438 files
+                    │
+                    │ cdo cat
+                    ▼
+             yearly daily_cat
+                    │
+                    │ cdo monmean
+                    ▼
+          yearly monthly cache
+                    │
+                    │ cdo mergetime
+                    ▼
+       final multi-year monthly file
+```
+
+The processing script is:
+
+```text
+process_osi_saf_amsr.sh
+```
+
+### 1. Yearly daily concatenation
+
+All available daily files belonging to the same year are concatenated using:
+
+```bash
+cdo cat
+```
+
+The resulting files are stored in:
+
+```text
+daily_cat/
+```
+
+For example:
+
+```text
+ice_conc_nh_ease2-250_cdr-v3p0-amsr_2020.nc
+ice_conc_nh_ease2-250_icdr-v3p0-amsr_2021.nc
+```
+
+This naming retains the transition between OSI-458 CDR and OSI-438 ICDR.
+
+The script validates that the number of timesteps in each yearly file corresponds to the number of available source daily files.
+
+An existing yearly file is reused when:
+
+- it exists and is non-empty;
+- its timestep count is consistent with the source files;
+- none of the corresponding daily source files is newer.
+
+Therefore, rerunning the processing does not unnecessarily rebuild the complete historical archive.
+
+### 2. Yearly monthly means
+
+Each yearly `daily_cat` file is converted to monthly means using:
+
+```bash
+cdo monmean
+```
+
+The resulting files are retained under:
+
+```text
+monthly/yearly/
+```
+
+For example:
+
+```text
+ice_conc_nh_ease2-250_cdr-v3p0-amsr_monthly_2020.nc
+ice_conc_nh_ease2-250_icdr-v3p0-amsr_monthly_2021.nc
+```
+
+These files are a **processing cache**, not independent catalogue products.
+
+They were introduced because repeatedly applying `monmean` to the complete 2002–present daily record is unnecessarily expensive.
+
+With the yearly cache, adding a new year requires only:
+
+```text
+new daily files
+     ↓
+new yearly daily_cat
+     ↓
+new yearly monthly file
+     ↓
+merge with existing yearly monthly files
+```
+
+The historical years do not need to be reprocessed.
+
+### 3. Final monthly merge
+
+The already processed yearly monthly files are combined using:
+
+```bash
+cdo mergetime
+```
+
+No second monthly averaging is applied at this stage.
+
+The final merge therefore operates on only a few hundred monthly timesteps rather than several thousand daily timesteps.
+
+The current final files are:
+
+```text
+ice_conc_nh_ease2-250_amsr_v3_monthly_200206-202512.nc
+ice_conc_sh_ease2-250_amsr_v3_monthly_200206-202512.nc
+```
+
+Both contain:
+
+```text
+275 monthly timesteps
+```
+
+The lower-than-calendar-continuous number of timesteps is expected and results from the genuine AMSR-E/AMSR2 observational gap described below.
+
+---
+
+## Treatment of missing data and incomplete months — update 02-10-2026
+
+A common principle is applied to both local product families:
+
+> **Source-data gaps are preserved. No temporal interpolation or synthetic observations are introduced.**
+
+The processing therefore does **not**:
+
+- generate artificial daily files;
+- interpolate missing observational periods;
+- duplicate neighbouring observations;
+- create synthetic monthly timesteps for completely missing months.
+
+Two cases are distinguished.
+
+### Completely missing month
+
+If no daily source observations exist during an entire calendar month, no monthly timestep is created for that month.
+
+### Partially sampled month
+
+If observations exist for only part of a month:
+
+```bash
+cdo monmean
+```
+
+calculates the monthly mean using the available daily observations.
+
+The resulting monthly value therefore represents the available source observations rather than an artificially completed month.
+
+### SSMIS: 1986 SMMR interruption
+
+The SMMR record contains the known 1986 observational interruption.
+
+In the current processed dataset:
+
+```text
+1986-04
+1986-05
+```
+
+are absent because no source daily files are available for those months.
+
+This behaviour is inherited from the source record and is preserved in the AQUA product.
+
+### AMSR: AMSR-E to AMSR2 gap
+
+The AMSR family contains the genuine observational gap between the end of AMSR-E and the beginning of the AMSR2 record.
+
+The available OSI-458 daily sequence is:
+
+```text
+AMSR-E:
+2002-06-01 → 2011-10-03
+
+AMSR2:
+2012-07-24 → 2020-12-31
+```
+
+Therefore:
+
+```text
+2011-10
+```
+
+is a partial month based on the available early-October AMSR-E observations.
+
+The following months are completely absent:
+
+```text
+2011-11
+2011-12
+2012-01
+2012-02
+2012-03
+2012-04
+2012-05
+2012-06
+```
+
+and:
+
+```text
+2012-07
+```
+
+is a partial month beginning with the available AMSR2 observations.
+
+This explains why the current June 2002–December 2025 AMSR record contains:
+
+```text
+275
+```
+
+rather than 283 monthly timesteps.
+
+No attempt is made to bridge the sensor gap.
+
+---
+
+## Grid and mask handling — update 02-10-2026
+
+### Grid
+
+The OSI SAF products used here are provided on native 25 km EASE2 polar grids.
+
+The relevant native grid geometry is:
+
+```text
+432 × 432 grid cells
+25 km grid spacing
+```
+
+Grid compatibility between OSI-458 and OSI-438 is checked before they are combined.
+
+The same grid geometry is also used by the SSMIS-family products used by AQUA.
+
+Grid compatibility can be verified directly using:
+
+```bash
+cdo griddes file.nc
+```
+
+and comparing the resulting grid descriptions.
+
+Because the grid definitions are compatible, the existing AQUA grid files:
+
+```text
+grid_osi-saf-aqua_nh.nc
+grid_osi-saf-aqua_sh.nc
+```
+
+can be reused for the AMSR family.
+
+This reuse applies to the **grid definition only**.
+
+### Mask
+
+The mask files are treated differently.
+
+The existing SSMIS:
+
+```text
+mask_nh.nc
+mask_sh.nc
+```
+
+files are not generic geometry-only masks.
+
+They were constructed from an actual SSMIS-family `ice_conc` field using:
+
+```bash
+cdo gtc,-1 \
+    -chname,ice_conc,mask \
+    -selname,ice_conc \
+    -seltimestep,1 \
+    -selyear,2020 \
+    input_monthly_file.nc \
+    mask.nc
+```
+
+Consequently, the files also inherit metadata and provenance from the SMMR/SSM/I/SSMIS product family.
+
+They should therefore **not simply be copied into the AMSR dataset**.
+
+Equivalent AMSR-specific masks are instead generated from the AMSR monthly product using the same procedure.
+
+For the AMSR family, the reference year is:
+
+```text
+2020
+```
+
+which belongs to **OSI-458**.
+
+For example:
+
+```bash
+cdo gtc,-1 \
+    -chname,ice_conc,mask \
+    -selname,ice_conc \
+    -seltimestep,1 \
+    -selyear,2020 \
+    ice_conc_nh_ease2-250_amsr_v3_monthly_200206-202512.nc \
+    mask_nh.nc
+```
+
+with the equivalent operation applied to the Southern Hemisphere.
+
+This preserves the same mask-generation logic used for the SSMIS family while ensuring that the AMSR masks carry provenance derived from the AMSR dataset itself.
+
+---
+
+## How to update the datasets in future — update 02-10-2026
+
+### SSMIS
+
+The current SSMIS family is:
+
+```text
+1979-01 → 2025-09
+```
+
+and is based on the now-frozen OSI-450-a1/OSI-430-a product family.
+
+It should therefore normally be treated as a fixed historical product.
+
+No routine incremental extension is currently expected.
+
+### AMSR
+
+The AMSR family is designed to be incrementally extended through OSI-438.
+
+A future update requires two steps.
+
+#### 1. Download newly available OSI-438 files
+
+Run the incremental OSI-438 downloader with an explicit new end date or:
+
+```bash
+END_DATE=latest
+```
+
+The downloader refreshes the upstream manifest and retrieves only files not already present locally.
+
+Existing non-empty daily files are skipped.
+
+#### 2. Re-run the AMSR processing
+
+Run:
+
+```bash
+bash process_osi_saf_amsr.sh
+```
+
+The script reuses valid existing products.
+
+For example, when extending the current dataset into 2026:
+
+```text
+2002–2025 daily_cat files       → reused
+2002–2025 yearly monthly files → reused
+
+new 2026 daily files
+        ↓
+2026 daily_cat
+        ↓
+2026 monthly cache
+        ↓
+merge all yearly monthly files
+        ↓
+new final 200206–2026MM product
+```
+
+Only the new or modified year therefore needs the expensive daily-to-monthly processing.
+
+After a successful extension, the catalogue configuration should be updated to reference the newest final date-range file. Any superseded final multi-year file can then be removed or archived as appropriate.
+
+---
+
+## Summary of current processing principles
+
+The current OSI SAF catalogue follows these rules:
+
+- preserve the downloaded daily source data;
+- retain the distinction between CDR and ICDR provenance in intermediate files;
+- use the native OSI SAF EASE2 grids;
+- verify grid compatibility before combining products;
+- never interpolate genuine observational gaps;
+- calculate partial-month means only from available daily observations;
+- leave completely missing months absent from the time axis;
+- retain yearly intermediates where they improve reproducibility and update performance;
+- distinguish reusable grid definitions from product-specific masks;
+- generate the final catalogue datasets as multi-year monthly files separately for the Northern and Southern Hemispheres.
+
+---
+
+# Historical documentation — September 2025
+
+> The documentation below is retained unchanged to preserve the original 2025 download, processing and catalogue-development record.
+>
+> Statements describing the then-current temporal coverage, catalogue configuration or update decisions should therefore be interpreted in their original 2025 context. The sections above describe the current catalogue state as of **2 October 2026**.
+
+<!-- Existing README content follows unchanged from here. -->
+
+---
+---
+---
+
 # Description of the data
 
 In our `obs` catalog for `OSI-SAF`, the sea-ice concentration Climate Data Record (CDR) for both the Northern and Southern Hemispheres is obtained by combining two complementary datasets, ensuring a continuous and homogeneous time series from 1978 to 2024. In our catalog, only complete years were included; therefore, 2025 was excluded.

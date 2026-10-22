@@ -9,3 +9,13 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/osi-saf-aqua.yaml"
+  osi-saf-ssmis:
+    description: OSI-SAF data
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/osi-saf-ssmis.yaml"
+  osi-saf-amsr:
+    description: OSI-SAF data
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/osi-saf-amsr.yaml"

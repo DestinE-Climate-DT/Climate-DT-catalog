@@ -1,8 +1,4 @@
 # data downloaded from https://www.ncei.noaa.gov/access/world-ocean-atlas-2018/bin/woa18.pl
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   annual:
     description: WOA18 2005-2017    

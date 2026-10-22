@@ -10,6 +10,11 @@ metadata:
       default: '/app'
 
 sources:
+  CMCC:
+    description: CMCC climate model
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/CMCC/main.yaml"
   FESOM:
     description: FESOM ocean model
     driver: yaml_file_cat

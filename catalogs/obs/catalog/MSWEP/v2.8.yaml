@@ -1,7 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
 
   monthly-zarr:
@@ -12,6 +8,7 @@ sources:
       fixer_name: MSWEP-default
     args:
       consolidated: False
+      chunks: auto
       urlpath: 
       - '{{DVC_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.monthly.zarr'
   
@@ -37,6 +34,7 @@ sources:
       fixer_name: MSWEP-default
     args:
       consolidated: True
+      chunks: auto
       urlpath: 
       - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.daily.zarr'
 
@@ -48,6 +46,8 @@ sources:
       fixer_name: MSWEP-default
     args:
       consolidated: True
+      chunks:
+        time: 240
       urlpath: 
       - '{{DATA_PATH}}/MSWEP/v2.8/zarr/mswep280.past-nrt.3hourly.zarr'
 

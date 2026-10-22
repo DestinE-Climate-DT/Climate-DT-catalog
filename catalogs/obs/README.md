@@ -3,7 +3,7 @@
 This is the catalog containing the observational datasets used in the Climate-DT project.
 Each dataset is a different model.
 
-## Why the data are not available?
+## Why are the data not available?
 
 All the datasets available at least in one machine are present, with paths generalized as possible to check in the machine.yaml file.
 This means that there is no automatic check if all the available datasets are deployed in a new machine.

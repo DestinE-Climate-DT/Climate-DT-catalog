@@ -1,7 +1,3 @@
-plugins:
-  source:
-    - module: intake_xarray
-
 sources:
   daily:
     description: CERES SYN TOA Ed4.1 from 2001 to 2021

@@ -1,0 +1,47 @@
+sources:
+  nh-daily:
+    description: Daily Northern Hemisphere OSI-450-a1 v3.1 from 1979 to 2020 and OSI-430-a v3.0 from 2021 to 202509 sea-ice data
+    driver: netcdf
+    metadata:
+      source_grid_name: osi-saf-nh
+      fixer_name: OSI-SAF-default`
+    args:
+      urlpath: '{{DATA_PATH}}/OSI-SAF/SSMIS/daily_cat/ice_conc_nh*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: True
+  nh-monthly:
+    description: Monthly averages of Northern Hemisphere OSI-450-a1 v3.1 from 1979 to 2020 and OSI-430-a v3.0 from 2021 to 202509 sea-ice data
+    driver: netcdf
+    metadata:
+      source_grid_name: osi-saf-nh-aqua
+      fixer_name: OSI-SAF-default
+    args:
+      urlpath: '{{DVC_PATH}}/OSI-SAF/SSMIS/monthly/ice_conc_nh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc' 
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: True
+  sh-daily:
+    description: Daily Southern Hemisphere OSI-450-a1 v3.1 from 1979 to 2020 and OSI-430-a v3.0 from 2021 to 202509 sea-ice data
+    driver: netcdf
+    metadata:
+      source_grid_name: osi-saf-sh
+      fixer_name: OSI-SAF-default
+    args:
+      urlpath: '{{DATA_PATH}}/OSI-SAF/SSMIS/daily_cat/ice_conc_sh*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: True
+  sh-monthly:
+    description: Monthly averages of Southern Hemisphere OSI-450-a1 v3.1 from 1979 to 2020 and OSI-430-a v3.0 from 2021 to 202509 sea-ice data
+    driver: netcdf
+    metadata:
+      source_grid_name: osi-saf-sh-aqua
+      fixer_name: OSI-SAF-default
+    args:
+      urlpath: '{{DVC_PATH}}/OSI-SAF/SSMIS/monthly/ice_conc_sh_ease2-250_ssmis_cdr_v3_monthly_197901-202509.nc' 
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: True
