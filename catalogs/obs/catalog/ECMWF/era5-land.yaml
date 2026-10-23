@@ -1,0 +1,13 @@
+sources:
+  monthly-netcdf:
+    description: ERA5-Land monthly data from 1950 to 2025 in netcdf
+    driver: netcdf
+    metadata:
+      source_grid_name: era5-land-r01s
+      fixer_name: ERA5-destine-v2
+    args:
+      urlpath: '{{DVC_PATH}}/ECMWF/era5-land/monthly-netcdf/ERA5-Land_*_mon_full*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: True
