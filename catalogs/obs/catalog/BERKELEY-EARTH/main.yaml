@@ -4,3 +4,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/aqua-filled.yaml"
+  original:
+    description: BERKELEY EARTH from 1850 to 2026 as published upstream, missing values not filled
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/original.yaml"
