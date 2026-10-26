@@ -16,3 +16,11 @@ sources:
       urlpath:
       - '{{ TEST_PATH }}/NEMO/eORCA1/eORCA1_salinity_3D.nc'
     driver: netcdf
+  short-3d-skipna:
+    description: same as short-3d, regridded with smmregrid skipna (single 2D weights)
+    metadata:
+      source_grid_name: test-eORCA1-skipna
+    args:
+      urlpath:
+      - '{{ TEST_PATH }}/NEMO/eORCA1/eORCA1_salinity_3D.nc'
+    driver: netcdf
