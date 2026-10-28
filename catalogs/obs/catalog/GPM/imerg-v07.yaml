@@ -1,6 +1,6 @@
 sources:
   monthly:
-    description: IMERG V07 Final monthly precipitation 0.1deg from 1998 to 2025
+    description: IMERG V07 Final monthly precipitation 0.1deg from 1998 to 2024
     driver: netcdf
     metadata:
       source_grid_name: lon-lat
@@ -9,3 +9,4 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: True
+        data_vars: minimal  # do not concatenate lat_bnds/lon_bnds along time
