@@ -3,7 +3,7 @@ sources:
     description: Global Monthly Surface Temperature from Berkeley Earth (1850-2026) 1x1 deg - original, gaps not filled
     driver: netcdf
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-skipna
     args:
       urlpath: '{{DVC_PATH}}/BERKELEY-EARTH/original/r100-monthly/Berkeley-Earth_original_1x1_185001-202609.nc'
       chunks:
@@ -16,7 +16,7 @@ sources:
     description: Global Monthly Surface Temperature from Berkeley Earth (1850-2026) 0.25x0.25 deg - original, gaps not filled
     driver: netcdf
     metadata:
-      source_grid_name: lon-lat
+      source_grid_name: lon-lat-skipna
     args:
       urlpath: '{{DVC_PATH}}/BERKELEY-EARTH/original/r025-monthly/Berkeley-Earth_original_0.25x0.25_185001-202609.nc'
       chunks:
