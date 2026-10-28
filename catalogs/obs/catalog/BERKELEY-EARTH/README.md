@@ -10,6 +10,13 @@ The `aqua-filled` experiment provides monthly surface temperature (`2t`, in degC
 | `r025-monthly` | 0.25x0.25 deg | 1979-2025 | `Global_TAVG_Gridded_0p25deg.nc` | Beta product at high resolution (new dataset) |
 | `r100-monthly-v1` | 1x1 deg | 1979-2024 | `Land_and_Ocean_LatLong1.nc` | Older version, kept for reproducibility |
 
+The `original` experiment provides the same variable over the full record (1850-2026), as published by Berkeley Earth, **without gap filling** (missing values are kept, in particular in the early years). It is produced with [aqua-obs](https://github.com/AQUA-friends/aqua-obs) (not with `scripts/retrieve_process.py`) and its sources use the `lon-lat-skipna` grid, so that the time-varying missing values are handled when regridding (needs an AQUA version that provides it):
+
+| Source | Resolution | Period | Berkeley Earth product |
+|---|---|---|---|
+| `r100-monthly` | 1x1 deg | 1850-2026 | `Global_TAVG_Gridded_1deg.nc` |
+| `r025-monthly` | 0.25x0.25 deg | 1850-2026 | `Global_TAVG_Gridded_0p25deg.nc` |
+
 Original data are available from the Berkeley Earth data page: https://berkeleyearth.org/data/
 
 ### Data Processing Overview
