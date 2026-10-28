@@ -1,0 +1,35 @@
+# coordinates are ill defined in E-OBS with noise at 10^-14 level: join override puts the
+# variables together (the coordinates are the same)
+sources:
+  # daily-netcdf is commented because the daily files are not downloaded in aqua-dvc yet
+  # daily-netcdf:
+  #   description: E-OBS v33.0e daily ensemble mean 0.1deg over Europe 1950-2025
+  #   driver: netcdf
+  #   metadata:
+  #     source_grid_name: lon-lat
+  #   args:
+  #     urlpath:
+  #       - '{{DVC_PATH}}/E-OBS/v33.0e/daily-netcdf/tg_ens_mean_0.1deg_reg_v33.0e_195001-202512.nc'
+  #       - '{{DVC_PATH}}/E-OBS/v33.0e/daily-netcdf/tn_ens_mean_0.1deg_reg_v33.0e_195001-202512.nc'
+  #       - '{{DVC_PATH}}/E-OBS/v33.0e/daily-netcdf/tx_ens_mean_0.1deg_reg_v33.0e_195001-202512.nc'
+  #       - '{{DVC_PATH}}/E-OBS/v33.0e/daily-netcdf/rr_ens_mean_0.1deg_reg_v33.0e_195001-202512.nc'
+  #     xarray_kwargs:
+  #       decode_times: True
+  #       combine: by_coords
+  #       join: override
+  monthly-netcdf:
+    description: E-OBS v33.0e monthly ensemble mean 0.1deg over Europe 1950-2025
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+      fixer_name: eobs-eccodes-monthly
+    args:
+      urlpath:
+        - '{{DVC_PATH}}/E-OBS/v33.0e/monthly-netcdf/tg_ens_mean_0.1deg_reg_v33.0e_mon_195001-202512.nc'
+        - '{{DVC_PATH}}/E-OBS/v33.0e/monthly-netcdf/tn_ens_mean_0.1deg_reg_v33.0e_mon_195001-202512.nc'
+        - '{{DVC_PATH}}/E-OBS/v33.0e/monthly-netcdf/tx_ens_mean_0.1deg_reg_v33.0e_mon_195001-202512.nc'
+        - '{{DVC_PATH}}/E-OBS/v33.0e/monthly-netcdf/rr_ens_mean_0.1deg_reg_v33.0e_mon_195001-202512.nc'
+      xarray_kwargs:
+        decode_times: True
+        combine: by_coords
+        join: override

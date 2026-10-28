@@ -1,0 +1,6 @@
+sources:
+  v33.0e:
+    description: E-OBS v33.0e ensemble mean gridded observations over Europe, from the CDS
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/v33.0e.yaml"

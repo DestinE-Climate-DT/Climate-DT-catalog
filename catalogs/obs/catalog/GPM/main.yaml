@@ -4,3 +4,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/imerg.yaml"
+  imerg-v07:
+    description: GPM IMERG V07 Final run precipitation, from NASA GES DISC
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/imerg-v07.yaml"
