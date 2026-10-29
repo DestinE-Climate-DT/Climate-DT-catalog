@@ -1,0 +1,6 @@
+sources:
+  multiobs:
+    description: CNR multi-observation sea surface salinity and density 0.125deg, from Copernicus Marine
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/multiobs.yaml"
