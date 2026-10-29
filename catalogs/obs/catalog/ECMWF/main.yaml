@@ -19,3 +19,8 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/cds-era5.yaml"
+  era5-land:
+    description: ERA5-Land monthly data on the native 0.1 degree grid
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/era5-land.yaml"
