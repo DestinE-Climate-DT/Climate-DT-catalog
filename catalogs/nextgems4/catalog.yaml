@@ -8,6 +8,10 @@ metadata:
       type: str
       description: the path of the FDB data
       default: /work/bm1235/b382776
+    FDB_HOME_BRIDGE:
+      type: str
+      description: the path to the FDB home bridge directory, default to the Lumi path
+      default: /appl/local/destine/databridge
     ECCODES_PATH:
       type: str
       description: the path of the eccodes folder

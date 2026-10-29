@@ -3,9 +3,9 @@ sources:
       description: ICON-AMIP Control simulation on R02B08 grid with 20-minute time resolution.
       args:
         urlpath:
-          - "/work/mh0730/C5/experiments/LUMI_AMIP_R02B08_CNTL/public/LUMI_AMIP_hpz8_CNTL_atm_PT20M_*.nc"
-          - "/work/mh0730/C5/experiments/independent_R02B08.nc"
-          - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
+          - "/work/mh1570/C5/experiments/LUMI_AMIP_R02B08_CNTL/public/LUMI_AMIP_hpz8_CNTL_atm_PT20M_*.nc"
+          - "/work/mh1570/C5/experiments/common/independent_R02B08_hpz8.nc"
+          - "/work/mh1570/C5/experiments/common/atm_vgrid_R02B08_hpz8.nc"
       driver: netcdf
       metadata:
         source_grid_name: hpz8-nested-nextgems4
@@ -19,9 +19,9 @@ sources:
       description: ICON-AMIP Control simulation on R02B08 grid with 3-hour time resolution.
       args:
         urlpath:
-          - "/work/mh0730/C5/experiments/LUMI_AMIP_R02B08_CNTL/public/LUMI_AMIP_hpz8_CNTL_atm_PT3H_*.nc"
-          - "/work/mh0730/C5/experiments/independent_R02B08.nc"
-          - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
+          - "/work/mh1570/C5/experiments/LUMI_AMIP_R02B08_CNTL/public/LUMI_AMIP_hpz8_CNTL_atm_PT3H_*.nc"
+          - "/work/mh1570/C5/experiments/common/independent_R02B08_hpz8.nc"
+          - "/work/mh1570/C5/experiments/common/atm_vgrid_R02B08_hpz8.nc"
       driver: netcdf
       metadata:
         source_grid_name: hpz8-nested-nextgems4
@@ -35,9 +35,9 @@ sources:
       description: ICON-AMIP Control simulation on R02B08 grid with daily time resolution.
       args:
         urlpath:
-          - "/work/mh0730/C5/experiments/LUMI_AMIP_R02B08_CNTL/public/LUMI_AMIP_hpz8_CNTL_atm_P1D_*.nc"
-          - "/work/mh0730/C5/experiments/independent_R02B08.nc"
-          - "/work/mh0730/C5/experiments/atm_vgrid_R02B08.nc"
+          - "/work/mh1570/C5/experiments/LUMI_AMIP_R02B08_CNTL/public/LUMI_AMIP_hpz8_CNTL_atm_P1D_*.nc"
+          - "/work/mh1570/C5/experiments/common/independent_R02B08_hpz8.nc"
+          - "/work/mh1570/C5/experiments/common/atm_vgrid_R02B08_hpz8.nc"
       driver: netcdf
       metadata:
         fixer_name: ICON-cycle4
