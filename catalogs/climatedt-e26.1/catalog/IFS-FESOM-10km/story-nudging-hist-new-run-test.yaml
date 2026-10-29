@@ -3372,7 +3372,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.{{freq}}.north_midlatitudes.nc
+        /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.{{freq}}.{{region}}.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3406,7 +3406,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonalcycles
     args:
       urlpath: 
-        /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.{{freq}}.{{region}}.nc
+        /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.{{freq}}.south_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3501,7 +3501,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.{{freq}}.{{region}}.nc
+        /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3554,6 +3554,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3570,6 +3571,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -3579,6 +3582,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -3587,6 +3591,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/lrb_465001542_prod/o03q/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-new-run-test/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-new-run-test.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -3596,3 +3602,4 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
