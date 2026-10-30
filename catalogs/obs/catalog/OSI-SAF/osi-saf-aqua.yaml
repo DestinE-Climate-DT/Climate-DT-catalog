@@ -3,7 +3,7 @@ sources:
     description: Daily Northern Hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
-      source_grid_name: osi-saf-nh
+      source_grid_name: osi-saf-nh-aqua
       fixer_name: OSI-SAF-default
     #cache:
     #  - argkey: urlpath
@@ -30,7 +30,7 @@ sources:
     description: Southern hemisphere OSI-450 and OSI-430 sea-ice data
     driver: netcdf
     metadata:
-      source_grid_name: osi-saf-sh
+      source_grid_name: osi-saf-sh-aqua
       fixer_name: OSI-SAF-default
     #cache:
     #  - argkey: urlpath
