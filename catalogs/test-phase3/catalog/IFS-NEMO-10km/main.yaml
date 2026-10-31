@@ -2,3 +2,21 @@ sources:
   empty:
     description: Empty catalog
     driver: null
+  a3wi:
+    description: '"IFS-NEMO-10km a3wi 1988, grids: tco1279 eORCA12"'
+    metadata:
+      author: bsc998159
+      maintainer: not specified
+      machine: MN5
+      expid: a3wi
+      resolution_atm: tco1279
+      resolution_oce: eORCA12
+      forcing: baseline-cont
+      start: '1988'
+      dashboard:
+        menu: a3wi
+        resolution_id: SR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/a3wi.yaml'
