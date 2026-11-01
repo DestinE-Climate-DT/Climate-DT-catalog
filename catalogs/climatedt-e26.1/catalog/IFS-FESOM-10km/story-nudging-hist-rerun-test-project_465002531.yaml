@@ -2984,7 +2984,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
+        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/r2/atmosphere2d/netcdf/atmosphere2d.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -2997,13 +2997,14 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-radiation_toa-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_toa data for product 
       annual_climatology
     args:
       urlpath: 
-        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
+        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/r2/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3016,6 +3017,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-atmosphere3d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -3035,13 +3037,14 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-atmosphere2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere2d data for product 
       seasonal_climatology
     args:
       urlpath: 
-        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
+        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/r2/atmosphere2d/netcdf/atmosphere2d.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3054,6 +3057,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-water_cycle-timeseries:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product timeseries
@@ -3078,6 +3082,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: North Midlatitudes
@@ -3086,6 +3091,7 @@ sources:
         - North Midlatitudes
         - South Midlatitudes
         - Europe
+        - global
   aqua-ocean2d-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product annual_climatology
@@ -3093,6 +3099,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/ocean2d/netcdf/ocean2d.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -3102,6 +3110,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-radiation_surface-annual_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -3121,29 +3130,13 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-ocean2d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product seasonal_climatology
     args:
       urlpath: 
         /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/ocean2d/netcdf/ocean2d.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
-      chunks: {}
-    metadata:
-      source_grid_name: false
-    parameters:
-      realization:
-        description: Parameter realization
-        default: r1
-        type: str
-        allowed:
-        - r1
-  aqua-radiation_toa-seasonal_climatology:
-    driver: netcdf
-    description: AQUA diagnostic radiation_toa data for product 
-      seasonal_climatology
-    args:
-      urlpath: 
-        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -3156,6 +3149,27 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
+  aqua-radiation_toa-seasonal_climatology:
+    driver: netcdf
+    description: AQUA diagnostic radiation_toa data for product 
+      seasonal_climatology
+    args:
+      urlpath: 
+        /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/r2/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
+      chunks: {}
+      xarray_kwargs:
+        decode_times: true
+    metadata:
+      source_grid_name: false
+    parameters:
+      realization:
+        description: Parameter realization
+        default: r1
+        type: str
+        allowed:
+        - r1
+        - r2
   aqua-atmosphere3d-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic atmosphere3d data for product 
@@ -3175,6 +3189,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-radiation_surface-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic radiation_surface data for product 
@@ -3194,6 +3209,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-ocean2d-timeseries:
     driver: netcdf
     description: AQUA diagnostic ocean2d data for product timeseries
@@ -3218,6 +3234,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3250,6 +3267,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3283,6 +3301,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3316,6 +3335,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3346,6 +3366,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3378,6 +3399,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3408,6 +3430,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
       region:
         description: Parameter region
         default: global
@@ -3424,6 +3447,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/water_cycle/netcdf/water_cycle.annual_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -3433,6 +3458,7 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
   aqua-water_cycle-seasonal_climatology:
     driver: netcdf
     description: AQUA diagnostic water_cycle data for product 
@@ -3441,6 +3467,8 @@ sources:
       urlpath: 
         /scratch/project_465001542/emehdipo/o03u/output//aqua-analysis/climatedt-e26.1/IFS-FESOM-10km/story-nudging-hist-rerun-test-project_465002531/{{realization}}/water_cycle/netcdf/water_cycle.seasonal_climatology.climatedt-e26.1.IFS-FESOM-10km.story-nudging-hist-rerun-test-project_465002531.{{realization}}.*.nc
       chunks: {}
+      xarray_kwargs:
+        decode_times: true
     metadata:
       source_grid_name: false
     parameters:
@@ -3450,3 +3478,4 @@ sources:
         type: str
         allowed:
         - r1
+        - r2
