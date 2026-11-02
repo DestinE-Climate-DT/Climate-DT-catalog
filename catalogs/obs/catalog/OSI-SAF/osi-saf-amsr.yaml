@@ -3,7 +3,7 @@ sources:
     description: Daily Northern Hemisphere OSI-458 v3.0 from 2002 to 2020 and OSI-438 v3.0 from 2021 to 2025 sea-ice data
     driver: netcdf
     metadata:
-      source_grid_name: osi-saf-nh
+      source_grid_name: osi-saf-nh-aqua
       fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/AMSR/daily_cat/ice_conc_nh*.nc'
@@ -26,7 +26,7 @@ sources:
     description: Daily Southern Hemisphere OSI-458 v3.0 from 2002 to 2020 and OSI-438 v3.0 from 2021 to 2025 sea-ice data
     driver: netcdf
     metadata:
-      source_grid_name: osi-saf-sh
+      source_grid_name: osi-saf-sh-aqua
       fixer_name: OSI-SAF-default
     args:
       urlpath: '{{DATA_PATH}}/OSI-SAF/AMSR/daily_cat/ice_conc_sh*.nc'
