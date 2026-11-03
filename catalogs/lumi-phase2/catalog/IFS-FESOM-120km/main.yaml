@@ -1,0 +1,19 @@
+sources:
+  t0xo:
+    description: '"IFS-FESOM-120km t0xo 2017, grids: tco79 CORE2"'
+    metadata:
+      author: shafeequ1
+      maintainer: not specified
+      machine: lumi
+      expid: t0xo
+      resolution_atm: tco79
+      resolution_oce: CORE2
+      forcing: story-nudging-hist
+      start: '2017'
+      dashboard:
+        menu: t0xo
+        resolution_id: LR
+        note: null
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/t0xo.yaml'

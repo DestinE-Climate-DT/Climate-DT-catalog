@@ -25,3 +25,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/catalog/IFS-NEMO/main.yaml'
+  IFS-FESOM-120km:
+    description: IFS-FESOM-120km model
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/IFS-FESOM-120km/main.yaml'
