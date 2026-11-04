@@ -808,7 +808,9 @@ sources:
       urlpath:
         # Legacy path
         # /gpfs/scratch/ehpc01/bsc998159/a35w/output/LRA/mn5-phase2/IFS-NEMO/a2ii/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
-        '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp370/r100/monthly/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
+        # 2015-2039: legacy filename structure, 2040 onwards: new filename structure
+        - '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp370/r100/monthly/*_mn5-phase2_IFS-NEMO_a2ii_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
+        - '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp370/r100/monthly/*_climatedt-gen2_IFS-NEMO-10km_projections-ssp370_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -818,7 +820,7 @@ sources:
     parameters:
       realization:
         description: Parameter realization
-        default: r1
+        default: r2
         type: str
         allowed:
         - r3
