@@ -1,0 +1,19 @@
+sources:
+  monthly-netcdf:
+    description: multi-observation sea surface salinity monthly 0.125deg from 1993 to 2025
+    driver: netcdf
+    metadata:
+      source_grid_name: longitude-latitude
+    args:
+      urlpath: '{{DVC_PATH}}/CMEMS-SSS/multiobs/monthly-netcdf/sss_monthly_*.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: True
+  daily-zarr:
+    description: multi-observation sea surface salinity daily 0.125deg from 1993 to 2025
+    driver: zarr
+    metadata:
+      source_grid_name: longitude-latitude
+    args:
+      consolidated: True
+      urlpath: '{{DVC_PATH}}/CMEMS-SSS/multiobs/daily-zarr/sss_daily_*.zarr'
