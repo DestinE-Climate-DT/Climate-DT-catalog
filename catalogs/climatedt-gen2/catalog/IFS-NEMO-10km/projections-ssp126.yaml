@@ -19,7 +19,7 @@ sources:
         param: 151
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -61,7 +61,7 @@ sources:
         param: 151
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -103,7 +103,7 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -144,7 +144,7 @@ sources:
         param: 172
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -185,7 +185,7 @@ sources:
         param: 228004
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -228,7 +228,7 @@ sources:
         param: 228004
         levtype: sfc
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -273,7 +273,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: 6h
       savefreq: h
@@ -318,7 +318,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: 6h
       savefreq: h
@@ -363,7 +363,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -408,7 +408,7 @@ sources:
         levelist: [1, 5, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 
             600, 700, 850, 925, 1000]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -451,7 +451,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -492,7 +492,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: D
@@ -533,7 +533,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -574,7 +574,7 @@ sources:
         param: 263000
         levtype: o2d
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -620,7 +620,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -689,7 +689,7 @@ sources:
           55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72,
           73, 74, 75]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: MS
       savefreq: MS
@@ -754,7 +754,7 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -797,7 +797,7 @@ sources:
         levtype: hl
         levelist: [100]
       data_start_date: 20150101T0000
-      data_end_date: 20391231T2300
+      data_end_date: 20491231T2300
       bridge_start_date: complete
       chunks: D
       savefreq: h
@@ -826,7 +826,9 @@ sources:
       urlpath:
         # Legacy path 
         # /gpfs/scratch/ehpc01/bsc998159/a2zm/output/LRA/mn5-phase2/IFS-NEMO/0001/{{realization}}/r100/monthly/{{stat}}/{{region}}/*_mn5-phase2_IFS-NEMO_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc
-        '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp126/r100/monthly/*_mn5-phase2_IFS-NEMO_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
+        # 2015-2039: legacy filename structure, 2040 onwards: new filename structure
+        - '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp126/r100/monthly/*_mn5-phase2_IFS-NEMO_0001_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
+        - '{{ LRA_PATH }}/IFS-NEMO-10km/projections-ssp126/r100/monthly/*_climatedt-gen2_IFS-NEMO-10km_projections-ssp126_{{realization}}_r100_monthly_{{stat}}_{{region}}_*.nc'
       chunks: {}
       xarray_kwargs:
         decode_times: true
