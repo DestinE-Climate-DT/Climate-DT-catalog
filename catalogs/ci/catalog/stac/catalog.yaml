@@ -1,0 +1,42 @@
+sources:
+  ifs:
+    description: IFS test data through the local STAC collection
+    driver: stac
+    args:
+      urlpath: tests/stac_catalogue/collections/ifs.json
+      item: ifs-long-regridded-r18x9
+      asset: data
+      chunks:
+        time: 12
+      xarray_kwargs:
+        engine: netcdf4
+    metadata:
+      source_grid_name:
+        ifs-long-regridded-r18x9: lon-lat
+        ifs-short-ifs2d-tco79: tco79
+      fixer_name:
+        ifs-long-regridded-r18x9: ifs-ci-test
+        ifs-short-ifs2d-tco79: false
+  nemo:
+    description: NEMO test data through the local STAC collection
+    driver: stac
+    args:
+      urlpath: tests/stac_catalogue/collections/nemo.json
+      item: nemo-eorca1-eorca1-sst-2d
+      asset: data
+      chunks:
+        time: 1
+      xarray_kwargs:
+        engine: netcdf4
+    metadata:
+      source_grid_name:
+        nemo-eorca1-eorca1-sst-2d: eORCA1-2d
+        nemo-eorca1-eorca1-salinity-3d: test-eORCA1-3d
+      fixer_name:
+        nemo-eorca1-eorca1-sst-2d: false
+        nemo-eorca1-eorca1-salinity-3d: false
+  ifs-items:
+    description: Individually configured IFS STAC items
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/ifs/main.yaml"

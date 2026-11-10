@@ -44,4 +44,9 @@ sources:
     description: ECE4-FAST tuning coupled run
     driver: yaml_file_cat
     args:
-      path: "{{CATALOG_DIR}}/catalog/ECE4-FAST/main.yaml"  
+      path: "{{CATALOG_DIR}}/catalog/ECE4-FAST/main.yaml"
+  stac:
+    description: Local STAC examples for AQUA test data
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/stac/catalog.yaml"

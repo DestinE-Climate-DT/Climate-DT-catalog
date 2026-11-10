@@ -6,6 +6,7 @@ levante:
   intake:
     LRA_NEXTGEMS: /work/bb1153/b382076/LRA_NG4/nextgems4
     FDB_PATH: /work/bm1235/b382776
+    FDB_HOME_BRIDGE: null  # the databridge is accessed remotely with polytope
     ECCODES_PATH: /work/bb1153/b382075/aqua/eccodes
     OUTPUT_AQUA_PATH: /work/ab0995/a270260/pre_computed_aqua_analysis
 lumi:
@@ -16,5 +17,6 @@ lumi:
   intake:
     LRA_NEXTGEMS: /pfs/lustrep4/projappl/project_465002727/aqua/LRA/nextgems4
     FDB_PATH: null
+    FDB_HOME_BRIDGE: /appl/local/destine/databridge
     ECCODES_PATH: /pfs/lustrep3/appl/local/climatedt/data/AQUA/eccodes
     OUTPUT_AQUA_PATH: /pfs/lustrep3/projappl/project_465000454/jvonhar/aqua-analysis/output/pre_computed_aqua_analysis
