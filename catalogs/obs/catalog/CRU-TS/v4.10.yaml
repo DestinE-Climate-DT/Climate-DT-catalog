@@ -5,12 +5,10 @@ sources:
     driver: netcdf
     metadata:
       source_grid_name: lon-lat-skipna
+      fixer_name: CRU-TS-default
     args:
       urlpath:
-        - '{{DVC_PATH}}/CRU-TS/v4.10/monthly-netcdf/cru_ts4.10_tmp_190101-202512.nc'
-        - '{{DVC_PATH}}/CRU-TS/v4.10/monthly-netcdf/cru_ts4.10_tmn_190101-202512.nc'
-        - '{{DVC_PATH}}/CRU-TS/v4.10/monthly-netcdf/cru_ts4.10_tmx_190101-202512.nc'
-        - '{{DVC_PATH}}/CRU-TS/v4.10/monthly-netcdf/cru_ts4.10_pre_190101-202512.nc'
+        - '{{DVC_PATH}}/CRU-TS/v4.10/monthly-netcdf/cru_ts4.10_*_190101-202512.nc'
       chunks:
         lon: -1
         lat: -1
