@@ -1,0 +1,18 @@
+sources:
+  monthly-netcdf:
+    description: CRU TS monthly gridded observations over land, 0.5 degrees v4.10 
+      monthly-netcdf (190101-202512)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat-skipna
+      fixer_name: CRU-TS-default
+    args:
+      urlpath:
+        - '{{DVC_PATH}}/CRU-TS/v4.10/monthly-netcdf/cru_ts4.10_*_190101-202512.nc'
+      chunks:
+        lon: -1
+        lat: -1
+        time: 64
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords

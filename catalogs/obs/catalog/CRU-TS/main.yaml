@@ -1,0 +1,6 @@
+sources:
+  v4.10:
+    description: CRU-TS v4.10
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/v4.10.yaml"

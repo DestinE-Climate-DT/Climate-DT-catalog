@@ -80,3 +80,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/WAGHC/main.yaml"
+  CRU-TS:
+    description: CRU TS monthly gridded observations over land, 0.5 degrees
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/CRU-TS/main.yaml"
