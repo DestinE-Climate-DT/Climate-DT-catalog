@@ -85,3 +85,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/CRU-TS/main.yaml"
+  JRA:
+    description: JRA reanalysis data from the Japan Meteorological Agency
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/JRA/main.yaml"
