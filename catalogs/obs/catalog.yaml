@@ -90,3 +90,8 @@ sources:
     driver: yaml_file_cat
     args:
       path: "{{CATALOG_DIR}}/catalog/JRA/main.yaml"
+  NASA:
+    description: NASA MERRA-2 reanalysis data
+    driver: yaml_file_cat
+    args:
+      path: "{{CATALOG_DIR}}/catalog/NASA/main.yaml"

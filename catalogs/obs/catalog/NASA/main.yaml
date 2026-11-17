@@ -1,0 +1,6 @@
+sources:
+  merra2:
+    description: MERRA-2 reanalysis data
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/merra2.yaml"
