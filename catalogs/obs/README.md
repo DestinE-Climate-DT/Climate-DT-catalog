@@ -14,3 +14,4 @@ If you have a problem finding data in your machine with these catalog entries, p
 - E-OBS v33.0e: only the `monthly-netcdf` source is available. The `daily-netcdf` source is commented because the daily files are not downloaded in aqua-dvc yet.
 - E-OBS v33.0e `monthly-netcdf` uses the `eobs-eccodes-monthly` fixer and the eccodes convention for `tg`, `tn`, `tx` (`2t`, `min_2t`, `max_2t`), which require AQUA > v1.2.3.
 - GPM `imerg-v07` `monthly`: `precipitation` is translated to `tprate` by the eccodes convention, which requires AQUA > v1.2.3.
+- HEALPix online sources (`monthly-healpix` sources) use `source_grid_name: hpz{{ zoom }}-nested`: regrid and areas at a non-default `zoom` require the AQUA Reader fix that resolves metadata with the intake parameters. HEALPix grid files for the requested zoom must be available in the machine grids folder.
