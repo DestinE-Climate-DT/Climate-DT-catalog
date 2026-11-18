@@ -1,0 +1,6 @@
+sources:
+  jra3q:
+    description: JRA-3Q reanalysis data
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/jra3q.yaml"

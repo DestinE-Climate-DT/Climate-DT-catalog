@@ -9,3 +9,9 @@ sources:
     driver: yaml_file_cat
     args:
         path: "{{CATALOG_DIR}}/imerg-v07.yaml"
+
+  ir-imerg:
+    description: Merged NCEP/CPC IR brightness temperature and IMERG V07B precipitation on HEALPix
+    driver: yaml_file_cat
+    args:
+        path: "{{CATALOG_DIR}}/ir-imerg.yaml"

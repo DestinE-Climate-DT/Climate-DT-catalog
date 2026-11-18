@@ -1,0 +1,15 @@
+sources:
+  30min-healpix:
+    description: Merged NCEP/CPC IR brightness temperature (60N-60S) and IMERG V07B precipitation, 30 minutes from 2019 to 2021, HEALPix nested, online from JASMIN (WCRP hackathon)
+    driver: zarr
+    metadata:
+      source_grid_name: hpz{{ zoom }}-nested
+    args:
+      consolidated: true
+      urlpath: https://hackathon-o.s3-ext.jc.rl.ac.uk/obs-data/dev/v1/IR_IMERG_combined/IR_IMERG_combined_V07B.hp_z{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed: [9]
+        default: 9
+        description: zoom resolution of the dataset
+        type: int
