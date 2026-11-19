@@ -101,13 +101,14 @@ def download_berkeley_earth_file(output_dir, version='v2', variable='tavg'):
         return None
 
 
-def process_berkeley_earth_file(output_dir, year1=1979, version='v2', variable='tavg'):
+def process_berkeley_earth_file(output_dir, year1=1979, year2=None, version='v2', variable='tavg'):
     """
     Process Berkeley Earth file applying all necessary transformations
     
     Args:
         output_dir (str): Directory to save the processed file
-        year1 (str): selection starting year
+        year1 (int): selection starting year
+        year2 (int): selection final year, None to keep all the available data
         version (str): Version of the file to process
         variable (str): Variable to process (tavg, tmax or tmin)
     """
@@ -138,9 +139,9 @@ def process_berkeley_earth_file(output_dir, year1=1979, version='v2', variable='
     #count = nan_mask.groupby('time.year').sum(dim=['time','latitude','longitude'])
     #count.year[count.where(count < 100).notnull()]
 
-    #select from year1 to today
-    year2=out.time.dt.year.max().values
-    out = out.sel(time=slice(f'{year1}-01-01', None))
+    #select from year1 to year2 (or to today)
+    out = out.sel(time=slice(f'{year1}-01-01', f'{year2}-12-31' if year2 else None))
+    year2 = out.time.dt.year.max().values
 
     # Salva temporaneamente e rimappa con extrapolation
     temp_file = Path(output_dir) / f'temp_in_{variable}.nc'
@@ -151,9 +152,8 @@ def process_berkeley_earth_file(output_dir, year1=1979, version='v2', variable='
         resolution = '0.25'
     else:
         resolution = '1'
-    # tavg keeps the original file name, other variables are tagged
-    tag = '' if variable == 'tavg' else f'{variable}_'
-    outfile = Path(output_dir) / Path(f'Berkeley-Earth_aqua-filled_{tag}{resolution}x{resolution}_{year1}-{year2}.nc')
+    outfile = Path(output_dir) / Path(
+        f'Berkeley-Earth_aqua-filled_{variable}_{resolution}x{resolution}_{year1}-{year2}.nc')
     if os.path.exists(outfile):
         os.remove(outfile)
     if VARIABLES[variable]['land_only']:
@@ -196,6 +196,12 @@ def main():
         default='tavg',
         help="Variable to download: mean (tavg), maximum (tmax) or minimum (tmin) temperature (default: tavg)"
     )
+    parser.add_argument(
+        "--end-year",
+        type=int,
+        default=None,
+        help="Last year to keep (default: all the available data)"
+    )
     
     args = parser.parse_args()
     
@@ -224,7 +230,7 @@ def main():
     # Process the file (no CDO verification needed)
     if not args.download_only:
         process_berkeley_earth_file(
-            args.output_dir, year1=1979, version=args.version, variable=args.variable)
+            args.output_dir, year1=1979, year2=args.end_year, version=args.version, variable=args.variable)
         
     print("Success!")
 
