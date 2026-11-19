@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Script to process Berkeley Earth Land_and_Ocean_LatLong1.nc data
-Applies CDO to set monthly time axis from 1850 with hourly units
-and adds temperature to climatology variable.
+Script to download and process Berkeley Earth gridded temperature data
+(mean, maximum and minimum temperature).
+Adds the anomalies to the climatology, sets a monthly time axis
+and fills the missing values with CDO.
 """
 
 import sys
@@ -21,31 +22,48 @@ cdo = Cdo()
 PRODUCTS = {
     'v1': {
         'url': 'https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Gridded',
-        'filename': 'Land_and_Ocean_LatLong1.nc'
+        'filename': {'tavg': 'Land_and_Ocean_LatLong1.nc'}
         },
     'v2': {
         'url': 'https://storage.googleapis.com/berkeley-earth-temperature-hr/global/gridded',
-        'filename': 'Global_TAVG_Gridded_1deg.nc'
+        'filename': {
+            'tavg': 'Global_TAVG_Gridded_1deg.nc',
+            'tmax': 'Land_TMAX_Gridded_1deg.nc',
+            'tmin': 'Land_TMIN_Gridded_1deg.nc'
+            }
         },
     'v2-highres': {
         'url': 'https://storage.googleapis.com/berkeley-earth-temperature-hr/global/gridded',
-        'filename': 'Global_TAVG_Gridded_0p25deg.nc'
+        'filename': {
+            'tavg': 'Global_TAVG_Gridded_0p25deg.nc',
+            'tmax': 'Land_TMAX_Gridded_0p25deg.nc',
+            'tmin': 'Land_TMIN_Gridded_0p25deg.nc'
+            }
     }
 }
 
-def download_berkeley_earth_file(output_dir, version='v2'):
+# Output name and long name of each variable. Maximum and minimum temperature
+# are land-only products: the ocean is kept missing when filling the gaps.
+VARIABLES = {
+    'tavg': {'name': '2t', 'long_name': 'Surface Temperature', 'land_only': False},
+    'tmax': {'name': 'max_2t', 'long_name': 'Maximum Surface Temperature', 'land_only': True},
+    'tmin': {'name': 'min_2t', 'long_name': 'Minimum Surface Temperature', 'land_only': True}
+}
+
+def download_berkeley_earth_file(output_dir, version='v2', variable='tavg'):
     """
     Download Berkeley Earth file from S3 repository
     
     Args:
         output_dir (str): Directory to save the file
         version (str): Version of the file to download
+        variable (str): Variable to download (tavg, tmax or tmin)
 
     Returns:
         str: Path of downloaded file, None if error
     """
 
-    filename = PRODUCTS[version]['filename']
+    filename = PRODUCTS[version]['filename'][variable]
     url = f"{PRODUCTS[version]['url']}/{filename}"
     output_path = Path(output_dir) / filename
     
@@ -83,7 +101,7 @@ def download_berkeley_earth_file(output_dir, version='v2'):
         return None
 
 
-def process_berkeley_earth_file(output_dir, year1=1979, version='v2'):
+def process_berkeley_earth_file(output_dir, year1=1979, version='v2', variable='tavg'):
     """
     Process Berkeley Earth file applying all necessary transformations
     
@@ -91,8 +109,9 @@ def process_berkeley_earth_file(output_dir, year1=1979, version='v2'):
         output_dir (str): Directory to save the processed file
         year1 (str): selection starting year
         version (str): Version of the file to process
+        variable (str): Variable to process (tavg, tmax or tmin)
     """
-    filename = PRODUCTS[version]['filename']
+    filename = PRODUCTS[version]['filename'][variable]
     input_file = Path(output_dir) / filename
 
     # load the data
@@ -107,10 +126,11 @@ def process_berkeley_earth_file(output_dir, year1=1979, version='v2'):
     out = ds['temperature'] + clim_for_time
 
     # time axis adjustment
-    timeaxis = pd.date_range(start=pd.Timestamp('1850-01-01T00:00:00'), periods=out.time.size, freq='MS')
+    start = pd.Timestamp(year=years[0], month=months[0], day=1)
+    timeaxis = pd.date_range(start=start, periods=out.time.size, freq='MS')
     out = out.assign_coords(time=timeaxis)
-    out.name = '2t'
-    out.attrs['long_name'] = 'Surface Temperature'
+    out.name = VARIABLES[variable]['name']
+    out.attrs['long_name'] = VARIABLES[variable]['long_name']
     out.attrs['units'] = 'degC'
 
     #nan count per year and selection
@@ -123,18 +143,26 @@ def process_berkeley_earth_file(output_dir, year1=1979, version='v2'):
     out = out.sel(time=slice(f'{year1}-01-01', None))
 
     # Salva temporaneamente e rimappa con extrapolation
-    if os.path.exists(Path(output_dir) / 'temp_in.nc'):
-        os.remove(Path(output_dir) / 'temp_in.nc')
-    out.to_netcdf(Path(output_dir) / 'temp_in.nc')
+    temp_file = Path(output_dir) / f'temp_in_{variable}.nc'
+    if os.path.exists(temp_file):
+        os.remove(temp_file)
+    out.to_netcdf(temp_file)
     if 'highres' in version:
         resolution = '0.25'
     else:
         resolution = '1'
-    outfile = Path(output_dir) / Path(f'Berkeley-Earth_aqua-filled_{resolution}x{resolution}_{year1}-{year2}.nc')
+    # tavg keeps the original file name, other variables are tagged
+    tag = '' if variable == 'tavg' else f'{variable}_'
+    outfile = Path(output_dir) / Path(f'Berkeley-Earth_aqua-filled_{tag}{resolution}x{resolution}_{year1}-{year2}.nc')
     if os.path.exists(outfile):
         os.remove(outfile)
-    cdo.fillmiss(options='-f nc4 -z zip', input=str(Path(output_dir) / 'temp_in.nc'), output=str(outfile))
-    os.remove(Path(output_dir) / 'temp_in.nc')
+    if VARIABLES[variable]['land_only']:
+        # fill the gaps, then keep only the cells which have data at least once (the land)
+        cdo.ifthen(options='-f nc4 -z zip', input=f'-gtc,-1000 -timmax {temp_file} -fillmiss {temp_file}',
+                   output=str(outfile))
+    else:
+        cdo.fillmiss(options='-f nc4 -z zip', input=str(temp_file), output=str(outfile))
+    os.remove(temp_file)
     
 def main():
     """Main function"""
@@ -162,17 +190,25 @@ def main():
         default='v2',
         help="Version of Berkeley Earth data to download (default: v2)"
     )
+    parser.add_argument(
+        "--variable",
+        choices=list(VARIABLES),
+        default='tavg',
+        help="Variable to download: mean (tavg), maximum (tmax) or minimum (tmin) temperature (default: tavg)"
+    )
     
     args = parser.parse_args()
     
     # If no input_file and no download requested, error
     if not args.output_dir and not args.download and not args.download_only:
         parser.error("You must specify an input file or use --download/--download-only")
-    # Determine output directory
+    if args.variable not in PRODUCTS[args.version]['filename']:
+        parser.error(f"Variable {args.variable} is not available for version {args.version}")
     
     if args.download or args.download_only:
         print("Download option enabled...")
-        downloaded_file = download_berkeley_earth_file(args.output_dir, version=args.version)
+        downloaded_file = download_berkeley_earth_file(
+            args.output_dir, version=args.version, variable=args.variable)
         
         if not downloaded_file:
             print("Error downloading file")
@@ -188,7 +224,7 @@ def main():
     # Process the file (no CDO verification needed)
     if not args.download_only:
         process_berkeley_earth_file(
-            args.output_dir, year1=1979, version=args.version)
+            args.output_dir, year1=1979, version=args.version, variable=args.variable)
         
     print("Success!")
 

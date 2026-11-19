@@ -29,6 +29,8 @@ To focus on the modern climate period, the dataset is trimmed to include only da
 
 The result is a complete monthly temperature dataset spanning 1979 to present for surface temperature, suitable for climate analysis within AQUA without the complications of missing data or format inconsistencies.
 
+The script can also process the monthly means of the daily maximum (`tmax`) and minimum (`tmin`) temperature, which Berkeley Earth publishes as land-only products (`Land_TMAX_Gridded_*.nc`, `Land_TMIN_Gridded_*.nc`) for the new dataset (`v2` and `v2-highres`). The processing is the same, but only the gaps over land are filled: the ocean is kept missing. The variables are saved as `max_2t` and `min_2t`. These files are not yet exposed as catalog sources.
+
 ### Usage
 
 The product is selected with the `-v/--version` option (`v1`, `v2` or `v2-highres`, default `v2`):
@@ -40,5 +42,14 @@ python scripts/retrieve_process.py $DVC_PATH/BERKELEY-EARTH/aqua-filled --downlo
 # Download and process the new 0.25x0.25 deg product
 python scripts/retrieve_process.py $DVC_PATH/BERKELEY-EARTH/aqua-filled --download -v v2-highres
 ```
+
+The variable is selected with the `--variable` option (`tavg`, `tmax` or `tmin`, default `tavg`):
+
+```bash
+# Download and process the maximum temperature of the new 0.25x0.25 deg product
+python scripts/retrieve_process.py $DVC_PATH/BERKELEY-EARTH/aqua-filled --download -v v2-highres --variable tmax
+```
+
+The output file of `tmax` and `tmin` carries the variable in its name, e.g. `Berkeley-Earth_aqua-filled_tmax_0.25x0.25_1979-2026.nc`.
 
 `$DVC_PATH` is the machine-specific data path defined in `catalogs/obs/machine.yaml`; `BERKELEY-EARTH/aqua-filled` is the directory where the catalog expects the files.
