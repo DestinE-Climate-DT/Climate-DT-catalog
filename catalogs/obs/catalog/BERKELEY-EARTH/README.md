@@ -54,6 +54,6 @@ python scripts/retrieve_process.py $DVC_PATH/BERKELEY-EARTH/aqua-filled --downlo
 
 The last year to keep can be set with the `--end-year` option (default: all the available data); the catalog sources use `--end-year 2025` for all the variables.
 
-The output file carries the variable in its name, e.g. `Berkeley-Earth_aqua-filled_tmax_0.25x0.25_1979-2025.nc`.
+The output file of `tmax` and `tmin` carries the variable in its name, e.g. `Berkeley-Earth_aqua-filled_tmax_0.25x0.25_1979-2025.nc`.
 
 `$DVC_PATH` is the machine-specific data path defined in `catalogs/obs/machine.yaml`; `BERKELEY-EARTH/aqua-filled` is the directory where the catalog expects the files.

@@ -152,8 +152,9 @@ def process_berkeley_earth_file(output_dir, year1=1979, year2=None, version='v2'
         resolution = '0.25'
     else:
         resolution = '1'
-    outfile = Path(output_dir) / Path(
-        f'Berkeley-Earth_aqua-filled_{variable}_{resolution}x{resolution}_{year1}-{year2}.nc')
+    # tavg keeps the original file name, other variables are tagged
+    tag = '' if variable == 'tavg' else f'{variable}_'
+    outfile = Path(output_dir) / Path(f'Berkeley-Earth_aqua-filled_{tag}{resolution}x{resolution}_{year1}-{year2}.nc')
     if os.path.exists(outfile):
         os.remove(outfile)
     if VARIABLES[variable]['land_only']:
