@@ -9,6 +9,7 @@ The `aqua-filled` experiment provides monthly surface temperature (`2t`, in degC
 | `r100-monthly` | 1x1 deg | 1979-2025 | `Global_TAVG_Gridded_1deg.nc` | Beta product (new dataset) |
 | `r025-monthly` | 0.25x0.25 deg | 1979-2025 | `Global_TAVG_Gridded_0p25deg.nc` | Beta product at high resolution (new dataset) |
 | `r100-monthly-v1` | 1x1 deg | 1979-2024 | `Land_and_Ocean_LatLong1.nc` | Older version, kept for reproducibility |
+| `r025-monthly-land` | 0.25x0.25 deg | 1979-2026 | `Land_TMAX_Gridded_0p25deg.nc`, `Land_TMIN_Gridded_0p25deg.nc` | Monthly means of daily maximum (`max_2t`) and minimum (`min_2t`) temperature, land only |
 
 The `original` experiment provides the same variable over the full record (1850-2026), as published by Berkeley Earth, **without gap filling** (missing values are kept, in particular in the early years). It is produced with [aqua-obs](https://github.com/AQUA-friends/aqua-obs) (not with `scripts/retrieve_process.py`) and its sources use the `lon-lat-skipna` grid, so that the time-varying missing values are handled when regridding (needs an AQUA version that provides it):
 
@@ -29,7 +30,7 @@ To focus on the modern climate period, the dataset is trimmed to include only da
 
 The result is a complete monthly temperature dataset spanning 1979 to present for surface temperature, suitable for climate analysis within AQUA without the complications of missing data or format inconsistencies.
 
-The script can also process the monthly means of the daily maximum (`tmax`) and minimum (`tmin`) temperature, which Berkeley Earth publishes as land-only products (`Land_TMAX_Gridded_*.nc`, `Land_TMIN_Gridded_*.nc`) for the new dataset (`v2` and `v2-highres`). The processing is the same, but only the gaps over land are filled: the ocean is kept missing. The variables are saved as `max_2t` and `min_2t`. These files are not yet exposed as catalog sources.
+The script can also process the monthly means of the daily maximum (`tmax`) and minimum (`tmin`) temperature, which Berkeley Earth publishes as land-only products (`Land_TMAX_Gridded_*.nc`, `Land_TMIN_Gridded_*.nc`) for the new dataset (`v2` and `v2-highres`). The processing is the same, but only the gaps over land are filled: the ocean is kept missing. The variables are saved as `max_2t` and `min_2t` and the 0.25x0.25 deg files are provided by the `r025-monthly-land` source.
 
 ### Usage
 
