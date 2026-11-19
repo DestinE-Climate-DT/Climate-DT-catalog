@@ -30,3 +30,16 @@ sources:
       xarray_kwargs:
         decode_times: True
 
+  r025-monthly-land:
+    description: Global Monthly Maximum and Minimum Surface Temperature over land from Berkeley Earth (1979-2026) 0.25x0.25 deg - Beta product at high resolution
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+        - '{{DVC_PATH}}/BERKELEY-EARTH/aqua-filled/Berkeley-Earth_aqua-filled_tmax_0.25x0.25_1979-2026.nc'
+        - '{{DVC_PATH}}/BERKELEY-EARTH/aqua-filled/Berkeley-Earth_aqua-filled_tmin_0.25x0.25_1979-2026.nc'
+      chunks: {}
+      xarray_kwargs:
+        decode_times: True
+        combine: by_coords
