@@ -1,0 +1,16 @@
+sources:
+  monthly:
+    description: monthly precipitation at 1 degree (1979-2024)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath: '{{AIMIP_PATH}}/GPCP-SG/OBS_GPCP-SG_atmos_2.3_Amon_pr_1979-2024.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal

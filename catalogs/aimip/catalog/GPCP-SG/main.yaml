@@ -1,0 +1,6 @@
+sources:
+  v2.3:
+    description: GPCP-SG v2.3 monthly precipitation interpolated to 1 degree
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/v2.3.yaml'

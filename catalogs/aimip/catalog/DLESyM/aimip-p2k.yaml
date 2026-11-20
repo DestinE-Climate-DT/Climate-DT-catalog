@@ -1,0 +1,113 @@
+sources:
+  monthly-atm2d:
+    description: monthly 2D data on the gn grid (pr, tas)
+    driver: netcdf
+    metadata:
+      source_grid_name: false
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/Amon/pr/gn/v20260406/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/Amon/tas/gn/v20260406/tas_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  monthly-atm3d:
+    description: monthly 3D data on the gn grid (ta, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: false
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/Amon/ta/gn/v20260406/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/Amon/zg/gn/v20260406/zg_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  daily-atm2d:
+    description: daily 2D data on the gn grid (pr, tas)
+    driver: netcdf
+    metadata:
+      source_grid_name: false
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/day/pr/gn/v20260406/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/day/tas/gn/v20260406/tas_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  daily-atm3d:
+    description: daily 3D data on the gn grid (ta, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: false
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/day/ta/gn/v20260406/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/DLESyM/DLESyM/aimip-p2k/{{realization}}/day/zg/gn/v20260406/zg_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1

@@ -1,0 +1,113 @@
+sources:
+  monthly-atm2d-native:
+    description: monthly 2D data on the gn grid (huss, pr, ps, tas, ts, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/huss/gn/v20190815/huss_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/pr/gn/v20190815/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ps/gn/v20190815/ps_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/tas/gn/v20190815/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ts/gn/v20190815/ts_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/uas/gn/v20190815/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/vas/gn/v20190815/vas_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+  monthly-atm3d-native:
+    description: monthly 3D data on the gn grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/hus/gn/v20190815/hus_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ta/gn/v20190815/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ua/gn/v20190815/ua_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/va/gn/v20190815/va_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/zg/gn/v20190815/zg_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+  monthly-atm2d:
+    description: monthly 2D data on the gr grid (huss, pr, ps, tas, ts, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/huss/gr/v20190815/huss_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/pr/gr/v20190815/pr_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ps/gr/v20190815/ps_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/tas/gr/v20190815/tas_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ts/gr/v20190815/ts_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/uas/gr/v20190815/uas_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/vas/gr/v20190815/vas_*_gr_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+  monthly-atm3d:
+    description: monthly 3D data on the gr grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/hus/gr/v20190815/hus_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ta/gr/v20190815/ta_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/ua/gr/v20190815/ua_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/va/gr/v20190815/va_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/MPI-M/MPI-ESM1-2-LR/aimip/{{realization}}/Amon/zg/gr/v20190815/zg_*_gr_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1

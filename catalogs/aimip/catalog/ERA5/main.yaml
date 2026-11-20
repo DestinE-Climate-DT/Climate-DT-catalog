@@ -1,0 +1,6 @@
+sources:
+  era5:
+    description: 'ERA5 monthly means: 1 degree AIMIP evaluation set (1978-2024) and 0.25 degree fields (1940-2024)'
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/era5.yaml'

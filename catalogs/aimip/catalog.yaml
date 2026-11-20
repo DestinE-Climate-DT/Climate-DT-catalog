@@ -1,0 +1,62 @@
+metadata:
+  parameters:
+    AIMIP_PATH:
+      type: str
+      description: the path to the AIMIP archive on the local machine
+      default: /work/ab0995/a270088/AIMIP/minio_copy/ai-mip
+sources:
+  ACE2-1-ERA5:
+    description: ACE2.1-ERA5 AI climate emulator (Ai2)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ACE2-1-ERA5/main.yaml'
+  ArchesWeather-V2:
+    description: ArchesWeather-V2 AI model (ArchesWeather)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ArchesWeather-V2/main.yaml'
+  ArchesWeatherGen-V2:
+    description: ArchesWeatherGen-V2 generative AI model (ArchesWeather)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ArchesWeatherGen-V2/main.yaml'
+  DLESyM:
+    description: DLESyM AI Earth system model (University of Washington)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/DLESyM/main.yaml'
+  NeuralGCM:
+    description: NeuralGCM hybrid AI model, TL63 (Google)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/NeuralGCM/main.yaml'
+  NeuralGCM-HRD:
+    description: NeuralGCM-HRD hybrid AI model, decoded at 1 degree (Google)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/NeuralGCM-HRD/main.yaml'
+  cBottle-1-3:
+    description: cBottle 1.3 generative AI model, HEALPix nside=64 (NVIDIA)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/cBottle-1-3/main.yaml'
+  MD-1p5:
+    description: MD-1p5 AI model (UMD-PARETO)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/MD-1p5/main.yaml'
+  MPI-ESM1-2-LR:
+    description: MPI-ESM1.2-LR physical model, CMIP6 reference (MPI-M)
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/MPI-ESM1-2-LR/main.yaml'
+  ERA5:
+    description: ERA5 reanalysis, reference for AIMIP
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/ERA5/main.yaml'
+  GPCP-SG:
+    description: GPCP-SG precipitation, reference for AIMIP
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/catalog/GPCP-SG/main.yaml'

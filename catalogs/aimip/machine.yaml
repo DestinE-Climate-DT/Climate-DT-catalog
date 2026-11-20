@@ -1,0 +1,7 @@
+levante:
+  paths:
+    grids: /work/bk1580/aqua-dvc/grids
+    weights: /work/bk1580/aqua-dvc/weights
+    areas: /work/bk1580/aqua-dvc/areas
+  intake:
+    AIMIP_PATH: /work/ab0995/a270088/AIMIP/minio_copy/ai-mip

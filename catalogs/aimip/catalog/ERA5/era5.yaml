@@ -1,0 +1,88 @@
+sources:
+  monthly-atm2d:
+    description: monthly 2D data at 1 degree, CMOR names (1978-2024)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_pr_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_ps_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_psl_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_tas_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_ts_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_uas_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_vas_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Emon_tdps_1978-2024.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+  monthly-atm3d:
+    description: monthly 3D data at 1 degree on 8 pressure levels, CMOR names (1978-2024)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_hus_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_ta_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_ua_1978-2024.nc'
+      - '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_va_1978-2024.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+  monthly-atm3d-zg:
+    description: monthly geopotential height at 1 degree on 37 pressure levels (1978-2024)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath: '{{AIMIP_PATH}}/ERA5/mon_1deg/native6_ERA5_*_v1_Amon_zg_1978-2024.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+  monthly-r025-atm2d:
+    description: monthly 2D data at 0.25 degree, ERA5 names (1940-2024)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath: '{{AIMIP_PATH}}/ERA5/mon/ERA5_*_mon_full_sfc_1940-2024.nc'
+      chunks:
+        time: 1
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+  monthly-r025-atm3d:
+    description: monthly 3D data at 0.25 degree on 8 pressure levels, ERA5 names (1940-2024)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath: '{{AIMIP_PATH}}/ERA5/mon/ERA5_*_mon_full_plev8_1940-2024.nc'
+      chunks:
+        time: 1
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal

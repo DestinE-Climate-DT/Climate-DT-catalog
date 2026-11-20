@@ -1,0 +1,65 @@
+sources:
+  monthly-atm2d:
+    description: monthly 2D data on the gr grid (huss, pr, ps, tas, ts, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/huss/gr/v20251217/huss_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/pr/gr/v20251217/pr_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/ps/gr/v20251217/ps_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/tas/gr/v20251217/tas_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/ts/gr/v20251217/ts_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/uas/gr/v20251217/uas_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/vas/gr/v20251217/vas_*_gr_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  monthly-atm3d:
+    description: monthly 3D data on the gr grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/hus/gr/v20251217/hus_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/ta/gr/v20251217/ta_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/ua/gr/v20251217/ua_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/va/gr/v20251217/va_*_gr_*.nc'
+      - '{{AIMIP_PATH}}/UMD-PARETO/MD-1p5/aimip-4k/{{realization}}/Amon/zg/gr/v20251217/zg_*_gr_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1

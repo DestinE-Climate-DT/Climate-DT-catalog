@@ -20,6 +20,7 @@ This repository focuses on the catalog, the main AQUA codebase is open-sourced a
 13. obs: Catalog with the observational datasets. (multi machine)
 14. test-phase3: Catalog for tests in ClimateDT Phase3
 15. template: A template catalog to be used for new catalog generation
+16. aimip: Catalog with the AIMIP simulations of AI climate models. (Levante)
 
 
 If a catalog has some errata or some work to be done, a README file is present in the catalog folder.

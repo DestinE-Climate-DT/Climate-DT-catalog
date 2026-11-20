@@ -1,0 +1,6 @@
+sources:
+  amip:
+    description: CMIP6 AMIP simulation, 1 member
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/amip.yaml'

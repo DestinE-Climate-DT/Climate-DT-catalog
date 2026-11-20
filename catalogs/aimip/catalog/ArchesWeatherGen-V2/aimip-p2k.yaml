@@ -1,0 +1,125 @@
+sources:
+  monthly-atm2d:
+    description: monthly 2D data on the gn grid (psl, tas, tos, uas, vas, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/psl/gn/psl_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/tas/gn/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/tos/gn/tos_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/uas/gn/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/vas/gn/vas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/zg/gn/zg_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  monthly-atm3d:
+    description: monthly 3D data on the gn grid (hus, ta, ua, va)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/hus/gn/hus_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/ta/gn/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/ua/gn/ua_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/Amon/va/gn/va_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  daily-atm2d:
+    description: daily 2D data on the gn grid (psl, tas, tos, uas, vas, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/psl/gn/psl_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/tas/gn/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/tos/gn/tos_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/uas/gn/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/vas/gn/vas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/zg/gn/zg_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  daily-atm3d:
+    description: daily 3D data on the gn grid (hus, ta, ua, va)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/hus/gn/hus_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/ta/gn/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/ua/gn/ua_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/ArchesWeather/ArchesWeatherGen-V2/aimip-p2k/{{realization}}/day/va/gn/va_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1

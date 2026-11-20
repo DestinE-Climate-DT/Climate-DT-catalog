@@ -1,0 +1,137 @@
+sources:
+  monthly-atm2d:
+    description: monthly 2D data on the gn grid (pr, ps, tas, tdas, ts, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/pr/gn/v20260304/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/ps/gn/v20260304/ps_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/tas/gn/v20260304/tas_*_r[!2]i1p1f1_gn_197810-202412.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/tas/gn/v20260312/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/tdas/gn/v20260304/tdas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/ts/gn/v20260304/ts_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/uas/gn/v20260304/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/vas/gn/v20260304/vas_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  monthly-atm3d:
+    description: monthly 3D data on the gn grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/hus/gn/v20260304/hus_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/ta/gn/v20260304/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/ua/gn/v20260304/ua_*_r[!1]i1p1f1_gn_197810-202412.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/ua/gn/v20260312/ua_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/va/gn/v20260304/va_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/Amon/zg/gn/v20260304/zg_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  daily-atm2d:
+    description: daily 2D data on the gn grid (pr, ps, tas, tdas, ts, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/pr/gn/v20260304/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/pr/gn/v20260305/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/ps/gn/v20260305/ps_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/tas/gn/v20260305/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/tdas/gn/v20260305/tdas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/ts/gn/v20260305/ts_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/uas/gn/v20260305/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/vas/gn/v20260305/vas_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1
+  daily-atm3d:
+    description: daily 3D data on the gn grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: lon-lat
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/hus/gn/v20260306/hus_*_r[!35]i1p1f1_gn_19781001-19791231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/hus/gn/v20260306/hus_*_r[!4]i1p1f1_gn_20240101-20241231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/ta/gn/v20260306/ta_*_r[!25]i1p1f1_gn_19781001-19791231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/ta/gn/v20260306/ta_*_r[!34]i1p1f1_gn_20240101-20241231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/ua/gn/v20260306/ua_*_r[!45]i1p1f1_gn_19781001-19791231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/ua/gn/v20260306/ua_*_r[!4]i1p1f1_gn_20240101-20241231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/va/gn/v20260306/va_*_r[!3]i1p1f1_gn_19781001-19791231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/va/gn/v20260306/va_*_r[!4]i1p1f1_gn_20240101-20241231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/zg/gn/v20260306/zg_*_gn_19781001-19791231.nc'
+      - '{{AIMIP_PATH}}/Google/NeuralGCM-HRD/aimip/{{realization}}/day/zg/gn/v20260306/zg_*_r[!4]i1p1f1_gn_20240101-20241231.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p1f1
+        allowed:
+        - r1i1p1f1
+        - r2i1p1f1
+        - r3i1p1f1
+        - r4i1p1f1
+        - r5i1p1f1

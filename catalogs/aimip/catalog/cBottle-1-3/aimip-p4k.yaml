@@ -1,0 +1,125 @@
+sources:
+  monthly-atm2d:
+    description: monthly 2D data on the gn grid (clivi, huss, pr, prw, ps, psl, rlut, rsds, rsut, tas, ts, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: hpz6-ring
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/clivi/gn/v20260323/clivi_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/huss/gn/v20260323/huss_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/pr/gn/v20260323/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/prw/gn/v20260323/prw_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/ps/gn/v20260323/ps_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/psl/gn/v20260323/psl_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/rlut/gn/v20260323/rlut_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/rsds/gn/v20260323/rsds_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/rsut/gn/v20260323/rsut_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/tas/gn/v20260323/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/ts/gn/v20260323/ts_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/uas/gn/v20260323/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/vas/gn/v20260323/vas_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+        drop_variables: &id001
+        - crs
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p4f1
+        allowed:
+        - r1i1p4f1
+  monthly-atm3d:
+    description: monthly 3D data on the gn grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: hpz6-ring
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/hus/gn/v20260323/hus_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/ta/gn/v20260323/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/ua/gn/v20260323/ua_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/va/gn/v20260323/va_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/Amon/zg/gn/v20260323/zg_*_gn_*.nc'
+      chunks:
+        time: 12
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+        drop_variables: *id001
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p4f1
+        allowed:
+        - r1i1p4f1
+  daily-atm2d:
+    description: daily 2D data on the gn grid (huss, pr, psl, rlut, rsds, tas, uas, vas)
+    driver: netcdf
+    metadata:
+      source_grid_name: hpz6-ring
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/huss/gn/v20260323/huss_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/pr/gn/v20260323/pr_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/psl/gn/v20260323/psl_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/rlut/gn/v20260323/rlut_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/rsds/gn/v20260323/rsds_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/tas/gn/v20260323/tas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/uas/gn/v20260323/uas_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/vas/gn/v20260323/vas_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+        drop_variables: *id001
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p4f1
+        allowed:
+        - r1i1p4f1
+  daily-atm3d:
+    description: daily 3D data on the gn grid (hus, ta, ua, va, zg)
+    driver: netcdf
+    metadata:
+      source_grid_name: hpz6-ring
+    args:
+      urlpath:
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/hus/gn/v20260323/hus_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/ta/gn/v20260323/ta_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/ua/gn/v20260323/ua_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/va/gn/v20260323/va_*_gn_*.nc'
+      - '{{AIMIP_PATH}}/NVIDIA/CMIP6/AIMIP/NVIDIA/cBottle-1-3/aimip-p4k/{{realization}}/day/zg/gn/v20260323/zg_*_gn_*.nc'
+      chunks:
+        time: 30
+      xarray_kwargs:
+        decode_times: true
+        combine: by_coords
+        compat: override
+        coords: minimal
+        data_vars: minimal
+        drop_variables: *id001
+    parameters:
+      realization:
+        description: ensemble member
+        type: str
+        default: r1i1p4f1
+        allowed:
+        - r1i1p4f1

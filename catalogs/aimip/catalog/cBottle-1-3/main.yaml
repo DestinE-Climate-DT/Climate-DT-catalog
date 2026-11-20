@@ -1,0 +1,16 @@
+sources:
+  aimip:
+    description: AIMIP simulation forced by observed SST and sea ice, 5 members
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/aimip.yaml'
+  aimip-p2k:
+    description: AIMIP simulation with SST uniformly increased by 2 K, 1 member
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/aimip-p2k.yaml'
+  aimip-p4k:
+    description: AIMIP simulation with SST uniformly increased by 4 K, 1 member
+    driver: yaml_file_cat
+    args:
+      path: '{{CATALOG_DIR}}/aimip-p4k.yaml'
