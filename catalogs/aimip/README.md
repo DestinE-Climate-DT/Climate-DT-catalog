@@ -46,11 +46,16 @@ The members of `cBottle-1-3` differ by physics index (`r1i1p1f1` to `r1i1p5f1`);
 
 - No dedicated fixer exists yet: variables are renamed by the AQUA eccodes convention only (`tas` to `2t`,
   `pr` to `tprate`, `ta` to `t`, ...). `huss`, `tdas`, `zg`, `rlut` and `rsut` keep their CMOR names.
-- Each variable is a separate file and the pressure levels are not the same for all the variables of a
-  model (`zg` is at 500 hPa only for `MD-1p5` and `MPI-ESM1-2-LR`; `DLESyM` has `ta` at 850 hPa and `zg` at
-  250, 500 and 1000 hPa). The `atm3d` sources merge them on the union of the levels, filled with missing
-  values. `zg` of the ArchesWeather models has no vertical dimension and is in the `atm2d` sources.
-  `zg` of `ERA5` is on 37 levels and has its own source, `monthly-atm3d-zg`.
+- **Missing values on some pressure levels of the `atm3d` sources.** Each variable is a separate file and
+  not all the variables of a model are on the same pressure levels. The `atm3d` sources put them on the
+  union of the levels, so a variable is filled with missing values on the levels it does not have, without
+  any warning. Select the levels which exist, e.g. `data.zg.sel(plev=50000)`:
+  - `MD-1p5` and `MPI-ESM1-2-LR`: `zg` only at 500 hPa, the other variables on 7 levels;
+  - `DLESyM`: `ta` only at 850 hPa, `zg` only at 250, 500 and 1000 hPa.
+
+  The other models have all their 3D variables on the same levels. `zg` of the ArchesWeather models has no
+  vertical dimension and is in the `atm2d` sources; `zg` of `ERA5` is on 37 levels and has its own source,
+  `monthly-atm3d-zg`.
 - `DLESyM` has no AQUA grid (`source_grid_name: false`): data can be read but not regridded or averaged.
 - 36 files of `NeuralGCM` and `NeuralGCM-HRD` (mostly daily 3D data) are truncated in the archive and
   cannot be opened. They are left out: the affected members miss that variable or period.
