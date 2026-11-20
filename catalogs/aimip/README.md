@@ -52,9 +52,6 @@ The members of `cBottle-1-3` differ by physics index (`r1i1p1f1` to `r1i1p5f1`);
   values. `zg` of the ArchesWeather models has no vertical dimension and is in the `atm2d` sources.
   `zg` of `ERA5` is on 37 levels and has its own source, `monthly-atm3d-zg`.
 - `DLESyM` has no AQUA grid (`source_grid_name: false`): data can be read but not regridded or averaged.
-- Field averages of `ACE2-1-ERA5` fail with AQUA 1.2.4 (`Mismatch in values for coordinate 'lon' between data
-  and areas`): its single precision longitudes differ from the ones of the areas by slightly more than the
-  tolerance of AQUA. Retrieving the data works.
 - 36 files of `NeuralGCM` and `NeuralGCM-HRD` (mostly daily 3D data) are truncated in the archive and
   cannot be opened. They are left out: the affected members miss that variable or period.
 - The 0.25 degree ERA5 sources (`monthly-r025-atm2d`, `monthly-r025-atm3d`) have no fixer: check the units
