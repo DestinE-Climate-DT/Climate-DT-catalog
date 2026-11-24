@@ -1,6 +1,6 @@
 sources:
   baseline-cont:
-    description: 'IFS/NEMO - 1990 cont  - 3 members ensemble - Tco1279/eORCA12'
+    description: IFS/NEMO - 1990 cont  - 3 members ensemble - Tco1279/eORCA12
     metadata:
       expid: a2nt
       resolution_atm: tco1279
@@ -10,14 +10,14 @@ sources:
       dashboard:
         menu: control 1990 ensemble
         resolution_id: SR
-        note: "run with 3 expid, which are: a2nt, a2nk, a2o1"
+        note: 'run with 3 expid, which are: a2nt, a2nk, a2o1'
     driver: yaml_file_cat
     args:
       path: '{{CATALOG_DIR}}/baseline-cont.yaml'
   baseline-hist:
-    description: 'IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12'
+    description: IFS/NEMO - 1990 hist  - 3 members ensemble - Tco1279/eORCA12
     metadata:
-      expid: "0001"
+      expid: '0001'
       resolution_atm: tco1279
       resolution_oce: eORCA12
       forcing: historical
@@ -29,7 +29,8 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/baseline-hist.yaml'
   projections-ssp126:
-    description: 'IFS/NEMO - 2015 SSP1-2.6  - 3 members ensemble - Tco1279/eORCA12'
+    description: IFS/NEMO - 2015 SSP1-2.6  - 3 members ensemble - 
+      Tco1279/eORCA12
     metadata:
       author: bsc998159
       maintainer: not specified
@@ -47,18 +48,18 @@ sources:
     args:
       path: '{{CATALOG_DIR}}/projections-ssp126.yaml'
   projections-ssp370:
-    description: 'IFS/NEMO - 2015 SSP3-7.0  - 3 members ensemble - Tco1279/eORCA12'
+    description: '"IFS-NEMO-10km projections-ssp370 2015, grids: tco1279 eORCA12"'
     metadata:
-      author: bsc998159
+      author: bsc655096
       maintainer: not specified
-      machine: MN5
-      expid: a2ii
+      machine: MN5-o26.1
+      expid: o03l
       resolution_atm: tco1279
       resolution_oce: eORCA12
-      forcing: SSP3-7.0
+      forcing: projections-ssp3-7-0
       start: '2015'
       dashboard:
-        menu: projections SSP3-7.0 ensemble
+        menu: projections-ssp370
         resolution_id: SR
         note: null
     driver: yaml_file_cat
