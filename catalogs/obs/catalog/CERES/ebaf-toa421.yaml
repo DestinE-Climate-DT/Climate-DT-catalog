@@ -10,3 +10,18 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: True
+  monthly-healpix:
+    description: CERES EBAF TOA Ed4.2.1 from 2000-03 to 2025-02, HEALPix nested, online from DKRZ (WCRP hackathon)
+    driver: zarr
+    metadata:
+      fixer_name: ceres-ebaf-toa-destine-v1
+      source_grid_name: hpz{{ zoom }}-nested
+    args:
+      consolidated: true
+      urlpath: https://s3.waterpark.dkrz.de/misc/wcrp-hackathon/CERES/CERES_EBAF-TOA_Ed4.2.1_hp{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed: [6, 5, 4, 3, 2, 1, 0]
+        default: 6
+        description: zoom resolution of the dataset
+        type: int

@@ -1,0 +1,16 @@
+sources:
+  monthly-healpix:
+    description: JRA-3Q monthly data from 1947-09 to 2024-11, HEALPix nested, online from DKRZ (WCRP hackathon)
+    driver: zarr
+    metadata:
+      source_grid_name: hpz{{ zoom }}-nested
+      fixer_name: JRA3Q-healpix
+    args:
+      consolidated: true
+      urlpath: https://swift.dkrz.de/v1/dkrz_41caca03ec414c2f95f52b23b775134f/reanalysis/v1/JRA3Q_P1M_{{ zoom }}.zarr
+    parameters:
+      zoom:
+        allowed: [8, 7, 6, 5, 4, 3, 2, 1, 0]
+        default: 7
+        description: zoom resolution of the dataset
+        type: int
