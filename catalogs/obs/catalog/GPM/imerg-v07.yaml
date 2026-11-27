@@ -10,3 +10,15 @@ sources:
       xarray_kwargs:
         decode_times: True
         data_vars: minimal  # do not concatenate lat_bnds/lon_bnds along time
+
+  hourly:
+    description: IMERG V07B Final hourly precipitation 0.1deg from 1998-01 to 2025-09 (hourly mean of the half-hourly fields, time at the centre of the hour). Zarr v3 store produced for EERIE, available on hpc2020
+    driver: zarr
+    metadata:
+      source_grid_name: lon-lat-skipna
+      machine: hpc2020
+    args:
+      urlpath: '{{DATA_PATH}}/GPM-IMERG/V07B/GPM_IMERG_V07B_hourly_precipitation.zarr'
+      consolidated: true
+      chunks:
+        time: 24
