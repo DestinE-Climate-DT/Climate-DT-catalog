@@ -82,7 +82,7 @@ hpc2020:
     areas: /ec/res4/hpcperm/itmn/data/aqua-dvc/areas
   intake:
     DVC_PATH: /ec/res4/hpcperm/itmn/data/aqua-dvc/datasets
-    DATA_PATH: null
+    DATA_PATH: /ec/ws2/project/destine/obs
 freja:
   paths:
     grids: /home/rossby/AQUA_DATA/grids
