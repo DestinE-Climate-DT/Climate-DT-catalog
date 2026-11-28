@@ -1497,7 +1497,7 @@ sources:
       annual_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/r4/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/r3/radiation-toa/netcdf/radiation_toa.annual_climatology.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1623,7 +1623,7 @@ sources:
       seasonal_climatology
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/r4/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/r3/radiation-toa/netcdf/radiation_toa.seasonal_climatology.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1741,7 +1741,7 @@ sources:
     description: AQUA diagnostic water_cycle data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.{{freq}}.europe.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/{{realization}}/water_cycle/netcdf/water_cycle.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1776,7 +1776,7 @@ sources:
     description: AQUA diagnostic atmosphere2d data for product timeseries
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.{{freq}}.{{region}}.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/{{realization}}/atmosphere2d/netcdf/atmosphere2d.timeseries.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.{{freq}}.europe.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
@@ -1845,7 +1845,7 @@ sources:
     description: AQUA diagnostic ocean2d data for product seasonalcycles
     args:
       urlpath: 
-        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.{{freq}}.south_midlatitudes.nc
+        /gpfs/scratch/ehpc123/bsc655096/o03z/output/aqua-analysis/climatedt-gen2/IFS-FESOM-10km/projections-ssp370/{{realization}}/ocean2d/netcdf/ocean2d.seasonalcycles.climatedt-gen2.IFS-FESOM-10km.projections-ssp370.{{realization}}.*.{{freq}}.north_midlatitudes.nc
       chunks: {}
       xarray_kwargs:
         decode_times: true
